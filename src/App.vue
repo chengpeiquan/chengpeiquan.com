@@ -1,9 +1,6 @@
 <template>
-  <NavBar />
-  <!-- <img alt="Vue logo" src="./assets/img/logo.png" /> -->
+  <Header />
   <img alt="Vue logo" :src="logo" />
-  <!-- <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" /> -->
-
   <router-view />
   <Footer />
 </template>
@@ -11,7 +8,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useRouter } from 'vue-router'
-import NavBar from '/@cp/NavBar.vue'
+import Header from '/@cp/Header.vue'
 import Footer from '/@cp/Footer.vue'
 
 import logo from '/@img/logo.png'
@@ -19,7 +16,7 @@ import logo from '/@img/logo.png'
 export default defineComponent({
   name: 'App',
   components: {
-    NavBar,
+    Header,
     Footer
   },
   setup () {

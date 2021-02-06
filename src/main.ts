@@ -1,3 +1,5 @@
+import './styles/main.postcss'
+import './styles/markdown.postcss'
 import NProgress from 'nprogress'
 import { ViteSSG } from 'vite-ssg'
 import dayjs from 'dayjs'
