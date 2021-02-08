@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-// import px2rem from 'postcss-px2rem'
+import px2rem from 'postcss-px2rem'
 // import px2viewport from 'postcss-px-to-viewport'
 import pkg from './package.json'
 import path from 'path'
@@ -74,8 +74,16 @@ export default defineConfig({
     }
   },
   css: {
-    postcss: {
-      plugins: [
+    // preprocessorOptions: {
+    //   less: {
+    //     additionalData: '@margin: 24px;'
+    //   },
+    //   styl: {
+    //     additionalData: '$margin: 24px;'
+    //   }
+    // },
+    // postcss: {
+      // plugins: [
         // px2rem({
         //   remUnit: 75
         // }),
@@ -83,17 +91,18 @@ export default defineConfig({
         //   viewportWidth: 750,
         //   minPixelValue: 1
         // })
-      ]
-    }
+      // ]
+    // }
   },
   alias: {
     '/@': resolve('src'),
     '/@img': resolve('src/assets/img'),
+    '/@css': resolve('src/assets/css'),
     '/@styl': resolve('src/assets/styl'),
+    '/@postcss': resolve('src/assets/postcss'),
     '/@js': resolve('src/assets/js'),
     '/@ts': resolve('src/assets/ts'),
     '/@fonts': resolve('src/assets/fonts'),
-    '/@css': resolve('src/assets/css'),
     '/@libs': resolve('src/libs'),
     '/@cp': resolve('src/components'),
     '/@views': resolve('src/views'),

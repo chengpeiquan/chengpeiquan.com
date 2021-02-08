@@ -1,12 +1,28 @@
-import './styles/main.postcss'
-import './styles/markdown.postcss'
+/** 
+ * 导入npm包
+ */
 import NProgress from 'nprogress'
 import { ViteSSG } from 'vite-ssg'
 import dayjs from 'dayjs'
 import LocalizedFormat from 'dayjs/plugin/localizedFormat'
 import baiduAnalytics from 'vue-baidu-analytics'
+
+
+/** 
+ * 导入本地依赖
+ */
 import { routes, scrollBehavior } from '/@/router'
 import App from '/@/App.vue'
+
+
+/** 
+ * 导入全局样式
+ */
+// import '/@styl/normalize.styl'
+// import 'modern-normalize'
+// import '/@styl/config.styl'
+// import '/@styl/global.styl'
+import '/@postcss/global.postcss'
 
 
 /** 
