@@ -1,57 +1,74 @@
 <template>
-  <header class="header">
-    <div class="wrap">
-      <div class="website-info">
-        <div class="logo">
-          <img :src="logo" alt="程沛权">
-        </div>
-        <span class="name">程沛权</span>
+  <header class="flex justify-between items-center w-full sm:h-20 h-14 sm:px-4 px-2">
+    <!-- 站点信息 -->
+    <div class="flex justify-start items-center">
+      <div
+        class="
+          flex flex-shrink-0
+          sm:w-12 w-10
+          sm:h-12 h-10
+          rounded-full
+          overflow-hidden
+        "
+      >
+        <img
+          class="img"
+          :src="logo"
+          alt="程沛权"
+        >
       </div>
+      <span class="sm:ml-4 ml-2 sm:text-xl text-l">程沛权</span>
+    </div>
+    <!-- 站点信息 -->
 
-      <nav>
-
-      </nav>
+    <!-- 站点导航 -->
+    <nav class="nav flex flex-1 justify-end items-center">
+      <router-link
+        v-for="(item, index) in navList"
+        :key="index"
+        class="sm:mr-8 mr-3"
+        :to="item.path"
+        exact
+      >
+        {{ item.text }}
+      </router-link>
 
       <toggle-theme />
-    </div>
+    </nav>
+    <!-- 站点导航 -->
   </header>
 </template>
 
 <script setup lang="ts">
-import { isDark } from '/@/logics'
+import { isDark } from '/@libs/logics'
 import logo from '/@img/logo-min.jpg'
+
+interface NavList {
+  path: string,
+  text: string
+}
+
+const navList: NavList = [
+  {
+    path: '/',
+    text: 'Home'
+  },
+  {
+    path: '/about',
+    text: 'About'
+  }
+];
 </script>
 
-<style lang="stylus" scoped>
-.header
-  display flex
-  justify-content center
-  align-items center
-  width 100%
-  height 80px
-  .wrap
-    display flex
-    justify-content space-between
-    align-items center
-    width var(--container)
-    max-width 100%
-    height @height
-  .website-info
-    display flex
-    align-items center
-    .logo
-      display flex
-      flex-shrink 0
-      width 50px
-      height @width
-      border-radius 50%
-      overflow hidden
-      img
-        width 100%
-        height @width
-        object-fit cover
-    .name
-      font-size 20px
-      color var(--c-white)
-      margin-left calc(var(--margin) / 2)
+<style lang="postcss" scoped>
+.nav a {
+  opacity: 0.7;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 1;
+    text-decoration-color: inherit;
+  }
+}
 </style>

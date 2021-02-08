@@ -18,10 +18,7 @@ import App from '/@/App.vue'
 /** 
  * 导入全局样式
  */
-// import '/@styl/normalize.styl'
-// import 'modern-normalize'
-// import '/@styl/config.styl'
-// import '/@styl/global.styl'
+import '/@postcss/config.postcss'
 import '/@postcss/global.postcss'
 
 

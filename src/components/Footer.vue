@@ -1,9 +1,9 @@
 <template>
   <footer class="flex justify-center items-center w-full h-40">
-    <p class="prose">
+    <p class="prose text-sm">
       <span>© {{ year }} 程沛权</span>
       <a
-        class="link ml-4"
+        class="ml-4"
         href="https://beian.miit.gov.cn/"
         target="_blank"
         rel="nofollow"
@@ -17,5 +17,4 @@ const year: number = new Date().getFullYear();
 </script>
 
 <style scoped>
-
 </style>

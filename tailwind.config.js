@@ -1,8 +1,12 @@
 module.exports = {
   purge: [],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        '3xl': '1600px'
+      }
+    },
   },
   variants: {
     extend: {},

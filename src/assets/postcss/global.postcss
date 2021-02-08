@@ -1,15 +1,42 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 html {
   background-color: var(--c-bg);
   @apply text-gray-700;
 }
-
 html.dark {
   --c-bg: #050505;
   --c-scrollbar: #111;
   --c-scrollbar-hover: #222;
   @apply text-gray-200;
+}
+
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+.img {
+  @apply w-full h-full object-cover;
+}
+
+
+.prose {
+  --fg: #555;
+  --fg-deep: #222;
+  --fg-deeper: #000;
+  
+  color: var(--fg);
+
+  a code {
+    color: inherit;
+  }
+}
+html.dark .prose {
+  --fg: #bbb;
+  --fg-deep: #ddd;
+  --fg-deeper: #fff;
 }
