@@ -117,7 +117,7 @@ export default defineConfig({
     }),
 
     Markdown({
-      wrapperComponent: 'post',
+      wrapperComponent: 'article',
       wrapperClasses: 'prose m-auto',
       headEnabled: true,
       markdownItSetup(md) {
@@ -134,6 +134,7 @@ export default defineConfig({
 
     ViteComponents({
       extensions: ['vue', 'md'],
+      directoryAsNamespace: true,
       customLoaderMatcher: path => path.endsWith('.md'),
       customComponentResolvers: ViteIconsResolver({
         componentPrefix: '',

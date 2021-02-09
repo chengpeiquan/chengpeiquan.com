@@ -1,6 +1,14 @@
 <template>
   <main class="main">
+    <!-- 内容区 -->
+    <section>
+      
+    </section>
+    <!-- 内容区 -->
 
+    <!-- 侧边栏 -->
+    <section></section>
+    <!-- 侧边栏 -->
   </main>
 </template>
 
