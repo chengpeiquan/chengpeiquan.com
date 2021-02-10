@@ -18,7 +18,7 @@
           <!-- 封面 -->
           <div
             v-if="item.cover"
-            class="flex flex-shrink-0 w-40 h-32 overflow-hidden mr-4"
+            class="flex flex-shrink-0 w-40 h-32 overflow-hidden mr-4 rounded"
           >
             <router-link
               :title="item.title"
@@ -35,12 +35,12 @@
 
           <!-- 信息 -->
           <div class="flex flex-col justify-between">
-            <p class="">
+            <p class="text-sm text-gray-400 mb-4">
               {{ item.description }}
             </p>
 
-            <p class="">
-              {{ item.date }}
+            <p class="text-xs text-gray-400">
+              {{ item.date.substr(0, 10) }}
             </p>
           </div>
           <!-- 信息 -->
@@ -111,5 +111,4 @@ export default defineComponent({
 </script>
 
 <style scoped>
-
 </style>
