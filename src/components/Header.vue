@@ -1,93 +1,106 @@
-<script setup lang="ts">
-import { isDark } from '/@/logics'
-</script>
-
 <template>
-  <header class="header">
-    <router-link
-      class="w-10 h-10 absolute lg:fixed m-6 select-none outline-none"
-      to="/"
-      focusable="false"
-    >
-      <img v-show="isDark" src="/logo-dark.svg" alt="logo">
-      <img v-show="!isDark" src="/logo.svg" alt="logo">
-    </router-link>
-    <nav class="nav">
-      <div class="spacer" />
-      <div class="right">
-        <router-link to="/posts">
-          Blog
-        </router-link>
-        <router-link to="/projects">
-          Projects
-        </router-link>
-        <!--  a(href='/notes')//  span.iconify.text-lg(data-icon='ri:chat-1-line') -->
-        <router-link to="/bookmarks" title="Bookmarks">
-          <ri-bookmark-line />
-        </router-link>
-        <a href="https://twitter.com/antfu7" target="_blank" title="Twitter" class="hidden md:block">
-          <feather-twitter />
-        </a>
-        <a href="https://github.com/antfu" target="_blank" title="GitHub" class="hidden md:block">
-          <uil-github-alt />
-        </a>
-        <a href="/feed.xml" target="_blank" title="RSS" class="hidden md:block">
-          <la-rss-square style="font-size:1.25rem; margin: 0 -0.125rem;" />
-        </a>
-        <toggle-theme />
+  <header class="flex justify-between items-center w-full md:h-20 h-14 md:px-4 px-2" >
+    <!-- 站点信息 -->
+    <div class="flex justify-start items-center">
+      <div class="flex flex-shrink-0 md:w-12 w-8 md:h-12 h-8 rounded-full overflow-hidden" >
+        <img
+          class="img"
+          :src="logo"
+          alt="程沛权"
+        >
       </div>
+      <span
+        class="
+          md:ml-4 ml-2
+          md:text-xl text-l
+        "
+      >程沛权</span>
+    </div>
+    <!-- 站点信息 -->
+
+    <!-- 站点导航 -->
+    <nav class="nav flex flex-1">
+      <ul class="flex justify-end items-center w-full">
+        <li
+          v-for="(item, index) in navList"
+          :key="index"
+          class="md:mr-8 mr-3 md:text-lg text-sm"
+        >
+          <router-link
+            v-if="item.isRoute"
+            :to="item.target"
+            :title="item.text"
+            exact
+          >
+            {{ item.text }}
+          </router-link>
+
+          <a
+            v-else
+            :href="item.target"
+            :title="item.text"
+            target="_blank"
+          >
+            {{ item.text }}
+          </a>
+        </li>
+        <li>
+          <toggle-theme />
+        </li>
+      </ul>
     </nav>
+    <!-- 站点导航 -->
   </header>
 </template>
 
-<style scoped>
-.header h1 {
-  margin-bottom: 0;
+<script setup lang="ts">
+import { isDark } from '/@libs/logics'
+import logo from '/@img/logo-min.jpg'
+
+interface NavList {
+  path: string,
+  text: string
 }
 
-.logo {
-  position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
-}
+const navList: NavList = [
+  {
+    isRoute: true,
+    target: '/',
+    text: 'Home'
+  },
+  {
+    isRoute: true,
+    target: '/article',
+    text: 'Article'
+  },
+  {
+    isRoute: true,
+    target: '/about',
+    text: 'About'
+  },
+  {
+    isRoute: false,
+    target: 'https://github.com/chengpeiquan',
+    text: 'GitHub'
+  }
+];
+</script>
 
-.nav {
-  padding: 2rem;
-  width: 100vw;
-  display: grid;
-  grid-template-columns: auto max-content;
-  box-sizing: border-box;
-}
-
-.nav > * {
-  margin: auto;
-}
-
-.nav img {
-  margin-bottom: 0;
-}
-
+<style lang="postcss" scoped>
 .nav a {
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  opacity: 0.7;
   text-decoration: none;
-  color: inherit;
   transition: opacity 0.2s ease;
-  opacity: 0.6;
-  outline: none;
-}
 
-.nav a:hover {
-  opacity: 1;
-  text-decoration-color: inherit;
-}
+  svg {
+    margin-right: calc(var(--margin) / 4);
+  }
 
-.nav .right {
-  display: grid;
-  grid-gap: 1.2rem;
-  grid-auto-flow: column;
-}
-
-.nav .right > * {
-  margin: auto;
+  &:hover {
+    opacity: 1;
+    text-decoration-color: inherit;
+  }
 }
 </style>

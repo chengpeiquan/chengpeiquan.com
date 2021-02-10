@@ -1,6 +1,20 @@
 <template>
-  <div class="mt-10 mb-6 prose m-auto opacity-50 flex">
-    <span class="text-sm"><a target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/" style="color:inherit">CC BY-NC 4.0</a> 2021 © Anthony Fu</span>
-    <div class="flex-auto" />
-  </div>
+  <footer class="flex justify-center items-center w-full h-40">
+    <p class="prose md:text-sm text-xs">
+      <span>© {{ year }} 程沛权</span>
+      <a
+        class="ml-4"
+        href="https://beian.miit.gov.cn/"
+        target="_blank"
+        rel="nofollow"
+      >粤ICP备20011269号-1</a>
+    </p>
+  </footer>
 </template>
+
+<script setup lang="ts">
+const year: number = new Date().getFullYear();
+</script>
+
+<style scoped>
+</style>
