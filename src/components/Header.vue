@@ -88,9 +88,15 @@ const navList: NavList = [
 
 <style lang="postcss" scoped>
 .nav a {
+  display: flex;
+  align-items: center;
   opacity: 0.7;
   text-decoration: none;
   transition: opacity 0.2s ease;
+
+  svg {
+    margin-right: calc(var(--margin) / 4);
+  }
 
   &:hover {
     opacity: 1;

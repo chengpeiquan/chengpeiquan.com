@@ -19,19 +19,19 @@
   </main>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-
+<script setup lang="ts">
+import { useHead } from '@vueuse/head'
 import banner from '/@img/banner.jpg'
 
-export default defineComponent({
-  setup () {
-    
-
-    return {
-      banner
-    }
-  }
+useHead({
+  title: '程沛权 - 养了三只猫',
+  meta: [
+    { property: 'og:title', content: 'Anthony Fu' },
+    { property: 'og:image', content: 'https://antfu.me/avatar.png' },
+    { name: 'description', content: 'Anthony Fu\'s Portfolio' },
+    { name: 'twitter:card', content: 'summary' },
+    { name: 'twitter:creator', content: '@antfu7' },
+  ],
 })
 </script>
 

@@ -5,6 +5,7 @@ import path from 'path'
 import fs from 'fs-extra'
 
 import Pages from 'vite-plugin-pages'
+import PurgeIcons from 'vite-plugin-purge-icons'
 import Icons, { ViteIconsResolver } from 'vite-plugin-icons'
 import ViteComponents from 'vite-plugin-components'
 import Markdown from 'vite-plugin-md'
@@ -90,7 +91,7 @@ export default defineConfig({
       'vue',
       'vue-router',
       '@vueuse/core',
-      // '@iconify/iconify',
+      '@iconify/iconify',
       'dayjs',
       'dayjs/plugin/localizedFormat',
     ],
@@ -109,6 +110,11 @@ export default defineConfig({
         if ( !path.includes('projects.md') ) {
           const md = fs.readFileSync(path, 'utf-8')
           const { data } = matter(md)
+
+          if ( !data.date ) {
+            data.date = new Date();
+          }
+          
           route.meta = Object.assign(route.meta || {}, { frontmatter: data })
         }
 
@@ -134,6 +140,7 @@ export default defineConfig({
 
     ViteComponents({
       extensions: ['vue', 'md'],
+      deep: true,
       directoryAsNamespace: true,
       customLoaderMatcher: path => path.endsWith('.md'),
       customComponentResolvers: ViteIconsResolver({
@@ -141,6 +148,7 @@ export default defineConfig({
       }),
     }),
     
+    PurgeIcons(),
     Icons(),
   ]
 })

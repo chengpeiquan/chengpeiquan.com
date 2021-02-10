@@ -1,7 +1,6 @@
 ---
 title: Watch with @vue/reactivity
 description: A brief intro of how it works and a guide to implementing the (missing) `watch` on your own.
-date: 2020-09-18
 lang: en
 duration: 12min
 ---
