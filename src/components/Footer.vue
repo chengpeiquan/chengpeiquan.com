@@ -1,6 +1,6 @@
 <template>
   <footer class="flex justify-center items-center w-full h-40">
-    <p class="prose md:text-sm text-xs">
+    <p class="opacity-70 md:text-sm text-xs">
       <span>© {{ year }} 程沛权</span>
       <a
         class="ml-4"

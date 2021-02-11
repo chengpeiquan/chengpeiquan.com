@@ -123,7 +123,7 @@ export default defineConfig({
     }),
 
     Markdown({
-      wrapperComponent: 'article',
+      wrapperComponent: 'article-detail',
       wrapperClasses: 'prose m-auto',
       headEnabled: true,
       markdownItSetup(md) {

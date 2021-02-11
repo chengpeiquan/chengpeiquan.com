@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
-import { formatDate } from '/@/logics'
+import { formatDate } from '/@libs/logics'
 
 const lang = ref('en')
 const router = useRouter()
 const routes = router.getRoutes()
-  .filter(i => i.path.startsWith('/posts') && i.meta.frontmatter.date)
+  .filter(i => i.path.startsWith('/article') && i.meta.frontmatter.date)
   .sort((a, b) => +new Date(b.meta.frontmatter.date) - +new Date(a.meta.frontmatter.date))
 
 const posts = computed(() =>

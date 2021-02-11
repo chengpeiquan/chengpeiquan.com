@@ -1,6 +1,6 @@
 <template>
-  <section>
-    <ul class="divide-y dark:divide-white dark:divide-opacity-5">
+  <section class="flex justify-between flex-col">
+    <ul class="article-list divide-y dark:divide-white dark:divide-opacity-5">
       <li
         class="flex flex-col mb-8 pt-8"
         v-for="(item, index) in articleList"
@@ -11,7 +11,7 @@
           :title="item.title"
           :to="item.path"
         >
-          <h2>{{ item.title }}</h2>
+          <h2 class="text-2xl">{{ item.title }}</h2>
         </router-link>
 
         <div class="flex">
@@ -48,6 +48,10 @@
       </li>
     </ul>
   </section>
+
+  <!-- 侧边栏 -->
+  <article-sidebar />
+  <!-- 侧边栏 -->
 </template>
 
 <script lang="ts">
@@ -70,7 +74,7 @@ export default defineComponent({
      * 判断是否文章页
      */
     const isArticle = (route: RouteRecordRaw): boolean => {
-      return route.path.startsWith('/article/') && route.path.endsWith('.html');
+      return route.path.startsWith('/article/') && !route.path.endsWith('.html');
     }
 
     /** 
@@ -111,4 +115,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
+.article-list li:first-child {
+  padding-top: 0;
+}
 </style>
