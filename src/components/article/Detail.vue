@@ -1,13 +1,14 @@
 <template>
-  <main class="flex justify-between container mx-auto mt-16">
+  <main class="flex justify-between container box-border max-w-full md:mx-auto mx-4 md:mt-16 mt-4">
     <!-- 文章内容 -->
-    <section class="flex justify-between flex-col">
+    <section class="flex justify-between flex-col max-w-prose">
       <h1 class="line text-3xl mb-4">
         {{ title }}
       </h1>
 
-      <p class="line text-sm text-gray-400 mb-8 pb-8 border-b dark:border-white dark:border-opacity-5">
-        {{ date }}
+      <p class="line text-sm text-gray-400 mb-4 pb-4 border-b dark:border-white dark:border-opacity-5">
+        <span class="mr-8">作者：程沛权</span>
+        <span>{{ date }}</span>
       </p>
 
       <slot v-bind="attrs" />
@@ -35,7 +36,7 @@ export default defineComponent({
     console.log(frontmatter);
     
     const title: string = frontmatter.title;
-    const date: string = frontmatter.date.substr(0, 19).replace(/T/, ' ');
+    const date: string = frontmatter.date.substr(0, 10).replace(/T/, ' ');
 
     
     

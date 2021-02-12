@@ -21,6 +21,7 @@ import App from '/@/App.vue'
  */
 import '/@postcss/config.postcss'
 import '/@postcss/global.postcss'
+import '/@postcss/markdown.postcss'
 
 
 /** 

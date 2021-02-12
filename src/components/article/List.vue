@@ -1,6 +1,6 @@
 <template>
   <section class="flex justify-between flex-col">
-    <ul class="article-list divide-y dark:divide-white dark:divide-opacity-5">
+    <ul class="article-list divide-y dark:divide-white dark:divide-opacity-5 md:mx-0 mx-4">
       <li
         class="flex flex-col mb-8 pt-8"
         v-for="(item, index) in articleList"
@@ -35,11 +35,11 @@
 
           <!-- 信息 -->
           <div class="flex flex-col justify-between">
-            <p class="text-sm text-gray-400 mb-4">
+            <p class="text-base text-gray-400 mb-4">
               {{ item.description }}
             </p>
 
-            <p class="text-xs text-gray-400">
+            <p class="text-sm text-gray-400">
               {{ item.date.substr(0, 10) }}
             </p>
           </div>
@@ -58,10 +58,13 @@
 import { defineComponent, onMounted, ref } from 'vue'
 import { useRouter, RouteRecordRaw } from 'vue-router'
 import { formatDate } from '/@libs/logics'
+import isArticle from '/@libs/isArticle'
 
 interface List {
   path: string,
   title: string,
+  description: string,
+  cover: string,
   date: string
 }
 
@@ -69,13 +72,6 @@ export default defineComponent({
   setup () {
     const router = useRouter();
     const articleList = ref<List[]>([]);
-
-    /** 
-     * 判断是否文章页
-     */
-    const isArticle = (route: RouteRecordRaw): boolean => {
-      return route.path.startsWith('/article/') && !route.path.endsWith('.html');
-    }
 
     /** 
      * 获取文章列表
