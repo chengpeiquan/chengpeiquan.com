@@ -50,7 +50,7 @@
 
           <!-- 标题 -->
           <router-link
-            class="flex flex-1"
+            class="flex flex-1 line-clamp-2"
             :title="item.title"
             :to="item.path"
           >

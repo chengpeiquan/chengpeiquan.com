@@ -1,4 +1,5 @@
 const typography = require('@tailwindcss/typography')
+const lineClamp = require('@tailwindcss/line-clamp')
 
 module.exports = {
   purge: [],
@@ -31,6 +32,7 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    typography
+    typography,
+    lineClamp
   ],
 }

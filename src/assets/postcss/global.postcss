@@ -9,26 +9,9 @@ html.dark {
   @apply text-gray-200;
 }
 
-
-* {
-  scrollbar-color: var(--c-scrollbar) var(--c-bg);
-}
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar:horizontal {
-  height: 6px;
-}
-::-webkit-scrollbar-track {
-  background: var(--c-bg);
-  border-radius: 10px;
-}
-::-webkit-scrollbar-thumb {
-  background: var(--c-scrollbar);
-  border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: var(--c-scrollbar-hover);
+body {
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 
@@ -69,6 +52,7 @@ a {
   --fg-deeper: #000;
   
   color: var(--fg);
+  text-align: justify;
 
   a code {
     color: inherit;
@@ -80,4 +64,26 @@ html.dark .prose {
   --fg: #bbb;
   --fg-deep: #ddd;
   --fg-deeper: #fff;
+}
+
+
+* {
+  scrollbar-color: var(--c-scrollbar) var(--c-bg);
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar:horizontal {
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--c-bg);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--c-scrollbar);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--c-scrollbar-hover);
 }

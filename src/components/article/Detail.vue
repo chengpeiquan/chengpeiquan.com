@@ -1,8 +1,8 @@
 <template>
-  <main class="flex justify-between container box-border max-w-full md:mx-auto mx-4 md:mt-16 mt-4">
+  <main class="flex justify-between container md:mx-auto box-border px-4 md:mt-16 mt-4">
     <!-- 文章内容 -->
-    <section class="flex justify-between flex-col max-w-prose">
-      <h1 class="line text-3xl mb-4">
+    <section class="flex justify-between flex-col w-full">
+      <h1 class="line md:text-3xl text-xl md:mb-4 mb-2">
         {{ title }}
       </h1>
 

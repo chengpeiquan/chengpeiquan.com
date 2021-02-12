@@ -2,23 +2,25 @@
   <section class="flex justify-between flex-col">
     <ul class="article-list divide-y dark:divide-white dark:divide-opacity-5 md:mx-0 mx-4">
       <li
-        class="flex flex-col mb-8 pt-8"
+        class="flex flex-col md:mb-8 mb-4 md:pt-8 pt-4"
         v-for="(item, index) in articleList"
         :key="index"
       >
         <router-link
-          class="mb-4"
+          class="md:mb-4 mb-2"
           :title="item.title"
           :to="item.path"
         >
-          <h2 class="text-2xl">{{ item.title }}</h2>
+          <h2 class="md:text-2xl text-lg line-clamp-2">
+            {{ item.title }}
+          </h2>
         </router-link>
 
-        <div class="flex">
+        <div class="flex md:flex-row flex-col">
           <!-- 封面 -->
           <div
             v-if="item.cover"
-            class="flex flex-shrink-0 w-40 h-32 overflow-hidden mr-4 rounded"
+            class="flex flex-shrink-0 md:w-40 w-full md:h-32 h-auto overflow-hidden md:mr-4 mr-0 md:mb-0 mb-2 rounded"
           >
             <router-link
               :title="item.title"
@@ -34,12 +36,12 @@
           <!-- 封面 -->
 
           <!-- 信息 -->
-          <div class="flex flex-col justify-between">
-            <p class="text-base text-gray-400 mb-4">
+          <div class="md:flex hidden flex-col justify-between">
+            <p class="md:text-base text-sm text-gray-400 md:mb-4 mb-2 md:line-clamp-3 line-clamp-2">
               {{ item.description }}
             </p>
 
-            <p class="text-sm text-gray-400">
+            <p class="md:text-sm text-xs text-gray-400">
               {{ item.date.substr(0, 10) }}
             </p>
           </div>
