@@ -8,7 +8,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "cross-env NODE_ENV=production vite-ssg build",
+    "build": "cross-env NODE_ENV=production vite-ssg build && esno ./scripts/rss.ts",
     "serve": "vite preview"
   },
   "repository": {

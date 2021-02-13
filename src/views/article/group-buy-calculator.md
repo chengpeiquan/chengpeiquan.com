@@ -15,4 +15,4 @@ cover: https://chengpeiquan.com/wp-content/uploads/2020/12/2-1.jpg
 
 ## 界面预览
 
-![](https://chengpeiquan.com/wp-content/uploads/2020/12/1-1.png)
+![](https://cdn.jsdelivr.net/gh/chengpeiquan/chengpeiquan.com@gh-pages/assets/uploads/2020/12/1-1.png)
