@@ -46,7 +46,7 @@ const IS_DEV: boolean = process.env.NODE_ENV === 'development' ? true : false;
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: IS_DEV ? '/' : 'https://cdn.jsdelivr.net/gh/chengpeiquan/chengpeiquan.com@gh-pages/assets/',
+  base: IS_DEV ? '/' : '/',
   server: {
     port: 33333,
     // proxy: {
@@ -105,20 +105,19 @@ export default defineConfig({
       pagesDir: 'src/views',
       extensions: ['vue', 'md'],
       extendRoute (route) {
-        const path = resolve(route.component.slice(1))
+        const path = resolve(route.component.slice(1));
+        const md = fs.readFileSync(path, 'utf-8');
 
-        if ( !path.includes('projects.md') ) {
-          const md = fs.readFileSync(path, 'utf-8')
-          const { data } = matter(md)
-
-          if ( !data.date ) {
-            data.date = new Date();
-          }
-          
-          route.meta = Object.assign(route.meta || {}, { frontmatter: data })
+        const { data } = matter(md);
+        if ( !data.date ) {
+          data.date = new Date();
         }
+        
+        route.meta = Object.assign(route.meta || {}, {
+          frontmatter: data
+        });
 
-        return route
+        return route;
       },
     }),
 
@@ -133,7 +132,9 @@ export default defineConfig({
           permalink: true,
           permalinkBefore: true,
           permalinkSymbol: '#',
-          permalinkAttrs: () => ({ 'aria-hidden': true }),
+          permalinkAttrs: () => ({
+            'aria-hidden': true
+          }),
         })
       },
     }),

@@ -38,7 +38,7 @@ useHead({
 <style lang="postcss" scoped>
 .banner {
   @apply w-full overflow-hidden mb-6 border-b-4 dark:border-white dark:border-opacity-5 bg-white bg-opacity-5;
-  height: 40vh;
-  max-height: 40vh;
+  height: 75vh;
+  max-height: 75vh;
 }
 </style>

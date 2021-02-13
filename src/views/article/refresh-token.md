@@ -1,9 +1,11 @@
 ---
 title: 基于OAuth2.0的refreshToken前端刷新方案与演示demo
-description: 如今在涉及到用户登录的系统设计里面，基本上都是通过 OAuth 2.0 来设计授权，当你在调用登录接口的时候，可以看到在返回来的数据里面会有 2 个 Token：一个 accessToken 和一个 refreshToken 。为什么会有两个 Token，之间有什么区别？这其实是 OAuth 2.0 的四种方式 之一的 “凭证式”，一个是平时请求接口时的用户凭证，一个是用来刷新用户凭证的刷新凭证。
+desc: 如今在涉及到用户登录的系统设计里面，基本上都是通过 OAuth 2.0 来设计授权，当你在调用登录接口的时候，可以看到在返回来的数据里面会有 2 个 Token：一个 accessToken 和一个 refreshToken 。为什么会有两个 Token，之间有什么区别？这其实是 OAuth 2.0 的四种方式 之一的 “凭证式”，一个是平时请求接口时的用户凭证，一个是用来刷新用户凭证的刷新凭证。
+keywords: refresh token, refreshtoken, oauth 2.0 refreshtoken, 前端刷新token, oauth 刷新token
 date: 2021-01-30 14:56:00
-cover: https://chengpeiquan.com/wp-content/uploads/2021/01/1.jpg
+cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/01/1.jpg
 ---
+
 如今在涉及到用户登录的系统设计里面，基本上都是通过 OAuth 2.0 来设计授权，当你在调用登录接口的时候，可以看到在返回来的数据里面会有 2 个 Token：一个 `accessToken` 和一个 `refreshToken` 。
 
 为什么会有两个 Token，之间有什么区别？这其实是 [OAuth 2.0 的四种方式](http://www.ruanyifeng.com/blog/2019/04/oauth-grant-types.html) 之一的 “凭证式”，一个是平时请求接口时的用户凭证，一个是用来刷新用户凭证的刷新凭证。

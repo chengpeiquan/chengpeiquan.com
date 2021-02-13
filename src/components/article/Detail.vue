@@ -8,7 +8,7 @@
 
       <p class="line text-sm text-gray-400 mb-4 pb-4 border-b dark:border-white dark:border-opacity-5">
         <span class="mr-8">作者：程沛权</span>
-        <span>{{ date }}</span>
+        <span>{{ date.substr(0, 10) }}</span>
       </p>
 
       <slot v-bind="attrs" />
@@ -24,41 +24,59 @@
 
 <script lang="ts">
 import { defineComponent, onMounted } from 'vue'
-import { useRoute } from 'vue-router'
-import { useEventListener, isClient } from '@vueuse/core'
+import { useRoute, useRouter } from 'vue-router'
+import { isClient } from '@vueuse/core'
+import { useHead } from '@vueuse/head'
+import config from '/@ts/config'
 
 export default defineComponent({
   setup (props, { attrs }) {
     const route = useRoute();
-    
+    const router = useRouter();
     const { frontmatter } = attrs;
-    const title: string = frontmatter.title;
-    const date: string = frontmatter.date.substr(0, 10).replace(/T/, ' ');
+    const { title, desc, keywords, date } = frontmatter;
 
-    if (isClient) {
-      const navigate = () => {
-        if (location.hash) {
-          document.querySelector(location.hash)
-            ?.scrollIntoView({ behavior: 'smooth' })
-        }
-      }
-
-      useEventListener(window, 'hashchange', navigate, false)
-
-      onMounted(() => {
-        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-          anchor.addEventListener('click', (e) => {
-            e.preventDefault()
-            const href = anchor.getAttribute('href') as string
-            history.replaceState({}, '', href)
-            navigate()
+    /** 
+     * 设置页面信息
+     */
+    useHead({
+      title: `${title} - ${config.title}`,
+      meta: [
+        { property: 'og:title', content: `${title} - ${config.title}` },
+        { name: 'description', content: desc },
+        { name: 'keywords', content: keywords }
+      ],
+    })
+    
+    /** 
+     * 页面加载时定位到链接对应的锚点
+     */
+    const navigateToId = (): void => {
+      if ( isClient ) {
+        router.isReady()
+          .then( () => {
+            setTimeout(() => {
+              const { hash } = document.location;
+              if ( hash.length > 1 ) {
+                const id: string = decodeURIComponent(hash.substring(1));
+                const element: HTMLElement | null = document.getElementById(id);
+                if ( element ) {
+                  element.scrollIntoView({
+                    behavior: 'smooth'
+                  });
+                }
+              }
+            }, 500);
           })
-        })
-
-        navigate()
-        setTimeout(navigate, 500)
-      })
+          .catch( (e) => {
+            console.log(e);
+          });
+      }
     }
+
+    onMounted(() => {
+      navigateToId();
+    })
 
     return {
       attrs,
