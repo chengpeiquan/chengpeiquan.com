@@ -46,7 +46,7 @@ const IS_DEV: boolean = process.env.NODE_ENV === 'development' ? true : false;
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: IS_DEV ? '/' : '/',
+  base: IS_DEV ? '/' : 'https://cdn.jsdelivr.net/gh/chengpeiquan/chengpeiquan.com@gh-pages/assets/',
   server: {
     port: 33333,
     // proxy: {

@@ -23,23 +23,42 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, defineProps } from 'vue'
+import { defineComponent, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
+import { useEventListener, isClient } from '@vueuse/core'
 
 export default defineComponent({
   setup (props, { attrs }) {
     const route = useRoute();
-    console.log(route);
-    console.log(attrs);
     
     const { frontmatter } = attrs;
-    console.log(frontmatter);
-    
     const title: string = frontmatter.title;
     const date: string = frontmatter.date.substr(0, 10).replace(/T/, ' ');
 
-    
-    
+    if (isClient) {
+      const navigate = () => {
+        if (location.hash) {
+          document.querySelector(location.hash)
+            ?.scrollIntoView({ behavior: 'smooth' })
+        }
+      }
+
+      useEventListener(window, 'hashchange', navigate, false)
+
+      onMounted(() => {
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener('click', (e) => {
+            e.preventDefault()
+            const href = anchor.getAttribute('href') as string
+            history.replaceState({}, '', href)
+            navigate()
+          })
+        })
+
+        navigate()
+        setTimeout(navigate, 500)
+      })
+    }
 
     return {
       attrs,
