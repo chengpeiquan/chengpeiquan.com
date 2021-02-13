@@ -2863,7 +2863,7 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-vite-plugin-components@^0.6.6:
+vite-plugin-components@0.6.6:
   version "0.6.6"
   resolved "https://registry.yarnpkg.com/vite-plugin-components/-/vite-plugin-components-0.6.6.tgz#7b097c5c0d964eb8f2bd281dcfffb91cf2356ec7"
   integrity sha512-tOcWm/2T+XUImJ8yFZb/i8dUWXNoraqDdKrBBpfbHGg3MES0T6AN1315iuKYHTG71fwKI0OGElw3S9B04ZUwPA==
@@ -2907,7 +2907,7 @@ vite-plugin-purge-icons@^0.6.0:
     "@purge-icons/generated" "^0.6.0"
     rollup-plugin-purge-icons "^0.6.0"
 
-vite-ssg@^0.8.0:
+vite-ssg@0.8.0:
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/vite-ssg/-/vite-ssg-0.8.0.tgz#331fc93c84721e992d306eaec1d29f3018341e74"
   integrity sha512-WAEs2bivu3F4nwC01KQWJjb4Z4rwob+lU12TPY5+EZsz4I2ZzD6tQJcQ9q3DPY4I1bTsPd7CdKKxD8IUuWU6qA==
