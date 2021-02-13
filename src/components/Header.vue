@@ -1,8 +1,8 @@
 <template>
-  <header class="flex justify-between items-center w-full md:h-20 h-14 md:px-4 px-2" >
+  <header class="flex justify-between items-center w-full md:h-24 h-14 md:px-4 px-2 border-b-4 dark:border-white dark:border-opacity-5 bg-white bg-opacity-5">
     <!-- 站点信息 -->
     <div class="flex justify-start items-center">
-      <div class="flex flex-shrink-0 md:w-12 w-8 md:h-12 h-8 rounded-full overflow-hidden" >
+      <div class="flex flex-shrink-0 md:w-14 w-8 md:h-14 h-8 rounded-full overflow-hidden" >
         <img
           class="img"
           :src="logo"
@@ -12,7 +12,7 @@
       <span
         class="
           md:ml-4 ml-2
-          md:text-xl text-l
+          md:text-2xl text-l
         "
       >程沛权</span>
     </div>
@@ -24,7 +24,7 @@
         <li
           v-for="(item, index) in navList"
           :key="index"
-          class="md:mr-8 mr-3 md:text-lg text-sm"
+          class="md:mr-8 mr-3 md:text-xl text-sm"
         >
           <router-link
             v-if="item.isRoute"
@@ -98,9 +98,11 @@ const navList: NavList = [
     margin-right: calc(var(--margin) / 4);
   }
 
+  &.router-link-active,
   &:hover {
     opacity: 1;
     text-decoration-color: inherit;
   }
+  
 }
 </style>

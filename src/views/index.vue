@@ -1,7 +1,7 @@
 <template>
   <main>
     <!-- 头图 -->
-    <section class="w-full h-60 overflow-hidden mb-6">
+    <section class="banner">
       <img
         class="img"
         :src="banner"
@@ -35,6 +35,10 @@ useHead({
 })
 </script>
 
-<style scoped>
-
+<style lang="postcss" scoped>
+.banner {
+  @apply w-full overflow-hidden mb-6 border-b-4 dark:border-white dark:border-opacity-5 bg-white bg-opacity-5;
+  height: 40vh;
+  max-height: 40vh;
+}
 </style>
