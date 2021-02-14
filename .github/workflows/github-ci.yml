@@ -38,7 +38,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
     # 部署到阿里云
     - name: deploy to aliyun esc
-      uses: easingthemes/ssh-deploy@last
+      uses: easingthemes/ssh-deploy@v2.1.5
       env:
         # 私钥
         SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
