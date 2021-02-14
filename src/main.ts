@@ -14,6 +14,7 @@ import '@purge-icons/generated'
  */
 import { routes, scrollBehavior } from '/@/router'
 import App from '/@/App.vue'
+console.log(routes);
 
 
 /** 
