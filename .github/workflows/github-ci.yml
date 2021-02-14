@@ -8,7 +8,7 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    # 检查来源
+    # 获取源码
     - name: Checkout
       uses: actions/checkout@v2
     # 查找yarn缓存
@@ -36,3 +36,19 @@ jobs:
         build_dir: dist
       env:
         GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+    # 部署到阿里云
+    - name: deploy to aliyun esc
+      uses: easingthemes/ssh-deploy@last
+      env:
+        # 私钥
+        SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
+        # scp参数
+        ARGS: "-rltgoDzvO --delete"
+        # 源目录，编译后生成的文件目录
+        SOURCE: dist
+        # 服务器ip：换成你的服务器IP
+        REMOTE_HOST: 47.75.88.237
+        # 用户
+        REMOTE_USER: root
+        # 目标地址 你在服务器上部署代码的地方
+        TARGET: /root/node-server
