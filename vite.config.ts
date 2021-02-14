@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import pkg from './package.json'
 import path from 'path'
@@ -46,7 +46,7 @@ const IS_DEV: boolean = process.env.NODE_ENV === 'development' ? true : false;
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: IS_DEV ? '/' : '/',
+  base: IS_DEV ? '/' : 'https://cdn.jsdelivr.net/gh/chengpeiquan/chengpeiquan.com@gh-pages/',
   server: {
     port: 33333,
     // proxy: {
@@ -83,8 +83,7 @@ export default defineConfig({
     '/@fonts': resolve('src/assets/fonts'),
     '/@libs': resolve('src/libs'),
     '/@cp': resolve('src/components'),
-    '/@views': resolve('src/views'),
-    '/@plugins': resolve('src/plugins')
+    '/@views': resolve('src/views')
   },
   optimizeDeps: {
     include: [
@@ -103,8 +102,11 @@ export default defineConfig({
 
     Pages({
       pagesDir: 'src/views',
+      importMode: 'async',
       extensions: ['vue', 'md'],
       extendRoute (route) {
+        console.log(route);
+        
         const path = resolve(route.component.slice(1));
         const md = fs.readFileSync(path, 'utf-8');
 

@@ -76,6 +76,7 @@ export default defineComponent({
   setup () {
     const router = useRouter();
     const articleList = ref<List[]>([]);
+    const pageSize: number = 10;
 
     /** 
      * 设置页面信息
@@ -111,6 +112,8 @@ export default defineComponent({
         }
       });
 
+      console.log(articleList.value);
+      
     }
 
     onMounted(getArticleList);

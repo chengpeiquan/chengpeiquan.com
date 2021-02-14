@@ -31,5 +31,5 @@ useHead({
       content: '@chengpeiquan'
       },
   ],
-})
+});
 </script>

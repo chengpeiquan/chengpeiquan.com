@@ -10,7 +10,7 @@
         >
           <img
             class="w-full"
-            src="https://chengpeiquan.com/wp-content/uploads/2021/01/1-1.jpg"
+            src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/01/1-1.jpg"
             alt="Vue3.0学习教程与实战案例"
           >
         </a>

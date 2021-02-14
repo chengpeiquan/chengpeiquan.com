@@ -8,12 +8,27 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
+    # 检查来源
     - name: Checkout
       uses: actions/checkout@v2
-    - name: npm install and build
+    # 查找yarn缓存
+    - name: Get yarn cache path
+      id: yarn-cache
+      run: echo "::set-output name=dir::$(yarn cache dir)"
+    # 更新缓存
+    - name: Cache dependencies
+      uses: actions/cache@v1
+      with:
+        path: ${{ steps.yarn-cache.outputs.dir }}
+        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-yarn-
+    # 安装依赖并打包
+    - name: install and build
       run: |
-        npm install
-        npm run build
+        yarn install
+        yarn build
+    # 自动部署到gh-pages分支
     - name: github-ci
       uses: crazy-max/ghaction-github-pages@v2
       with:
