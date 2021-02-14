@@ -1,7 +1,7 @@
 <template>
   <section class="article-sidebar lg:flex hidden flex-col flex-shrink-0 ml-16">
     <!-- 热门栏目 -->
-    <section class="mb-8">
+    <section class="mb-16">
       <h2 class="block-title">热门栏目</h2>
       <div class="flex flex-col w-full">
         <a
@@ -10,7 +10,7 @@
         >
           <img
             class="w-full"
-            src="https://chengpeiquan.com/wp-content/uploads/2021/01/1-1.jpg"
+            src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/01/1-1.jpg"
             alt="Vue3.0学习教程与实战案例"
           >
         </a>
@@ -19,14 +19,14 @@
     <!-- 热门栏目 -->
 
     <!-- 猜你喜欢 -->
-    <section class="mb-8">
+    <section class="mb-16">
       <div class="flex justify-between items-center block-title">
         <h2>猜你喜欢</h2>
         <span class="text-base font-normal cursor-pointer select-none" @click="getArticleList">换一换</span>
       </div>
       <ul>
         <li
-          class="flex mb-4"
+          class="flex mb-8"
           v-for="(item, index) in articleList"
           :key="index"
         >
@@ -81,7 +81,7 @@ export default defineComponent({
     const activeRoute = useRoute();
     const router = useRouter();
     const articleList = ref<List[]>([]);
-    const count: number = 10;
+    const count: number = 5;
 
     /** 
      * 获取文章列表
@@ -95,7 +95,7 @@ export default defineComponent({
       articleList.value = shuffle(routes).map( (route: RouteRecordRaw) => {
         const { path } = route;
         const { frontmatter } = route.meta;
-        const { title, description, cover, date } = frontmatter;
+        const { title, cover } = frontmatter;
         
         return {
           path,

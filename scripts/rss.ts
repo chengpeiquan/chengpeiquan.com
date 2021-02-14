@@ -4,7 +4,7 @@ import matter from 'gray-matter'
 import MarkdownIt from 'markdown-it'
 import { Feed } from 'feed'
 
-const DOMAIN = 'https://antfu.me'
+const DOMAIN = 'https://chengpeiquan.com'
 
 async function run() {
   const markdown = MarkdownIt({
@@ -12,7 +12,7 @@ async function run() {
     breaks: true,
     linkify: true,
   })
-  const files = await fg('pages/posts/*.md')
+  const files = await fg('src/views/article/*.md')
 
   const posts: any[] = (
     await Promise.all(
@@ -21,22 +21,22 @@ async function run() {
           const raw = await fs.readFile(i, 'utf-8')
           const { data, content } = matter(raw)
 
-          if (data.lang !== 'en')
-            return
+          // if (data.lang !== 'en')
+          //   return
 
           const html = markdown.render(content)
-            .replace('src="/', `src="${DOMAIN}/`)
+          //   .replace('src="/', `src="${DOMAIN}/`)
 
-          if (data.image?.startsWith('/'))
-            data.image = DOMAIN + data.image
+          // if (data.image?.startsWith('/'))
+          //   data.image = DOMAIN + data.image
 
           return {
             ...data,
             content: html,
             author: [
               {
-                name: 'Anthony Fu',
-                email: 'hi@antfu.me',
+                name: 'chengpeiquan',
+                email: 'chengpeiquan@chengpeiquan.com',
                 link: DOMAIN,
               },
             ],
@@ -48,22 +48,22 @@ async function run() {
   posts.sort((a, b) => +new Date(b.date) - +new Date(a.date))
 
   const feed = new Feed({
-    title: 'Anthony Fu',
-    description: 'Blog of Anthony Fu',
-    id: 'https://antfu.me/',
-    link: 'https://antfu.me/',
-    image: 'https://antfu.me/avatar.png',
-    favicon: 'https://antfu.me/logo.png',
-    copyright: 'CC BY-NC 4.0 2021 © Anthony Fu',
+    title: '程沛权 - 养了三只猫',
+    description: '程沛权，养了三只猫。',
+    id: 'https://chengpeiquan.com/',
+    link: 'https://chengpeiquan.com/',
+    image: 'https://chengpeiquan.com/avatar.png',
+    favicon: 'https://chengpeiquan.com/logo.png',
+    copyright: '© 2021 程沛权',
     feedLinks: {
-      json: 'https://antfu.me/feed.json',
-      atom: 'https://antfu.me/feed.atom',
-      rss: 'https://antfu.me/feed.xml',
+      json: 'https://chengpeiquan.com/feed.json',
+      atom: 'https://chengpeiquan.com/feed.atom',
+      rss: 'https://chengpeiquan.com/feed.xml',
     },
     author: {
-      name: 'Anthony Fu',
-      email: 'hi@antfu.me',
-      link: 'https://antfu.me',
+      name: 'chengpeiquan',
+      email: 'chengpeiquan@chengpeiquan.com',
+      link: 'https://chengpeiquan.com',
     },
   })
 

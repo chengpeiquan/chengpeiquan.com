@@ -38,7 +38,7 @@
           <!-- 信息 -->
           <div class="md:flex hidden flex-col justify-between">
             <p class="md:text-base text-sm text-gray-400 md:mb-4 mb-2 md:line-clamp-3 line-clamp-2">
-              {{ item.description }}
+              {{ item.desc }}
             </p>
 
             <p class="md:text-sm text-xs text-gray-400">
@@ -61,11 +61,13 @@ import { defineComponent, onMounted, ref } from 'vue'
 import { useRouter, RouteRecordRaw } from 'vue-router'
 import { formatDate } from '/@libs/logics'
 import isArticle from '/@libs/isArticle'
+import { useHead } from '@vueuse/head'
+import config from '/@ts/config'
 
 interface List {
   path: string,
   title: string,
-  description: string,
+  desc: string,
   cover: string,
   date: string
 }
@@ -74,6 +76,17 @@ export default defineComponent({
   setup () {
     const router = useRouter();
     const articleList = ref<List[]>([]);
+    const pageSize: number = 10;
+
+    /** 
+     * 设置页面信息
+     */
+    useHead({
+      title: `文章列表 - ${config.title}`,
+      meta: [
+        { property: 'og:title', content: `文章列表 - ${config.title}` }
+      ],
+    })
 
     /** 
      * 获取文章列表
@@ -88,12 +101,12 @@ export default defineComponent({
       articleList.value = routes.map( (route: RouteRecordRaw) => {
         const { path } = route;
         const { frontmatter } = route.meta;
-        const { title, description, cover, date } = frontmatter;
+        const { title, desc, cover, date } = frontmatter;
         
         return {
           path,
           title,
-          description,
+          desc,
           cover,
           date
         }

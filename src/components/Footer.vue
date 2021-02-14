@@ -1,5 +1,5 @@
 <template>
-  <footer class="flex justify-center items-center w-full h-40">
+  <footer class="flex justify-center items-center w-full h-36">
     <p class="opacity-70 md:text-sm text-xs">
       <span>© {{ year }} 程沛权</span>
       <a

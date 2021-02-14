@@ -7,8 +7,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "cross-env NODE_ENV=production vite-ssg build",
+    "dev": "cross-env NODE_ENV=development vite",
+    "build": "cross-env NODE_ENV=production vite-ssg build && esno ./scripts/rss.ts",
     "serve": "vite preview"
   },
   "repository": {
@@ -59,7 +59,7 @@
     "vite-plugin-components": "0.6.6",
     "vite-plugin-icons": "^0.2.1",
     "vite-plugin-md": "^0.4.2",
-    "vite-plugin-pages": "0.2.2",
+    "vite-plugin-pages": "^0.4.2",
     "vite-plugin-purge-icons": "^0.6.0",
     "vite-ssg": "0.8.0",
     "vue-baidu-analytics": "^2.0.3"

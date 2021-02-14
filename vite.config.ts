@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import pkg from './package.json'
 import path from 'path'
@@ -46,7 +46,7 @@ const IS_DEV: boolean = process.env.NODE_ENV === 'development' ? true : false;
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: IS_DEV ? '/' : 'https://cdn.jsdelivr.net/gh/chengpeiquan/chengpeiquan.com@gh-pages/assets/',
+  base: IS_DEV ? '/' : 'https://cdn.jsdelivr.net/gh/chengpeiquan/chengpeiquan.com@gh-pages/',
   server: {
     port: 33333,
     // proxy: {
@@ -83,8 +83,7 @@ export default defineConfig({
     '/@fonts': resolve('src/assets/fonts'),
     '/@libs': resolve('src/libs'),
     '/@cp': resolve('src/components'),
-    '/@views': resolve('src/views'),
-    '/@plugins': resolve('src/plugins')
+    '/@views': resolve('src/views')
   },
   optimizeDeps: {
     include: [
@@ -103,22 +102,24 @@ export default defineConfig({
 
     Pages({
       pagesDir: 'src/views',
+      importMode: 'async',
       extensions: ['vue', 'md'],
       extendRoute (route) {
-        const path = resolve(route.component.slice(1))
+        console.log(route);
+        
+        const path = resolve(route.component.slice(1));
+        const md = fs.readFileSync(path, 'utf-8');
 
-        if ( !path.includes('projects.md') ) {
-          const md = fs.readFileSync(path, 'utf-8')
-          const { data } = matter(md)
-
-          if ( !data.date ) {
-            data.date = new Date();
-          }
-          
-          route.meta = Object.assign(route.meta || {}, { frontmatter: data })
+        const { data } = matter(md);
+        if ( !data.date ) {
+          data.date = new Date();
         }
+        
+        route.meta = Object.assign(route.meta || {}, {
+          frontmatter: data
+        });
 
-        return route
+        return route;
       },
     }),
 
@@ -133,7 +134,9 @@ export default defineConfig({
           permalink: true,
           permalinkBefore: true,
           permalinkSymbol: '#',
-          permalinkAttrs: () => ({ 'aria-hidden': true }),
+          permalinkAttrs: () => ({
+            'aria-hidden': true
+          }),
         })
       },
     }),

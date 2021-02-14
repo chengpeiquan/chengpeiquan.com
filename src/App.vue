@@ -4,21 +4,32 @@
   <Footer />
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-import { useRouter } from 'vue-router'
-import Header from '/@cp/Header.vue'
-import Footer from '/@cp/Footer.vue'
+<script setup lang="ts">
+import { useHead } from '@vueuse/head'
+import config from '/@ts/config'
 
-export default defineComponent({
-  name: 'App',
-  components: {
-    Header,
-    Footer
-  },
-  setup () {
-    const router = useRouter();
-    console.log(router);
-  }
-})
+useHead({
+  meta: [
+    {
+      property: 'og:title',
+      content: config.title
+    },
+    {
+      property: 'og:image',
+      content: config.avatar.big
+      },
+    {
+      name: 'description',
+      content: config.description
+      },
+    {
+      name: 'twitter:card',
+      content: 'summary'
+    },
+    {
+      name: 'twitter:creator',
+      content: '@chengpeiquan'
+      },
+  ],
+});
 </script>

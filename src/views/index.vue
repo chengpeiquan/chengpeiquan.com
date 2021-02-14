@@ -4,7 +4,7 @@
     <section class="banner">
       <img
         class="img"
-        :src="banner"
+        src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210214152623.jpg"
         alt="花臂当仔"
       >
     </section>
@@ -21,16 +21,15 @@
 
 <script setup lang="ts">
 import { useHead } from '@vueuse/head'
-import banner from '/@img/banner.jpg'
+import config from '/@ts/config'
 
 useHead({
-  title: '程沛权 - 养了三只猫',
+  title: config.title,
   meta: [
-    { property: 'og:title', content: 'Anthony Fu' },
-    { property: 'og:image', content: 'https://antfu.me/avatar.png' },
-    { name: 'description', content: 'Anthony Fu\'s Portfolio' },
-    { name: 'twitter:card', content: 'summary' },
-    { name: 'twitter:creator', content: '@antfu7' },
+    {
+      property: 'og:title',
+      content: config.title
+    }
   ],
 })
 </script>
@@ -38,7 +37,8 @@ useHead({
 <style lang="postcss" scoped>
 .banner {
   @apply w-full overflow-hidden mb-6 border-b-4 dark:border-white dark:border-opacity-5 bg-white bg-opacity-5;
-  height: 40vh;
-  max-height: 40vh;
+  height: 80vh;
+  max-height: 80vh;
+  filter: brightness(0.5) blur(2px);
 }
 </style>
