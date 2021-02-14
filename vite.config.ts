@@ -105,8 +105,6 @@ export default defineConfig({
       importMode: 'async',
       extensions: ['vue', 'md'],
       extendRoute (route) {
-        console.log(route);
-        
         const path = resolve(route.component.slice(1));
         const md = fs.readFileSync(path, 'utf-8');
 
