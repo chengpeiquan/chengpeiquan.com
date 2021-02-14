@@ -29,15 +29,15 @@ jobs:
         yarn install
         yarn build
     # 自动部署到gh-pages分支
-    - name: github-ci
+    - name: deploy to gh-pages
       uses: crazy-max/ghaction-github-pages@v2
       with:
         target_branch: gh-pages
         build_dir: dist
       env:
         GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-    # 部署到阿里云
-    - name: deploy to aliyun esc
+    # 自动部署到阿里云服务器
+    - name: deploy to aliyun
       uses: easingthemes/ssh-deploy@v2.1.5
       env:
         # 私钥
