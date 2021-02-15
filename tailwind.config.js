@@ -2,7 +2,19 @@ const typography = require('@tailwindcss/typography')
 const lineClamp = require('@tailwindcss/line-clamp')
 
 module.exports = {
-  purge: [],
+  purge: {
+    enabled: process.env.NODE_ENV === 'production',
+    content: [
+      './index.html',
+      './src/**/*.vue',
+      './src/**/*.md',
+      './src/**/*.js',
+      './src/**/*.ts',
+    ],
+    options: {
+      safelist: ['prose', 'prose-sm', 'm-auto'],
+    },
+  },
   darkMode: 'class',
   theme: {
     extend: {
