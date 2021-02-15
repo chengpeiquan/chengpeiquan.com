@@ -1,5 +1,6 @@
 <template>
-  <section class="flex justify-between flex-col">
+  <section class="flex flex-col">
+    <!-- 列表 -->
     <ul class="article-list divide-y dark:divide-white dark:divide-opacity-5 md:mx-0 mx-4">
       <li
         class="flex flex-col md:mb-8 mb-4 md:pt-8 pt-4"
@@ -49,6 +50,39 @@
         </div>
       </li>
     </ul>
+    <!-- 列表 -->
+
+    <!-- 翻页 -->
+    <section class="flex justify-center items-center">
+      <div class="mx-4">
+        <router-link
+          v-if="page > 1"
+          :to="{
+            name: 'article-page',
+            params: {
+              page: page - 1
+            }
+          }"
+        >
+          Prev
+        </router-link>
+      </div>
+
+      <div class="mx-4">
+        <router-link
+          v-if="articleList.length === pageSize"
+          :to="{
+            name: 'article-page',
+            params: {
+              page: page + 1
+            }
+          }"
+        >
+          Next
+        </router-link>
+      </div>
+    </section>
+    <!-- 翻页 -->
   </section>
 
   <!-- 侧边栏 -->
@@ -57,7 +91,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent, reactive, ref } from 'vue'
 import { useRouter, RouteRecordRaw, useRoute } from 'vue-router'
 import { formatDate } from '/@libs/logics'
 import isArticle from '/@libs/isArticle'
@@ -70,6 +104,11 @@ interface List {
   desc: string,
   cover: string,
   date: string
+}
+
+interface Pagination {
+  prev: string,
+  next: string
 }
 
 export default defineComponent({
@@ -102,8 +141,6 @@ export default defineComponent({
       if ( route.params.page && !isNaN(Number(route.params.page)) ) {
         page.value = Number(route.params.page);
       }
-      console.log('当前页码：', page.value);
-      console.log('文章数量：', articleTotal.value);
 
       // 获取列表
       getArticleList();
@@ -151,6 +188,8 @@ export default defineComponent({
     getPageInfo();
 
     return {
+      page,
+      pageSize,
       articleList
     }
   }
