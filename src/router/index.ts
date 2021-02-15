@@ -6,6 +6,8 @@ import { RouterScrollBehavior } from 'vue-router'
  * 定义路由
  */
 export const routes = autoRoutes.map( (route) => {
+  console.log(route);
+  
   return {
     ...route,
     alias: route.path.endsWith('/')
