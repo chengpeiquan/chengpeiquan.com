@@ -65,7 +65,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref } from 'vue'
+import { defineComponent, ref } from 'vue'
 import { useRouter, RouteRecordRaw, useRoute } from 'vue-router'
 import isArticle from '/@libs/isArticle'
 import shuffle from '/@libs/shuffle'
@@ -108,10 +108,9 @@ export default defineComponent({
       if ( articleList.value.length > count ) {
         articleList.value.length = count;
       }
-      
     }
 
-    onMounted(getArticleList);
+    getArticleList();
     
     return {
       // 数据
