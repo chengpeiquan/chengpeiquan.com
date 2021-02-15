@@ -12,7 +12,7 @@ module.exports = {
       './src/**/*.ts',
     ],
     options: {
-      safelist: ['prose', 'prose-sm', 'm-auto', 'article-list'],
+      safelist: ['prose', 'prose-sm', 'm-auto', 'dark'],
     },
   },
   darkMode: 'class',
