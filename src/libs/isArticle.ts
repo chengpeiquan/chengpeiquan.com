@@ -1,4 +1,3 @@
-import { type } from 'os';
 import { RouteRecordRaw } from 'vue-router'
 
 /** 
@@ -9,7 +8,7 @@ const isArticle = (route: RouteRecordRaw): boolean => {
     return false;
   }
 
-  return route.path.startsWith('/article/') && !route.path.endsWith('.html');
+  return route.name !== 'article-page' && route.path.startsWith('/article/') && !route.path.endsWith('.html');
 }
 
 export default isArticle;
