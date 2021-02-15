@@ -57,7 +57,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref } from 'vue'
+import { defineComponent, ref } from 'vue'
 import { useRouter, RouteRecordRaw } from 'vue-router'
 import { formatDate } from '/@libs/logics'
 import isArticle from '/@libs/isArticle'
@@ -111,12 +111,8 @@ export default defineComponent({
           date
         }
       });
-
-      console.log(articleList.value);
-      
     }
-
-    onMounted(getArticleList);
+    getArticleList();
 
     return {
       articleList
