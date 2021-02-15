@@ -13,6 +13,7 @@ import Prism from 'markdown-it-prism'
 import anchor from 'markdown-it-anchor'
 import matter from 'gray-matter'
 import { slugify } from './scripts/slugify'
+import { VitePWA } from 'vite-plugin-pwa'
 
 const resolve = (dir: string): string => path.resolve(__dirname, dir);
 const IS_DEV: boolean = process.env.NODE_ENV === 'development' ? true : false;
@@ -72,18 +73,20 @@ export default defineConfig({
       // ]
     // }
   },
-  alias: {
-    '/@': resolve('src'),
-    '/@img': resolve('src/assets/img'),
-    '/@css': resolve('src/assets/css'),
-    '/@styl': resolve('src/assets/styl'),
-    '/@postcss': resolve('src/assets/postcss'),
-    '/@js': resolve('src/assets/js'),
-    '/@ts': resolve('src/assets/ts'),
-    '/@fonts': resolve('src/assets/fonts'),
-    '/@libs': resolve('src/libs'),
-    '/@cp': resolve('src/components'),
-    '/@views': resolve('src/views')
+  resolve: {
+    alias: {
+      '/@': resolve('src'),
+      '/@img': resolve('src/assets/img'),
+      '/@css': resolve('src/assets/css'),
+      '/@styl': resolve('src/assets/styl'),
+      '/@postcss': resolve('src/assets/postcss'),
+      '/@js': resolve('src/assets/js'),
+      '/@ts': resolve('src/assets/ts'),
+      '/@fonts': resolve('src/assets/fonts'),
+      '/@libs': resolve('src/libs'),
+      '/@cp': resolve('src/components'),
+      '/@views': resolve('src/views')
+    },
   },
   optimizeDeps: {
     include: [
@@ -102,7 +105,6 @@ export default defineConfig({
 
     Pages({
       pagesDir: 'src/views',
-      importMode: 'async',
       extensions: ['vue', 'md'],
       extendRoute (route) {
         const path = resolve(route.component.slice(1));
@@ -150,6 +152,9 @@ export default defineConfig({
     }),
     
     PurgeIcons(),
+
     Icons(),
+
+    VitePWA(),
   ]
 })

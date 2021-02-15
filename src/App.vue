@@ -6,7 +6,12 @@
 
 <script setup lang="ts">
 import { useHead } from '@vueuse/head'
+import { useRoute } from 'vue-router';
 import config from '/@ts/config'
+
+const route = useRoute()
+console.log(route);
+
 
 useHead({
   meta: [
