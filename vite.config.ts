@@ -77,12 +77,8 @@ export default defineConfig({
     alias: {
       '/@': resolve('src'),
       '/@img': resolve('src/assets/img'),
-      '/@css': resolve('src/assets/css'),
-      '/@styl': resolve('src/assets/styl'),
       '/@postcss': resolve('src/assets/postcss'),
-      '/@js': resolve('src/assets/js'),
       '/@ts': resolve('src/assets/ts'),
-      '/@fonts': resolve('src/assets/fonts'),
       '/@libs': resolve('src/libs'),
       '/@cp': resolve('src/components'),
       '/@views': resolve('src/views')
