@@ -58,7 +58,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
-import { useRouter, RouteRecordRaw } from 'vue-router'
+import { useRouter, RouteRecordRaw, useRoute } from 'vue-router'
 import { formatDate } from '/@libs/logics'
 import isArticle from '/@libs/isArticle'
 import { useHead } from '@vueuse/head'
@@ -74,31 +74,53 @@ interface List {
 
 export default defineComponent({
   setup () {
+    const route = useRoute();
     const router = useRouter();
+    const routes = ref<RouteRecordRaw[]>([]);
+    const page = ref<number>(1);
+    const pageSize = ref<number>(10);
+    const pageTotal = ref<number>(1);
+    const articleTotal = ref<number>(1);
     const articleList = ref<List[]>([]);
-    const pageSize: number = 10;
 
     /** 
-     * 设置页面信息
+     * 获取分页信息 
      */
-    useHead({
-      title: `文章列表 - ${config.title}`,
-      meta: [
-        { property: 'og:title', content: `文章列表 - ${config.title}` }
-      ],
-    })
+    const getPageInfo = (): void => {
+      // 提取文章详情页的路由并按日期排序
+      routes.value = router.getRoutes()
+        .filter( (item: RouteRecordRaw) => isArticle(item) )
+        .sort( (a: RouteRecordRaw, b: RouteRecordRaw) => +new Date(b.meta.frontmatter.date) - +new Date(a.meta.frontmatter.date) );
+
+      // 获取文章总数
+      articleTotal.value = routes.value.length;
+
+      // 获取页码总数
+      pageTotal.value = routes.value.length;
+
+      // 获取页码信息
+      if ( route.params.page && !isNaN(Number(route.params.page)) ) {
+        page.value = Number(route.params.page);
+      }
+      console.log('当前页码：', page.value);
+      console.log('文章数量：', articleTotal.value);
+
+      // 获取列表
+      getArticleList();
+    }
 
     /** 
      * 获取文章列表
      */
     const getArticleList = (): void => {
-      // 提取文章详情页的路由并按日期排序
-      const routes = router.getRoutes()
-        .filter( (route: RouteRecordRaw) => isArticle(route) )
-        .sort( (a: RouteRecordRaw, b: RouteRecordRaw) => +new Date(b.meta.frontmatter.date) - +new Date(a.meta.frontmatter.date) );
+      // 根据页码获取对应的文章
+      const START: number = 0 + pageSize.value * (page.value - 1);
+      const END: number = START + pageSize.value;
+      const CUR_ROUTES: RouteRecordRaw[] = routes.value.slice(START, END);
+      console.log('开始', START, '结束', END, '文章列表', CUR_ROUTES);
 
       // 提取要用到的字段
-      articleList.value = routes.map( (route: RouteRecordRaw) => {
+      articleList.value = CUR_ROUTES.map( (route: RouteRecordRaw) => {
         const { path } = route;
         const { frontmatter } = route.meta;
         const { title, desc, cover, date } = frontmatter;
@@ -112,7 +134,21 @@ export default defineComponent({
         }
       });
     }
-    getArticleList();
+
+    /** 
+     * 设置页面信息
+     */
+    useHead({
+      title: `文章列表 - ${config.title}`,
+      meta: [
+        { property: 'og:title', content: `文章列表 - 第${page.value}页 - ${config.title}` }
+      ],
+    })
+
+    /** 
+     * 要执行的函数
+     */
+    getPageInfo();
 
     return {
       articleList
