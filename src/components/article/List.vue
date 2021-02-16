@@ -54,9 +54,31 @@
 
     <!-- 翻页 -->
     <section class="flex justify-center items-center">
+      <!-- 第一页 -->
       <div class="mx-4">
         <router-link
           v-if="page > 1"
+          :to="{
+            name: 'article-page'
+          }"
+        >
+          First
+        </router-link>
+      </div>
+      <!-- 第一页 -->
+
+      <!-- 上一页 -->
+      <div class="mx-4">
+        <router-link
+          v-if="page === 2"
+          :to="{
+            name: 'article-page'
+          }"
+        >
+          Prev
+        </router-link>
+        <router-link
+          v-else-if="page > 2"
           :to="{
             name: 'article-page',
             params: {
@@ -67,10 +89,12 @@
           Prev
         </router-link>
       </div>
+      <!-- 上一页 -->
 
+      <!-- 下一页 -->
       <div class="mx-4">
         <router-link
-          v-if="articleList.length === pageSize"
+          v-if="page < pageTotal"
           :to="{
             name: 'article-page',
             params: {
@@ -81,6 +105,23 @@
           Next
         </router-link>
       </div>
+      <!-- 下一页 -->
+
+      <!-- 下一页 -->
+      <div class="mx-4">
+        <router-link
+          v-if="page < pageTotal"
+          :to="{
+            name: 'article-page',
+            params: {
+              page: pageTotal
+            }
+          }"
+        >
+          Last
+        </router-link>
+      </div>
+      <!-- 下一页 -->
     </section>
     <!-- 翻页 -->
   </section>
@@ -132,10 +173,11 @@ export default defineComponent({
         .sort( (a: RouteRecordRaw, b: RouteRecordRaw) => +new Date(b.meta.frontmatter.date) - +new Date(a.meta.frontmatter.date) );
 
       // 获取文章总数
-      articleTotal.value = routes.value.length;
+      const ROUTES_COUNT: number = routes.value.length;
+      articleTotal.value = ROUTES_COUNT;
 
       // 获取页码总数
-      pageTotal.value = routes.value.length;
+      pageTotal.value = Math.ceil( ROUTES_COUNT / pageSize.value);
 
       // 获取页码信息
       if ( route.params.page && !isNaN(Number(route.params.page)) ) {
@@ -154,7 +196,12 @@ export default defineComponent({
       const START: number = 0 + pageSize.value * (page.value - 1);
       const END: number = START + pageSize.value;
       const CUR_ROUTES: RouteRecordRaw[] = routes.value.slice(START, END);
-      console.log('开始', START, '结束', END, '文章列表', CUR_ROUTES);
+      console.log({
+        '1.当前页码': page.value,
+        '2.页码总数': pageTotal.value,
+        '3.文章总数': articleTotal.value,
+        '4.文章列表': CUR_ROUTES
+      });
 
       // 提取要用到的字段
       articleList.value = CUR_ROUTES.map( (route: RouteRecordRaw) => {
@@ -189,7 +236,7 @@ export default defineComponent({
 
     return {
       page,
-      pageSize,
+      pageTotal,
       articleList
     }
   }

@@ -1,7 +1,7 @@
 ---
 title: 记录vue.config设置alias无法生效的一次问题排查
 desc: 昨晚把Node和Vue-CLI等工具都升级到了最新版，create了一个新项目，因为之前干活的时候为了方便都是拷贝之前的配置文件下来，很多东西都是基于旧版的解构，所以想针对新版本也处理一份配置，于是只拿了vue.config.js来到新项目这边。
-keywords: vue cli alias, vue alias, webpack alias
+keywords: vue cli alias,vue alias,webpack alias
 date: 2020-05-22 16:58:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/05/4.jpg
 ---

@@ -1,7 +1,7 @@
 ---
 title: 使用getBoundingClientRect 针对scrollTop一直为0且documentElement无效的解决方案
 desc: 今天在上线一个移动端需求的时候，QA妹子跟我反馈在她们一部iPhone X上面出现了一个滚动加载会同时触发下拉刷新的bug…我就 ？？？……一个在顶部一个在底部这也能扯上关系？然后再进一步测试，发现这个坑是出现在自家app的内置webview上，在浏览器和微信等环境都正常。
-keywords: scrollTop 0, scrollTop bug, getBoundingClientRect
+keywords: scrollTop 0,scrollTop bug,getBoundingClientRect
 date: 2020-09-15 01:41:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/09/3.jpg
 ---
