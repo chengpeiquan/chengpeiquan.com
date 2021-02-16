@@ -1,21 +1,28 @@
-const typography = require('@tailwindcss/typography')
-const lineClamp = require('@tailwindcss/line-clamp')
+// const typography = require('@tailwindcss/typography')
+// const lineClamp = require('@tailwindcss/line-clamp')
+const typography = require('windicss/plugin/typography')
+const lineClamp = require('windicss/plugin/line-clamp')
 
 module.exports = {
-  purge: {
-    enabled: process.env.NODE_ENV === 'production',
-    content: [
-      './index.html',
-      './src/**/*.vue',
-      './src/**/*.md',
-      './src/**/*.js',
-      './src/**/*.ts',
-    ],
-    options: {
-      safelist: ['prose', 'prose-sm', 'm-auto', 'dark'],
-    },
-  },
+  // purge: {
+  //   enabled: process.env.NODE_ENV === 'production',
+  //   content: [
+  //     './index.html',
+  //     './src/**/*.vue',
+  //     './src/**/*.md',
+  //     './src/**/*.js',
+  //     './src/**/*.ts',
+  //   ],
+  //   options: {
+  //     safelist: ['prose', 'prose-sm', 'm-auto', 'dark'],
+  //   },
+  // },
   darkMode: 'class',
+  plugins: [
+    // typography,
+    require('windicss/plugin/typography'),
+    lineClamp
+  ],
   theme: {
     extend: {
       screens: {
@@ -43,8 +50,4 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [
-    typography,
-    lineClamp
-  ],
 }

@@ -4371,6 +4371,14 @@ vite-plugin-pwa@^0.4.6:
     pretty-bytes "^5.5.0"
     workbox-build "^6.1.0"
 
+vite-plugin-windicss@^0.1.12:
+  version "0.1.12"
+  resolved "https://registry.yarnpkg.com/vite-plugin-windicss/-/vite-plugin-windicss-0.1.12.tgz#91fd3d02d0d4e8de465fbfad9794d79e70221a2a"
+  integrity sha512-UCcWmIETwCUEczt3bmK2P0ENPxwbp5NrFW7HwuJtDnkoBenXYddczUdSl94vhM5KyWAg/Ux7hD17AlocvqQgjA==
+  dependencies:
+    fast-glob "^3.2.5"
+    windicss "^2.1.6"
+
 vite-ssg@0.8.8:
   version "0.8.8"
   resolved "https://registry.yarnpkg.com/vite-ssg/-/vite-ssg-0.8.8.tgz#28c8e199083afbce835ac1a29bdefe2b3f59a63a"
@@ -4539,6 +4547,11 @@ which@^2.0.1:
   integrity sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==
   dependencies:
     isexe "^2.0.0"
+
+windicss@^2.1.6:
+  version "2.1.6"
+  resolved "https://registry.yarnpkg.com/windicss/-/windicss-2.1.6.tgz#39e281d24e42a1dc5271de433350b72508598a66"
+  integrity sha512-G+RCA/SC+LVDf9xXNYKjljmNDZOlS4XhZrHySH7Anh9ymTbo4AXsKGqZU1jKWTzSky6IP5fR4ug5YVBo44NV8Q==
 
 word-wrap@~1.2.3:
   version "1.2.3"

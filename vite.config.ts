@@ -14,6 +14,7 @@ import anchor from 'markdown-it-anchor'
 import matter from 'gray-matter'
 import { slugify } from './scripts/slugify'
 import { VitePWA } from 'vite-plugin-pwa'
+import WindiCSS from 'vite-plugin-windicss'
 
 const resolve = (dir: string): string => path.resolve(__dirname, dir);
 const IS_DEV: boolean = process.env.NODE_ENV === 'development' ? true : false;
@@ -156,5 +157,9 @@ export default defineConfig({
     Icons(),
 
     VitePWA(),
+
+    ...WindiCSS({
+      safelist: 'prose prose-sm m-auto dark'
+    }),
   ]
 })

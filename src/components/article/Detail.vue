@@ -88,17 +88,3 @@ export default defineComponent({
 })
 </script>
 
-<style lang="postcss">
-.line {
-  @apply flex items-center w-full
-}
-.prose {
-  width: 100%;
-  max-width: 100%;
-
-  img {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-</style>
