@@ -86,7 +86,8 @@
   </section>
 
   <!-- 侧边栏 -->
-  <article-sidebar />
+  <!-- <article-sidebar /> -->
+  <Sidebar />
   <!-- 侧边栏 -->
 </template>
 

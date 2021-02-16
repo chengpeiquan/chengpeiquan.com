@@ -120,7 +120,8 @@ export default defineConfig({
     }),
 
     Markdown({
-      wrapperComponent: 'article-detail',
+      // wrapperComponent: 'article-detail',
+      wrapperComponent: 'detail',
       wrapperClasses: 'prose m-auto',
       headEnabled: true,
       markdownItSetup(md) {
@@ -140,7 +141,10 @@ export default defineConfig({
     ViteComponents({
       extensions: ['vue', 'md'],
       deep: true,
-      directoryAsNamespace: true,
+      // directoryAsNamespace: true,
+      // globalNamespaces: [
+      //   'article'
+      // ],
       customLoaderMatcher: path => path.endsWith('.md'),
       customComponentResolvers: ViteIconsResolver({
         componentPrefix: '',

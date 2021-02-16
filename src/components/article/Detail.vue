@@ -16,7 +16,8 @@
     <!-- 文章内容 -->
 
     <!-- 侧边栏 -->
-    <article-sidebar />
+    <!-- <article-sidebar /> -->
+    <Sidebar />
     <!-- 侧边栏 -->
 
   </main>
