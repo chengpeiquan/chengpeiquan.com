@@ -19,6 +19,7 @@ import App from '/@/App.vue'
 /** 
  * 导入全局样式
  */
+import 'windi.css'
 import '/@postcss/config.postcss'
 import '/@postcss/global.postcss'
 import '/@postcss/markdown.postcss'
