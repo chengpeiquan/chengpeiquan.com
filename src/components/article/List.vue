@@ -1,9 +1,9 @@
 <template>
   <section class="flex flex-col">
     <!-- 列表 -->
-    <ul class="article-list divide-y dark:divide-white dark:divide-opacity-5 md:mx-0 mx-4">
+    <ul class="article-list md:mx-0 mx-4">
       <li
-        class="flex flex-col md:mb-8 mb-4 md:pt-8 pt-4"
+        class="flex flex-col md:pb-8 pb-4 md:mb-8 mb-4 border-b dark:border-white dark:border-opacity-5"
         v-for="(item, index) in articleList"
         :key="index"
       >
@@ -86,7 +86,6 @@
   </section>
 
   <!-- 侧边栏 -->
-  <!-- <article-sidebar /> -->
   <Sidebar />
   <!-- 侧边栏 -->
 </template>
@@ -196,9 +195,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<style scoped>
-.article-list li:first-child {
-  padding-top: 0;
-}
-</style>

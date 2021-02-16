@@ -1,11 +1,12 @@
 /* https://github.com/antfu/prism-theme-vars */
 @import 'prism-theme-vars/base.css';
 
+
+/* 主题变量 */
 :root {
   --prism-font-size: 0.9rem;
   --prism-font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
-
 html:not(.dark) {
   --prism-foreground: #393a34;
   --prism-background: #fbfbfb;
@@ -23,7 +24,6 @@ html:not(.dark) {
   --prism-decorator: #bd8f8f;
   --prism-json-property: #698c96;
 }
-
 html.dark {
   --prism-scheme: dark;
   --prism-foreground: #d4cfbf;
@@ -48,66 +48,8 @@ html.dark {
   --prism-selection-background: #444444;
 }
 
-.prose {
-  --fg: #555;
-  --fg-deep: #222;
-  --fg-deeper: #000;
-  
-  color: var(--fg);
 
-  a {
-    font-weight: inherit;
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-
-    &:hover { 
-      border-bottom: 1px solid var(--fg);
-    }
-  }
-
-  a code {
-    color: inherit;
-  }
-
-  hr {
-    width: 50px;
-    margin: 2em auto;
-  }
-}
-
-html.dark .prose {
-  --fg: #bbb;
-  --fg-deep: #ddd;
-  --fg-deeper: #fff;
-}
-
-a.item {
-  transition: .2s all ease-out;
-  text-decoration: none;
-  border-bottom: none !important;
-  opacity: 0.6;
-
-  &:hover {
-    opacity: 1;
-  }
-}
-
-a.header-anchor {
-  float: left;
-  margin-top: .125em;
-  margin-left: -1.2em;
-  padding-right: .50em;
-  font-size: .85em;
-  opacity: 0;
-  text-decoration: none;
-  border: 0 !important;
-}
-
-a.header-anchor:hover,
-a.header-anchor:focus {
-  text-decoration: none;
-}
-
+/* 标题和部分文本 */
 h1:hover .header-anchor,
 h1:focus .header-anchor,
 h2:hover .header-anchor,
@@ -121,4 +63,150 @@ h5:focus .header-anchor,
 h6:hover .header-anchor,
 h6:focus .header-anchor {
   opacity: 0.5;
+}
+
+a {
+  color: var(--fg-deeper) !important;
+}
+b {
+  color: var(--fg-deep) !important;
+}
+code {
+  font-size: 1rem !important;
+  color: var(--fg-deep) !important;
+}
+pre {
+  code {
+    font-size: var(--prism-font-size) !important;
+  }
+}
+strong {
+  color: var(--fg-deep) !important;
+}
+em {
+  color: inherit !important;
+}
+h1 {
+  color: var(--fg-deeper) !important;
+}
+h2 {
+  color: var(--fg-deep) !important;
+}
+h3,
+h4 {
+  color: inherit !important;
+}
+blockquote {
+  color: inherit !important;
+}
+
+
+/* 文章格式化 */
+.prose {
+  --fg: #555;
+  --fg-deep: #222;
+  --fg-deeper: #000;
+  
+  color: var(--fg);
+  text-align: justify;
+
+  a {
+    color: var(--fg-deeper);
+    font-weight: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+
+    &:hover { 
+      border-bottom: 1px solid var(--fg);
+    }
+
+    code {
+      color: inherit;
+    }
+  }
+
+  hr {
+    width: 50px;
+    margin: 2em auto;
+  }
+
+  table {
+    border: 1px solid var(--fg);
+    border-spacing: 0;
+    border-radius: 0.4rem;
+
+    thead {
+      color: var(--fg);
+    }
+
+    tbody {
+      tr {
+        &:last-child {
+          td {
+            border-bottom: 0;
+          }
+        }
+      }
+    }
+
+    th,
+    td {
+      padding: 0.6rem 0.8rem !important;
+      border-right: 1px solid var(--fg);
+      border-bottom: 1px solid var(--fg);
+
+      &:last-child {
+        border-right: 0;
+      }
+    }
+  }
+
+  ol > li {
+    padding-left: 0.75rem;
+
+    &::before {
+      display: none;
+    }
+  }
+  
+
+  @apply text-base;
+}
+html.dark .prose {
+  --fg: #bbb;
+  --fg-deep: #ddd;
+  --fg-deeper: #fff;
+}
+
+
+/* 图片 */
+.img {
+  @apply w-full h-full object-cover;
+}
+
+
+/* 文章链接和锚点 */
+a.item {
+  transition: .2s all ease-out;
+  text-decoration: none;
+  border-bottom: none !important;
+  opacity: 0.6;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+a.header-anchor {
+  float: left;
+  margin-top: .125em;
+  margin-left: -1.2em;
+  padding-right: .50em;
+  font-size: .85em;
+  opacity: 0;
+  text-decoration: none;
+  border: 0 !important;
+}
+a.header-anchor:hover,
+a.header-anchor:focus {
+  text-decoration: none;
 }
