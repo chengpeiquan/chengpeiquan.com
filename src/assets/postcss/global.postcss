@@ -1,3 +1,10 @@
+/* 全局变量 */
+:root {
+  --margin: 24px;
+}
+
+
+/* 大局样式 */
 html {
   background-color: var(--c-bg);
   @apply text-gray-700;
@@ -9,21 +16,14 @@ html.dark {
   @apply text-gray-200;
 }
 
+
 body {
   width: 100vw;
   overflow-x: hidden;
 }
 
 
-a {
-  text-decoration: none;
-  cursor: pointer;
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-
+/* 加载进度条 */
 #nprogress {
   pointer-events: none;
 
@@ -41,38 +41,7 @@ a {
 }
 
 
-.img {
-  @apply w-full h-full object-cover;
-}
-
-
-.prose {
-  --fg: #555;
-  --fg-deep: #222;
-  --fg-deeper: #000;
-  
-  color: var(--fg);
-  text-align: justify;
-
-  a code {
-    color: inherit;
-  }
-
-  table {
-    thead {
-      color: var(--fg);
-    }
-  }
-
-  @apply text-base;
-}
-html.dark .prose {
-  --fg: #bbb;
-  --fg-deep: #ddd;
-  --fg-deeper: #fff;
-}
-
-
+/* 滚动条 */
 * {
   scrollbar-color: var(--c-scrollbar) var(--c-bg);
 }
@@ -92,4 +61,14 @@ html.dark .prose {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--c-scrollbar-hover);
+}
+
+
+/* 链接 */
+a {
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
 }
