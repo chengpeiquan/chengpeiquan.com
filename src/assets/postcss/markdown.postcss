@@ -98,18 +98,32 @@ h4 {
 }
 blockquote {
   color: inherit !important;
+  margin-inline-start: 1em;
+  margin-inline-end: 1em;
+
+  /* a {
+    display: block;
+    margin-bottom: var(--margin);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  } */
 }
 
 
 /* 文章格式化 */
 .prose {
+  --fg-light: #5f5f5f;
   --fg: #555;
   --fg-deep: #222;
   --fg-deeper: #000;
   
   color: var(--fg);
   text-align: justify;
+  @apply text-base;
 
+  /* 链接 */
   a {
     color: var(--fg-deeper);
     font-weight: inherit;
@@ -117,7 +131,32 @@ blockquote {
     border-bottom: 1px solid transparent;
 
     &:hover { 
-      border-bottom: 1px solid var(--fg);
+      border-bottom: 1px solid var(--fg-light);
+    }
+
+    &::before {
+      content: "「";
+      position: relative;
+      top: calc( -1 * var(--margin) / 8 );
+      color: var(--fg-light);
+      font-size: var(--prism-font-size);
+      margin-right: calc( var(--margin) / 4);
+    }
+
+    &::after {
+      content: "」";
+      position: relative;
+      bottom: calc( -1 * var(--margin) / 8 );
+      color: var(--fg-light);
+      font-size: var(--prism-font-size);
+      margin-left: calc( var(--margin) / 4);
+    }
+
+    &.header-anchor {
+      &::before,
+      &::after {
+        display: none;
+      }
     }
 
     code {
@@ -125,15 +164,18 @@ blockquote {
     }
   }
 
+  /* 分割线 */
   hr {
     width: 50px;
     margin: 2em auto;
   }
 
+  /* 表格 */
   table {
     border: 1px solid var(--fg);
     border-spacing: 0;
-    border-radius: 0.4rem;
+    border-collapse: separate;
+    border-radius: 0.2rem;
 
     thead {
       color: var(--fg);
@@ -161,6 +203,7 @@ blockquote {
     }
   }
 
+  /* 有序列表 */
   ol > li {
     padding-left: 0.75rem;
 
@@ -168,9 +211,6 @@ blockquote {
       display: none;
     }
   }
-  
-
-  @apply text-base;
 }
 html.dark .prose {
   --fg: #bbb;

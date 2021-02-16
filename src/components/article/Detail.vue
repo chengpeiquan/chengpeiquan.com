@@ -1,12 +1,12 @@
 <template>
   <main class="flex justify-between container md:mx-auto box-border px-4 md:mt-16 mt-4">
     <!-- 文章内容 -->
-    <section class="flex justify-between flex-col w-full">
+    <section class="flex justify-start flex-col w-full">
       <h1 class="flex items-center w-full md:text-3xl text-xl md:mb-4 mb-2">
         {{ title }}
       </h1>
 
-      <p class="flex items-center w-full text-sm text-gray-400 mb-4 pb-4 border-b dark:border-white dark:border-opacity-5">
+      <p class="flex items-center w-full text-sm text-gray-400 mb-8 pb-8 border-b dark:border-white dark:border-opacity-5">
         <span class="mr-8">作者：程沛权</span>
         <span>{{ date.substr(0, 10) }}</span>
       </p>
