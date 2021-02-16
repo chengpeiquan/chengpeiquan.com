@@ -9,12 +9,7 @@
           alt="程沛权"
         >
       </div>
-      <span
-        class="
-          md:ml-4 ml-2
-          md:text-2xl text-l
-        "
-      >程沛权</span>
+      <span class="md:ml-4 ml-2 md:text-2xl text-l" >程沛权</span>
     </div>
     <!-- 站点信息 -->
 

@@ -1,7 +1,7 @@
 ---
 title: 百度地图api实例销毁方案 可用于Vue单页面项目
 desc: 最近项目用到了百度地图的api，用倒是没啥毛病，就是发现用完之后留下来的垃圾太多 = = 项目是基于Vue做的，当时发现在需要百度地图的那个路由用完之后，切去其他页面，积累了很多DOM，并且再次进入会再次创建，在项目里体验越久，DOM树越累赘，并且由百度地图创建的定时器越攒越多。
-keywords: 百度地图销毁, 百度地图api销毁
+keywords: 百度地图销毁,百度地图api销毁
 date: 2020-12-24 16:00:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/12/baidu-map.jpg
 ---

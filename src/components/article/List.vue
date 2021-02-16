@@ -56,7 +56,15 @@
     <section class="flex justify-center items-center">
       <div class="mx-4">
         <router-link
-          v-if="page > 1"
+          v-if="page === 2"
+          :to="{
+            name: 'article-page'
+          }"
+        >
+          Prev
+        </router-link>
+        <router-link
+          v-else-if="page > 2"
           :to="{
             name: 'article-page',
             params: {

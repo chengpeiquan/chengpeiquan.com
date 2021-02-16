@@ -1,7 +1,7 @@
 ---
 title: 解决vscode保存vue文件时 压缩stylus代码为一行以及无法注释template的问题
 desc: 目前除了美团之外，其他的外卖app（像饿了么啊、瑞幸啊、麦当劳肯德基啊）都没提供自动计算账单的功能，自己每次拉excel算的蛋疼，所以写了这个，无需纠结红包、抵扣券等乱七八糟的减免，会自动计算折扣比例来得到最终账单。
-keywords: stylus保存压缩, stylus错乱, stylus格式化
+keywords: stylus保存压缩,stylus错乱,stylus格式化
 date: 2020-09-20 17:02:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/09/vue-vscode-snippets.jpg
 ---
