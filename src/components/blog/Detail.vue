@@ -1,13 +1,15 @@
 <template>
   <main class="flex justify-between container md:mx-auto box-border px-4 md:mt-16 mt-4">
-    <!-- 博客类 -->
+    <!-- 文章类 -->
     <Article v-if="isUseArticle" :frontmatter="frontmatter">
       <slot />
     </Article>
-    <!-- 博客类 -->
+    <!-- 文章类 -->
 
     <!-- 页面类 -->
-    <slot v-else :frontmatter="frontmatter" />
+    <Page v-else :frontmatter="frontmatter">
+      <slot />
+    </Page>
     <!-- 页面类 -->
   </main>
 </template>
