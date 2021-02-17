@@ -1,7 +1,6 @@
 ---
-title: Bookmarks - Anthony Fu
-display: Bookmarks
-subtitle: Some of my favorite websites/tools with excellent design and UX that I highly recommend
+title: 关于我
+desc: 关于我的一些信息
 ---
 
 虽然从敲下的第一行代码已经过去很多年了，但真正用来做本职工作的日子并不算长，属于一个自娱自乐的小前端（意思就是不是为了工作而工作，基于爱好而工作，生活还是比较有幸福感的）。
@@ -14,6 +13,6 @@ subtitle: Some of my favorite websites/tools with excellent design and UX that I
 
 放个个人邮箱吧，有需要联系我的话，可以给我发邮件~
 
-<blockquote>chengpeiquan@chengpeiquan.com</blockquote>
+> chengpeiquan@chengpeiquan.com
 
 哦对了，可以叫我当仔。

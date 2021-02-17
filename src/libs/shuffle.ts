@@ -1,17 +1,15 @@
-import { RouteRecordRaw } from 'vue-router'
-
 /** 
- * 返回随机路由列表
+ * 一个洗牌函数，用于返回随机列表
  */
-const shuffle = (routes: RouteRecordRaw[]): RouteRecordRaw[] => {
-  for ( let i = routes.length - 1; i > 0; i-- ) {
+const shuffle = (arr: any[]): any[] => {
+  for ( let i = arr.length - 1; i > 0; i-- ) {
     const j: number = Math.floor(Math.random() * (i + 1));
-    const item: RouteRecordRaw = routes[i];
-    routes[i] = routes[j];
-    routes[j] = item;
+    const item: any = arr[i];
+    arr[i] = arr[j];
+    arr[j] = item;
   }
 
-  return routes;
+  return arr;
 }
 
 export default shuffle;

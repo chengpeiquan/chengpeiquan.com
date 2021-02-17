@@ -100,15 +100,6 @@ blockquote {
   color: inherit !important;
   margin-inline-start: 1em;
   margin-inline-end: 1em;
-
-  /* a {
-    display: block;
-    margin-bottom: var(--margin);
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  } */
 }
 
 
@@ -211,8 +202,14 @@ blockquote {
       display: none;
     }
   }
+
+  /* 删除线 */
+  s {
+    font-size: 0.8rem;
+  }
 }
 html.dark .prose {
+  --fg-light: #5f5f5f;
   --fg: #bbb;
   --fg-deep: #ddd;
   --fg-deeper: #fff;

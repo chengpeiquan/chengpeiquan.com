@@ -42,8 +42,8 @@
               {{ item.desc }}
             </p>
 
-            <p class="md:text-sm text-xs text-gray-400">
-              {{ item.date.substr(0, 10) }}
+            <p class="md:text-sm text-xs text-gray-400" :title="item.date.substr(0, 10)">
+              {{ item.diffDays > 7 ? item.date.substr(0, 10) : item.dateAgo }}
             </p>
           </div>
           <!-- 信息 -->
@@ -134,12 +134,10 @@
 <script lang="ts">
 import { defineComponent, reactive, ref } from 'vue'
 import { useRouter, RouteRecordRaw, useRoute } from 'vue-router'
-import { formatDate } from '/@libs/logics'
 import isArticle from '/@libs/isArticle'
 import { useHead } from '@vueuse/head'
 import config from '/@ts/config'
-import dayjs from 'dayjs'
-import relativeTime from 'dayjs/plugin/relativeTime'
+import dateDisplay from '/@libs/dateDisplay'
 
 interface List {
   path: string,
@@ -164,7 +162,6 @@ export default defineComponent({
     const pageTotal = ref<number>(1);
     const articleTotal = ref<number>(1);
     const articleList = ref<List[]>([]);
-    dayjs.extend(relativeTime);
 
     /** 
      * 获取分页信息 
@@ -205,6 +202,7 @@ export default defineComponent({
         const { path } = route;
         const { frontmatter } = route.meta;
         const { title, desc, cover, date } = frontmatter;
+        const { diffDays, dateAgo } = dateDisplay(date);
         
         return {
           path,
@@ -212,7 +210,8 @@ export default defineComponent({
           desc,
           cover,
           date,
-          dateAgo: dayjs(date).fromNow()
+          diffDays,
+          dateAgo
         }
       });
     }
