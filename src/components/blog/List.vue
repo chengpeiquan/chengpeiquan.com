@@ -134,7 +134,6 @@
 <script lang="ts">
 import { defineComponent, reactive, ref } from 'vue'
 import { useRouter, RouteRecordRaw, useRoute } from 'vue-router'
-import { formatDate } from '/@libs/logics'
 import isArticle from '/@libs/isArticle'
 import { useHead } from '@vueuse/head'
 import config from '/@ts/config'
