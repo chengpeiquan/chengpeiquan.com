@@ -93,6 +93,8 @@ export default defineConfig({
       '@iconify/iconify',
       'dayjs',
       'dayjs/plugin/localizedFormat',
+      'dayjs/plugin/relativeTime',
+      'dayjs/locale/zh-cn',
     ],
   },
   plugins: [
@@ -109,8 +111,9 @@ export default defineConfig({
 
         const { data } = matter(md);
         if ( !data.date ) {
-          data.date = new Date();
+          data.date = new Date(+new Date() + 8 * 3600 * 1000).toISOString();
         }
+        data.date = new Date(data.date).toISOString().substr(0, 19).replace(/T/, ' ');
         
         route.meta = Object.assign(route.meta || {}, {
           frontmatter: data
@@ -121,7 +124,6 @@ export default defineConfig({
     }),
 
     Markdown({
-      // wrapperComponent: 'article-detail',
       wrapperComponent: 'detail',
       wrapperClasses: 'article-detail prose mx-auto',
       headEnabled: true,
@@ -142,10 +144,6 @@ export default defineConfig({
     ViteComponents({
       extensions: ['vue', 'md'],
       deep: true,
-      // directoryAsNamespace: true,
-      // globalNamespaces: [
-      //   'article'
-      // ],
       customLoaderMatcher: path => path.endsWith('.md'),
       customComponentResolvers: ViteIconsResolver({
         componentPrefix: '',
