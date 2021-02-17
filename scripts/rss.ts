@@ -4,15 +4,14 @@ import matter from 'gray-matter'
 import MarkdownIt from 'markdown-it'
 import { Feed } from 'feed'
 
-const DOMAIN = 'https://chengpeiquan.com'
-
 async function run() {
   const markdown = MarkdownIt({
     html: true,
     breaks: true,
     linkify: true,
-  })
-  const files = await fg('src/views/article/*.md')
+  });
+
+  const files = await fg('src/views/article/*.md');
 
   const posts: any[] = (
     await Promise.all(
@@ -20,15 +19,7 @@ async function run() {
         .map(async(i) => {
           const raw = await fs.readFile(i, 'utf-8')
           const { data, content } = matter(raw)
-
-          // if (data.lang !== 'en')
-          //   return
-
-          const html = markdown.render(content)
-          //   .replace('src="/', `src="${DOMAIN}/`)
-
-          // if (data.image?.startsWith('/'))
-          //   data.image = DOMAIN + data.image
+          const html = markdown.render(content);
 
           return {
             ...data,
@@ -37,23 +28,23 @@ async function run() {
               {
                 name: 'chengpeiquan',
                 email: 'chengpeiquan@chengpeiquan.com',
-                link: DOMAIN,
+                link: 'https://chengpeiquan.com',
               },
             ],
           }
         }),
     ))
-    .filter(Boolean)
+    .filter(Boolean);
 
-  posts.sort((a, b) => +new Date(b.date) - +new Date(a.date))
+  posts.sort((a, b) => +new Date(b.date) - +new Date(a.date));
 
   const feed = new Feed({
     title: '程沛权 - 养了三只猫',
-    description: '程沛权，养了三只猫。',
+    description: '一个养了三只猫的花臂男。',
     id: 'https://chengpeiquan.com/',
     link: 'https://chengpeiquan.com/',
-    image: 'https://chengpeiquan.com/avatar.png',
-    favicon: 'https://chengpeiquan.com/logo.png',
+    image: 'https://chengpeiquan.com/avatar-256x256.png',
+    favicon: 'https://chengpeiquan.com/favicon.ico',
     copyright: '© 2021 程沛权',
     feedLinks: {
       json: 'https://chengpeiquan.com/feed.json',
@@ -74,4 +65,4 @@ async function run() {
   await fs.writeFile('./dist/feed.json', feed.json1(), 'utf-8')
 }
 
-run()
+run();

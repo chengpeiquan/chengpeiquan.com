@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development vite",
     "build": "cross-env NODE_ENV=production vite-ssg build && esno ./scripts/rss.ts",
-    "git": "git add . && git commit -m \"backup the code.\" && git push"
+    "git": "git add . && git commit -m \"Back up some code adjustments.\" && git push"
   },
   "repository": {
     "type": "git",
