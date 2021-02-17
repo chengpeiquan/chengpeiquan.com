@@ -138,6 +138,8 @@ import { formatDate } from '/@libs/logics'
 import isArticle from '/@libs/isArticle'
 import { useHead } from '@vueuse/head'
 import config from '/@ts/config'
+import dayjs from 'dayjs'
+import relativeTime from 'dayjs/plugin/relativeTime'
 
 interface List {
   path: string,
@@ -162,6 +164,7 @@ export default defineComponent({
     const pageTotal = ref<number>(1);
     const articleTotal = ref<number>(1);
     const articleList = ref<List[]>([]);
+    dayjs.extend(relativeTime);
 
     /** 
      * 获取分页信息 
@@ -196,12 +199,6 @@ export default defineComponent({
       const START: number = 0 + pageSize.value * (page.value - 1);
       const END: number = START + pageSize.value;
       const CUR_ROUTES: RouteRecordRaw[] = routes.value.slice(START, END);
-      console.log({
-        '1.当前页码': page.value,
-        '2.页码总数': pageTotal.value,
-        '3.文章总数': articleTotal.value,
-        '4.文章列表': CUR_ROUTES
-      });
 
       // 提取要用到的字段
       articleList.value = CUR_ROUTES.map( (route: RouteRecordRaw) => {
@@ -214,7 +211,8 @@ export default defineComponent({
           title,
           desc,
           cover,
-          date
+          date,
+          dateAgo: dayjs(date).fromNow()
         }
       });
     }

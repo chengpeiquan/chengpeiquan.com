@@ -49,7 +49,7 @@
 </template>
 
 <script setup lang="ts">
-import { isDark } from '/@libs/logics'
+import isDark from '/@libs/isDark'
 
 interface NavList {
   path: string,
