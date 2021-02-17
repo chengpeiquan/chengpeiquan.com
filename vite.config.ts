@@ -156,7 +156,46 @@ export default defineConfig({
 
     Icons(),
 
-    VitePWA(),
+    VitePWA({
+      inlineRegister: false,
+      manifest: {
+        name: '程沛权',
+        short_name: '程沛权',
+        theme_color: '#ffffff',
+        icons: [
+          {
+            src: '/avatar-32x32.png',
+            sizes: '32x32',
+            type: 'image/png',
+          },
+          {
+            src: '/avatar-128x128.png',
+            sizes: '128x128',
+            type: 'image/png',
+          },
+          {
+            src: '/avatar-144x144.png',
+            sizes: '144x144',
+            type: 'image/png',
+          },
+          {
+            src: '/avatar-192x192.png',
+            sizes: '192x192',
+            type: 'image/png',
+          },
+          {
+            src: '/avatar-256x256.png',
+            sizes: '256x256',
+            type: 'image/png',
+          },
+          {
+            src: '/avatar-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+          },
+        ],
+      },
+    }),
 
     ...WindiCSS({
       safelist: 'prose prose-sm m-auto dark'
