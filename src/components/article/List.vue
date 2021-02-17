@@ -205,8 +205,6 @@ export default defineComponent({
         const { path } = route;
         const { frontmatter } = route.meta;
         const { title, desc, cover, date } = frontmatter;
-        console.log(formatDate(date));
-        
         
         return {
           path,
