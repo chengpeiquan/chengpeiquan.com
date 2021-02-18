@@ -5,6 +5,7 @@ keywords: refresh token,refreshtoken,oauth 2.0 refreshtoken,前端刷新token,oa
 date: 2021-01-30 14:56:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/01/1.jpg
 ---
+[[toc]]
 
 如今在涉及到用户登录的系统设计里面，基本上都是通过 OAuth 2.0 来设计授权，当你在调用登录接口的时候，可以看到在返回来的数据里面会有 2 个 Token：一个 `accessToken` 和一个 `refreshToken` 。
 

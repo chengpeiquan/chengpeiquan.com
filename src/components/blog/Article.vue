@@ -49,7 +49,7 @@ export default defineComponent({
   props: {
     frontmatter: Object
   },
-  setup (props) {
+  setup (props, context) {
     const route = useRoute();
     const router = useRouter();
     const { frontmatter } = props;
@@ -72,31 +72,31 @@ export default defineComponent({
      * 页面加载时定位到链接对应的锚点
      */
     const navigateToId = (): void => {
-      if ( isClient ) {
-        router.isReady()
-          .then( () => {
-            setTimeout(() => {
-              const { hash } = document.location;
-              if ( hash.length > 1 ) {
-                const id: string = decodeURIComponent(hash.substring(1));
-                const element: HTMLElement | null = document.getElementById(id);
-                if ( element ) {
-                  element.scrollIntoView({
-                    behavior: 'smooth'
-                  });
-                }
-              }
-            }, 500);
-          })
-          .catch( (e) => {
-            console.log(e);
-          });
+      if ( !isClient ) {
+        return false;
       }
+      
+      router.isReady()
+        .then( () => {
+          setTimeout(() => {
+            const { hash } = document.location;
+            if ( hash.length > 1 ) {
+              const id: string = decodeURIComponent(hash.substring(1));
+              const element: HTMLElement | null = document.getElementById(id);
+              if ( element ) {
+                element.scrollIntoView({
+                  behavior: 'smooth'
+                });
+              }
+            }
+          }, 500);
+        })
+        .catch( (e) => {
+          console.log(e);
+        });
     }
 
-    onMounted(() => {
-      navigateToId();
-    })
+    onMounted(navigateToId);
 
     return {
       title,
@@ -109,9 +109,6 @@ export default defineComponent({
 </script>
 
 <style lang="postcss">
-.content {
-  max-width: calc( 100% - 340px - 64px);
-}
 .prose {
   width: 100%;
   max-width: 100%;
@@ -119,6 +116,11 @@ export default defineComponent({
   img {
     margin-left: auto;
     margin-right: auto;
+  }
+}
+.article-detail {
+  .article-toc {
+    display: none;
   }
 }
 </style>

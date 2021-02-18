@@ -1,4 +1,4 @@
-import { defineConfig, loadEnv } from 'vite'
+import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import pkg from './package.json'
 import path from 'path'
@@ -11,6 +11,8 @@ import ViteComponents from 'vite-plugin-components'
 import Markdown from 'vite-plugin-md'
 import Prism from 'markdown-it-prism'
 import anchor from 'markdown-it-anchor'
+import toc from 'markdown-it-table-of-contents'
+import externalLinks from 'markdown-it-external-links'
 import matter from 'gray-matter'
 import { slugify } from './scripts/slugify'
 import { VitePWA } from 'vite-plugin-pwa'
@@ -127,8 +129,8 @@ export default defineConfig({
       wrapperComponent: 'detail',
       wrapperClasses: 'article-detail prose mx-auto',
       headEnabled: true,
-      markdownItSetup(md) {
-        md.use(Prism)
+      markdownItSetup (md) {
+        md.use(Prism);
         md.use(anchor, {
           slugify,
           permalink: true,
@@ -137,7 +139,18 @@ export default defineConfig({
           permalinkAttrs: () => ({
             'aria-hidden': true
           }),
-        })
+        });
+        md.use(toc, {
+          includeLevel: [2, 3],
+          containerClass: 'article-toc prose',
+          slugify: (s: string) => encodeURIComponent(String(s).trim().toLowerCase().replace(/\s+|\.+/g, '-'))
+        });
+        md.use(externalLinks, {
+          externalClassName: 'custom-external-link',
+          externalTarget: '_blank',
+          externalRel: 'noopener noreferrer',
+          internalDomains: [ 'chengpeiquan.com' ]
+        });
       },
     }),
 
