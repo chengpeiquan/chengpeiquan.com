@@ -109,9 +109,6 @@ export default defineComponent({
 </script>
 
 <style lang="postcss">
-.content {
-  max-width: calc( 100% - 340px - 64px);
-}
 .prose {
   width: 100%;
   max-width: 100%;
@@ -121,4 +118,9 @@ export default defineComponent({
     margin-right: auto;
   }
 }
+/* .article-detail {
+  .article-toc {
+    display: none;
+  }
+} */
 </style>

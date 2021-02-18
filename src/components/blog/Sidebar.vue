@@ -64,9 +64,9 @@
   </section>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import { defineComponent, ref } from 'vue'
-import { useRouter, RouteRecordRaw, useRoute } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 import isArticle from '/@libs/isArticle'
 import shuffle from '/@libs/shuffle'
 
@@ -76,51 +76,35 @@ interface List {
   cover: string
 }
 
-export default defineComponent({
-  setup () {
-    const activeRoute = useRoute();
-    const router = useRouter();
-    const articleList = ref<List[]>([]);
-    const count: number = 5;
+const activeRoute = useRoute();
+const router = useRouter();
+const articleList = ref<List[]>([]);
+const count: number = 5;
 
-    /** 
-     * 获取文章列表
-     */
-    const getArticleList = (): void => {
-      // 提取文章详情页的路由并按日期排序，同时不能和当前文章重复
-      const routes = router.getRoutes()
-        .filter( (route: RouteRecordRaw) => isArticle(route) && route.path !== activeRoute.path );
+const getArticleList = (): void => {
+  // 提取文章详情页的路由并按日期排序，同时不能和当前文章重复
+  const routes = router.getRoutes()
+    .filter( route => isArticle(route) && route.path !== activeRoute.path );
 
-      // 提取要用到的字段
-      articleList.value = shuffle(routes).map( (route: RouteRecordRaw) => {
-        const { path } = route;
-        const { frontmatter } = route.meta;
-        const { title, cover } = frontmatter;
-        
-        return {
-          path,
-          title,
-          cover
-        }
-      });
-
-      // 不超过渲染上限
-      if ( articleList.value.length > count ) {
-        articleList.value.length = count;
-      }
-    }
-
-    getArticleList();
+  // 提取要用到的字段
+  articleList.value = shuffle(routes).map( route => {
+    const { path } = route;
+    const { frontmatter } = route.meta;
+    const { title, cover } = frontmatter;
     
     return {
-      // 数据
-      articleList,
-
-      // 方法
-      getArticleList
+      path,
+      title,
+      cover
     }
+  });
+
+  // 不超过渲染上限
+  if ( articleList.value.length > count ) {
+    articleList.value.length = count;
   }
-})
+}
+getArticleList();
 </script>
 
 <style lang="postcss" scoped>
