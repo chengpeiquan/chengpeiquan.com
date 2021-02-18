@@ -47,7 +47,7 @@ jobs:
         # 源目录，编译后生成的文件目录
         SOURCE: dist
         # 服务器ip：换成你的服务器IP
-        REMOTE_HOST: 47.75.88.237
+        REMOTE_HOST: 47.115.48.95
         # 用户
         REMOTE_USER: root
         # 目标地址 你在服务器上部署代码的地方
