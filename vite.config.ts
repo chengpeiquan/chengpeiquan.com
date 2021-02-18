@@ -142,7 +142,7 @@ export default defineConfig({
         });
         md.use(toc, {
           includeLevel: [2, 3],
-          containerClass: 'article-toc',
+          containerClass: 'article-toc prose',
           slugify: (s: string) => encodeURIComponent(String(s).trim().toLowerCase().replace(/\s+|\.+/g, '-'))
         });
         md.use(externalLinks, {

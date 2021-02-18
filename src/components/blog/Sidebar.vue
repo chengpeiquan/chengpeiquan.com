@@ -1,5 +1,14 @@
 <template>
   <section class="article-sidebar lg:flex hidden flex-col flex-shrink-0 ml-16">
+    <!-- 文章目录 -->
+    <section class="mb-16" v-if="isShowToc">
+      <h2 class="block-title">文章目录</h2>
+      <div class="flex flex-col w-full">
+        <div class="article-toc-container"></div>
+      </div>
+    </section>
+    <!-- 文章目录 -->
+
     <!-- 热门栏目 -->
     <section class="mb-16">
       <h2 class="block-title">热门栏目</h2>
@@ -65,8 +74,9 @@
 </template>
 
 <script setup lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent, onMounted, ref } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
+import { isClient } from '@vueuse/core'
 import isArticle from '/@libs/isArticle'
 import shuffle from '/@libs/shuffle'
 
@@ -80,7 +90,11 @@ const activeRoute = useRoute();
 const router = useRouter();
 const articleList = ref<List[]>([]);
 const count: number = 5;
+const isShowToc = ref<boolean>(false);
 
+/** 
+ * 猜你喜欢的文章列表
+ */
 const getArticleList = (): void => {
   // 提取文章详情页的路由并按日期排序，同时不能和当前文章重复
   const routes = router.getRoutes()
@@ -105,6 +119,34 @@ const getArticleList = (): void => {
   }
 }
 getArticleList();
+
+/** 
+ * 提取目录生成到侧边栏
+ */
+const moveToc = (): void | boolean => {
+  if ( !isClient ) {
+    return false;
+  }
+
+  // 获取文章内的目录
+  const toc: HTMLElement = document.querySelector('.article-toc');
+  if ( !toc ) {
+    isShowToc.value = false;
+    return false;
+  }
+
+  // 显示目录并插入内容
+  isShowToc.value = true;
+  setTimeout(() => {
+    const tocContainer: HTMLElement = document.querySelector('.article-toc-container');
+    tocContainer.appendChild(toc);
+  }, 10);
+
+  // 把文章内的目录移除
+  const detail: HTMLElement = document.querySelector('.article-detail');
+  detail.childNodes[0].remove();
+}
+onMounted(moveToc);
 </script>
 
 <style lang="postcss" scoped>
