@@ -114,6 +114,11 @@ blockquote {
   text-align: justify;
   @apply text-base;
 
+  /* 图片 */
+  img {
+    border-radius: 0.25rem;
+  }
+
   /* 链接 */
   a {
     color: var(--fg-deeper);
@@ -218,7 +223,7 @@ html.dark .prose {
 
 /* 图片 */
 .img {
-  @apply w-full h-full object-cover;
+  @apply w-full h-full object-cover rounded;
 }
 
 

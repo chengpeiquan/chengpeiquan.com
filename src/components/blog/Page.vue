@@ -40,5 +40,14 @@ useHead({
 })
 </script>
 
-<style scoped>
+<style lang="postcss">
+.article-detail {
+  p {
+    text-indent: 2em;
+  }
+
+  img {
+    max-width: 1000px;
+  }
+}
 </style>

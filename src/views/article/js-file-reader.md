@@ -5,6 +5,7 @@ keywords: file reader,js file reader,web file reader,read file
 date: 2020-09-28 00:22:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/09/2-3.jpg
 ---
+[[toc]]
 
 最近做后台比较多，而且经常要用到文件上传和预览，写的有点烦 - -，所以弄了这个小玩意…
 

@@ -5,6 +5,7 @@ keywords: cnzz,vue cnzz,vue umeng,vue analytics,spa analytics,cnzz统计,umeng�
 date: 2021-01-08 22:37:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/08/1-3.jpg
 ---
+[[toc]]
 
 基于Vue开发的CNZZ统计插件（友盟统计），可以在 `Vue-CLI脚手架项目` 或者 `引入了Vue相关CDN的普通页面`，以及 `VuePress` 项目上使用，使用本插件的项目需要引入 `Vue Router`。
 

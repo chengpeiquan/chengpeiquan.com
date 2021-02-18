@@ -5,6 +5,7 @@ keywords: vue-baidu-analytics,vue百度统计,vue流量上报,spa流量,spa百�
 date: 2021-01-07 23:21:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2019/12/1.jpg
 ---
+[[toc]]
 
 基于Vue开发的百度统计插件，可以在 `Vue-CLI脚手架项目` 或者 `引入了Vue相关CDN的普通页面`，以及 `VuePress` 项目上使用，使用本插件的项目需要引入 `Vue Router`。
 
