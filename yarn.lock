@@ -2982,6 +2982,11 @@ markdown-it-anchor@^7.0.1:
   resolved "https://registry.yarnpkg.com/markdown-it-anchor/-/markdown-it-anchor-7.0.1.tgz#2ea5353369e22b48d230fc849e205678821c6a86"
   integrity sha512-FF+1jvBAX04jlDUyz2qZGiz5PKw8MwWPb2EJvjvIiVuz7DcVMfW7b3NQnAiH52DSIQfMJ0FCAsQjhUpAOTGLMg==
 
+markdown-it-external-links@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/markdown-it-external-links/-/markdown-it-external-links-0.0.6.tgz#9503258fce4c81010ea15fe71769d63a1346d801"
+  integrity sha1-lQMlj85MgQEOoV/nF2nWOhNG2AE=
+
 markdown-it-prism@^2.1.4:
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/markdown-it-prism/-/markdown-it-prism-2.1.4.tgz#d7f52d811eb5f96813ec6a6013f85d939e99619c"

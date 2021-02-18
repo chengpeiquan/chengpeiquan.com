@@ -46,6 +46,7 @@
     "gray-matter": "^4.0.2",
     "markdown-it": "^12.0.4",
     "markdown-it-anchor": "^7.0.1",
+    "markdown-it-external-links": "^0.0.6",
     "markdown-it-prism": "^2.1.4",
     "markdown-it-shiki": "^0.1.1",
     "markdown-it-table-of-contents": "^0.5.2",
