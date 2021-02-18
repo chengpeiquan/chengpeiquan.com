@@ -129,7 +129,7 @@ export default defineConfig({
       wrapperComponent: 'detail',
       wrapperClasses: 'article-detail prose mx-auto',
       headEnabled: true,
-      markdownItSetup(md) {
+      markdownItSetup (md) {
         md.use(Prism);
         md.use(anchor, {
           slugify,

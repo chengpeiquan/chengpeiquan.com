@@ -1,8 +1,6 @@
 <template>
   <!-- 文章 -->
   <section class="flex justify-start flex-col flex-1 md:w-auto w-full overflow-hidden">
-    <Toc />
-
     <!-- 标题 -->
     <h1 v-if="title" class="flex items-center w-full md:text-3xl text-xl md:mb-4 mb-2">
       {{ title }}
