@@ -1,3 +1,4 @@
+// https://github.com/vuejs/vuepress/blob/master/packages/%40vuepress/shared-utils/src/slugify.ts
 // string.js slugify drops non ascii chars so we have to
 // use a custom implementation here
 import { remove } from 'diacritics'

@@ -11,6 +11,7 @@ import ViteComponents from 'vite-plugin-components'
 import Markdown from 'vite-plugin-md'
 import Prism from 'markdown-it-prism'
 import anchor from 'markdown-it-anchor'
+import toc from 'markdown-it-table-of-contents'
 import matter from 'gray-matter'
 import { slugify } from './scripts/slugify'
 import { VitePWA } from 'vite-plugin-pwa'
@@ -137,6 +138,11 @@ export default defineConfig({
           permalinkAttrs: () => ({
             'aria-hidden': true
           }),
+        })
+        md.use(toc, {
+          includeLevel: [2, 3],
+          containerClass: 'article-toc',
+          slugify: (s: string) => encodeURIComponent(String(s).trim().toLowerCase().replace(/\s+|\.+/g, '-'))
         })
       },
     }),
