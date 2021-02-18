@@ -37,75 +37,61 @@
   <!-- 侧边栏 -->
 </template>
 
-<script lang="ts">
-import { defineComponent, onMounted, ref } from 'vue'
+<script setup lang="ts">
+import { defineProps, onMounted, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { isClient } from '@vueuse/core'
 import { useHead } from '@vueuse/head'
 import config from '/@ts/config'
 import dateDisplay from '/@libs/dateDisplay'
 
-export default defineComponent({
-  props: {
-    frontmatter: Object
-  },
-  setup (props, context) {
-    const route = useRoute();
-    const router = useRouter();
-    const { frontmatter } = props;
-    const { title, desc, keywords, date } = frontmatter;
-    const { diffDays, dateAgo } = dateDisplay(date);
+const route = useRoute();
+const router = useRouter();
+const { frontmatter } = defineProps<{ frontmatter: any }>();
+const { title, desc, keywords, date } = frontmatter;
+const { diffDays, dateAgo } = dateDisplay(date);
 
-    /** 
-     * 设置页面信息
-     */
-    useHead({
-      title: `${title} - ${config.title}`,
-      meta: [
-        { property: 'og:title', content: `${title} - ${config.title}` },
-        { name: 'description', content: desc },
-        { name: 'keywords', content: keywords }
-      ],
-    })
-    
-    /** 
-     * 页面加载时定位到链接对应的锚点
-     */
-    const navigateToId = (): void => {
-      if ( !isClient ) {
-        return false;
-      }
-      
-      router.isReady()
-        .then( () => {
-          setTimeout(() => {
-            const { hash } = document.location;
-            if ( hash.length > 1 ) {
-              const id: string = decodeURIComponent(hash.substring(1));
-              const element: HTMLElement | null = document.getElementById(id);
-              if ( element ) {
-                element.scrollIntoView({
-                  behavior: 'smooth'
-                });
-              }
-            }
-          }, 500);
-        })
-        .catch( (e) => {
-          console.log(e);
-        });
-    }
-
-    onMounted(navigateToId);
-
-    return {
-      title,
-      date,
-      diffDays,
-      dateAgo
-    }
-  }
+/** 
+ * 设置页面信息
+ */
+useHead({
+  title: `${title} - ${config.title}`,
+  meta: [
+    { property: 'og:title', content: `${title} - ${config.title}` },
+    { name: 'description', content: desc },
+    { name: 'keywords', content: keywords }
+  ],
 })
+
+/** 
+ * 页面加载时定位到链接对应的锚点
+ */
+const navigateToId = (): void => {
+  if ( !isClient ) {
+    return false;
+  }
+  
+  router.isReady()
+    .then( () => {
+      setTimeout(() => {
+        const { hash } = document.location;
+        if ( hash.length > 1 ) {
+          const id: string = decodeURIComponent(hash.substring(1));
+          const element: HTMLElement | null = document.getElementById(id);
+          if ( element ) {
+            element.scrollIntoView({
+              behavior: 'smooth'
+            });
+          }
+        }
+      }, 500);
+    })
+    .catch( (e) => {
+      console.log(e);
+    });
+}
+
+onMounted(navigateToId);
 </script>
 
 <style lang="postcss">

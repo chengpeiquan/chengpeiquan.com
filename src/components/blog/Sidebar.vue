@@ -74,7 +74,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineComponent, onMounted, ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { isClient } from '@vueuse/core'
 import isArticle from '/@libs/isArticle'

@@ -131,9 +131,9 @@
   <!-- 侧边栏 -->
 </template>
 
-<script lang="ts">
-import { defineComponent, reactive, ref } from 'vue'
-import { useRouter, RouteRecordRaw, useRoute } from 'vue-router'
+<script setup lang="ts">
+import { reactive, ref } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
 import isArticle from '/@libs/isArticle'
 import { useHead } from '@vueuse/head'
 import config from '/@ts/config'
@@ -152,90 +152,80 @@ interface Pagination {
   next: string
 }
 
-export default defineComponent({
-  setup () {
-    const route = useRoute();
-    const router = useRouter();
-    const routes = ref<RouteRecordRaw[]>([]);
-    const page = ref<number>(1);
-    const pageSize = ref<number>(10);
-    const pageTotal = ref<number>(1);
-    const articleTotal = ref<number>(1);
-    const articleList = ref<List[]>([]);
+const route = useRoute();
+const router = useRouter();
+const routes = ref<unknown[]>([]);
+const page = ref<number>(1);
+const pageSize = ref<number>(10);
+const pageTotal = ref<number>(1);
+const articleTotal = ref<number>(1);
+const articleList = ref<List[]>([]);
 
-    /** 
-     * 获取分页信息 
-     */
-    const getPageInfo = (): void => {
-      // 提取文章详情页的路由并按日期排序
-      routes.value = router.getRoutes()
-        .filter( (item: RouteRecordRaw) => isArticle(item) )
-        .sort( (a: RouteRecordRaw, b: RouteRecordRaw) => +new Date(b.meta.frontmatter.date) - +new Date(a.meta.frontmatter.date) );
+/** 
+ * 获取分页信息 
+ */
+const getPageInfo = (): void => {
+  // 提取文章详情页的路由并按日期排序
+  routes.value = router.getRoutes()
+    .filter( item => isArticle(item) )
+    .sort( (a, b) => +new Date(b.meta.frontmatter.date) - +new Date(a.meta.frontmatter.date) );
 
-      // 获取文章总数
-      const ROUTES_COUNT: number = routes.value.length;
-      articleTotal.value = ROUTES_COUNT;
+  // 获取文章总数
+  const ROUTES_COUNT: number = routes.value.length;
+  articleTotal.value = ROUTES_COUNT;
 
-      // 获取页码总数
-      pageTotal.value = Math.ceil( ROUTES_COUNT / pageSize.value);
+  // 获取页码总数
+  pageTotal.value = Math.ceil( ROUTES_COUNT / pageSize.value);
 
-      // 获取页码信息
-      if ( route.params.page && !isNaN(Number(route.params.page)) ) {
-        page.value = Number(route.params.page);
-      }
-
-      // 获取列表
-      getArticleList();
-    }
-
-    /** 
-     * 获取文章列表
-     */
-    const getArticleList = (): void => {
-      // 根据页码获取对应的文章
-      const START: number = 0 + pageSize.value * (page.value - 1);
-      const END: number = START + pageSize.value;
-      const CUR_ROUTES: RouteRecordRaw[] = routes.value.slice(START, END);
-
-      // 提取要用到的字段
-      articleList.value = CUR_ROUTES.map( (route: RouteRecordRaw) => {
-        const { path } = route;
-        const { frontmatter } = route.meta;
-        const { title, desc, cover, date } = frontmatter;
-        const { diffDays, dateAgo } = dateDisplay(date);
-        
-        return {
-          path,
-          title,
-          desc,
-          cover,
-          date,
-          diffDays,
-          dateAgo
-        }
-      });
-    }
-
-    /** 
-     * 设置页面信息
-     */
-    useHead({
-      title: `文章列表 - ${config.title}`,
-      meta: [
-        { property: 'og:title', content: `文章列表 - 第${page.value}页 - ${config.title}` }
-      ],
-    })
-
-    /** 
-     * 要执行的函数
-     */
-    getPageInfo();
-
-    return {
-      page,
-      pageTotal,
-      articleList
-    }
+  // 获取页码信息
+  if ( route.params.page && !isNaN(Number(route.params.page)) ) {
+    page.value = Number(route.params.page);
   }
+
+  // 获取列表
+  getArticleList();
+}
+
+/** 
+ * 获取文章列表
+ */
+const getArticleList = (): void => {
+  // 根据页码获取对应的文章
+  const START: number = 0 + pageSize.value * (page.value - 1);
+  const END: number = START + pageSize.value;
+  const CUR_ROUTES: RouteRecordRaw[] = routes.value.slice(START, END);
+
+  // 提取要用到的字段
+  articleList.value = CUR_ROUTES.map( (route: RouteRecordRaw) => {
+    const { path } = route;
+    const { frontmatter } = route.meta;
+    const { title, desc, cover, date } = frontmatter;
+    const { diffDays, dateAgo } = dateDisplay(date);
+    
+    return {
+      path,
+      title,
+      desc,
+      cover,
+      date,
+      diffDays,
+      dateAgo
+    }
+  });
+}
+
+/** 
+ * 设置页面信息
+ */
+useHead({
+  title: `文章列表 - ${config.title}`,
+  meta: [
+    { property: 'og:title', content: `文章列表 - 第${page.value}页 - ${config.title}` }
+  ],
 })
+
+/** 
+ * 要执行的函数
+ */
+getPageInfo();
 </script>

@@ -5,6 +5,7 @@ keywords: stylus保存压缩,stylus错乱,stylus格式化
 date: 2020-09-20 17:02:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/09/vue-vscode-snippets.jpg
 ---
+[[toc]]
 
 这篇博客主要解决使用vscode在编辑vue文件时，遇到的两个困扰了一段时间的问题：
 

@@ -5,6 +5,7 @@ keywords: vue picture cropper,vue 3.0 cropper,vue 3.0 图片裁切
 date: 2020-11-16 00:12:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/12/1.jpg
 ---
+[[toc]]
 
 一个基于cropper.js，支持Vue 3.0的图片裁切工具组件（目前仅支持Vue 3.x）。
 
