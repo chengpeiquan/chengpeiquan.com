@@ -168,7 +168,6 @@ export default defineConfig({
     Icons(),
 
     VitePWA({
-      inlineRegister: false,
       manifest: {
         name: '程沛权',
         short_name: '程沛权',
