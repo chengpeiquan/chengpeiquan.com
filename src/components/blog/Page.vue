@@ -29,6 +29,8 @@ const meta = [
   { property: 'og:title', content: `${title} - ${config.title}` },
   { name: 'description', content: desc }
 ]
+console.log(frontmatter);
+
 
 if ( keywords ) {
   meta.push({ name: 'keywords', content: keywords });
