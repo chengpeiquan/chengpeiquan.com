@@ -5,6 +5,7 @@ keywords: ckeditor,ckeditor4,ckeditor传图,ckeditor编辑,ckeditor赋值,ckedit
 date: 2018-10-22 00:48:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/10/1-3.jpg
 ---
+[[toc]]
 
 前几天对接了个需求，说因为传统的CMS太笨重，并且一些业务结合点想落地的话改造太麻烦，想让我这边帮他做一个发布后台，前后端分离，他只负责数据和接口，其他的由我自己把控。简单看了一下需求，说是发布后台，实际上对我来说就是一个前台发布页面，只不过通过OpenID登录后，识别不同的用户身份来决定是否允许发布或者修改删除。
 
@@ -38,7 +39,7 @@ CKEDITOR.instances.editor.getData();
 
 ## 开发过程
 
-### 1、确认打包结构
+### 确认打包结构
 
 由于jQuery在WebPack并没有像Vue那么统一的部署格式，我个人是习惯按这样的分支去安排文件的放置，app是个人开发用的文件夹，public是打包后的线上文件夹，从app里打包的东西都会生成到static里（每次都清空并重新生成带新hash的文件）。
 
@@ -46,7 +47,7 @@ CKEDITOR.instances.editor.getData();
 
 ![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/10/1-4.jpg)
 
-### 2、动态引入插件
+### 动态引入插件
 
 由于不是import到项目里，所以需要在用到编辑器的时候才把它载入进来，动态载入JS文件，jQuery是比较简单的，利用getScript引入即可，剩下的要干嘛干嘛就写到done的回调里就ok。
 
@@ -60,7 +61,7 @@ $.getScript("./plugins/ckeditor/ckeditor.js").done(function(){
 });
 ```
 
-### 3、修改插件配置
+### 修改插件配置
 
 执行完第2步里的东西，会发现编辑器加载过程中会有报错。
 
@@ -87,7 +88,7 @@ $.getScript("./plugins/ckeditor/ckeditor.js").done(function(){
 
 ![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/10/2-1.jpg)
 
-### 4、传图功能实现
+### 传图功能实现
 
 生成好的编辑器，默认是不显示文件上传控件的，只能插入远程图片url，通过对官网api文档的查阅，确定好传图的配置方式，添加即可实现。
 
@@ -126,7 +127,7 @@ filebrowserImageUploadUrl: api.image
 }
 ```
 
-### 5、文章编辑功能
+### 文章编辑功能
 
 编辑功能的思路，一开始是想着从接口拿到原来的文章数据后，放到编辑器内容框里就行，然而却发现编辑器是用iframe来实现。
 

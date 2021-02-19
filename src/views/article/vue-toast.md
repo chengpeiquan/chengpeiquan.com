@@ -5,6 +5,7 @@ keywords: vue,toast,vue弹窗,vue toast,vue插件
 date: 2018-10-11 00:09:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/10/1-9.jpg
 ---
+[[toc]]
 
 最近突然很想简化一些自己写的，项目常用的调用小功能，比如一些弹窗等等，之前都是Html/JavaScript/Css分离，每次复用都要分别写到对应的文件里，略显麻烦。
 
