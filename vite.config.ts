@@ -17,9 +17,9 @@ import matter from 'gray-matter'
 import { slugify } from './scripts/slugify'
 import { VitePWA } from 'vite-plugin-pwa'
 import WindiCSS from 'vite-plugin-windicss'
+import isDev from './src/libs/isDev'
 
 const resolve = (dir: string): string => path.resolve(__dirname, dir);
-const IS_DEV: boolean = process.env.NODE_ENV === 'development' ? true : false;
 
 // // 版权信息配置
 // const bannerPlugin = (banner) => {
@@ -50,7 +50,7 @@ const IS_DEV: boolean = process.env.NODE_ENV === 'development' ? true : false;
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: IS_DEV ? '/' : 'https://cdn.jsdelivr.net/gh/chengpeiquan/chengpeiquan.com@gh-pages/',
+  base: isDev ? '/' : 'https://cdn.jsdelivr.net/gh/chengpeiquan/chengpeiquan.com@gh-pages/',
   server: {
     port: 33333,
     // proxy: {
