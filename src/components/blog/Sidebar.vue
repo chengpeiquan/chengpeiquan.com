@@ -143,8 +143,8 @@ const moveToc = (): void | boolean => {
   }, 10);
 
   // 把文章内的目录移除
-  const detail: HTMLElement = document.querySelector('.article-detail');
-  detail.childNodes[0].remove();
+  const content: HTMLElement = document.querySelector('.article-content');
+  content.childNodes[0].remove();
 }
 onMounted(moveToc);
 </script>

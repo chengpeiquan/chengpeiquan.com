@@ -50,8 +50,6 @@ const router = useRouter();
 const { frontmatter } = defineProps<{ frontmatter: any }>();
 const { title, desc, keywords, date } = frontmatter;
 const { diffDays, dateAgo } = dateDisplay(date);
-console.log(frontmatter);
-
 
 /** 
  * 设置页面信息
