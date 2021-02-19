@@ -4079,10 +4079,10 @@ vite-plugin-purge-icons@^0.6.0:
     "@purge-icons/generated" "^0.6.0"
     rollup-plugin-purge-icons "^0.6.0"
 
-vite-plugin-pwa@^0.4.6:
-  version "0.4.6"
-  resolved "https://registry.yarnpkg.com/vite-plugin-pwa/-/vite-plugin-pwa-0.4.6.tgz#e759b7840211f83cae367d306654da505cecbceb"
-  integrity sha512-3LonumSG4EcH9FT61d7wWouHkCmEciy3RPfvt25b835HMx9gb2Dt71t140+85Z5d+uANMSguC3miBnnGzagAMA==
+vite-plugin-pwa@^0.4.7:
+  version "0.4.7"
+  resolved "https://registry.yarnpkg.com/vite-plugin-pwa/-/vite-plugin-pwa-0.4.7.tgz#32d934171fc7ec5cada741c559b5fbf2fe5a39af"
+  integrity sha512-KsC9tenzn1r6AG/Hda4wg9Es6AokVRz2RqQp+R+uM3qvfNDbdDjJWAEhB/2zUx7D0YDu5Y0h+cDC0zD0vxBoog==
   dependencies:
     debug "^4.3.2"
     fast-glob "^3.2.5"

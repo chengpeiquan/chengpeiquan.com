@@ -172,8 +172,6 @@ export default defineConfig({
       manifest: {
         name: '程沛权',
         short_name: '程沛权',
-        start_url: 'https://chengpeiquan.com/',
-        scope: 'https://chengpeiquan.com/',
         theme_color: '#ffffff',
         icons: [
           {
