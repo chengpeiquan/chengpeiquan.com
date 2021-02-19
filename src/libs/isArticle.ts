@@ -8,7 +8,7 @@ const isArticle = (route: RouteRecordRaw): boolean => {
     return false;
   }
 
-  return route.name !== 'article-page' && route.path.startsWith('/article/') && !route.path.endsWith('.html');
+  return route.name !== 'article-page' && route.path.startsWith('/article/');
 }
 
 export default isArticle;

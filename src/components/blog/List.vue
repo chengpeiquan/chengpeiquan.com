@@ -167,7 +167,7 @@ const articleList = ref<List[]>([]);
 const getPageInfo = (): void => {
   // 提取文章详情页的路由并按日期排序
   routes.value = router.getRoutes()
-    .filter( item => isArticle(item) )
+    .filter( item => isArticle(item) && !item.path.endsWith('.html') )
     .sort( (a, b) => +new Date(b.meta.frontmatter.date) - +new Date(a.meta.frontmatter.date) );
 
   // 获取文章总数
