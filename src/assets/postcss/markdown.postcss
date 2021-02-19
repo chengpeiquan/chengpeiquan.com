@@ -110,6 +110,8 @@ blockquote {
   --fg-deep: #222;
   --fg-deeper: #000;
   
+  width: 100%;
+  max-width: 100%;
   color: var(--fg);
   text-align: justify;
   @apply text-base;
@@ -117,6 +119,8 @@ blockquote {
   /* 图片 */
   img {
     border-radius: 0.25rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   /* 链接 */
@@ -225,7 +229,6 @@ html.dark .prose {
 .img {
   @apply w-full h-full object-cover rounded;
 }
-
 
 /* 文章链接和锚点 */
 a.item {

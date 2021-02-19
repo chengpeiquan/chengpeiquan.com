@@ -11,9 +11,8 @@
     <!-- 头图 -->
 
     <!-- 主体 -->
-    <section class="container mx-auto mb-6">
-
-    </section>
+    <!-- <section class="container mx-auto mb-6">
+    </section> -->
     <!-- 主体 -->
 
   </main>

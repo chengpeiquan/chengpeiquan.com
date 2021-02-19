@@ -5,6 +5,7 @@ keywords: vue cli 3.0 升级,vue cli 升级报错
 date: 2018-11-21 19:50:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/11/1-2.jpg
 ---
+[[toc]]
 
 Vue脚手架3.0出来也蛮久了，秉着前人先踩坑的习惯，最近才开始升级。整个过程还是蛮顺利的，不过也有一些小小的问题，简单记录起来。
 

@@ -5,6 +5,7 @@ keywords: node爬虫,node crawler
 date: 2019-07-22 17:28:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2019/07/1.jpg
 ---
+[[toc]]
 
 以往的网站迁移服务器，数据方面的东西都是由服务端直接处理，不过这一次的需求比较特殊，先来看一下需求的几个特征点：
 
@@ -22,7 +23,7 @@ cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2019/07/1.jpg
 
 这次的需求并不是简单的爬取就完事，拿了需求需要先进行一波分析，拆分了两类注意事项如下：
 
-**一、缺点分析：**
+### 缺点分析
 
 1、旧页面的编码需要调整（由“gb2312”调整为“utf-8”），否则在新服务器会乱码。
 
@@ -34,7 +35,7 @@ cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2019/07/1.jpg
 
 5、需要保存的资源散落在各个专题的引用链接里，需要自己从专题里提取。
 
-**二、优点分析：**
+### 优点分析
 
 1、由于是CMS输出的文章和专题，所以所有的同类型页面，结构、布局、资源引入完全一致，只需要写一套爬虫代码即可适配抓取（虽然有3套文章模板，但结构其实是一样的）。
 
@@ -46,55 +47,24 @@ cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2019/07/1.jpg
 
 最后自己这边定下来的方案是用node来做爬虫服务器，实现自动化抓取和保存，以下是本次涉及到的工具和模块。
 
-<table>
-<tbody>
-<tr>
-<td style="text-align: center;"><strong>工具/模块</strong></td>
-<td style="text-align: center;"><strong>用途</strong></td>
-<td style="text-align: center;"><strong>api文档/github</strong></td>
-</tr>
-<tr>
-<td style="text-align: center;">node.js</td>
-<td style="text-align: center;">爬虫服务器</td>
-<td style="text-align: center;">http://nodejs.cn/api/</td>
-</tr>
-<tr>
-<td style="text-align: center;">http模块</td>
-<td style="text-align: center;">node内置的模块，用于获取页面信息，也可以用封装好的express框架代替</td>
-<td style="text-align: center;">http://nodejs.cn/api/http.html</td>
-</tr>
-<tr>
-<td style="text-align: center;">fs模块</td>
-<td style="text-align: center;">node内置的模块，用于文件的创建和保存</td>
-<td style="text-align: center;">http://nodejs.cn/api/http.html</td>
-</tr>
-<tr>
-<td style="text-align: center;">mkdirp</td>
-<td style="text-align: center;">node内置的模块，用于创建多级文件夹（因为fs模块的mkdir只能一级一级创建，很繁琐）</td>
-<td style="text-align: center;">https://github.com/substack/node-mkdirp</td>
-</tr>
-<tr>
-<td style="text-align: center;">iconv</td>
-<td style="text-align: center;">node本身只支持utf-8，对于非utf-8的网站，要用这个模块进行转码，才不会乱码</td>
-<td style="text-align: center;">https://github.com/ashtuchkin/iconv-lite/</td>
-</tr>
-<tr>
-<td style="text-align: center;">cheerio</td>
-<td style="text-align: center;">可选，运行在node端的dom选择器，api语法和jQuery一样，必要时可用来提取需要的东西</td>
-<td style="text-align: center;">https://github.com/cheeriojs/cheerio/</td>
-</tr>
-</tbody>
-</table>
+工具/模块|用途|api文档/github
+:--|:--|:--
+node.js|爬虫服务器|http://nodejs.cn/api/
+http模块|node内置的模块，用于获取页面信息，也可以用封装好的express框架代替|http://nodejs.cn/api/http.html
+fs模块|node内置的模块，用于文件的创建和保存|http://nodejs.cn/api/http.html
+mkdirp|node内置的模块，用于创建多级文件夹（因为fs模块的mkdir只能一级一级创建，很繁琐）|https://github.com/substack/node-mkdirp
+iconv|node本身只支持utf-8，对于非utf-8的网站，要用这个模块进行转码，才不会乱码|https://github.com/ashtuchkin/iconv-lite/
+cheerio|可选，运行在node端的dom选择器，api语法和jQuery一样，必要时可用来提取需要的东西|https://github.com/cheeriojs/cheerio/
 
 ## 编写爬虫
 
 这里分两步走：
 
-**一、先提取需要爬取的链接**
+### 先提取需要爬取的链接
 
 这一步是汇总成一个数组，这一步就略过了，提取a标签的href，对大家应该都没什么难度。
 
-**二、开始爬取页面**
+### 开始爬取页面
 
 流程：创建项目文件夹，创建一个getHtml.js作为主程序文件，打开node，cd到这个目录，运行node getHtml即可开始爬取。
 

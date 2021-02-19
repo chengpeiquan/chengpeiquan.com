@@ -127,7 +127,7 @@ export default defineConfig({
 
     Markdown({
       wrapperComponent: 'detail',
-      wrapperClasses: 'article-detail prose mx-auto',
+      wrapperClasses: 'prose mx-auto',
       headEnabled: true,
       markdownItSetup (md) {
         md.use(Prism);
@@ -172,8 +172,6 @@ export default defineConfig({
       manifest: {
         name: '程沛权',
         short_name: '程沛权',
-        start_url: 'https://chengpeiquan.com/',
-        scope: 'https://chengpeiquan.com/',
         theme_color: '#ffffff',
         icons: [
           {

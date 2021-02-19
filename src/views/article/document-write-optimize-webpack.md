@@ -5,6 +5,7 @@ keywords: document.write渲染优化,vue document.write
 date: 2018-12-15 16:34:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/12/1.jpg
 ---
+[[toc]]
 
 参与过discuz相关业务开发的同学应该都知道，dz论坛有一套自带的api系统叫数据调用（后台-门户-模块管理-数据调用），对于论坛运营同学来说，可以将模块的外部调用作为广告位数据源、或者引用到专题页面去展示论坛内容，很受运营的喜爱。
 
@@ -12,7 +13,7 @@ cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/12/1.jpg
 
 而且write方法去渲染html，更多情况是适合手写页面的年代，现在前端开发都是通过node+webpack工程化打包，那么遇到必须write又不想write的情况应该怎么办？最近刚好对手里的一个项目做了渲染优化，在这里顺便做个总结，讲一下对`document.write`渲染html的一个优化思路，可以结合到MVVM框架（如Vue.js）里去使用。
 
-## 痛点分析：
+## 痛点分析
 
 一个多元化的专题里面，会有轮播图、帖子列表、帖子排行榜等不同的模块，而传统的数据调用渲染方式，注定了一个模块只能一个调用，于是一个页面下来会有N个数据调用，也就是有N个`document.write`。
 
@@ -69,7 +70,7 @@ var articleData = [
 
 而且还有一个问题就是，现在用node+webpack来做开发的话，这种方式依然必须用传统的渲染方法，也就是在entry的index.html里，引入这个数据调用才行，无法通过构建打包然后按需加载！！！
 
-## 优化思路：
+## 优化思路
 
 回顾了痛点，我们梳理一下我们想要的东西：
 
