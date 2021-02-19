@@ -1,5 +1,5 @@
 <template>
-  <section class="flex justify-start flex-col flex-1 md:w-auto w-full overflow-hidden">
+  <section class="page-detail flex justify-start flex-col flex-1 md:w-auto w-full overflow-hidden">
     <!-- 页头信息 -->
     <div v-if="title" class="prose m-auto mb-8">
       <h1 class="md:text-3xl text-xl mb-0">
@@ -41,13 +41,11 @@ useHead({
 </script>
 
 <style lang="postcss">
-.article-detail {
-  p {
-    text-indent: 2em;
-  }
-
-  img {
-    max-width: 1000px;
+@media (min-width: 1280px) { 
+  .page-detail {
+    img {
+      max-width: 1000px;
+    }
   }
 }
 </style>

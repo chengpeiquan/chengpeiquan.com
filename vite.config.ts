@@ -127,7 +127,7 @@ export default defineConfig({
 
     Markdown({
       wrapperComponent: 'detail',
-      wrapperClasses: 'article-detail prose mx-auto',
+      wrapperClasses: 'prose mx-auto',
       headEnabled: true,
       markdownItSetup (md) {
         md.use(Prism);

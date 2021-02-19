@@ -1,6 +1,6 @@
 <template>
   <!-- 文章 -->
-  <section class="flex justify-start flex-col flex-1 md:w-auto w-full overflow-hidden">
+  <section class="article-detail flex justify-start flex-col flex-1 md:w-auto w-full overflow-hidden">
     <!-- 标题 -->
     <h1 v-if="title" class="flex items-center w-full md:text-3xl text-xl md:mb-4 mb-2">
       {{ title }}
@@ -94,16 +94,7 @@ const navigateToId = (): void => {
 onMounted(navigateToId);
 </script>
 
-<style lang="postcss">
-.prose {
-  width: 100%;
-  max-width: 100%;
-
-  img {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
+<style lang="postcss" scoped>
 .article-detail {
   .article-toc {
     display: none;
