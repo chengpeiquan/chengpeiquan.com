@@ -179,6 +179,7 @@ blockquote {
 
     thead {
       color: var(--fg);
+      font-weight: bold;
     }
 
     tbody {
@@ -199,6 +200,14 @@ blockquote {
 
       &:last-child {
         border-right: 0;
+      }
+
+    }
+
+    a {
+      &::before,
+      &::after {
+        display: none;
       }
     }
   }
