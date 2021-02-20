@@ -23,6 +23,8 @@ cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210
 
 由于开工前已经是 2021 年了，因为有前面几个月玩 Vue 3.0 的基础打底，非常想用 3.0 来重构博客，加上元旦期间 Vite 2.0 Beta 版刚好发布（就很突然），注意力完全放在了 Vue3 和 Vite2 上面，非常想跑一下两者结合有多爽。
 
+由于重构的最终目标还是要保持网站的 SEO 能力，所以肯定不能使用默认的 SPA 应用模式，要走服务端渲染，所以技术栈方面只需要考虑两条线：
+
 ### 基于 SSR
 
 虽然在此之前考虑过几个方案，最开始是优先考虑做 SSR ，考虑过 [Nuxt](https://github.com/nuxt/nuxt.js) 、[Vapper](https://github.com/shuidi-fed/vapper) 等一些比较流行的开箱即用的 SSR 框架，但这些框架目前都还在弄 Vue 2.0，甚至部分框架看起来有点 “弃坑” 的趋势（背靠字节大厂的 Vapper 居然一年多没更新了 emm…… ）。
@@ -39,7 +41,9 @@ cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210
 
 ### 最终敲定
 
-期间，有两个项目让我非常感兴趣，一个是 [vite-ssr](https://github.com/frandiox/vite-ssr)，一个是 [vite-ssg](https://github.com/antfu/vite-ssg)，我也分别对他们跑了 demo，加上 Vite 官网在 2.0 Beta 版发布后，也新增了一 Part [Server-Side Rendering | Vite](https://vitejs.dev/guide/ssr.html) 指导如何实现 Vite SSR，我觉得可行，So，最后决定基于这两个开源项目之一，选择自己搭脚手架……
+期间，Vite 官网在 2.0 Beta 版发布后，也新增了一 Part [Server-Side Rendering | Vite](https://vitejs.dev/guide/ssr.html) 指导如何实现 Vite SSR，我觉得可行。
+
+加上有两个开源项目让我非常感兴趣，一个是 [vite-ssr](https://github.com/frandiox/vite-ssr)，一个是 [vite-ssg](https://github.com/antfu/vite-ssg)，我也分别对他们跑了 demo ，很给力，So，最后决定基于这两个开源项目之一，选择自己搭脚手架……
 
 最终用到的核心技术是：
 
@@ -48,13 +52,74 @@ cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210
 >SSG —— 服务端渲染方案，利于 SEO 进行内容收录<br><br>
 >PWA —— 构建离线应用<br>
 
-## 技术栈分析
+当然还要考虑的事情很多，每个环节还要用到不同的技术栈，具体我在下面逐个环节说明。
 
-下面来说说每一个技术模块，对技术栈选型的原因分析吧。
+## 重构过程分析
+
+下面来说说决定重构之后，整个思考的过程顺序，以及对每一个技术模块的技术栈选型原因分析吧，希望对有计划重构项目的朋友带来一些帮助。
 
 ### 构建工具
 
-其实 [Vue-CLI](https://github.com/vuejs/vue-cli) 对 Vue 3.0 的支持已经非常好了，我的 [Vue 3.0 教程](https://vue3.chengpeiquan.com/) 也是基于 Vue-CLI 写的，之所以选择 Vite，一方面是它的构建速度真的比 [Webpack](https://github.com/webpack/webpack) 要快好多，另一方面是
+其实 [Vue-CLI](https://github.com/vuejs/vue-cli) 对 Vue 3.0 的支持已经非常好了，我的 [Vue 3.0 教程](https://vue3.chengpeiquan.com/) 也是基于 Vue-CLI 写的。
 
+之所以选择 Vite，一方面是它的构建速度真的比 [Webpack](https://github.com/webpack/webpack) 要快好多，另一方面是，自从 Vue 3.0 推出以来， Vue 官方团队就一直在投入精力优化和宣传 Vite，尽管 1.0 版本的功能和生态不如人意，但超快的构建速度已经体现了出来。
+
+加上在我准备动手重构的时候官方刚好发布了 2.0 大更新，对比了 1.0 简直是质的飞跃，让我非常感兴趣，而且按照目前官方团队的态度，我觉得后面 Vite 会逐步代替 Vue-CLI ，提前了解，提前踩坑，对以后的工作也有帮助。
+
+而且在生态方面，Vite 2.0 的各种支持都算很完善了，不得不说整个春节期间，Vue 团队的人都在忙着给 Vite 2.0 干活，我在春节提的 Issue，基本上 2 ~ 3 小时就能给我回应，解决问题速度非常快（大过年的耶！），重构过程感觉自己拥有一个强大的技术支持团队一样!
+
+开荒虽然辛苦，但也有另一番乐趣！
+
+### 服务端渲染
+
+这是在选择合适的构建工具之后，应该考虑的第二件事。
+
+个人博客之前一直选择用 WordPress ，一方面除了有 [LNMP](https://github.com/licess/lnmp) 一键部署等快速搭建方案，和各种各样的模板之外，主要也是归功于 WP 对 SEO 的支持也是非常好，我这个博客的日常访问都是来自于搜索引擎。
+
+单纯选择用 Vue 3.0 重新开发 SPA 应用肯定会丢失 SEO，所以才有了前面的 [技术栈的选择](#技术栈的选择)，本次是通过 SSG 方案来落地服务端渲染。
+
+### 项目架构规划
+
+在开始动手之前，还要对网站架构做一波规划，盲目动手只能给自己挖坑，自己的博客虽然说内容不多，但也有一些东西要考虑：
+
+1. 啊啊啊
+
+2. 啊啊啊
+
+先mark，未完待续……
+
+### 样式处理器
+
+先mark，未完待续……
+
+### 模板开发
+
+先mark，未完待续……
+
+### SEO 优化
+
+先mark，未完待续……
+
+### 静态资源处理
+
+先mark，未完待续……
+
+### 爬虫编写
+
+先mark，未完待续……
+
+### 数据迁移
+
+先mark，未完待续……
+
+### 服务端开发
+
+先mark，未完待续……
+
+### 自动化部署
+
+先mark，未完待续……
+
+### 离线应用构建
 
 先mark，未完待续……

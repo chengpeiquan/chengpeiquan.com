@@ -91,6 +91,7 @@ const router = useRouter();
 const articleList = ref<List[]>([]);
 const count: number = 5;
 const isShowToc = ref<boolean>(false);
+const isMobile: boolean = /iPhone|phone|android|iPod|pad|iPad/i.test( navigator.userAgent.toLowerCase() );
 
 /** 
  * 猜你喜欢的文章列表
@@ -124,7 +125,7 @@ getArticleList();
  * 提取目录生成到侧边栏
  */
 const moveToc = (): void | boolean => {
-  if ( !isClient ) {
+  if ( !isClient || isMobile ) {
     return false;
   }
 
