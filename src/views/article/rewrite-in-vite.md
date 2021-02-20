@@ -82,15 +82,17 @@ cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210
 
 在开始动手之前，还要对网站架构做一波规划，盲目动手只能给自己挖坑，自己的博客虽然说内容不多，但也有一些东西要考虑：
 
-1. 啊啊啊
+1. 对外展示的网站结构要保持不变，也就是原来的页面地址要尽量一样，避免用户访问不到原来的内容
 
-2. 啊啊啊
+2. 对实在不能保持原样的 URL ，或者要废弃的页面，需要做 301 重定向
 
-先mark，未完待续……
+3. 降低后续更新的构建和部署成本，尽量自动化，减少人工操作
 
-### 样式处理器
+4. 数据需要无缝迁移，不能有丢失
 
-先mark，未完待续……
+5. 减少服务器压力，把大部分资源消耗放在开源项目上（诸如 Github、jsdelivr CDN 等等）
+
+当然其他的如移动端适配啥的，就不必说了，之前博客还有一个小程序版本，不过因为没人看（害，真的整整一年过去了，完全没人看小程序版本…），所以小程序的依赖保留没有在这次的重构兼容考虑范围里，重构完毕后我就直接把原来的服务停了，回头有空了再重新写一版接口给小程序用。
 
 ### 模板开发
 
@@ -123,3 +125,13 @@ cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210
 ### 离线应用构建
 
 先mark，未完待续……
+
+## 结语
+
+因为网站的设计一向不是我的专长，加上不喜欢花里胡哨的东西，所以这一次重构后的 UI 设计还是基本继承了原来的风格。
+
+但也有一些新的迭代，比如加上了跟随系统的暗黑风格（也可以通过导航右上角进行手动切换），还有首页的变化，对于内容不多的博客来说，挺好的一个 idea，这是来自好友小毅 [The Art of Chawye Hsu](https://chawyehsu.com/) 和 Vite 开发者 Antfu [Anthony Fu](https://antfu.me/) 的博客参考。
+
+当然，整个项目的重构，更多的技术支持来自于 Ant，她比我早几天上线的 [Rewrite in Vite](https://antfu.me/posts/rewrite-in-vite) 给了我很多思路，很多基于 Vite 的插件也是她写的，都是在这几天发布和迭代，有那种瞌睡来了枕头的感觉，美妙！
+
+完整的项目依赖请查看仓库的 [package.json](https://github.com/chengpeiquan/chengpeiquan.com/blob/main/package.json) ，整个项目也完全开源了，具体的实现可以查看 [Github 仓库](https://github.com/chengpeiquan/chengpeiquan.com) ，在这里就不赘述了，如果觉得对你有用，欢迎 Star 。

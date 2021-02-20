@@ -63,7 +63,7 @@
             :title="item.title"
             :to="item.path"
           >
-            <h2 class="text-base">{{ item.title }}</h2>
+            <h2 class="article-title text-base">{{ item.title }}</h2>
           </router-link>
           <!-- 标题 -->
         </li>
@@ -156,5 +156,8 @@ onMounted(moveToc);
 }
 .block-title {
   @apply text-xl font-bold mb-4 pb-4 border-b dark:border-white dark:border-opacity-5;
+}
+.article-title {
+  text-align: justify;
 }
 </style>
