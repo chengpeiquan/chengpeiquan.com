@@ -117,6 +117,7 @@ export default defineConfig({
           data.date = new Date(+new Date() + 8 * 3600 * 1000).toISOString();
         }
         data.date = new Date(data.date).toISOString().substr(0, 19).replace(/T/, ' ');
+        data.date = data.date.replace(/-/g, '/');
         
         route.meta = Object.assign(route.meta || {}, {
           frontmatter: data
