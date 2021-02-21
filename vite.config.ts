@@ -169,7 +169,7 @@ export default defineConfig({
     Icons(),
 
     VitePWA({
-      // mode: 'development',
+      scope: 'https://chengpeiquan.com/',
       manifest: {
         name: '程沛权',
         short_name: '程沛权',
