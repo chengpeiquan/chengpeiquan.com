@@ -6,7 +6,7 @@
         class="ml-4"
         href="https://beian.miit.gov.cn/"
         target="_blank"
-        rel="nofollow"
+        rel="nofollow noopener noreferrer"
       >粤ICP备20011269号-1</a>
     </p>
   </footer>

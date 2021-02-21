@@ -13,6 +13,20 @@ cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210
 
 而且特别巧的是，这一天也是 Vite 2.0 正式版发布的日子：[Vite 2.0 发布了 - 尤雨溪](https://zhuanlan.zhihu.com/p/351147547)，同一天上线，就感觉特别美好，值得纪念。
 
+## 重构的价值
+
+这次重构，并非是因为放假有空就找点事情做，而是带着几个目的来的：
+
+1. 提前开荒 [Vite 2.0](https://github.com/vitejs/vite) ，为公司后续的业务提前踩坑，帮助团队进行技术选型，因为之前我在做 JSSDK、Vue plugin 的时候，已经开始脱离 webpack，用 [rollup](https://github.com/rollup/rollup) 在作为构建工具，而 Vite 正是基于 Rollup ，不仅构建速度非常快，而且是 Vue 团队大力推广的新工具，这让我很有兴趣去研究它。
+
+2. 了解一下当前的一些新生的前端工具，比如 UI 框架方面之前一直停留在适合 B 端产品的 Ant-Design、 Vuetify 、 饿了么等等，说实话我做 B 端产品的时候才会用，面向 C 端因为有设计稿，我基本上都是手写样式，听闻新一代的 UI 框架 [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) 已经有一段时间了，虽然很奇怪为什么还会回到十年前一样用原子类的 class，竟然还有 3 万多的 Star，让我非常的好奇到底为什么，结果一用，真香！没错，这次博客的样式，就是用的 Tailwind 。 还有像 CSS 预处理器之前也一直停留在 Sass / Less / Stylus 三驾马车，这一次我抛弃了他们，用上了 [PostCSS Language](https://github.com/postcss/postcss) + [CSS Variable](https://developer.mozilla.org/zh-CN/docs/Web/CSS/--*)，也是真香！
+
+3. 借此机会多了解一下生产环境的服务端开发，公司业务几乎没有机会让自己实操服务端，所以大部分情况下都是在跑本机的 Server，很多场景是开发环境下遇不到的，要想进步，还是要多在生产环境磨练。
+
+4. 接触更多优秀的开源作品，比如代码语法高亮之前一直只知道 [highlight.js](https://github.com/highlightjs/highlight.js) （因为 WordPress 的高亮插件就是用这个……），这一次我是用了 [prism](https://github.com/PrismJS/prism) ，更小巧，颗粒度更细，虽然目前还没有太多时间去定制代码高亮的配色，不过后面有时间想要处理，prism 会更加方便。
+
+更多的更多，尽在未来，这肯定不是最后的一个版本，还有非常大的优化空间。
+
 ## 重构前的目标
 
 其实去年就有想法要对博客做一波改版，但有几个原因导致一拖再拖，一个是因为业务比较忙（这个没办法，工作为重），一个是懒（主要是懒得去思考怎么设计，当然期间有在考虑一些不同的落地方案），还有一个主要的原因是当时 Vue 3.0 刚发布，我当时主要的精力放在踩坑体验 3.0，那段时间，大部分的时间和精力都放在撰写 [Vue3.0学习教程与实战案例](https://vue3.chengpeiquan.com/) 上面去了，休息时间有限，能够闲下来的时间也只有下班回来和周末，除掉一些自己的事情外，留下来捣鼓新东西的时间并不算很多，只能先押后了。
@@ -220,11 +234,75 @@ WordPress 的上传资源都存放在 `/wp-content/uploads/` 目录下，阿里�
 
 ### 服务端开发
 
-先mark，未完待续……
+服务端之前是 WordPress 所依赖的 Nginx + PHP + MySQL ，这一次重构也把服务端直接换了，更换为 Node.JS + Express ，通过 PM2 守护进程来运行在阿里云。
+
+对，这一次没有数据库，第一版暂时不打算做数据库，暂时用不到，目前大部分数据都已经迁移到 Github 仓库了，下个版本功能迭代用到了再考虑弄一下。
+
+我的服务器系统是 CentOS 7，也就是 Linux 系统，关于 Linux 下如何安装 Node ，搜素引擎很多方法，这里也不赘述了，放几个自己用到的关键命令参考吧。
+
+1. 清除缓存然后升级系统和软件
+
+```html
+sudo yum clean all
+sudo yum makecache
+sudo yum update
+sudo yum upgrade -y
+```
+
+2. 安装 NPM 并通过 stable 安装最新版本的 Node
+
+```html
+sudo yum install npm
+sudo npm install -g n
+sudo n stable
+```
+
+3. 全局安装 [yarn](https://github.com/yarnpkg/yarn) ，没错，我现在更喜欢用 yarn 来进行包管理，这一步你可以跳过
+
+```html
+npm i -g yarn
+```
+
+4. 然后是全局安装 [pm2](https://github.com/Unitech/pm2)，这个是必须要装的，否则我们的终端一关，服务就停了，需要通过 PM2 来守护进程，当然，你也可以用 [forever](https://github.com/foreversd/forever) 。
+
+```html
+yarn global add pm2
+```
+
+其他的步骤就不用说了，创建服务器的文件夹，初始化，安装 [express](https://github.com/expressjs/express) 或者其他你更熟悉的服务程序，搞起吧！
+
+><br>有几件事要特别叮嘱一下：<br>
+><br>1. 因为服务端变了，如果原来有开启 HTTPS，记得重新配置你的 SSL 证书（我用的是阿里云的免费证书，只需要 1 年更换 1 次）<br>
+><br>2. 域名也要重新做 301 重定向（HTTP 强切 HTTPS ， WWW 强切无 3W 等）<br>
+><br>3. 检查之前是否有在推广的的链接挂掉了，也要重新 301 到新地址 （比如 RSS 源之前是 /feed/ ，现在是 /feed.xml）<br>
+
+第一版其实不复杂，后面有需要会继续迭代。
 
 ### 自动化部署
 
-先mark，未完待续……
+代码托管在 GitHub 的好处就是 GitHub Actions 可以帮我们实现 CI / CD，通过配置分支的 push 或者 pull_request 等行为来实现自动触发项目的构建打包，并实现一键部署到阿里云服务器。
+
+具体的脚本可以参考我写的 [workflow](https://github.com/chengpeiquan/chengpeiquan.com/blob/main/.github/workflows/github-ci.yml) ，里面都提供了注释。
+
+workflow 里所有以 `secrets.XXXXXX` 的格式均为仓库独立配置的密钥变量，在仓库的 `settings` > `Actions secrets` 里添加。
+
+其中一些关键环节说明如下：
+
+1. `on` 是指分支行为，我配置了合并分支才会触发，因为平时都是托管在 `develop` 分支，包括未开发完毕的功能，写一半的文章草稿，只有确认可以发布的代码，才会合并到 `main` 进行更新
+
+2. `jobs` 是触发自动打包 / 发布一系列行为的各种操作，从上到下按顺序处理，其中的 ACCESS_TOKEN 是 GitHub 的 Token，请来 [Personal access tokens](https://github.com/settings/tokens) 创建，创建后只会显示一次，请保存好，后面涉及到 Token 的地方可以重复使用同一个 Token，请勿泄露！
+
+3. `gh-pages` 分支是打包完毕后的文件，推送到阿里云服务器的也是这个分支下的所有文件，之所以托管一份在 GitHub，是因为我们前面部署了 CDN 支持，JS / CSS 文件是需要读取这个分支的 CDN 文件
+
+4. 部署到阿里云的环节，配置的 `SERVER_SSH_KEY` 是自己服务器的密钥对，如果你也是跟我一样使用阿里云的 ESC ，可以参考 [创建SSH密钥对](https://www.alibabacloud.com/help/zh/doc-detail/51793.htm)， 创建后还需要绑定给实例才能激活生效，绑定操作请参考 [绑定SSH密钥对](https://www.alibabacloud.com/help/zh/doc-detail/51796.htm)
+
+5. `SERVER_IP` 是自己服务器的公网IP，这个其实可以不用配置为密钥变量，因为 `ping` 一下你的域名也知道是什么 IP ，只是因为我有两台服务器，所以配置为变量可以方便的通过 `SERVER_IP` 和 `SERVER_IP_TEST` 去切换，其他变量其实也有一个 TEST 版本
+
+6. 最后的 `TARGET` 是你在服务器上，node 服务器所安装的目录。
+
+如果其中有什么环节不清楚的，善用搜索引擎，或者到我博客仓库给我提 issue 也可以。
+
+如果你不是托管在 GitHub ，而是别的 Git 平台诸如自建的 Gitlab ，你也可以通过 [Jenkins](https://github.com/jenkinsci/jenkins) 去配置 CI / CD 的支持。
 
 ### 离线应用构建
 
