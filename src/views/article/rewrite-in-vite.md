@@ -1,5 +1,5 @@
 ---
-title: 重构于Vite 基于2.0版本的开荒体验
+title: 重构于Vite
 desc: 从 2021 年元旦 Vite 发布 2.0 Beta 版就一直在关注 Vite 的动态，借着春节放假有时间，而且 Vue 3.0 和 Vite 2.0 都才大版本更新上线不久，预感后面会火，先开荒尝试一波，也当给以后工作上的业务先提前踩踩坑，对博客做了第三次重构，这一次把客户端和服务端都重新写了，由 PHP 的 LNMP 全家桶全部换成了前端侧的技术栈。
 keywords: vite,vite ssr,vite ssg,vite blog
 date: 2021-02-18 23:54:00
@@ -90,21 +90,115 @@ cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210
 
 4. 数据需要无缝迁移，不能有丢失
 
-5. 减少服务器压力，把大部分资源消耗放在开源项目上（诸如 Github、jsdelivr CDN 等等）
+5. 减少服务器压力，把大部分资源消耗放在开源平台上（诸如 Github、jsdelivr CDN 等等）
 
-当然其他的如移动端适配啥的，就不必说了，之前博客还有一个小程序版本，不过因为没人看（害，真的整整一年过去了，完全没人看小程序版本…），所以小程序的依赖保留没有在这次的重构兼容考虑范围里，重构完毕后我就直接把原来的服务停了，回头有空了再重新写一版接口给小程序用。
+当然其他的如移动端适配啥的也要看情况顾及，之前博客还有一个小程序版本，不过因为没人看（害，真的整整一年过去了，完全没人看小程序版本…），所以小程序的依赖保留没有在这次的重构兼容考虑范围里，重构完毕后我就直接把原来的服务停了，回头有空了再重新写一版接口给小程序用。
 
 ### 模板开发
 
-先mark，未完待续……
+基于 Vue 3.0 的项目，主要的模板肯定还是 Vue 文件，站点的主要结构、页面的布局、美化等等都是基于 `.vue` 文件，只需要按照原来的习惯，路由页面放在你的 `src/views` 文件夹下，组件模板放置于 `src/components` 下，就可以自动生成路由访问。
+
+同时也加入了 `.md` 文件的支持，用于书写 Markdown 格式的内容，日常记录博客会更方便，并且像 VuePress 那样，同时支持在 Markdown 里嵌套 Vue，让博客的定制更加灵活。
+
+整个项目的路由页面、组件结构，跟你平时开发 Vue 项目是完全一样的，无缝切换。
+
+```html
+src
+├─components
+│  ├─Footer.vue
+│  └─Header.vue
+└─views
+   ├─article
+   │  ├─[page].vue
+   │  └─rewrite-in-vite.md
+   ├─about.md
+   └─index.vue
+```
+
+在这里推荐几个非常方便的 Vite 插件：
+
+><br>[vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages) ： 能够自动读取指定目录下的 Vue / Md 文件生成 Vue 路由，只需要管理好 views 文件夹的层级关系，无需再单独维护路由配置<br>
+><br>[vite-plugin-md](https://github.com/antfu/vite-plugin-md) ： 一个能让 Markdown 文件像 Vue 组件一样导入使用的插件，它也基于 markdown-it，支持进行一系列 md 生态扩展<br>
+><br>[vite-plugin-components](https://github.com/antfu/vite-plugin-components)：可以像 VuePress 一样，无需 import，会自动根据组件的标签名去 components 目录下寻找组件<br>
+
+基本上你只需要按照开发 Vue 项目的习惯去开发就可以了。
 
 ### SEO 优化
 
-先mark，未完待续……
+虽然前面的 [服务端渲染](#服务端渲染) 帮我们解决了空 HTML 文档的问题，但要更好的进行 SEO 优化，还需要落实到具体的页面上去。
+
+比如页面的 `title` 、 `description` 、 `keyword` 等等，这里我是用到了以下两个工具来帮我实现每个页面的 TKD 定制。
+
+[gray-matter](https://github.com/jonschlinkert/gray-matter)：支持对 `.md` 文件的 TKD 优化，你可以在 Markdown 文件的最前面加入这样的代码，即可实现对页面展示对应的 TKD 信息。
+
+```html
+---
+title: 这是页面的标题
+desc: 这是页面的描述
+keywords: 关键词1,关键词2,关键词3
+---
+
+下面是要书写的 Markdown 内容…
+```
+
+[@vueuse/head](https://github.com/vueuse/head)：可以让你在 `.vue` 文件里实现优化，在 Vue 组件里的 `script` 部分，写入以下的代码，就可以实现 TKD 信息的配置。
+
+```ts
+import { useHead } from '@vueuse/head'
+
+useHead({
+  meta: [
+    {
+      name: 'title',
+      content: '这是页面的标题'
+    },
+    {
+      name: 'description',
+      content: '这是页面的描述'
+    },
+    {
+      name: 'keywords',
+      content: '关键词1,关键词2,关键词3'
+    }
+  ],
+})
+```
+
+你还可以扩展更多的信息上去，具体都在各自对应的 Github 仓库的 README 里有详细的说明。
+
+当然，SEO 优化远远不止这一点，包括 robots 、 链接语义化 、减少死链 、 旧地址重定向等等，后面也会有说明。
 
 ### 静态资源处理
 
-先mark，未完待续……
+静态资源指 js 、 css 、 img 这些资源，放自己服务器也不是不好，我之前就是放自己服务器上，没有去改，虽然 WordPress 虽然有配置 CDN 的插件，但是 CDN 平台诸如七牛、又拍云，都是需要付费使用 https，总的来说还是要多出一分钱来处理这块服务，反正自己的博客访问量不大，日常使用的带宽消耗很少，我三年前在阿里云充的 50 块钱，三年过去了到现在还有 45.91 …
+
+不过这次改版就不一样了，改版后是把项目托管到了 Github ，先天优势存在，那么就要多考虑一下利用 Github 提供的免费服务了！
+
+开发过 NPM 包的同学，或者日常使用 NPM 插件比较细心的同学，应该能够发现发布在 NPM 上的包都自动部署到了 CDN 平台，诸如 jsdelivr 、 unpkg 、cdnjs 等等，那么 Github 和这些 CDN 能关联吗？在此之前其实我也没去关注能不能，但这一次我查了一下，确实可以，而且其中对国内访问速度最友好的 jsdelivr ，支持度最高！超棒的！
+
+关于 jsdelivr 的速度可以参考：[国内有哪些靠谱的 Javascript 库 CDN可用？](https://www.zhihu.com/question/20227463/answer/370662453)，也可以测试下我的博客，我自己对测试结果还是挺满意的。
+
+![测试我自己网站的速度](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210221182702.jpg)
+
+所以最后我是把所有静态资源都指向了 jsdelivr CDN ，它无需你自己再做任何部署工作，只需要把代码文件更新到你的 GitHub 仓库里，就会自动同步到 jsdelivr 。
+
+访问格式为：
+
+```html
+Normal:
+https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/
+e.g. https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/avatar.jpg
+
+No cache:
+https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage@latest/
+e.g. https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage@latest/img/avatar.jpg
+
+Clear cache:
+https://purge.jsdelivr.net/gh/chengpeiquan/assets-storage/
+e.g. https://purge.jsdelivr.net/gh/chengpeiquan/assets-storage/img/avatar.jpg
+```
+
+[assets-storage](https://github.com/chengpeiquan/assets-storage)
 
 ### 爬虫编写
 
