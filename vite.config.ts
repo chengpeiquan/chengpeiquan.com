@@ -174,7 +174,7 @@ export default defineConfig({
         name: '程沛权',
         short_name: '程沛权',
         start_url: 'https://chengpeiquan.com/',
-        theme_color: '#ffffff',
+        theme_color: '#111111',
         icons: [
           {
             src: '/avatar-32x32.png',
