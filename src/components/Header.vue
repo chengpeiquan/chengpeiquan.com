@@ -35,6 +35,7 @@
             :href="item.target"
             :title="item.text"
             target="_blank"
+            rel="nofollow noopener noreferrer"
           >
             {{ item.text }}
           </a>
