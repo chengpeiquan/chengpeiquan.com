@@ -170,43 +170,51 @@ useHead({
 
 ### 静态资源处理
 
-静态资源指 js 、 css 、 img 这些资源，放自己服务器也不是不好，我之前就是放自己服务器上，没有去改，虽然 WordPress 虽然有配置 CDN 的插件，但是 CDN 平台诸如七牛、又拍云，都是需要付费使用 https，总的来说还是要多出一分钱来处理这块服务，反正自己的博客访问量不大，日常使用的带宽消耗很少，我三年前在阿里云充的 50 块钱，三年过去了到现在还有 45.91 …
+静态资源指 js 、 css 、 img 这些资源，放自己服务器也不是不好，我之前就是放自己服务器上，没有去改，虽然 WordPress 虽然有配置 CDN 的插件，但是 CDN 平台诸如七牛、又拍云，免费额度只针对 http , 都是需要付费才可以使用 https，总的来说还是要多出一分钱来处理这块服务，反正自己的博客访问量不大，而且技术博客很少多媒体资源，日常使用的带宽消耗很少，我三年前在阿里云充的 50 块钱，三年过去了到现在还有 45.91 …
 
-不过这次改版就不一样了，改版后是把项目托管到了 Github ，先天优势存在，那么就要多考虑一下利用 Github 提供的免费服务了！
+不过这次改版就不一样了，后续我可能还会开辟一些图片模块，加上改版后是把项目托管到了 Github ，先天优势存在，那么就要多考虑一下利用 Github 提供的免费服务了！
 
 开发过 NPM 包的同学，或者日常使用 NPM 插件比较细心的同学，应该能够发现发布在 NPM 上的包都自动部署到了 CDN 平台，诸如 jsdelivr 、 unpkg 、cdnjs 等等，那么 Github 和这些 CDN 能关联吗？在此之前其实我也没去关注能不能，但这一次我查了一下，确实可以，而且其中对国内访问速度最友好的 jsdelivr ，支持度最高！超棒的！
 
 关于 jsdelivr 的速度可以参考：[国内有哪些靠谱的 Javascript 库 CDN可用？](https://www.zhihu.com/question/20227463/answer/370662453)，也可以测试下我的博客，我自己对测试结果还是挺满意的。
 
-![测试我自己网站的速度](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210221182702.jpg)
+![测试我自己网站的速度](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210221185258.jpg)
 
 所以最后我是把所有静态资源都指向了 jsdelivr CDN ，它无需你自己再做任何部署工作，只需要把代码文件更新到你的 GitHub 仓库里，就会自动同步到 jsdelivr 。
 
-访问格式为：
+访问格式为在 [jsdelivr CDN 官网](https://www.jsdelivr.com/?docs=gh) 有案例说明，更多用法可以查看官网的文档 [Features - jsdelivr](https://www.jsdelivr.com/features#gh)，为了避免项目源码过大，你可以像我一样单独创建一个类似 [assets-storage](https://github.com/chengpeiquan/assets-storage) 这样的仓库用来存储这些静态资源，在仓库的 README 也有简单介绍下如何引用 CDN 地址和清除 CDN 缓存。
 
-```html
-Normal:
-https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/
-e.g. https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/avatar.jpg
+回到项目里，只需要在 [vite.config.ts](https://github.com/chengpeiquan/chengpeiquan.com/blob/main/vite.config.ts) 里修改 `base` 的路径即可。
 
-No cache:
-https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage@latest/
-e.g. https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage@latest/img/avatar.jpg
-
-Clear cache:
-https://purge.jsdelivr.net/gh/chengpeiquan/assets-storage/
-e.g. https://purge.jsdelivr.net/gh/chengpeiquan/assets-storage/img/avatar.jpg
+```ts
+export default defineConfig({
+  base: isDev ? '/' : 'https://cdn.jsdelivr.net/gh/chengpeiquan/chengpeiquan.com@gh-pages/',
+})
 ```
 
-[assets-storage](https://github.com/chengpeiquan/assets-storage)
+详细可以看官网的文档 [Configuring Vite | Vite](https://vitejs.dev/config/#base)。
+
+当然这种方式如果你用平时的命令行或者老乌龟界面工具来提交文件，始终还是比较麻烦，这里推荐一个现成的图床工具 [PicGo](https://github.com/Molunerfinn/PicGo) ，支持多个平台的 CDN 服务，其中就有 Github 。
+
+![PicGo 图床界面](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210221185205.jpg)
+
+你可以在 Github 仓库上的 [Releases](https://github.com/Molunerfinn/PicGo/releases) 下载最新的客户端版本，只是使用的话，可以单独下载对应系统的安装文件，不需要克隆整个仓库下来自己构建。
+
+### 资源导出
+
+本次的资源导出主要是指原来的那些图片，前面有提到，我之前没有启动 CDN 服务，所以图片资源都还在自己的服务器上。
+
+WordPress 的上传资源都存放在 `/wp-content/uploads/` 目录下，阿里云非常方便的就是，你可以连 FTP 上去把这些文件直接拖下来就可以了。
+
+重新传到 Github 上又非常简单，克隆你的仓库下来后，放到指定的文件夹里，重新提交就可以了。
+
+等未来某一次你不想继续用 Github 托管了，只需要把仓库拉下来，所有文件又都在了，都是非常方便和灵活。
 
 ### 爬虫编写
 
-先mark，未完待续……
+这一部分主要针对原来的文章，虽然我之前的 WordPress 就开启了 Markdown 编辑器支持，但如 [SEO 优化](#seo-优化) 里提到的，缺少很多 TKD 信息配置，就算用现成的 HTML / XML 转 Markdown，都还要去补充这些信息也比较繁琐。
 
-### 数据迁移
-
-先mark，未完待续……
+所以数据量少的话自己从后台 COPY 出来方便些，数据量大的话，可以借助 Node 来编写个静态爬虫，在爬取过程中对一些内容进行追加、转换，具体的实现可以参考我之前写的 [网站改版迁移经验记录：基于node的爬虫编写](https://chengpeiquan.com/article/node-web-crawler)
 
 ### 服务端开发
 
@@ -218,7 +226,9 @@ e.g. https://purge.jsdelivr.net/gh/chengpeiquan/assets-storage/img/avatar.jpg
 
 ### 离线应用构建
 
-先mark，未完待续……
+使用 Vue-CLI 创建新项目的时候，可以了解到有一个选项是关于 PWA 的，关于 PWA 的定义建议直接阅读 [渐进式 Web 应用（PWA） | MDN](https://developer.mozilla.org/zh-CN/docs/Web/Progressive_web_apps) 。
+
+Vite 官方团队也对 PWA 做了支持，通过 [vite-plugin-pwa](https://github.com/antfu/vite-plugin-pwa) 可以方便的实现一个离线应用的配置。
 
 ## 结语
 
@@ -226,6 +236,6 @@ e.g. https://purge.jsdelivr.net/gh/chengpeiquan/assets-storage/img/avatar.jpg
 
 但也有一些新的迭代，比如加上了跟随系统的暗黑风格（也可以通过导航右上角进行手动切换），还有首页的变化，对于内容不多的博客来说，挺好的一个 idea，这是来自好友小毅 [The Art of Chawye Hsu](https://chawyehsu.com/) 和 Vite 开发者 Antfu [Anthony Fu](https://antfu.me/) 的博客参考。
 
-当然，整个项目的重构，更多的技术支持来自于 Ant，她比我早几天上线的 [Rewrite in Vite](https://antfu.me/posts/rewrite-in-vite) 给了我很多思路，很多基于 Vite 的插件也是她写的，都是在这几天发布和迭代，有那种瞌睡来了枕头的感觉，美妙！
+当然，整个项目的重构，更多的技术支持来自于 Ant，她也是 Vue 和 Vite 官方团队的开发者，她比我早几天上线的 [Rewrite in Vite](https://antfu.me/posts/rewrite-in-vite) 给了我很多思路，很多基于 Vite 的插件也是她写的，都是在这几天发布和迭代，有那种瞌睡来了枕头的感觉，美妙！
 
-完整的项目依赖请查看仓库的 [package.json](https://github.com/chengpeiquan/chengpeiquan.com/blob/main/package.json) ，整个项目也完全开源了，具体的实现可以查看 [Github 仓库](https://github.com/chengpeiquan/chengpeiquan.com) ，在这里就不赘述了，如果觉得对你有用，欢迎 Star 。
+完整的项目依赖和配置请查看仓库的 [package.json](https://github.com/chengpeiquan/chengpeiquan.com/blob/main/package.json) 和 [vite.config.ts](https://github.com/chengpeiquan/chengpeiquan.com/blob/main/vite.config.ts) ，整个项目也完全开源了，具体的实现可以查看 [Github 仓库](https://github.com/chengpeiquan/chengpeiquan.com) ，在这里就不赘述了，如果觉得对你有用，欢迎 Star 。
