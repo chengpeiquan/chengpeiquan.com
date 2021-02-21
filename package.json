@@ -58,9 +58,9 @@
     "vite-plugin-md": "^0.4.2",
     "vite-plugin-pages": "^0.4.2",
     "vite-plugin-purge-icons": "^0.6.0",
-    "vite-plugin-pwa": "^0.5.1",
+    "vite-plugin-pwa": "^0.5.2",
     "vite-plugin-windicss": "^0.3.0",
-    "vite-ssg": "0.8.8",
+    "vite-ssg": "^0.8.9",
     "vue-baidu-analytics": "^2.0.3"
   }
 }
