@@ -31,6 +31,10 @@ useHead({
     {
       name: 'twitter:creator',
       content: '@chengpeiquan'
+    },
+    {
+      name: 'theme-color',
+      content: '#111111'
     }
   ]
 });
