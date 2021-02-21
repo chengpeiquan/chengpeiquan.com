@@ -168,9 +168,12 @@ export default defineConfig({
     Icons(),
 
     VitePWA({
+      injectRegister: 'inline',
+      scope: 'https://chengpeiquan.com/',
       manifest: {
         name: '程沛权',
         short_name: '程沛权',
+        start_url: 'https://chengpeiquan.com/',
         theme_color: '#ffffff',
         icons: [
           {
