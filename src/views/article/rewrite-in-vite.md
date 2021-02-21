@@ -212,9 +212,11 @@ WordPress 的上传资源都存放在 `/wp-content/uploads/` 目录下，阿里�
 
 ### 爬虫编写
 
-这一部分主要针对原来的文章，虽然我之前的 WordPress 就开启了 Markdown 编辑器支持，但如 [SEO 优化](#seo-优化) 里提到的，缺少很多 TKD 信息配置，就算用现成的 HTML / XML 转 Markdown，都还要去补充这些信息也比较繁琐。
+这一部分主要针对原来的文章，虽然我之前的 WordPress 就开启了 Markdown 编辑器支持，但如 [SEO 优化](#seo-优化) 里提到的，缺少很多 TKD 信息配置，而且里面的图片地址也都要更换为 CDN 的路径，所以就算用现成工具去处理 HTML / XML 转 Markdown，都还要去补充这些信息，也比较繁琐。
 
-所以数据量少的话自己从后台 COPY 出来方便些，数据量大的话，可以借助 Node 来编写个静态爬虫，在爬取过程中对一些内容进行追加、转换，具体的实现可以参考我之前写的 [网站改版迁移经验记录：基于node的爬虫编写](https://chengpeiquan.com/article/node-web-crawler)
+所以是借助了 Node 编写了个静态爬虫，在爬取过程中对一些内容进行追加、转换。
+
+具体的实现可以参考我之前写的 [网站改版迁移经验记录：基于node的爬虫编写](https://chengpeiquan.com/article/node-web-crawler) ，这里就不重复赘述了。
 
 ### 服务端开发
 
@@ -229,6 +231,9 @@ WordPress 的上传资源都存放在 `/wp-content/uploads/` 目录下，阿里�
 使用 Vue-CLI 创建新项目的时候，可以了解到有一个选项是关于 PWA 的，关于 PWA 的定义建议直接阅读 [渐进式 Web 应用（PWA） | MDN](https://developer.mozilla.org/zh-CN/docs/Web/Progressive_web_apps) 。
 
 Vite 官方团队也对 PWA 做了支持，通过 [vite-plugin-pwa](https://github.com/antfu/vite-plugin-pwa) 可以方便的实现一个离线应用的配置。
+
+><br>不过目前发现了一个问题就是，当 `vite.config.ts` 的 `base` 选项设置为 CDN 地址时，构建出来的 PWA manifest 资源路径会读取错误，原因是 manifest 不能走 CDN，要单独从网站内读取，虽然跟作者提了优化建议（详见 [#25](https://github.com/antfu/vite-plugin-pwa/pull/25)），不过还需要点时间去优化。<br>
+><br>所以在原版进行版本更新之前，自己先发布了个私有调试包 fix 了这个问题，有遇到一样情况的朋友可以先安装 [@chengpeiquan/vite-plugin-pwa](https://www.npmjs.com/package/@chengpeiquan/vite-plugin-pwa) 这个去用，不过最好还是留意原版的更新，这个私有包不会长期维护。<br>
 
 ## 结语
 
