@@ -855,6 +855,16 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
+"@chengpeiquan/vite-plugin-pwa@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@chengpeiquan/vite-plugin-pwa/-/vite-plugin-pwa-0.1.1.tgz#74278cd34586ceb82d81dcca67bc59724c3b988e"
+  integrity sha512-RMA4os9FWX1VTKQA60as2sJ7jv0rS1ABb/9HwjklfnI7j7KyB7TDSFR5knTaGjD69UpTCyORo3fPayG8z8AjKA==
+  dependencies:
+    debug "^4.3.2"
+    fast-glob "^3.2.5"
+    pretty-bytes "^5.5.0"
+    workbox-build "^6.1.0"
+
 "@hapi/address@^2.1.2":
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/@hapi/address/-/address-2.1.4.tgz#5d67ed43f3fd41a69d4b9ff7b56e7c0d1d0a81e5"
