@@ -50,7 +50,8 @@ const resolve = (dir: string): string => path.resolve(__dirname, dir);
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: isDev ? '/' : 'https://cdn.jsdelivr.net/gh/chengpeiquan/chengpeiquan.com@gh-pages/',
+  // base: isDev ? '/' : 'https://cdn.jsdelivr.net/gh/chengpeiquan/chengpeiquan.com@gh-pages/',
+  base: '/',
   server: {
     port: 33333,
     // proxy: {
@@ -168,8 +169,7 @@ export default defineConfig({
     Icons(),
 
     VitePWA({
-      injectRegister: 'inline',
-      scope: 'https://chengpeiquan.com/',
+      // scope: '/',
       manifest: {
         name: '程沛权',
         short_name: '程沛权',
