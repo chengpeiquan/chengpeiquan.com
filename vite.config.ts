@@ -14,9 +14,9 @@ import anchor from 'markdown-it-anchor'
 import toc from 'markdown-it-table-of-contents'
 import externalLinks from 'markdown-it-external-links'
 import matter from 'gray-matter'
-import { slugify } from './scripts/slugify'
 import { VitePWA } from 'vite-plugin-pwa'
 import WindiCSS from 'vite-plugin-windicss'
+import { slugify } from './scripts/slugify'
 import isDev from './src/libs/isDev'
 
 const resolve = (dir: string): string => path.resolve(__dirname, dir);
@@ -141,7 +141,7 @@ export default defineConfig({
           }),
         });
         md.use(toc, {
-          includeLevel: [2, 3],
+          includeLevel: [2, 3, 4],
           containerClass: 'article-toc prose',
           slugify: (s: string) => encodeURIComponent(String(s).trim().toLowerCase().replace(/\s+|\.+/g, '-'))
         });

@@ -94,10 +94,12 @@ const navigateToId = (): void => {
 onMounted(navigateToId);
 </script>
 
-<style lang="postcss" scoped>
-.article-detail {
-  .article-toc {
-    display: none;
+<style lang="postcss">
+@media (min-width: 1280px) { 
+  .article-detail {
+    .article-toc {
+      display: none;
+    }
   }
 }
 </style>

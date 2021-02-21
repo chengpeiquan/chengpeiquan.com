@@ -63,7 +63,7 @@
             :title="item.title"
             :to="item.path"
           >
-            <h2 class="text-base">{{ item.title }}</h2>
+            <h2 class="article-title text-base">{{ item.title }}</h2>
           </router-link>
           <!-- 标题 -->
         </li>
@@ -91,6 +91,7 @@ const router = useRouter();
 const articleList = ref<List[]>([]);
 const count: number = 5;
 const isShowToc = ref<boolean>(false);
+const isMobile: boolean = /iPhone|phone|android|iPod|pad|iPad/i.test( navigator.userAgent.toLowerCase() );
 
 /** 
  * 猜你喜欢的文章列表
@@ -124,7 +125,7 @@ getArticleList();
  * 提取目录生成到侧边栏
  */
 const moveToc = (): void | boolean => {
-  if ( !isClient ) {
+  if ( !isClient || isMobile ) {
     return false;
   }
 
@@ -155,5 +156,8 @@ onMounted(moveToc);
 }
 .block-title {
   @apply text-xl font-bold mb-4 pb-4 border-b dark:border-white dark:border-opacity-5;
+}
+.article-title {
+  text-align: justify;
 }
 </style>

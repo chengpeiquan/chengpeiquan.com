@@ -30,7 +30,7 @@ useHead({
       content: config.title
     }
   ],
-})
+});
 </script>
 
 <style lang="postcss" scoped>

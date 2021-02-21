@@ -19,7 +19,7 @@ useHead({
     {
       property: 'og:image',
       content: config.avatar.big
-      },
+    },
     {
       name: 'description',
       content: config.description
@@ -31,8 +31,8 @@ useHead({
     {
       name: 'twitter:creator',
       content: '@chengpeiquan'
-      },
-  ],
+    }
+  ]
 });
 
 const route = useRoute();
