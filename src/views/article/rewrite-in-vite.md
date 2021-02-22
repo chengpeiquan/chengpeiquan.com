@@ -19,13 +19,15 @@ cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210
 
 这次重构，并非是因为放假有空就找点事情做，而是带着几个目的来的：
 
-1. 提前开荒 [Vite 2.0](https://github.com/vitejs/vite) ，为公司后续的业务提前踩坑，帮助团队进行技术选型，因为之前我在做 JSSDK、Vue plugin 的时候，已经开始脱离 webpack，用 [rollup](https://github.com/rollup/rollup) 在作为构建工具，而 Vite 正是基于 Rollup ，不仅构建速度非常快，而且是 Vue 团队大力推广的新工具，这让我很有兴趣去研究它。
+1. 提前开荒 [Vite 2.0](https://github.com/vitejs/vite) ，为公司后续的业务提前踩坑，可以为团队进行技术选型提供帮助，因为之前我在做 JSSDK、Vue Plugin 的时候，已经开始脱离 Webpack，用 [Rollup](https://github.com/rollup/rollup) 作为构建工具，而 Vite 正是基于 Rollup ，不仅构建速度非常快，而且也像 Webpack 一样提供了热更新，对于一线开发来说，体验上是非常好的，而且它还是 Vue 团队大力推广的新工具，这让我很有兴趣去研究它。
 
-2. 了解一下当前的一些新生的前端工具，比如 UI 框架方面之前一直停留在适合 B 端产品的 Ant-Design、 Vuetify 、 饿了么等等，说实话我做 B 端产品的时候才会用，面向 C 端因为有设计稿，我基本上都是手写样式，听闻新一代的 UI 框架 [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) 已经有一段时间了，虽然很奇怪为什么还会回到十年前一样用原子类的 class，竟然还有 3 万多的 Star，让我非常的好奇到底为什么，结果一用，真香！没错，这次博客的样式，就是用的 Tailwind 。 还有像 CSS 预处理器之前也一直停留在 Sass / Less / Stylus 三驾马车，这一次我抛弃了他们，用上了 [PostCSS Language](https://github.com/postcss/postcss) + [CSS Variable](https://developer.mozilla.org/zh-CN/docs/Web/CSS/--*)，也是真香！
+2. 了解一下当前的一些新生的前端工具，比如 UI 框架方面之前一直停留在适合 B 端产品的 Ant-Design、 Vuetify 、 饿了么等等，说实话我做 B 端产品的时候才会用，面向 C 端因为有设计稿，我基本上都是手写样式，听闻新一代的 UI 框架 [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) 已经有一段时间了，虽然很奇怪为什么还会回到十年前一样用原子类的 class，“开倒车” 竟然还有 3 万多的 Star，让我非常的好奇到底为什么，结果一用，真香！没错，这次博客的样式，就是用的 Tailwind 。 还有像 CSS 预处理器之前也一直停留在 Sass / Less / Stylus 三驾马车，这一次我抛弃了他们，用上了 [PostCSS Language](https://github.com/postcss/postcss) + [CSS Variable](https://developer.mozilla.org/zh-CN/docs/Web/CSS/--*)，也是真香！
 
 3. 借此机会多了解一下生产环境的服务端开发，公司业务几乎没有机会让自己实操服务端，所以大部分情况下都是在跑本机的 Server，很多场景是开发环境下遇不到的，要想进步，还是要多在生产环境磨练。
 
 4. 接触更多优秀的开源作品，比如代码语法高亮之前一直只知道 [highlight.js](https://github.com/highlightjs/highlight.js) （因为 WordPress 的高亮插件就是用这个……），这一次我是用了 [prism](https://github.com/PrismJS/prism) ，更小巧，颗粒度更细，虽然目前还没有太多时间去定制代码高亮的配色，不过后面有时间想要处理，prism 会更加方便。
+
+5. 享受从 0 到 1 搭建脚手架的一个过程，目前这个版本算是实现一个简易版的 VuePress ，但是如果一直使用开箱即用的 VuePress ，很多时候并没有想去了解那些功能是怎么实现的，或者用哪些工具可以实现想要的功能（Btw: 我自从用了 Vue-CLI 之后就很久没自己配置 Webpack 了，直到 Rollup 的时候才算重新玩转了一次，这一次的 Vite 又是新的体验）
 
 更多的更多，尽在未来，这肯定不是最后的一个版本，还有非常大的优化空间。
 
@@ -137,7 +139,91 @@ src
 ><br>[vite-plugin-md](https://github.com/antfu/vite-plugin-md) ： 一个能让 Markdown 文件像 Vue 组件一样导入使用的插件，它也基于 markdown-it，支持进行一系列 md 生态扩展<br>
 ><br>[vite-plugin-components](https://github.com/antfu/vite-plugin-components)：可以像 VuePress 一样，无需 import，会自动根据组件的标签名去 components 目录下寻找组件<br>
 
-基本上你只需要按照开发 Vue 项目的习惯去开发就可以了。
+基本上你只需要按照开发 Vue 项目的习惯去开发就可以了，如果有一些思路被卡住不知道怎么下手，可以参考我仓库源码。
+
+### 样式处理器
+
+有设计稿的时候我更喜欢借助 CSS 预处理器（目前常用 [Stylus](https://github.com/stylus/stylus)），借助他们的变量 、 嵌套书写，以及 Mixin 、 Extend 等功能，避免写原生 CSS 带来的烦恼。
+
+没有设计稿的时候，会用上 [Ant Design](https://github.com/vueComponent/ant-design-vue) 等 UI 框架来帮我减少页面设计上的一些时间浪费，但这些框架通常更适合用在 B 端产品。
+
+去年底在知乎刷到过一篇 [如何评价CSS框架TailwindCSS？](https://www.zhihu.com/question/337939566) ，了解到一款全新的 CSS 框架 Tailwind CSS，乍一看很像是在开历史的倒车，回归原子类 className ，评价也是褒贬不一，自己光看文档的时候也是想着这啥玩意…
+
+但是考虑到如果真的是开倒车，凭什么可以拿到 3 万的 Star，抱着试一下的心态在这次重构里面引入尝试，确实真香！
+
+目前感受到的好处就是：
+
+> 延续 CSS 的属性命名，你需要什么属性自己放，也就是自己必须有一定的 CSS 基础，特别是在多端适配方面，不用担心框架用久了自己不会写 CSS 的问题
+
+比如，你要实现一个容器内完全居中，手写 CSS 是：
+
+```css
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+}
+```
+
+用 Tailwind CSS 的写法是：
+
+```html
+<div class="flex justify-center items-center w-40 h-40"></div>
+```
+
+写法跟你在 VSCode 里自动补全代码时，敲入的命令非常接近，不像传统的 UI 框架一样，你写个标签就自动生成按钮，都不知道它是怎么写出来的（这也是我比较少想用 UI 框架的原因，我怕久了自己都不会写了），实际上，使用 Tailwind 之后，你还是在自己写 CSS， 只不过更方便了！
+
+>支持 CSS tree-shaking ，构建后的文件非常迷你
+
+传统的 Atom CSS ，引入了就得整包引入，而 Tailwind 可以借助 PostCSS ，可以在最终项目构建的时候，抽离出我们用到的样式，用不到的会被直接扔掉。
+
+我自己体验了一下，核心样式文件在配置 Purge 之前构建出来大概有 6M 多，Purge 之后只有 24K ！
+
+> 可以组合使用，类似于 CSS 预处理器的 Extend
+
+比如，我要写一个通用的图片样式，让图片具备自适配不变型的效果，我只需要借助 @apply 像这样子：
+
+```css
+.img {
+  @apply w-full h-full object-cover;
+}
+```
+
+编译出来就是我想要的效果：
+
+```css
+.img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+```
+
+> 支持目前主流的暗黑模式，通过 `dark:xxxxx` 的前缀就可以轻松定制两款皮肤
+
+点一下切换皮肤：<toggle-theme />
+
+> 用了 Tailwind 之后，你几乎可以不用写 Sass / Stylus 了，那么问题来了：如何弥补 CSS 预处理器提供的一些功能？
+
+借助 [PostCSS Language](https://github.com/postcss/postcss) 和 [CSS Variable](https://developer.mozilla.org/zh-CN/docs/Web/CSS/--*)，可以轻松的书写像 CSS 预处理一样的嵌套和变量。
+
+```css
+a {
+  color: var(--fg-deeper);
+  text-decoration: none;
+
+  &:hover { 
+    border-bottom: 1px solid var(--fg-light);
+  }
+}
+```
+
+独立的文件使用 `.postcss` 或者 `.pcss` 作为文件后缀，在 Vue 组件里则使用 `<style lang="postcss"></style>` 来指定 PostCSS Language 。
+
+当然，说的再多也不如亲手写一写，我之前在知乎也是看了好久始终不能决定用不用，之前赶业务也没时间，这一次也终于动手体验了一把，后悔，特别后悔，后悔怎么没有早点用！！！
 
 ### SEO 优化
 
@@ -312,8 +398,17 @@ workflow 里所有以 `secrets.XXXXXX` 的格式均为仓库独立配置的密�
 
 Vite 官方团队也对 PWA 做了支持，通过 [vite-plugin-pwa](https://github.com/antfu/vite-plugin-pwa) 可以方便的实现一个离线应用的配置。
 
-><br>不过目前发现了一个问题就是，当 `vite.config.ts` 的 `base` 选项设置为 CDN 地址时，构建出来的 PWA manifest 资源路径会读取错误，原因是 manifest 不能走 CDN，要单独从网站内读取，虽然跟作者提了优化建议（详见 [#25](https://github.com/antfu/vite-plugin-pwa/pull/25)），不过还需要点时间去优化。<br>
-><br>所以在原版进行版本更新之前，自己先发布了个私有调试包 fix 了这个问题，有遇到一样情况的朋友可以先安装 [@chengpeiquan/vite-plugin-pwa](https://www.npmjs.com/package/@chengpeiquan/vite-plugin-pwa) 这个去用，不过最好还是留意原版的更新，这个私有包不会长期维护。<br>
+><br>~~不过目前发现了一个问题就是，当 `vite.config.ts` 的 `base` 选项设置为 CDN 地址时，构建出来的 PWA manifest 资源路径会读取错误，原因是 manifest 不能走 CDN，要单独从网站内读取，虽然跟作者提了优化建议（详见 [#25](https://github.com/antfu/vite-plugin-pwa/pull/25)），不过还需要点时间去优化。~~<br>
+><br>~~所以在原版进行版本更新之前，自己先发布了个私有调试包 fix 了这个问题，有遇到一样情况的朋友可以先安装 [@chengpeiquan/vite-plugin-pwa](https://www.npmjs.com/package/@chengpeiquan/vite-plugin-pwa) 这个去用，不过最好还是留意原版的更新，这个私有包不会长期维护。~~<br>
+><br>2021-02-22更新： 目前原版已更新，Fix 了我反馈的问题，请使用 v0.5.3 以后的版本可以避免该问题的产生，给作者点赞！<br>
+
+关于 PWA 的配置可以参考我的项目，这里单独说一下需要特别注意的点：
+
+1. 因为使用了 CDN，所以 `scope` 和 `manifest.start_url` 选项需要显式指定，否则资源会读取出错
+
+2. 基于我上面提到的路径问题，从 v0.5.3 开始，配置 CDN 的同时，也需要显式指定 `base` 选项，避免出现 404
+
+其他的选项根据实际需要去处理就可以了。
 
 ## 结语
 
