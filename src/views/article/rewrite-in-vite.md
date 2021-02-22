@@ -320,6 +320,14 @@ WordPress 的上传资源都存放在 `/wp-content/uploads/` 目录下，阿里�
 
 具体的实现可以参考我之前写的 [网站改版迁移经验记录：基于node的爬虫编写](https://chengpeiquan.com/article/node-web-crawler) ，这里就不重复赘述了。
 
+### 数据统计
+
+既然是 Vue 项目，那么当然支持 Vue 系的统计插件，之前写的两个统计平台插件，都是可以开箱即用的，你可以在 [main.ts](https://github.com/chengpeiquan/chengpeiquan.com/blob/main/src/main.ts) 里了解如何开启流量的统计上报功能，如果你需要记录埋点，也都有 api 可以轻松触发数据的上报。
+
+百度统计：[vue-baidu-analytics](https://github.com/chengpeiquan/vue-baidu-analytics)
+
+友盟统计：[vue-cnzz-analytics](https://github.com/chengpeiquan/vue-cnzz-analytics)
+
 ### 服务端开发
 
 服务端之前是 WordPress 所依赖的 Nginx + PHP + MySQL ，这一次重构也把服务端直接换了，更换为 Node.JS + Express ，通过 PM2 守护进程来运行在阿里云。
