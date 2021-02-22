@@ -15,6 +15,12 @@ cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210
 
 ![LightHouse的打分](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/01/20210222114853.jpg)
 
+## 运作流程
+
+本次重构后，从开发到部署更新的运作流程图如下，日常只需要维护 GitHub 仓库的代码，其他的都是自动化完成。
+
+![博客运作流程](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/01/20210222154414.jpg)
+
 ## 重构的价值
 
 这次重构，并非是因为放假有空就找点事情做，而是带着几个目的来的：
@@ -47,7 +53,7 @@ cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210
 
 虽然在此之前考虑过几个方案，最开始是优先考虑做 SSR ，考虑过 [Nuxt](https://github.com/nuxt/nuxt.js) 、[Vapper](https://github.com/shuidi-fed/vapper) 等一些比较流行的开箱即用的 SSR 框架，但这些框架目前都还在弄 Vue 2.0，甚至部分框架看起来有点 “弃坑” 的趋势（背靠字节大厂的 Vapper 居然一年多没更新了 emm…… ）。
 
-加上搞 SSR 的话，服务器成本比较高，我的低配 ESC 可能 Hold 不住，好好玩一玩的话还要投点钱，想了想先算了，那么退而求次就是上 SSG 。
+加上搞 SSR 的话，服务器成本比较高，我的低配 ECS 可能 Hold 不住，好好玩一玩的话还要投点钱，想了想先算了，那么退而求次就是上 SSG 。
 
 ### 基于 SSG
 
@@ -306,7 +312,7 @@ export default defineConfig({
 
 本次的资源导出主要是指原来的那些图片，前面有提到，我之前没有启动 CDN 服务，所以图片资源都还在自己的服务器上。
 
-WordPress 的上传资源都存放在 `/wp-content/uploads/` 目录下，阿里云非常方便的就是，你可以连 FTP 上去把这些文件直接拖下来就可以了。
+WordPress 的上传资源都存放在 `/wp-content/uploads/` 目录下，阿里云非常方便的就是，你可以连 SFTP 上去把这些文件直接拖下来就可以了。
 
 重新传到 Github 上又非常简单，克隆你的仓库下来后，放到指定的文件夹里，重新提交就可以了。
 
@@ -319,6 +325,14 @@ WordPress 的上传资源都存放在 `/wp-content/uploads/` 目录下，阿里�
 所以是借助了 Node 编写了个静态爬虫，在爬取过程中对一些内容进行追加、转换。
 
 具体的实现可以参考我之前写的 [网站改版迁移经验记录：基于node的爬虫编写](https://chengpeiquan.com/article/node-web-crawler) ，这里就不重复赘述了。
+
+### 数据统计
+
+既然是 Vue 项目，那么当然支持 Vue 系的统计插件，之前写的两个统计平台插件，都是可以开箱即用的，均已支持 Vue 3.0 的使用。你可以在 [main.ts](https://github.com/chengpeiquan/chengpeiquan.com/blob/main/src/main.ts) 里了解如何开启流量的统计上报功能，如果你需要记录埋点，也都有 API 可以轻松触发数据的上报。
+
+百度统计：[vue-baidu-analytics](https://github.com/chengpeiquan/vue-baidu-analytics)
+
+友盟统计：[vue-cnzz-analytics](https://github.com/chengpeiquan/vue-cnzz-analytics)
 
 ### 服务端开发
 
@@ -382,7 +396,7 @@ workflow 里所有以 `secrets.XXXXXX` 的格式均为仓库独立配置的密�
 
 3. `gh-pages` 分支是打包完毕后的文件，推送到阿里云服务器的也是这个分支下的所有文件，之所以托管一份在 GitHub，是因为我们前面部署了 CDN 支持，JS / CSS 文件是需要读取这个分支的 CDN 文件
 
-4. 部署到阿里云的环节，配置的 `SERVER_SSH_KEY` 是自己服务器的密钥对，如果你也是跟我一样使用阿里云的 ESC ，可以参考 [创建SSH密钥对](https://www.alibabacloud.com/help/zh/doc-detail/51793.htm)， 创建后还需要绑定给实例才能激活生效，绑定操作请参考 [绑定SSH密钥对](https://www.alibabacloud.com/help/zh/doc-detail/51796.htm)
+4. 部署到阿里云的环节，配置的 `SERVER_SSH_KEY` 是自己服务器的密钥对，如果你也是跟我一样使用阿里云的 ECS ，可以参考 [创建SSH密钥对](https://www.alibabacloud.com/help/zh/doc-detail/51793.htm)， 创建后还需要绑定给实例才能激活生效，绑定操作请参考 [绑定SSH密钥对](https://www.alibabacloud.com/help/zh/doc-detail/51796.htm)
 
 5. `SERVER_IP` 是自己服务器的公网IP，这个其实可以不用配置为密钥变量，因为 `ping` 一下你的域名也知道是什么 IP ，只是因为我有两台服务器，所以配置为变量可以方便的通过 `SERVER_IP` 和 `SERVER_IP_TEST` 去切换，其他变量其实也有一个 TEST 版本
 
