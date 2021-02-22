@@ -278,7 +278,7 @@ useHead({
 
 ### 静态资源处理
 
-静态资源指 js 、 css 、 img 这些资源，放自己服务器也不是不好，我之前就是放自己服务器上，没有去改，虽然 WordPress 虽然有配置 CDN 的插件，但是 CDN 平台诸如七牛、又拍云，免费额度只针对 http , 都是需要付费才可以使用 https，总的来说还是要多出一分钱来处理这块服务，反正自己的博客访问量不大，而且技术博客很少多媒体资源，日常使用的带宽消耗很少，我三年前在阿里云充的 50 块钱，三年过去了到现在还有 45.91 …
+静态资源指 js 、 css 、 img 这些资源，放自己服务器也不是不好，我之前就是放自己服务器上，没有去改，虽然 WordPress 虽然有配置 CDN 的插件，但是 CDN 平台诸如七牛、又拍云，免费额度只针对 http , 都是需要付费才可以使用 https，总的来说还是要多出一笔钱来处理这块服务，反正自己的博客访问量不大，而且技术博客很少多媒体资源，日常使用的带宽消耗很少，我三年前在阿里云充的 50 块钱，三年过去了到现在还有 45.91 …
 
 不过这次改版就不一样了，后续我可能还会开辟一些图片模块，加上改版后是把项目托管到了 Github ，先天优势存在，那么就要多考虑一下利用 Github 提供的免费服务了！
 
@@ -377,6 +377,7 @@ yarn global add pm2
 ><br>1. 因为服务端变了，如果原来有开启 HTTPS，记得重新配置你的 SSL 证书（我用的是阿里云的免费证书，只需要 1 年更换 1 次）<br>
 ><br>2. 域名也要重新做 301 重定向（HTTP 强切 HTTPS ， WWW 强切无 3W 等）<br>
 ><br>3. 检查之前是否有在推广的的链接挂掉了，也要重新 301 到新地址 （比如 RSS 源之前是 /feed/ ，现在是 /feed.xml）<br>
+><br>4. 最重要的，配置上对路由 history 模式的支持<br>
 
 第一版其实不复杂，后面有需要会继续迭代。
 
@@ -430,6 +431,6 @@ Vite 官方团队也对 PWA 做了支持，通过 [vite-plugin-pwa](https://gith
 
 但也有一些新的迭代，比如加上了跟随系统的暗黑风格（也可以通过导航右上角进行手动切换），还有首页的变化，对于内容不多的博客来说，挺好的一个 idea，这是来自好友小毅 [The Art of Chawye Hsu](https://chawyehsu.com/) 和 Vite 开发者 Antfu [Anthony Fu](https://antfu.me/) 的博客参考。
 
-当然，整个项目的重构，更多的技术支持来自于 Ant，她也是 Vue 和 Vite 官方团队的开发者，她比我早几天上线的 [Rewrite in Vite](https://antfu.me/posts/rewrite-in-vite) 给了我很多思路，很多基于 Vite 的插件也是她写的，都是在这几天发布和迭代，有那种瞌睡来了枕头的感觉，美妙！
+当然，整个项目的重构，更多的技术支持来自于 Anthony，他也是 Vue 和 Vite 官方团队的开发者，他比我早几天上线的 [Rewrite in Vite](https://antfu.me/posts/rewrite-in-vite) 给了我很多思路，很多基于 Vite 的插件也是他写的，都是在这几天发布和迭代，有那种瞌睡来了枕头的感觉，美妙！
 
 完整的项目依赖和配置请查看仓库的 [package.json](https://github.com/chengpeiquan/chengpeiquan.com/blob/main/package.json) 和 [vite.config.ts](https://github.com/chengpeiquan/chengpeiquan.com/blob/main/vite.config.ts) ，整个项目也完全开源了，具体的实现可以查看 [Github 仓库](https://github.com/chengpeiquan/chengpeiquan.com) ，在这里就不赘述了，如果觉得对你有用，欢迎 Star 。
