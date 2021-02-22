@@ -15,6 +15,12 @@ cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210
 
 ![LightHouse的打分](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/01/20210222114853.jpg)
 
+## 运作流程
+
+本次重构后，从开发到部署更新的运作流程图如下，日常只需要维护 GitHub 仓库的代码，其他的都是自动化完成。
+
+![博客运作流程](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/01/20210222154414.jpg)
+
 ## 重构的价值
 
 这次重构，并非是因为放假有空就找点事情做，而是带着几个目的来的：
@@ -306,7 +312,7 @@ export default defineConfig({
 
 本次的资源导出主要是指原来的那些图片，前面有提到，我之前没有启动 CDN 服务，所以图片资源都还在自己的服务器上。
 
-WordPress 的上传资源都存放在 `/wp-content/uploads/` 目录下，阿里云非常方便的就是，你可以连 FTP 上去把这些文件直接拖下来就可以了。
+WordPress 的上传资源都存放在 `/wp-content/uploads/` 目录下，阿里云非常方便的就是，你可以连 SFTP 上去把这些文件直接拖下来就可以了。
 
 重新传到 Github 上又非常简单，克隆你的仓库下来后，放到指定的文件夹里，重新提交就可以了。
 
