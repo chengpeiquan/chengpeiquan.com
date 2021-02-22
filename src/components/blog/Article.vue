@@ -44,6 +44,7 @@ import { isClient } from '@vueuse/core'
 import { useHead } from '@vueuse/head'
 import config from '/@ts/config'
 import dateDisplay from '/@libs/dateDisplay'
+import isMobile from '/@libs/isMobile'
 
 const route = useRoute();
 const router = useRouter();
@@ -51,11 +52,12 @@ const { frontmatter } = defineProps<{ frontmatter: any }>();
 const { title, desc, keywords, date } = frontmatter;
 const { diffDays, dateAgo } = dateDisplay(date);
 
+
 /** 
  * 设置页面信息
  */
 useHead({
-  title: `${title} - ${config.title}`,
+  title: isMobile ? title : `${title} - ${config.title}`,
   meta: [
     { property: 'og:title', content: `${title} - ${config.title}` },
     { name: 'description', content: desc },
