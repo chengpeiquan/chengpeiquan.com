@@ -4,6 +4,8 @@
     <section class="banner">
       <img
         class="img"
+        width="1920"
+        height="1080"
         src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210214152623.jpg"
         alt="花臂当仔"
       >

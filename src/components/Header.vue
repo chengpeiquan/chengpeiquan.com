@@ -5,6 +5,8 @@
       <div class="flex flex-shrink-0 md:w-14 w-8 md:h-14 h-8 rounded-full overflow-hidden" >
         <img
           class="img"
+          width="56"
+          height="56"
           src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/avatar-60x60.jpg"
           alt="程沛权"
         >
