@@ -1,6 +1,6 @@
 {
   "name": "chengpeiquan.com",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "My personal website, technology stack based on Vue.js 3.0, and Vite 2.0, use Server Side Generation.",
   "author": "chengpeiquan",
   "homepage": "https://chengpeiquan.com/",
