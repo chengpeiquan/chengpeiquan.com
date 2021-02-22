@@ -13,7 +13,7 @@ cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210
 
 而且特别巧的是，这一天也是 Vite 2.0 正式版发布的日子：[Vite 2.0 发布了 - 尤雨溪](https://zhuanlan.zhihu.com/p/351147547)，同一天上线，就感觉特别美好，值得纪念。
 
-![LightHouse的打分](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/01/20210222114120.jpg)
+![LightHouse的打分](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/01/20210222114853.jpg)
 
 ## 重构的价值
 

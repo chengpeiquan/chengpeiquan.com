@@ -1,5 +1,5 @@
 # chengpeiquan.com
 
-My personal website.
+My personal website. Base on Vite 2.0 and Vue.JS 3.0.
 
-> During the debugging phase, the service is not officially switched.
+You can see [Rewrite in vite](https://chengpeiquan.com/article/rewrite-in-vite) to learn more.
