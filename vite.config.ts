@@ -14,8 +14,7 @@ import anchor from 'markdown-it-anchor'
 import toc from 'markdown-it-table-of-contents'
 import externalLinks from 'markdown-it-external-links'
 import matter from 'gray-matter'
-// import { VitePWA } from 'vite-plugin-pwa'
-import { VitePWA } from '@chengpeiquan/vite-plugin-pwa'
+import { VitePWA } from 'vite-plugin-pwa'
 import WindiCSS from 'vite-plugin-windicss'
 import { slugify } from './scripts/slugify'
 import isDev from './src/libs/isDev'
@@ -170,6 +169,7 @@ export default defineConfig({
     Icons(),
 
     VitePWA({
+      base: '/',
       scope: 'https://chengpeiquan.com/',
       manifest: {
         name: '程沛权',
