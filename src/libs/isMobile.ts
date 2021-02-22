@@ -1,5 +1,12 @@
 /** 
  * 判断是否手机平台
  */
-const isMobile: boolean = /iPhone|phone|android|iPod|pad|iPad/i.test( navigator.userAgent.toLowerCase() );
+let isMobile: boolean = false;
+
+try {
+  isMobile = /iPhone|phone|android|iPod|pad|iPad/i.test( navigator.userAgent.toLowerCase() );
+} catch (e) {
+  isMobile = false;
+}
+
 export default isMobile;
