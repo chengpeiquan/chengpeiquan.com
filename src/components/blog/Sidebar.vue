@@ -79,6 +79,7 @@ import { useRouter, useRoute } from 'vue-router'
 import { isClient } from '@vueuse/core'
 import isArticle from '/@libs/isArticle'
 import shuffle from '/@libs/shuffle'
+import isMobile from '/@libs/isMobile'
 
 interface List {
   path: string,
@@ -91,7 +92,6 @@ const router = useRouter();
 const articleList = ref<List[]>([]);
 const count: number = 5;
 const isShowToc = ref<boolean>(false);
-const isMobile: boolean = /iPhone|phone|android|iPod|pad|iPad/i.test( navigator.userAgent.toLowerCase() );
 
 /** 
  * 猜你喜欢的文章列表

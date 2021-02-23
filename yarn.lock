@@ -4062,10 +4062,10 @@ vite-plugin-windicss@^0.3.0:
     fast-glob "^3.2.5"
     windicss "^2.1.11"
 
-vite-ssg@^0.8.9:
-  version "0.8.9"
-  resolved "https://registry.yarnpkg.com/vite-ssg/-/vite-ssg-0.8.9.tgz#512d579d6d060674767b517b5cbedf9f29e83850"
-  integrity sha512-WwO2agmnlEINQmz4ZNPWP3a4ePBNJCQlVQq4Z9FKuoa1ed46t7atY376m2T23UjETM80X7nSNjyphmpMWI+1cw==
+vite-ssg@^0.8.10:
+  version "0.8.10"
+  resolved "https://registry.yarnpkg.com/vite-ssg/-/vite-ssg-0.8.10.tgz#0222cc81d9562c810c2a93f90512fdc6d7e165f2"
+  integrity sha512-lmNbDrzF73v4u/hlaGuPNI8n5RqZ9D4X4Ypa8k92/x6PPq1CqRQkpKW/7Onc65hIZq27GH5FifLI8nhoQYCaIA==
   dependencies:
     "@vueuse/head" "^0.2.3"
     chalk "^4.1.0"

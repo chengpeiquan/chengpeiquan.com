@@ -21,33 +21,6 @@ import isDev from './src/libs/isDev'
 
 const resolve = (dir: string): string => path.resolve(__dirname, dir);
 
-// // 版权信息配置
-// const bannerPlugin = (banner) => {
-//   return {
-//     name: 'banner',
-//     async writeBundle (NULL, bundle) {
-//       for (const fileName of Object.entries(bundle)) {
-//         const file = fileName[0]
-//         const extRegex = new RegExp(/\.(css|js)$/i)
-//         const vendorRegex = new RegExp(/vendor/)
-//         if (extRegex.test(file) && !vendorRegex.test(file)) {
-//           let data = fs.readFileSync('./dist/' + file, { encoding: 'utf8' })
-//           data = `/* ${banner} */ ${data}`
-//           fs.writeFileSync('./dist/' + file, data)
-//         }
-//       }
-//     }
-//   }
-// }
-// const ResolveBanner = () => {
-//   return `/** 
-//  * name: ${pkg.name}
-//  * version: v${pkg.version}
-//  * author: ${pkg.author}
-//  */
-//  `;
-// }
-
 // https://vitejs.dev/config/
 export default defineConfig({
   base: isDev ? '/' : 'https://cdn.jsdelivr.net/gh/chengpeiquan/chengpeiquan.com@gh-pages/',
@@ -64,17 +37,7 @@ export default defineConfig({
     // }
   },
   build: {
-    assetsInlineLimit: 1024 * 8,
-    // rollupOptions: {
-      // plugins: [
-        // bannerPlugin(`/** 
-        // * name: ${pkg.name}
-        // * version: v${pkg.version}
-        // * author: ${pkg.author}
-        // */
-        // `)
-      // ]
-    // }
+    assetsInlineLimit: 1024 * 8
   },
   resolve: {
     alias: {
