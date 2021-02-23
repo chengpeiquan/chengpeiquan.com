@@ -3994,6 +3994,11 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
+vite-plugin-banner@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/vite-plugin-banner/-/vite-plugin-banner-0.1.1.tgz#42caedb5a64117048dcd1a30fc5ee9bd46d7df90"
+  integrity sha512-UYxVZPt2DVhv0GqJBtWyCklbzaDKrsDDIPJd8aB3MeBx1/UbW7ge4S62l0pOPqJSHygZAMnbARLHWv+rgglUnA==
+
 vite-plugin-components@^0.6.10:
   version "0.6.10"
   resolved "https://registry.yarnpkg.com/vite-plugin-components/-/vite-plugin-components-0.6.10.tgz#c5780e40dcd40e83f0c1fd3869a939dacd2cbe03"

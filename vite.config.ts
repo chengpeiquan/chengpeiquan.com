@@ -16,6 +16,7 @@ import externalLinks from 'markdown-it-external-links'
 import matter from 'gray-matter'
 import { VitePWA } from 'vite-plugin-pwa'
 import WindiCSS from 'vite-plugin-windicss'
+import Banner from 'vite-plugin-banner'
 import { slugify } from './scripts/slugify'
 import isDev from './src/libs/isDev'
 
@@ -177,5 +178,7 @@ export default defineConfig({
     ...WindiCSS({
       safelist: 'prose prose-sm m-auto dark'
     }),
+
+    Banner(`/**\n * name: ${pkg.name}\n * version: v${pkg.version}\n * description: v${pkg.description}\n * author: ${pkg.author}\n * homepage: ${pkg.homepage}\n */`),
   ]
 })
