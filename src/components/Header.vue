@@ -103,8 +103,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { useRouter } from 'vue-router';
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 import isDark from '/@libs/isDark'
 import isMobile from '/@libs/isMobile'
 
@@ -128,12 +128,13 @@ const navList: NavList = [
   }
 ];
 
+// 移动端菜单开关
 const isShowMenu = ref<boolean>(false);
-
 const toggleMenu = (): void => {
   isShowMenu.value = !isShowMenu.value;
 }
 
+// 移动端切换路由后关闭菜单
 const router = useRouter();
 router.afterEach( () => {
   isShowMenu.value = false;
