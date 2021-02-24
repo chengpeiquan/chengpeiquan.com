@@ -150,6 +150,8 @@ const moveToc = (): void | boolean => {
 
   // 获取文章内的目录
   const toc: HTMLElement = document.querySelector('.article-toc');
+  console.log(toc);
+  
   if ( !toc ) {
     isShowToc.value = false;
     return false;
