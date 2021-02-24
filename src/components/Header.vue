@@ -18,7 +18,7 @@
     <!-- 站点导航 - 移动端 -->
     <nav
       v-if="isMobile"
-      class="nav flex flex-1 justify-end items-center text-xl"
+      class="nav flex flex-1 justify-end items-center text-base"
     >
       <!-- 主导航按钮 -->
       <a class="select-none mr-4" @click="toggleMenu">
@@ -37,7 +37,7 @@
         <li
           v-for="(item, index) in navList"
           :key="index"
-          class="flex items-center w-1/3 h-10 text-sm"
+          class="flex items-center w-1/3 h-12 text-sm"
         >
           <router-link
             :to="item.target"
@@ -104,6 +104,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 import isDark from '/@libs/isDark'
 import isMobile from '/@libs/isMobile'
 
@@ -132,6 +133,11 @@ const isShowMenu = ref<boolean>(false);
 const toggleMenu = (): void => {
   isShowMenu.value = !isShowMenu.value;
 }
+
+const router = useRouter();
+router.afterEach( () => {
+  isShowMenu.value = false;
+})
 </script>
 
 <style lang="postcss" scoped>
