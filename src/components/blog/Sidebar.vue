@@ -150,8 +150,6 @@ const moveToc = (): void | boolean => {
 
   // 获取文章内的目录
   const toc: HTMLElement = document.querySelector('.article-toc');
-  console.log(toc);
-  
   if ( !toc ) {
     isShowToc.value = false;
     return false;
@@ -162,13 +160,17 @@ const moveToc = (): void | boolean => {
   setTimeout(() => {
     const tocContainer: HTMLElement = document.querySelector('.article-toc-container');
     tocContainer.appendChild(toc);
-  }, 100);
+  }, 10);
 
   // 把文章内的目录移除
   const content: HTMLElement = document.querySelector('.article-content');
   content.childNodes[0].remove();
 }
-onMounted(moveToc);
+onMounted(() => {
+  setTimeout(() => {
+    moveToc();
+  }, 10);
+});
 </script>
 
 <style lang="postcss" scoped>
