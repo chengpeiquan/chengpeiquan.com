@@ -1,6 +1,6 @@
 <template>
   <a
-    class="select-none"
+    class="select-none text-xl"
     :title="`切换到${ isDark ? '普通' : '暗黑' }模式`"
     @click="toggleTheme"
   >
