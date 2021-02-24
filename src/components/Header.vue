@@ -11,14 +11,14 @@
           alt="程沛权"
         >
       </div>
-      <span class="md:ml-4 ml-2 md:text-2xl text-l" >程沛权</span>
+      <span class="md:ml-4 ml-2 md:text-2xl text-xl" >程沛权</span>
     </div>
     <!-- 站点信息 -->
 
     <!-- 站点导航 - 移动端 -->
     <nav
       v-if="isMobile"
-      class="nav flex flex-1 justify-end items-center text-base"
+      class="nav flex flex-1 justify-end items-center text-xl"
     >
       <!-- 主导航按钮 -->
       <a class="select-none mr-4" @click="toggleMenu">
@@ -37,7 +37,7 @@
         <li
           v-for="(item, index) in navList"
           :key="index"
-          class="flex items-center w-1/3 h-12 text-sm"
+          class="flex items-center w-1/3 h-14 text-base"
         >
           <router-link
             :to="item.target"

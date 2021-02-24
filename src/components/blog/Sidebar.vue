@@ -28,7 +28,7 @@
     <!-- 热门栏目 -->
 
     <!-- 猜你喜欢 -->
-    <section class="mb-16">
+    <section class="mb-8">
       <div class="flex justify-between items-center block-title">
         <h2>猜你喜欢</h2>
         <span class="text-base font-normal cursor-pointer select-none" @click="getArticleList">换一换</span>
@@ -70,6 +70,21 @@
       </ul>
     </section>
     <!-- 猜你喜欢 -->
+
+    <!-- 友情链接 -->
+    <section class="mb-16">
+      <h2 class="block-title">友情链接</h2>
+      <div class="flex flex-wrap w-full">
+        <a class="mb-2" href="https://vue3.chengpeiquan.com/" target="_blank" rel="noopener noreferrer">Vue3.0学习教程与实战案例</a>
+        <span class="text-gray-900 mx-2">|</span>
+        <a class="mb-2" href="https://wuyabala.com/" target="_blank" rel="noopener noreferrer">佩恩的博客</a>
+        <span class="text-gray-900 mx-2">|</span>
+        <a class="mb-2" href="https://chawyehsu.com/" target="_blank" rel="noopener noreferrer">The Art of Chawye Hsu</a>
+        <span class="text-gray-900 mx-2">|</span>
+        <a class="mb-2" href="https://guangne.com/" target="_blank" rel="noopener noreferrer">旅行家龙猫</a>
+      </div>
+    </section>
+    <!-- 友情链接 -->
   </section>
 </template>
 
