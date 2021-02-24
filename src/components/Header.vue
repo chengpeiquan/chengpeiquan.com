@@ -55,6 +55,7 @@
 import isDark from '/@libs/isDark'
 
 interface NavList {
+  isRoute: boolean,
   path: string,
   text: string
 }
