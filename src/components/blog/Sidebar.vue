@@ -160,7 +160,7 @@ const moveToc = (): void | boolean => {
   setTimeout(() => {
     const tocContainer: HTMLElement = document.querySelector('.article-toc-container');
     tocContainer.appendChild(toc);
-  }, 10);
+  }, 100);
 
   // 把文章内的目录移除
   const content: HTMLElement = document.querySelector('.article-content');
