@@ -64,6 +64,7 @@
         >
           First
         </router-link>
+        <span class="opacity-50" v-else>First</span>
       </div>
       <!-- 第一页 -->
 
@@ -88,6 +89,7 @@
         >
           Prev
         </router-link>
+        <span class="opacity-50" v-else>Prev</span>
       </div>
       <!-- 上一页 -->
 
@@ -104,6 +106,7 @@
         >
           Next
         </router-link>
+        <span class="opacity-50" v-else>Next</span>
       </div>
       <!-- 下一页 -->
 
@@ -120,6 +123,7 @@
         >
           Last
         </router-link>
+        <span class="opacity-50" v-else>Last</span>
       </div>
       <!-- 下一页 -->
     </section>
