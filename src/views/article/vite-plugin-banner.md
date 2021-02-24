@@ -11,7 +11,7 @@ cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/01/20210
 
 传送门：[基于Vue-CLI 3.0 让WebPack在打包的时候添加版权注释](https://chengpeiquan.com/article/vue-cli-webpack-banner-plugin.html)
 
-最近开始玩 Vite 的一些东西，虽然文档说可以继承 Rollup 的配置选项，以及一些 Rollup 的插件支持，但测试了一下，banner 功能并没有生效，所以昨晚有空就了解了一下 Vite 插件怎么开发，并参照 webpack banner plugin 的功能自己写了一个，下面是插件的功能说明，同步了 NPM 上的 README，插件的具体开发稍后会重新开帖说一下。
+最近开始玩 Vite 的一些东西，虽然文档说可以继承 Rollup 的配置选项，以及一些 Rollup 的插件支持，但测试了一下，banner 功能并没有生效，所以昨晚有空就了解了一下 Vite 插件怎么开发，并参照 webpack banner plugin 的功能自己写了一个，下面是插件的功能说明，同步了 NPM 上的 README。
 
 ## 功能
 
