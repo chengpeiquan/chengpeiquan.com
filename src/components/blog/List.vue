@@ -138,6 +138,7 @@ import isArticle from '/@libs/isArticle'
 import { useHead } from '@vueuse/head'
 import config from '/@ts/config'
 import dateDisplay from '/@libs/dateDisplay'
+import isDev from '/@libs/isDev'
 
 interface List {
   path: string,
@@ -167,7 +168,10 @@ const articleList = ref<List[]>([]);
 const getPageInfo = (): void => {
   // 提取文章详情页的路由并按日期排序
   routes.value = router.getRoutes()
-    .filter( item => isArticle(item) && !item.path.endsWith('.html') )
+    .filter( item => {
+      const IS_VALID_SUFFIX: boolean = isDev ? !item.path.endsWith('.html') : item.path.endsWith('.html');
+      return isArticle(item) && IS_VALID_SUFFIX;
+    })
     .sort( (a, b) => +new Date(b.meta.frontmatter.date) - +new Date(a.meta.frontmatter.date) );
 
   // 获取文章总数

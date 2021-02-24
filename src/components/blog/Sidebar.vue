@@ -80,6 +80,7 @@ import { isClient } from '@vueuse/core'
 import isArticle from '/@libs/isArticle'
 import shuffle from '/@libs/shuffle'
 import isMobile from '/@libs/isMobile'
+import isDev from '/@libs/isDev'
 
 interface List {
   path: string,
@@ -99,7 +100,10 @@ const isShowToc = ref<boolean>(false);
 const getArticleList = (): void => {
   // 提取文章详情页的路由并按日期排序，同时不能和当前文章重复
   const routes = router.getRoutes()
-    .filter( route => isArticle(route) && route.path !== activeRoute.path );
+    .filter( route => {
+      const IS_VALID_SUFFIX: boolean = isDev ? !route.path.endsWith('.html') : route.path.endsWith('.html');
+      return isArticle(route) && IS_VALID_SUFFIX && route.path !== activeRoute.path;
+    });
 
   // 提取要用到的字段
   articleList.value = shuffle(routes).map( route => {
