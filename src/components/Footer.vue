@@ -10,6 +10,8 @@
       >粤ICP备20011269号-1</a>
     </p>
   </footer>
+
+  <BackToTop />
 </template>
 
 <script setup lang="ts">
