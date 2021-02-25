@@ -5,10 +5,11 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, provide, ref, watchEffect } from 'vue'
 import { useHead } from '@vueuse/head'
 import { useRoute } from 'vue-router';
 import config from '/@ts/config'
+import { get } from '@vueuse/core';
 
 useHead({
   meta: [
@@ -45,4 +46,12 @@ const key = computed( () => {
   const KEY: string = route.name ? `${String(route.name)}${date}` : `${String(route.path)}${date}`; 
   return KEY;
 });
+
+// i18n
+const lang = ref<string>('');
+const getLang = (): void => {
+  lang.value = route.path.startsWith('/en') ? 'en' : 'zh-CN';
+}
+watchEffect(getLang);
+provide('lang', lang);
 </script>

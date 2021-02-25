@@ -56,6 +56,6 @@ export const createApp = ViteSSG(
         '8dca8e2532df48ea7f1b15c714588691'
       ],
       isDebug: false
-    })
+    });
   }
 )

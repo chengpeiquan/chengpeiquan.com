@@ -8,10 +8,10 @@
           width="56"
           height="56"
           src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/avatar-60x60.jpg"
-          alt="程沛权"
+          :alt="name"
         >
       </div>
-      <span class="md:ml-4 ml-2 md:text-2xl text-xl" >程沛权</span>
+      <span class="md:ml-4 ml-2 md:text-2xl text-xl" >{{ name }}</span>
     </div>
     <!-- 站点信息 -->
 
@@ -26,7 +26,7 @@
         <ri-close-fill v-show="isShowMenu" />
       </a>
 
-      <toggle-theme />
+      <ToggleTheme />
       <!-- 主导航按钮 -->
 
       <!-- 下拉菜单 -->
@@ -94,7 +94,10 @@
           </a>
         </li>
         <li>
-          <toggle-theme />
+          <ToggleLang />
+        </li>
+        <li>
+          <ToggleTheme />
         </li>
       </ul>
     </nav>
@@ -103,30 +106,58 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, inject, watchEffect } from 'vue'
 import { useRouter } from 'vue-router'
 import isDark from '/@libs/isDark'
 import isMobile from '/@libs/isMobile'
+import config from '/@ts/config'
 
 interface NavList {
   path: string,
   text: string
 }
+const navList = ref<NavList>([]);
 
-const navList: NavList = [
-  {
-    target: '/',
-    text: 'Home'
-  },
-  {
-    target: '/article',
-    text: 'Article'
-  },
-  {
-    target: '/about',
-    text: 'About'
+// 获取多语言内容
+const name = ref<string>('');
+const lang: string = inject('lang') || '';
+const getI18n = (): void => {
+  if ( lang.value === 'en' ) {
+    name.value = config.nameEN;
+    navList.value = [
+      {
+        target: '/en',
+        text: 'Home'
+      },
+      {
+        target: '/en/article',
+        text: 'Article'
+      },
+      {
+        target: '/en/about',
+        text: 'About'
+      }
+    ];
   }
-];
+  else {
+    name.value = config.name;
+    navList.value = [
+      {
+        target: '/',
+        text: 'Home'
+      },
+      {
+        target: '/article',
+        text: 'Article'
+      },
+      {
+        target: '/about',
+        text: 'About'
+      }
+    ];
+  }
+}
+watchEffect(getI18n);
 
 // 移动端菜单开关
 const isShowMenu = ref<boolean>(false);
