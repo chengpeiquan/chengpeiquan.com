@@ -165,6 +165,8 @@ const pageSize = ref<number>(10);
 const pageTotal = ref<number>(1);
 const articleTotal = ref<number>(1);
 const articleList = ref<List[]>([]);
+console.log(router.getRoutes());
+
 
 /** 
  * 获取分页信息 
@@ -188,6 +190,11 @@ const getPageInfo = (): void => {
   // 获取页码信息
   if ( route.params.page && !isNaN(Number(route.params.page)) ) {
     page.value = Number(route.params.page);
+    if ( page.value > pageTotal.value ) {
+      router.push({
+        path: '/404'
+      })
+    }
   }
 
   // 获取列表
