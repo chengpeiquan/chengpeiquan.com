@@ -11,7 +11,7 @@ import { useHead } from '@vueuse/head'
 import { isClient } from '@vueuse/core'
 import { ref } from 'vue'
 import config from '/@ts/config'
-import { useRouter } from 'vue-router';
+import { onBeforeRouteLeave, useRouter } from 'vue-router'
 
 useHead({
   title: `404 - ${config.title}`,
@@ -26,6 +26,7 @@ useHead({
 const seconds = ref<number>(5);
 const router = useRouter();
 if ( isClient ) {
+  // 5s后返回首页
   const countdown: number | null = setInterval( () => {
     if ( seconds.value === 1 ) {
       clearInterval(countdown);
@@ -34,8 +35,14 @@ if ( isClient ) {
       });
       return false;
     }
+    
     seconds.value --;
   }, 1000);
+
+  // 提前离开路由时，需要清除定时器
+  onBeforeRouteLeave( () => {
+    clearInterval(countdown);
+  });
 }
 </script>
 
