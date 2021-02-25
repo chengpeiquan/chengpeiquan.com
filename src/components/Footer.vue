@@ -1,16 +1,18 @@
 <template>
-  <footer class="flex justify-center items-center w-full h-36">
-    <p class="opacity-70 md:text-sm text-xs">
-      <span>© {{ year }} {{ name }}</span>
-      <a
-        class="md:ml-12 ml-2"
-        href="https://beian.miit.gov.cn/"
-        target="_blank"
-        rel="nofollow noopener noreferrer"
-      >
-        {{ icp }}
-      </a>
-    </p>
+  <footer
+    class="flex justify-center items-center w-full h-36 opacity-70 md:text-sm text-xs"
+    :class="{ 'flex-col': isMobile }"
+  >
+    <span>© {{ year }} {{ name }}</span>
+    <br v-if="isMobile" />
+    <a
+      class="md:ml-12 ml-2"
+      href="https://beian.miit.gov.cn/"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+    >
+      {{ icp }}
+    </a>
   </footer>
 
   <BackToTop />
@@ -19,6 +21,7 @@
 <script setup lang="ts">
 import { ref, inject, watchEffect } from 'vue'
 import config from '/@ts/config'
+import isMobile from '/@libs/isMobile'
 
 const name = ref<string>('');
 const icp = ref<string>('');

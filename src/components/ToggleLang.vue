@@ -1,18 +1,35 @@
 <template>
   <a
-    class="select-none text-xl"
-    :title="`切换到${ isDark ? '普通' : '暗黑' }模式`"
-    @click="toggleTheme"
+    class="select-none mr-4 text-xl"
+    :title="lang === 'en' ? 'Switch to Chinese' : '切换为英文'"
+    @click="toggleLang"
   >
-    <ri-moon-line v-show="isDark" />
-    <ri-sun-line v-show="!isDark" />
+    <uil-letter-chinese-a v-show="lang === 'en'" />
+    <ri-english-input v-show="lang === 'zh-CN'" />
   </a>
 </template>
 
 <script setup lang='ts'>
-import isDark from '/@libs/isDark'
+import { inject, ref } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 
-const toggleTheme = (): void => {
-  isDark.value = !isDark.value
+const route = useRoute();
+const router = useRouter();
+const lang: string = inject('lang') || '';
+const path = ref<string>('/');
+
+const toggleLang = (): void => {
+  // 英文转中文
+  if ( lang.value === 'en' ) {
+    path.value = route.path === '/en' ? `/` : route.path.replace(/\/en/, '');
+  }
+  // 中文转英文
+  else {
+    path.value = route.path === '/' ? `/en` : `/en${route.path}`;
+  }
+
+  router.replace({
+    path: path.value
+  })
 }
 </script>

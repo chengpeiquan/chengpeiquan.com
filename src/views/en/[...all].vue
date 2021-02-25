@@ -1,8 +1,8 @@
 <template>
   <main class="page-404 prose">
     <h1>404 Not Found</h1>
-    <p>如果是您以前收藏的链接被移除了，请提 <a href="https://github.com/chengpeiquan/chengpeiquan.com/issues/new" target="_blank" rel="nofollow noopener noreferrer">issue</a> 联系我。</p>
-    <p>将在 {{ seconds }}s 后返回首页…</p>
+    <p>If your previously favorite link has been removed，Please contact me with an <a href="https://github.com/chengpeiquan/chengpeiquan.com/issues/new" target="_blank" rel="nofollow noopener noreferrer">issue</a> .</p>
+    <p>Will return to the homepage in {{ seconds }} seconds...</p>
   </main>
 </template>
 
@@ -22,7 +22,7 @@ if ( isClient ) {
     if ( seconds.value === 1 ) {
       clearInterval(countdown);
       router.push({
-        name: 'index'
+        name: 'en'
       });
       return false;
     }
@@ -37,13 +37,7 @@ if ( isClient ) {
 }
 
 useHead({
-  title: `404 - ${config.title}`,
-  meta: [
-    {
-      property: 'og:title',
-      content: config.title
-    }
-  ],
+  title: `404 - ${config.titleEN}`
 });
 </script>
 

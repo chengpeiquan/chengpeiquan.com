@@ -26,6 +26,8 @@
         <ri-close-fill v-show="isShowMenu" />
       </a>
 
+      <ToggleLang />
+
       <ToggleTheme />
       <!-- 主导航按钮 -->
 
