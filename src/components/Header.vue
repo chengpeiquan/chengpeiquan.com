@@ -84,6 +84,28 @@
             <ri-github-fill />
           </a>
         </li>
+        <li v-if="lang === 'zh-CN'">
+          <a
+            class="select-none mr-4 text-xl"
+            href="https://www.zhihu.com/people/basss"
+            target="_blank"
+            title="知乎"
+            rel="nofollow noopener noreferrer"
+          >
+            <ri-zhihu-fill />
+          </a>
+        </li>
+        <li v-else>
+          <a
+            class="select-none mr-4 text-xl"
+            href="https://twitter.com/intent/follow?screen_name=chengpeiquan"
+            target="_blank"
+            title="Twitter"
+            rel="nofollow noopener noreferrer"
+          >
+            <ri-twitter-fill />
+          </a>
+        </li>
         <li>
           <a
             class="select-none mr-4 text-xl"
