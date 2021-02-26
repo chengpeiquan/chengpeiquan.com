@@ -33,7 +33,7 @@
 
       <!-- 下拉菜单 -->
       <ul
-        class="absolute top-14 left-0 flex flex-wrap w-full bg-black border-b-4 dark:border-white dark:border-opacity-5 box-border px-4 z-10"
+        class="absolute top-14 left-0 flex flex-wrap w-full bg-gray-50 dark:bg-black border-b-4 dark:border-white dark:border-opacity-5 box-border px-4 z-10"
         v-if="isShowMenu"
       >
         <li
