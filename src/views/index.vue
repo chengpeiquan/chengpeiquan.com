@@ -21,15 +21,18 @@
 </template>
 
 <script setup lang="ts">
+import { inject } from 'vue'
 import { useHead } from '@vueuse/head'
 import config from '/@ts/config'
 
+const lang: string = inject('lang') || '';
+
 useHead({
-  title: config.title,
+  title: config['zh-CN'].title,
   meta: [
     {
       property: 'og:title',
-      content: config.title
+      content: config['zh-CN'].title
     }
   ],
 });
