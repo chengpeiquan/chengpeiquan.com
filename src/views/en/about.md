@@ -7,19 +7,19 @@ Hi, I'm Peiquan Cheng, Living in Guangdong Province, China, I am a front-end eng
 
 I raised three cats:
 
-- Luna: A black British Shorthair
+- Luna: A black British Shorthair (Yeah! The same name as the black cat in Sailor Moon.)
 
-- Lion: A red tabby Maine Coon Cat
+- Lion: A red tabby Maine Coon Cat (It has grown up now and look like a lion.)
 
-- Didi: A American Shorthair
+- Didi: A tabby American Shorthair (In Chinese, The name means younger brother.)
 
 The photos below are the three of them.
 
 ![Luna, Lion, Didi.](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210218211229.jpg)
 
-You can call me "BASS" or "BASSSSSSS…", because I'm a Bassist when I free. I enjoy Rock'N Roll, Nu-Metal, Hardcore, funk and so on.
+After introducing my cat, it's my turn. You can call me "BASS" or "BASSSSSSS…", because I'm a Bassist when I free.
 
-In my favorite music, the common denominator is to have charming riff, double Bass Drum Pedal, the most important point is that the bassline must be prominent.
+I enjoy Rock'N Roll, Nu-Metal, Hardcore, funk and so on. In my favorite music, the common denominator is to have charming riff, double Bass Drum Pedal, the most important point is that the bassline must be prominent.
 
 I have compiled a prominent playlist of bass that is suitable for bands to play together. Friends who play bass can visit [The sense of Existence for BASS:  rich and nice BASSline](https://music.163.com/#/playlist?id=443717710).
 
@@ -31,21 +31,7 @@ I haven’t organized the album for a long time. I will reorganize it later. I w
 
 ![Homemade dishes.](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210218210634.jpg)
 
-虽然从计算机系出身，读的网络专业，但在很久之前我其实是个运营，在阿里巴巴移动事业群（UC）做社区向的产品运营，后来跳槽去网易游戏做社区运营，做运营期间也兼顾活动页面的编写（拿不到排期只能自己上……），还有对 Discuz 论坛功能的开发和维护（感谢当时技术部的大佬给我开了权限允许我自己维护自己业务上的东西，包括访问他们的 Wiki 分享，得以有机会去接触更多东西），因为一直没有放弃敲代码，兴趣点也一直在这一方面，有幸在此期间切入开发工作，后面转型全职开发，目前也是做了四年+的前端开发了，而且日子越过越快乐，基于爱好而工作，生活还是比较有幸福感的。
-
-在网易一直跟着大话手游业务线，在游戏里留下来的时间最长的作品应该就是这个社区了，2018 年上线，到现在也三年了，跟着游戏一起成长一起更新，虽然技术层面上平平无奇（虽然也安排了预渲染和骨架屏还有一些游戏定制的东西），但能有一个跟游戏融合在一起的前端作品，也是在网易游戏工作这段时间里挺有纪念意义的一件事情。
-
-![大话西游手游社区](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210219221548.jpg)
-
-这个域名注册于 2014 年，还在阿里做运营的时候就开始偶尔写一下技术博客，但第一个版本虽然也是标榜技术博客，但实际上最后变成了写各种菜谱（那段时间混迹美食杰还是哪个美食网站来着，发布就顺手同步一份过来……），也没有很好的归类，最后内容就有点乱七八糟。
-
-第二个版本是 2018 年（可戳：[世界，您好！](https://chengpeiquan.com/article/hello-world)），把以前的东西都舍弃了，这一次开始认认真真的写东西，不过日常写博客也是主要用于个人备忘，毕竟好记性不如烂笔头，后来发现写的东西还蛮多人看的，特别是经常有人从搜索引擎找过来，就蛮感动的！
-
-2021 年春节，借着放假有时间，而且 Vue 3.0 和 Vite 2.0 都才大版本更新上线不久，预感后面会开始流行，先开荒尝试一波，对博客做了第三次重构，这一次把客户端和服务端都重新写了，由 PHP 的 LNMP 全家桶全部换成了前端侧的技术栈（可戳：[重构于Vite](https://chengpeiquan.com/article/rewrite-in-vite)）。
-
-之前对开源工作落实的并不多，直到 2020 年疫情期间开始觉得是不是应该多贡献一些能够开源出来给大家的作品，于是慢慢开始找一些 idea 去落实，目前也有几个小 Project，也趁着 Vue 3.0 开荒的过程尝试写了第一本开源教程 [Vue3.0学习教程与实战案例](https://vue3.chengpeiquan.com/)，如果觉得还过得去，[欢迎给我 Star 支持](https://github.com/chengpeiquan/learning-vue3)，感恩！
-
-2021 年了，新的一年计划多尝试写一点英文文档，开始接触英文写作，然后也多了解一下生产环境下的服务端的东西（之前一直跑本地开发和测试环境，其实很多问题遇不到），当然，更多未来的目标也是需要一边走一边看，但至少大的方向还是要有的。
+I worked at Alibaba Inc before, then I went to work in Netease Inc. I have been engaged in front-end development for about 4 years, I still have a lot to learn. Of course, I am also happy to share what I have learned.
 
 ## Contact
 

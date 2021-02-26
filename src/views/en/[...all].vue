@@ -7,6 +7,7 @@
 </template>
 
 <script setup lang="ts">
+import { inject } from 'vue'
 import { useHead } from '@vueuse/head'
 import { isClient } from '@vueuse/core'
 import { ref } from 'vue'
@@ -15,6 +16,7 @@ import { onBeforeRouteLeave, useRouter } from 'vue-router'
 
 const router = useRouter();
 const seconds = ref<number>(5);
+const lang: string = inject('lang') || '';
 
 if ( isClient ) {
   // 5s后返回首页
@@ -22,7 +24,7 @@ if ( isClient ) {
     if ( seconds.value === 1 ) {
       clearInterval(countdown);
       router.push({
-        name: 'en'
+        path: `/${lang.value}`
       });
       return false;
     }

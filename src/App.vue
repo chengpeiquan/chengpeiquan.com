@@ -27,6 +27,8 @@ watchEffect(getLang);
 provide('lang', lang);
 
 // 全局meta信息
+const { frontmatter } = route.meta;
+const { title, desc, cover } = frontmatter;
 useHead({
   meta: [
     {
@@ -41,6 +43,19 @@ useHead({
       name: 'description',
       content: config[lang.value].description
     },
+    // 下面是配置twitter分享
+    {
+      name: 'twitter:title',
+      content: title ? title : config[lang.value].title
+    },
+    {
+      name: 'twitter:description',
+      content: desc ? desc : config[lang.value].description
+    },
+    {
+      name: 'twitter:image:src',
+      content: cover ? cover : config.avatar
+    },
     {
       name: 'twitter:card',
       content: 'summary'
@@ -49,6 +64,7 @@ useHead({
       name: 'twitter:creator',
       content: '@chengpeiquan'
     },
+    // 下面是配置PWA
     {
       name: 'theme-color',
       content: '#111111'
