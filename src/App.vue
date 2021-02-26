@@ -11,35 +11,6 @@ import { useRoute } from 'vue-router';
 import config from '/@ts/config'
 import { get } from '@vueuse/core';
 
-useHead({
-  meta: [
-    {
-      property: 'og:title',
-      content: config.title
-    },
-    {
-      property: 'og:image',
-      content: config.avatar.big
-    },
-    {
-      name: 'description',
-      content: config.description
-      },
-    {
-      name: 'twitter:card',
-      content: 'summary'
-    },
-    {
-      name: 'twitter:creator',
-      content: '@chengpeiquan'
-    },
-    {
-      name: 'theme-color',
-      content: '#111111'
-    }
-  ]
-});
-
 const route = useRoute();
 const key = computed( () => {
   const date: Date = new Date();
@@ -54,4 +25,34 @@ const getLang = (): void => {
 }
 watchEffect(getLang);
 provide('lang', lang);
+
+// 全局meta信息
+useHead({
+  meta: [
+    {
+      property: 'og:title',
+      content: config[lang.value].title
+    },
+    {
+      property: 'og:image',
+      content: config.avatar.big
+    },
+    {
+      name: 'description',
+      content: config[lang.value].description
+    },
+    {
+      name: 'twitter:card',
+      content: 'summary'
+    },
+    {
+      name: 'twitter:creator',
+      content: '@chengpeiquan'
+    },
+    {
+      name: 'theme-color',
+      content: '#111111'
+    }
+  ]
+});
 </script>

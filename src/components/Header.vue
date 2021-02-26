@@ -124,40 +124,22 @@ const navList = ref<NavList>([]);
 const name = ref<string>('');
 const lang: string = inject('lang') || '';
 const getI18n = (): void => {
-  if ( lang.value === 'en' ) {
-    name.value = config.nameEN;
-    navList.value = [
-      {
-        target: '/en',
-        text: 'Home'
-      },
-      {
-        target: '/en/article',
-        text: 'Article'
-      },
-      {
-        target: '/en/about',
-        text: 'About'
-      }
-    ];
-  }
-  else {
-    name.value = config.name;
-    navList.value = [
-      {
-        target: '/',
-        text: 'Home'
-      },
-      {
-        target: '/article',
-        text: 'Article'
-      },
-      {
-        target: '/about',
-        text: 'About'
-      }
-    ];
-  }
+  const key: string = lang.value;
+  name.value = config[key].name;
+  navList.value = [
+    {
+      target: key === 'zh-CN' ? '/' : `/${key}`,
+      text: 'Home'
+    },
+    {
+      target: key === 'zh-CN' ? '/article' : `/${key}/article`,
+      text: 'Article'
+    },
+    {
+      target: key === 'zh-CN' ? '/about' : `/${key}/about`,
+      text: 'About'
+    }
+  ];
 }
 watchEffect(getI18n);
 

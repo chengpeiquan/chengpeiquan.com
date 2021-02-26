@@ -29,8 +29,9 @@ const year: number = new Date().getFullYear();
 const lang: string = inject('lang') || '';
 
 const getI18n = (): void => {
-  name.value = lang.value === 'en' ? config.nameEN : config.name;
-  icp.value = lang.value === 'en' ? config.icpEN : config.icp;
+  const key: string = lang.value;
+  name.value = config[key].name;
+  icp.value = config[key].icp;
 }
 watchEffect(getI18n);
 </script>
