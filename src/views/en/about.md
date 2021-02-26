@@ -3,17 +3,33 @@ title: About Me
 desc: Some information about me
 ---
 
-养了 ~~一只猫~~ ~~两只猫~~ 三只猫（一只黑色英短、一只红虎斑缅因、一只虎斑美短），纹了 ~~一块文身~~ 一条花臂（会上瘾…），可以叫我「 2当 」，或者「 当仔 」，前者是因为读书的时候大家都是互相2来2去，习惯叫到今时今日，后者是作为一个广东人，熟人之间都会用 “某某仔” 来称呼。
+Hi, I'm Peiquan Cheng, Living in Guangdong Province, China, I am a front-end engineer.
 
-![黑妹、小朋友、弟弟](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210218211229.jpg)
+I raised three cats:
 
-日常喜欢摇滚、新金属还有核（各种重型各种双踩），比较宅，平时不出门，一旦出门基本上就是去看 LiveHouse 的演出和音乐节，业余玩贝斯，组过乐队跑过演出，小打小闹但心满意足。说到这里，之前整理过一个适合乐队一起玩的贝斯突出的歌单，玩贝斯的朋友可以戳这里：[有存在感的贝斯：丰富又好听的BASSline合辑](https://music.163.com/#/playlist?id=443717710) 。
+- Luna: A black British Shorthair
 
-![最帅的一个演出镜头](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210218205909.jpg)
+- Lion: A red tabby Maine Coon Cat
 
-喜欢下厨，立志学会做 1000 道不一样的菜，目前进度大约 60% 吧应该是，好久没整理相册，回头重新整理一下，在博客开一个专栏介绍一下，让广大宅男能够宅出不一样的精彩。
+- Didi: A American Shorthair
 
-![自己做的菜](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210218210634.jpg)
+The photos below are the three of them.
+
+![Luna, Lion, Didi.](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210218211229.jpg)
+
+You can call me "BASS" or "BASSSSSSS…", because I'm a Bassist when I free. I enjoy Rock'N Roll, Nu-Metal, Hardcore, funk and so on.
+
+In my favorite music, the common denominator is to have charming riff, double Bass Drum Pedal, the most important point is that the bassline must be prominent.
+
+I have compiled a prominent playlist of bass that is suitable for bands to play together. Friends who play bass can visit [The sense of Existence for BASS:  rich and nice BASSline](https://music.163.com/#/playlist?id=443717710).
+
+![One of the most handsome performance shots.](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210218205909.jpg)
+
+I like to cook, and I am determined to learn to cook 1,000 different dishes. Now, The current progress is about 60%.
+
+I haven’t organized the album for a long time. I will reorganize it later. I will open a column on the blog to introduce it so that the majority of otaku can produce different dishes to have a wonderful life.
+
+![Homemade dishes.](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210218210634.jpg)
 
 虽然从计算机系出身，读的网络专业，但在很久之前我其实是个运营，在阿里巴巴移动事业群（UC）做社区向的产品运营，后来跳槽去网易游戏做社区运营，做运营期间也兼顾活动页面的编写（拿不到排期只能自己上……），还有对 Discuz 论坛功能的开发和维护（感谢当时技术部的大佬给我开了权限允许我自己维护自己业务上的东西，包括访问他们的 Wiki 分享，得以有机会去接触更多东西），因为一直没有放弃敲代码，兴趣点也一直在这一方面，有幸在此期间切入开发工作，后面转型全职开发，目前也是做了四年+的前端开发了，而且日子越过越快乐，基于爱好而工作，生活还是比较有幸福感的。
 
