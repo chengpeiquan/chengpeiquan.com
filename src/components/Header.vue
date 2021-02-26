@@ -8,10 +8,10 @@
           width="56"
           height="56"
           src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/avatar-60x60.jpg"
-          alt="程沛权"
+          :alt="name"
         >
       </div>
-      <span class="md:ml-4 ml-2 md:text-2xl text-xl" >程沛权</span>
+      <span class="md:ml-4 ml-2 md:text-2xl text-xl" >{{ name }}</span>
     </div>
     <!-- 站点信息 -->
 
@@ -26,12 +26,14 @@
         <ri-close-fill v-show="isShowMenu" />
       </a>
 
-      <toggle-theme />
+      <ToggleLang />
+
+      <ToggleTheme />
       <!-- 主导航按钮 -->
 
       <!-- 下拉菜单 -->
       <ul
-        class="absolute top-14 left-0 flex flex-wrap w-full bg-black border-b-4 dark:border-white dark:border-opacity-5 box-border px-4 z-10"
+        class="absolute top-14 left-0 flex flex-wrap w-full bg-gray-50 dark:bg-black border-b-4 dark:border-white dark:border-opacity-5 box-border px-4 z-10"
         v-if="isShowMenu"
       >
         <li
@@ -94,7 +96,10 @@
           </a>
         </li>
         <li>
-          <toggle-theme />
+          <ToggleLang />
+        </li>
+        <li>
+          <ToggleTheme />
         </li>
       </ul>
     </nav>
@@ -103,30 +108,40 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, inject, watchEffect } from 'vue'
 import { useRouter } from 'vue-router'
 import isDark from '/@libs/isDark'
 import isMobile from '/@libs/isMobile'
+import config from '/@ts/config'
 
 interface NavList {
   path: string,
   text: string
 }
+const navList = ref<NavList>([]);
 
-const navList: NavList = [
-  {
-    target: '/',
-    text: 'Home'
-  },
-  {
-    target: '/article',
-    text: 'Article'
-  },
-  {
-    target: '/about',
-    text: 'About'
-  }
-];
+// 获取多语言内容
+const name = ref<string>('');
+const lang: string = inject('lang') || '';
+const getI18n = (): void => {
+  const key: string = lang.value;
+  name.value = config[key].name;
+  navList.value = [
+    {
+      target: key === 'zh-CN' ? '/' : `/${key}`,
+      text: 'Home'
+    },
+    {
+      target: key === 'zh-CN' ? '/article' : `/${key}/article`,
+      text: 'Article'
+    },
+    {
+      target: key === 'zh-CN' ? '/about' : `/${key}/about`,
+      text: 'About'
+    }
+  ];
+}
+watchEffect(getI18n);
 
 // 移动端菜单开关
 const isShowMenu = ref<boolean>(false);

@@ -3,7 +3,6 @@ import vue from '@vitejs/plugin-vue'
 import pkg from './package.json'
 import path from 'path'
 import fs from 'fs-extra'
-
 import Pages from 'vite-plugin-pages'
 import PurgeIcons from 'vite-plugin-purge-icons'
 import Icons, { ViteIconsResolver } from 'vite-plugin-icons'
@@ -26,16 +25,7 @@ const resolve = (dir: string): string => path.resolve(__dirname, dir);
 export default defineConfig({
   base: isDev ? '/' : 'https://cdn.jsdelivr.net/gh/chengpeiquan/chengpeiquan.com@gh-pages/',
   server: {
-    port: 33333,
-    // proxy: {
-    //   '/foo': 'http://localhost:4567/foo',
-    //   '/api': {
-    //     target: 'http://jsonplaceholder.typicode.com',
-    //     ws: true,
-    //     changeOrigin: true,
-    //     rewrite: (path) => path.replace(/^\/api/, '')
-    //   }
-    // }
+    port: 33333
   },
   build: {
     assetsInlineLimit: 1024 * 8
@@ -179,6 +169,6 @@ export default defineConfig({
       safelist: 'prose prose-sm m-auto dark'
     }),
 
-    Banner(`/**\n * name: ${pkg.name}\n * version: v${pkg.version}\n * description: v${pkg.description}\n * author: ${pkg.author}\n * homepage: ${pkg.homepage}\n */`),
+    Banner(`/**\n * name: ${pkg.name}\n * version: v${pkg.version}\n * description: ${pkg.description}\n * author: ${pkg.author}\n * homepage: ${pkg.homepage}\n */`),
   ]
 })

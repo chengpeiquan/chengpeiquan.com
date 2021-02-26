@@ -1,5 +1,5 @@
 <template>
-  <section class="flex flex-col">
+  <section class="flex flex-1 flex-col">
     <!-- 列表 -->
     <ul class="article-list md:mx-0 mx-4">
       <li
@@ -59,7 +59,7 @@
         <router-link
           v-if="page > 1"
           :to="{
-            name: 'article-page'
+            name: articleRouteName
           }"
         >
           First
@@ -73,7 +73,7 @@
         <router-link
           v-if="page === 2"
           :to="{
-            name: 'article-page'
+            name: articleRouteName
           }"
         >
           Prev
@@ -81,7 +81,7 @@
         <router-link
           v-else-if="page > 2"
           :to="{
-            name: 'article-page',
+            name: articleRouteName,
             params: {
               page: page - 1
             }
@@ -98,7 +98,7 @@
         <router-link
           v-if="page < pageTotal"
           :to="{
-            name: 'article-page',
+            name: articleRouteName,
             params: {
               page: page + 1
             }
@@ -115,7 +115,7 @@
         <router-link
           v-if="page < pageTotal"
           :to="{
-            name: 'article-page',
+            name: articleRouteName,
             params: {
               page: pageTotal
             }
@@ -131,12 +131,12 @@
   </section>
 
   <!-- 侧边栏 -->
-  <Sidebar />
+  <Sidebar v-if="lang === 'zh-CN'" />
   <!-- 侧边栏 -->
 </template>
 
 <script setup lang="ts">
-import { reactive, ref } from 'vue'
+import { reactive, ref, inject } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import isArticle from '/@libs/isArticle'
 import { useHead } from '@vueuse/head'
@@ -165,6 +165,13 @@ const pageSize = ref<number>(10);
 const pageTotal = ref<number>(1);
 const articleTotal = ref<number>(1);
 const articleList = ref<List[]>([]);
+const articleRouteName = ref<string>();
+const lang: string = inject('lang') || '';
+
+/** 
+ * 获取文章列表的路由名称
+ */
+articleRouteName.value = lang.value === 'zh-CN' ? 'article-page' : `${lang.value}-article-page`;
 
 /** 
  * 获取分页信息 
@@ -174,7 +181,12 @@ const getPageInfo = (): void => {
   routes.value = router.getRoutes()
     .filter( item => {
       const IS_VALID_SUFFIX: boolean = isDev ? !item.path.endsWith('.html') : item.path.endsWith('.html');
-      return isArticle(item) && IS_VALID_SUFFIX;
+      
+      if ( lang.value === 'zh-CN' ) {
+        return isArticle(item) && IS_VALID_SUFFIX;
+      }
+      
+      return isArticle(item, lang.value) && IS_VALID_SUFFIX;
     })
     .sort( (a, b) => +new Date(b.meta.frontmatter.date) - +new Date(a.meta.frontmatter.date) );
 
@@ -188,6 +200,11 @@ const getPageInfo = (): void => {
   // 获取页码信息
   if ( route.params.page && !isNaN(Number(route.params.page)) ) {
     page.value = Number(route.params.page);
+    if ( page.value > pageTotal.value ) {
+      router.replace({
+        path: '/404'
+      })
+    }
   }
 
   // 获取列表
@@ -225,10 +242,11 @@ const getArticleList = (): void => {
 /** 
  * 设置页面信息
  */
+const WEB_SITE_TITLE: string = lang.value === 'zh-CN' ? '文章列表' : 'Article List';
 useHead({
-  title: `文章列表 - ${config.title}`,
+  title: `${WEB_SITE_TITLE} - ${config[lang.value].title}`,
   meta: [
-    { property: 'og:title', content: `文章列表 - 第${page.value}页 - ${config.title}` }
+    { property: 'og:title', content: `${WEB_SITE_TITLE} - 第${page.value}页 - ${config.title}` }
   ],
 })
 

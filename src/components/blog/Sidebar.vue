@@ -166,11 +166,7 @@ const moveToc = (): void | boolean => {
   const content: HTMLElement = document.querySelector('.article-content');
   content.childNodes[0].remove();
 }
-onMounted(() => {
-  setTimeout(() => {
-    moveToc();
-  }, 10);
-});
+onMounted(moveToc);
 </script>
 
 <style lang="postcss" scoped>

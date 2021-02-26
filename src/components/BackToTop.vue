@@ -1,6 +1,6 @@
 <template>
   <a
-    class="fixed right-12 bottom-12 text-2xl select-none transform rotate-90"
+    class="fixed md:right-12 right-6 md:bottom-12 bottom-6 text-2xl select-none transform rotate-90"
     @click="scrollToTop"
   >
     <ic-twotone-arrow-back-ios />

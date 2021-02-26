@@ -1,21 +1,39 @@
 <template>
-  <footer class="flex justify-center items-center w-full h-36">
-    <p class="opacity-70 md:text-sm text-xs">
-      <span>© {{ year }} 程沛权</span>
-      <a
-        class="ml-4"
-        href="https://beian.miit.gov.cn/"
-        target="_blank"
-        rel="nofollow noopener noreferrer"
-      >粤ICP备20011269号-1</a>
-    </p>
+  <footer
+    class="flex justify-center items-center w-full h-36 opacity-70 md:text-sm text-xs"
+    :class="{ 'flex-col': isMobile }"
+  >
+    <span>© {{ year }} {{ name }}</span>
+    <br v-if="isMobile" />
+    <a
+      class="md:ml-12 ml-2"
+      href="https://beian.miit.gov.cn/"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+    >
+      {{ icp }}
+    </a>
   </footer>
 
   <BackToTop />
 </template>
 
 <script setup lang="ts">
+import { ref, inject, watchEffect } from 'vue'
+import config from '/@ts/config'
+import isMobile from '/@libs/isMobile'
+
+const name = ref<string>('');
+const icp = ref<string>('');
 const year: number = new Date().getFullYear();
+const lang: string = inject('lang') || '';
+
+const getI18n = (): void => {
+  const key: string = lang.value;
+  name.value = config[key].name;
+  icp.value = config[key].icp;
+}
+watchEffect(getI18n);
 </script>
 
 <style scoped>

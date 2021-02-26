@@ -19,14 +19,15 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue'
+import { defineProps, inject } from 'vue'
 import { useHead } from '@vueuse/head'
 import config from '/@ts/config'
 
+const lang: string = inject('lang') || '';
 const { frontmatter } = defineProps<{ frontmatter: any }>();
 const { title, desc, keywords } = frontmatter;
 const meta = [
-  { property: 'og:title', content: `${title} - ${config.title}` },
+  { property: 'og:title', content: `${title} - ${config[lang.value].title}` },
   { name: 'description', content: desc }
 ]
 
@@ -35,7 +36,7 @@ if ( keywords ) {
 }
 
 useHead({
-  title: `${title} - ${config.title}`,
+  title: `${title} - ${config[lang.value].title}`,
   meta
 })
 </script>
