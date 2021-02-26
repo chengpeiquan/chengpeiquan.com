@@ -54,7 +54,7 @@ useHead({
     },
     {
       name: 'twitter:image:src',
-      content: cover ? cover : config.avatar
+      content: cover ? cover : config.avatar.big
     },
     {
       name: 'twitter:card',
