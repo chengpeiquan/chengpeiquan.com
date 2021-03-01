@@ -38,7 +38,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, onMounted, ref } from 'vue'
+import { defineProps, onMounted, ref, inject } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { isClient } from '@vueuse/core'
 import { useHead } from '@vueuse/head'
@@ -51,14 +51,15 @@ const router = useRouter();
 const { frontmatter } = defineProps<{ frontmatter: any }>();
 const { title, desc, keywords, date } = frontmatter;
 const { diffDays, dateAgo } = dateDisplay(date);
+const lang: string = inject('lang') || '';
 
 /** 
  * 设置页面信息
  */
 useHead({
-  title: isMobile ? title : `${title} - ${config.title}`,
+  title: isMobile ? title : `${title} - ${config[lang.value].title}`,
   meta: [
-    { property: 'og:title', content: `${title} - ${config.title}` },
+    { property: 'og:title', content: `${title} - ${config[lang.value].title}` },
     { name: 'description', content: desc },
     { name: 'keywords', content: keywords }
   ],
