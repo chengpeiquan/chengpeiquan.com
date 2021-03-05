@@ -13,7 +13,7 @@ cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210
 
 目前在社区讨论方面，script-setup 的知名度还是可以的，但是对应的另外 3 个专属 API 还是比较默默无名，这说明实际上开始使用 script-setup 的人还不是很多，很多人应该还只是处于单纯知道 script-setup 对于原来的 setup 起到什么样的便利性，但一旦哪天真的想用起来，会发现不知道 props 怎么用，不知道 emit 怎么用，用法完全变了，还一时半会搜不到文档，关键时刻被卡住（这一点在 stackoverflow 上的问题咨询体现的比较明显），这也是我想写一写这篇文章的目的，提前科普这几个新特性。
 
-><br>在阅读这篇文章之前，需要对 Vue 3.0 的 setup 函数有一定的了解，如果还处于完全没有接触过的阶段，请先抽点时间阅读  [单组件的编写 - Vue3.0学习教程与实战案例](https://vue3.chengpeiquan.com/component.html#%E5%85%A8%E6%96%B0%E7%9A%84-setup-%E5%87%BD%E6%95%B0-new) 。<br>
+><br>在阅读这篇文章之前，需要对 Vue 3.0 的 setup 函数有一定的了解，如果还处于完全没有接触过的阶段，请先抽点时间阅读  [单组件的编写 - Vue3.0学习教程与实战案例](https://vue3.chengpeiquan.com/component.html) 。<br>
 ><br>另外，也记得把 Vue 和 @vue/compiler-sfc 这两个依赖都升级到 @3.0.4 版本或以上（我自己是在 @3.0.7 版本下跑通了所有 API，版本太低会报错）<br>
 
 本文会划分为四个部分：
@@ -26,7 +26,7 @@ cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210
 
 4. 讲一讲 useContext
 
-通过这几个目前还没什么资料的讲解，来讲一讲这个便捷版 setup 的用法和需要注意的问题。
+通过这几个维度来讲一讲这个便捷版 setup 的用法和需要注意的问题。
 
 ## 什么是 script-setup
 
@@ -49,7 +49,7 @@ export default defineComponent({
 
 关于 setup 和 defineComponent 的说明和用法，可以查阅我以前写的 [全新的 setup 函数](https://vue3.chengpeiquan.com/component.html#%E5%85%A8%E6%96%B0%E7%9A%84-setup-%E5%87%BD%E6%95%B0-new) 。
 
-而 script-setup 的推出是为了让熟悉 3.0 的用户可以更高效率的开发组件，减少一些心智负担，只需要给 script 标签添加一个 setup 组件，那么整个 script 就直接会变成 setup 函数，所有顶级变量、函数，均会自动暴露给模板使用（无需再一个个 return 了）。
+而 script-setup 的推出是为了让熟悉 3.0 的用户可以更高效率的开发组件，减少一些心智负担，只需要给 script 标签添加一个 setup 属性，那么整个 script 就直接会变成 setup 函数，所有顶级变量、函数，均会自动暴露给模板使用（无需再一个个 return 了）。
 
 Vue 会通过单组件编译器，在编译的时候将其处理回标准组件，所以目前这个方案只适合用 `.vue` 文件写的工程化项目。
 
