@@ -1,9 +1,9 @@
 ---
-title: 聊一聊 Vue 3.0 的 script-setup
+title: 聊一聊Vue3.0的script-setup 以及全新的props/emits专属API
 desc: 今天想聊一聊 Vue 3.0 的 script-setup，以及目前三个很少被提及到的 API —— defineProps 、 defineEmit 和 useContext。截止到我撰写本文，它们在 Vue 3.0 的官网都还没有相关的用法说明，因为目前还属于实验性的新特性，什么时候会并入正式轨道，时间上还不清楚，但事实上在项目里已经可以使用起来了，自己体验了一段时间，真的爽！！！
-keywords: script setup,vue 3.0 script setup,vue3 script setup,defineProps,vue 3.0 defineProps,vue defineProps,vue3 defineProps,prop defineProps,setup defineProps,defineEmit,vue 3.0 defineEmit,vue defineEmit,vue3 defineEmit,emit defineEmit,setup defineEmit,useContext,vue 3.0 useContext,vue useContext,vue3 useContext,setup useContext
+keywords: script setup,vue 3.0 script setup,vue3 script setup,script setup prop,script setup emit,defineProps,vue 3.0 defineProps,vue defineProps,vue3 defineProps,prop defineProps,setup defineProps,defineEmit,vue 3.0 defineEmit,vue defineEmit,vue3 defineEmit,emit defineEmit,setup defineEmit,useContext,vue 3.0 useContext,vue useContext,vue3 useContext,setup useContext
 date: 2021-03-05 00:48:13
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/01/20210305101434.jpg
+cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210305211036.jpg
 ---
 [[toc]]
 
@@ -11,7 +11,7 @@ cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/01/20210
 
 截止到我撰写本文，它们在 Vue 3.0 的官网都还没有相关的用法说明，**因为目前还属于实验性的新特性**，什么时候会并入正式轨道，时间上还不清楚，但事实上在项目里已经可以使用起来了，自己体验了一段时间，真的爽！！！
 
-目前在社区讨论方面，script-setup 的知名度还是可以的，但是对应的另外 3 个 API 还是比较默默无名，这说明实际上开始 script-setup 的人还不是很多，很多人应该还只是处于单纯知道 script-setup 对于原来的 setup 起到什么样的便利性，但一旦真的想用起来，会发现，props 怎么用，emit 怎么用，用法完全变了，还一时半会搜不到文档，关键时刻被卡住（这一点在 stackoverflow 上体现的比较明显），这也是我想写一写这篇文章的目的，提前科普这几个新特性。
+目前在社区讨论方面，script-setup 的知名度还是可以的，但是对应的另外 3 个专属 API 还是比较默默无名，这说明实际上开始使用 script-setup 的人还不是很多，很多人应该还只是处于单纯知道 script-setup 对于原来的 setup 起到什么样的便利性，但一旦哪天真的想用起来，会发现不知道 props 怎么用，不知道 emit 怎么用，用法完全变了，还一时半会搜不到文档，关键时刻被卡住（这一点在 stackoverflow 上的问题咨询体现的比较明显），这也是我想写一写这篇文章的目的，提前科普这几个新特性。
 
 ><br>在阅读这篇文章之前，需要对 Vue 3.0 的 setup 函数有一定的了解，如果还处于完全没有接触过的阶段，请先抽点时间阅读  [单组件的编写 - Vue3.0学习教程与实战案例](https://vue3.chengpeiquan.com/component.html#%E5%85%A8%E6%96%B0%E7%9A%84-setup-%E5%87%BD%E6%95%B0-new) 。<br>
 ><br>另外，也记得把 Vue 和 @vue/compiler-sfc 这两个依赖都升级到 @3.0.4 版本或以上（我自己是在 @3.0.7 版本下跑通了所有 API，版本太低会报错）<br>
