@@ -53,11 +53,12 @@ const { title, desc, keywords, date } = frontmatter;
 const { diffDays, dateAgo } = dateDisplay(date);
 const lang: string = inject('lang') || '';
 
+
 /** 
  * 设置页面信息
  */
 useHead({
-  title: isMobile ? title : `${title} - ${config[lang.value].title}`,
+  title: isMobile.value ? title : `${title} - ${config[lang.value].title}`,
   meta: [
     { property: 'og:title', content: `${title} - ${config[lang.value].title}` },
     { name: 'description', content: desc },
