@@ -144,7 +144,7 @@ getArticleList();
  * 提取目录生成到侧边栏
  */
 const moveToc = (): void | boolean => {
-  if ( !isClient || isMobile ) {
+  if ( !isClient || isMobile.value ) {
     return false;
   }
 

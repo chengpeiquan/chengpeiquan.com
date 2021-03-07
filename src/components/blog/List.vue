@@ -37,8 +37,8 @@
           <!-- 封面 -->
 
           <!-- 信息 -->
-          <div class="md:flex hidden flex-col justify-between">
-            <p class="md:text-base text-sm text-gray-400 md:mb-4 mb-2 md:line-clamp-3 line-clamp-2">
+          <div class="flex flex-col justify-between">
+            <p class="md:h-auto h-0 md:text-base text-sm text-gray-400 md:mb-4 mb-0 md:line-clamp-3 line-clamp-2">
               {{ item.desc }}
             </p>
 
