@@ -12,6 +12,7 @@ import Prism from 'markdown-it-prism'
 import anchor from 'markdown-it-anchor'
 import toc from 'markdown-it-table-of-contents'
 import externalLinks from 'markdown-it-external-links'
+import implicitFigures from 'markdown-it-implicit-figures'
 import matter from 'gray-matter'
 import { VitePWA } from 'vite-plugin-pwa'
 import WindiCSS from 'vite-plugin-windicss'
@@ -106,6 +107,9 @@ export default defineConfig({
           externalRel: 'noopener noreferrer',
           internalDomains: [ 'chengpeiquan.com' ]
         });
+        md.use(implicitFigures, {
+          figcaption: true
+        })
       },
     }),
 
