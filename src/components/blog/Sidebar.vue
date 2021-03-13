@@ -85,6 +85,10 @@
       </div>
     </section>
     <!-- 友情链接 -->
+
+    <!-- 谷歌广告 -->
+    <GoogleAdsense />
+    <!-- 谷歌广告 -->
   </section>
 </template>
 
