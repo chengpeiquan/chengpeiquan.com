@@ -72,7 +72,7 @@
     <!-- 猜你喜欢 -->
 
     <!-- 友情链接 -->
-    <section class="mb-16">
+    <section class="mb-2">
       <h2 class="block-title">友情链接</h2>
       <div class="flex flex-wrap w-full">
         <a class="mb-2" href="https://vue3.chengpeiquan.com/" target="_blank" rel="noopener noreferrer">Vue3.0学习教程与实战案例</a>

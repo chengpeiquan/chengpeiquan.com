@@ -10,7 +10,7 @@
   </section>
 </template>
 
-<script setup name="google-adsense" lang="ts">
+<script setup lang="ts">
 import { onMounted } from 'vue'
 import { isClient } from '@vueuse/core'
 
@@ -24,12 +24,12 @@ const push = (): void => {
 
 const init = (): void | boolean => {
   try {
-    const url = window.location.href;
+    const url: string = window.location.href;
     if ( url.includes('localhost') ) {
       return false;
     }
 
-    const script = document.createElement('script');
+    const script: HTMLScriptElement = document.createElement('script');
     script['async'] = true;
     script['src'] = lib;
 

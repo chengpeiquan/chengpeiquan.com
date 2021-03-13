@@ -98,7 +98,7 @@
         <li v-else>
           <a
             class="select-none mr-4 text-xl"
-            href="https://twitter.com/intent/follow?screen_name=chengpeiquan"
+            href="https://twitter.com/chengpeiquan"
             target="_blank"
             title="Twitter"
             rel="nofollow noopener noreferrer"
