@@ -4,7 +4,7 @@ desc: 之前因为贪图管理上的方便，一直把这个博客的服务器�
 keywords: 阿里云ESC迁移,阿里云迁移,阿里云服务器迁移
 date: 2020-02-28 18:10:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/02/1-1.jpg
-category: 
+categories: 
   - tech
   - life
 ---

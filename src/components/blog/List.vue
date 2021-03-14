@@ -53,80 +53,11 @@
     <!-- 列表 -->
 
     <!-- 翻页 -->
-    <section class="flex justify-center items-center">
-      <!-- 第一页 -->
-      <div class="mx-4">
-        <router-link
-          v-if="page > 1"
-          :to="{
-            name: articleRouteName
-          }"
-        >
-          First
-        </router-link>
-        <span class="opacity-50" v-else>First</span>
-      </div>
-      <!-- 第一页 -->
-
-      <!-- 上一页 -->
-      <div class="mx-4">
-        <router-link
-          v-if="page === 2"
-          :to="{
-            name: articleRouteName
-          }"
-        >
-          Prev
-        </router-link>
-        <router-link
-          v-else-if="page > 2"
-          :to="{
-            name: articleRouteName,
-            params: {
-              page: page - 1
-            }
-          }"
-        >
-          Prev
-        </router-link>
-        <span class="opacity-50" v-else>Prev</span>
-      </div>
-      <!-- 上一页 -->
-
-      <!-- 下一页 -->
-      <div class="mx-4">
-        <router-link
-          v-if="page < pageTotal"
-          :to="{
-            name: articleRouteName,
-            params: {
-              page: page + 1
-            }
-          }"
-        >
-          Next
-        </router-link>
-        <span class="opacity-50" v-else>Next</span>
-      </div>
-      <!-- 下一页 -->
-
-      <!-- 下一页 -->
-      <div class="mx-4">
-        <router-link
-          v-if="page < pageTotal"
-          :to="{
-            name: articleRouteName,
-            params: {
-              page: pageTotal
-            }
-          }"
-        >
-          Last
-        </router-link>
-        <span class="opacity-50" v-else>Last</span>
-      </div>
-      <!-- 下一页 -->
-    </section>
+    <Pagination
+      :routeName="articleRouteName"
+      :page="page"
+      :pageTotal="pageTotal"
+    />
     <!-- 翻页 -->
   </section>
 
@@ -143,6 +74,7 @@ import { useHead } from '@vueuse/head'
 import config from '/@ts/config'
 import dateDisplay from '/@libs/dateDisplay'
 import isDev from '/@libs/isDev'
+import Pagination from '/@cp/blog/Pagination.vue'
 
 interface List {
   path: string,
@@ -184,6 +116,19 @@ const getPageInfo = (): void => {
     .filter( item => {
       // 生产环境用html文件后缀
       const IS_VALID_SUFFIX: boolean = isDev ? !item.path.endsWith('.html') : item.path.endsWith('.html');
+
+      // 获取文章的所属分类
+      const { categories } = item.meta.frontmatter;
+      console.log(item.name, categories, Array.isArray(categories));
+      
+      // 判断当前是否分类列表
+      const IS_CATEGORY: boolean = route.path.startsWith('/category');
+
+      // 判断文章是否在当前的分类里
+      const CATE_NAME = 'aaa'
+      const IS_IN_CATEGORY: boolean = Array.isArray(categories) && categories.includes(CATE_NAME);
+      // console.log(item.name, IS_CATEGORY, IS_IN_CATEGORY);
+      
 
       // 只提取有效的文章详情页
       return isArticle(item, lang.value) && IS_VALID_SUFFIX;
