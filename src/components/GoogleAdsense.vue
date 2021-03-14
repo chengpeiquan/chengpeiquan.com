@@ -1,6 +1,7 @@
 <template>
   <section class="google-adsense">
     <ins
+      :key="Math.random()"
       class="adsbygoogle"
       style="display:inline-block; width:340px; height: 136px"
       data-ad-client="ca-pub-7109929923549092"
