@@ -4,16 +4,24 @@
  * @param {string} lang - 语言缩写， e.g. en, zh-CN
  */
 import { RouteRecordRaw } from 'vue-router'
+import config from '/@ts/config'
 
-const isArticle = (route: RouteRecordRaw, lang?: string): boolean => {
+const { defaultLang } = config;
+
+const isArticle = (route: RouteRecordRaw, lang: string = defaultLang): boolean => {
   if ( !route.path || typeof route.path !== 'string' ) {
     return false;
   }
 
-  const ROUTE_NAME: string = lang ? `${lang}-article-page` : 'article-page';
-  const START_PATH: string = lang ? `/${lang}/article/` : '/article/';
+  let routeName: string = 'article-page';
+  let startPath: string = '/article/';
 
-  return route.name !== ROUTE_NAME && route.path.startsWith(START_PATH);
+  if ( lang !== defaultLang ) {
+    routeName = `${lang}-article-page`;
+    startPath = `/${lang}/article/`;
+  }
+
+  return route.name !== routeName && route.path.startsWith(startPath);
 }
 
 export default isArticle;

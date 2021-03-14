@@ -1,17 +1,24 @@
-import autoRoutes from 'virtual:generated-pages'
 import { RouterScrollBehavior } from 'vue-router'
+import autoRoutes from 'virtual:generated-pages'
+import categoryRoutes from './categories'
 
 /** 
  * 定义路由
  */
-export const routes = autoRoutes.map( (route) => {
-  return {
-    ...route,
-    alias: route.path.endsWith('/')
-      ? `${route.path}index.html`
-      : `${route.path}.html`,
-  }
-})
+export const routes = [
+    ...autoRoutes,
+    ...categoryRoutes
+  ].map( (route) => {
+    return {
+      ...route,
+      alias: route.path.endsWith('/')
+        ? `${route.path}index.html`
+        : `${route.path}.html`,
+    }
+  });
+
+console.log(routes);
+
 
 /** 
  * 路由切换后的页面定位
@@ -21,4 +28,4 @@ export const scrollBehavior: RouterScrollBehavior = (to, from, savedPosition) =>
     top: 0,
     left: 0
   }
-}
+};

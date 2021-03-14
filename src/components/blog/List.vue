@@ -167,6 +167,8 @@ const articleTotal = ref<number>(1);
 const articleList = ref<List[]>([]);
 const articleRouteName = ref<string>();
 const lang: string = inject('lang') || '';
+console.log(route);
+
 
 /** 
  * 获取文章列表的路由名称
@@ -180,12 +182,10 @@ const getPageInfo = (): void => {
   // 提取文章详情页的路由并按日期排序
   routes.value = router.getRoutes()
     .filter( item => {
+      // 生产环境用html文件后缀
       const IS_VALID_SUFFIX: boolean = isDev ? !item.path.endsWith('.html') : item.path.endsWith('.html');
-      
-      if ( lang.value === 'zh-CN' ) {
-        return isArticle(item) && IS_VALID_SUFFIX;
-      }
-      
+
+      // 只提取有效的文章详情页
       return isArticle(item, lang.value) && IS_VALID_SUFFIX;
     })
     .sort( (a, b) => +new Date(b.meta.frontmatter.date) - +new Date(a.meta.frontmatter.date) );

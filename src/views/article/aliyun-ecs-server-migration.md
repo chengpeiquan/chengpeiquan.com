@@ -4,6 +4,9 @@ desc: 之前因为贪图管理上的方便，一直把这个博客的服务器�
 keywords: 阿里云ESC迁移,阿里云迁移,阿里云服务器迁移
 date: 2020-02-28 18:10:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/02/1-1.jpg
+category: 
+  - tech
+  - life
 ---
 
 之前因为贪图管理上的方便，一直把这个博客的服务器假设在香港那边，其实速度体验和稳定性啥的都挺好，不过最近打算给博客上线一个小程序版本，受于腾讯的政策要求，必须备案和接入https，考虑了一下，看了一下国内地区的ECS价格，刚好有优惠，所以决定做一个迁移。
