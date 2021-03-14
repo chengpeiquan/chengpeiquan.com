@@ -84,7 +84,7 @@
             <ri-github-fill />
           </a>
         </li>
-        <li v-if="lang === 'zh-CN'">
+        <li v-if="lang === defaultLang">
           <a
             class="select-none mr-4 text-xl"
             href="https://www.zhihu.com/people/basss"
@@ -143,22 +143,26 @@ interface NavList {
 const navList = ref<NavList>([]);
 
 // 获取多语言内容
+const { defaultLang } = config;
 const name = ref<string>('');
 const lang: string = inject('lang') || '';
+
 const getI18n = (): void => {
   const key: string = lang.value;
-  name.value = config[key].name;
+  
+  name.value = config.i18n[key].name;
+  
   navList.value = [
     {
-      target: key === 'zh-CN' ? '/' : `/${key}`,
+      target: key === defaultLang ? '/' : `/${key}`,
       text: 'Home'
     },
     {
-      target: key === 'zh-CN' ? '/article' : `/${key}/article`,
+      target: key === defaultLang ? '/article' : `/${key}/article`,
       text: 'Article'
     },
     {
-      target: key === 'zh-CN' ? '/about' : `/${key}/about`,
+      target: key === defaultLang ? '/about' : `/${key}/about`,
       text: 'About'
     }
   ];

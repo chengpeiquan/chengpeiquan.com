@@ -242,11 +242,12 @@ const getArticleList = (): void => {
 /** 
  * 设置页面信息
  */
-const WEB_SITE_TITLE: string = lang.value === 'zh-CN' ? '文章列表' : 'Article List';
+const { defaultLang } = config;
+const WEB_SITE_TITLE: string = lang.value === defaultLang ? '文章列表' : 'Article List';
 useHead({
-  title: `${WEB_SITE_TITLE} - ${config[lang.value].title}`,
+  title: `${WEB_SITE_TITLE} - ${config.i18n[lang.value].title}`,
   meta: [
-    { property: 'og:title', content: `${WEB_SITE_TITLE} - 第${page.value}页 - ${config.title}` }
+    { property: 'og:title', content: `${WEB_SITE_TITLE} - 第${page.value}页 - ${config.i18n[lang.value].title}` }
   ],
 })
 

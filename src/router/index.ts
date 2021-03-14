@@ -17,9 +17,6 @@ export const routes = [
     }
   });
 
-console.log(routes);
-
-
 /** 
  * 路由切换后的页面定位
  */

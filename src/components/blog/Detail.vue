@@ -22,8 +22,6 @@ import isArticle from '/@libs/isArticle'
 const route = useRoute();
 const isUseArticle = isArticle(route);
 const { frontmatter } = defineProps<{ frontmatter: any }>();
-console.log(frontmatter);
-
 </script>
 
 <style scoped>

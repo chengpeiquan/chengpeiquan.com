@@ -30,8 +30,8 @@ const lang: string = inject('lang') || '';
 
 const getI18n = (): void => {
   const key: string = lang.value;
-  name.value = config[key].name;
-  icp.value = config[key].icp;
+  name.value = config.i18n[key].name;
+  icp.value = config.i18n[key].icp;
 }
 watchEffect(getI18n);
 </script>
