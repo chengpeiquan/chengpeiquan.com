@@ -17,10 +17,16 @@ import { isClient } from '@vueuse/core'
 
 const lib: string = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
 
+const push = (): void => {
+  setTimeout(() => {
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  }, 1000);
+}
+
 const init = (): void | boolean => {
   try {
     const url: string = window.location.href;
-    if ( url.includes('localhost') ) {
+    if ( url.includes('localhost') || url.includes('192.168') ) {
       return false;
     }
 
@@ -29,10 +35,13 @@ const init = (): void | boolean => {
     script['src'] = lib;
 
     script.onload = () => {
-      (adsbygoogle = window.adsbygoogle || []).push({});
+      push();
     }
 
-    if ( !document.head.querySelector(`script[src='${lib}']`) ) {
+    if ( document.head.querySelector(`script[src='${lib}']`) ) {
+      push();
+    }
+    else {
       document.head.appendChild(script);
     }
   } catch (e) {
