@@ -16,12 +16,6 @@ import { isClient } from '@vueuse/core'
 
 const lib: string = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
 
-const push = (): void => {
-  setTimeout(() => {
-    (adsbygoogle = window.adsbygoogle || []).push({});
-  }, 1000);
-}
-
 const init = (): void | boolean => {
   try {
     const url: string = window.location.href;
@@ -34,7 +28,7 @@ const init = (): void | boolean => {
     script['src'] = lib;
 
     script.onload = () => {
-      push();
+      (adsbygoogle = window.adsbygoogle || []).push({});
     }
 
     if ( !document.head.querySelector(`script[src='${lib}']`) ) {
