@@ -99,8 +99,6 @@ const articleTotal = ref<number>(1);
 const articleList = ref<List[]>([]);
 const articleRouteName = ref<string>();
 const lang: string = inject('lang') || '';
-console.log(route);
-
 
 /** 
  * 获取文章列表的路由名称
@@ -116,22 +114,24 @@ const getPageInfo = (): void => {
     .filter( item => {
       // 生产环境用html文件后缀
       const IS_VALID_SUFFIX: boolean = isDev ? !item.path.endsWith('.html') : item.path.endsWith('.html');
-
-      // 获取文章的所属分类
-      const { categories } = item.meta.frontmatter;
-      console.log(item.name, categories, Array.isArray(categories));
       
       // 判断当前是否分类列表
       const IS_CATEGORY: boolean = route.path.startsWith('/category');
 
-      // 判断文章是否在当前的分类里
-      const CATE_NAME = 'aaa'
-      const IS_IN_CATEGORY: boolean = Array.isArray(categories) && categories.includes(CATE_NAME);
-      // console.log(item.name, IS_CATEGORY, IS_IN_CATEGORY);
-      
+      // 提取所有有效的文章
+      if ( !IS_CATEGORY ) {
+        return isArticle(item, lang.value) && IS_VALID_SUFFIX;
+      }
 
-      // 只提取有效的文章详情页
-      return isArticle(item, lang.value) && IS_VALID_SUFFIX;
+      // 获取文章的所属分类
+      const { categories } = item.meta.frontmatter;
+
+      // 判断文章是否在当前的分类里
+      const CATEGORY: string = route.name.replace(/category-(.*)-page/, '$1');
+      const IS_IN_CATEGORY: boolean = Array.isArray(categories) && categories.includes(CATEGORY);
+
+      // 提取分类下的文章
+      return isArticle(item, lang.value) && IS_VALID_SUFFIX && IS_IN_CATEGORY;
     })
     .sort( (a, b) => +new Date(b.meta.frontmatter.date) - +new Date(a.meta.frontmatter.date) );
 

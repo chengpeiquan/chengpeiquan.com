@@ -4,6 +4,8 @@ desc: 虽然axios说可以兼容IE9，但实际上在项目开发过程中，IE9
 keywords: axios undefined,axios ie9,axios response undefined
 date: 2018-10-20 23:16:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/10/1-8.jpg
+categories: 
+  - tech
 ---
 
 虽然axios说可以兼容IE9，但实际上在项目开发过程中，IE9报错，而且目前的情况是responseType为"json"时才会报这个异常。
