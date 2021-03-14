@@ -37,12 +37,7 @@ const init = (): void | boolean => {
       push();
     }
 
-    if ( document.head.querySelector(`script[src='${lib}']`) ) {
-      push();
-    }
-    else {
-      document.head.appendChild(script);
-    }
+    document.head.appendChild(script);
   } catch (e) {
     console.log(e);
   }

@@ -1,6 +1,5 @@
-import autoRoutes from 'pages-generated'
+import autoRoutes from 'virtual:generated-pages'
 import { RouterScrollBehavior } from 'vue-router'
-
 
 /** 
  * 定义路由
@@ -13,7 +12,6 @@ export const routes = autoRoutes.map( (route) => {
       : `${route.path}.html`,
   }
 })
-
 
 /** 
  * 路由切换后的页面定位
