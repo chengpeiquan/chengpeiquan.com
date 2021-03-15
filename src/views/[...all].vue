@@ -38,13 +38,7 @@ if ( isClient ) {
 }
 
 useHead({
-  title: `404 - ${config.i18n[lang.value].title}`,
-  meta: [
-    {
-      property: 'og:title',
-      content: config.i18n[lang.value].title
-    }
-  ],
+  title: `404 - ${config.i18n[lang.value].title}`
 });
 </script>
 
