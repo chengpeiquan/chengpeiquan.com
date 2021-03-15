@@ -4,6 +4,8 @@ desc: 最近突然很想简化一些自己写的，项目常用的调用小功�
 keywords: vue,toast,vue弹窗,vue toast,vue插件
 date: 2018-10-11 00:09:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/10/1-9.jpg
+categories: 
+  - tech
 ---
 [[toc]]
 

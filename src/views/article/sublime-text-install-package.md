@@ -4,6 +4,8 @@ desc: 今天无聊更新了一下Sublime Text 3的最新版，结果坑爹了，
 keywords: sublime text 3 packages
 date: 2019-07-24 23:39:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2019/07/1-3.jpg
+categories: 
+  - tech
 ---
 
 今天无聊更新了一下Sublime Text 3的最新版，结果坑爹了，无法使用Ctrl+Shift+P选择install安装各种插件，会报错。

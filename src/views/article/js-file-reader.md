@@ -4,6 +4,8 @@ desc: 目前除了美团之外，其他的外卖app（像饿了么啊、瑞幸�
 keywords: file reader,js file reader,web file reader,read file
 date: 2020-09-28 00:22:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/09/2-3.jpg
+categories: 
+  - tech
 ---
 [[toc]]
 

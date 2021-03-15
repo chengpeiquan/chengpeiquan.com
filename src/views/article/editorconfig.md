@@ -4,6 +4,8 @@ desc: 团队协作，或者有时候你从GitHub或者其他地方拷贝人家�
 keywords: editorconfig,统一编辑器格式
 date: 2019-03-15 23:36:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2019/03/1-2.jpg
+categories: 
+  - tech
 ---
 
 团队协作，或者有时候你从GitHub或者其他地方拷贝人家的组件插件下来，想修改，发现代码风格不一致，比如自己习惯2个空格的缩进，但别人是4个空格，或者直接用tab，这就emmm了不是…

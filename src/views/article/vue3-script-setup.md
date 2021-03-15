@@ -4,6 +4,8 @@ desc: 今天想聊一聊 Vue 3.0 的 script-setup，以及目前三个很少被�
 keywords: script setup,vue 3.0 script setup,vue3 script setup,script setup prop,script setup emit,defineProps,vue 3.0 defineProps,vue defineProps,vue3 defineProps,prop defineProps,setup defineProps,defineEmit,vue 3.0 defineEmit,vue defineEmit,vue3 defineEmit,emit defineEmit,setup defineEmit,useContext,vue 3.0 useContext,vue useContext,vue3 useContext,setup useContext
 date: 2021-03-05 00:48:13
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210305211036.jpg
+categories: 
+  - tech
 ---
 [[toc]]
 

@@ -4,6 +4,8 @@ desc: 前几天愚人节的时候，大话手游官网上了一个专题，里�
 keywords: 抖屏效果
 date: 2020-04-20 23:47:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/04/1.jpg
+categories: 
+  - tech
 ---
 [[toc]]
 

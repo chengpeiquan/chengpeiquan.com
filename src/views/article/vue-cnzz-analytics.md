@@ -4,6 +4,8 @@ desc: 一个专为SPA项目开发的友盟统计插件，支持Vue 3.0以及2.0�
 keywords: cnzz,vue cnzz,vue umeng,vue analytics,spa analytics,cnzz统计,umeng统计,友盟统计,vuepress统计,vuepress cnzz统计
 date: 2021-01-08 22:37:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/08/1-3.jpg
+categories: 
+  - tech
 ---
 [[toc]]
 

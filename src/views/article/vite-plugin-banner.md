@@ -4,6 +4,8 @@ desc: 基于Vite，实现一个和webpack banner plugin一样功能的版权注�
 keywords: vite-plugin-banner,vite plugin,vite banner,vite注释,vite版权
 date: 2021-02-23 23:10:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/01/20210224102526.jpg
+categories: 
+  - tech
 ---
 [[toc]]
 

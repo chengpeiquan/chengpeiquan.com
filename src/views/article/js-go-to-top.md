@@ -4,6 +4,8 @@ desc: 添加的第一个参数destination，终点位置，含义是指终点坐
 keywords: 原生JS回到顶部,原生JS带动画回到顶部
 date: 2019-01-09 00:45:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2019/01/1.jpg
+categories: 
+  - tech
 ---
 
 之前jQuery走天下的时候，返回顶部按钮倒是很简单，一个animate就可以解决，原生JS能否实现呢？答案是肯定的！

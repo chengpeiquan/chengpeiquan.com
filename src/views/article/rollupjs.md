@@ -4,6 +4,8 @@ desc: 虽然Rollup的推出时间应该是比Webpack早，但之前类库的工�
 keywords: rollup,rollupjs,rollup打包,rollup babel
 date: 2020-08-09 23:42:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/08/1.jpg
+categories: 
+  - tech
 ---
 [[toc]]
 

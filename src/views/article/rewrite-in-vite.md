@@ -4,6 +4,8 @@ desc: 从 2021 年元旦 Vite 发布 2.0 Beta 版就一直在关注 Vite 的动�
 keywords: vite,vite ssr,vite ssg,vite blog
 date: 2021-02-18 23:54:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210219234631.jpg
+categories: 
+  - tech
 ---
 [[toc]]
 

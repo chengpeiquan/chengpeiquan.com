@@ -4,6 +4,8 @@ desc: 以往的网站迁移服务器，数据方面的东西都是由服务端�
 keywords: node爬虫,node crawler
 date: 2019-07-22 17:28:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2019/07/1.jpg
+categories: 
+  - tech
 ---
 [[toc]]
 

@@ -4,6 +4,8 @@ desc: Vue脚手架3.0出来也蛮久了，秉着前人先踩坑的习惯，最�
 keywords: vue cli 3.0 升级,vue cli 升级报错
 date: 2018-11-21 19:50:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/11/1-2.jpg
+categories: 
+  - tech
 ---
 [[toc]]
 

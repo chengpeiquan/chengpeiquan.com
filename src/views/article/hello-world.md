@@ -4,6 +4,8 @@ desc: 这是这次博客的第一篇文章，不是历史以来的第一篇。�
 keywords: hello world
 date: 2018-09-02 14:19:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/09/1.jpg
+categories: 
+  - prose
 ---
 
 这是这次博客的第一篇文章，不是这个博客历史以来的第一篇。

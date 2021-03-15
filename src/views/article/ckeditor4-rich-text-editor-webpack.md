@@ -4,6 +4,8 @@ desc: 前几天对接了个需求，说因为传统的CMS太笨重，并且一�
 keywords: ckeditor,ckeditor4,ckeditor传图,ckeditor编辑,ckeditor赋值,ckeditor路径
 date: 2018-10-22 00:48:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/10/1-3.jpg
+categories: 
+  - tech
 ---
 [[toc]]
 

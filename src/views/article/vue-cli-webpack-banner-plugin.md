@@ -4,6 +4,8 @@ desc: 其实以前就知道说有这么个东西可以在打包后添加一个�
 keywords: 外卖计算器,拼单计算器
 date: 2019-04-21 23:03:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2019/04/1-1.jpg
+categories: 
+  - tech
 ---
 
 这个不是Vue的东西，是webpack的功能~
