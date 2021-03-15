@@ -57,7 +57,7 @@ export const categories = [
 
 由于我做了多语言配置，所以 text 字段需要配置多语言，如果单语言就不必这么弄了。
 
-以后如果想增加 / 修改分类，就维护这个数组就可以了。
+以后如果想增加或修改分类，就维护这个数组就可以了。
 
 处理好 categories.ts 之后，记得导入到 [src/router/index.ts](https://github.com/chengpeiquan/chengpeiquan.com/blob/main/src/router/index.ts) 去合并路由信息。
 
@@ -65,3 +65,5 @@ export const categories = [
 
 分类的列表和原来的列表布局是一样的，只是数据源不一样，所以只需要在提取文章列表的时候，针对当前的路由信息判断一下要筛选的文章就可以了，不需要重复添加额外的组件，详见 
 [List.vue](https://github.com/chengpeiquan/chengpeiquan.com/blob/main/src/components/blog/List.vue) 。
+
+以上。
