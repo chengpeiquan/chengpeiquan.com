@@ -4,6 +4,8 @@ desc: 开始玩Vue 3.0之后发现生态上要啥没啥，所以自己弄了一�
 keywords: vue picture cropper,vue 3.0 cropper,vue 3.0 图片裁切
 date: 2020-11-16 00:12:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/12/1.jpg
+categories: 
+  - tech
 ---
 [[toc]]
 

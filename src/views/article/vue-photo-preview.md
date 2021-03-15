@@ -4,6 +4,8 @@ desc: 最近一段时间，涉及到看大图功能的需求，用的比较多�
 keywords: vue看大图,vue photo preview,vue图片放大
 date: 2019-09-15 11:10:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2019/09/1-1.jpg
+categories: 
+  - tech
 ---
 
 最近一段时间，涉及到看大图功能的需求，用的比较多的一款看大图插件，PC和移动端适配良好，之前也用过一些别的插件，但还是这个方便，也比较轻量级。

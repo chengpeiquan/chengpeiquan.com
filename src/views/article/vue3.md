@@ -4,6 +4,8 @@ desc: 自从海贼王更新后，就开始正式用 `Vue 3.0` + `typescript` 写
 keywords: vue 3.0,vue 3.x,vue 3.0 教程,学习 vue 3.0,vue 3.0 案例,vue 3.0 教学,vue 3.0 好用吗
 date: 2020-10-25 22:30:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/10/vue3.jpg
+categories: 
+  - tech
 ---
 
 这是一个关于Vue 3.0 + TypeScript的起步学习教程，适合完全的Vue新手和Vue 2.0的老手，在官方文档的基础上融入自己的一些实践经验。

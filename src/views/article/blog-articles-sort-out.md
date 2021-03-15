@@ -4,6 +4,8 @@ desc: 最近几个月比较忙，虽然没怎么更新博客，不过还是保�
 keywords: 博客归类,博客文章分类
 date: 2019-09-15 01:35:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2019/09/1-3.jpg
+categories: 
+  - prose
 ---
 
 最近几个月比较忙，虽然没怎么更新博客，不过还是保留着随手记笔记的习惯，也就是遇到坑啊或者一些觉得值得记录的东西，会随手简单的写到备忘录，等有空的时候再更新上来。

@@ -4,6 +4,8 @@ desc: 从前端的角度，以一个接口消费者的身份来谈一谈如何�
 keywords: 接口设计,接口格式,接口规范
 date: 2020-02-17 01:01:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/02/1.jpg
+categories: 
+  - tech
 ---
 [[toc]]
 

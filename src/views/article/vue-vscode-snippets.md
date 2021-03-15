@@ -4,6 +4,8 @@ desc: 目前除了美团之外，其他的外卖app（像饿了么啊、瑞幸�
 keywords: stylus保存压缩,stylus错乱,stylus格式化
 date: 2020-09-20 17:02:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/09/vue-vscode-snippets.jpg
+categories: 
+  - tech
 ---
 [[toc]]
 

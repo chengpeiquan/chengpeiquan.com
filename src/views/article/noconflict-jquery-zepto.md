@@ -4,6 +4,8 @@ desc: 今天遇到一个比较特殊的情况是这样子，维护一个年代�
 keywords: jquery zepto 兼容
 date: 2018-10-19 23:53:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/10/1-2.jpg
+categories: 
+  - tech
 ---
 [[toc]]
 

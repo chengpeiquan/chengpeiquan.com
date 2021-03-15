@@ -28,11 +28,11 @@ import config from '/@ts/config'
 const lang: string = inject('lang') || '';
 
 useHead({
-  title: config['zh-CN'].title,
+  title: config.i18n[lang.value].title,
   meta: [
     {
       property: 'og:title',
-      content: config['zh-CN'].title
+      content: config.i18n[lang.value].title
     }
   ],
 });

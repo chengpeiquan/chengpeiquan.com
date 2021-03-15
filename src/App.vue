@@ -21,7 +21,9 @@ const key = computed( () => {
 // i18n
 const lang = ref<string>('');
 const getLang = (): void => {
-  lang.value = route.path.startsWith('/en') ? 'en' : 'zh-CN';
+  const { i18n, defaultLang } = config;
+  const langTag: string = route.path.split('/')[1];
+  lang.value = i18n.hasOwnProperty(langTag) ? langTag : defaultLang;
 }
 watchEffect(getLang);
 provide('lang', lang);
@@ -33,7 +35,7 @@ useHead({
   meta: [
     {
       property: 'og:title',
-      content: config[lang.value].title
+      content: config.i18n[lang.value].title
     },
     {
       property: 'og:image',
@@ -41,16 +43,16 @@ useHead({
     },
     {
       name: 'description',
-      content: config[lang.value].description
+      content: config.i18n[lang.value].description
     },
     // 下面是配置twitter分享
     {
       name: 'twitter:title',
-      content: title ? title : config[lang.value].title
+      content: title ? title : config.i18n[lang.value].title
     },
     {
       name: 'twitter:description',
-      content: desc ? desc : config[lang.value].description
+      content: desc ? desc : config.i18n[lang.value].description
     },
     {
       name: 'twitter:image:src',

@@ -4,6 +4,8 @@ desc: 这个情况当时是很懵逼的，因为在PC端，以及使用Chrome的
 keywords: vue ajax,vue axios,axios乱码,axios get,axios post,axios,qs,axios qs
 date: 2018-09-06 01:46:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/09/1-1.jpg
+categories: 
+  - tech
 ---
 
 从jQuery刚转到Vue的时候，对ajax的替代方案是选择了npm上的axios，理由也比较简单，两者的api相似，调用方式也很接近，过渡可以说是无缝吧，不过在做第一个项目的时候还是踩了个坑，特此记录下来。

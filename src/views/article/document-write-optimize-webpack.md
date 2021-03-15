@@ -4,6 +4,8 @@ desc: write方法去渲染html，更多情况是适合手写页面的年代，�
 keywords: document.write渲染优化,vue document.write
 date: 2018-12-15 16:34:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/12/1.jpg
+categories: 
+  - tech
 ---
 [[toc]]
 

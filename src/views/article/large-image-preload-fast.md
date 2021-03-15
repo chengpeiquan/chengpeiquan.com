@@ -4,6 +4,8 @@ desc: 因为一直做游戏风格的需求，而日常维护的游戏也比较�
 keywords: png优化,图片预加载,js预加载
 date: 2018-10-12 11:49:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/10/1.jpg
+categories: 
+  - tech
 ---
 
 因为一直做游戏风格的需求，而日常维护的游戏也比较朴素，都是用纯css处理的渐变底色即可满足弹窗背景的配置，最近处理了一个比较花哨的需求，弹窗设计方面比较下功夫，弹窗的背景图片只能导出png素材，无法使用纯css来实现，哪怕经过tinypng优化之后还有50多kb之巨。

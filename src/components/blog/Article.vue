@@ -58,9 +58,9 @@ const lang: string = inject('lang') || '';
  * 设置页面信息
  */
 useHead({
-  title: isMobile.value ? title : `${title} - ${config[lang.value].title}`,
+  title: isMobile.value ? title : `${title} - ${config.i18n[lang.value].title}`,
   meta: [
-    { property: 'og:title', content: `${title} - ${config[lang.value].title}` },
+    { property: 'og:title', content: `${title} - ${config.i18n[lang.value].title}` },
     { name: 'description', content: desc },
     { name: 'keywords', content: keywords }
   ],

@@ -39,7 +39,7 @@ if ( isClient ) {
 }
 
 useHead({
-  title: `404 - ${config.titleEN}`
+  title: `404 - ${config.i18n[lang.value]title}`
 });
 </script>
 

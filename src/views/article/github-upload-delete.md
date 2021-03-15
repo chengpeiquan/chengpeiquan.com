@@ -4,6 +4,8 @@ desc: Git的指令还是记不太住，发篇文帮助记忆，记录起来方�
 keywords: github,github上传,github删除文件夹
 date: 2019-02-05 14:56:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2019/02/1-2.jpg
+categories: 
+  - tech
 ---
 
 Git的指令还是记不太住，发篇文帮助记忆～

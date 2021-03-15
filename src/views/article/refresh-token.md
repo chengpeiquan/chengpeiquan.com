@@ -4,6 +4,8 @@ desc: 如今在涉及到用户登录的系统设计里面，基本上都是通�
 keywords: refresh token,refreshtoken,oauth 2.0 refreshtoken,前端刷新token,oauth 刷新token
 date: 2021-01-30 14:56:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/01/1.jpg
+categories: 
+  - tech
 ---
 [[toc]]
 

@@ -9,12 +9,13 @@
 <script setup lang="ts">
 import { useHead } from '@vueuse/head'
 import { isClient } from '@vueuse/core'
-import { ref } from 'vue'
+import { ref, inject } from 'vue'
 import config from '/@ts/config'
 import { onBeforeRouteLeave, useRouter } from 'vue-router'
 
 const router = useRouter();
 const seconds = ref<number>(5);
+const lang: string = inject('lang') || '';
 
 if ( isClient ) {
   // 5s后返回首页
@@ -37,11 +38,11 @@ if ( isClient ) {
 }
 
 useHead({
-  title: `404 - ${config.title}`,
+  title: `404 - ${config.i18n[lang.value].title}`,
   meta: [
     {
       property: 'og:title',
-      content: config.title
+      content: config.i18n[lang.value].title
     }
   ],
 });

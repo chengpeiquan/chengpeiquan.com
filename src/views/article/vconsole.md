@@ -4,6 +4,8 @@ desc: 距离这个神器发布第一个版本的时间，已经过去3年了，�
 keywords: vconsole,手机控制台,手机debug,真机调试,移动端debug
 date: 2018-11-25 01:16:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/11/1-1.jpg
+categories: 
+  - tech
 ---
 
 距离这个神器发布第一个版本的时间，已经过去3年了，不过还是有蛮多新同学不知道他的存在，在做项目的时候，移动端真机调试还是用alert来弹，不仅调试起来很烦，也蛮不好定位问题的。

@@ -4,6 +4,8 @@ desc: 今天在上线一个移动端需求的时候，QA妹子跟我反馈在她
 keywords: scrollTop 0,scrollTop bug,getBoundingClientRect
 date: 2020-09-15 01:41:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/09/3.jpg
+categories: 
+  - tech
 ---
 
 今天在上线一个移动端需求的时候，QA妹子跟我反馈在她们一部iPhone X上面出现了一个滚动加载会同时触发下拉刷新的bug…
