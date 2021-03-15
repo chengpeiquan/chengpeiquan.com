@@ -17,7 +17,7 @@
     <!-- 空列表提示 -->
     <div
       v-if="articleList.length === 0"
-      class="flex justify-center w-full md:mt-8 mt-4 md:mb-16 mb-8"
+      class="flex justify-center w-full md:mt-8 mt-4 md:mb-16 mb-8 md:text-base text-sm"
     >
       <p>{{ emptyTips }}</p>
     </div>
@@ -268,9 +268,9 @@ getPageInfo();
   @apply w-full md:mb-4 mb-2 md:pb-4 pb-2 md:px-0 px-4 border-b dark:border-white dark:border-opacity-5;
 }
 .category-tabs .item {
-  @apply md:mr-8 mr-4 text-base opacity-70;
+  @apply md:mr-8 mr-4 md:text-base text-sm opacity-70;
 }
 .category-tabs .item.cur {
-  @apply text-xl font-bold opacity-100;
+  @apply md:text-xl text-base font-bold opacity-100;
 }
 </style>

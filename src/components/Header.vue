@@ -11,7 +11,7 @@
           :alt="name"
         >
       </div>
-      <span class="md:ml-4 ml-2 md:text-2xl text-xl" >{{ name }}</span>
+      <span class="md:ml-4 ml-2 md:text-2xl text-l" >{{ name }}</span>
     </div>
     <!-- 站点信息 -->
 
