@@ -1,5 +1,5 @@
 <template>
-  <header class="flex justify-between items-center w-full md:h-24 h-14 px-4 border-b-4 dark:border-white dark:border-opacity-5 bg-white bg-opacity-5">
+  <header class="flex justify-between items-center w-full md:h-24 h-14 px-4 border-b-4 dark:border-white dark:border-opacity-5 dark:bg-white bg-gray-50 dark:bg-opacity-5">
     <!-- 站点信息 -->
     <div class="flex justify-start items-center">
       <div class="flex flex-shrink-0 md:w-14 w-8 md:h-14 h-8 rounded-full overflow-hidden" >
@@ -11,7 +11,9 @@
           :alt="name"
         >
       </div>
-      <span class="md:ml-4 ml-2 md:text-2xl text-l" >{{ name }}</span>
+      <span class="md:ml-4 ml-2 md:text-2xl text-l dark:text-white text-black">
+        {{ name }}
+      </span>
     </div>
     <!-- 站点信息 -->
 
