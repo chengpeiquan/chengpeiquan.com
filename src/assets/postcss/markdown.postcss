@@ -23,6 +23,10 @@ html:not(.dark) {
   --prism-punctuation: #8e8f8b;
   --prism-decorator: #bd8f8f;
   --prism-json-property: #698c96;
+  --fg-light: #5f5f5f;
+  --fg: #555;
+  --fg-deep: #222;
+  --fg-deeper: #000;
 }
 html.dark {
   --prism-scheme: dark;
@@ -46,6 +50,10 @@ html.dark {
   --prism-line-number-gutter: #eeeeee;
   --prism-line-highlight-background: #444444;
   --prism-selection-background: #444444;
+  --fg-light: #5f5f5f;
+  --fg: #bbb;
+  --fg-deep: #ddd;
+  --fg-deeper: #fff;
 }
 
 
@@ -104,12 +112,7 @@ blockquote {
 
 
 /* 文章格式化 */
-.prose {
-  --fg-light: #5f5f5f;
-  --fg: #555;
-  --fg-deep: #222;
-  --fg-deeper: #000;
-  
+.prose {  
   width: 100%;
   max-width: 100%;
   color: var(--fg);
@@ -232,12 +235,6 @@ blockquote {
   figure {
     text-align: center;
   }
-}
-html.dark .prose {
-  --fg-light: #5f5f5f;
-  --fg: #bbb;
-  --fg-deep: #ddd;
-  --fg-deeper: #fff;
 }
 
 

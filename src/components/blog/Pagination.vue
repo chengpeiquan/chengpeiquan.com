@@ -1,5 +1,5 @@
 <template>
-  <section class="flex justify-center items-center">
+  <section class="flex justify-center items-center md:text-base text-sm">
     <!-- 第一页 -->
     <div class="mx-4">
       <router-link
