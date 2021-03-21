@@ -9,6 +9,8 @@ categories:
 ---
 [[toc]]
 
+>2021-03-21：本文已同步到 [高效开发 - Vue3.0学习教程与实战案例](https://vue3.chengpeiquan.com/efficient.html) 一章，可直接看专题文档了解更多。
+
 今天想聊一聊 Vue 3.0 的 script-setup，以及目前三个很少被提及到的 API —— defineProps 、 defineEmit 和 useContext。
 
 截止到我撰写本文，它们在 Vue 3.0 的官网都还没有相关的用法说明，**因为目前还属于实验性的新特性**，什么时候会并入正式轨道，时间上还不清楚，但事实上在项目里已经可以使用起来了，自己体验了一段时间，真的爽！！！

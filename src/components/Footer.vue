@@ -3,7 +3,7 @@
     class="flex justify-center items-center w-full h-36 opacity-70 md:text-sm text-xs"
     :class="{ 'flex-col': isMobile }"
   >
-    <span>© {{ year }} {{ name }}</span>
+    <a class="year">© {{ year }} {{ name }}</a>
     <br v-if="isMobile" />
     <a
       class="md:ml-12 ml-2"
@@ -36,5 +36,8 @@ const getI18n = (): void => {
 watchEffect(getI18n);
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
+.year {
+  color: var(--fg-deeper);
+}
 </style>
