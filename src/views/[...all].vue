@@ -10,19 +10,31 @@
 import { useHead } from '@vueuse/head'
 import { isClient } from '@vueuse/core'
 import { ref, inject, onMounted } from 'vue'
-import config from '/@ts/config'
 import { onBeforeRouteLeave, useRouter } from 'vue-router'
+import config from '/@ts/config'
+import axios from 'axios'
 
 const router = useRouter();
 const seconds = ref<number>(5);
 const lang: string = inject('lang') || '';
 
 const getChildrenList = (): void => {
-  fetch('/api/searchChildren')
-    .then(data => console.log(data))
-    // .then(data => data.json())
-    // .then(data => console.log(data))
-    // .catch(err => console.log(err));
+  axios.get(`/api/searchChildren?time=${Date.now()}`)
+    .then( res => {
+      console.log('axios', res);
+    })
+    .catch(err => console.log(err));
+
+  fetch(`/api/searchChildren?time=${Date.now()}`)
+    .then(res => {
+      console.log('fetch', res);
+      const json = res.json();
+      return json;      
+    })
+    .then(data => {
+      console.log('fetch', data)
+    })
+    .catch(err => console.log(err));
 }
 
 if ( isClient ) {
