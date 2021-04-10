@@ -28,10 +28,7 @@ export default defineConfig({
   server: {
     port: 33333,
     proxy: {
-      '/api': {
-        target: 'https://chengpeiquan.com/api',
-        changeOrigin: true
-      }
+      '/api': 'https://chengpeiquan.com/api'
     }
   },
   build: {
