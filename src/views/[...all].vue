@@ -9,7 +9,7 @@
 <script setup lang="ts">
 import { useHead } from '@vueuse/head'
 import { isClient } from '@vueuse/core'
-import { ref, inject } from 'vue'
+import { ref, inject, onMounted } from 'vue'
 import config from '/@ts/config'
 import { onBeforeRouteLeave, useRouter } from 'vue-router'
 
@@ -17,14 +17,22 @@ const router = useRouter();
 const seconds = ref<number>(5);
 const lang: string = inject('lang') || '';
 
+const getChildrenList = (): void => {
+  fetch('/api/searchChildren')
+    .then(data => console.log(data))
+    // .then(data => data.json())
+    // .then(data => console.log(data))
+    // .catch(err => console.log(err));
+}
+
 if ( isClient ) {
   // 5s后返回首页
   const countdown: number | null = setInterval( () => {
     if ( seconds.value === 1 ) {
       clearInterval(countdown);
-      router.push({
-        name: 'index'
-      });
+      // router.push({
+      //   name: 'index'
+      // });
       return false;
     }
     
@@ -35,6 +43,8 @@ if ( isClient ) {
   onBeforeRouteLeave( () => {
     clearInterval(countdown);
   });
+
+  onMounted(getChildrenList);
 }
 
 useHead({
