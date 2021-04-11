@@ -1,4 +1,6 @@
 <template>
+  <hr v-if="childrenList.length > 0 && !isMobile">
+
   <section
     v-if="childrenList.length > 0 && !isMobile"
     class="children-list md:w-2/4 w-full mt-8"
