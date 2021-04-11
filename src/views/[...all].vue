@@ -6,6 +6,8 @@
 
     <p>将在 {{ seconds }}s 后返回首页…</p>
 
+    <hr>
+
     <ChildrenList />
   </main>
 </template>
@@ -18,7 +20,7 @@ import { isClient } from '@vueuse/core'
 import config from '/@ts/config'
 
 const router = useRouter();
-const seconds = ref<number>(5);
+const seconds = ref<number>(10);
 const lang: string = inject('lang') || '';
 
 if ( isClient ) {
