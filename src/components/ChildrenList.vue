@@ -68,7 +68,7 @@ const childrenList = ref<Children[]>([]);
 
 const getChildrenList = (): void => {
   // https://chengpeiquan.com/api/searchChildren
-  fetch('/api/searchChildren')
+  fetch(`/api/searchChildren?time=${Date.now()}`)
     .then( res => res.json() )
     .then( data => childrenList.value = data.slice(0, 3) )
     .catch( err => console.log(err) );
