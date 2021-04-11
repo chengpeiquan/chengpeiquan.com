@@ -6,8 +6,6 @@
 
     <p>将在 {{ seconds }}s 后返回首页…</p>
 
-    <hr>
-
     <ChildrenList />
   </main>
 </template>
