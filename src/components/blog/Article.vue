@@ -19,7 +19,7 @@
 
     <!-- 过期提示 -->
     <p
-      v-if="diffDays > 365"
+      v-if="diffDays > 730"
       class="flex justify-center items-center w-full p-4 md:mb-8 mb-4 bg-gray-50 dark:bg-white dark:bg-opacity-5 rounded text-gray-600 dark:text-gray-300 text-sm"
     >
       本文最后更新于 {{ diffDays }} 天前，部分内容可能不适合当前所有情况，仅供参考。
