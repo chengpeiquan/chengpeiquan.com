@@ -49,10 +49,11 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
+import isDev from '/@libs/isDev'
 import isMobile from '/@libs/isMobile'
 
 interface Children {
-  id: number;
+  id?: number;
   name: string;
   gender: string;
   birthday: string;
@@ -73,7 +74,14 @@ const getChildrenList = (): void => {
     .catch( err => console.log(err) );
 }
 
-onMounted(getChildrenList);
+onMounted(() => {
+  if ( isDev ) {
+    childrenList.value = [{ "id": 464495, "name": "李一征", "gender": "女", "birthday": "2005年03月27日", "missingDate": "2020年03月03日", "missingPlace": "山西省阳泉市城区南外环路义北小区", "photo": "https://qzonestyle.gtimg.cn/qzone/v6/portal/gy/404/upload/20200521/0_fa3dddbf2771e868016586e4e98112ba.jpg", "feature": "性格内向，微胖。上身穿黑色长褂牛仔衣，下身穿黑色长牛子裤，口戴绿色口罩，口罩上带有爱心，白色鞋子上有英文字母。", "url": "https://bbs.baobeihuijia.com/forum.php?mod=viewthread&tid=477907&extra=page=12&filter=author&orderby=dateline" }, { "id": 471694, "name": "肖坤", "gender": "男", "birthday": "2005年06月08日", "missingDate": "2020年03月27日", "missingPlace": "湖南省衡阳市祁东县马杜桥乡", "photo": "https://qzonestyle.gtimg.cn/qzone/v6/portal/gy/404/upload/20200521/0_33e5ab57eae7bfb8b0e398d64bea36c4.jpg", "feature": "脸部位有少许的白斑、脸上有青春痘、大眼睛、2个头旋、内向性格不善与人沟通。湖南祁东方言、略带有长沙口音的普通话。身穿蓝色棉衣、黑色校服裤子（外侧带有白色条纹）黑色运动鞋", "url": "https://bbs.baobeihuijia.com/forum.php?mod=viewthread&tid=480758&extra=page=7&filter=author&orderby=dateline" }, { "id": 443318, "name": "陈若雯", "gender": "女", "birthday": "2007年02月02日", "missingDate": "2019年11月22日", "missingPlace": "山东省枣庄市", "photo": "https://qzonestyle.gtimg.cn/qzone/v6/portal/gy/404/upload/20200521/0_f5909df034c4987879358924db369d15.jpg", "feature": "体型偏胖、脖子有两三道颈纹、披肩长发。枣庄市地方口音。身穿豹纹外套（下面图片中的衣服）、蓝色校裤、豹纹布鞋、黑色书包。", "url": "https://bbs.baobeihuijia.com/forum.php?mod=viewthread&tid=481373&extra=page=6&filter=author&orderby=dateline" }];
+  }
+  else {
+    getChildrenList();
+  }
+});
 </script>
 
 <style lang="postcss" scoped>
