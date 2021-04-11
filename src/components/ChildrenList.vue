@@ -1,5 +1,7 @@
 <template>
-  <hr v-if="childrenList.length > 0 && !isMobile">
+  <hr>
+
+  <p v-if="childrenList.length === 0">寻人信息加载中…</p>
 
   <section
     v-if="childrenList.length > 0 && !isMobile"
