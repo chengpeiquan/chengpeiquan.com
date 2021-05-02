@@ -1,7 +1,8 @@
-const typography = require('windicss/plugin/typography')
-const lineClamp = require('windicss/plugin/line-clamp')
+import { defineConfig } from 'windicss/helpers'
+import typography from 'windicss/plugin/typography'
+import lineClamp from 'windicss/plugin/line-clamp'
 
-module.exports = {
+export default defineConfig({
   darkMode: 'class',
   plugins: [
     typography,
@@ -14,4 +15,4 @@ module.exports = {
       }
     },
   }
-}
+})

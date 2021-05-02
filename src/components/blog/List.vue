@@ -40,7 +40,7 @@
         >
           <ri-fire-fill
             v-if="item.isHot"
-            class="mr-2 text-xl"
+            class="mr-2 text-xl text-red-500 dark:text-rose-500"
           />
           <h2 class="md:text-2xl text-lg line-clamp-2">
             {{ item.title }}
