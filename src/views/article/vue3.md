@@ -7,6 +7,7 @@ cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/10/vue3.
 categories: 
   - tech
 isHot: true
+repo: https://github.com/chengpeiquan/learning-vue3
 ---
 
 这是一个关于Vue 3.0 + TypeScript的起步学习教程，适合完全的Vue新手和Vue 2.0的老手，在官方文档的基础上融入自己的一些实践经验。

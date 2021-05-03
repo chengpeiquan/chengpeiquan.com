@@ -6,6 +6,7 @@ date: 2018-10-11 00:09:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/10/1-9.jpg
 categories: 
   - tech
+repo: https://github.com/chengpeiquan/vue-toast
 ---
 [[toc]]
 

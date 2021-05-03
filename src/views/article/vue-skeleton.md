@@ -6,6 +6,7 @@ date: 2019-03-01 16:14:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2019/03/1.jpg
 categories: 
   - tech
+repo: https://github.com/chengpeiquan/vue-skeleton
 ---
 
 大型Project的首次载入速度一般会比较慢，虽然Vue可以配置路由懒加载，但有时候打包出来的chunk还是会比较大，这个时候可以结合骨架屏来提高用户等待加载时的体验。

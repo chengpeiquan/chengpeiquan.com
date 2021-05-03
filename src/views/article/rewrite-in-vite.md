@@ -7,6 +7,7 @@ cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210
 categories: 
   - tech
 isHot: true
+repo: https://github.com/chengpeiquan/chengpeiquan.com
 ---
 [[toc]]
 

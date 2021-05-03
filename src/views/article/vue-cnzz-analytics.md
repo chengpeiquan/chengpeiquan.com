@@ -6,6 +6,7 @@ date: 2021-01-08 22:37:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/08/1-3.jpg
 categories: 
   - tech
+repo: https://github.com/analyticsjs/vue-cnzz-analytics
 ---
 [[toc]]
 

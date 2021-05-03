@@ -6,6 +6,7 @@ date: 2021-01-07 23:21:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2019/12/1.jpg
 categories: 
   - tech
+repo: https://github.com/analyticsjs/vue-baidu-analytics
 ---
 [[toc]]
 
