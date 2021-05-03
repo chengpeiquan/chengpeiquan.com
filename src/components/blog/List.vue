@@ -34,7 +34,7 @@
         :key="index"
       >
         <router-link
-          class="flex items-center md:mb-4 mb-2"
+          class="flex md:items-center items-start md:mb-4 mb-2"
           :title="item.title"
           :to="item.path"
         >
