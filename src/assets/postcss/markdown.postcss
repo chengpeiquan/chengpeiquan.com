@@ -224,10 +224,15 @@ blockquote {
 
   /* 有序列表 */
   ol > li {
+    list-style-type: decimal;
     padding-left: 0.75rem;
 
     &::before {
       display: none;
+    }
+
+    p {
+      text-indent: 0;
     }
   }
 
@@ -241,6 +246,37 @@ blockquote {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  /* 引用 */
+  blockquote {
+    position: relative;
+    color: var(--fg-light) !important;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+    overflow-wrap: break-word;
+    border: 0;
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+    &::before {
+      content: "“";
+      position: absolute;
+      top: -.2em;
+      left: 0;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 300%;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    p {
+      text-indent: 0;
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
   }
 }
 
