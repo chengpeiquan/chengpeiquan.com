@@ -168,6 +168,7 @@ const moveToc = (): void | boolean => {
   isShowToc.value = true;
   setTimeout(() => {
     const tocContainer: HTMLElement = document.querySelector('.article-toc-container');
+    tocContainer.innerHTML = '';
     tocContainer.appendChild(toc);
   }, 10);
 
