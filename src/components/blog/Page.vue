@@ -42,6 +42,14 @@ useHead({
 </script>
 
 <style lang="postcss">
+.page-detail {
+  .article-toc {
+    li {
+      margin-left: 1em !important;
+      padding-left: 0 !important;
+    }
+  }
+}
 @media (min-width: 1280px) { 
   .page-detail {
     img {

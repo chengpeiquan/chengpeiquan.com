@@ -117,14 +117,16 @@ onMounted(navigateToId);
 
 <style lang="postcss">
 @media (max-width: 1280px) { 
-  .article-toc {
-    li {
-      margin-left: 1em !important;
-      padding-left: 0 !important;
+  .article-detail {
+    .article-toc {
+      li {
+        margin-left: 1em !important;
+        padding-left: 0 !important;
+      }
     }
   }
 }
-@media (min-width: 1280px) { 
+@media (min-width: 1280px) {
   .article-detail {
     .article-toc {
       display: none;
