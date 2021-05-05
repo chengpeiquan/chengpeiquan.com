@@ -6,6 +6,7 @@ date: 2020-11-16 00:12:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/12/1.jpg
 categories: 
   - tech
+repo: https://github.com/chengpeiquan/vue-picture-cropper
 ---
 [[toc]]
 

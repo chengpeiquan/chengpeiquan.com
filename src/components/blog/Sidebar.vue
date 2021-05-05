@@ -188,4 +188,11 @@ onMounted(moveToc);
 .article-title {
   text-align: justify;
 }
+.article-toc-container {
+  :deep(.article-toc) {
+    li {
+      margin-left: 0;
+    }
+  }
+}
 </style>

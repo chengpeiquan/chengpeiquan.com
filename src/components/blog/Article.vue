@@ -8,13 +8,24 @@
     <!-- 标题 -->
 
     <!-- 发布信息 -->
-    <p class="flex items-center w-full text-sm text-gray-400 md:mb-8 mb-4 md:pb-8 pb-4 border-b dark:border-white dark:border-opacity-5">
-      <span class="mr-8">作者：程沛权</span>
+    <div class="flex justify-between items-center w-full text-sm text-gray-400 md:mb-8 mb-4 md:pb-8 pb-4 border-b dark:border-white dark:border-opacity-5">
+      <div class="flex items-center">
+        <span class="md:mr-8 mr-4">作者：程沛权</span>
+        <span :title="date.substr(0, 10)">
+          {{ diffDays > 7 ? date.substr(0, 10) : dateAgo }}
+        </span>
+      </div>
 
-      <span :title="date.substr(0, 10)">
-        {{ diffDays > 7 ? date.substr(0, 10) : dateAgo }}
-      </span>
-    </p>
+      <div
+        v-if="repo && !isMobile"
+        class="flex items-center cursor-pointer hover:text-red-500 dark:hover:text-rose-500"
+        :title="lang === 'zh-CN' ? '给仓库一个Star' : 'Star this repository'"
+        @click="openRepo"
+      >
+        <ri-star-line />
+        <span class="ml-1">Star on GitHub</span>
+      </div>
+    </div>
     <!-- 发布信息 -->
 
     <!-- 过期提示 -->
@@ -49,10 +60,17 @@ import isMobile from '/@libs/isMobile'
 const route = useRoute();
 const router = useRouter();
 const { frontmatter } = defineProps<{ frontmatter: any }>();
-const { title, desc, keywords, date } = frontmatter;
+const { title, desc, keywords, date, repo } = frontmatter;
 const { diffDays, dateAgo } = dateDisplay(date);
 const lang: string = inject('lang') || '';
 
+/** 
+ * 打开仓库
+ */
+const openRepo = (): void => {
+  if (!repo || !String(repo).startsWith('http')) return;
+  window.open(repo);
+}
 
 /** 
  * 设置页面信息

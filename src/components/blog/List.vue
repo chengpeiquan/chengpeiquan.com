@@ -34,10 +34,14 @@
         :key="index"
       >
         <router-link
-          class="md:mb-4 mb-2"
+          class="flex md:items-center items-start md:mb-4 mb-2"
           :title="item.title"
           :to="item.path"
         >
+          <ri-fire-fill
+            v-if="item.isHot"
+            class="mr-2 text-xl text-red-500 dark:text-rose-500"
+          />
           <h2 class="md:text-2xl text-lg line-clamp-2">
             {{ item.title }}
           </h2>
@@ -68,7 +72,7 @@
               {{ item.desc }}
             </p>
 
-            <p class="md:text-sm text-xs text-gray-400" :title="item.date.substr(0, 10)">
+            <p class="flex justify-between md:text-sm text-xs text-gray-400" :title="item.date.substr(0, 10)">
               {{ item.diffDays > 7 ? item.date.substr(0, 10) : item.dateAgo }}
             </p>
           </div>
@@ -173,7 +177,7 @@ const getArticleList = (): void => {
   articleList.value = CUR_ROUTES.map( (route: RouteRecordRaw) => {
     const { path } = route;
     const { frontmatter } = route.meta;
-    const { title, desc, cover, date } = frontmatter;
+    const { title, desc, cover, date, isHot, repo } = frontmatter;
     const { diffDays, dateAgo } = dateDisplay(date);
     
     return {
@@ -182,6 +186,8 @@ const getArticleList = (): void => {
       desc,
       cover,
       date,
+      isHot,
+      repo,
       diffDays,
       dateAgo
     }

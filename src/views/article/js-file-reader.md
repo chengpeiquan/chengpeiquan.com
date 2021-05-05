@@ -6,6 +6,7 @@ date: 2020-09-28 00:22:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/09/2-3.jpg
 categories: 
   - tech
+repo: https://github.com/chengpeiquan/js-file-reader
 ---
 [[toc]]
 

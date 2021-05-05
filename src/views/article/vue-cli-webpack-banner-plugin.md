@@ -1,7 +1,7 @@
 ---
 title: 基于Vue-CLI 3.0 让WebPack在打包的时候添加版权注释
 desc: 其实以前就知道说有这么个东西可以在打包后添加一个版权注释，但是一直没有去用。不过最近觉得最好还是配置一下，版权不版权倒是其次，毕竟打包后都是混淆的东西，要抄也不好抄啊不是，主要还是给一些有需要的人知道说这个东西是谁写的，有什么问题可以咨询谁，或者说以后有什么类似的需求，是不是可以再次找谁做。
-keywords: 外卖计算器,拼单计算器
+keywords: WebPack 打包注释,WebPack banner,WebPack 版权
 date: 2019-04-21 23:03:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2019/04/1-1.jpg
 categories: 
