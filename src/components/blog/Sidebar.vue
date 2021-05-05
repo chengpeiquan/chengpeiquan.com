@@ -170,7 +170,7 @@ const moveToc = (): void | boolean => {
     const tocContainer: HTMLElement = document.querySelector('.article-toc-container');
     tocContainer.innerHTML = '';
     tocContainer.appendChild(toc);
-  }, 10);
+  }, 100);
 
   // 把文章内的目录移除
   const content: HTMLElement = document.querySelector('.article-content');
