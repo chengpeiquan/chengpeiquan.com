@@ -13,6 +13,13 @@ export const categories = [
     }
   },
   {
+    path: 'design',
+    text: {
+      'zh-CN': '设计',
+      en: 'Design'
+    }
+  },
+  {
     path: 'prose',
     text: {
       'zh-CN': '随笔',
