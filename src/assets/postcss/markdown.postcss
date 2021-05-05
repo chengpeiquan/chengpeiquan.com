@@ -186,10 +186,12 @@ blockquote {
     border-spacing: 0;
     border-collapse: separate;
     border-radius: 0.2rem;
+    overflow: hidden;
 
     thead {
       color: var(--fg);
       font-weight: bold;
+      background-color: var(--prism-background);
     }
 
     tbody {
@@ -226,10 +228,21 @@ blockquote {
   ol > li {
     list-style-type: decimal;
     padding-left: 0.75rem;
+    margin-left: 3em;
 
     &::before {
       display: none;
     }
+
+    p {
+      text-indent: 0;
+    }
+  }
+
+  /* 无序列表 */
+  ul > li {
+    padding-left: 1.75rem;
+    margin-left: 2em;
 
     p {
       text-indent: 0;

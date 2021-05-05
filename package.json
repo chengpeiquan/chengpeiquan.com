@@ -40,6 +40,7 @@
     "diacritics": "^1.3.0",
     "esno": "^0.4.3",
     "feed": "^4.2.2",
+    "flowchart.js": "^1.15.0",
     "fs-extra": "^9.1.0",
     "gray-matter": "^4.0.2",
     "markdown-it": "^12.0.4",
