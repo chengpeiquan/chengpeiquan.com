@@ -5,7 +5,6 @@ keywords: 需求设计,需求文档,需求规范
 date: 2021-05-05 00:01:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/05/20210505005328.jpg
 categories: 
-  - tech
   - design
 isHot: true
 ---
@@ -153,12 +152,12 @@ isHot: true
 │    │   ├───草稿箱
 │    │   └───发布预览 
 │    │
-│    ├─推荐和曝光
+│    ├───推荐和曝光
 │    │   ├───首页推荐位
 │    │   ├───内容分发机制
 │    │   └───分享功能
 │    │
-│    └─粉丝互动
+│    └───粉丝互动
 │        ├───作品被点赞
 │        ├───作品被评论
 │        └───作品被打赏
