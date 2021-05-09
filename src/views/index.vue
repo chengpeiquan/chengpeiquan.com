@@ -23,7 +23,7 @@
 <script setup lang="ts">
 import { inject } from 'vue'
 import { useHead } from '@vueuse/head'
-import config from '/@ts/config'
+import config from '/@/config'
 
 const lang: string = inject('lang') || '';
 

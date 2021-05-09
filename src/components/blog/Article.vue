@@ -53,7 +53,7 @@ import { defineProps, onMounted, ref, inject } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { isClient } from '@vueuse/core'
 import { useHead } from '@vueuse/head'
-import config from '/@ts/config'
+import config from '/@/config'
 import dateDisplay from '/@libs/dateDisplay'
 import isMobile from '/@libs/isMobile'
 

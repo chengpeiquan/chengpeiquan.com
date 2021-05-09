@@ -19,4 +19,4 @@ repo: https://github.com/chengpeiquan/my-netease
 
 ![扫码预览](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/06/my-netease/qrcode.jpg)
 
-手机可以戳 [这里](https://chengpeiquan.com/topic/netease) 直接看。
+手机可以戳 [这里](https://chengpeiquan.com/topic/netease/index.html) 直接看。

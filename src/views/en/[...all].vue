@@ -10,7 +10,7 @@
 import { useHead } from '@vueuse/head'
 import { isClient } from '@vueuse/core'
 import { ref, inject } from 'vue'
-import config from '/@ts/config'
+import config from '/@/config'
 import { onBeforeRouteLeave, useRouter } from 'vue-router'
 
 const router = useRouter();
