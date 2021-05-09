@@ -136,7 +136,7 @@ import { ref, inject, watchEffect } from 'vue'
 import { useRouter } from 'vue-router'
 import isDark from '/@libs/isDark'
 import isMobile from '/@libs/isMobile'
-import config from '/@ts/config'
+import config from '/@/config'
 
 interface NavList {
   path: string,

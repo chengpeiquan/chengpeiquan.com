@@ -17,8 +17,8 @@ import matter from 'gray-matter'
 import { VitePWA } from 'vite-plugin-pwa'
 import WindiCSS from 'vite-plugin-windicss'
 import Banner from 'vite-plugin-banner'
-import dayjs from 'dayjs'
 import { slugify } from './scripts/slugify'
+import dayjs from './src/libs/dayjs'
 import isDev from './src/libs/isDev'
 
 const resolve = (dir: string): string => path.resolve(__dirname, dir);
@@ -74,7 +74,7 @@ export default defineConfig({
         if ( !data.date ) {
           data.date = Date.now();
         }
-        data.date = dayjs(data.date).format('YYYY/MM/DD HH:mm:ss')
+        data.date = dayjs(data.date).format('YYYY/MM/DD HH:mm:ss');
         
         route.meta = Object.assign(route.meta || {}, {
           frontmatter: data

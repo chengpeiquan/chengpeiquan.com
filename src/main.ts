@@ -3,10 +3,6 @@
  */
 import NProgress from 'nprogress'
 import { ViteSSG } from 'vite-ssg'
-import dayjs from 'dayjs'
-import LocalizedFormat from 'dayjs/plugin/localizedFormat'
-import relativeTime from 'dayjs/plugin/relativeTime'
-import 'dayjs/locale/zh-cn'
 import baiduAnalytics from 'vue-baidu-analytics'
 import '@purge-icons/generated'
 
@@ -38,11 +34,6 @@ export const createApp = ViteSSG(
 
   // 一些全局的自定义配置功能
   ({ app, router, isClient }) => {
-    // 日期插件
-    dayjs.extend(LocalizedFormat);
-    dayjs.extend(relativeTime);
-    dayjs.locale('zh-cn');
-
     // 路由切换的加载进度条
     if ( isClient ) {
       router.beforeEach(() => { NProgress.start() })

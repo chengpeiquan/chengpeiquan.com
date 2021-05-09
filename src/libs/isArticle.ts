@@ -4,7 +4,7 @@
  * @param {string} lang - 语言缩写， e.g. en, zh-CN
  */
 import { RouteRecordRaw } from 'vue-router'
-import config from '/@ts/config'
+import config from '/@/config'
 
 const { defaultLang } = config;
 

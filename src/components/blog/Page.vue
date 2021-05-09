@@ -21,7 +21,7 @@
 <script setup lang="ts">
 import { defineProps, inject } from 'vue'
 import { useHead } from '@vueuse/head'
-import config from '/@ts/config'
+import config from '/@/config'
 
 const lang: string = inject('lang') || '';
 const { frontmatter } = defineProps<{ frontmatter: any }>();

@@ -8,7 +8,7 @@
 import { computed, provide, ref, watchEffect } from 'vue'
 import { useHead } from '@vueuse/head'
 import { useRoute } from 'vue-router';
-import config from '/@ts/config'
+import config from '/@/config'
 import { get } from '@vueuse/core';
 
 const route = useRoute();

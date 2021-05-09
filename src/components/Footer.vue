@@ -20,7 +20,7 @@
 
 <script setup lang="ts">
 import { ref, inject, watchEffect } from 'vue'
-import config from '/@ts/config'
+import config from '/@/config'
 import isMobile from '/@libs/isMobile'
 
 const name = ref<string>('');
