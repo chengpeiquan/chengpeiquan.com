@@ -9,6 +9,10 @@ export const routes = [
     ...autoRoutes,
     ...categoryRoutes
   ].map( (route) => {
+    if (route.name.endsWith('article-page') && !route.path.endsWith('?')) {
+      route.path += '?';
+    }
+
     return {
       ...route,
       alias: route.path.endsWith('/')
