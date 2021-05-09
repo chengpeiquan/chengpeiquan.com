@@ -37,9 +37,7 @@ const getCategories = (lang: string): void => {
       props: true,
       component: () => import('/src/views/article/[page].vue'),
       meta: {
-        frontmatter: {
-  
-        }
+        frontmatter: {}
       }
     }
   });
