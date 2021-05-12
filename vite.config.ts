@@ -132,11 +132,6 @@ export default defineConfig({
     VitePWA({
       base: '/',
       scope: 'https://chengpeiquan.com/',
-      /** 
-       * @todo https://github.com/hannoeru/vite-plugin-pages/issues/51
-       * @todo https://github.com/antfu/vite-plugin-pwa/blob/master/src/types.ts
-       */
-      // registerType: process.env.CLAIMS === 'true' ? 'autoUpdate' : undefined,
       manifest: {
         name: '程沛权',
         short_name: '程沛权',
