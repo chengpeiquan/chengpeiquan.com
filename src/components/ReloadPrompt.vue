@@ -23,6 +23,7 @@
 
 <script setup lang="ts">
 import { useRegisterSW } from 'virtual:pwa-register/vue'
+
 const {
   offlineReady,
   needRefresh,
