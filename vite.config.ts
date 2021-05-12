@@ -129,53 +129,53 @@ export default defineConfig({
 
     Icons(),
 
-    VitePWA({
-      base: '/',
-      scope: 'https://chengpeiquan.com/',
-      manifest: {
-        name: '程沛权',
-        short_name: '程沛权',
-        start_url: 'https://chengpeiquan.com/',
-        theme_color: '#111111',
-        icons: [
-          {
-            src: '/avatar-32x32.png',
-            sizes: '32x32',
-            type: 'image/png',
-          },
-          {
-            src: '/avatar-128x128.png',
-            sizes: '128x128',
-            type: 'image/png',
-          },
-          {
-            src: '/avatar-144x144.png',
-            sizes: '144x144',
-            type: 'image/png',
-          },
-          {
-            src: '/avatar-192x192.png',
-            sizes: '192x192',
-            type: 'image/png',
-          },
-          {
-            src: '/avatar-256x256.png',
-            sizes: '256x256',
-            type: 'image/png',
-          },
-          {
-            src: '/avatar-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-          },
-        ],
-      },
-      /** 
-       * @todo https://github.com/hannoeru/vite-plugin-pages/issues/51
-       * @todo https://github.com/antfu/vite-plugin-pwa/blob/master/src/types.ts
-       */
-      registerType: process.env.CLAIMS === 'true' ? 'autoUpdate' : undefined,
-    }),
+    // VitePWA({
+    //   base: '/',
+    //   scope: 'https://chengpeiquan.com/',
+    //   manifest: {
+    //     name: '程沛权',
+    //     short_name: '程沛权',
+    //     start_url: 'https://chengpeiquan.com/',
+    //     theme_color: '#111111',
+    //     icons: [
+    //       {
+    //         src: '/avatar-32x32.png',
+    //         sizes: '32x32',
+    //         type: 'image/png',
+    //       },
+    //       {
+    //         src: '/avatar-128x128.png',
+    //         sizes: '128x128',
+    //         type: 'image/png',
+    //       },
+    //       {
+    //         src: '/avatar-144x144.png',
+    //         sizes: '144x144',
+    //         type: 'image/png',
+    //       },
+    //       {
+    //         src: '/avatar-192x192.png',
+    //         sizes: '192x192',
+    //         type: 'image/png',
+    //       },
+    //       {
+    //         src: '/avatar-256x256.png',
+    //         sizes: '256x256',
+    //         type: 'image/png',
+    //       },
+    //       {
+    //         src: '/avatar-512x512.png',
+    //         sizes: '512x512',
+    //         type: 'image/png',
+    //       },
+    //     ],
+    //   },
+    //   /** 
+    //    * @todo https://github.com/hannoeru/vite-plugin-pages/issues/51
+    //    * @todo https://github.com/antfu/vite-plugin-pwa/blob/master/src/types.ts
+    //    */
+    //   registerType: process.env.CLAIMS === 'true' ? 'autoUpdate' : undefined,
+    // }),
 
     ...WindiCSS({
       safelist: 'prose prose-sm m-auto dark'
