@@ -2,7 +2,7 @@
   <Header />
   <router-view :key="key" />
   <Footer />
-  <ReloadPrompt />
+  <!-- <ReloadPrompt /> -->
 </template>
 
 <script setup lang="ts">
