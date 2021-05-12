@@ -170,6 +170,11 @@ export default defineConfig({
           },
         ],
       },
+      /** 
+       * @todo https://github.com/hannoeru/vite-plugin-pages/issues/51
+       * @todo https://github.com/antfu/vite-plugin-pwa/blob/master/src/types.ts
+       */
+      registerType: process.env.CLAIMS === 'true' ? 'autoUpdate' : undefined,
     }),
 
     ...WindiCSS({
