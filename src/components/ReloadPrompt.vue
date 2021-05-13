@@ -28,11 +28,12 @@ const {
   offlineReady,
   needRefresh,
   updateServiceWorker,
-} = useRegisterSW()
-const close = async() => {
+} = useRegisterSW();
+
+const close = async () => {
   offlineReady.value = false
   needRefresh.value = false
-}
+};
 </script>
 
 <style>
