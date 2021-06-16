@@ -14,26 +14,27 @@ import toc from 'markdown-it-table-of-contents'
 import externalLinks from 'markdown-it-external-links'
 import implicitFigures from 'markdown-it-implicit-figures'
 import matter from 'gray-matter'
-import { VitePWA } from 'vite-plugin-pwa'
 import WindiCSS from 'vite-plugin-windicss'
 import Banner from 'vite-plugin-banner'
 import { slugify } from './scripts/slugify'
 import dayjs from './src/libs/dayjs'
 import isDev from './src/libs/isDev'
 
-const resolve = (dir: string): string => path.resolve(__dirname, dir);
+const resolve = (dir: string): string => path.resolve(__dirname, dir)
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: isDev ? '/' : 'https://cdn.jsdelivr.net/gh/chengpeiquan/chengpeiquan.com@gh-pages/',
+  base: isDev
+    ? '/'
+    : 'https://cdn.jsdelivr.net/gh/chengpeiquan/chengpeiquan.com@gh-pages/',
   server: {
     port: 33333,
     proxy: {
-      '/api': 'https://chengpeiquan.com/api'
-    }
+      '/api': 'https://chengpeiquan.com/api',
+    },
   },
   build: {
-    assetsInlineLimit: 1024 * 8
+    assetsInlineLimit: 1024 * 8,
   },
   resolve: {
     alias: {
@@ -43,7 +44,7 @@ export default defineConfig({
       '/@ts': resolve('src/assets/ts'),
       '/@libs': resolve('src/libs'),
       '/@cp': resolve('src/components'),
-      '/@views': resolve('src/views')
+      '/@views': resolve('src/views'),
     },
   },
   optimizeDeps: {
@@ -66,21 +67,21 @@ export default defineConfig({
     Pages({
       pagesDir: 'src/views',
       extensions: ['vue', 'md'],
-      extendRoute (route) {
-        const path = resolve(route.component.slice(1));
-        const md = fs.readFileSync(path, 'utf-8');
+      extendRoute(route) {
+        const path = resolve(route.component.slice(1))
+        const md = fs.readFileSync(path, 'utf-8')
 
-        const { data } = matter(md);
-        if ( !data.date ) {
-          data.date = Date.now();
+        const { data } = matter(md)
+        if (!data.date) {
+          data.date = Date.now()
         }
-        data.date = dayjs(data.date).format('YYYY/MM/DD HH:mm:ss');
-        
-        route.meta = Object.assign(route.meta || {}, {
-          frontmatter: data
-        });
+        data.date = dayjs(data.date).format('YYYY/MM/DD HH:mm:ss')
 
-        return route;
+        route.meta = Object.assign(route.meta || {}, {
+          frontmatter: data,
+        })
+
+        return route
       },
     }),
 
@@ -88,30 +89,36 @@ export default defineConfig({
       wrapperComponent: 'detail',
       wrapperClasses: 'article-content prose mx-auto',
       headEnabled: true,
-      markdownItSetup (md) {
-        md.use(Prism);
+      markdownItSetup(md) {
+        md.use(Prism)
         md.use(anchor, {
           slugify,
           permalink: true,
           permalinkBefore: true,
           permalinkSymbol: '#',
           permalinkAttrs: () => ({
-            'aria-hidden': true
+            'aria-hidden': true,
           }),
-        });
+        })
         md.use(toc, {
           includeLevel: [2, 3, 4],
           containerClass: 'article-toc prose',
-          slugify: (s: string) => encodeURIComponent(String(s).trim().toLowerCase().replace(/\s+|\.+/g, '-'))
-        });
+          slugify: (s: string) =>
+            encodeURIComponent(
+              String(s)
+                .trim()
+                .toLowerCase()
+                .replace(/\s+|\.+/g, '-')
+            ),
+        })
         md.use(externalLinks, {
           externalClassName: 'custom-external-link',
           externalTarget: '_blank',
           externalRel: 'noopener noreferrer',
-          internalDomains: [ 'chengpeiquan.com' ]
-        });
+          internalDomains: ['chengpeiquan.com'],
+        })
         md.use(implicitFigures, {
-          figcaption: true
+          figcaption: true,
         })
       },
     }),
@@ -119,63 +126,22 @@ export default defineConfig({
     ViteComponents({
       extensions: ['vue', 'md'],
       deep: true,
-      customLoaderMatcher: path => path.endsWith('.md'),
+      customLoaderMatcher: (path) => path.endsWith('.md'),
       customComponentResolvers: ViteIconsResolver({
         componentPrefix: '',
       }),
     }),
-    
+
     PurgeIcons(),
 
     Icons(),
 
-    VitePWA({
-      base: '/',
-      scope: 'https://chengpeiquan.com/',
-      manifest: {
-        name: '程沛权',
-        short_name: '程沛权',
-        start_url: 'https://chengpeiquan.com/',
-        theme_color: '#111111',
-        icons: [
-          {
-            src: '/avatar-32x32.png',
-            sizes: '32x32',
-            type: 'image/png',
-          },
-          {
-            src: '/avatar-128x128.png',
-            sizes: '128x128',
-            type: 'image/png',
-          },
-          {
-            src: '/avatar-144x144.png',
-            sizes: '144x144',
-            type: 'image/png',
-          },
-          {
-            src: '/avatar-192x192.png',
-            sizes: '192x192',
-            type: 'image/png',
-          },
-          {
-            src: '/avatar-256x256.png',
-            sizes: '256x256',
-            type: 'image/png',
-          },
-          {
-            src: '/avatar-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-          },
-        ],
-      },
-    }),
-
     ...WindiCSS({
-      safelist: 'prose prose-sm m-auto dark'
+      safelist: 'prose prose-sm m-auto dark',
     }),
 
-    Banner(`/**\n * name: ${pkg.name}\n * version: v${pkg.version}\n * description: ${pkg.description}\n * author: ${pkg.author}\n * homepage: ${pkg.homepage}\n */`),
-  ]
+    Banner(
+      `/**\n * name: ${pkg.name}\n * version: v${pkg.version}\n * description: ${pkg.description}\n * author: ${pkg.author}\n * homepage: ${pkg.homepage}\n */`
+    ),
+  ],
 })
