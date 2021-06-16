@@ -4,12 +4,12 @@ desc: 目前除了美团之外，其他的外卖app（像饿了么啊、瑞幸�
 keywords: 外卖计算器,拼单计算器
 date: 2020-11-22 15:46:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/12/2-1.jpg
-categories: 
+categories:
   - tech
 repo: https://github.com/chengpeiquan/group-buy-calculator
 ---
 
-目前除了美团之外，其他的外卖app（像饿了么啊、瑞幸啊、麦当劳肯德基啊）都没提供自动计算账单的功能，自己每次拉excel算的蛋疼，所以写了这个。
+目前除了美团之外，其他的外卖 app（像饿了么啊、瑞幸啊、麦当劳肯德基啊）都没提供自动计算账单的功能，自己每次拉 excel 算的蛋疼，所以写了这个。
 
 ## 在线体验
 

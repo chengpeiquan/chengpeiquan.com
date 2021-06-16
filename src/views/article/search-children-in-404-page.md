@@ -4,10 +4,11 @@ desc: 很久没采购成箱的东西了，大部分情况下都是零零散散�
 keywords: node爬虫,宝贝回家404,宝贝回家API
 date: 2021-04-11 15:40:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/04/20210411154503.jpg
-categories: 
+categories:
   - tech
 repo: https://github.com/chengpeiquan/search-children-api-example
 ---
+
 [[toc]]
 
 在 404 页面投放走失儿童信息，这不是什么新鲜事了，到现在起码有近 10 年的历史，本来腾讯公益也有提供一个公共的 JS 文件可以直接调用，但是发现，数据竟然不更新了…… 2021 年都过去了快一半，JS 提供的数据源竟然还停留在一年前甚至更久，甚至我搜了一下里面的一些孩子信息，在腾讯 404 的 “最新” 数据源里，竟然有一个小宝宝已经成为了天使……
@@ -53,33 +54,35 @@ repo: https://github.com/chengpeiquan/search-children-api-example
 这里我借助了 [jsdom](https://github.com/jsdom/jsdom) 来分析页面结构，提取每个人的详情页链接，另外考虑到曝光率的问题，一个列表 35 个人，全部展示不现实，但如果一直按列表顺序截取前 X 个人，又太少（官网的更新频率也不是非常的高），尽量保持第一页的人都有足够的曝光机会，所以这里通过一个 [洗牌算法](https://zhuanlan.zhihu.com/p/31547382) 打乱了排序，再截取前 3 个被寻人的信息去抓取详情。
 
 ```js
-/** 
+/**
  * 获取要查找的人物数据
  * @description 需要先从列表拿到人物详情页的链接，再去详情页爬取具体的数据回来
  */
 const getSearchChildrenData = async () => {
-  let result = [];
+  let result = []
 
   try {
-    const RES = await fetch(`${__CONFIG__.domain}/list.aspx?tid=${__CONFIG__.tid}&photo=1&page=${__CONFIG__.page}`);
-    const RES_HTML = await RES.text();
-    const DOM = new JSDOM(RES_HTML);
-    const { window } = DOM;
-    const { document } = window;
+    const RES = await fetch(
+      `${__CONFIG__.domain}/list.aspx?tid=${__CONFIG__.tid}&photo=1&page=${__CONFIG__.page}`
+    )
+    const RES_HTML = await RES.text()
+    const DOM = new JSDOM(RES_HTML)
+    const { window } = DOM
+    const { document } = window
 
     // 提取列表的链接
-    const LINK_LIST = document.querySelectorAll('#ti1 dt a');
+    const LINK_LIST = document.querySelectorAll('#ti1 dt a')
 
     // 打乱顺序，提取被随机到的前三个
-    const SHUFFLE_LIST = shuffle([...LINK_LIST]).slice(0, 3);
+    const SHUFFLE_LIST = shuffle([...LINK_LIST]).slice(0, 3)
 
     // 因为还要继续请求，所以需要接受一个异步函数去继续处理
-    result = await getResultList(SHUFFLE_LIST);
+    result = await getResultList(SHUFFLE_LIST)
   } catch (e) {
-    console.log(e);
+    console.log(e)
   }
 
-  return result;
+  return result
 }
 ```
 
@@ -88,29 +91,29 @@ const getSearchChildrenData = async () => {
 第一步拿到的是一个 a 标签的 DOM 合集，在这里做了一层循环，由于需要等待详情页的爬取完毕后再统一返回，所以这里没有使用 forEach 等方法，只用了传统的 for 去等待每个请求（所以这也是每次只取 3 个被寻人的原因，虽然是公益，但也不希望对官网造成有过多的不良影响）。
 
 ```js
-/** 
+/**
  * 获取要查找的人物信息列表
  * @description 这里是最终要作为接口数据返回的列表
  */
 const getResultList = async (domList) => {
-  const RESULT_LIST = [];
+  const RESULT_LIST = []
   for (let i = 0; i < domList.length; i++) {
     // 拿到详情页的链接
-    const A = domList[i];
-    const URL = __CONFIG__.domain + A.getAttribute('href');
+    const A = domList[i]
+    const URL = __CONFIG__.domain + A.getAttribute('href')
 
     // 需要再去详情页爬取详细的人员信息
-    const INFO = await getInfo(URL);
-    RESULT_LIST.push(INFO);
+    const INFO = await getInfo(URL)
+    RESULT_LIST.push(INFO)
   }
-  return RESULT_LIST;
+  return RESULT_LIST
 }
 ```
 
 爬取详情页的时候也是通过 jsdom 去分析页面结构，拿到节点上的文本信息作为 JSON 的值来返回。
 
 ```js
-/** 
+/**
  * 获取人物的详细信息
  * @description 缺失的信息统一处理为不详再返回
  */
@@ -124,67 +127,67 @@ const getInfo = async (url) => {
     missingDate: '不详',
     missingPlace: '不详',
     feature: '不详',
-    url: url || __CONFIG__.domain
-  };
+    url: url || __CONFIG__.domain,
+  }
 
   // 更新详情页里的字段数据
   try {
-    const RES = await fetch(url);
-    const RES_HTML = await RES.text();
-    const DOM = new JSDOM(RES_HTML);
-    const { window } = DOM;
-    const { document } = window;
+    const RES = await fetch(url)
+    const RES_HTML = await RES.text()
+    const DOM = new JSDOM(RES_HTML)
+    const { window } = DOM
+    const { document } = window
 
     // 提取照片
-    const PHOTO_DOM = document.querySelector('#_table_1_photo img');
-    const PHOTO = __CONFIG__.domain + PHOTO_DOM.getAttribute('src');
-    INFO['photo'] = PHOTO;
+    const PHOTO_DOM = document.querySelector('#_table_1_photo img')
+    const PHOTO = __CONFIG__.domain + PHOTO_DOM.getAttribute('src')
+    INFO['photo'] = PHOTO
 
     // 提取个人信息
-    const INFO_DOM_LIST = document.querySelectorAll('#table_1_normaldivr li');
-    INFO_DOM_LIST.forEach( (item, index) => {
+    const INFO_DOM_LIST = document.querySelectorAll('#table_1_normaldivr li')
+    INFO_DOM_LIST.forEach((item, index) => {
       // 提取过滤掉标签后的文本
-      const TEXT = item.innerHTML.replace(/<span>.*<\/span>/, '') || '不详';
+      const TEXT = item.innerHTML.replace(/<span>.*<\/span>/, '') || '不详'
 
       // 根据索引判断要存储的字段
       switch (index) {
         case 2:
-          INFO['name'] = TEXT;
-          break;
+          INFO['name'] = TEXT
+          break
         case 3:
-          INFO['gender'] = TEXT;
-          break;
+          INFO['gender'] = TEXT
+          break
         case 4:
-          INFO['birthday'] = TEXT;
-          break;
+          INFO['birthday'] = TEXT
+          break
         case 6:
-          INFO['missingDate'] = TEXT;
-          break;
+          INFO['missingDate'] = TEXT
+          break
         case 8:
-          INFO['missingPlace'] = TEXT;
-          break;
+          INFO['missingPlace'] = TEXT
+          break
         case 10:
-          INFO['feature'] = TEXT;
-          break;
+          INFO['feature'] = TEXT
+          break
       }
-    });
+    })
   } catch (e) {
-    console.log(e);
+    console.log(e)
   }
 
-  return INFO;
+  return INFO
 }
 ```
 
 最终是得到了一个 JSON Array 返回给接口，因为我的服务端程序是用的 Express ，所以在 Express 的路由文件里，读取刚才写好的方法，拿到数据后作为接口的数据返回即可。
 
 ```js
-const getSearchChildrenData = require('../api/getSearchChildrenData');
+const getSearchChildrenData = require('../api/getSearchChildrenData')
 
 // 接口：宝贝回家
 router.get('/api/searchChildren', async (req, res) => {
-  const data = await getSearchChildrenData();
-  res.send(data);
+  const data = await getSearchChildrenData()
+  res.send(data)
 })
 ```
 

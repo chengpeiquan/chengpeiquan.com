@@ -4,7 +4,7 @@ desc: 最近项目用到了百度地图的API，用倒是没啥毛病，就是�
 keywords: 百度地图销毁,百度地图API销毁
 date: 2020-12-24 16:00:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/12/baidu-map.jpg
-categories: 
+categories:
   - tech
 ---
 
@@ -26,7 +26,7 @@ categories:
 
 根据打印出来的报错日志，可以看到这个报错是百度地图 API 的 JS 文件产生出来的。
 
-通常会产生这种情况的无非就是 `setTimeout` 和 `setInterval` 了，在百度地图 API 的源码里找到了相关的代码 `setInterval(e._watchSize, 16)` ，确实是一直在监听DOM的尺寸变化。
+通常会产生这种情况的无非就是 `setTimeout` 和 `setInterval` 了，在百度地图 API 的源码里找到了相关的代码 `setInterval(e._watchSize, 16)` ，确实是一直在监听 DOM 的尺寸变化。
 
 那么解决思路就有了，在移除 DOM 的同时，顺带清除这些定时器。
 
@@ -38,24 +38,23 @@ categories:
 
 ```js
 /**
-  * 销毁百度地图
-  */
+ * 销毁百度地图
+ */
 try {
   // 注销地图（换成你初始化时定义的地图变量）
-  map = null;
+  map = null
 
   // 获取interval的最高ID然后遍历清除
-  const HIGHEST_INTERVAL_ID = setInterval(';');
-  for ( let i = 0 ; i < HIGHEST_INTERVAL_ID ; i++ ) {
-    clearInterval(i); 
+  const HIGHEST_INTERVAL_ID = setInterval(';')
+  for (let i = 0; i < HIGHEST_INTERVAL_ID; i++) {
+    clearInterval(i)
   }
 
   // 获取百度地图创建的DOM并销毁
-  const BAIDU_MAPS = document.querySelectorAll('.tangram-suggestion-main');
-  BAIDU_MAPS.forEach( item => {
-    document.body.removeChild(item);
-  });
-
+  const BAIDU_MAPS = document.querySelectorAll('.tangram-suggestion-main')
+  BAIDU_MAPS.forEach((item) => {
+    document.body.removeChild(item)
+  })
 } catch (e) {
   // console.log(e);
 }

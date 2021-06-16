@@ -1,6 +1,16 @@
 <template>
   <!-- 文章 -->
-  <section class="article-detail flex justify-start flex-col flex-1 md:w-auto w-full overflow-hidden">
+  <section
+    class="
+      article-detail
+      flex
+      justify-start
+      flex-col flex-1
+      md:w-auto
+      w-full
+      overflow-hidden
+    "
+  >
     <!-- 标题 -->
     <h1 class="flex items-center w-full md:text-3xl text-xl md:mb-4 mb-2">
       {{ title }}
@@ -8,7 +18,21 @@
     <!-- 标题 -->
 
     <!-- 发布信息 -->
-    <div class="flex justify-between items-center w-full text-sm text-gray-400 md:mb-8 mb-4 md:pb-8 pb-4 border-b dark:border-white dark:border-opacity-5">
+    <div
+      class="
+        flex
+        justify-between
+        items-center
+        w-full
+        text-sm text-gray-400
+        md:mb-8
+        mb-4
+        md:pb-8
+        pb-4
+        border-b
+        dark:border-white dark:border-opacity-5
+      "
+    >
       <div class="flex items-center">
         <span class="md:mr-8 mr-4">作者：程沛权</span>
         <span :title="date.substr(0, 10)">
@@ -18,7 +42,13 @@
 
       <div
         v-if="repo && !isMobile"
-        class="flex items-center cursor-pointer hover:text-red-500 dark:hover:text-rose-500"
+        class="
+          flex
+          items-center
+          cursor-pointer
+          hover:text-red-500
+          dark:hover:text-rose-500
+        "
         :title="lang === 'zh-CN' ? '给仓库一个Star' : 'Star this repository'"
         @click="openRepo"
       >
@@ -31,9 +61,24 @@
     <!-- 过期提示 -->
     <p
       v-if="diffDays > 730"
-      class="flex justify-center items-center w-full p-4 md:mb-8 mb-4 bg-gray-50 dark:bg-white dark:bg-opacity-5 rounded text-gray-600 dark:text-gray-300 text-sm"
+      class="
+        flex
+        justify-center
+        items-center
+        w-full
+        p-4
+        md:mb-8
+        mb-4
+        bg-gray-50
+        dark:bg-white dark:bg-opacity-5
+        rounded
+        text-gray-600
+        dark:text-gray-300
+        text-sm
+      "
     >
-      本文最后更新于 {{ diffDays }} 天前，部分内容可能不适合当前所有情况，仅供参考。
+      本文最后更新于
+      {{ diffDays }} 天前，部分内容可能不适合当前所有情况，仅供参考。
     </p>
     <!-- 过期提示 -->
 
@@ -57,66 +102,70 @@ import config from '/@/config'
 import dateDisplay from '/@libs/dateDisplay'
 import isMobile from '/@libs/isMobile'
 
-const route = useRoute();
-const router = useRouter();
-const { frontmatter } = defineProps<{ frontmatter: any }>();
-const { title, desc, keywords, date, repo } = frontmatter;
-const { diffDays, dateAgo } = dateDisplay(date);
-const lang: string = inject('lang') || '';
+const route = useRoute()
+const router = useRouter()
+const { frontmatter } = defineProps<{ frontmatter: any }>()
+const { title, desc, keywords, date, repo } = frontmatter
+const { diffDays, dateAgo } = dateDisplay(date)
+const lang: string = inject('lang') || ''
 
-/** 
+/**
  * 打开仓库
  */
 const openRepo = (): void => {
-  if (!repo || !String(repo).startsWith('http')) return;
-  window.open(repo);
+  if (!repo || !String(repo).startsWith('http')) return
+  window.open(repo)
 }
 
-/** 
+/**
  * 设置页面信息
  */
 useHead({
   title: isMobile.value ? title : `${title} - ${config.i18n[lang.value].title}`,
   meta: [
-    { property: 'og:title', content: `${title} - ${config.i18n[lang.value].title}` },
+    {
+      property: 'og:title',
+      content: `${title} - ${config.i18n[lang.value].title}`,
+    },
     { name: 'description', content: desc },
-    { name: 'keywords', content: keywords }
+    { name: 'keywords', content: keywords },
   ],
 })
 
-/** 
+/**
  * 页面加载时定位到链接对应的锚点
  */
 const navigateToId = (): void => {
-  if ( !isClient ) {
-    return false;
+  if (!isClient) {
+    return false
   }
-  
-  router.isReady()
-    .then( () => {
+
+  router
+    .isReady()
+    .then(() => {
       setTimeout(() => {
-        const { hash } = document.location;
-        if ( hash.length > 1 ) {
-          const id: string = decodeURIComponent(hash.substring(1));
-          const element: HTMLElement | null = document.getElementById(id);
-          if ( element ) {
+        const { hash } = document.location
+        if (hash.length > 1) {
+          const id: string = decodeURIComponent(hash.substring(1))
+          const element: HTMLElement | null = document.getElementById(id)
+          if (element) {
             element.scrollIntoView({
-              behavior: 'smooth'
-            });
+              behavior: 'smooth',
+            })
           }
         }
-      }, 500);
+      }, 500)
     })
-    .catch( (e) => {
-      console.log(e);
-    });
+    .catch((e) => {
+      console.log(e)
+    })
 }
 
-onMounted(navigateToId);
+onMounted(navigateToId)
 </script>
 
 <style lang="postcss">
-@media (max-width: 1280px) { 
+@media (max-width: 1280px) {
   .article-detail {
     .article-toc {
       li {

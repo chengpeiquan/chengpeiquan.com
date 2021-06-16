@@ -8,7 +8,7 @@
         height="225"
         src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/01/20210222114425.jpg"
         alt="花臂当仔"
-      >
+      />
     </section>
     <!-- 头图 -->
 
@@ -16,7 +16,6 @@
     <!-- <section class="container mx-auto mb-6">
     </section> -->
     <!-- 主体 -->
-
   </main>
 </template>
 
@@ -25,17 +24,17 @@ import { inject } from 'vue'
 import { useHead } from '@vueuse/head'
 import config from '/@/config'
 
-const lang: string = inject('lang') || '';
+const lang: string = inject('lang') || ''
 
 useHead({
   title: config.i18n[lang.value].title,
   meta: [
     {
       property: 'og:title',
-      content: config.i18n[lang.value].title
-    }
+      content: config.i18n[lang.value].title,
+    },
   ],
-});
+})
 </script>
 
 <style lang="postcss" scoped>

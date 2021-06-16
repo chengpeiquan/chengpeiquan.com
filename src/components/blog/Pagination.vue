@@ -5,7 +5,7 @@
       <router-link
         v-if="page > 1"
         :to="{
-          name: routeName
+          name: routeName,
         }"
       >
         First
@@ -19,7 +19,7 @@
       <router-link
         v-if="page === 2"
         :to="{
-          name: routeName
+          name: routeName,
         }"
       >
         Prev
@@ -29,8 +29,8 @@
         :to="{
           name: routeName,
           params: {
-            page: page - 1
-          }
+            page: page - 1,
+          },
         }"
       >
         Prev
@@ -46,8 +46,8 @@
         :to="{
           name: routeName,
           params: {
-            page: page + 1
-          }
+            page: page + 1,
+          },
         }"
       >
         Next
@@ -63,8 +63,8 @@
         :to="{
           name: routeName,
           params: {
-            page: pageTotal
-          }
+            page: pageTotal,
+          },
         }"
       >
         Last
@@ -85,5 +85,4 @@ defineProps({
 })
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

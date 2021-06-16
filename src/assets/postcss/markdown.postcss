@@ -1,7 +1,6 @@
 /* https://github.com/antfu/prism-theme-vars */
 @import 'prism-theme-vars/base.css';
 
-
 /* 主题变量 */
 :root {
   --prism-font-size: 0.9rem;
@@ -56,7 +55,6 @@ html.dark {
   --fg-deeper: #fff;
 }
 
-
 /* 标题和部分文本 */
 h1:hover .header-anchor,
 h1:focus .header-anchor,
@@ -110,9 +108,8 @@ blockquote {
   margin-inline-end: 1em;
 }
 
-
 /* 文章格式化 */
-.prose {  
+.prose {
   width: 100%;
   max-width: 100%;
   color: var(--fg);
@@ -138,26 +135,26 @@ blockquote {
     text-decoration: none;
     border-bottom: 1px solid transparent;
 
-    &:hover { 
+    &:hover {
       border-bottom: 1px solid var(--fg-light);
     }
 
     &::before {
-      content: "「";
+      content: '「';
       position: relative;
-      top: calc( -1 * var(--margin) / 8 );
+      top: calc(-1 * var(--margin) / 8);
       color: var(--fg-light);
       font-size: var(--prism-font-size);
-      margin-right: calc( var(--margin) / 4);
+      margin-right: calc(var(--margin) / 4);
     }
 
     &::after {
-      content: "」";
+      content: '」';
       position: relative;
-      bottom: calc( -1 * var(--margin) / 8 );
+      bottom: calc(-1 * var(--margin) / 8);
       color: var(--fg-light);
       font-size: var(--prism-font-size);
-      margin-left: calc( var(--margin) / 4);
+      margin-left: calc(var(--margin) / 4);
     }
 
     &.header-anchor {
@@ -213,7 +210,6 @@ blockquote {
       &:last-child {
         border-right: 0;
       }
-
     }
 
     a {
@@ -273,11 +269,11 @@ blockquote {
     margin-bottom: 2em;
 
     &::before {
-      content: "“";
+      content: '“';
       position: absolute;
-      top: -.2em;
+      top: -0.2em;
       left: 0;
-      font-family: "Times New Roman", Times, serif;
+      font-family: 'Times New Roman', Times, serif;
       font-size: 300%;
       font-weight: 700;
       line-height: 1;
@@ -293,7 +289,6 @@ blockquote {
   }
 }
 
-
 /* 图片 */
 .img {
   @apply w-full h-full object-cover rounded;
@@ -301,7 +296,7 @@ blockquote {
 
 /* 文章链接和锚点 */
 a.item {
-  transition: .2s all ease-out;
+  transition: 0.2s all ease-out;
   text-decoration: none;
   border-bottom: none !important;
   opacity: 0.6;
@@ -312,10 +307,10 @@ a.item {
 }
 a.header-anchor {
   float: left;
-  margin-top: .125em;
+  margin-top: 0.125em;
   margin-left: -1.2em;
-  padding-right: .50em;
-  font-size: .85em;
+  padding-right: 0.5em;
+  font-size: 0.85em;
   opacity: 0;
   text-decoration: none;
   border: 0 !important;

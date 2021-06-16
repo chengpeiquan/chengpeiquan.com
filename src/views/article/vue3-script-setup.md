@@ -4,13 +4,14 @@ desc: 今天想聊一聊 Vue 3.0 的 script-setup，以及目前三个很少被�
 keywords: script setup,vue 3.0 script setup,vue3 script setup,script setup prop,script setup emit,defineProps,vue 3.0 defineProps,vue defineProps,vue3 defineProps,prop defineProps,setup defineProps,defineEmit,vue 3.0 defineEmit,vue defineEmit,vue3 defineEmit,emit defineEmit,setup defineEmit,useContext,vue 3.0 useContext,vue useContext,vue3 useContext,setup useContext
 date: 2021-03-05 00:48:13
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210305211036.jpg
-categories: 
+categories:
   - tech
 repo: https://github.com/chengpeiquan/learning-vue3
 ---
+
 [[toc]]
 
->2021-03-21：本文已同步到 [高效开发 - Vue3.0学习教程与实战案例](https://vue3.chengpeiquan.com/efficient.html) 一章，可直接看专题文档了解更多。
+> 2021-03-21：本文已同步到 [高效开发 - Vue3.0 学习教程与实战案例](https://vue3.chengpeiquan.com/efficient.html) 一章，可直接看专题文档了解更多。
 
 今天想聊一聊 Vue 3.0 的 script-setup，以及目前三个很少被提及到的 API —— defineProps 、 defineEmit 和 useContext。
 
@@ -20,8 +21,7 @@ repo: https://github.com/chengpeiquan/learning-vue3
 
 很多人应该还只是处于单纯知道 script-setup 对于原来的 setup 起到什么样的便利性，但一旦哪天真的想用起来，会发现不知道 props 怎么用，不知道 emit 怎么用，用法完全变了，还一时半会搜不到文档，关键时刻被卡住（这一点在 stackoverflow 上的问题咨询体现的比较明显），这也是我想写一写这篇文章的目的，提前科普这几个新特性。
 
-><br>在阅读这篇文章之前，需要对 Vue 3.0 的 setup 函数有一定的了解，如果还处于完全没有接触过的阶段，请先抽点时间阅读  [单组件的编写 - Vue3.0学习教程与实战案例](https://vue3.chengpeiquan.com/component.html) 。<br>
-><br>另外，根据 vue-next 的 [changelog](https://github.com/vuejs/vue-next/blob/master/CHANGELOG.md) ，记得先把 vue 和 @vue/compiler-sfc 这两个依赖都升级到 v3.0.4 版本或以上（这两个依赖必须保持同样的版本号，我自己是在目前最新的 v3.0.7 版本下跑通了所有 API，版本太低会报错，因为旧版本还没有包含更新的内容）<br>
+> <br>在阅读这篇文章之前，需要对 Vue 3.0 的 setup 函数有一定的了解，如果还处于完全没有接触过的阶段，请先抽点时间阅读 [单组件的编写 - Vue3.0 学习教程与实战案例](https://vue3.chengpeiquan.com/component.html) 。<br> ><br>另外，根据 vue-next 的 [changelog](https://github.com/vuejs/vue-next/blob/master/CHANGELOG.md) ，记得先把 vue 和 @vue/compiler-sfc 这两个依赖都升级到 v3.0.4 版本或以上（这两个依赖必须保持同样的版本号，我自己是在目前最新的 v3.0.7 版本下跑通了所有 API，版本太低会报错，因为旧版本还没有包含更新的内容）<br>
 
 本文会划分为四个部分：
 
@@ -42,15 +42,14 @@ repo: https://github.com/chengpeiquan/learning-vue3
 ```html
 <!-- 标准组件格式 -->
 <script lang="ts">
-import { defineComponent } from 'vue'
+  import { defineComponent } from 'vue'
 
-export default defineComponent({
-  setup () {
-    
-    // 要给 template 用的数据需要 return 出来才可以
-    return {}
-  }
-})
+  export default defineComponent({
+    setup() {
+      // 要给 template 用的数据需要 return 出来才可以
+      return {}
+    },
+  })
 </script>
 ```
 
@@ -74,20 +73,20 @@ Vue 会通过单组件编译器，在编译的时候将其处理回标准组件�
 ```html
 <!-- 标准组件格式 -->
 <script lang="ts">
-import { defineComponent } from 'vue'
+  import { defineComponent } from 'vue'
 
-// 需要先导入组件
-import Header from '@cp/Header.vue'
+  // 需要先导入组件
+  import Header from '@cp/Header.vue'
 
-export default defineComponent({
-  // 需要通过 components 才能启用子组件
-  components: {
-    Header
-  },
-  setup () {
-    // ...
-  }
-})
+  export default defineComponent({
+    // 需要通过 components 才能启用子组件
+    components: {
+      Header,
+    },
+    setup() {
+      // ...
+    },
+  })
 </script>
 ```
 
@@ -96,7 +95,7 @@ export default defineComponent({
 ```html
 <!-- 使用 script-setup 格式 -->
 <script setup lang="ts">
-import Header from '@cp/Header.vue'
+  import Header from '@cp/Header.vue'
 </script>
 ```
 
@@ -120,33 +119,30 @@ props 就是在这种情况下用于父组件向子组件传递数据，而 emit
 
 ```html
 <template>
-  <Content
-    :name="name"
-    @change-name="changeName"
-  />
+  <content :name="name" @change-name="changeName" />
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
-import Content from '@cp/Content.vue'
+  import { defineComponent, ref } from 'vue'
+  import Content from '@cp/Content.vue'
 
-export default defineComponent({
-  components: {
-    Content
-  },
-  setup () {
-    const name = ref<string>('Petter');
+  export default defineComponent({
+    components: {
+      Content,
+    },
+    setup() {
+      const name = ref<string>('Petter')
 
-    const changeName = (): void => {
-      name.value = 'Tom';
-    }
+      const changeName = (): void => {
+        name.value = 'Tom'
+      }
 
-    return {
-      name,
-      changeName
-    }
-  }
-})
+      return {
+        name,
+        changeName,
+      }
+    },
+  })
 </script>
 ```
 
@@ -154,19 +150,17 @@ export default defineComponent({
 
 ```html
 <script lang="ts">
-import { defineComponent } from 'vue'
+  import { defineComponent } from 'vue'
 
-export default defineComponent({
-  props: [ 'name' ],
-  emits: [ 'changeName' ],
-  setup (props, { emit }) {
-
-    setTimeout(() => {
-      emit('changeName', 'Tom');
-    }, 1000);
-    
-  }
-})
+  export default defineComponent({
+    props: ['name'],
+    emits: ['changeName'],
+    setup(props, { emit }) {
+      setTimeout(() => {
+        emit('changeName', 'Tom')
+      }, 1000)
+    },
+  })
 </script>
 ```
 
@@ -193,21 +187,18 @@ export default defineComponent({
 ```html
 <!-- 这是父组件，template 下发了 prop 和 emit -->
 <template>
-  <Child
-    :name="name"
-    @change-name="changeName"
-  />
+  <Child :name="name" @change-name="changeName" />
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import Child from '@cp/Child.vue'
+  import { ref } from 'vue'
+  import Child from '@cp/Child.vue'
 
-const name = ref<string>('Petter');
+  const name = ref<string>('Petter')
 
-const changeName = (): void => {
-  name.value = 'Tom';
-}
+  const changeName = (): void => {
+    name.value = 'Tom'
+  }
 </script>
 ```
 
@@ -215,11 +206,11 @@ const changeName = (): void => {
 
 在 script-setup 的写法里，所有数据都是默认 `return` 的，子组件也无需通过 `components` 选项进行挂载了，默认导入即生效，在编码过程中，可以大大的提高开发效率。
 
->所以疑问就来了，父组件是爽了，那么子组件呢？整个 script 都变成了一个大的 setup function ，没有了组件选项，也没有了 setup 入参，如何获取父组件传下来的 props 和 emits 呢？
+> 所以疑问就来了，父组件是爽了，那么子组件呢？整个 script 都变成了一个大的 setup function ，没有了组件选项，也没有了 setup 入参，如何获取父组件传下来的 props 和 emits 呢？
 
 所以，这两个新的 API ，就是在 script-setup 里帮助子组件拿到父级传过来的 props 和 emits 。
 
->注：以下所有的 JS / TS 部分，如果没有特别说明，都是指写在 `<script setup>` 里
+> 注：以下所有的 JS / TS 部分，如果没有特别说明，都是指写在 `<script setup>` 里
 
 ## defineProps
 
@@ -232,27 +223,19 @@ defineProps 是一个方法，内部返回一个对象，也就是挂载到这�
 ```js
 import { defineProps } from 'vue'
 
-defineProps([
-  'name',
-  'userInfo',
-  'tags'
-])
+defineProps(['name', 'userInfo', 'tags'])
 ```
 
 使用 `string[]` 数组作为入参，把 prop 的名称作为数组的 item 传给 defineProps 就可以了。
 
->记得从 vue 导入 defineProps 噢，下面的代码就不重复 import 啦！！！
+> 记得从 vue 导入 defineProps 噢，下面的代码就不重复 import 啦！！！
 
 如果 script 里的方法要拿到 props 的值，你也可以使用字面量定义：
 
 ```ts
-const props = defineProps([
-  'name',
-  'userInfo',
-  'tags'
-])
+const props = defineProps(['name', 'userInfo', 'tags'])
 
-console.log(props.name);
+console.log(props.name)
 ```
 
 但在作为一个 Vue 老玩家，都清楚不显性的指定 prop 类型的话，很容易在协作中引起程序报错，那么应该如何对每个 prop 进行类型检查呢？
@@ -271,8 +254,8 @@ console.log(props.name);
 defineProps({
   name: String,
   userInfo: Object,
-  tags: Array
-});
+  tags: Array,
+})
 ```
 
 所有原来 props 具备的校验机制，都可以适用，比如你除了要限制类型外，还想指定 name 是可选，并且带有一个默认值：
@@ -282,11 +265,11 @@ defineProps({
   name: {
     type: String,
     required: false,
-    default: 'Petter'
+    default: 'Petter',
   },
   userInfo: Object,
-  tags: Array
-});
+  tags: Array,
+})
 ```
 
 更多的 props 校验机制，可以点击 [带有类型限制的 props](https://vue3.chengpeiquan.com/communication.html#%E5%B8%A6%E6%9C%89%E7%B1%BB%E5%9E%8B%E9%99%90%E5%88%B6%E7%9A%84-props) 和 [可选以及带有默认值的 props](https://vue3.chengpeiquan.com/communication.html#%E5%8F%AF%E9%80%89%E4%BB%A5%E5%8F%8A%E5%B8%A6%E6%9C%89%E9%BB%98%E8%AE%A4%E5%80%BC%E7%9A%84-props) 了解更多。
@@ -298,7 +281,7 @@ defineProps({
 和 ref 等 API 的用法一样，defineProps 也是可以使用尖括号 <> 来包裹类型定义，紧跟在 API 后面，另外，由于 defineProps 返回的是一个对象（因为 props 本身是一个对象），所以尖括号里面的类型还要用大括号包裹，通过 `key: value` 的键值对形式表示，如：
 
 ```ts
-defineProps<{ name: string }>();
+defineProps<{ name: string }>()
 ```
 
 注意到了吗？这里使用的类型，和第一种方法提到的指定类型时是不一样的，在这里，不再使用构造函数校验，而是需要遵循使用 TypeScript 的类型，比如字符串是 string，而不是 String。
@@ -307,25 +290,25 @@ defineProps<{ name: string }>();
 
 ```ts
 defineProps<{
-  name: string;
-  phoneNumber: number;
-  userInfo: object;
-  tags: string[];
-}>();
+  name: string
+  phoneNumber: number
+  userInfo: object
+  tags: string[]
+}>()
 ```
 
 其中，举例里的 userInfo 是一个对象，你可以简单的指定为 object，也可以先定义好它对应的类型，再进行指定：
 
 ```ts
 interface UserInfo {
-  id: number;
-  age: number;
+  id: number
+  age: number
 }
 
 defineProps<{
-  name: string;
-  userInfo: UserInfo;
-}>();
+  name: string
+  userInfo: UserInfo
+}>()
 ```
 
 如果你想对某个数据设置为可选，也是遵循 TS 规范，通过英文问号 `?` 来允许可选：
@@ -333,42 +316,42 @@ defineProps<{
 ```ts
 // name 是可选
 defineProps<{
-  name?: string;
-  tags: string[];
-}>();
+  name?: string
+  tags: string[]
+}>()
 ```
 
 如果你想设置可选参数的默认值，这个暂时不支持，不能跟 TS 一样指定默认值，在 RFC 的文档里也有说明目前无法指定。
 
->Unresolved questions: Providing props default values when using type-only props declaration.
+> Unresolved questions: Providing props default values when using type-only props declaration.
 
 不过如果你确实需要默认指定，并且无需保留响应式的话，我自己测试是可以按照 ES6 的参数默认值方法指定：
 
 ```ts
 const { name = 'Petter' } = defineProps<{
-  name?: string;
-  tags: string[];
-}>();
+  name?: string
+  tags: string[]
+}>()
 ```
 
 这样如果传入了 name 则按传入的数据，否则就按默认值，但是，有个但是，就是这样 name 就会失去响应性（因为响应式数据被解构后会变回普通数据），请注意这一点！
 
->需要强调的一点是：这两种校验方式只能二选一，否则会引起程序报错
+> 需要强调的一点是：这两种校验方式只能二选一，否则会引起程序报错
 
 ## defineEmit
 
 defineEmit 也是一个方法，它接受的入参格式和标准组件的要求是一致的。
 
->注意：defineProps 是复数结尾，带有 s，defineEmit 没有！
+> 注意：defineProps 是复数结尾，带有 s，defineEmit 没有！
 
 由于 emit 并非提供给模板直接读取，所以需要通过字面量来定义 emits，最基础的用法也是传递一个 string[] 数组进来，把每个 emit 的名称作为数组的 item 。
 
 ```ts
 // 获取 emit
-const emit = defineEmit(['chang-name']);
+const emit = defineEmit(['chang-name'])
 
 // 调用 emit
-emit('chang-name', 'Tom');
+emit('chang-name', 'Tom')
 ```
 
 由于 defineEmit 的用法和原来的 emits 选项差别不大，这里也不重复说明更多的诸如校验之类的用法了，可以查看 [接收 emits](https://vue3.chengpeiquan.com/communication.html#%E6%8E%A5%E6%94%B6-emits) 一节了解更多。
@@ -377,10 +360,10 @@ emit('chang-name', 'Tom');
 
 在标准组件写法里，setup 函数默认支持两个入参：
 
-参数|类型|含义
-:--|:--|:--
-props|object|由父组件传递下来的数据
-context|object|组件的执行上下文
+| 参数    | 类型   | 含义                   |
+| :------ | :----- | :--------------------- |
+| props   | object | 由父组件传递下来的数据 |
+| context | object | 组件的执行上下文       |
 
 这里的第二个参数 context，在 script-setup 写法里，就需要通过 useContext 来获取，一样的，记得先导入依赖：
 
@@ -389,17 +372,17 @@ context|object|组件的执行上下文
 import { useContext } from 'vue'
 
 // 获取 context
-const ctx = useContext();
+const ctx = useContext()
 
 // 打印 attrs
-console.log(ctx.attrs);
+console.log(ctx.attrs)
 ```
 
 你也可以对它进行解构，直接获取到内部的数据：
 
 ```ts
 // 直接获取 attrs
-const { attrs } = useContext();
+const { attrs } = useContext()
 ```
 
 对于 context 的使用和注意事项，如果不了解的话，可以在 [setup 的参数使用](https://vue3.chengpeiquan.com/component.html#setup-%E7%9A%84%E5%8F%82%E6%95%B0%E4%BD%BF%E7%94%A8) 了解更多。
@@ -424,4 +407,4 @@ it is recommended to pin your vue dependencies to exact versions to avoid breaka
 
 告知 script setup 当前仍然是个实验性的新特性，还没有作为正式特性发布，后面会不会有变化还不好说，本文仅作为目前有用到这个新特性的同学参考。
 
-更多关于 Vue 3.0 的起步教程，可以在 [Vue3.0学习教程与实战案例](https://vue3.chengpeiquan.com) 了解，稍后有时间我也会把这部分内容一起合并进去。
+更多关于 Vue 3.0 的起步教程，可以在 [Vue3.0 学习教程与实战案例](https://vue3.chengpeiquan.com) 了解，稍后有时间我也会把这部分内容一起合并进去。
