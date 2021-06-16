@@ -1,12 +1,18 @@
-import { RouterScrollBehavior } from 'vue-router'
+import { RouteRecordRaw, RouterScrollBehavior } from 'vue-router'
 import autoRoutes from 'virtual:generated-pages'
 import categoryRoutes from './categories'
 
 /**
  * 定义路由
  */
-export const routes = [...autoRoutes, ...categoryRoutes].map((route) => {
-  if (route.name.endsWith('article-page') && !route.path.endsWith('?')) {
+export const routes: Array<RouteRecordRaw> = [
+  ...autoRoutes,
+  ...categoryRoutes,
+].map((route: RouteRecordRaw) => {
+  if (
+    String(route.name).endsWith('article-page') &&
+    !route.path.endsWith('?')
+  ) {
     route.path += '?'
   }
 

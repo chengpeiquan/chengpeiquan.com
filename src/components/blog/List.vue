@@ -133,7 +133,8 @@
 
 <script setup lang="ts">
 import { reactive, ref, inject } from 'vue'
-import { RouteRecordRaw, useRouter, useRoute } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
+import type { RouteRecordRaw } from 'vue-router'
 import { categories } from '/@/router/categories'
 import isArticle from '/@libs/isArticle'
 import { useHead } from '@vueuse/head'
