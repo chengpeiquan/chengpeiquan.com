@@ -4,7 +4,7 @@ desc: 虽然加班很多，但回顾起来，工作内外还是很快乐的！
 keywords: 网易,在网易工作是什么体验,网易游戏
 date: 2020-06-14 16:48:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/05/20210509201311.jpg
-categories: 
+categories:
   - prose
 repo: https://github.com/chengpeiquan/my-netease
 ---

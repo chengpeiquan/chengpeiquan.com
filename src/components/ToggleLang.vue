@@ -9,27 +9,27 @@
   </a>
 </template>
 
-<script setup lang='ts'>
+<script setup lang="ts">
 import { inject, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 
-const route = useRoute();
-const router = useRouter();
-const lang: string = inject('lang') || '';
-const path = ref<string>('/');
+const route = useRoute()
+const router = useRouter()
+const lang: string = inject('lang') || ''
+const path = ref<string>('/')
 
 const toggleLang = (): void => {
   // 英文转中文
-  if ( lang.value === 'en' ) {
-    path.value = route.path === '/en' ? `/` : route.path.replace(/\/en/, '');
+  if (lang.value === 'en') {
+    path.value = route.path === '/en' ? `/` : route.path.replace(/\/en/, '')
   }
   // 中文转英文
   else {
-    path.value = route.path === '/' ? `/en` : `/en${route.path}`;
+    path.value = route.path === '/' ? `/en` : `/en${route.path}`
   }
 
   router.replace({
-    path: path.value
+    path: path.value,
   })
 }
 </script>

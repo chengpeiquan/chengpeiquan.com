@@ -4,13 +4,14 @@ desc: 一个专为SPA项目开发的友盟统计插件，支持Vue 3.0以及2.0�
 keywords: cnzz,vue cnzz,vue umeng,vue analytics,spa analytics,cnzz统计,umeng统计,友盟统计,vuepress统计,vuepress cnzz统计
 date: 2021-01-08 22:37:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/08/1-3.jpg
-categories: 
+categories:
   - tech
 repo: https://github.com/analyticsjs/vue-cnzz-analytics
 ---
+
 [[toc]]
 
-一个只有 3 kB 大小的插件，可以帮你轻松解决 SPA 单页面项目浏览数据不准确的问题，基于 Vue 路由访问轨迹自动向友盟统计平台上报 PV / 事件数据，使用本插件的项目需要引入 [Vue Router](https://router.vuejs.org/) 。
+一个只有 3 kB 大小的插件，可以帮你轻松解决 SPA 单页面项目浏览数据不准确的问题，基于 Vue 路由访问轨迹自动向友盟统计平台上报 PV / 事件数据。
 
 >本插件自 v2.0.0 开始，最新版插件支持在 Vue 3.0 项目下使用，同时兼容 Vue 2.0 项目的使用，具体使用方法请看下方说明以及在线 demo 。<br>对 Vue 3.0 感兴趣，但还在观望的同学，欢迎阅读我踩坑总结的：[Vue3.0学习教程与实战案例](https://vue3.chengpeiquan.com/) （持续更新ing）
 
@@ -20,7 +21,7 @@ repo: https://github.com/analyticsjs/vue-cnzz-analytics
 
 * 支持部署多个站点 ID ，并对应进行数据上报（跨部门合作项目，双方均要收集数据时非常有用）
 
-* 支持自动上报路由切换产生的 PV 数据（支持 hash 模式和 history 模式的地址）
+* 支持自动上报路由切换产生的 PV 数据（需引入 [Vue Router](https://router.vuejs.org/)，支持 hash 模式和 history 模式的地址）
 
 * 支持手动提交 PV 上报
 
@@ -32,7 +33,7 @@ repo: https://github.com/analyticsjs/vue-cnzz-analytics
 
 ## 项目
 
-理论上只要引入了 Vue 和 Vue Router 的项目均可以正常使用，包括但不限于以下类型：
+理论上只要引入了 Vue （必须） 和 Vue Router （自 v2.2.0 起是可选） 的项目均可以正常使用，包括但不限于以下类型：
 
 * Vue-CLI 脚手架项目
 
@@ -56,7 +57,7 @@ Vue 3.0 版本：[vue-cnzz-analytics demo for Vue 3.x](https://analyticsjs.githu
 
 选项|是否必填|选项类型|选项说明
 :-:|:-:|:-:|-
-router|是|object|Vue Router，本插件基于路由使用
+router|否|object|Vue Router（自 v2.2.0 版本开始为可选，无路由的单页则不必传该选项）
 siteIdList|是|number[]|友盟统计的站点 id 列表，只有一个站点需要上报就保留一个 id 即可
 isDebug|否|boolean|是否开启 debug 模式，默认 `false`，开启后会在 F12 控制台打印上报信息
 
@@ -324,6 +325,11 @@ this.$pushCNZZ.event(
 );
 ```
 
+## 更新记录
+
+点击查看：[releases](https://github.com/analyticsjs/vue-cnzz-analytics/releases)
+
 ## License
 
 [MIT License](https://github.com/analyticsjs/vue-cnzz-analytics/blob/master/LICENSE) © 2020 [chengpeiquan](https://github.com/chengpeiquan)
+

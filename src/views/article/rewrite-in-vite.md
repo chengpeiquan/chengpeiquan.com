@@ -4,16 +4,17 @@ desc: 从 2021 年元旦 Vite 发布 2.0 Beta 版就一直在关注 Vite 的动�
 keywords: vite,vite ssr,vite ssg,vite blog
 date: 2021-02-18 23:54:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210219234631.jpg
-categories: 
+categories:
   - tech
 isHot: true
 repo: https://github.com/chengpeiquan/chengpeiquan.com
 ---
+
 [[toc]]
 
 从 2021 年元旦 Vite 发布 2.0 Beta 版就一直在关注 Vite 的动态，借着春节放假有时间，而且 Vue 3.0 和 Vite 2.0 都才大版本更新上线不久，预感后面会火，先开荒尝试一波，也当给以后工作上的业务先提前踩踩坑，对博客做了第三次重构，这一次把客户端和服务端都重新写了，由 PHP 的 LNMP 全家桶全部换成了前端侧的技术栈。
 
-在经历了春节假期每天大概花 2 ~ 3 小时的投入，终于如期上线，第一个版本是发布于 2月14日情人节 ，算是给自己的情人节礼物，当时是先部署在我闲置的香港服务器做了一波测试服调试，期间做了一些体验上的优化，然后 2月18日 在休假的最后一天，部署到我正式服务器上了。
+在经历了春节假期每天大概花 2 ~ 3 小时的投入，终于如期上线，第一个版本是发布于 2 月 14 日情人节 ，算是给自己的情人节礼物，当时是先部署在我闲置的香港服务器做了一波测试服调试，期间做了一些体验上的优化，然后 2 月 18 日 在休假的最后一天，部署到我正式服务器上了。
 
 而且特别巧的是，这一天也是 Vite 2.0 正式版发布的日子：[Vite 2.0 发布了 - 尤雨溪](https://zhuanlan.zhihu.com/p/351147547)，同一天上线，就感觉特别美好，值得纪念。
 
@@ -43,7 +44,7 @@ repo: https://github.com/chengpeiquan/chengpeiquan.com
 
 ## 重构前的目标
 
-其实去年就有想法要对博客做一波改版，但有几个原因导致一拖再拖，一个是因为业务比较忙（这个没办法，工作为重），一个是懒（主要是懒得去思考怎么设计，当然期间有在考虑一些不同的落地方案），还有一个主要的原因是当时 Vue 3.0 刚发布，我当时主要的精力放在踩坑体验 3.0，那段时间，大部分的时间和精力都放在撰写 [Vue3.0学习教程与实战案例](https://vue3.chengpeiquan.com/) 上面去了，休息时间有限，能够闲下来的时间也只有下班回来和周末，除掉一些自己的事情外，留下来捣鼓新东西的时间并不算很多，只能先押后了。
+其实去年就有想法要对博客做一波改版，但有几个原因导致一拖再拖，一个是因为业务比较忙（这个没办法，工作为重），一个是懒（主要是懒得去思考怎么设计，当然期间有在考虑一些不同的落地方案），还有一个主要的原因是当时 Vue 3.0 刚发布，我当时主要的精力放在踩坑体验 3.0，那段时间，大部分的时间和精力都放在撰写 [Vue3.0 学习教程与实战案例](https://vue3.chengpeiquan.com/) 上面去了，休息时间有限，能够闲下来的时间也只有下班回来和周末，除掉一些自己的事情外，留下来捣鼓新东西的时间并不算很多，只能先押后了。
 
 相比 2018 年那次改版，当时只是单纯想重新弄一个干净的博客写东西，这一次的目标是比较明确了，就是从基于 PHP 的 WordPress，用前端的技术栈全部重构一遍，做一个纯前端的博客出来，当然还要保留 SEO ，就要求还要上 SSR（Server Side Render） 或者 SSG（Server Side Generation） 。
 
@@ -75,10 +76,10 @@ repo: https://github.com/chengpeiquan/chengpeiquan.com
 
 最终用到的核心技术是：
 
-><br>Vite 2.0 —— 超快的构建工具<br><br>
->Vue 3.0 —— 更强大更灵活的 Vue<br><br>
->SSG —— 服务端渲染方案，利于 SEO 进行内容收录<br><br>
->PWA —— 构建离线应用<br>
+> <br>Vite 2.0 —— 超快的构建工具<br><br>
+> Vue 3.0 —— 更强大更灵活的 Vue<br><br>
+> SSG —— 服务端渲染方案，利于 SEO 进行内容收录<br><br>
+> PWA —— 构建离线应用<br>
 
 当然还要考虑的事情很多，每个环节还要用到不同的技术栈，具体我在下面逐个环节说明。
 
@@ -131,23 +132,13 @@ repo: https://github.com/chengpeiquan/chengpeiquan.com
 整个项目的路由页面、组件结构，跟你平时开发 Vue 项目是完全一样的，无缝切换。
 
 ```html
-src
-├─components
-│  ├─Footer.vue
-│  └─Header.vue
-└─views
-   ├─article
-   │  ├─[page].vue
-   │  └─rewrite-in-vite.md
-   ├─about.md
-   └─index.vue
+src ├─components │ ├─Footer.vue │ └─Header.vue └─views ├─article │ ├─[page].vue
+│ └─rewrite-in-vite.md ├─about.md └─index.vue
 ```
 
 在这里推荐几个非常方便的 Vite 插件：
 
-><br>[vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages) ： 能够自动读取指定目录下的 Vue / Md 文件生成 Vue 路由，只需要管理好 views 文件夹的层级关系，无需再单独维护路由配置<br>
-><br>[vite-plugin-md](https://github.com/antfu/vite-plugin-md) ： 一个能让 Markdown 文件像 Vue 组件一样导入使用的插件，它也基于 markdown-it，支持进行一系列 md 生态扩展<br>
-><br>[vite-plugin-components](https://github.com/antfu/vite-plugin-components)：可以像 VuePress 一样，无需 import，会自动根据组件的标签名去 components 目录下寻找组件<br>
+> <br>[vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages) ： 能够自动读取指定目录下的 Vue / Md 文件生成 Vue 路由，只需要管理好 views 文件夹的层级关系，无需再单独维护路由配置<br> ><br>[vite-plugin-md](https://github.com/antfu/vite-plugin-md) ： 一个能让 Markdown 文件像 Vue 组件一样导入使用的插件，它也基于 markdown-it，支持进行一系列 md 生态扩展<br> ><br>[vite-plugin-components](https://github.com/antfu/vite-plugin-components)：可以像 VuePress 一样，无需 import，会自动根据组件的标签名去 components 目录下寻找组件<br>
 
 基本上你只需要按照开发 Vue 项目的习惯去开发就可以了，如果有一些思路被卡住不知道怎么下手，可以参考我仓库源码。
 
@@ -157,7 +148,7 @@ src
 
 没有设计稿的时候，会用上 [Ant Design](https://github.com/vueComponent/ant-design-vue) 等 UI 框架来帮我减少页面设计上的一些时间浪费，但这些框架通常更适合用在 B 端产品。
 
-去年底在知乎刷到过一篇 [如何评价CSS框架TailwindCSS？](https://www.zhihu.com/question/337939566) ，了解到一款全新的 CSS 框架 Tailwind CSS，乍一看很像是在开历史的倒车，回归原子类 className ，评价也是褒贬不一，自己光看文档的时候也是想着这啥玩意…
+去年底在知乎刷到过一篇 [如何评价 CSS 框架 TailwindCSS？](https://www.zhihu.com/question/337939566) ，了解到一款全新的 CSS 框架 Tailwind CSS，乍一看很像是在开历史的倒车，回归原子类 className ，评价也是褒贬不一，自己光看文档的时候也是想着这啥玩意…
 
 但是考虑到如果真的是开倒车，凭什么可以拿到 3 万的 Star，抱着试一下的心态在这次重构里面引入尝试，确实真香！
 
@@ -185,7 +176,7 @@ src
 
 写法跟你在 VSCode 里自动补全代码时，敲入的命令非常接近，不像传统的 UI 框架一样，你写个标签就自动生成按钮，都不知道它是怎么写出来的（这也是我比较少想用 UI 框架的原因，我怕久了自己都不会写了），实际上，使用 Tailwind 之后，你还是在自己写 CSS， 只不过更方便了！
 
->支持 CSS tree-shaking ，构建后的文件非常迷你
+> 支持 CSS tree-shaking ，构建后的文件非常迷你
 
 传统的 Atom CSS ，引入了就得整包引入，而 Tailwind 可以借助 PostCSS ，可以在最终项目构建的时候，抽离出我们用到的样式，用不到的会被直接扔掉。
 
@@ -225,7 +216,7 @@ a {
   color: var(--fg-deeper);
   text-decoration: none;
 
-  &:hover { 
+  &:hover {
     border-bottom: 1px solid var(--fg-light);
   }
 }
@@ -262,16 +253,16 @@ useHead({
   meta: [
     {
       name: 'title',
-      content: '这是页面的标题'
+      content: '这是页面的标题',
     },
     {
       name: 'description',
-      content: '这是页面的描述'
+      content: '这是页面的描述',
     },
     {
       name: 'keywords',
-      content: '关键词1,关键词2,关键词3'
-    }
+      content: '关键词1,关键词2,关键词3',
+    },
   ],
 })
 ```
@@ -288,7 +279,7 @@ useHead({
 
 开发过 NPM 包的同学，或者日常使用 NPM 插件比较细心的同学，应该能够发现发布在 NPM 上的包都自动部署到了 CDN 平台，诸如 jsdelivr 、 unpkg 、cdnjs 等等，那么 Github 和这些 CDN 能关联吗？在此之前其实我也没去关注能不能，但这一次我查了一下，确实可以，而且其中对国内访问速度最友好的 jsdelivr ，支持度最高！超棒的！
 
-关于 jsdelivr 的速度可以参考：[国内有哪些靠谱的 Javascript 库 CDN可用？](https://www.zhihu.com/question/20227463/answer/370662453)，也可以测试下我的博客，我自己对测试结果还是挺满意的。
+关于 jsdelivr 的速度可以参考：[国内有哪些靠谱的 Javascript 库 CDN 可用？](https://www.zhihu.com/question/20227463/answer/370662453)，也可以测试下我的博客，我自己对测试结果还是挺满意的。
 
 ![测试我自己网站的速度](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210221185258.jpg)
 
@@ -300,7 +291,9 @@ useHead({
 
 ```ts
 export default defineConfig({
-  base: isDev ? '/' : 'https://cdn.jsdelivr.net/gh/chengpeiquan/chengpeiquan.com@gh-pages/',
+  base: isDev
+    ? '/'
+    : 'https://cdn.jsdelivr.net/gh/chengpeiquan/chengpeiquan.com@gh-pages/',
 })
 ```
 
@@ -328,7 +321,7 @@ WordPress 的上传资源都存放在 `/wp-content/uploads/` 目录下，阿里�
 
 所以是借助了 Node 编写了个静态爬虫，在爬取过程中对一些内容进行追加、转换。
 
-具体的实现可以参考我之前写的 [网站改版迁移经验记录：基于node的爬虫编写](https://chengpeiquan.com/article/node-web-crawler) ，这里就不重复赘述了。
+具体的实现可以参考我之前写的 [网站改版迁移经验记录：基于 node 的爬虫编写](https://chengpeiquan.com/article/node-web-crawler) ，这里就不重复赘述了。
 
 ### 数据统计
 
@@ -349,18 +342,13 @@ WordPress 的上传资源都存放在 `/wp-content/uploads/` 目录下，阿里�
 1. 清除缓存然后升级系统和软件
 
 ```html
-sudo yum clean all
-sudo yum makecache
-sudo yum update
-sudo yum upgrade -y
+sudo yum clean all sudo yum makecache sudo yum update sudo yum upgrade -y
 ```
 
 2. 安装 NPM 并通过 stable 安装最新版本的 Node
 
 ```html
-sudo yum install npm
-sudo npm install -g n
-sudo n stable
+sudo yum install npm sudo npm install -g n sudo n stable
 ```
 
 3. 全局安装 [yarn](https://github.com/yarnpkg/yarn) ，没错，我现在更喜欢用 yarn 来进行包管理，这一步你可以跳过
@@ -377,11 +365,7 @@ yarn global add pm2
 
 其他的步骤就不用说了，创建服务器的文件夹，初始化，安装 [express](https://github.com/expressjs/express) 或者其他你更熟悉的服务程序，搞起吧！
 
-><br>有几件事要特别叮嘱一下：<br>
-><br>1. 因为服务端变了，如果原来有开启 HTTPS，记得重新配置你的 SSL 证书（我用的是阿里云的免费证书，只需要 1 年更换 1 次）<br>
-><br>2. 域名也要重新做 301 重定向（HTTP 强切 HTTPS ， WWW 强切无 3W 等）<br>
-><br>3. 检查之前是否有在推广的的链接挂掉了，也要重新 301 到新地址 （比如 RSS 源之前是 /feed/ ，现在是 /feed.xml）<br>
-><br>4. 最重要的，配置上对路由 history 模式的支持<br>
+> <br>有几件事要特别叮嘱一下：<br> ><br>1. 因为服务端变了，如果原来有开启 HTTPS，记得重新配置你的 SSL 证书（我用的是阿里云的免费证书，只需要 1 年更换 1 次）<br> ><br>2. 域名也要重新做 301 重定向（HTTP 强切 HTTPS ， WWW 强切无 3W 等）<br> ><br>3. 检查之前是否有在推广的的链接挂掉了，也要重新 301 到新地址 （比如 RSS 源之前是 /feed/ ，现在是 /feed.xml）<br> ><br>4. 最重要的，配置上对路由 history 模式的支持<br>
 
 第一版其实不复杂，后面有需要会继续迭代。
 
@@ -401,9 +385,9 @@ workflow 里所有以 `secrets.XXXXXX` 的格式均为仓库独立配置的密�
 
 3. `gh-pages` 分支是打包完毕后的文件，推送到阿里云服务器的也是这个分支下的所有文件，之所以托管一份在 GitHub，是因为我们前面部署了 CDN 支持，JS / CSS 文件是需要读取这个分支的 CDN 文件
 
-4. 部署到阿里云的环节，配置的 `SERVER_SSH_KEY` 是自己服务器的密钥对，如果你也是跟我一样使用阿里云的 ECS ，可以参考 [创建SSH密钥对](https://www.alibabacloud.com/help/zh/doc-detail/51793.htm)， 创建后还需要绑定给实例才能激活生效，绑定操作请参考 [绑定SSH密钥对](https://www.alibabacloud.com/help/zh/doc-detail/51796.htm)
+4. 部署到阿里云的环节，配置的 `SERVER_SSH_KEY` 是自己服务器的密钥对，如果你也是跟我一样使用阿里云的 ECS ，可以参考 [创建 SSH 密钥对](https://www.alibabacloud.com/help/zh/doc-detail/51793.htm)， 创建后还需要绑定给实例才能激活生效，绑定操作请参考 [绑定 SSH 密钥对](https://www.alibabacloud.com/help/zh/doc-detail/51796.htm)
 
-5. `SERVER_IP` 是自己服务器的公网IP，这个其实可以不用配置为密钥变量，因为 `ping` 一下你的域名也知道是什么 IP ，只是因为我有两台服务器，所以配置为变量可以方便的通过 `SERVER_IP` 和 `SERVER_IP_TEST` 去切换，其他变量其实也有一个 TEST 版本
+5. `SERVER_IP` 是自己服务器的公网 IP，这个其实可以不用配置为密钥变量，因为 `ping` 一下你的域名也知道是什么 IP ，只是因为我有两台服务器，所以配置为变量可以方便的通过 `SERVER_IP` 和 `SERVER_IP_TEST` 去切换，其他变量其实也有一个 TEST 版本
 
 6. 最后的 `TARGET` 是你在服务器上，node 服务器所安装的目录。
 
@@ -417,9 +401,7 @@ workflow 里所有以 `secrets.XXXXXX` 的格式均为仓库独立配置的密�
 
 Vite 官方团队也对 PWA 做了支持，通过 [vite-plugin-pwa](https://github.com/antfu/vite-plugin-pwa) 可以方便的实现一个离线应用的配置。
 
-><br>~~不过目前发现了一个问题就是，当 `vite.config.ts` 的 `base` 选项设置为 CDN 地址时，构建出来的 PWA manifest 资源路径会读取错误，原因是 manifest 不能走 CDN，要单独从网站内读取，虽然跟作者提了优化建议（详见 [#25](https://github.com/antfu/vite-plugin-pwa/pull/25)），不过还需要点时间去优化。~~<br>
-><br>~~所以在原版进行版本更新之前，自己先发布了个私有调试包 fix 了这个问题，有遇到一样情况的朋友可以先安装 [@chengpeiquan/vite-plugin-pwa](https://www.npmjs.com/package/@chengpeiquan/vite-plugin-pwa) 这个去用，不过最好还是留意原版的更新，这个私有包不会长期维护。~~<br>
-><br>2021-02-22更新： 目前原版已更新，Fix 了我反馈的问题，请使用 v0.5.3 以后的版本可以避免该问题的产生，给作者点赞！<br>
+> <br>~~不过目前发现了一个问题就是，当 `vite.config.ts` 的 `base` 选项设置为 CDN 地址时，构建出来的 PWA manifest 资源路径会读取错误，原因是 manifest 不能走 CDN，要单独从网站内读取，虽然跟作者提了优化建议（详见 [#25](https://github.com/antfu/vite-plugin-pwa/pull/25)），不过还需要点时间去优化。~~<br> ><br>~~所以在原版进行版本更新之前，自己先发布了个私有调试包 fix 了这个问题，有遇到一样情况的朋友可以先安装 [@chengpeiquan/vite-plugin-pwa](https://www.npmjs.com/package/@chengpeiquan/vite-plugin-pwa) 这个去用，不过最好还是留意原版的更新，这个私有包不会长期维护。~~<br> ><br>2021-02-22 更新： 目前原版已更新，Fix 了我反馈的问题，请使用 v0.5.3 以后的版本可以避免该问题的产生，给作者点赞！<br>
 
 关于 PWA 的配置可以参考我的项目，这里单独说一下需要特别注意的点：
 
@@ -437,4 +419,4 @@ Vite 官方团队也对 PWA 做了支持，通过 [vite-plugin-pwa](https://gith
 
 当然，整个项目的重构，更多的技术支持来自于 Anthony，他也是 Vue 和 Vite 官方团队的开发者，他比我早几天上线的 [Rewrite in Vite](https://antfu.me/posts/rewrite-in-vite) 给了我很多思路，很多基于 Vite 的插件也是他写的，都是在这几天发布和迭代，有那种瞌睡来了枕头的感觉，美妙！
 
-完整的项目依赖和配置请查看仓库的 [package.json](https://github.com/chengpeiquan/chengpeiquan.com/blob/main/package.json) 和 [vite.config.ts](https://github.com/chengpeiquan/chengpeiquan.com/blob/main/vite.config.ts) ，整个项目也完全开源了，具体的实现可以查看 [Github 仓库](https://github.com/chengpeiquan/chengpeiquan.com) ，在这里就不赘述了，如果觉得对你有用，欢迎 Star 。
+完整的项目依赖和配置请查看仓库的  [package.json](https://github.com/chengpeiquan/chengpeiquan.com/blob/main/package.json)  和 [vite.config.ts](https://github.com/chengpeiquan/chengpeiquan.com/blob/main/vite.config.ts) ，整个项目也完全开源了，具体的实现可以查看 [Github 仓库](https://github.com/chengpeiquan/chengpeiquan.com) ，在这里就不赘述了，如果觉得对你有用，欢迎 Star 。

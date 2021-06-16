@@ -4,28 +4,28 @@ desc: 这个情况当时是很懵逼的，因为在PC端，以及使用Chrome的
 keywords: vue ajax,vue axios,axios乱码,axios get,axios post,axios,qs,axios qs
 date: 2018-09-06 01:46:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/09/1-1.jpg
-categories: 
+categories:
   - tech
 ---
 
-从jQuery刚转到Vue的时候，对ajax的替代方案是选择了npm上的axios，理由也比较简单，两者的api相似，调用方式也很接近，过渡可以说是无缝吧，不过在做第一个项目的时候还是踩了个坑，特此记录下来。
+从 jQuery 刚转到 Vue 的时候，对 ajax 的替代方案是选择了 npm 上的 axios，理由也比较简单，两者的 api 相似，调用方式也很接近，过渡可以说是无缝吧，不过在做第一个项目的时候还是踩了个坑，特此记录下来。
 
 先说一下遇到的那些坑：
 
-## 移动端真机post乱码
+## 移动端真机 post 乱码
 
-这个情况当时是很懵逼的，因为在PC端，以及使用Chrome的移动端模拟器测试都一切正常，但到了真机上提交数据时，只要包含了中文，post到服务端的结果永远是【銆愭姤鍚嶇粍鍒】，至今还是不知道这个到底是什么鬼。
+这个情况当时是很懵逼的，因为在 PC 端，以及使用 Chrome 的移动端模拟器测试都一切正常，但到了真机上提交数据时，只要包含了中文，post 到服务端的结果永远是【銆愭姤鍚嶇粍鍒 】，至今还是不知道这个到底是什么鬼。
 
-当时搜索了很多issue，都是建议在Content-Type添加charset为utf-8，但实测没什么用，最后还是老老实实回顾了一下英文的官方文档，发现这么一句话：
+当时搜索了很多 issue，都是建议在 Content-Type 添加 charset 为 utf-8，但实测没什么用，最后还是老老实实回顾了一下英文的官方文档，发现这么一句话：
 
->Alternatively, you can encode data using the qs library:
+> Alternatively, you can encode data using the qs library:
 
-qs library？赶紧去查了一下qs之后，恍然大悟，于是引入了qs，完美解决（这一点和当初jQuery就不一样，之前压根就没遇到这种情况emm）。
+qs library？赶紧去查了一下 qs 之后，恍然大悟，于是引入了 qs，完美解决（这一点和当初 jQuery 就不一样，之前压根就没遇到这种情况 emm）。
 
-最后回顾一下axios的使用方法：
+最后回顾一下 axios 的使用方法：
 
->axios官方文档 https://www.npmjs.com/package/axios<br>
->qs官方文档 https://www.npmjs.com/package/qs
+> axios 官方文档 https://www.npmjs.com/package/axios<br>
+> qs 官方文档  https://www.npmjs.com/package/qs
 
 ```javascript
 //安装axios和qs

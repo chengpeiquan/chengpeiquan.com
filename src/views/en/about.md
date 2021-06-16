@@ -21,7 +21,7 @@ After introducing my cat, it's my turn. You can call me "BASS" or "BASSSSSSS…"
 
 I enjoy Rock'N Roll, Nu-Metal, Hardcore, funk and so on. In my favorite music, the common denominator is to have charming riff, double Bass Drum Pedal, the most important point is that the bassline must be prominent.
 
-I have compiled a prominent playlist of bass that is suitable for bands to play together. Friends who play bass can visit [The sense of Existence for BASS:  rich and nice BASSline](https://music.163.com/#/playlist?id=443717710).
+I have compiled a prominent playlist of bass that is suitable for bands to play together. Friends who play bass can visit [The sense of Existence for BASS: rich and nice BASSline](https://music.163.com/#/playlist?id=443717710).
 
 ![One of the most handsome performance shots.](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210218205909.jpg)
 

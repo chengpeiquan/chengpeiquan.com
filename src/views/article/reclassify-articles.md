@@ -4,7 +4,7 @@ desc: 时隔两年，改版的时候去掉了分类，想了想，还是加回�
 keywords: 原生JS回到顶部,原生JS带动画回到顶部
 date: 2021-03-16 01:17:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/03/20210316221139.jpg
-categories: 
+categories:
   - prose
 ---
 

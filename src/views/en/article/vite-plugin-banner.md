@@ -4,13 +4,14 @@ desc: A banner plugin for Vite. It can adds a banner to the top of each generate
 keywords: vite-plugin-banner,vite plugin,vite banner,vite comment,vite copyright
 date: 2021-02-23 23:10:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/01/20210224102526.jpg
-categories: 
+categories:
   - tech
 repo: https://github.com/chengpeiquan/vite-plugin-banner
 ---
+
 [[toc]]
 
-This is my first Vite plugin. Before I start using Vite, I used rollup for a while, I have used rollup-plugin-banner and rollup-plugin-banner2. But I import them into vite.config.ts and found that them doesn't work. So, I try to learn the plugin development of vite, so there is this work, Its features is similar to webpack bannerPlugin. 
+This is my first Vite plugin. Before I start using Vite, I used rollup for a while, I have used rollup-plugin-banner and rollup-plugin-banner2. But I import them into vite.config.ts and found that them doesn't work. So, I try to learn the plugin development of vite, so there is this work, Its features is similar to webpack bannerPlugin.
 
 It follows Vite's plugin [development specifications](https://vitejs.dev/guide/api-plugin.html), It currently works normally in Vite 2.0, and it can inherit some options of vite.config, e.g. build.outDir.
 
@@ -40,9 +41,7 @@ import Banner from 'vite-plugin-banner'
 // Other dependencies...
 
 export default defineConfig({
-  plugins: [
-    Banner('This is the Banner content.'),
-  ]
+  plugins: [Banner('This is the Banner content.')],
 })
 ```
 
@@ -81,8 +80,10 @@ import pkg from './package.json'
 
 export default defineConfig({
   plugins: [
-    Banner(`/**\n * name: ${pkg.name}\n * version: v${pkg.version}\n * description: ${pkg.description}\n * author: ${pkg.author}\n * homepage: ${pkg.homepage}\n */`),
-  ]
+    Banner(
+      `/**\n * name: ${pkg.name}\n * version: v${pkg.version}\n * description: ${pkg.description}\n * author: ${pkg.author}\n * homepage: ${pkg.homepage}\n */`
+    ),
+  ],
 })
 ```
 
@@ -124,23 +125,23 @@ export default defineConfig({
     ░██  ░██      ░░██     ██   ░░████   ░██           ░██   ░░██     ██ ░██    ░██
     ░██  ░████████ ░░███████     ░░██    ░████████     ░██    ░░███████  ░░███████ 
     ░░   ░░░░░░░░   ░░░░░░░       ░░     ░░░░░░░░      ░░      ░░░░░░░    ░░░░░░░  
-    `)
-  ]
+    `),
+  ],
 })
 ```
 
-Run `npm run build`,  e.g. in `app.d9a287b8.js`:
+Run `npm run build`, e.g. in `app.d9a287b8.js`:
 
 ```js
-/* 
+/*
     ██   ██         ███████   ██      ██ ████████   ██    ██   ███████   ██     ██
     ░██  ░██        ██░░░░░██ ░██     ░██░██░░░░░   ░░██  ██   ██░░░░░██ ░██    ░██
     ░██  ░██       ██     ░░██░██     ░██░██         ░░████   ██     ░░██░██    ░██
     ░██  ░██      ░██      ░██░░██    ██ ░███████     ░░██   ░██      ░██░██    ░██
     ░██  ░██      ░██      ░██ ░░██  ██  ░██░░░░       ░██   ░██      ░██░██    ░██
     ░██  ░██      ░░██     ██   ░░████   ░██           ░██   ░░██     ██ ░██    ░██
-    ░██  ░████████ ░░███████     ░░██    ░████████     ░██    ░░███████  ░░███████ 
-    ░░   ░░░░░░░░   ░░░░░░░       ░░     ░░░░░░░░      ░░      ░░░░░░░    ░░░░░░░  
+    ░██  ░████████ ░░███████     ░░██    ░████████     ░██    ░░███████  ░░███████
+    ░░   ░░░░░░░░   ░░░░░░░       ░░     ░░░░░░░░      ░░      ░░░░░░░    ░░░░░░░
      */
 var e=Object.assign;import{M as t,d as a,u as r,c......
 ```
