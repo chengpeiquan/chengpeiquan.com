@@ -106,7 +106,7 @@ const route = useRoute()
 const router = useRouter()
 const { frontmatter } = defineProps<{ frontmatter: any }>()
 const { title, desc, keywords, date, repo } = frontmatter
-const { diffDays, dateAgo } = dateDisplay(date)
+const { diffDays, dateAgo } = dateDisplay(new Date(date))
 const lang: string = inject('lang') || ''
 
 /**
