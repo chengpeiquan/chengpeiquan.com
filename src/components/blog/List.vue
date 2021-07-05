@@ -221,7 +221,7 @@ const getArticleList = (): void => {
     const { path } = route
     const { frontmatter } = route.meta
     const { title, desc, cover, date, isHot, repo } = frontmatter
-    const { diffDays, dateAgo } = dateDisplay(new Date(date))
+    const { diffDays, dateAgo } = dateDisplay(date)
 
     return {
       path,
