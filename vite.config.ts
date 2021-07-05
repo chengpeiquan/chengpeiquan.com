@@ -75,10 +75,7 @@ export default defineConfig({
         if (!data.date) {
           data.date = Date.now()
         }
-        console.log('path', path)
-        console.log('before', data.date)
-        data.date = dayjs(+new Date(data.date)).format('YYYY/MM/DD HH:mm:ss')
-        console.log('after', data.date)
+        data.date = dayjs(new Date(data.date)).format('YYYY/MM/DD HH:mm:ss')
 
         route.meta = Object.assign(route.meta || {}, {
           frontmatter: data,
