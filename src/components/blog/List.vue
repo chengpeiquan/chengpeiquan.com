@@ -34,7 +34,7 @@
     <!-- 空列表提示 -->
 
     <!-- 列表 -->
-    <ul v-if="articleList.length > 0" class="article-list md:mx-0 mx-4">
+    <ul v-if="articleList.length > 0" class="article-list">
       <li
         class="
           flex flex-col
@@ -335,5 +335,8 @@ getPageInfo()
 }
 .category-tabs .item.cur {
   @apply md:text-xl text-base font-bold opacity-100;
+}
+.article-list {
+  @apply md:mx-0 mx-4;
 }
 </style>

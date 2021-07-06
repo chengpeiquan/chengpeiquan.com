@@ -170,13 +170,13 @@ defineExpose({
 import { defineEmits } from 'vue'
 
 // 获取 emit
-const emit = defineEmits(['say-hi', 'chang-name']);
+const emit = defineEmits(['say-hi', 'change-name']);
 
 // 调用 emit 打招呼
 emit('say-hi', 'Hello!');
 
 // 调用 emit 改名
-emit('chang-name', 'Tom');
+emit('change-name', 'Tom');
 ```
 
 ## 新增 withDefaults API
