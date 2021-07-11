@@ -68,6 +68,21 @@
     </section>
     <!-- 猜你喜欢 -->
 
+    <!-- 在线吸猫 -->
+    <section class="mb-16">
+      <h2 class="block-title">在线吸猫</h2>
+      <div class="flex flex-col w-full">
+        <a href="https://vue3.chengpeiquan.com/" target="_blank">
+          <img
+            class="w-full"
+            src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/07/20210703235057.jpg"
+            alt="扫码关注我的抖音号"
+          />
+        </a>
+      </div>
+    </section>
+    <!-- 在线吸猫 -->
+
     <!-- 友情链接 -->
     <section class="mb-2">
       <h2 class="block-title">友情链接</h2>

@@ -5,7 +5,7 @@
 import { ref } from 'vue'
 import { isClient } from '@vueuse/core'
 
-const isMobile = ref<boolean>(true)
+const isMobile = ref<boolean>(false)
 
 try {
   if (isClient) {
@@ -24,7 +24,7 @@ try {
     )
   }
 } catch (e) {
-  isMobile.value = true
+  isMobile.value = false
 }
 
 export default isMobile
