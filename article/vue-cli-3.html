@@ -1,0 +1,134 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/chengpeiquan/chengpeiquan.com@gh-pages/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue-CLI脚手架3.0升级小结（含Win版Node升级与PowerShell踩坑记录） - 程沛权 - 养了三只猫</title>
+  <script type="module" crossorigin="" src="https://cdn.jsdelivr.net/gh/chengpeiquan/chengpeiquan.com@gh-pages/assets/app.0a3178ab.js"></script>
+  <link rel="modulepreload" href="https://cdn.jsdelivr.net/gh/chengpeiquan/chengpeiquan.com@gh-pages/assets/vendor.a40cd88e.js">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/chengpeiquan/chengpeiquan.com@gh-pages/assets/app.5b270f81.css">
+<link rel="modulepreload" crossorigin="" href="https://cdn.jsdelivr.net/gh/chengpeiquan/chengpeiquan.com@gh-pages/assets/vue-cli-3.8d09d8c9.js"><link rel="modulepreload" crossorigin="" href="https://cdn.jsdelivr.net/gh/chengpeiquan/chengpeiquan.com@gh-pages/assets/dateDisplay.fb1ec8c0.js"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/chengpeiquan/chengpeiquan.com@gh-pages/assets/dateDisplay.2f770fa8.css"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/avatar-300x300.jpg"><meta name="twitter:title" content="Vue-CLI脚手架3.0升级小结（含Win版Node升级与PowerShell踩坑记录）"><meta name="twitter:description" content="Vue脚手架3.0出来也蛮久了，秉着前人先踩坑的习惯，最近才开始升级。整个过程还是蛮顺利的，不过也有一些小小的问题，简单记录起来。"><meta name="twitter:image:src" content="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/11/1-2.jpg"><meta name="twitter:card" content="summary"><meta name="twitter:creator" content="@chengpeiquan"><meta name="theme-color" content="#111111"><meta property="og:title" content="Vue-CLI脚手架3.0升级小结（含Win版Node升级与PowerShell踩坑记录） - 程沛权 - 养了三只猫"><meta name="description" content="Vue脚手架3.0出来也蛮久了，秉着前人先踩坑的习惯，最近才开始升级。整个过程还是蛮顺利的，不过也有一些小小的问题，简单记录起来。"><meta name="keywords" content="vue cli 3.0 升级,vue cli 升级报错"><meta name="head:count" content="10"></head>
+  <body>
+    <div id="app" data-server-rendered="true"><!--[--><header class="flex
+      justify-between
+      items-center
+      w-full
+      md:h-24
+      h-14
+      px-4
+      border-b-4
+      dark:border-white dark:border-opacity-5 dark:bg-white
+      bg-gray-50
+      dark:bg-opacity-5" data-v-e53127d8=""><div class="flex justify-start items-center" data-v-e53127d8=""><div class="
+          flex flex-shrink-0
+          md:w-14
+          w-8
+          md:h-14
+          h-8
+          rounded-full
+          overflow-hidden
+        " data-v-e53127d8=""><img class="img" width="56" height="56" src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/avatar-60x60.jpg" alt="程沛权" data-v-e53127d8=""></div><span class="md:ml-4 ml-2 md:text-2xl text-l dark:text-white text-black" data-v-e53127d8="">程沛权</span></div><nav class="nav flex flex-1" data-v-e53127d8=""><ul class="flex justify-end items-center w-full" data-v-e53127d8=""><!--[--><li class="mr-8 text-xl" data-v-e53127d8=""><a href="/" class="" title="Home" exact="" data-v-e53127d8="">Home</a></li><li class="mr-8 text-xl" data-v-e53127d8=""><a href="/article" class="" title="Article" exact="" data-v-e53127d8="">Article</a></li><li class="mr-8 text-xl" data-v-e53127d8=""><a href="/about" class="" title="About" exact="" data-v-e53127d8="">About</a></li><!--]--><li data-v-e53127d8=""><a class="select-none mr-4 text-xl" href="https://github.com/chengpeiquan" target="_blank" title="GitHub" rel="nofollow noopener noreferrer" data-v-e53127d8=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.2em" height="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" data-v-e53127d8=""><path d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 0 0 6.838 9.488c.5.087.687-.213.687-.476c0-.237-.013-1.024-.013-1.862c-2.512.463-3.162-.612-3.362-1.175c-.113-.288-.6-1.175-1.025-1.413c-.35-.187-.85-.65-.013-.662c.788-.013 1.35.725 1.538 1.025c.9 1.512 2.338 1.087 2.912.825c.088-.65.35-1.087.638-1.337c-2.225-.25-4.55-1.113-4.55-4.938c0-1.088.387-1.987 1.025-2.688c-.1-.25-.45-1.275.1-2.65c0 0 .837-.262 2.75 1.026a9.28 9.28 0 0 1 2.5-.338c.85 0 1.7.112 2.5.337c1.912-1.3 2.75-1.024 2.75-1.024c.55 1.375.2 2.4.1 2.65c.637.7 1.025 1.587 1.025 2.687c0 3.838-2.337 4.688-4.562 4.938c.362.312.675.912.675 1.85c0 1.337-.013 2.412-.013 2.75c0 .262.188.574.688.474A10.016 10.016 0 0 0 22 12c0-5.525-4.475-10-10-10z" fill="currentColor"></path></svg></a></li><li data-v-e53127d8=""><a class="select-none mr-4 text-xl" href="https://www.zhihu.com/people/basss" target="_blank" title="知乎" rel="nofollow noopener noreferrer" data-v-e53127d8=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.2em" height="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" data-v-e53127d8=""><path d="M13.373 18.897h1.452l.478 1.637l2.605-1.637h3.07V5.395h-7.605v13.502zM14.918 6.86h4.515v10.57h-1.732l-1.73 1.087l-.314-1.084l-.739-.003V6.861zm-2.83 4.712H8.846a70.3 70.3 0 0 0 .136-4.56h3.172s.122-1.4-.532-1.384H6.135c.216-.814.488-1.655.813-2.524c0 0-1.493 0-2 1.339c-.211.552-.82 2.677-1.904 4.848c.365-.04 1.573-.073 2.284-1.378c.131-.366.156-.413.318-.902h1.79c0 .651-.074 4.151-.104 4.558h-3.24c-.729 0-.965 1.466-.965 1.466h4.066C6.92 16.131 5.456 18.74 2.8 20.8c1.27.363 2.536-.057 3.162-.614c0 0 1.425-1.297 2.206-4.298l3.346 4.03s.49-1.668-.077-2.481c-.47-.554-1.74-2.052-2.281-2.595l-.907.72c.27-.867.433-1.71.488-2.524h3.822s-.005-1.466-.47-1.466z" fill="currentColor"></path></svg></a></li><li data-v-e53127d8=""><a class="select-none mr-4 text-xl" href="/feed.xml" target="_blank" title="RSS" rel="nofollow noopener noreferrer" data-v-e53127d8=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.2em" height="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" data-v-e53127d8=""><path d="M3 3c9.941 0 18 8.059 18 18h-3c0-8.284-6.716-15-15-15V3zm0 7c6.075 0 11 4.925 11 11h-3a8 8 0 0 0-8-8v-3zm0 7a4 4 0 0 1 4 4H3v-4z" fill="currentColor"></path></svg></a></li><li data-v-e53127d8=""><a class="select-none mr-4 text-xl" title="切换为英文" data-v-e53127d8=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.2em" height="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" style="display:none;"><path d="M20 5h-7V4a1 1 0 0 0-2 0v1H4a1 1 0 0 0 0 2h11.882a14.493 14.493 0 0 1-3.94 7.952A14.426 14.426 0 0 1 8.663 9.67a1 1 0 0 0-1.889.66a16.414 16.414 0 0 0 3.68 5.958a14.299 14.299 0 0 1-5.768 2.735A1 1 0 0 0 4.899 21a1.018 1.018 0 0 0 .215-.023a16.297 16.297 0 0 0 6.831-3.319a16.387 16.387 0 0 0 6.842 3.319a1 1 0 0 0 .426-1.954a14.382 14.382 0 0 1-5.79-2.733A16.48 16.48 0 0 0 17.893 7H20a1 1 0 0 0 0-2z" fill="currentColor"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.2em" height="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" style=""><path d="M14 10h2v.757a4.5 4.5 0 0 1 7 3.743V20h-2v-5.5c0-1.43-1.175-2.5-2.5-2.5S16 13.07 16 14.5V20h-2V10zm-2-6v2H4v5h8v2H4v5h8v2H2V4h10z" fill="currentColor"></path></svg></a></li><li data-v-e53127d8=""><a class="select-none text-xl" title="切换到暗黑模式" data-v-e53127d8=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.2em" height="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" style="display:none;"><path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938A7.999 7.999 0 0 0 4 12z" fill="currentColor"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.2em" height="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" style=""><path d="M12 18a6 6 0 1 1 0-12a6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8a4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636L5.636 7.05L3.515 4.93zM16.95 18.364l1.414-1.414l2.121 2.121l-1.414 1.414l-2.121-2.121zm2.121-14.85l1.414 1.415l-2.121 2.121l-1.414-1.414l2.121-2.121zM5.636 16.95l1.414 1.414l-2.121 2.121l-1.414-1.414l2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z" fill="currentColor"></path></svg></a></li></ul></nav></header><main class="flex
+      justify-between
+      container
+      md:mx-auto
+      box-border
+      px-4
+      md:mt-16
+      mt-4"><!--[--><section class="
+      article-detail
+      flex
+      justify-start
+      flex-col flex-1
+      md:w-auto
+      w-full
+      overflow-hidden
+    "><h1 class="flex items-center w-full md:text-3xl text-xl md:mb-4 mb-2">Vue-CLI脚手架3.0升级小结（含Win版Node升级与PowerShell踩坑记录）</h1><div class="
+        flex
+        justify-between
+        items-center
+        w-full
+        text-sm text-gray-400
+        md:mb-8
+        mb-4
+        md:pb-8
+        pb-4
+        border-b
+        dark:border-white dark:border-opacity-5
+      "><div class="flex items-center"><span class="md:mr-8 mr-4">作者：程沛权</span><span title="2018-11-21">2018-11-21</span></div><!----></div><p class="
+        flex
+        justify-center
+        items-center
+        w-full
+        p-4
+        md:mb-8
+        mb-4
+        bg-gray-50
+        dark:bg-white dark:bg-opacity-5
+        rounded
+        text-gray-600
+        dark:text-gray-300
+        text-sm
+      "> 本文最后更新于 965 天前，部分内容可能不适合当前所有情况，仅供参考。 </p><!--[--><!--[--><div class="article-content prose mx-auto"><p></p><div class="article-toc prose"><ul><li><a href="#%E5%85%B3%E4%BA%8E-node-js-%E7%89%88%E6%9C%AC%E5%8D%87%E7%BA%A7"> 关于 Node.js 版本升级</a></li><li><a href="#%E5%85%B3%E4%BA%8E-node-%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"> 关于 Node 的环境变量</a></li><li><a href="#%E5%AE%89%E8%A3%85-vue-cli-3-0"> 安装 Vue-CLI 3.0</a></li><li><a href="#%E4%BF%AE%E6%94%B9-vue-%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE"> 修改 Vue 项目配置</a></li></ul></div><p></p><p>Vue 脚手架 3.0 出来也蛮久了，秉着前人先踩坑的习惯，最近才开始升级。整个过程还是蛮顺利的，不过也有一些小小的问题，简单记录起来。</p><p>系统版本：Windows 7 64 位（公司限制无法使用管理员权限）</p><p>命令程序：PowerShell（公司限制无法使用 CMD）</p><blockquote><p>官方文档 <a href="https://cli.vuejs.org/zh/guide/" class="custom-external-link" target="_blank" rel="noopener noreferrer">https://cli.vuejs.org/zh/guide/</a></p></blockquote><h2 id="关于-node-js-版本升级"><a class="header-anchor" href="#关于-node-js-版本升级" aria-hidden="true">#</a> 关于 Node.js 版本升级</h2><p>Vue-cli 3.0 需要 8.9 或者更高的 node，官方推荐 8.11+，我 check 了一下本机的 node 版本，有点老，才 7.0，于是需要先解决版本升级的问题。</p><p>先从官网下载 node 安装包，由于公司是 Windows 的机器，而且不开放管理员权限，无法直接通过 msi 文件安装，于是选择了下载 zip 免安装包，下载后直接解压，覆盖原来的 node 目录的文件即可升级。</p><p>然而一开始选择的最新版 node 目前使用有问题，安装 npm 包的时候一直报错 asyncWrite is not a function，半天定位不到原因，后来在 stackoverflow 上看到这个问题，通过降级到 8.11.2 来解决（所以最新版还是不知道什么原因和怎么解决 emmm）。</p><blockquote><p><a href="https://stackoverflow.com/questions/50597159/npm-err-asyncwrite-is-not-a-function" class="custom-external-link" target="_blank" rel="noopener noreferrer">https://stackoverflow.com/questions/50597159/npm-err-asyncwrite-is-not-a-function</a></p></blockquote><figure><img src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/11/1.jpg" alt=""></figure><p>附上 Node 的相关下载地址。</p><blockquote><p>官网下载 <a href="https://nodejs.org/zh-cn/download/" class="custom-external-link" target="_blank" rel="noopener noreferrer">https://nodejs.org/zh-cn/download/</a><br>历史版本 <a href="https://nodejs.org/zh-cn/download/releases/" class="custom-external-link" target="_blank" rel="noopener noreferrer">https://nodejs.org/zh-cn/download/releases/</a><br>我选的版本 <a href="https://nodejs.org/download/release/v8.11.2/node-v8.11.2-win-x64.zip" class="custom-external-link" target="_blank" rel="noopener noreferrer">https://nodejs.org/download/release/v8.11.2/node-v8.11.2-win-x64.zip</a></p></blockquote><h2 id="关于-node-的环境变量"><a class="header-anchor" href="#关于-node-的环境变量" aria-hidden="true">#</a> 关于 Node 的环境变量</h2><p>直接通过安装包安装的 node 现在都不需要配置这个了，会自动设置好，但如果跟我一样，没有管理员权限，通过 zip 解压的话，第一次使用 node 需要关联上这个 path。</p><p>方法也比较简单，就直接截图示范了，path 的内容就是你的 node 的路径。</p><figure><img src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/11/2.jpg" alt=""></figure><h2 id="安装-vue-cli-3-0"><a class="header-anchor" href="#安装-vue-cli-3-0" aria-hidden="true">#</a> 安装 Vue-CLI 3.0</h2><p>本来以为要踩坑也得等到使用的时候才会踩，安装怎么说也得很顺利吧，然而现实就是比较残酷，安装的时候就踩了个大坑。</p><p>根据官方文档说明，卸载了旧版脚手架之后，使用 <code>npm install -g @vue/cli</code> 就可以直接安装，但是频繁报错，说存在无法识别的标记，如下图：</p><figure><img src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/11/3.jpg" alt=""></figure><p>并且这个问题，百度和谷歌都找不到原因，根本没有人提问，我能怎么办，我很绝望啊！</p><p>幸亏天无绝人之路，有位同事对 PowerShell 比较熟，一眼就帮我看出问题所在，是@引起的，在 CMD 是可以直接这么安装，但是在 PS，@是个特殊字符，需要进行转义，需要在@前面加上`，再次尝试 ，转义后立即可以安装了，感动到哭。</p><figure><img src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/11/4.jpg" alt=""></figure><h2 id="修改-vue-项目配置"><a class="header-anchor" href="#修改-vue-项目配置" aria-hidden="true">#</a> 修改 Vue 项目配置</h2><p>3.0 的目录结构比 2.0 精简了好多，具体的这里不细说了，官方文档也说的很清晰，这里附上我在用的 vue.config.js 文件给大家参考。</p><p>配置文档说明 <a href="https://cli.vuejs.org/zh/config/" class="custom-external-link" target="_blank" rel="noopener noreferrer">https://cli.vuejs.org/zh/config/</a></p><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span>
+<span class="token keyword">function</span> <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token parameter">dir</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> dir<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  publicPath<span class="token operator">:</span> <span class="token string">'./'</span><span class="token punctuation">,</span>
+  assetsDir<span class="token operator">:</span> <span class="token string">'static'</span><span class="token punctuation">,</span>
+  productionSourceMap<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  lintOnSave<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">chainWebpack</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">config</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    config<span class="token punctuation">.</span>resolve<span class="token punctuation">.</span>alias
+      <span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">'@'</span><span class="token punctuation">,</span> <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'src'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">'@img'</span><span class="token punctuation">,</span> <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'src/assets/img'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">'@styl'</span><span class="token punctuation">,</span> <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'src/assets/styl'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">'@js'</span><span class="token punctuation">,</span> <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'src/assets/js'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">'@cp'</span><span class="token punctuation">,</span> <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'src/components'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    config<span class="token punctuation">.</span>module
+      <span class="token punctuation">.</span><span class="token function">rule</span><span class="token punctuation">(</span><span class="token string">'images'</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.(png|jpe?g|gif|webp|svg)(\?.*)?$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token string">'url-loader'</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">loader</span><span class="token punctuation">(</span><span class="token string">'url-loader'</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">options</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        limit<span class="token operator">:</span> <span class="token number">10000</span><span class="token punctuation">,</span>
+        fallback<span class="token operator">:</span> <span class="token punctuation">{</span>
+          loader<span class="token operator">:</span> <span class="token string">'file-loader'</span><span class="token punctuation">,</span>
+          options<span class="token operator">:</span> <span class="token punctuation">{</span>
+            name<span class="token operator">:</span> <span class="token string">'static/img/[name].[hash:8].[ext]'</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><!--]--><!--]--></section><section class="article-sidebar lg:flex hidden flex-col flex-shrink-0 ml-16" data-v-1c431d04=""><!----><section class="mb-16" data-v-1c431d04=""><h2 class="block-title" data-v-1c431d04="">热门栏目</h2><div class="flex flex-col w-full" data-v-1c431d04=""><a href="https://vue3.chengpeiquan.com/" target="_blank" data-v-1c431d04=""><img class="w-full" src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/01/1-1.jpg" alt="Vue3.0学习教程与实战案例" data-v-1c431d04=""></a></div></section><section class="mb-8" data-v-1c431d04=""><div class="flex justify-between items-center block-title" data-v-1c431d04=""><h2 data-v-1c431d04="">猜你喜欢</h2><span class="
+            dark:text-gray-400
+            text-gray-500 text-base
+            font-normal
+            cursor-pointer
+            select-none
+          " data-v-1c431d04=""> 换一换 </span></div><ul data-v-1c431d04=""><!--[--><li class="flex mb-8" data-v-1c431d04=""><div class="flex flex-shrink-0 w-16 h-12 overflow-hidden mr-4 rounded" data-v-1c431d04=""><a href="/article/ckeditor4-rich-text-editor-webpack.html" class="" title="基于CKEditor4的富文本编辑器 WebPack引入说明与配置注意事项" data-v-1c431d04=""><img class="img" src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/10/1-3.jpg" alt="基于CKEditor4的富文本编辑器 WebPack引入说明与配置注意事项" data-v-1c431d04=""></a></div><a href="/article/ckeditor4-rich-text-editor-webpack.html" class="flex flex-1 line-clamp-2" title="基于CKEditor4的富文本编辑器 WebPack引入说明与配置注意事项" data-v-1c431d04=""><h2 class="article-title text-base" data-v-1c431d04="">基于CKEditor4的富文本编辑器 WebPack引入说明与配置注意事项</h2></a></li><li class="flex mb-8" data-v-1c431d04=""><div class="flex flex-shrink-0 w-16 h-12 overflow-hidden mr-4 rounded" data-v-1c431d04=""><a href="/article/axios-ie9.html" class="" title="解决axios的responseType为&quot;json&quot;时IE9报undefined的兼容办法" data-v-1c431d04=""><img class="img" src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/10/1-8.jpg" alt="解决axios的responseType为&quot;json&quot;时IE9报undefined的兼容办法" data-v-1c431d04=""></a></div><a href="/article/axios-ie9.html" class="flex flex-1 line-clamp-2" title="解决axios的responseType为&quot;json&quot;时IE9报undefined的兼容办法" data-v-1c431d04=""><h2 class="article-title text-base" data-v-1c431d04="">解决axios的responseType为"json"时IE9报undefined的兼容办法</h2></a></li><li class="flex mb-8" data-v-1c431d04=""><div class="flex flex-shrink-0 w-16 h-12 overflow-hidden mr-4 rounded" data-v-1c431d04=""><a href="/article/blog-articles-sort-out.html" class="" title="对博客的文章重新做了一下归类和整理" data-v-1c431d04=""><img class="img" src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2019/09/1-3.jpg" alt="对博客的文章重新做了一下归类和整理" data-v-1c431d04=""></a></div><a href="/article/blog-articles-sort-out.html" class="flex flex-1 line-clamp-2" title="对博客的文章重新做了一下归类和整理" data-v-1c431d04=""><h2 class="article-title text-base" data-v-1c431d04="">对博客的文章重新做了一下归类和整理</h2></a></li><li class="flex mb-8" data-v-1c431d04=""><div class="flex flex-shrink-0 w-16 h-12 overflow-hidden mr-4 rounded" data-v-1c431d04=""><a href="/article/vue-skeleton.html" class="" title="基于Vue-CLI 3.0的骨架屏实现方案" data-v-1c431d04=""><img class="img" src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2019/03/1.jpg" alt="基于Vue-CLI 3.0的骨架屏实现方案" data-v-1c431d04=""></a></div><a href="/article/vue-skeleton.html" class="flex flex-1 line-clamp-2" title="基于Vue-CLI 3.0的骨架屏实现方案" data-v-1c431d04=""><h2 class="article-title text-base" data-v-1c431d04="">基于Vue-CLI 3.0的骨架屏实现方案</h2></a></li><li class="flex mb-8" data-v-1c431d04=""><div class="flex flex-shrink-0 w-16 h-12 overflow-hidden mr-4 rounded" data-v-1c431d04=""><a href="/article/large-image-preload-fast.html" class="" title="弹窗大背景优化方案 png大图片预加载处理方法" data-v-1c431d04=""><img class="img" src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/10/1.jpg" alt="弹窗大背景优化方案 png大图片预加载处理方法" data-v-1c431d04=""></a></div><a href="/article/large-image-preload-fast.html" class="flex flex-1 line-clamp-2" title="弹窗大背景优化方案 png大图片预加载处理方法" data-v-1c431d04=""><h2 class="article-title text-base" data-v-1c431d04="">弹窗大背景优化方案 png大图片预加载处理方法</h2></a></li><!--]--></ul></section><section class="mb-16" data-v-1c431d04=""><h2 class="block-title" data-v-1c431d04="">在线吸猫</h2><div class="flex flex-col w-full" data-v-1c431d04=""><a href="https://vue3.chengpeiquan.com/" target="_blank" data-v-1c431d04=""><img class="w-full" src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/07/20210703235057.jpg" alt="扫码关注我的抖音号" data-v-1c431d04=""></a></div></section><section class="mb-2" data-v-1c431d04=""><h2 class="block-title" data-v-1c431d04="">友情链接</h2><div class="flex flex-wrap w-full text-base" data-v-1c431d04=""><a class="mb-2" href="https://vue3.chengpeiquan.com/" target="_blank" rel="noopener noreferrer" data-v-1c431d04="">Vue3.0学习教程与实战案例</a><span class="text-gray-900 mx-2" data-v-1c431d04="">|</span><a class="mb-2" href="https://wuyabala.com/" target="_blank" rel="noopener noreferrer" data-v-1c431d04="">佩恩的博客</a><span class="text-gray-900 mx-2" data-v-1c431d04="">|</span><a class="mb-2" href="https://chawyehsu.com/" target="_blank" rel="noopener noreferrer" data-v-1c431d04="">The Art of Chawye Hsu</a><span class="text-gray-900 mx-2" data-v-1c431d04="">|</span><a class="mb-2" href="https://guangne.com/" target="_blank" rel="noopener noreferrer" data-v-1c431d04="">旅行家龙猫</a></div></section><section class="google-adsense" data-v-1c431d04="" data-v-73d04e62=""><ins class="adsbygoogle" style="display:inline-block;width:340px;height:136px;" data-ad-client="ca-pub-7109929923549092" data-ad-slot="2712556929" data-v-73d04e62=""></ins></section></section><!--]--></main><!--[--><footer class="
+      flex
+      justify-center
+      items-center
+      w-full
+      h-36
+      opacity-70
+      md:text-sm
+      text-xs
+    " data-v-3a2a2744=""><a class="year" data-v-3a2a2744="">© 2021 程沛权</a><!----><a class="md:ml-12 ml-2" href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener noreferrer" data-v-3a2a2744="">粤ICP备20011269号-1</a></footer><a class="fixed
+      md:right-12
+      right-6
+      md:bottom-12
+      bottom-6
+      text-2xl
+      select-none
+      transform
+      rotate-90" data-v-3a2a2744=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.2em" height="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M17.51 3.87L15.73 2.1L5.84 12l9.9 9.9l1.77-1.77L9.38 12l8.13-8.13z" fill="currentColor"></path></svg></a><!--]--><!--]--></div>
+
+<script>window.__INITIAL_STATE__="{}"</script>
+    
+  
+
+</body></html>

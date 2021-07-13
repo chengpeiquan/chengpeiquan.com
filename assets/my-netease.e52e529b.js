@@ -1,0 +1,8 @@
+/**
+ * name: chengpeiquan.com
+ * version: v0.1.0
+ * description: My personal website, technology stack based on Vue.js 3.0, and Vite 2.0, use Server Side Generation.
+ * author: chengpeiquan
+ * homepage: https://chengpeiquan.com/
+ */
+import{_ as e}from"./Detail.vue_vue&type=script&setup=true&lang.5ad359df.js";import{u as t,o as s,c as a,A as n,b as i,n as o}from"./vendor.a40cd88e.js";import"./dateDisplay.fb1ec8c0.js";import"./app.0a3178ab.js";const p=i("div",{class:"article-content prose mx-auto"},[i("p",null,"从 2015 年 6 月 1 日入职，到这个月刚好五周年，虽然加班很多，但回顾起来，工作内外还是很快乐的！"),i("p",null,"最喜欢的还是这个 loading 了，看着自己从真实慢慢过渡到形象，别有感慨！！！感谢在罗马帮我拍照的美术妹子，最喜欢这张照片了，当然还有之前帮我画这个形象照的妹子~"),i("figure",null,[i("img",{src:"https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/06/my-netease/loading.gif",alt:""}),i("figcaption",null,"loading")]),i("p",null,"话不多说，扫码看咯~"),i("figure",null,[i("img",{src:"https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/06/my-netease/qrcode.jpg",alt:""}),i("figcaption",null,"扫码预览")]),i("p",null,[o("手机可以戳 "),i("a",{href:"https://chengpeiquan.com/topic/netease/index.html"},"这里"),o(" 直接看。")])],-1),r={expose:[],setup(i){const o={title:"记录一下在网易五年来的工作与生活",desc:"虽然加班很多，但回顾起来，工作内外还是很快乐的！",keywords:"网易,在网易工作是什么体验,网易游戏",date:"2020-06-14T16:48:00.000Z",cover:"https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/05/20210509201311.jpg",categories:["prose"],repo:"https://github.com/chengpeiquan/my-netease",meta:[{property:"og:title",content:"记录一下在网易五年来的工作与生活"}]};return t({title:"记录一下在网易五年来的工作与生活",meta:[{property:"og:title",content:"记录一下在网易五年来的工作与生活"}]}),(t,i)=>{const r=e;return s(),a(r,{frontmatter:o},{default:n((()=>[p])),_:1})}}};export default r;

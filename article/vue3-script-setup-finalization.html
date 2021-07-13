@@ -1,0 +1,234 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/chengpeiquan/chengpeiquan.com@gh-pages/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue3.0最新动态：script-setup定稿 部分实验性API将弃用 - 程沛权 - 养了三只猫</title>
+  <script type="module" crossorigin="" src="https://cdn.jsdelivr.net/gh/chengpeiquan/chengpeiquan.com@gh-pages/assets/app.0a3178ab.js"></script>
+  <link rel="modulepreload" href="https://cdn.jsdelivr.net/gh/chengpeiquan/chengpeiquan.com@gh-pages/assets/vendor.a40cd88e.js">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/chengpeiquan/chengpeiquan.com@gh-pages/assets/app.5b270f81.css">
+<link rel="modulepreload" crossorigin="" href="https://cdn.jsdelivr.net/gh/chengpeiquan/chengpeiquan.com@gh-pages/assets/vue3-script-setup-finalization.52211377.js"><link rel="modulepreload" crossorigin="" href="https://cdn.jsdelivr.net/gh/chengpeiquan/chengpeiquan.com@gh-pages/assets/dateDisplay.fb1ec8c0.js"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/chengpeiquan/chengpeiquan.com@gh-pages/assets/dateDisplay.2f770fa8.css"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/avatar-300x300.jpg"><meta name="twitter:title" content="Vue3.0最新动态：script-setup定稿 部分实验性API将弃用"><meta name="twitter:description" content="从尤大的Twitter上获取到了最新的开发进展，期待已久的script-setup组件模式终于定稿，不再是实验性功能了，当然对比之前的实验性阶段也有一些新的变化，包括一些API被弃用，同时也有新的API补充进来代替原有的功能。"><meta name="twitter:image:src" content="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage//img/2021/07/20210705181949.jpg"><meta name="twitter:card" content="summary"><meta name="twitter:creator" content="@chengpeiquan"><meta name="theme-color" content="#111111"><meta property="og:title" content="Vue3.0最新动态：script-setup定稿 部分实验性API将弃用 - 程沛权 - 养了三只猫"><meta name="description" content="从尤大的Twitter上获取到了最新的开发进展，期待已久的script-setup组件模式终于定稿，不再是实验性功能了，当然对比之前的实验性阶段也有一些新的变化，包括一些API被弃用，同时也有新的API补充进来代替原有的功能。"><meta name="keywords" content="script setup,vue 3.0 script setup,vue3 script setup,script setup prop,script setup emit,defineProps,vue 3.0 defineProps,vue defineProps,vue3 defineProps,prop defineProps,setup defineProps,defineEmits,vue 3.0 defineEmits,vue defineEmits,vue3 defineEmits,emit defineEmits,setup defineEmits,useAttrs,vue 3.0 useAttrs,vue useAttrs,vue3 useAttrs,setup useAttrs,useSlots,vue 3.0 useSlots,vue useSlots,vue3 useSlots,setup useSlots"><meta name="head:count" content="10"></head>
+  <body>
+    <div id="app" data-server-rendered="true"><!--[--><header class="flex
+      justify-between
+      items-center
+      w-full
+      md:h-24
+      h-14
+      px-4
+      border-b-4
+      dark:border-white dark:border-opacity-5 dark:bg-white
+      bg-gray-50
+      dark:bg-opacity-5" data-v-e53127d8=""><div class="flex justify-start items-center" data-v-e53127d8=""><div class="
+          flex flex-shrink-0
+          md:w-14
+          w-8
+          md:h-14
+          h-8
+          rounded-full
+          overflow-hidden
+        " data-v-e53127d8=""><img class="img" width="56" height="56" src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/avatar-60x60.jpg" alt="程沛权" data-v-e53127d8=""></div><span class="md:ml-4 ml-2 md:text-2xl text-l dark:text-white text-black" data-v-e53127d8="">程沛权</span></div><nav class="nav flex flex-1" data-v-e53127d8=""><ul class="flex justify-end items-center w-full" data-v-e53127d8=""><!--[--><li class="mr-8 text-xl" data-v-e53127d8=""><a href="/" class="" title="Home" exact="" data-v-e53127d8="">Home</a></li><li class="mr-8 text-xl" data-v-e53127d8=""><a href="/article" class="" title="Article" exact="" data-v-e53127d8="">Article</a></li><li class="mr-8 text-xl" data-v-e53127d8=""><a href="/about" class="" title="About" exact="" data-v-e53127d8="">About</a></li><!--]--><li data-v-e53127d8=""><a class="select-none mr-4 text-xl" href="https://github.com/chengpeiquan" target="_blank" title="GitHub" rel="nofollow noopener noreferrer" data-v-e53127d8=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.2em" height="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" data-v-e53127d8=""><path d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 0 0 6.838 9.488c.5.087.687-.213.687-.476c0-.237-.013-1.024-.013-1.862c-2.512.463-3.162-.612-3.362-1.175c-.113-.288-.6-1.175-1.025-1.413c-.35-.187-.85-.65-.013-.662c.788-.013 1.35.725 1.538 1.025c.9 1.512 2.338 1.087 2.912.825c.088-.65.35-1.087.638-1.337c-2.225-.25-4.55-1.113-4.55-4.938c0-1.088.387-1.987 1.025-2.688c-.1-.25-.45-1.275.1-2.65c0 0 .837-.262 2.75 1.026a9.28 9.28 0 0 1 2.5-.338c.85 0 1.7.112 2.5.337c1.912-1.3 2.75-1.024 2.75-1.024c.55 1.375.2 2.4.1 2.65c.637.7 1.025 1.587 1.025 2.687c0 3.838-2.337 4.688-4.562 4.938c.362.312.675.912.675 1.85c0 1.337-.013 2.412-.013 2.75c0 .262.188.574.688.474A10.016 10.016 0 0 0 22 12c0-5.525-4.475-10-10-10z" fill="currentColor"></path></svg></a></li><li data-v-e53127d8=""><a class="select-none mr-4 text-xl" href="https://www.zhihu.com/people/basss" target="_blank" title="知乎" rel="nofollow noopener noreferrer" data-v-e53127d8=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.2em" height="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" data-v-e53127d8=""><path d="M13.373 18.897h1.452l.478 1.637l2.605-1.637h3.07V5.395h-7.605v13.502zM14.918 6.86h4.515v10.57h-1.732l-1.73 1.087l-.314-1.084l-.739-.003V6.861zm-2.83 4.712H8.846a70.3 70.3 0 0 0 .136-4.56h3.172s.122-1.4-.532-1.384H6.135c.216-.814.488-1.655.813-2.524c0 0-1.493 0-2 1.339c-.211.552-.82 2.677-1.904 4.848c.365-.04 1.573-.073 2.284-1.378c.131-.366.156-.413.318-.902h1.79c0 .651-.074 4.151-.104 4.558h-3.24c-.729 0-.965 1.466-.965 1.466h4.066C6.92 16.131 5.456 18.74 2.8 20.8c1.27.363 2.536-.057 3.162-.614c0 0 1.425-1.297 2.206-4.298l3.346 4.03s.49-1.668-.077-2.481c-.47-.554-1.74-2.052-2.281-2.595l-.907.72c.27-.867.433-1.71.488-2.524h3.822s-.005-1.466-.47-1.466z" fill="currentColor"></path></svg></a></li><li data-v-e53127d8=""><a class="select-none mr-4 text-xl" href="/feed.xml" target="_blank" title="RSS" rel="nofollow noopener noreferrer" data-v-e53127d8=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.2em" height="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" data-v-e53127d8=""><path d="M3 3c9.941 0 18 8.059 18 18h-3c0-8.284-6.716-15-15-15V3zm0 7c6.075 0 11 4.925 11 11h-3a8 8 0 0 0-8-8v-3zm0 7a4 4 0 0 1 4 4H3v-4z" fill="currentColor"></path></svg></a></li><li data-v-e53127d8=""><a class="select-none mr-4 text-xl" title="切换为英文" data-v-e53127d8=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.2em" height="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" style="display:none;"><path d="M20 5h-7V4a1 1 0 0 0-2 0v1H4a1 1 0 0 0 0 2h11.882a14.493 14.493 0 0 1-3.94 7.952A14.426 14.426 0 0 1 8.663 9.67a1 1 0 0 0-1.889.66a16.414 16.414 0 0 0 3.68 5.958a14.299 14.299 0 0 1-5.768 2.735A1 1 0 0 0 4.899 21a1.018 1.018 0 0 0 .215-.023a16.297 16.297 0 0 0 6.831-3.319a16.387 16.387 0 0 0 6.842 3.319a1 1 0 0 0 .426-1.954a14.382 14.382 0 0 1-5.79-2.733A16.48 16.48 0 0 0 17.893 7H20a1 1 0 0 0 0-2z" fill="currentColor"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.2em" height="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" style=""><path d="M14 10h2v.757a4.5 4.5 0 0 1 7 3.743V20h-2v-5.5c0-1.43-1.175-2.5-2.5-2.5S16 13.07 16 14.5V20h-2V10zm-2-6v2H4v5h8v2H4v5h8v2H2V4h10z" fill="currentColor"></path></svg></a></li><li data-v-e53127d8=""><a class="select-none text-xl" title="切换到暗黑模式" data-v-e53127d8=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.2em" height="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" style="display:none;"><path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938A7.999 7.999 0 0 0 4 12z" fill="currentColor"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.2em" height="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" style=""><path d="M12 18a6 6 0 1 1 0-12a6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8a4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636L5.636 7.05L3.515 4.93zM16.95 18.364l1.414-1.414l2.121 2.121l-1.414 1.414l-2.121-2.121zm2.121-14.85l1.414 1.415l-2.121 2.121l-1.414-1.414l2.121-2.121zM5.636 16.95l1.414 1.414l-2.121 2.121l-1.414-1.414l2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z" fill="currentColor"></path></svg></a></li></ul></nav></header><main class="flex
+      justify-between
+      container
+      md:mx-auto
+      box-border
+      px-4
+      md:mt-16
+      mt-4"><!--[--><section class="
+      article-detail
+      flex
+      justify-start
+      flex-col flex-1
+      md:w-auto
+      w-full
+      overflow-hidden
+    "><h1 class="flex items-center w-full md:text-3xl text-xl md:mb-4 mb-2">Vue3.0最新动态：script-setup定稿 部分实验性API将弃用</h1><div class="
+        flex
+        justify-between
+        items-center
+        w-full
+        text-sm text-gray-400
+        md:mb-8
+        mb-4
+        md:pb-8
+        pb-4
+        border-b
+        dark:border-white dark:border-opacity-5
+      "><div class="flex items-center"><span class="md:mr-8 mr-4">作者：程沛权</span><span title="2021-07-05">2021-07-05</span></div><div class="
+          flex
+          items-center
+          cursor-pointer
+          hover:text-red-500
+          dark:hover:text-rose-500
+        " title="给仓库一个Star"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.2em" height="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M12 18.26l-7.053 3.948l1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34l8.027.952l-5.935 5.488l1.575 7.928L12 18.26zm0-2.292l4.247 2.377l-.949-4.773l3.573-3.305l-4.833-.573L12 5.275l-2.038 4.42l-4.833.572l3.573 3.305l-.949 4.773L12 15.968z" fill="currentColor"></path></svg><span class="ml-1">Star on GitHub</span></div></div><!----><!--[--><!--[--><div class="article-content prose mx-auto"><p></p><div class="article-toc prose"><ul><li><a href="#usecontext-api-%E8%A2%AB%E5%BC%83%E7%94%A8"> useContext API 被弃用</a></li><li><a href="#%E6%96%B0%E5%A2%9E-useslots-api-%E5%92%8C-useattrs-api"> 新增 useSlots API 和 useAttrs API</a><ul><li><a href="#useattrs"> useAttrs</a></li><li><a href="#useslots"> useSlots</a></li></ul></li><li><a href="#%E6%96%B0%E5%A2%9E-defineexpose-api"> 新增 defineExpose API</a></li><li><a href="#%E6%94%B9%E5%90%8D-defineemits-api"> 改名 defineEmits API</a></li><li><a href="#%E6%96%B0%E5%A2%9E-withdefaults-api"> 新增 withDefaults API</a></li><li><a href="#%E9%A1%B6%E7%BA%A7-await-%E7%9A%84%E6%94%AF%E6%8C%81"> 顶级 await 的支持</a></li><li><a href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"> 参考资料</a></li></ul></div><p></p><p>今天一早收到一条 issue <a href="https://github.com/chengpeiquan/learning-vue3/issues/107" class="custom-external-link" target="_blank" rel="noopener noreferrer">#107</a> ，有开发者在咨询我 Vue 3.0 script setup 的新 API 怎么用。</p><p>最近一段时间挺忙，加上官方的开发动态也不是很多新东西，所以关注的比较少，看了一下 release 记录，发现最新的 2 个小版本对这个新特性改动还算蛮大的，之前的用法都调整了不少。</p><p>今天距离上一次发文讨论 script-setup 新特性已经有 4 个多月了（<a href="https://chengpeiquan.com/article/vue3-script-setup.html">回顾上一篇</a>），虽然截止至 7 月 2 日的 <code>3.1.4</code> 版本，script-setup 还是处于实验性阶段，但在同一天，尤大在 <a href="https://twitter.com/youyuxi/status/1410744671848910851" class="custom-external-link" target="_blank" rel="noopener noreferrer">twitter</a> 上发布了一条推文，预告了它将会在 <code>3.2.0</code> 版本脱离实验状态，正式进入 Vue 3.0 的队伍。</p><p>先简单梳理一下本次定稿下来的一些调整：</p><h2 id="usecontext-api-被弃用"><a class="header-anchor" href="#usecontext-api-被弃用" aria-hidden="true">#</a> useContext API 被弃用</h2><p>在原先，可以通过该 API 来获取组件的上下文信息，包含了 attrs 、slots 、emit、expose 等父子组件通信数据和方法。</p><pre class="language-ts"><code class="language-ts"><span class="token comment">// 导入 useContext 组件</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> useContext <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+
+<span class="token comment">// 获取 context</span>
+<span class="token keyword">const</span> ctx <span class="token operator">=</span> <span class="token function">useContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre><p>该 API 将在 3.2 版本之后删除，context 里面的数据，会用新的 useSlots 和 useAttrs API 来代替。</p><h2 id="新增-useslots-api-和-useattrs-api"><a class="header-anchor" href="#新增-useslots-api-和-useattrs-api" aria-hidden="true">#</a> 新增 useSlots API 和 useAttrs API</h2><p>在 useContext API 被删除后，原先的上下文数据，将由这两个新 API 获取到。</p><h3 id="useattrs"><a class="header-anchor" href="#useattrs" aria-hidden="true">#</a> useAttrs</h3><p>顾名思义， useAttrs 可以是用来获取 attrs 数据的（也就是非 props 的属性值）。</p><pre class="language-ts"><code class="language-ts"><span class="token comment">// 导入 useAttrs 组件</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> useAttrs <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+
+<span class="token comment">// 获取 attrs</span>
+<span class="token keyword">const</span> attrs <span class="token operator">=</span> <span class="token function">useAttrs</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">// attrs是个对象，和 props 一样，需要通过 key 来得到对应的单个 attr</span>
+<span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>attrs<span class="token punctuation">.</span>msg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p>如果当前组件里没有将某个属性指定为 props，那么父组件绑定下来的属性值，都会进入到 attrs 里，通过这个新 API 来拿到。</p><h3 id="useslots"><a class="header-anchor" href="#useslots" aria-hidden="true">#</a> useSlots</h3><p>同样，通过 API 的命名也能了解它是用来获取插槽数据的。</p><p>但这个 API 对大部分同学来说应该用的比较少，因为大部分 Vue 开发者应该都是用的 SFC 模式（单组件），插槽可以直接在 template 里使用 <code>&lt;slot /&gt;</code> 标签渲染。</p><p>所以，我个人觉得这个 API 的目标用户是面向 JSX / TSX 的开发者，简单的用法参考如下：</p><p>父组件，可以传入默认插槽和命名插槽：</p><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token comment">&lt;!-- 子组件 --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ChildTSX</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!-- 默认插槽 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>I am a default slot from TSX.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!-- 默认插槽 --&gt;</span>
+
+    <span class="token comment">&lt;!-- 命名插槽 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">#msg</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>I am a msg slot from TSX.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!-- 命名插槽 --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ChildTSX</span><span class="token punctuation">&gt;</span></span>
+  <span class="token comment">&lt;!-- 子组件 --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">setup</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ts<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> ChildTSX <span class="token keyword">from</span> <span class="token string">'@cp/context/Child.tsx'</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>那么在 JSX / TSX 的子组件，通过 useSlots 来获取父组件传进来的 slots 数据进行渲染：</p><pre class="language-ts"><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">{</span> defineComponent<span class="token punctuation">,</span> useSlots <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+
+<span class="token keyword">const</span> ChildTSX <span class="token operator">=</span> <span class="token function">defineComponent</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 获取插槽数据</span>
+    <span class="token keyword">const</span> slots <span class="token operator">=</span> <span class="token function">useSlots</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token comment">// 渲染组件</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+        <span class="token comment">// 渲染默认插槽</span>
+        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token punctuation">{</span> slots<span class="token punctuation">.</span>default <span class="token operator">?</span> slots<span class="token punctuation">.</span><span class="token function">default</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token string">''</span> <span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+
+        <span class="token comment">// 渲染命名插槽</span>
+        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token punctuation">{</span> slots<span class="token punctuation">.</span>msg <span class="token operator">?</span> slots<span class="token punctuation">.</span><span class="token function">msg</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token string">''</span> <span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> ChildTSX
+</code></pre><h2 id="新增-defineexpose-api"><a class="header-anchor" href="#新增-defineexpose-api" aria-hidden="true">#</a> 新增 defineExpose API</h2><p>在标准组件写法里，子组件的数据都是默认隐式暴露给父组件的，但在 script-setup 模式下，所有数据只是默认 return 给 template 使用，不会暴露到组件外，所以父组件是无法直接通过挂载 ref 变量获取子组件的数据。</p><p>如果要调用子组件的数据，需要先在子组件显示的暴露出来，才能够正确的拿到，这个操作，就是由 expose 来完成。</p><p>expose 也是 context 的一个组件成员，原来的用法，是从 useContext 里导出：</p><pre class="language-ts"><code class="language-ts"><span class="token comment">// 导入 useContext 组件</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> useContext <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+
+<span class="token comment">// 启用expose组件</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> expose <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 定义一个想提供给父组件拿到的数据</span>
+<span class="token keyword">const</span> msg<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">'Hello World!'</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 显示暴露的数据，才可以在父组件拿到</span>
+<span class="token function">expose</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  msg
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p>由于 useContext 会在未来版本里移除，所以新增了 defineExpose API 来实现 expose 的功能。</p><p>新的 API 用法：</p><pre class="language-ts"><code class="language-ts"><span class="token comment">// 导入 defineExpose 组件</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> defineExpose <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+
+<span class="token comment">// 定义数据</span>
+<span class="token keyword">const</span> msg<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">'Hello World!'</span>
+
+<span class="token comment">// 暴露给父组件</span>
+<span class="token function">defineExpose</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  msg
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre><p>父组件就可以通过 ref API 去拿到子组件暴露出来的 <code>msg</code> 数据了。</p><h2 id="改名-defineemits-api"><a class="header-anchor" href="#改名-defineemits-api" aria-hidden="true">#</a> 改名 defineEmits API</h2><p>使用 defineEmits 取待原来的 defineEmit API ，也就是改名了。</p><p>好吧，我之前的文章还特地强调了 defineProps 是复数结尾，带有 s，而 defineEmit 没有，如今，都统一了，都是复数形式。</p><p>从尤大的更新说明里看，大约只是一个 typo 更新，对比原来的 defineEmit ，目的是使用新的 defineEmits 与标准组件的 emits 命名上更为接近，和 defineProps 也更统一。</p><p>╮(╯▽╰)╭ 所以用法方面和原来是没什么区别的：</p><pre class="language-ts"><code class="language-ts"><span class="token comment">// 导入 defineEmits 组件</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> defineEmits <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+
+<span class="token comment">// 获取 emit</span>
+<span class="token keyword">const</span> emit <span class="token operator">=</span> <span class="token function">defineEmits</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'say-hi'</span><span class="token punctuation">,</span> <span class="token string">'change-name'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 调用 emit 打招呼</span>
+<span class="token function">emit</span><span class="token punctuation">(</span><span class="token string">'say-hi'</span><span class="token punctuation">,</span> <span class="token string">'Hello!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 调用 emit 改名</span>
+<span class="token function">emit</span><span class="token punctuation">(</span><span class="token string">'change-name'</span><span class="token punctuation">,</span> <span class="token string">'Tom'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h2 id="新增-withdefaults-api"><a class="header-anchor" href="#新增-withdefaults-api" aria-hidden="true">#</a> 新增 withDefaults API</h2><p>说完 emits，经常与之同时出现的 props 也有一些变化，本次是带来了一个全新的 withDefaults API，用于辅助 defineProps 来指定 prop 的默认值。</p><p>在以前的文章我有提及到，当你用 TypeScript 编程时，defineProps 有两种类型指定方式：</p><ol><li>通过构造函数进行检查（传统方法）</li></ol><p>第一种方式是使用 JavaScript 原生构造函数进行类型规定，使用这种方法时，如果你要限制 props 的类型和默认值，需要通过一个 “对象” 入参来传递给 defineProps，比如：</p><pre class="language-ts"><code class="language-ts"><span class="token comment">// 导入 defineProps 组件</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> defineProps <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+
+<span class="token comment">// 定义 props</span>
+<span class="token function">defineProps</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token punctuation">{</span>
+    type<span class="token operator">:</span> String<span class="token punctuation">,</span>
+    required<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token keyword">default</span><span class="token operator">:</span> <span class="token string">'Petter'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  userInfo<span class="token operator">:</span> Object<span class="token punctuation">,</span>
+  tags<span class="token operator">:</span> <span class="token builtin">Array</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre><ol start="2"><li>使用类型注解进行检查（TS 专属）</li></ol><p>第二种方式是按照 TS 的书写习惯来定义数据类型，这种情况下需要遵循 TypeScript 的类型规范，比如字符串是 string，而不是 String。</p><pre class="language-ts"><code class="language-ts"><span class="token comment">// 导入 defineProps 组件</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> defineProps <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+
+<span class="token comment">// 对象类型接口</span>
+<span class="token keyword">interface</span> <span class="token class-name">UserInfo</span> <span class="token punctuation">{</span>
+  id<span class="token operator">:</span> <span class="token builtin">number</span>
+  age<span class="token operator">:</span> <span class="token builtin">number</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 定义 props</span>
+<span class="token generic-function"><span class="token function">defineProps</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token builtin">string</span>
+  phoneNumber<span class="token operator">:</span> <span class="token builtin">number</span>
+  userInfo<span class="token operator">:</span> UserInfo
+  tags<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre><p>在此之前，使用第二种方法，是无法指定默认值的（在当时的 RFC 的文档里也有说明无法指定）。</p><p>如今，这个新的 withDefaults API 可以让你在使用 TS 类型系统时，也可以指定 props 的默认值。</p><p>它接收两个入参：</p><table><thead><tr><th style="text-align:left;">参数</th><th style="text-align:left;">类型</th><th style="text-align:left;">含义</th></tr></thead><tbody><tr><td style="text-align:left;">props</td><td style="text-align:left;">object</td><td style="text-align:left;">通过 defineProps 传入的 props</td></tr><tr><td style="text-align:left;">defaultValues</td><td style="text-align:left;">object</td><td style="text-align:left;">根据 props 的 key 传入默认值</td></tr></tbody></table><p>可能缺乏一些官方描述，还是看参考用法可能更直观：</p><pre class="language-ts"><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">{</span> defineProps<span class="token punctuation">,</span> withDefaults <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+
+<span class="token function">withDefaults</span><span class="token punctuation">(</span><span class="token generic-function"><span class="token function">defineProps</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token punctuation">{</span>
+  size<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">number</span>
+  labels<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  size<span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">labels</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span><span class="token string">'default label'</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre><h2 id="顶级-await-的支持"><a class="header-anchor" href="#顶级-await-的支持" aria-hidden="true">#</a> 顶级 await 的支持</h2><p>不必再配合 async 就可以直接使用 await 了，这种情况下，组件的 setup 会自动变成 async setup 。</p><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">setup</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ts<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">const</span> post <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">/api/post/1</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">r</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> r<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>它转换成标准组件的写法就是：</p><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ts<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> <span class="token punctuation">{</span> defineComponent<span class="token punctuation">,</span> withAsyncContext <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">defineComponent</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token keyword">async</span> <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> post <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">withAsyncContext</span><span class="token punctuation">(</span>
+      <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">/api/post/1</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">r</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> r<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      post
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre><h2 id="参考资料"><a class="header-anchor" href="#参考资料" aria-hidden="true">#</a> 参考资料</h2><p>以上所有的资料都来自于尤大在 PR 227 的评论通告……</p><p>传送门：<a href="https://github.com/vuejs/rfcs/pull/227#issuecomment-870105222" class="custom-external-link" target="_blank" rel="noopener noreferrer">&lt;script setup&gt; Finalization</a></p><p>好隐蔽的说，而且原来的 RFC 仓库的文档也删除了，换了新的文档也是找了好久才翻到新的，本文先根据尤大的通告做一波简单的说明，后续将会详细更新到 <a href="https://vue3.chengpeiquan.com/" class="custom-external-link" target="_blank" rel="noopener noreferrer">Vue3.0学习教程与实战案例</a> 里。</p></div><!--]--><!--]--></section><section class="article-sidebar lg:flex hidden flex-col flex-shrink-0 ml-16" data-v-1c431d04=""><!----><section class="mb-16" data-v-1c431d04=""><h2 class="block-title" data-v-1c431d04="">热门栏目</h2><div class="flex flex-col w-full" data-v-1c431d04=""><a href="https://vue3.chengpeiquan.com/" target="_blank" data-v-1c431d04=""><img class="w-full" src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/01/1-1.jpg" alt="Vue3.0学习教程与实战案例" data-v-1c431d04=""></a></div></section><section class="mb-8" data-v-1c431d04=""><div class="flex justify-between items-center block-title" data-v-1c431d04=""><h2 data-v-1c431d04="">猜你喜欢</h2><span class="
+            dark:text-gray-400
+            text-gray-500 text-base
+            font-normal
+            cursor-pointer
+            select-none
+          " data-v-1c431d04=""> 换一换 </span></div><ul data-v-1c431d04=""><!--[--><li class="flex mb-8" data-v-1c431d04=""><div class="flex flex-shrink-0 w-16 h-12 overflow-hidden mr-4 rounded" data-v-1c431d04=""><a href="/article/canvas-movie-jitter-effect.html" class="" title="电影故障抖动视觉效果实现：对大话手游愚人节专题的探究" data-v-1c431d04=""><img class="img" src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/04/1.jpg" alt="电影故障抖动视觉效果实现：对大话手游愚人节专题的探究" data-v-1c431d04=""></a></div><a href="/article/canvas-movie-jitter-effect.html" class="flex flex-1 line-clamp-2" title="电影故障抖动视觉效果实现：对大话手游愚人节专题的探究" data-v-1c431d04=""><h2 class="article-title text-base" data-v-1c431d04="">电影故障抖动视觉效果实现：对大话手游愚人节专题的探究</h2></a></li><li class="flex mb-8" data-v-1c431d04=""><div class="flex flex-shrink-0 w-16 h-12 overflow-hidden mr-4 rounded" data-v-1c431d04=""><a href="/article/vue-picture-cropper.html" class="" title="Vue 3.0图片裁切插件：vue-picture-cropper" data-v-1c431d04=""><img class="img" src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/12/1.jpg" alt="Vue 3.0图片裁切插件：vue-picture-cropper" data-v-1c431d04=""></a></div><a href="/article/vue-picture-cropper.html" class="flex flex-1 line-clamp-2" title="Vue 3.0图片裁切插件：vue-picture-cropper" data-v-1c431d04=""><h2 class="article-title text-base" data-v-1c431d04="">Vue 3.0图片裁切插件：vue-picture-cropper</h2></a></li><li class="flex mb-8" data-v-1c431d04=""><div class="flex flex-shrink-0 w-16 h-12 overflow-hidden mr-4 rounded" data-v-1c431d04=""><a href="/article/wordpress-rewrite-nginx-lnmp.html" class="" title="基于lnmp配置WordPress的Nginx伪静态方法" data-v-1c431d04=""><img class="img" src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/09/1-2.jpg" alt="基于lnmp配置WordPress的Nginx伪静态方法" data-v-1c431d04=""></a></div><a href="/article/wordpress-rewrite-nginx-lnmp.html" class="flex flex-1 line-clamp-2" title="基于lnmp配置WordPress的Nginx伪静态方法" data-v-1c431d04=""><h2 class="article-title text-base" data-v-1c431d04="">基于lnmp配置WordPress的Nginx伪静态方法</h2></a></li><li class="flex mb-8" data-v-1c431d04=""><div class="flex flex-shrink-0 w-16 h-12 overflow-hidden mr-4 rounded" data-v-1c431d04=""><a href="/article/vite-plugin-banner.html" class="" title="vite-plugin-banner：让Vite在打包的时候添加版权注释" data-v-1c431d04=""><img class="img" src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/01/20210224102526.jpg" alt="vite-plugin-banner：让Vite在打包的时候添加版权注释" data-v-1c431d04=""></a></div><a href="/article/vite-plugin-banner.html" class="flex flex-1 line-clamp-2" title="vite-plugin-banner：让Vite在打包的时候添加版权注释" data-v-1c431d04=""><h2 class="article-title text-base" data-v-1c431d04="">vite-plugin-banner：让Vite在打包的时候添加版权注释</h2></a></li><li class="flex mb-8" data-v-1c431d04=""><div class="flex flex-shrink-0 w-16 h-12 overflow-hidden mr-4 rounded" data-v-1c431d04=""><a href="/article/vue-vscode-snippets.html" class="" title="解决vscode保存vue文件时 压缩stylus代码为一行以及无法注释template的问题" data-v-1c431d04=""><img class="img" src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/09/vue-vscode-snippets.jpg" alt="解决vscode保存vue文件时 压缩stylus代码为一行以及无法注释template的问题" data-v-1c431d04=""></a></div><a href="/article/vue-vscode-snippets.html" class="flex flex-1 line-clamp-2" title="解决vscode保存vue文件时 压缩stylus代码为一行以及无法注释template的问题" data-v-1c431d04=""><h2 class="article-title text-base" data-v-1c431d04="">解决vscode保存vue文件时 压缩stylus代码为一行以及无法注释template的问题</h2></a></li><!--]--></ul></section><section class="mb-16" data-v-1c431d04=""><h2 class="block-title" data-v-1c431d04="">在线吸猫</h2><div class="flex flex-col w-full" data-v-1c431d04=""><a href="https://vue3.chengpeiquan.com/" target="_blank" data-v-1c431d04=""><img class="w-full" src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/07/20210703235057.jpg" alt="扫码关注我的抖音号" data-v-1c431d04=""></a></div></section><section class="mb-2" data-v-1c431d04=""><h2 class="block-title" data-v-1c431d04="">友情链接</h2><div class="flex flex-wrap w-full text-base" data-v-1c431d04=""><a class="mb-2" href="https://vue3.chengpeiquan.com/" target="_blank" rel="noopener noreferrer" data-v-1c431d04="">Vue3.0学习教程与实战案例</a><span class="text-gray-900 mx-2" data-v-1c431d04="">|</span><a class="mb-2" href="https://wuyabala.com/" target="_blank" rel="noopener noreferrer" data-v-1c431d04="">佩恩的博客</a><span class="text-gray-900 mx-2" data-v-1c431d04="">|</span><a class="mb-2" href="https://chawyehsu.com/" target="_blank" rel="noopener noreferrer" data-v-1c431d04="">The Art of Chawye Hsu</a><span class="text-gray-900 mx-2" data-v-1c431d04="">|</span><a class="mb-2" href="https://guangne.com/" target="_blank" rel="noopener noreferrer" data-v-1c431d04="">旅行家龙猫</a></div></section><section class="google-adsense" data-v-1c431d04="" data-v-73d04e62=""><ins class="adsbygoogle" style="display:inline-block;width:340px;height:136px;" data-ad-client="ca-pub-7109929923549092" data-ad-slot="2712556929" data-v-73d04e62=""></ins></section></section><!--]--></main><!--[--><footer class="
+      flex
+      justify-center
+      items-center
+      w-full
+      h-36
+      opacity-70
+      md:text-sm
+      text-xs
+    " data-v-3a2a2744=""><a class="year" data-v-3a2a2744="">© 2021 程沛权</a><!----><a class="md:ml-12 ml-2" href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener noreferrer" data-v-3a2a2744="">粤ICP备20011269号-1</a></footer><a class="fixed
+      md:right-12
+      right-6
+      md:bottom-12
+      bottom-6
+      text-2xl
+      select-none
+      transform
+      rotate-90" data-v-3a2a2744=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.2em" height="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M17.51 3.87L15.73 2.1L5.84 12l9.9 9.9l1.77-1.77L9.38 12l8.13-8.13z" fill="currentColor"></path></svg></a><!--]--><!--]--></div>
+
+<script>window.__INITIAL_STATE__="{}"</script>
+    
+  
+
+</body></html>

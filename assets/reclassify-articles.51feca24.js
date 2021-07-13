@@ -1,0 +1,8 @@
+/**
+ * name: chengpeiquan.com
+ * version: v0.1.0
+ * description: My personal website, technology stack based on Vue.js 3.0, and Vite 2.0, use Server Side Generation.
+ * author: chengpeiquan
+ * homepage: https://chengpeiquan.com/
+ */
+import{_ as t}from"./Detail.vue_vue&type=script&setup=true&lang.5ad359df.js";import{u as e,o as s,c as a,A as r,b as n,n as l}from"./vendor.a40cd88e.js";import"./dateDisplay.fb1ec8c0.js";import"./app.0a3178ab.js";const o=n("div",{class:"article-content prose mx-auto"},[n("p",null,[l("上一次做文章分类还是在 2019 年（见："),n("a",{href:"https://chengpeiquan.com/article/blog-articles-sort-out.html"},"对博客的文章重新做了一下归类和整理"),l("），那次的分类都是针对技术侧的内容梳理，春节对博客改版的时候觉得似乎没什么必要继续保留，连我自己都不怎么点进去筛选的分类，不见得其他人会想看，所以第一版上线并没有考虑做分类。")]),n("p",null,"但最近发现其实有时候还是想写一写一些与技术无关的东西，比如产品设计、做饭？或者一些音乐相关的东西，或者养猫的一些心得？"),n("p",null,"啊哈哈哈最近好多朋友都找我问养猫的一些技巧，新手猫奴多了不少，大家都知道我养了好几年猫，还养了三只，之前也是时不时会有咨询一些怎么照顾猫之类的问题…"),n("figure",null,[n("img",{src:"https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/03/20210316215030.png",alt:""}),n("figcaption",null,"最近每天都有朋友来问怎么养猫")]),n("p",null,"大概就是这些七七八八的原因吧，老是在微信上一问一答也挺累的，都可以公开的东西，不如找时间整理整理。"),n("p",null,"所以这次干脆重新把分类加了回来，粒度就没有弄那么细了，只是简单分了 “技术” 和 “随笔” ，随笔这边应该是想写什么就写什么了。"),n("p",null,"以上。")],-1),p={expose:[],setup(n){const l={title:"对文章又重新做了一次分类",desc:"时隔两年，改版的时候去掉了分类，想了想，还是加回来吧，又把所有内容重新分了个类。",keywords:"原生JS回到顶部,原生JS带动画回到顶部",date:"2021-03-16T01:17:00.000Z",cover:"https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/03/20210316221139.jpg",categories:["prose"],meta:[{property:"og:title",content:"对文章又重新做了一次分类"}]};return e({title:"对文章又重新做了一次分类",meta:[{property:"og:title",content:"对文章又重新做了一次分类"}]}),(e,n)=>{const p=t;return s(),a(p,{frontmatter:l},{default:r((()=>[o])),_:1})}}};export default p;
