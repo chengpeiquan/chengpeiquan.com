@@ -11,6 +11,10 @@ repo: https://github.com/chengpeiquan/learning-vue3
 
 [[toc]]
 
+> 2021-07-05：由于版本更新，本文部分内容已有过期，最新的相关内容请阅读：[Vue3.0最新动态：script-setup定稿 部分实验性API将弃用](https://chengpeiquan.com/article/vue3-script-setup-finalization.html)
+
+***
+
 > 2021-03-21：本文已同步到 [高效开发 - Vue3.0 学习教程与实战案例](https://vue3.chengpeiquan.com/efficient.html) 一章，可直接看专题文档了解更多。
 
 今天想聊一聊 Vue 3.0 的 script-setup，以及目前三个很少被提及到的 API —— defineProps 、 defineEmit 和 useContext。
