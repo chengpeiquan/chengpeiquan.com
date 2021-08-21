@@ -118,14 +118,6 @@
           rel="noopener noreferrer"
           >旅行家龙猫</a
         >
-        <span class="text-gray-900 mx-2">|</span>
-        <a
-          class="mb-2"
-          href="https://fzweb.tinytiger.cn/"
-          target="_blank"
-          rel="noopener noreferrer"
-          >分子-兴趣资源视频交流社区</a
-        >
       </div>
     </section>
     <!-- 友情链接 -->
