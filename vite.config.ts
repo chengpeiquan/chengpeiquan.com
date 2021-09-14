@@ -6,7 +6,7 @@ import fs from 'fs-extra'
 import Pages from 'vite-plugin-pages'
 import PurgeIcons from 'vite-plugin-purge-icons'
 import Icons, { ViteIconsResolver } from 'vite-plugin-icons'
-import ViteComponents from 'vite-plugin-components'
+import ViteComponents from 'unplugin-vue-components/vite'
 import Markdown from 'vite-plugin-md'
 import Prism from 'markdown-it-prism'
 import anchor from 'markdown-it-anchor'
@@ -126,10 +126,13 @@ export default defineConfig({
     ViteComponents({
       extensions: ['vue', 'md'],
       deep: true,
-      customLoaderMatcher: (path) => path.endsWith('.md'),
-      customComponentResolvers: ViteIconsResolver({
-        componentPrefix: '',
-      }),
+      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+      dts: true,
+      resolvers: [
+        ViteIconsResolver({
+          componentPrefix: '',
+        }),
+      ],
     }),
 
     PurgeIcons(),
