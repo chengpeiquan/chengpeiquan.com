@@ -27,7 +27,7 @@
 
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
-import isArticle from '/@libs/isArticle'
+import isArticle from '@libs/isArticle'
 
 const route = useRoute()
 const isUseArticle = isArticle(route)

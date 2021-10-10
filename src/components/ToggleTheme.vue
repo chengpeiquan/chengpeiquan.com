@@ -15,7 +15,7 @@
 
 <script setup lang="ts">
 import { inject } from 'vue'
-import isDark from '/@libs/isDark'
+import isDark from '@libs/isDark'
 
 const lang: string = inject('lang') || ''
 

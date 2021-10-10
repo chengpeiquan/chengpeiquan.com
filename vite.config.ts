@@ -38,13 +38,12 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '/@': resolve('src'),
-      '/@img': resolve('src/assets/img'),
-      '/@postcss': resolve('src/assets/postcss'),
-      '/@ts': resolve('src/assets/ts'),
-      '/@libs': resolve('src/libs'),
-      '/@cp': resolve('src/components'),
-      '/@views': resolve('src/views'),
+      '@': resolve('src'),
+      '@img': resolve('src/assets/img'),
+      '@postcss': resolve('src/assets/postcss'),
+      '@libs': resolve('src/libs'),
+      '@cp': resolve('src/components'),
+      '@views': resolve('src/views'),
     },
   },
   optimizeDeps: {

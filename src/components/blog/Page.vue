@@ -31,7 +31,7 @@
 <script setup lang="ts">
 import { computed, inject } from 'vue'
 import { useHead } from '@vueuse/head'
-import config from '/@/config'
+import config from '@/config'
 
 const lang: string = inject('lang') || ''
 const props = defineProps({

@@ -132,10 +132,10 @@
 import { onMounted, ref } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { isClient } from '@vueuse/core'
-import isArticle from '/@libs/isArticle'
-import shuffle from '/@libs/shuffle'
-import isMobile from '/@libs/isMobile'
-import isDev from '/@libs/isDev'
+import isArticle from '@libs/isArticle'
+import shuffle from '@libs/shuffle'
+import isMobile from '@libs/isMobile'
+import isDev from '@libs/isDev'
 
 interface List {
   path: string

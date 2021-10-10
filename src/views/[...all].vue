@@ -24,7 +24,7 @@ import { ref, inject } from 'vue'
 import { onBeforeRouteLeave, useRouter } from 'vue-router'
 import { useHead } from '@vueuse/head'
 import { isClient } from '@vueuse/core'
-import config from '/@/config'
+import config from '@/config'
 
 const router = useRouter()
 const seconds = ref<number>(10)

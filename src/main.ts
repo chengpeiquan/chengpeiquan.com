@@ -9,15 +9,15 @@ import '@purge-icons/generated'
 /**
  * 导入本地依赖
  */
-import { routes, scrollBehavior } from '/@/router'
-import App from '/@/App.vue'
+import { routes, scrollBehavior } from '@/router'
+import App from '@/App.vue'
 
 /**
  * 导入全局样式
  */
 import 'windi.css'
-import '/@postcss/global.postcss'
-import '/@postcss/markdown.postcss'
+import '@postcss/global.postcss'
+import '@postcss/markdown.postcss'
 
 /**
  * 创建实例

@@ -98,9 +98,9 @@ import { onMounted, ref, inject, computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { isClient } from '@vueuse/core'
 import { useHead } from '@vueuse/head'
-import config from '/@/config'
-import dateDisplay from '/@libs/dateDisplay'
-import isMobile from '/@libs/isMobile'
+import config from '@/config'
+import dateDisplay from '@libs/dateDisplay'
+import isMobile from '@libs/isMobile'
 
 const route = useRoute()
 const router = useRouter()
