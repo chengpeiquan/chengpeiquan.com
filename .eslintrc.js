@@ -18,4 +18,10 @@ module.exports = {
     'no-unused-vars': 'off',
     'prettier/prettier': 'warn',
   },
+  globals: {
+    defineProps: 'readonly',
+    defineEmits: 'readonly',
+    defineExpose: 'readonly',
+    withDefaults: 'readonly',
+  },
 }

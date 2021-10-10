@@ -9,17 +9,18 @@ async function run() {
     html: true,
     breaks: true,
     linkify: true,
-  });
+  })
 
-  const files = await fg('src/views/article/*.md');
+  const files = await fg('src/views/article/*.md')
 
   const posts: any[] = (
     await Promise.all(
-      files.filter(i => !i.includes('index'))
-        .map(async(i) => {
+      files
+        .filter((i) => !i.includes('index'))
+        .map(async (i) => {
           const raw = await fs.readFile(i, 'utf-8')
           const { data, content } = matter(raw)
-          const html = markdown.render(content);
+          const html = markdown.render(content)
 
           return {
             ...data,
@@ -32,11 +33,11 @@ async function run() {
               },
             ],
           }
-        }),
-    ))
-    .filter(Boolean);
+        })
+    )
+  ).filter(Boolean)
 
-  posts.sort((a, b) => +new Date(b.date) - +new Date(a.date));
+  posts.sort((a, b) => +new Date(b.date) - +new Date(a.date))
 
   const feed = new Feed({
     title: '程沛权 - 养了三只猫',
@@ -58,11 +59,11 @@ async function run() {
     },
   })
 
-  posts.forEach(i => feed.addItem(i))
+  posts.forEach((i) => feed.addItem(i))
 
   await fs.writeFile('./dist/feed.xml', feed.rss2(), 'utf-8')
   await fs.writeFile('./dist/feed.atom', feed.atom1(), 'utf-8')
   await fs.writeFile('./dist/feed.json', feed.json1(), 'utf-8')
 }
 
-run();
+run()

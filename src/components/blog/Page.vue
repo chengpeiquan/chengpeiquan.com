@@ -29,27 +29,31 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, inject } from 'vue'
+import { computed, inject } from 'vue'
 import { useHead } from '@vueuse/head'
 import config from '/@/config'
 
 const lang: string = inject('lang') || ''
-const { frontmatter } = defineProps<{ frontmatter: any }>()
-const { title, desc, keywords } = frontmatter
+const props = defineProps({
+  frontmatter: Object,
+})
+const title = computed(() => props.frontmatter.title)
+const desc = computed(() => props.frontmatter.desc)
+const keywords = computed(() => props.frontmatter.keywords)
 const meta = [
   {
     property: 'og:title',
-    content: `${title} - ${config.i18n[lang.value].title}`,
+    content: `${title.value} - ${config.i18n[lang.value].title}`,
   },
-  { name: 'description', content: desc },
+  { name: 'description', content: desc.value },
 ]
 
-if (keywords) {
-  meta.push({ name: 'keywords', content: keywords })
+if (keywords.value) {
+  meta.push({ name: 'keywords', content: keywords.value })
 }
 
 useHead({
-  title: `${title} - ${config.i18n[lang.value].title}`,
+  title: `${title.value} - ${config.i18n[lang.value].title}`,
   meta,
 })
 </script>
