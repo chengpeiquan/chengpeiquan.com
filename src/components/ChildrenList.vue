@@ -76,8 +76,8 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import isDev from '/@libs/isDev'
-import isMobile from '/@libs/isMobile'
+import isDev from '@libs/isDev'
+import isMobile from '@libs/isMobile'
 
 interface Children {
   id?: number

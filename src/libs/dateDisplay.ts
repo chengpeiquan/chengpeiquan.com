@@ -1,7 +1,7 @@
 /**
  * 计算一些日期的显示
  */
-import dayjs from '/@libs/dayjs'
+import dayjs from '@libs/dayjs'
 
 interface DateInfo {
   diffDays: number

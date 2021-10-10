@@ -22,38 +22,23 @@
       "vite-plugin-pwa/client"
     ],
     "paths": {
-      "/@/*": [
+      "@/*": [
         "src/*"
       ],
-      "/@img/*": [
+      "@img/*": [
         "src/assets/img/*"
       ],
-      "/@styl/*": [
-        "src/assets/styl/*"
+      "@postcss/*": [
+        "src/assets/postcss/*"
       ],
-      "/@js/*": [
-        "src/assets/js/*"
-      ],
-      "/@ts/*": [
-        "src/assets/ts/*"
-      ],
-      "/@fonts/*": [
-        "src/assets/fonts/*"
-      ],
-      "/@css/*": [
-        "src/assets/css/*"
-      ],
-      "/@libs/*": [
+      "@libs/*": [
         "src/libs/*"
       ],
-      "/@cp/*": [
+      "@cp/*": [
         "src/components/*"
       ],
-      "/@views/*": [
+      "@views/*": [
         "src/views/*"
-      ],
-      "/@plugins/*": [
-        "src/plugins/*"
       ]
     },
     "lib": [

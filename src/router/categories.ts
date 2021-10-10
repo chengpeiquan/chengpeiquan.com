@@ -1,4 +1,4 @@
-import config from '/@/config'
+import config from '@/config'
 
 let routes: any[] = []
 const { defaultLang, i18n } = config
