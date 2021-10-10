@@ -26,13 +26,12 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue'
 import { useRoute } from 'vue-router'
 import isArticle from '/@libs/isArticle'
 
 const route = useRoute()
 const isUseArticle = isArticle(route)
-const { frontmatter } = defineProps<{ frontmatter: any }>()
+defineProps<{ frontmatter: any }>()
 </script>
 
 <style scoped></style>

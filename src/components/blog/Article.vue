@@ -94,7 +94,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, onMounted, ref, inject } from 'vue'
+import { onMounted, ref, inject, computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { isClient } from '@vueuse/core'
 import { useHead } from '@vueuse/head'
@@ -104,31 +104,41 @@ import isMobile from '/@libs/isMobile'
 
 const route = useRoute()
 const router = useRouter()
-const { frontmatter } = defineProps<{ frontmatter: any }>()
-const { title, desc, keywords, date, repo } = frontmatter
-const { diffDays, dateAgo } = dateDisplay(+new Date(date) - 8 * 60 * 60 * 1000)
+const props = defineProps({
+  frontmatter: Object,
+})
+const title = computed(() => props.frontmatter.title)
+const desc = computed(() => props.frontmatter.desc)
+const keywords = computed(() => props.frontmatter.keywords)
+const date = computed(() => props.frontmatter.date)
+const repo = computed(() => props.frontmatter.repo)
+const { diffDays, dateAgo } = dateDisplay(
+  +new Date(date.value) - 8 * 60 * 60 * 1000
+)
 const lang: string = inject('lang') || ''
 
 /**
  * 打开仓库
  */
 const openRepo = (): void => {
-  if (!repo || !String(repo).startsWith('http')) return
-  window.open(repo)
+  if (!repo.value || !String(repo.value).startsWith('http')) return
+  window.open(repo.value)
 }
 
 /**
  * 设置页面信息
  */
 useHead({
-  title: isMobile.value ? title : `${title} - ${config.i18n[lang.value].title}`,
+  title: isMobile.value
+    ? title.value
+    : `${title.value} - ${config.i18n[lang.value].title}`,
   meta: [
     {
       property: 'og:title',
-      content: `${title} - ${config.i18n[lang.value].title}`,
+      content: `${title.value} - ${config.i18n[lang.value].title}`,
     },
-    { name: 'description', content: desc },
-    { name: 'keywords', content: keywords },
+    { name: 'description', content: desc.value },
+    { name: 'keywords', content: keywords.value },
   ],
 })
 
