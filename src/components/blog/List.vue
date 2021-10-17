@@ -127,7 +127,7 @@
   </section>
 
   <!-- 侧边栏 -->
-  <Sidebar v-if="lang === defaultLang" />
+  <BlogSidebar v-if="lang === defaultLang" />
   <!-- 侧边栏 -->
 </template>
 
@@ -246,33 +246,33 @@ const getPageInfo = (): void => {
     .getRoutes()
     .filter((item) => {
       // 生产环境用html文件后缀
-      const IS_VALID_SUFFIX: boolean = isDev
+      const isValidSuffix: boolean = isDev
         ? !item.path.endsWith('.html')
         : item.path.endsWith('.html')
 
       // 判断当前是否分类列表
-      const CATEGORY_PATH: string =
+      const gategoryPath: string =
         lang.value === defaultLang ? '/category' : `/${lang.value}/category`
-      const IS_CATEGORY: boolean = route.path.startsWith(CATEGORY_PATH)
+      const isCategory: boolean = route.path.startsWith(gategoryPath)
 
       // 提取所有有效的文章
-      if (!IS_CATEGORY) {
-        return isArticle(item, lang.value) && IS_VALID_SUFFIX
+      if (!isCategory) {
+        return isArticle(item, lang.value) && isValidSuffix
       }
 
       // 获取文章的所属分类
       const { categories } = item.meta.frontmatter
 
       // 判断文章是否在当前的分类里
-      const CATEGORY: string = route.name
+      const category: string = route.name
         .replace(/category-(.*)-page/, '$1')
         .replace(`${lang.value}-`, '')
 
-      const IS_IN_CATEGORY: boolean =
-        Array.isArray(categories) && categories.includes(CATEGORY)
+      const isInCategory: boolean =
+        Array.isArray(categories) && categories.includes(category)
 
       // 提取分类下的文章
-      return isArticle(item, lang.value) && IS_VALID_SUFFIX && IS_IN_CATEGORY
+      return isArticle(item, lang.value) && isValidSuffix && isInCategory
     })
     .sort(
       (a, b) =>
@@ -280,11 +280,11 @@ const getPageInfo = (): void => {
     )
 
   // 获取文章总数
-  const ROUTES_COUNT: number = routes.value.length
-  articleTotal.value = ROUTES_COUNT
+  const routesCount: number = routes.value.length
+  articleTotal.value = routesCount
 
   // 获取页码总数
-  pageTotal.value = Math.ceil(ROUTES_COUNT / pageSize.value)
+  pageTotal.value = Math.ceil(routesCount / pageSize.value)
 
   // 获取页码信息
   if (route.params.page && !isNaN(Number(route.params.page))) {
@@ -306,14 +306,14 @@ const getPageInfo = (): void => {
 /**
  * 设置页面信息
  */
-const WEB_SITE_TITLE: string =
+const websiteTitle: string =
   lang.value === defaultLang ? '文章列表' : 'Article List'
 useHead({
-  title: `${WEB_SITE_TITLE} - ${config.i18n[lang.value].title}`,
+  title: `${websiteTitle} - ${config.i18n[lang.value].title}`,
   meta: [
     {
       property: 'og:title',
-      content: `${WEB_SITE_TITLE} - 第${page.value}页 - ${
+      content: `${websiteTitle} - 第${page.value}页 - ${
         config.i18n[lang.value].title
       }`,
     },

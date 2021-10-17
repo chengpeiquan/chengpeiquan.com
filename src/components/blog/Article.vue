@@ -89,7 +89,7 @@
   <!-- 文章 -->
 
   <!-- 侧边栏 -->
-  <Sidebar />
+  <BlogSidebar />
   <!-- 侧边栏 -->
 </template>
 

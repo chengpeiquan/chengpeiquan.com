@@ -127,6 +127,7 @@ export default defineConfig({
       deep: true,
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       dts: true,
+      directoryAsNamespace: true,
       resolvers: [
         ViteIconsResolver({
           componentPrefix: '',

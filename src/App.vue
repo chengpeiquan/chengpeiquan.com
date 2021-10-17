@@ -33,48 +33,48 @@ watchEffect(getLang)
 provide('lang', lang)
 
 // 全局meta信息
-const { frontmatter } = route.meta
-const { title, desc, cover } = frontmatter
-useHead({
-  meta: [
-    {
-      property: 'og:title',
-      content: config.i18n[lang.value].title,
-    },
-    {
-      property: 'og:image',
-      content: config.avatar.big,
-    },
-    {
-      name: 'description',
-      content: config.i18n[lang.value].description,
-    },
-    // 下面是配置twitter分享
-    {
-      name: 'twitter:title',
-      content: title ? title : config.i18n[lang.value].title,
-    },
-    {
-      name: 'twitter:description',
-      content: desc ? desc : config.i18n[lang.value].description,
-    },
-    {
-      name: 'twitter:image:src',
-      content: cover ? cover : config.avatar.big,
-    },
-    {
-      name: 'twitter:card',
-      content: 'summary',
-    },
-    {
-      name: 'twitter:creator',
-      content: '@chengpeiquan',
-    },
-    // 下面是配置PWA
-    {
-      name: 'theme-color',
-      content: '#111111',
-    },
-  ],
-})
+// const { frontmatter } = route.meta
+// const { title, desc, cover } = frontmatter
+// useHead({
+//   meta: [
+//     {
+//       property: 'og:title',
+//       content: config.i18n[lang.value].title,
+//     },
+//     {
+//       property: 'og:image',
+//       content: config.avatar.big,
+//     },
+//     {
+//       name: 'description',
+//       content: config.i18n[lang.value].description,
+//     },
+//     // 下面是配置twitter分享
+//     {
+//       name: 'twitter:title',
+//       content: title ? title : config.i18n[lang.value].title,
+//     },
+//     {
+//       name: 'twitter:description',
+//       content: desc ? desc : config.i18n[lang.value].description,
+//     },
+//     {
+//       name: 'twitter:image:src',
+//       content: cover ? cover : config.avatar.big,
+//     },
+//     {
+//       name: 'twitter:card',
+//       content: 'summary',
+//     },
+//     {
+//       name: 'twitter:creator',
+//       content: '@chengpeiquan',
+//     },
+//     // 下面是配置PWA
+//     {
+//       name: 'theme-color',
+//       content: '#111111',
+//     },
+//   ],
+// })
 </script>

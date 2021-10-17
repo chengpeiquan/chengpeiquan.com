@@ -12,15 +12,15 @@
     "
   >
     <!-- 文章类 -->
-    <Article v-if="isUseArticle" :frontmatter="frontmatter">
+    <BlogArticle v-if="isUseArticle" :frontmatter="frontmatter">
       <slot />
-    </Article>
+    </BlogArticle>
     <!-- 文章类 -->
 
     <!-- 页面类 -->
-    <Page v-else :frontmatter="frontmatter">
+    <BlogPage v-else :frontmatter="frontmatter">
       <slot />
-    </Page>
+    </BlogPage>
     <!-- 页面类 -->
   </main>
 </template>

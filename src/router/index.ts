@@ -10,7 +10,8 @@ export const routes: Array<RouteRecordRaw> = [
   ...categoryRoutes,
 ].map((route: RouteRecordRaw) => {
   if (
-    String(route.name).endsWith('article-page') &&
+    (String(route.name).endsWith('article-page') ||
+      String(route.name).endsWith('cooking-page')) &&
     !route.path.endsWith('?')
   ) {
     route.path += '?'
