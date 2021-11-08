@@ -120,9 +120,9 @@ module.exports = {
   // ...
   networks: {
     development: {
-      host: "127.0.0.1",
+      host: '127.0.0.1',
       port: 7545,
-      network_id: "*",
+      network_id: '*',
     },
   },
   // ...
@@ -135,7 +135,96 @@ module.exports = {
 
 在命令行运行 `truffle console` 可以进入 GUI 情况下的调试命令状态（等价于命令行情况的 `truffle develop`）。
 
-## 常见问题
+## 解决单元测试异常
+
+在实际体验中发现，如果你在刚刚的 [使用 GUI 调试](#使用-gui-调试) 环节直接配置了 networks 之后，会发现无法再执行 `truffle test` 了（当然，执行 `truffle develop` 是没问题的，因为它等价于使用 Ganache）…
+
+控制台会出现如下报错：
+
+```bash
+λ truffle test
+> Something went wrong while attempting to connect to the network at http://127.0.0.1:7545. Check your network configuration.
+
+Could not connect to your Ethereum client with the following parameters:
+    - host       > 127.0.0.1
+    - port       > 7545
+    - network_id > *
+Please check that your Ethereum client:
+    - is running
+    - is accepting RPC connections (i.e., "--rpc" or "--http" option is used in geth)
+    - is accessible over the network
+    - is properly configured in your Truffle configuration file (truffle-config.js)
+
+Truffle v5.4.14 (core: 5.4.14)
+Node v16.1.0
+```
+
+然后你把 `truffle-config.js` 里的 `networks` 注释掉，会发现其实又可以了，就很迷……
+
+### 解决方法一
+
+在 GitHub 的 Issue 区查了也有人遇到一样的情况，所以很快有了这个解决方法：
+
+1. 重新启动 Ganache ，点击 "New Workspace" ，进入配置：
+
+![配置 Ganache 的工作区](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/11/20211108105128.jpg)
+
+2. 点击 “Add Project” ，进入到你的 truffle 项目文件夹，把项目的 `truffle-config.js` 添加到工作区，然后点击右上角的 “Start” 或者 “Restart” 启动运行。
+
+在启动 Ganache 的时候，运行 `truffle test` 就不会出现网络问题了（下次启动 GUI 的时候，选择工作区的配置启动连接，就可以对应的给你的项目开启测试支持了）。
+
+![后续选择工作区来启动](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/11/20211108142643.jpg)
+
+### 解决方法二
+
+由于方法一要基于 GUI 才能解决这个问题，那如果以后跑在服务器上面，没有 GUI 可以用咋办？观察了一下控制台，在没有配置 `networks` 选项的时候，执行测试命令时，使用的网络是不一样的：
+
+配置 networks 前：
+
+```bash
+λ truffle test
+Using network 'test'.
+```
+
+配置 networks 后：
+
+```bash
+λ truffle test
+Using network 'development'.
+```
+
+为什么会出现这个情况？官方文档也没有说明，得去看一下仓库相关的代码了，看看有没有门路…
+
+按照一般的大型开源项目的习惯，在 GitHub 仓库里找到了 commands 相关的文件，其中 test 命令是位于 [truffle/packages/core/lib/commands/test/index.js](https://github.com/trufflesuite/truffle/blob/develop/packages/core/lib/commands/test/index.js#L141-L215) ，这里可以看到测试命令的运行规则是：
+
+1. 有配置了 `networks.development` 就优先按这个配置启动测试工作
+
+2. 如果没有的话，会创建一个 `networks.test` 的选项，并先通过 `Develop.connectOrStart` 启动连接开发环境再启动测试工作
+
+所以我们另外一个解决方式就是：
+
+1. 先开启 develop 环境
+
+```bash
+λ truffle develop
+Truffle Develop started at http://127.0.0.1:9545/
+```
+
+2. 然后在 develop 环境下运行测试命令（此时不需要再补 truffle 前缀了），就可以正常运行了
+
+```bash
+truffle(develop)> test
+Using network 'develop'.
+
+Compiling your contracts...
+===========================
+```
+
+## 项目构建
+
+虽然直接执行 `truffle build` 可以完成一个最基本的构建行为。
+
+## 其他常见问题
 
 一些刚上手可能遇到的问题和解决方案。
 
