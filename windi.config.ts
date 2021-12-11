@@ -4,15 +4,12 @@ import lineClamp from 'windicss/plugin/line-clamp'
 
 export default defineConfig({
   darkMode: 'class',
-  plugins: [
-    typography,
-    lineClamp
-  ],
+  plugins: [typography, lineClamp],
   theme: {
     extend: {
       screens: {
-        '3xl': '1600px'
-      }
+        '3xl': '1600px',
+      },
     },
-  }
+  },
 })

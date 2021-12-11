@@ -22,43 +22,20 @@
       "vite-plugin-pwa/client"
     ],
     "paths": {
-      "@/*": [
-        "src/*"
-      ],
-      "@img/*": [
-        "src/assets/img/*"
-      ],
-      "@postcss/*": [
-        "src/assets/postcss/*"
-      ],
-      "@libs/*": [
-        "src/libs/*"
-      ],
-      "@cp/*": [
-        "src/components/*"
-      ],
-      "@views/*": [
-        "src/views/*"
-      ]
+      "@/*": ["src/*"],
+      "@img/*": ["src/assets/img/*"],
+      "@postcss/*": ["src/assets/postcss/*"],
+      "@libs/*": ["src/libs/*"],
+      "@cp/*": ["src/components/*"],
+      "@views/*": ["src/views/*"]
     },
-    "lib": [
-      "esnext",
-      "dom"
-    ],
+    "lib": ["esnext", "dom"],
     "plugins": [
       {
         "name": "@vuedx/typescript-plugin-vue"
       }
     ]
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue"
-  ],
-  "exclude": [
-    "dist",
-    "node_modules"
-  ]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "exclude": ["dist", "node_modules"]
 }

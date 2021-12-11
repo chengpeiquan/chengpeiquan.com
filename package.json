@@ -10,8 +10,8 @@
     "dev": "cross-env NODE_ENV=development vite --host",
     "build": "cross-env NODE_ENV=production vite-ssg build && esno ./scripts/rss.ts",
     "lint": "eslint src --ext .js,.ts",
-    "format": "prettier --write src",
-    "git": "git add . && git commit -m \"chore: back up some code adjustments.\" && git push"
+    "format": "prettier --write .",
+    "backup": "git add . && git commit -m \"chore: back up some code adjustments.\" && git push"
   },
   "repository": {
     "type": "git",
