@@ -1,5 +1,5 @@
-import { RouteRecordRaw } from 'vue-router'
 import config from '@/config'
+import type { RouteRecordRaw } from 'vue-router'
 
 const { defaultLang } = config
 

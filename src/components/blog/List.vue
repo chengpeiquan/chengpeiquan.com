@@ -134,13 +134,13 @@
 <script setup lang="ts">
 import { reactive, ref, inject } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
-import type { RouteRecordRaw } from 'vue-router'
 import { useHead } from '@vueuse/head'
 import { categories } from '@/router/categories'
 import isArticle from '@libs/isArticle'
 import config from '@/config'
 import dateDisplay from '@libs/dateDisplay'
 import isDev from '@libs/isDev'
+import type { RouteRecordRaw } from 'vue-router'
 
 interface List {
   path: string

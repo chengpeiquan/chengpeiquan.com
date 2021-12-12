@@ -1,4 +1,4 @@
-import { RouteRecordRaw } from 'vue-router'
+import type { RouteRecordRaw } from 'vue-router'
 
 /**
  * 判断是否菜谱页
