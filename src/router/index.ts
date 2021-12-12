@@ -1,7 +1,7 @@
 import { RouteRecordRaw, RouterScrollBehavior } from 'vue-router'
 import autoRoutes from 'virtual:generated-pages'
 import categoryRoutes from './categories'
-import cookbookCategoryRoutes from './cookbookCategories'
+import cookbookCategoryRoutes from './cooking'
 
 /**
  * 定义路由

@@ -1,7 +1,5 @@
 import type { RouteRecordRaw } from 'vue-router'
 
-let routes: RouteRecordRaw[] = []
-
 // 分类配置
 export const categories = [
   {
@@ -28,21 +26,16 @@ export const categories = [
 ]
 
 // 根据分类配置创建分类路由
-const getCategories = (): void => {
-  const result = categories.map((item) => {
-    return {
-      path: `/cookbook/${item.path}/:page?`,
-      name: `cookbook-${item.path}-page`,
-      props: true,
-      component: () => import('/src/views/cookbook/[page].vue'),
-      meta: {
-        frontmatter: {},
-      },
-    }
-  })
-
-  routes = [...routes, ...result]
-}
-getCategories()
+const routes: RouteRecordRaw[] = categories.map((item) => {
+  return {
+    path: `/cooking/${item.path}/:page?`,
+    name: `cooking-${item.path}-page`,
+    props: true,
+    component: () => import('/src/views/cookbook/[page].vue'),
+    meta: {
+      frontmatter: {},
+    },
+  }
+})
 
 export default routes

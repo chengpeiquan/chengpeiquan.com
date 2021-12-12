@@ -30,7 +30,7 @@ export const categories = [
 ]
 
 // 根据分类配置创建分类路由
-const getCategories = (lang: string): void => {
+const createCategoryRoutes = (lang: string): void => {
   const result = categories.map((item) => {
     return {
       path:
@@ -55,7 +55,7 @@ const getCategories = (lang: string): void => {
 // 遍历语言生成多语言分类路由
 for (const lang in i18n) {
   if (Object.prototype.hasOwnProperty.call(i18n, lang)) {
-    getCategories(lang)
+    createCategoryRoutes(lang)
   }
 }
 
