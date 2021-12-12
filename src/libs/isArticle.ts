@@ -1,13 +1,13 @@
-/**
- * 判断是否文章页
- * @param {object} route - Vue 路由
- * @param {string} lang - 语言缩写， e.g. en, zh-CN
- */
 import { RouteRecordRaw } from 'vue-router'
 import config from '@/config'
 
 const { defaultLang } = config
 
+/**
+ * 判断是否文章页
+ * @param route - Vue 路由
+ * @param lang - 语言缩写， e.g. en, zh-CN
+ */
 const isArticle = (
   route: RouteRecordRaw,
   lang: string = defaultLang

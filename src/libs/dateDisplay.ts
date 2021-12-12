@@ -1,6 +1,3 @@
-/**
- * 计算一些日期的显示
- */
 import dayjs from '@libs/dayjs'
 
 interface DateInfo {
@@ -8,6 +5,9 @@ interface DateInfo {
   dateAgo: string
 }
 
+/**
+ * 计算一些日期的显示
+ */
 const dateDisplay = (date: Date): DateInfo => {
   // 计算发布日期到今天的日期差
   const nowDate = dayjs(Date.now())
