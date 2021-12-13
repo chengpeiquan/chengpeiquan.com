@@ -31,7 +31,7 @@ const routes: RouteRecordRaw[] = categories.map((item) => {
     path: `/cooking/${item.path}/:page?`,
     name: `cooking-${item.path}-page`,
     props: true,
-    component: () => import('/src/views/cookbook/[page].vue'),
+    component: () => import('@views/cookbook/[page].vue'),
     meta: {
       frontmatter: {},
     },

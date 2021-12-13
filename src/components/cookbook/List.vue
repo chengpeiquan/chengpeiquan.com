@@ -16,7 +16,7 @@
 
     <!-- 空列表提示 -->
     <div
-      v-if="articleList.length === 0"
+      v-if="cookbookList.length === 0"
       class="
         flex
         justify-center
@@ -34,7 +34,7 @@
     <!-- 空列表提示 -->
 
     <!-- 列表 -->
-    <ul v-if="articleList.length > 0" class="article-list">
+    <ul v-if="cookbookList.length > 0" class="cookbook-list">
       <li
         class="
           flex flex-col
@@ -45,7 +45,7 @@
           border-b
           dark:border-white dark:border-opacity-5
         "
-        v-for="(item, index) in articleList"
+        v-for="(item, index) in cookbookList"
         :key="index"
       >
         <router-link
@@ -118,7 +118,7 @@
 
     <!-- 翻页 -->
     <Pagination
-      v-if="articleList.length > 0"
+      v-if="cookbookList.length > 0"
       :routeName="route.name"
       :page="page"
       :pageTotal="pageTotal"
@@ -167,8 +167,8 @@ const routes = ref<unknown[]>([])
 const page = ref<number>(1)
 const pageSize = ref<number>(10)
 const pageTotal = ref<number>(1)
-const articleTotal = ref<number>(1)
-const articleList = ref<List[]>([])
+const cookbookTotal = ref<number>(1)
+const cookbookList = ref<List[]>([])
 const categoryList = ref<Category>([])
 const emptyTips = ref<string>('')
 const lang: string = inject('lang') || ''
@@ -197,9 +197,9 @@ const getCategoryList = (): void => {
   categoryList.value.unshift({
     routeName:
       lang.value === defaultLang
-        ? 'article-page'
-        : `${lang.value}-article-page`,
-    path: lang.value === defaultLang ? '/article' : `/${lang.value}/article`,
+        ? 'cookbook-page'
+        : `${lang.value}-cookbook-page`,
+    path: lang.value === defaultLang ? '/cookbook' : `/${lang.value}/cookbook`,
     text: lang.value === defaultLang ? '全部' : 'All',
   })
 }
@@ -212,12 +212,12 @@ const getArticleList = (): void => {
   emptyTips.value = config.i18n[lang.value].emptyTips
 
   // 根据页码获取对应的文章
-  const START: number = 0 + pageSize.value * (page.value - 1)
-  const END: number = START + pageSize.value
-  const CUR_ROUTES: RouteRecordRaw[] = routes.value.slice(START, END)
+  const start: number = 0 + pageSize.value * (page.value - 1)
+  const end: number = start + pageSize.value
+  const curRoutes: RouteRecordRaw[] = routes.value.slice(start, end)
 
   // 提取要用到的字段
-  articleList.value = CUR_ROUTES.map((route: RouteRecordRaw) => {
+  cookbookList.value = curRoutes.map((route: RouteRecordRaw) => {
     const { path } = route
     const { frontmatter } = route.meta
     const { title, desc, cover, date, isHot, repo } = frontmatter
@@ -235,6 +235,9 @@ const getArticleList = (): void => {
       dateAgo,
     }
   })
+
+  console.log(cookbookList.value);
+
 }
 
 /**
@@ -281,7 +284,7 @@ const getPageInfo = (): void => {
 
   // 获取文章总数
   const routesCount: number = routes.value.length
-  articleTotal.value = routesCount
+  cookbookTotal.value = routesCount
 
   // 获取页码总数
   pageTotal.value = Math.ceil(routesCount / pageSize.value)
@@ -336,7 +339,7 @@ getPageInfo()
 .category-tabs .item.cur {
   @apply md:text-xl text-base font-bold opacity-100;
 }
-.article-list {
+.cookbook-list {
   @apply md:mx-0 mx-4;
 }
 </style>

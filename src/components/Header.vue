@@ -186,7 +186,7 @@ const getI18n = (): void => {
       text: 'Article',
     },
     {
-      target: key === defaultLang ? '/cookbook' : `/${key}/cookbook`,
+      target: '/cookbook',
       text: 'Cookbook',
     },
     {
@@ -208,7 +208,7 @@ const router = useRouter()
 router.afterEach(() => {
   isShowMenu.value = false
 })
-console.log(router)
+console.log(router.options.routes)
 </script>
 
 <style lang="postcss" scoped>

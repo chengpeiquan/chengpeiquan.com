@@ -1,7 +1,7 @@
 import { RouteRecordRaw, RouterScrollBehavior } from 'vue-router'
 import autoRoutes from 'virtual:generated-pages'
 import categoryRoutes from './categories'
-import cookbookCategoryRoutes from './cooking'
+import cookbookRoutes from './cookbook'
 
 /**
  * 定义路由
@@ -9,11 +9,11 @@ import cookbookCategoryRoutes from './cooking'
 export const routes: Array<RouteRecordRaw> = [
   ...autoRoutes,
   ...categoryRoutes,
-  ...cookbookCategoryRoutes,
+  ...cookbookRoutes,
 ].map((route: RouteRecordRaw) => {
   if (
     (String(route.name).endsWith('article-page') ||
-      String(route.name).endsWith('cooking-page')) &&
+      String(route.name).endsWith('cookbook-page')) &&
     !route.path.endsWith('?')
   ) {
     route.path += '?'

@@ -9,8 +9,8 @@ const isCookbook = (route: RouteRecordRaw): boolean => {
     return false
   }
 
-  const routeName: string = 'cookbook-page'
-  const startPath: string = '/cookbook/'
+  const routeName = 'cookbook-page'
+  const startPath = '/cookbook/'
 
   return route.name !== routeName && route.path.startsWith(startPath)
 }
