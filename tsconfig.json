@@ -12,15 +12,14 @@
     "experimentalDecorators": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "incremental": true,
+    "incremental": false,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": "./",
     "types": [
       "vite/client",
       "node",
-      "vite-plugin-pages/client",
-      "vite-plugin-pwa/client"
+      "vite-plugin-pages/client"
     ],
     "paths": {
       "@/*": ["src/*"],
