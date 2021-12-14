@@ -125,84 +125,33 @@
     />
     <!-- 翻页 -->
   </section>
-
-  <!-- 侧边栏 -->
-  <BlogSidebar v-if="lang === defaultLang" />
-  <!-- 侧边栏 -->
 </template>
 
 <script setup lang="ts">
 import { reactive, ref, inject } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { useHead } from '@vueuse/head'
-import { categories } from '@/router/categories'
+import { categoryConfigList } from '@/router/cookbook'
 import isCookbook from '@libs/isCookbook'
 import config from '@/config'
 import dateDisplay from '@libs/dateDisplay'
+import getCategoryList from '@libs/getCategoryList'
 import isDev from '@libs/isDev'
 import type { RouteRecordRaw } from 'vue-router'
-
-interface List {
-  path: string
-  title: string
-  desc: string
-  cover: string
-  date: string
-}
-
-interface Category {
-  routeName: string
-  path: string
-  text: string
-}
-
-interface Pagination {
-  prev: string
-  next: string
-}
+import type { ListItem, CategoryItem } from '@/types'
 
 const route = useRoute()
 const router = useRouter()
-const routes = ref<unknown[]>([])
+const routes = ref<RouteRecordRaw[]>([])
 const page = ref<number>(1)
 const pageSize = ref<number>(10)
 const pageTotal = ref<number>(1)
 const cookbookTotal = ref<number>(1)
-const cookbookList = ref<List[]>([])
-const categoryList = ref<Category>([])
+const cookbookList = ref<ListItem[]>([])
+const categoryList = ref<CategoryItem[]>([])
 const emptyTips = ref<string>('')
 const lang: string = inject('lang') || ''
 const { defaultLang } = config
-
-/**
- * 获取文章分类列表
- */
-const getCategoryList = (): void => {
-  // 提取分类
-  categoryList.value = categories.map((item) => {
-    return {
-      routeName:
-        lang.value === defaultLang
-          ? `category-${item.path}-page`
-          : `${lang.value}-category-${item.path}-page`,
-      path:
-        lang.value === defaultLang
-          ? `/category/${item.path}`
-          : `/${lang.value}/category/${item.path}`,
-      text: item.text[lang.value],
-    }
-  })
-
-  // 补充一个所有文章到最前面
-  categoryList.value.unshift({
-    routeName:
-      lang.value === defaultLang
-        ? 'cookbook-page'
-        : `${lang.value}-cookbook-page`,
-    path: lang.value === defaultLang ? '/cookbook' : `/${lang.value}/cookbook`,
-    text: lang.value === defaultLang ? '全部' : 'All',
-  })
-}
 
 /**
  * 获取文章列表
@@ -235,9 +184,6 @@ const getArticleList = (): void => {
       dateAgo,
     }
   })
-
-  console.log(cookbookList.value);
-
 }
 
 /**
@@ -300,7 +246,12 @@ const getPageInfo = (): void => {
   }
 
   // 获取分类列表
-  getCategoryList()
+  categoryList.value = getCategoryList({
+    categoryConfigList,
+    categoryTag: 'cooking',
+    allCategoryTag: 'cookbook',
+    lang: lang.value,
+  })
 
   // 获取文章列表
   getArticleList()

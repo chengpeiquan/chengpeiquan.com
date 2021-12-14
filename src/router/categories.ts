@@ -1,11 +1,12 @@
 import config from '@/config'
 import type { RouteRecordRaw } from 'vue-router'
+import type { CategoryConfigItem } from '@/types'
 
 let routes: RouteRecordRaw[] = []
 const { defaultLang, i18n } = config
 
 // 分类配置
-export const categories = [
+export const categoryConfigList: CategoryConfigItem[] = [
   {
     path: 'tech',
     text: {
@@ -31,7 +32,7 @@ export const categories = [
 
 // 根据分类配置创建分类路由
 const createCategoryRoutes = (lang: string): void => {
-  const result = categories.map((item) => {
+  const result = categoryConfigList.map((item) => {
     return {
       path:
         lang === defaultLang
@@ -42,7 +43,7 @@ const createCategoryRoutes = (lang: string): void => {
           ? `category-${item.path}-page`
           : `${lang}-category-${item.path}-page`,
       props: true,
-      component: () => import('/src/views/article/[page].vue'),
+      component: () => import('@views/article/[page].vue'),
       meta: {
         frontmatter: {},
       },

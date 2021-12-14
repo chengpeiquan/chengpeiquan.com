@@ -186,7 +186,7 @@ const getI18n = (): void => {
       text: 'Article',
     },
     {
-      target: '/cookbook',
+      target: key === defaultLang ? '/cookbook' : `/${key}/cookbook`,
       text: 'Cookbook',
     },
     {
