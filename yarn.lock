@@ -1646,6 +1646,13 @@ debug@^4.3.2:
   dependencies:
     ms "2.1.2"
 
+debug@^4.3.3:
+  version "4.3.3"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.3.tgz#04266e0b70a98d4462e6e288e38259213332b664"
+  integrity sha512-/zxw5+vh1Tfv+4Qn7a5nsbcJKPaSvCDhojn6FEl9vupwK2VCSDtEiEtqr8DFtzYFOdz63LBkxec7DYuc2jon6Q==
+  dependencies:
+    ms "2.1.2"
+
 decimal.js@^10.2.1:
   version "10.2.1"
   resolved "https://registry.yarnpkg.com/decimal.js/-/decimal.js-10.2.1.tgz#238ae7b0f0c793d3e3cea410108b35a2c01426a3"
@@ -3097,6 +3104,13 @@ local-pkg@^0.1.0:
   dependencies:
     mlly "^0.2.2"
 
+local-pkg@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/local-pkg/-/local-pkg-0.4.0.tgz#e6221171813d5a0812dd84fa80ffb1c8fcc00531"
+  integrity sha512-2XBWjO/v63JeR1HPzLJxdTVRQDB84Av2p2KtBA5ahvpyLUPubcAU6iXlAJrONcY7aSqgJhXxElAnKtnYsRolPQ==
+  dependencies:
+    mlly "^0.2.2"
+
 locate-path@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/locate-path/-/locate-path-5.0.0.tgz#1afba396afd676a6d42504d0a67a3a7eb9f62aa0"
@@ -4545,17 +4559,17 @@ vite-plugin-md@^0.6.7:
     gray-matter "^4.0.3"
     markdown-it "^12.0.6"
 
-vite-plugin-pages@^0.18.0:
-  version "0.18.0"
-  resolved "https://registry.yarnpkg.com/vite-plugin-pages/-/vite-plugin-pages-0.18.0.tgz#113c9fc1101cc08838715d2a305226d3c23e5688"
-  integrity sha512-OnxTDC60HTpc8PjRR0dYu0myJqTVxXgju0LHvM7M3Au0e6kVM1tkbXyUFA6s0F2fZoMwP+Y7TRI25shd6tJKqg==
+vite-plugin-pages@^0.19.4:
+  version "0.19.4"
+  resolved "https://registry.yarnpkg.com/vite-plugin-pages/-/vite-plugin-pages-0.19.4.tgz#9026ecbdd5aac549a69967254fefa28951ac8b9e"
+  integrity sha512-/ipM9NS+ORPp71YLl46CtD2loJfQM4i9pBzIIGCRIuEr0CcCYPy7QAHDZcCx8miVb8B6LL+B/X9Uige3KquWpA==
   dependencies:
-    "@antfu/utils" "^0.3.0"
-    debug "^4.3.2"
+    debug "^4.3.3"
     deep-equal "^2.0.5"
     fast-glob "^3.2.7"
     json5 "^2.2.0"
-    yaml "^2.0.0-7"
+    local-pkg "^0.4.0"
+    yaml "^2.0.0-9"
 
 vite-plugin-purge-icons@^0.7.0:
   version "0.7.0"
@@ -4987,10 +5001,10 @@ yaml@^1.10.0, yaml@^1.10.2, yaml@^1.7.2:
   resolved "https://registry.yarnpkg.com/yaml/-/yaml-1.10.2.tgz#2301c5ffbf12b467de8da2333a459e29e7920e4b"
   integrity sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==
 
-yaml@^2.0.0-7:
-  version "2.0.0-8"
-  resolved "https://registry.yarnpkg.com/yaml/-/yaml-2.0.0-8.tgz#226365f0d804ba7fb8cc2b527a00a7a4a3d8ea5f"
-  integrity sha512-QaYgJZMfWD6fKN/EYMk6w1oLWPCr1xj9QaPSZW5qkDb3y8nGCXhy2Ono+AF4F+CSL/vGcqswcAT0BaS//pgD2A==
+yaml@^2.0.0-9:
+  version "2.0.0-9"
+  resolved "https://registry.yarnpkg.com/yaml/-/yaml-2.0.0-9.tgz#0099f0645d1ffa686a2c5141b6da340f545d3634"
+  integrity sha512-Bf2KowHjyVkIIiGMt7+fbhmlvKOaE8DWuD07bnL4+FQ9sPmEl/5IzGpBpoxPqOaHuyasBjJhyXDcISpJWfhCGw==
 
 yargs-parser@^20.2.2:
   version "20.2.4"

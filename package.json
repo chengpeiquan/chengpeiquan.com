@@ -71,7 +71,7 @@
     "vite-plugin-banner": "^0.1.3",
     "vite-plugin-icons": "^0.6.2",
     "vite-plugin-md": "^0.6.7",
-    "vite-plugin-pages": "^0.18.0",
+    "vite-plugin-pages": "^0.19.4",
     "vite-plugin-purge-icons": "^0.7.0",
     "vite-plugin-windicss": "^1.4.2",
     "vite-ssg": "^0.15.1",

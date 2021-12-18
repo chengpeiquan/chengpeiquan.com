@@ -42,6 +42,7 @@ export default defineConfig({
       '@img': resolve('src/assets/img'),
       '@postcss': resolve('src/assets/postcss'),
       '@libs': resolve('src/libs'),
+      '@hooks': resolve('src/hooks'),
       '@cp': resolve('src/components'),
       '@views': resolve('src/views'),
     },

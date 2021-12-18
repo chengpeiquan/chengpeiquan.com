@@ -26,6 +26,7 @@
       "@img/*": ["src/assets/img/*"],
       "@postcss/*": ["src/assets/postcss/*"],
       "@libs/*": ["src/libs/*"],
+      "@hooks/*": ["src/hooks/*"],
       "@cp/*": ["src/components/*"],
       "@views/*": ["src/views/*"]
     },
