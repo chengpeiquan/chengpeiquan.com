@@ -16,7 +16,7 @@
 
     <!-- 空列表提示 -->
     <div
-      v-if="cookbookList.length === 0"
+      v-if="articleList.length === 0"
       class="
         flex
         justify-center
@@ -34,7 +34,7 @@
     <!-- 空列表提示 -->
 
     <!-- 列表 -->
-    <ul v-if="cookbookList.length > 0" class="cookbook-list">
+    <ul v-if="articleList.length > 0" class="cookbook-list">
       <li
         class="
           flex flex-col
@@ -45,7 +45,7 @@
           border-b
           dark:border-white dark:border-opacity-5
         "
-        v-for="(item, index) in cookbookList"
+        v-for="(item, index) in articleList"
         :key="index"
       >
         <router-link
@@ -118,10 +118,10 @@
 
     <!-- 翻页 -->
     <Pagination
-      v-if="cookbookList.length > 0"
+      v-if="articleList.length > 0"
       :routeName="route.name"
       :page="page"
-      :pageTotal="pageTotal"
+      :lastPage="lastPage"
     />
     <!-- 翻页 -->
   </section>
@@ -134,57 +134,36 @@ import { useHead } from '@vueuse/head'
 import { categoryConfigList } from '@/router/cookbook'
 import isCookbook from '@libs/isCookbook'
 import config from '@/config'
-import dateDisplay from '@libs/dateDisplay'
-import getCategoryList from '@libs/getCategoryList'
 import isDev from '@libs/isDev'
+import { useList, usePagination } from '@hooks'
 import type { RouteRecordRaw } from 'vue-router'
-import type { ListItem, CategoryItem } from '@/types'
+import type { ArticleItem, CategoryItem } from '@/types'
 
 const route = useRoute()
 const router = useRouter()
 const routes = ref<RouteRecordRaw[]>([])
-const page = ref<number>(1)
-const pageSize = ref<number>(10)
-const pageTotal = ref<number>(1)
-const cookbookTotal = ref<number>(1)
-const cookbookList = ref<ListItem[]>([])
+// const page = ref<number>(1)
+// const pageSize = ref<number>(10)
+// const lastPage = ref<number>(1)
+// const total = ref<number>(1)
+const articleList = ref<ArticleItem[]>([])
 const categoryList = ref<CategoryItem[]>([])
 const emptyTips = ref<string>('')
 const lang: string = inject('lang') || ''
 const { defaultLang } = config
+const { getRouteList, getCategoryList, getArticleList } = useList({
+  type: 'cookbook',
+  categoryPath: 'cooking',
+  lang: lang.value,
+})
+const { page, pageSize, lastPage, total } = usePagination({
+  type: 'cookbook',
+  categoryPath: 'cooking',
+  lang: lang.value,
+})
 
-/**
- * 获取文章列表
- */
-const getArticleList = (): void => {
-  // 空提示
-  emptyTips.value = config.i18n[lang.value].emptyTips
-
-  // 根据页码获取对应的文章
-  const start: number = 0 + pageSize.value * (page.value - 1)
-  const end: number = start + pageSize.value
-  const curRoutes: RouteRecordRaw[] = routes.value.slice(start, end)
-
-  // 提取要用到的字段
-  cookbookList.value = curRoutes.map((route: RouteRecordRaw) => {
-    const { path } = route
-    const { frontmatter } = route.meta
-    const { title, desc, cover, date, isHot, repo } = frontmatter
-    const { diffDays, dateAgo } = dateDisplay(new Date(date))
-
-    return {
-      path,
-      title,
-      desc,
-      cover,
-      date,
-      isHot,
-      repo,
-      diffDays,
-      dateAgo,
-    }
-  })
-}
+// 空提示
+emptyTips.value = config.i18n[lang.value].emptyTips
 
 /**
  * 获取分页信息
@@ -229,39 +208,42 @@ const getPageInfo = (): void => {
     )
 
   // 获取文章总数
-  const routesCount: number = routes.value.length
-  cookbookTotal.value = routesCount
+  // const routesCount: number = routes.value.length
+  // total.value = routesCount
 
   // 获取页码总数
-  pageTotal.value = Math.ceil(routesCount / pageSize.value)
+  // lastPage.value = Math.ceil(routesCount / pageSize.value)
 
   // 获取页码信息
   if (route.params.page && !isNaN(Number(route.params.page))) {
     page.value = Number(route.params.page)
-    if (page.value > pageTotal.value) {
+    if (page.value > lastPage.value) {
       router.replace({
         path: '/404',
       })
     }
   }
 
+  getRouteList()
+
   // 获取分类列表
   categoryList.value = getCategoryList({
     categoryConfigList,
-    categoryTag: 'cooking',
-    allCategoryTag: 'cookbook',
-    lang: lang.value,
   })
 
   // 获取文章列表
-  getArticleList()
+  articleList.value = getArticleList({
+    page: page.value,
+    pageSize: pageSize.value,
+    routes: routes.value,
+  })
 }
 
 /**
  * 设置页面信息
  */
 const websiteTitle: string =
-  lang.value === defaultLang ? '文章列表' : 'Article List'
+  lang.value === defaultLang ? '菜谱列表' : 'Cookbook List'
 useHead({
   title: `${websiteTitle} - ${config.i18n[lang.value].title}`,
   meta: [

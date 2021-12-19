@@ -1,5 +1,5 @@
 /**
  * 判断是否开发环境
  */
-const isDev: boolean = process.env.NODE_ENV === 'development' ? true : false
+const isDev: boolean = import.meta.env.DEV
 export default isDev

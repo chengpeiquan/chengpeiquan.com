@@ -1,12 +1,23 @@
+import type { RouteMeta as DefaultRouteMeta } from 'vue-router'
+
 /**
- * 列表的项目类型
+ * 路由的前端选项
  */
-export interface ListItem {
-  path: string
+export interface Frontmatter {
   title: string
   desc: string
   cover: string
   date: string
+  categories?: string[]
+  isHot?: boolean
+  repo?: string
+}
+
+/**
+ * 路由的 Meta 信息
+ */
+export interface RouteMeta extends DefaultRouteMeta {
+  frontmatter: Frontmatter
 }
 
 /**
@@ -28,4 +39,19 @@ export interface CategoryItem {
   routeName: string
   path: string
   text: string
+}
+
+/**
+ * 文章的项目类型
+ */
+export interface ArticleItem {
+  path: string
+  title: string
+  desc: string
+  cover: string
+  date: string
+  isHot: boolean
+  repo: string
+  diffDays: number
+  dateAgo: string
 }

@@ -42,7 +42,7 @@
     <!-- 下一页 -->
     <div class="mx-4">
       <router-link
-        v-if="page < pageTotal"
+        v-if="page < lastPage"
         :to="{
           name: routeName,
           params: {
@@ -59,11 +59,11 @@
     <!-- 下一页 -->
     <div class="mx-4">
       <router-link
-        v-if="page < pageTotal"
+        v-if="page < lastPage"
         :to="{
           name: routeName,
           params: {
-            page: pageTotal,
+            page: lastPage,
           },
         }"
       >
@@ -79,7 +79,7 @@
 defineProps({
   routeName: String,
   page: Number,
-  pageTotal: Number,
+  lastPage: Number,
 })
 </script>
 

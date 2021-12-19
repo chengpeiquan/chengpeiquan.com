@@ -121,7 +121,7 @@
       v-if="articleList.length > 0"
       :routeName="route.name"
       :page="page"
-      :pageTotal="pageTotal"
+      :lastPage="lastPage"
     />
     <!-- 翻页 -->
   </section>
@@ -138,57 +138,27 @@ import { useHead } from '@vueuse/head'
 import { categoryConfigList } from '@/router/categories'
 import isArticle from '@libs/isArticle'
 import config from '@/config'
-import dateDisplay from '@libs/dateDisplay'
-import getCategoryList from '@libs/getCategoryList'
 import isDev from '@libs/isDev'
+import { useList } from '@hooks'
 import type { RouteRecordRaw } from 'vue-router'
-import type { ListItem, CategoryItem } from '@/types'
+import type { ArticleItem, CategoryItem } from '@/types'
 
 const route = useRoute()
 const router = useRouter()
 const routes = ref<RouteRecordRaw[]>([])
 const page = ref<number>(1)
 const pageSize = ref<number>(10)
-const pageTotal = ref<number>(1)
+const lastPage = ref<number>(1)
 const articleTotal = ref<number>(1)
-const articleList = ref<ListItem[]>([])
+const articleList = ref<ArticleItem[]>([])
 const categoryList = ref<CategoryItem[]>([])
 const emptyTips = ref<string>('')
 const lang: string = inject('lang') || ''
 const { defaultLang } = config
-
-/**
- * 获取文章列表
- */
-const getArticleList = (): void => {
-  // 空提示
-  emptyTips.value = config.i18n[lang.value].emptyTips
-
-  // 根据页码获取对应的文章
-  const START: number = 0 + pageSize.value * (page.value - 1)
-  const END: number = START + pageSize.value
-  const CUR_ROUTES: RouteRecordRaw[] = routes.value.slice(START, END)
-
-  // 提取要用到的字段
-  articleList.value = CUR_ROUTES.map((route: RouteRecordRaw) => {
-    const { path } = route
-    const { frontmatter } = route.meta
-    const { title, desc, cover, date, isHot, repo } = frontmatter
-    const { diffDays, dateAgo } = dateDisplay(new Date(date))
-
-    return {
-      path,
-      title,
-      desc,
-      cover,
-      date,
-      isHot,
-      repo,
-      diffDays,
-      dateAgo,
-    }
-  })
-}
+const { getCategoryList, getArticleList } = useList({
+  type: 'article',
+  categoryPath: 'category',
+})
 
 /**
  * 获取分页信息
@@ -237,12 +207,12 @@ const getPageInfo = (): void => {
   articleTotal.value = routesCount
 
   // 获取页码总数
-  pageTotal.value = Math.ceil(routesCount / pageSize.value)
+  lastPage.value = Math.ceil(routesCount / pageSize.value)
 
   // 获取页码信息
   if (route.params.page && !isNaN(Number(route.params.page))) {
     page.value = Number(route.params.page)
-    if (page.value > pageTotal.value) {
+    if (page.value > lastPage.value) {
       router.replace({
         path: '/404',
       })
@@ -252,13 +222,14 @@ const getPageInfo = (): void => {
   // 获取分类列表
   categoryList.value = getCategoryList({
     categoryConfigList,
-    categoryTag: 'category',
-    allCategoryTag: 'article',
-    lang: lang.value,
   })
 
   // 获取文章列表
-  getArticleList()
+  articleList.value = getArticleList({
+    page: page.value,
+    pageSize: pageSize.value,
+    routes: routes.value,
+  })
 }
 
 /**

@@ -21,15 +21,22 @@ const key = computed(() => {
 })
 
 // i18n
-const lang = ref<string>('')
-const getLang = (): void => {
+// const lang = ref<string>('')
+// const getLang = (): void => {
+//   const { i18n, defaultLang } = config
+//   const langTag: string = route.path.split('/')[1]
+//   lang.value = Object.prototype.hasOwnProperty.call(i18n, langTag)
+//     ? langTag
+//     : defaultLang
+// }
+// watchEffect(getLang)
+const lang = computed(() => {
   const { i18n, defaultLang } = config
   const langTag: string = route.path.split('/')[1]
-  lang.value = Object.prototype.hasOwnProperty.call(i18n, langTag)
+  return Object.prototype.hasOwnProperty.call(i18n, langTag)
     ? langTag
     : defaultLang
-}
-watchEffect(getLang)
+})
 provide('lang', lang)
 
 // 全局meta信息
