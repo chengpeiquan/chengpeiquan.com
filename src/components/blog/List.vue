@@ -164,60 +164,23 @@ const { getCategoryList, getArticleList } = useList({
  * 获取分页信息
  */
 const getPageInfo = (): void => {
-  // 提取文章详情页的路由并按日期排序
-  routes.value = router
-    .getRoutes()
-    .filter((item) => {
-      // 生产环境用html文件后缀
-      const isValidSuffix: boolean = isDev
-        ? !item.path.endsWith('.html')
-        : item.path.endsWith('.html')
 
-      // 判断当前是否分类列表
-      const gategoryPath: string =
-        lang.value === defaultLang ? '/category' : `/${lang.value}/category`
-      const isCategory: boolean = route.path.startsWith(gategoryPath)
+  // // 获取文章总数
+  // const routesCount: number = routes.value.length
+  // articleTotal.value = routesCount
 
-      // 提取所有有效的文章
-      if (!isCategory) {
-        return isArticle(item, lang.value) && isValidSuffix
-      }
+  // // 获取页码总数
+  // lastPage.value = Math.ceil(routesCount / pageSize.value)
 
-      // 获取文章的所属分类
-      const { categories } = item.meta.frontmatter
-
-      // 判断文章是否在当前的分类里
-      const category: string = route.name
-        .replace(/category-(.*)-page/, '$1')
-        .replace(`${lang.value}-`, '')
-
-      const isInCategory: boolean =
-        Array.isArray(categories) && categories.includes(category)
-
-      // 提取分类下的文章
-      return isArticle(item, lang.value) && isValidSuffix && isInCategory
-    })
-    .sort(
-      (a, b) =>
-        +new Date(b.meta.frontmatter.date) - +new Date(a.meta.frontmatter.date)
-    )
-
-  // 获取文章总数
-  const routesCount: number = routes.value.length
-  articleTotal.value = routesCount
-
-  // 获取页码总数
-  lastPage.value = Math.ceil(routesCount / pageSize.value)
-
-  // 获取页码信息
-  if (route.params.page && !isNaN(Number(route.params.page))) {
-    page.value = Number(route.params.page)
-    if (page.value > lastPage.value) {
-      router.replace({
-        path: '/404',
-      })
-    }
-  }
+  // // 获取页码信息
+  // if (route.params.page && !isNaN(Number(route.params.page))) {
+  //   page.value = Number(route.params.page)
+  //   if (page.value > lastPage.value) {
+  //     router.replace({
+  //       path: '/404',
+  //     })
+  //   }
+  // }
 
   // 获取分类列表
   categoryList.value = getCategoryList({
@@ -228,7 +191,6 @@ const getPageInfo = (): void => {
   articleList.value = getArticleList({
     page: page.value,
     pageSize: pageSize.value,
-    routes: routes.value,
   })
 }
 

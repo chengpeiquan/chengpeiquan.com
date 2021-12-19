@@ -149,21 +149,20 @@ export function useList({
   const getArticleList = ({
     page,
     pageSize,
-    routes,
   }: {
     page: number
     pageSize: number
-    routes: RouteRecordRaw[]
   }): ArticleItem[] => {
     const { dateDisplay } = useDate()
+    const routeList = getRouteList()
 
     // 根据页码获取对应数量的路由列表
     const start: number = 0 + pageSize * (page - 1)
     const end: number = start + pageSize
-    const curRoutes: RouteRecordRaw[] = routes.slice(start, end)
+    const curRouteList: RouteRecordRaw[] = routeList.slice(start, end)
 
     // 提取要用到的字段
-    const articleList: ArticleItem[] = curRoutes.map(
+    const articleList: ArticleItem[] = curRouteList.map(
       (route: RouteRecordRaw) => {
         const { path, meta } = route
         const { frontmatter } = meta as RouteMeta
