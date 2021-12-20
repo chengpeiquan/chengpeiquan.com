@@ -35,6 +35,7 @@ export function usePagination({ type, categoryPath }: CategoryListInfo) {
         })
       }
     }
+    console.log('init', state)
   }
   init()
 
@@ -77,6 +78,7 @@ export function usePagination({ type, categoryPath }: CategoryListInfo) {
         break
       }
     }
+    console.log('open', state)
 
     try {
       router.push(opt)

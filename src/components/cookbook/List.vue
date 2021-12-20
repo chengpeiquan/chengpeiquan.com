@@ -136,7 +136,7 @@ import { categoryConfigList } from '@/router/cookbook'
 import isCookbook from '@libs/isCookbook'
 import config from '@/config'
 import isDev from '@libs/isDev'
-import { useList, usePagination, useI18n } from '@hooks'
+import { useList, usePagination, useI18n } from '@/hooks'
 import type { RouteRecordRaw } from 'vue-router'
 import type { ArticleItem, CategoryItem, CategoryListInfo } from '@/types'
 
