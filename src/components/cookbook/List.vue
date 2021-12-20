@@ -119,70 +119,52 @@
     <!-- 翻页 -->
     <Pagination
       v-if="articleList.length > 0"
-      :routeName="route.name"
       :page="page"
       :lastPage="lastPage"
+      :total="total"
+      @openPage="openPage"
     />
     <!-- 翻页 -->
   </section>
 </template>
 
 <script setup lang="ts">
-import { reactive, ref, inject } from 'vue'
+import { reactive, ref } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { useHead } from '@vueuse/head'
 import { categoryConfigList } from '@/router/cookbook'
 import isCookbook from '@libs/isCookbook'
 import config from '@/config'
 import isDev from '@libs/isDev'
-import { useList, usePagination } from '@hooks'
+import { useList, usePagination, useI18n } from '@hooks'
 import type { RouteRecordRaw } from 'vue-router'
-import type { ArticleItem, CategoryItem } from '@/types'
+import type { ArticleItem, CategoryItem, CategoryListInfo } from '@/types'
 
 const route = useRoute()
 const router = useRouter()
-// const page = ref<number>(1)
-// const pageSize = ref<number>(10)
-// const lastPage = ref<number>(1)
-// const total = ref<number>(1)
 const articleList = ref<ArticleItem[]>([])
 const categoryList = ref<CategoryItem[]>([])
 const emptyTips = ref<string>('')
-const lang: string = inject('lang') || ''
 const { defaultLang } = config
-const { getCategoryList, getArticleList } = useList({
-  type: 'cookbook',
-  categoryPath: 'cooking',
-})
-const { page, pageSize, lastPage, total } = usePagination({
-  type: 'cookbook',
-  categoryPath: 'cooking',
-  lang: lang.value,
-})
 
-// 空提示
-emptyTips.value = config.i18n[lang.value].emptyTips
+const categoryListInfo: CategoryListInfo = {
+  type: 'cookbook',
+  categoryPath: 'cooking',
+}
+const { getCategoryList, getArticleList } = useList(categoryListInfo)
+const { page, pageSize, lastPage, total, openPage } =
+  usePagination(categoryListInfo)
+
+// 获取语言
+const { getLang } = useI18n()
+const lang = getLang()
 
 /**
  * 获取分页信息
  */
 const getPageInfo = (): void => {
-  // 获取文章总数
-  // const routesCount: number = routeList.value.length
-  // total.value = routesCount
-
-  // 获取页码总数
-  // lastPage.value = Math.ceil(routesCount / pageSize.value)
-
-  // // 获取页码信息
-  // if (route.params.page && !isNaN(Number(route.params.page))) {
-  //   page.value = Number(route.params.page)
-  //   if (page.value > lastPage.value) {
-  //     router.replace({
-  //       path: '/404',
-  //     })
-  //   }
-  // }
+  // 空提示
+  emptyTips.value = config.i18n[lang.value].emptyTips
 
   // 获取分类列表
   categoryList.value = getCategoryList({

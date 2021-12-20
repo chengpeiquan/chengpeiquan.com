@@ -1,16 +1,16 @@
-import { computed, inject, ref } from 'vue'
+import { computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import isDev from '@libs/isDev'
 import isArticle from '@libs/isArticle'
 import isCookbook from '@libs/isCookbook'
 import config from '@/config'
 import { useDate, useI18n } from '@/hooks'
-import type { ComputedRef, Ref } from 'vue'
 import type { RouteRecordRaw } from 'vue-router'
 import type {
   RouteMeta,
   CategoryConfigItem,
   CategoryItem,
+  CategoryListInfo,
   ArticleItem,
 } from '@/types'
 
@@ -18,13 +18,7 @@ import type {
  * @param type - 列表类型，article=博客文章，cookbook=菜谱
  * @param categoryPath - 分类的路径，用于拼接分类文章列表的地址
  */
-export function useList({
-  type,
-  categoryPath,
-}: {
-  type: string
-  categoryPath: string
-}) {
+export function useList({ type, categoryPath }: CategoryListInfo) {
   // 获取语言
   const { getLang } = useI18n()
   const lang = getLang()

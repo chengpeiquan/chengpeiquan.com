@@ -42,6 +42,14 @@ export interface CategoryItem {
 }
 
 /**
+ * 分类的列表信息类型
+ */
+export interface CategoryListInfo {
+  type: string
+  categoryPath: string
+}
+
+/**
  * 文章的项目类型
  */
 export interface ArticleItem {
