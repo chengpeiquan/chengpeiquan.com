@@ -24,9 +24,10 @@ const resolve = (dir: string): string => path.resolve(__dirname, dir)
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: isDev
-    ? '/'
-    : 'https://cdn.jsdelivr.net/gh/chengpeiquan/chengpeiquan.com@gh-pages/',
+  base: '/',
+//   base: isDev
+//     ? '/'
+//     : 'https://cdn.jsdelivr.net/gh/chengpeiquan/chengpeiquan.com@gh-pages/',
   server: {
     port: 33333,
     proxy: {
