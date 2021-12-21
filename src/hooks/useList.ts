@@ -20,8 +20,7 @@ import type {
  */
 export function useList({ type, categoryPath }: CategoryListInfo) {
   // 获取语言
-  const { getLang } = useI18n()
-  const lang = getLang()
+  const { lang } = useI18n()
 
   /**
    * 获取路由列表
@@ -47,7 +46,7 @@ export function useList({ type, categoryPath }: CategoryListInfo) {
     const isValidItem = (item: RouteRecordRaw): boolean => {
       switch (type) {
         case 'article':
-          return isArticle(item)
+          return isArticle(item, lang.value)
         case 'cookbook':
           return isCookbook(item)
         default:

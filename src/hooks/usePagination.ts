@@ -13,7 +13,7 @@ export function usePagination({ type, categoryPath }: CategoryListInfo) {
   })
   const state = reactive({
     page: 1,
-    pageSize: 1,
+    pageSize: 10,
     lastPage: 1,
     total: 0,
   })
@@ -35,7 +35,6 @@ export function usePagination({ type, categoryPath }: CategoryListInfo) {
         })
       }
     }
-    console.log('init', state)
   }
   init()
 
@@ -58,7 +57,7 @@ export function usePagination({ type, categoryPath }: CategoryListInfo) {
       case 'prev': {
         if (state.page > 2) {
           opt['params'] = {
-            page: state.page - 1,
+            page: --state.page,
           }
         }
         break
@@ -66,7 +65,7 @@ export function usePagination({ type, categoryPath }: CategoryListInfo) {
       // 下一页
       case 'next': {
         opt['params'] = {
-          page: state.page + 1,
+          page: ++state.page,
         }
         break
       }
@@ -78,7 +77,6 @@ export function usePagination({ type, categoryPath }: CategoryListInfo) {
         break
       }
     }
-    console.log('open', state)
 
     try {
       router.push(opt)

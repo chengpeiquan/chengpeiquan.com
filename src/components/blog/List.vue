@@ -161,8 +161,7 @@ const { page, pageSize, lastPage, total, openPage } =
   usePagination(categoryListInfo)
 
 // 获取语言
-const { getLang } = useI18n()
-const lang = getLang()
+const { lang } = useI18n()
 
 /**
  * 获取分页信息
@@ -182,6 +181,7 @@ const getPageInfo = (): void => {
     pageSize: pageSize.value,
   })
 }
+getPageInfo()
 
 /**
  * 设置页面信息
@@ -199,11 +199,6 @@ useHead({
     },
   ],
 })
-
-/**
- * 要执行的函数
- */
-getPageInfo()
 </script>
 
 <style lang="postcss" scoped>
