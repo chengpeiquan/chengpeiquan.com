@@ -17,7 +17,19 @@ export function useI18n() {
       : defaultLang
   })
 
+  /**
+   * 空提示
+   */
+  const emptyTips = computed(() => config.i18n[lang.value].emptyTips)
+
+  /**
+   * 网页标题
+   */
+  // const pageTitle = computed(() => {})
+
   return {
     lang,
+    emptyTips,
+    // pageTitle,
   }
 }

@@ -149,7 +149,6 @@ const router = useRouter()
 const routes = ref<RouteRecordRaw[]>([])
 const articleList = ref<ArticleItem[]>([])
 const categoryList = ref<CategoryItem[]>([])
-const emptyTips = ref<string>('')
 const { defaultLang } = config
 
 const categoryListInfo: CategoryListInfo = {
@@ -161,15 +160,12 @@ const { page, pageSize, lastPage, total, openPage } =
   usePagination(categoryListInfo)
 
 // 获取语言
-const { lang } = useI18n()
+const { lang, emptyTips } = useI18n()
 
 /**
  * 获取分页信息
  */
 const getPageInfo = (): void => {
-  // 空提示
-  emptyTips.value = config.i18n[lang.value].emptyTips
-
   // 获取分类列表
   categoryList.value = getCategoryList({
     categoryConfigList,

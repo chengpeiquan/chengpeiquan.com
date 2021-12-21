@@ -144,7 +144,6 @@ const route = useRoute()
 const router = useRouter()
 const articleList = ref<ArticleItem[]>([])
 const categoryList = ref<CategoryItem[]>([])
-const emptyTips = ref<string>('')
 const { defaultLang } = config
 
 const categoryListInfo: CategoryListInfo = {
@@ -156,15 +155,12 @@ const { page, pageSize, lastPage, total, openPage } =
   usePagination(categoryListInfo)
 
 // 获取语言
-const { lang } = useI18n()
+const { lang, emptyTips } = useI18n()
 
 /**
  * 获取分页信息
  */
 const getPageInfo = (): void => {
-  // 空提示
-  emptyTips.value = config.i18n[lang.value].emptyTips
-
   // 获取分类列表
   categoryList.value = getCategoryList({
     categoryConfigList,
@@ -207,6 +203,6 @@ useHead({
   @apply md:text-xl text-base font-bold opacity-100;
 }
 .cookbook-list {
-  @apply md:mx-0 mx-4;
+  @apply md:mx-0 mx-4 grid grid-cols-4 col-auto;
 }
 </style>
