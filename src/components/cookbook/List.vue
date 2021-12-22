@@ -36,82 +36,49 @@
     <!-- 列表 -->
     <ul v-if="articleList.length > 0" class="cookbook-list">
       <li
-        class="
-          flex flex-col
-          md:pb-8
-          pb-4
-          md:mb-8
-          mb-4
-          border-b
-          dark:border-white dark:border-opacity-5
-        "
+        class="flex flex-col"
         v-for="(item, index) in articleList"
         :key="index"
       >
+        <!-- 封面 -->
+        <div
+          v-if="item.cover"
+          class="
+            flex flex-shrink-0
+            w-full
+            md:h-75
+            h-auto
+            overflow-hidden
+            mb-2
+            rounded
+          "
+        >
+          <router-link :title="item.title" :to="item.path" class="w-full">
+            <img class="img" :src="item.cover" :alt="item.title" />
+          </router-link>
+        </div>
+        <!-- 封面 -->
+
+        <!-- 标题 -->
         <router-link
-          class="flex md:items-center items-start md:mb-4 mb-2"
+          class="flex md:items-center items-start mb-2"
           :title="item.title"
           :to="item.path"
         >
-          <ri-fire-fill
-            v-if="item.isHot"
-            class="mr-2 text-xl text-red-500 dark:text-rose-500"
-          />
-          <h2 class="md:text-2xl text-lg line-clamp-2">
+          <h2 class="text-lg line-clamp-1">
             {{ item.title }}
           </h2>
         </router-link>
+        <!-- 标题 -->
 
-        <div class="flex md:flex-row flex-col">
-          <!-- 封面 -->
-          <div
-            v-if="item.cover"
-            class="
-              flex flex-shrink-0
-              md:w-40
-              w-full
-              md:h-32
-              h-auto
-              overflow-hidden
-              md:mr-4
-              mr-0
-              md:mb-0
-              mb-2
-              rounded
-            "
-          >
-            <router-link :title="item.title" :to="item.path">
-              <img class="img" :src="item.cover" :alt="item.title" />
-            </router-link>
-          </div>
-          <!-- 封面 -->
-
-          <!-- 信息 -->
-          <div class="flex flex-col justify-between">
-            <p
-              class="
-                md:h-auto
-                h-0
-                md:text-base
-                text-sm text-gray-400
-                md:mb-4
-                mb-0
-                md:line-clamp-3
-                line-clamp-2
-              "
-            >
-              {{ item.desc }}
-            </p>
-
-            <p
-              class="flex justify-between md:text-sm text-xs text-gray-400"
-              :title="item.date.substr(0, 10)"
-            >
-              {{ item.diffDays > 7 ? item.date.substr(0, 10) : item.dateAgo }}
-            </p>
-          </div>
-          <!-- 信息 -->
-        </div>
+        <!-- 日期 -->
+        <p
+          class="flex justify-between text-xs text-gray-400"
+          :title="item.date.substr(0, 10)"
+        >
+          {{ item.diffDays > 7 ? item.date.substr(0, 10) : item.dateAgo }}
+        </p>
+        <!-- 日期 -->
       </li>
     </ul>
     <!-- 列表 -->
@@ -203,6 +170,6 @@ useHead({
   @apply md:text-xl text-base font-bold opacity-100;
 }
 .cookbook-list {
-  @apply md:mx-0 mx-4 grid grid-cols-4 col-auto;
+  @apply md:mt-2 mt-0 md:mx-0 mx-4 mb-4 grid md:grid-cols-4 grid-cols-2 col-auto row-auto md:gap-8 gap-4;
 }
 </style>
