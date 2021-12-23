@@ -49,7 +49,12 @@
           hover:text-red-500
           dark:hover:text-rose-500
         "
-        :title="lang === 'zh' ? '给仓库一个Star' : 'Star this repository'"
+        :title="
+          getText({
+            zh: '给仓库一个Star',
+            en: 'Star this repository',
+          })
+        "
         @click="openRepo"
       >
         <ri-star-line />
@@ -94,19 +99,20 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref, inject, computed } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
+import { onMounted, computed } from 'vue'
+import { useRouter } from 'vue-router'
 import { isClient } from '@vueuse/core'
 import { useHead } from '@vueuse/head'
-import config from '@/config'
-import dateDisplay from '@libs/dateDisplay'
+import { useDate, useI18n } from '@/hooks'
 import isMobile from '@libs/isMobile'
+import type { Frontmatter } from '@/types'
 
-const route = useRoute()
 const router = useRouter()
-const props = defineProps({
-  frontmatter: Object,
-})
+const props = defineProps<{
+  frontmatter: Frontmatter
+}>()
+const { dateDisplay } = useDate()
+const { getText } = useI18n()
 const title = computed(() => props.frontmatter.title)
 const desc = computed(() => props.frontmatter.desc)
 const keywords = computed(() => props.frontmatter.keywords)
@@ -115,7 +121,6 @@ const repo = computed(() => props.frontmatter.repo)
 const { diffDays, dateAgo } = dateDisplay(
   +new Date(date.value) - 8 * 60 * 60 * 1000
 )
-const lang: string = inject('lang') || ''
 
 /**
  * 打开仓库
@@ -129,13 +134,11 @@ const openRepo = (): void => {
  * 设置页面信息
  */
 useHead({
-  title: isMobile.value
-    ? title.value
-    : `${title.value} - ${config.i18n[lang.value].title}`,
+  title: isMobile.value ? title.value : `${title.value} - ${getText('title')}`,
   meta: [
     {
       property: 'og:title',
-      content: `${title.value} - ${config.i18n[lang.value].title}`,
+      content: `${title.value} - ${getText('title')}`,
     },
     { name: 'description', content: desc.value },
     { name: 'keywords', content: keywords.value },

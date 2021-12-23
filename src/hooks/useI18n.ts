@@ -61,11 +61,6 @@ export function useI18n() {
   })
 
   /**
-   * 空提示
-   */
-  const emptyTips = computed(() => config.i18n[lang.value].emptyTips)
-
-  /**
    * 获取路径
    * @param path - 以 / 开头的相对地址
    * @returns 根据当前语言返回需要的国际化路径
@@ -108,7 +103,6 @@ export function useI18n() {
     lang,
     isDefaultLang,
     navList,
-    emptyTips,
 
     getPath,
     getText,

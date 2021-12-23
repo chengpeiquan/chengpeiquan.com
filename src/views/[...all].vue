@@ -20,15 +20,15 @@
 </template>
 
 <script setup lang="ts">
-import { ref, inject } from 'vue'
+import { ref } from 'vue'
 import { onBeforeRouteLeave, useRouter } from 'vue-router'
 import { useHead } from '@vueuse/head'
 import { isClient } from '@vueuse/core'
-import config from '@/config'
+import { useI18n } from '@/hooks'
 
 const router = useRouter()
 const seconds = ref<number>(10)
-const lang: string = inject('lang') || ''
+const { getText } = useI18n()
 
 if (isClient) {
   // 5s后返回首页
@@ -51,7 +51,7 @@ if (isClient) {
 }
 
 useHead({
-  title: `404 - ${config.i18n[lang.value].title}`,
+  title: `404 - ${getText('title')}`,
 })
 </script>
 

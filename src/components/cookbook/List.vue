@@ -19,7 +19,7 @@
         text-sm
       "
     >
-      <p>{{ emptyTips }}</p>
+      <p>{{ getText('emptyTips') }}</p>
     </div>
     <!-- 空列表提示 -->
 
@@ -109,16 +109,10 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
 import { useHead } from '@vueuse/head'
 import { categoryConfigList } from '@/router/cookbook'
-import config from '@/config'
 import { useList, usePagination, useI18n } from '@/hooks'
 import type { ArticleItem, CategoryItem, CategoryListInfo } from '@/types'
-
-const articleList = ref<ArticleItem[]>([])
-const categoryList = ref<CategoryItem[]>([])
-const { defaultLang } = config
 
 const categoryListInfo: CategoryListInfo = {
   type: 'cookbook',
@@ -129,38 +123,33 @@ const { page, pageSize, lastPage, total, openPage } =
   usePagination(categoryListInfo)
 
 // 获取语言
-const { lang, emptyTips } = useI18n()
+const { getText } = useI18n()
 
-/**
- * 获取分页信息
- */
-const getPageInfo = (): void => {
-  // 获取分类列表
-  categoryList.value = getCategoryList({
-    categoryConfigList,
-  })
+// 获取分类列表
+const categoryList: CategoryItem[] = getCategoryList({
+  categoryConfigList,
+})
 
-  // 获取文章列表
-  articleList.value = getArticleList({
-    page: page.value,
-    pageSize: pageSize.value,
-  })
-}
-getPageInfo()
+// 获取文章列表
+const articleList: ArticleItem[] = getArticleList({
+  page: page.value,
+  pageSize: pageSize.value,
+})
 
 /**
  * 设置页面信息
  */
-const websiteTitle: string =
-  lang.value === defaultLang ? '菜谱列表' : 'Cookbook List'
+const pageTitle = getText({
+  zh: '菜谱列表',
+  en: 'Cookbook List',
+})
+const websiteTitle = getText('title')
 useHead({
-  title: `${websiteTitle} - ${config.i18n[lang.value].title}`,
+  title: `${pageTitle} - ${websiteTitle}`,
   meta: [
     {
       property: 'og:title',
-      content: `${websiteTitle} - 第${page.value}页 - ${
-        config.i18n[lang.value].title
-      }`,
+      content: `${pageTitle} - 第${page.value}页 - ${websiteTitle}`,
     },
   ],
 })

@@ -10,12 +10,13 @@
 </template>
 
 <script setup lang="ts">
-import { inject, ref } from 'vue'
+import { ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import { useI18n } from '@/hooks'
 
+const { lang } = useI18n()
 const route = useRoute()
 const router = useRouter()
-const lang: string = inject('lang') || ''
 const path = ref<string>('/')
 
 const toggleLang = (): void => {

@@ -12,7 +12,7 @@
     "
   >
     <!-- 文章类 -->
-    <BlogArticle v-if="isUseArticle" :frontmatter="frontmatter">
+    <BlogArticle v-if="isArticle(route)" :frontmatter="frontmatter">
       <slot />
     </BlogArticle>
     <!-- 文章类 -->
@@ -28,10 +28,12 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
 import isArticle from '@libs/isArticle'
+import type { Frontmatter } from '@/types'
 
 const route = useRoute()
-const isUseArticle = isArticle(route)
-defineProps<{ frontmatter: any }>()
+defineProps<{
+  frontmatter: Frontmatter
+}>()
 </script>
 
 <style scoped></style>
