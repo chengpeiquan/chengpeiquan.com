@@ -10,21 +10,21 @@ export const categoryConfigList: CategoryConfigItem[] = [
   {
     path: 'tech',
     text: {
-      'zh-CN': '技术',
+      zh: '技术',
       en: 'Technology',
     },
   },
   {
     path: 'design',
     text: {
-      'zh-CN': '设计',
+      zh: '设计',
       en: 'Design',
     },
   },
   {
     path: 'prose',
     text: {
-      'zh-CN': '随笔',
+      zh: '随笔',
       en: 'Prose',
     },
   },

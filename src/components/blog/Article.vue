@@ -49,7 +49,7 @@
           hover:text-red-500
           dark:hover:text-rose-500
         "
-        :title="lang === 'zh-CN' ? '给仓库一个Star' : 'Star this repository'"
+        :title="lang === 'zh' ? '给仓库一个Star' : 'Star this repository'"
         @click="openRepo"
       >
         <ri-star-line />

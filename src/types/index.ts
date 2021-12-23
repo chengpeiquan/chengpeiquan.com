@@ -1,6 +1,15 @@
 import type { RouteMeta as DefaultRouteMeta } from 'vue-router'
 
 /**
+ * 国际化的语言选项
+ * @description 用在 useI18n 的 getText 方法及相关地方
+ */
+export interface i18nTextConfig {
+  zh: string
+  en: string
+}
+
+/**
  * 路由的前端选项
  */
 export interface Frontmatter {
@@ -26,10 +35,7 @@ export interface RouteMeta extends DefaultRouteMeta {
  */
 export interface CategoryConfigItem {
   path: string
-  text: {
-    'zh-CN': string
-    en: string
-  }
+  text: i18nTextConfig
 }
 
 /**

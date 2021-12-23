@@ -6,14 +6,14 @@ export const categoryConfigList: CategoryConfigItem[] = [
   {
     path: 'thrift',
     text: {
-      'zh-CN': '省钱菜谱',
+      zh: '省钱菜谱',
       en: 'Thrift',
     },
   },
   {
     path: 'condiment',
     text: {
-      'zh-CN': '调味料',
+      zh: '调味料',
       en: 'condiment',
     },
   },

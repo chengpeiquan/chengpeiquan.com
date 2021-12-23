@@ -5,7 +5,7 @@
     @click="toggleLang"
   >
     <uil-letter-chinese-a v-show="lang === 'en'" />
-    <ri-english-input v-show="lang === 'zh-CN'" />
+    <ri-english-input v-show="lang === 'zh'" />
   </a>
 </template>
 
