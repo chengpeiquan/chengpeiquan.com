@@ -12,6 +12,7 @@ declare module 'vue' {
     BlogPage: typeof import('D:/Project/chengpeiquan.com/src/components/blog/Page.vue')['default']
     BlogPagination: typeof import('D:/Project/chengpeiquan.com/src/components/blog/Pagination.vue')['default']
     BlogSidebar: typeof import('D:/Project/chengpeiquan.com/src/components/blog/Sidebar.vue')['default']
+    CategoryTabs: typeof import('D:/Project/chengpeiquan.com/src/components/CategoryTabs.vue')['default']
     ChildrenList: typeof import('D:/Project/chengpeiquan.com/src/components/ChildrenList.vue')['default']
     CookbookList: typeof import('D:/Project/chengpeiquan.com/src/components/cookbook/List.vue')['default']
     CookingList: typeof import('D:/Project/chengpeiquan.com/src/components/cooking/List.vue')['default']

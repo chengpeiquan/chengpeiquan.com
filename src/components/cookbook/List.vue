@@ -1,17 +1,7 @@
 <template>
   <section class="flex flex-1 flex-col">
     <!-- 分类 -->
-    <section class="category-tabs">
-      <router-link
-        v-for="(item, index) in categoryList"
-        :key="index"
-        :to="item.path"
-        class="item"
-        :class="{ cur: item.routeName === route.name }"
-      >
-        {{ item.text }}
-      </router-link>
-    </section>
+    <CategoryTabs :categoryList="categoryList" />
     <!-- 分类 -->
 
     <!-- 空列表提示 -->
@@ -34,9 +24,32 @@
     <!-- 空列表提示 -->
 
     <!-- 列表 -->
-    <ul v-if="articleList.length > 0" class="cookbook-list">
+    <ul
+      v-if="articleList.length > 0"
+      class="
+        mt-2
+        md:mx-0
+        mx-4
+        md:mb-8
+        mb-4
+        grid
+        md:grid-cols-4
+        grid-cols-1
+        col-auto
+        row-auto
+        md:gap-8
+        gap-4
+      "
+    >
       <li
-        class="flex flex-col"
+        class="
+          flex flex-col
+          md:pb-0
+          pb-4
+          md:border-0
+          border-b
+          dark:border-white dark:border-opacity-5
+        "
         v-for="(item, index) in articleList"
         :key="index"
       >
@@ -61,11 +74,11 @@
 
         <!-- 标题 -->
         <router-link
-          class="flex md:items-center items-start mb-2"
+          class="flex items-start mb-2"
           :title="item.title"
           :to="item.path"
         >
-          <h2 class="text-lg line-clamp-1">
+          <h2 class="text-lg md:line-clamp-1 line-clamp-2">
             {{ item.title }}
           </h2>
         </router-link>
@@ -96,19 +109,13 @@
 </template>
 
 <script setup lang="ts">
-import { reactive, ref } from 'vue'
-import { useRouter, useRoute } from 'vue-router'
+import { ref } from 'vue'
 import { useHead } from '@vueuse/head'
 import { categoryConfigList } from '@/router/cookbook'
-import isCookbook from '@libs/isCookbook'
 import config from '@/config'
-import isDev from '@libs/isDev'
 import { useList, usePagination, useI18n } from '@/hooks'
-import type { RouteRecordRaw } from 'vue-router'
 import type { ArticleItem, CategoryItem, CategoryListInfo } from '@/types'
 
-const route = useRoute()
-const router = useRouter()
 const articleList = ref<ArticleItem[]>([])
 const categoryList = ref<CategoryItem[]>([])
 const { defaultLang } = config
@@ -158,18 +165,3 @@ useHead({
   ],
 })
 </script>
-
-<style lang="postcss" scoped>
-.category-tabs {
-  @apply w-full md:mb-4 mb-2 md:pb-4 pb-2 md:px-0 px-4 border-b dark:border-white dark:border-opacity-5;
-}
-.category-tabs .item {
-  @apply md:mr-8 mr-4 md:text-base text-sm opacity-70;
-}
-.category-tabs .item.cur {
-  @apply md:text-xl text-base font-bold opacity-100;
-}
-.cookbook-list {
-  @apply md:mt-2 mt-0 md:mx-0 mx-4 mb-4 grid md:grid-cols-4 grid-cols-2 col-auto row-auto md:gap-8 gap-4;
-}
-</style>
