@@ -3,11 +3,11 @@ import dayjs from '@libs/dayjs'
 export function useDate() {
   /**
    * 计算日期的显示
-   * @param date - 日期
+   * @param date - 时间戳
    * @returns diffDays=距离当前的天数，dateAgo=几天前
    */
   const dateDisplay = (
-    date: Date
+    date: number
   ): {
     diffDays: number
     dateAgo: string

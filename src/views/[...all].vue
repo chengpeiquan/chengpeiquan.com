@@ -32,7 +32,7 @@ const { getText } = useI18n()
 
 if (isClient) {
   // 5s后返回首页
-  const countdown: number | null = setInterval(() => {
+  const countdown = setInterval(() => {
     if (seconds.value === 1) {
       clearInterval(countdown)
       router.push({

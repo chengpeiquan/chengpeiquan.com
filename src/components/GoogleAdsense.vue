@@ -19,9 +19,10 @@ const lib: string =
   'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
 
 const push = (): void => {
+  // eslint-disable-next-line no-unused-vars
   let adsbygoogle
   setTimeout(() => {
-    ;(adsbygoogle = window.adsbygoogle || []).push({})
+    ;(adsbygoogle = (window as any).adsbygoogle || []).push({})
   }, 1000)
 }
 

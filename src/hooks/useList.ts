@@ -160,7 +160,7 @@ export function useList({ type, categoryPath }: CategoryListInfo) {
         const { path, meta } = route
         const { frontmatter } = meta as RouteMeta
         const { title, desc, cover, date, isHot, repo } = frontmatter
-        const { diffDays, dateAgo } = dateDisplay(new Date(String(date)))
+        const { diffDays, dateAgo } = dateDisplay(+new Date(String(date)))
 
         return {
           path,

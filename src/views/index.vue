@@ -20,18 +20,17 @@
 </template>
 
 <script setup lang="ts">
-import { inject } from 'vue'
 import { useHead } from '@vueuse/head'
-import config from '@/config'
+import { useI18n } from '@/hooks'
 
-const lang: string = inject('lang') || ''
+const { getText } = useI18n()
 
 useHead({
-  title: config.i18n[lang.value].title,
+  title: getText('title'),
   meta: [
     {
       property: 'og:title',
-      content: config.i18n[lang.value].title,
+      content: getText('title'),
     },
   ],
 })

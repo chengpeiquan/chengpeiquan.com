@@ -192,7 +192,7 @@ const moveToc = (): void | boolean => {
   }
 
   // 获取文章内的目录
-  const toc: HTMLElement = document.querySelector('.article-toc')
+  const toc: HTMLElement | null = document.querySelector('.article-toc')
   if (!toc) {
     isShowToc.value = false
     return false
@@ -201,16 +201,20 @@ const moveToc = (): void | boolean => {
   // 显示目录并插入内容
   isShowToc.value = true
   setTimeout(() => {
-    const tocContainer: HTMLElement = document.querySelector(
+    const tocContainer: HTMLElement | null = document.querySelector(
       '.article-toc-container'
     )
-    tocContainer.innerHTML = ''
-    tocContainer.appendChild(toc)
+    if (tocContainer) {
+      tocContainer.innerHTML = ''
+      tocContainer.appendChild(toc)
+    }
   }, 100)
 
   // 把文章内的目录移除
-  const content: HTMLElement = document.querySelector('.article-content')
-  content.childNodes[0].remove()
+  const content: HTMLElement | null = document.querySelector('.article-content')
+  if (content) {
+    content.childNodes[0].remove()
+  }
 }
 onMounted(() => {
   setTimeout(() => {

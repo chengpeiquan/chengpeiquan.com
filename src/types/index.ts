@@ -15,6 +15,7 @@ export interface i18nTextConfig {
 export interface Frontmatter {
   title: string
   desc: string
+  keywords: string
   cover: string
   date: string
   categories?: string[]

@@ -19,21 +19,21 @@
 <script setup lang="ts">
 import { useHead } from '@vueuse/head'
 import { isClient } from '@vueuse/core'
-import { ref, inject } from 'vue'
-import config from '@/config'
+import { ref } from 'vue'
+import { useI18n } from '@/hooks'
 import { onBeforeRouteLeave, useRouter } from 'vue-router'
 
 const router = useRouter()
 const seconds = ref<number>(5)
-const lang: string = inject('lang') || ''
+const { getPath, getText } = useI18n()
 
 if (isClient) {
   // 5s后返回首页
-  const countdown: number | null = setInterval(() => {
+  const countdown = setInterval(() => {
     if (seconds.value === 1) {
       clearInterval(countdown)
       router.push({
-        path: `/${lang.value}`,
+        path: getPath('/'),
       })
       return false
     }
@@ -48,7 +48,7 @@ if (isClient) {
 }
 
 useHead({
-  title: `404 - ${config.i18n[lang.value].title}`,
+  title: `404 - ${getText('title')}`,
 })
 </script>
 

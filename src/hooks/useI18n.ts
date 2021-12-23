@@ -85,9 +85,9 @@ export function useI18n() {
     if (
       isString &&
       target &&
-      Object.prototype.hasOwnProperty.call(i18n[lang.value], target)
+      Object.prototype.hasOwnProperty.call(i18n[lang.value], String(target))
     ) {
-      return i18n[lang.value][target]
+      return i18n[lang.value][String(target)]
     }
 
     // 转多语言

@@ -149,10 +149,7 @@ useHead({
  * 页面加载时定位到链接对应的锚点
  */
 const navigateToId = (): void => {
-  if (!isClient) {
-    return false
-  }
-
+  if (!isClient) return
   router
     .isReady()
     .then(() => {
