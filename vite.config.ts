@@ -13,6 +13,7 @@ import anchor from 'markdown-it-anchor'
 import toc from 'markdown-it-table-of-contents'
 import externalLinks from 'markdown-it-external-links'
 import implicitFigures from 'markdown-it-implicit-figures'
+import lazyLoading from 'markdown-it-image-lazy-loading'
 import matter from 'gray-matter'
 import WindiCSS from 'vite-plugin-windicss'
 import Banner from 'vite-plugin-banner'
@@ -120,6 +121,7 @@ export default defineConfig({
         md.use(implicitFigures, {
           figcaption: true,
         })
+        md.use(lazyLoading)
       },
     }),
 

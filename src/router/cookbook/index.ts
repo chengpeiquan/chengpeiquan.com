@@ -11,9 +11,23 @@ export const categoryConfigList: CategoryConfigItem[] = [
     },
   },
   {
+    path: 'bento',
+    text: {
+      zh: '上班带饭',
+      en: 'Bento',
+    },
+  },
+  {
+    path: 'staple',
+    text: {
+      zh: '特色主食',
+      en: 'Staple',
+    },
+  },
+  {
     path: 'condiment',
     text: {
-      zh: '调味料',
+      zh: '调味辅料',
       en: 'condiment',
     },
   },
