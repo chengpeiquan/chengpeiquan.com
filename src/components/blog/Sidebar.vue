@@ -1,12 +1,12 @@
 <template>
   <section class="article-sidebar lg:flex hidden flex-col flex-shrink-0 ml-16">
     <!-- 文章目录 -->
-    <section class="mb-16" v-if="isShowToc">
+    <!-- <section class="mb-16" v-if="isShowToc">
       <h2 class="block-title">文章目录</h2>
       <div class="flex flex-col w-full">
         <div class="article-toc-container"></div>
       </div>
-    </section>
+    </section> -->
     <!-- 文章目录 -->
 
     <!-- 热门栏目 -->
@@ -183,44 +183,44 @@ const getArticleList = (): void => {
 }
 getArticleList()
 
-/**
- * 提取目录生成到侧边栏
- */
-const moveToc = (): void | boolean => {
-  if (!isClient || isMobile.value) {
-    return false
-  }
+// /**
+//  * 提取目录生成到侧边栏
+//  */
+// const moveToc = (): void | boolean => {
+//   if (!isClient || isMobile.value) {
+//     return false
+//   }
 
-  // 获取文章内的目录
-  const toc: HTMLElement | null = document.querySelector('.article-toc')
-  if (!toc) {
-    isShowToc.value = false
-    return false
-  }
+//   // 获取文章内的目录
+//   const toc: HTMLElement | null = document.querySelector('.article-toc')
+//   if (!toc) {
+//     isShowToc.value = false
+//     return false
+//   }
 
-  // 显示目录并插入内容
-  isShowToc.value = true
-  setTimeout(() => {
-    const tocContainer: HTMLElement | null = document.querySelector(
-      '.article-toc-container'
-    )
-    if (tocContainer) {
-      tocContainer.innerHTML = ''
-      tocContainer.appendChild(toc)
-    }
-  }, 100)
+//   // 显示目录并插入内容
+//   isShowToc.value = true
+//   setTimeout(() => {
+//     const tocContainer: HTMLElement | null = document.querySelector(
+//       '.article-toc-container'
+//     )
+//     if (tocContainer) {
+//       tocContainer.innerHTML = ''
+//       tocContainer.appendChild(toc)
+//     }
+//   }, 100)
 
-  // 把文章内的目录移除
-  const content: HTMLElement | null = document.querySelector('.article-content')
-  if (content) {
-    content.childNodes[0].remove()
-  }
-}
-onMounted(() => {
-  setTimeout(() => {
-    moveToc()
-  }, 100)
-})
+//   // 把文章内的目录移除
+//   const content: HTMLElement | null = document.querySelector('.article-content')
+//   if (content) {
+//     content.childNodes[0].remove()
+//   }
+// }
+// onMounted(() => {
+//   setTimeout(() => {
+//     moveToc()
+//   }, 100)
+// })
 </script>
 
 <style lang="postcss" scoped>
