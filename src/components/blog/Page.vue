@@ -1,4 +1,8 @@
 <template>
+  <!-- 目录 -->
+  <TOC />
+  <!-- 目录 -->
+
   <section
     class="
       page-detail

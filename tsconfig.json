@@ -30,7 +30,7 @@
       "@cp/*": ["src/components/*"],
       "@views/*": ["src/views/*"]
     },
-    "lib": ["esnext", "dom"],
+    "lib": ["esnext", "dom", "dom.iterable"],
     "plugins": [
       {
         "name": "@vuedx/typescript-plugin-vue"

@@ -1,92 +1,62 @@
 <template>
-  <div class="sticky w-60 mr-8" v-if="isShowToc">
-    <!-- 模块标题 -->
-    <div
-      class="
-        flex
-        justify-between
-        items-center
-        bg-gray-50
-        dark:bg-opacity-5
-        box-border
-        px-4
-        py-2
-      "
-    >
-      <div class="flex items-center">
-        <ri:list-check-2 class="mr-2" />
-        <span>目录</span>
+  <div class="w-48" v-if="isShowTOC">
+    <div class="sticky top-16 w-full">
+      <!-- 模块标题 -->
+      <div
+        class="
+          flex
+          items-center
+          bg-gray-50
+          dark:bg-opacity-5
+          box-border
+          p-2
+          select-none
+        "
+      >
+        <div class="flex items-center">
+          <ri:list-check-2 class="mr-2" />
+          <span>{{ tocTitle }}</span>
+        </div>
       </div>
-      <span class="text-xs cursor-pointer">收起</span>
-    </div>
-    <!-- 模块标题 -->
+      <!-- 模块标题 -->
 
-    <!-- 目录 -->
-    <div class="article-toc-container"></div>
-    <!-- 目录 -->
+      <!-- 目录 -->
+      <div class="article-toc-container" v-html="tocHTML"></div>
+      <!-- 目录 -->
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
-import { isClient } from '@vueuse/core'
-import isMobile from '@libs/isMobile'
+import { useNavigate } from '@/hooks'
+import { ref } from 'vue-demi'
 
-const isShowToc = ref<boolean>(false)
-
-/**
- * 提取目录生成到侧边栏
- */
-const moveToc = (): void | boolean => {
-  if (!isClient || isMobile.value) {
-    return false
-  }
-
-  // 获取文章内的目录
-  const toc: HTMLElement | null = document.querySelector('.article-toc')
-  if (!toc) {
-    isShowToc.value = false
-    return false
-  }
-
-  // 显示目录并插入内容
-  isShowToc.value = true
-  setTimeout(() => {
-    const tocContainer: HTMLElement | null = document.querySelector(
-      '.article-toc-container'
-    )
-    if (tocContainer) {
-      tocContainer.innerHTML = ''
-      tocContainer.appendChild(toc)
-    }
-  }, 100)
-
-  // 把文章内的目录移除
-  const content: HTMLElement | null = document.querySelector('.article-content')
-  if (content) {
-    content.childNodes[0].remove()
-  }
-}
-onMounted(() => {
-  setTimeout(() => {
-    moveToc()
-  }, 100)
-})
+const tocHTML = ref<string>('')
+const { isShowTOC, tocTitle, initTOC } = useNavigate()
+initTOC(tocHTML)
 </script>
 
 <style lang="postcss" scoped>
 .article-toc-container {
+  max-height: calc(100vh - 300px);
+  @apply overflow-y-auto;
   :deep(.article-toc) {
     li {
-      @apply ml-0;
+      @apply ml-0 pl-6 line-clamp-1;
+      &::before {
+        top: calc(0.875em - 0.3875em);
+      }
       a {
-        @apply text-sm line-clamp-1;
+        @apply text-sm;
         &::before,
         &::after {
           display: none;
         }
-        &:hover {
-          @apply no-underline !important;
+      }
+      ul {
+        @apply m-0;
+        a {
+          @apply text-xs;
         }
       }
     }

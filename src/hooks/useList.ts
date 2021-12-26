@@ -46,7 +46,7 @@ export function useList({ type, categoryPath }: CategoryListInfo) {
     const isValidItem = (item: RouteRecordRaw): boolean => {
       switch (type) {
         case 'article':
-          return isArticle(item, lang.value)
+          return isArticle(item)
         case 'cookbook':
           return isCookbook(item)
         default:
