@@ -33,7 +33,7 @@
         md:mb-8
         mb-4
         grid
-        md:grid-cols-4
+        md:grid-cols-5
         grid-cols-1
         col-auto
         row-auto
@@ -59,7 +59,7 @@
           class="
             flex flex-shrink-0
             w-full
-            md:h-75
+            md:h-59
             h-auto
             overflow-hidden
             mb-2
@@ -67,7 +67,12 @@
           "
         >
           <router-link :title="item.title" :to="item.path" class="w-full">
-            <img class="img" :src="item.cover" :alt="item.title" />
+            <img
+              class="img"
+              :src="item.cover"
+              :alt="item.title"
+              loading="lazy"
+            />
           </router-link>
         </div>
         <!-- 封面 -->
@@ -78,7 +83,7 @@
           :title="item.title"
           :to="item.path"
         >
-          <h2 class="text-lg md:line-clamp-1 line-clamp-2">
+          <h2 class="text-base line-clamp-2">
             {{ item.title }}
           </h2>
         </router-link>
@@ -119,8 +124,10 @@ const categoryListInfo: CategoryListInfo = {
   categoryPath: 'cooking',
 }
 const { getCategoryList, getArticleList } = useList(categoryListInfo)
-const { page, pageSize, lastPage, total, openPage } =
-  usePagination(categoryListInfo)
+const { page, pageSize, lastPage, total, openPage } = usePagination({
+  ...categoryListInfo,
+  pageSize: 12,
+})
 
 // 获取语言
 const { getText } = useI18n()

@@ -54,6 +54,7 @@ export interface CategoryItem {
 export interface CategoryListInfo {
   type: string
   categoryPath: string
+  pageSize?: number
 }
 
 /**

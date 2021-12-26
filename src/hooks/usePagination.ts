@@ -1,10 +1,14 @@
-import { onMounted, reactive, toRefs } from 'vue'
+import { reactive, toRefs } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useList } from '@/hooks'
 import type { RouteRecordRaw } from 'vue-router'
 import type { CategoryListInfo } from '@/types'
 
-export function usePagination({ type, categoryPath }: CategoryListInfo) {
+export function usePagination({
+  type,
+  categoryPath,
+  pageSize,
+}: CategoryListInfo) {
   const route = useRoute()
   const router = useRouter()
   const { getRouteList } = useList({
@@ -13,7 +17,7 @@ export function usePagination({ type, categoryPath }: CategoryListInfo) {
   })
   const state = reactive({
     page: 1,
-    pageSize: 10,
+    pageSize: typeof pageSize === 'number' ? pageSize : 10,
     lastPage: 1,
     total: 0,
   })

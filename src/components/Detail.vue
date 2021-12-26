@@ -17,10 +17,16 @@
     </BlogArticle>
     <!-- 文章类 -->
 
-    <!-- 页面类 -->
-    <BlogPage v-else :frontmatter="frontmatter">
+    <!-- 文章类 -->
+    <CookbookArticle v-else-if="isCookbook(route)" :frontmatter="frontmatter">
       <slot />
-    </BlogPage>
+    </CookbookArticle>
+    <!-- 文章类 -->
+
+    <!-- 页面类 -->
+    <Page v-else :frontmatter="frontmatter">
+      <slot />
+    </Page>
     <!-- 页面类 -->
   </main>
 </template>
@@ -28,6 +34,7 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
 import isArticle from '@libs/isArticle'
+import isCookbook from '@libs/isCookbook'
 import type { Frontmatter } from '@/types'
 
 const route = useRoute()

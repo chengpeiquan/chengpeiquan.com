@@ -15,6 +15,7 @@ import type {
 } from '@/types'
 
 /**
+ * @param pageSize - 每页条数，默认10条
  * @param type - 列表类型，article=博客文章，cookbook=菜谱
  * @param categoryPath - 分类的路径，用于拼接分类文章列表的地址
  */
@@ -73,7 +74,7 @@ export function useList({ type, categoryPath }: CategoryListInfo) {
 
         // 判断文章是否在当前的分类里
         const category: string = String(route.name)
-          .replace(/category-(.*)-page/, '$1')
+          .replace(new RegExp(`${categoryPath}-(.*)-page`), '$1')
           .replace(`${lang.value}-`, '')
 
         const isInCategory: boolean =

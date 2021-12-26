@@ -71,7 +71,12 @@
             "
           >
             <router-link :title="item.title" :to="item.path">
-              <img class="img" :src="item.cover" :alt="item.title" />
+              <img
+                class="img"
+                :src="item.cover"
+                :alt="item.title"
+                loading="lazy"
+              />
             </router-link>
           </div>
           <!-- 封面 -->

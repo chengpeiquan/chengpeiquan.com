@@ -42,7 +42,7 @@ export function useNavigate() {
    */
   const navigateToId = (id?: string, callback?: () => void): void => {
     if (!isClient) return
-    const { hash } = document.location
+    const { hash } = window.location
     if (hash.length > 1) {
       const target: string = id || decodeURIComponent(hash.substring(1))
       const el: HTMLElement | null = document.getElementById(target)
@@ -94,7 +94,12 @@ export function useNavigate() {
     }
 
     // 先执行定位，再去更新目录，避免定位不准
-    navigateToId('', updateTOC)
+    const { hash } = window.location
+    if (hash.length > 1) {
+      navigateToId('', updateTOC)
+    } else {
+      onMounted(updateTOC)
+    }
   }
 
   return {
