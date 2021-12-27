@@ -1,6 +1,6 @@
 import config from '@/config'
 import type { RouteRecordRaw } from 'vue-router'
-import type { CategoryConfigItem } from '@/types'
+import type { CategoryConfigItem, CategoryListInfo } from '@/types'
 
 let routes: RouteRecordRaw[] = []
 const { defaultLang, i18n } = config
@@ -29,6 +29,12 @@ export const categoryConfigList: CategoryConfigItem[] = [
     },
   },
 ]
+
+// 分类信息
+export const categoryListInfo: CategoryListInfo = {
+  type: 'article',
+  categoryPath: 'category',
+}
 
 // 根据分类配置创建分类路由
 const createCategoryRoutes = (lang: string): void => {

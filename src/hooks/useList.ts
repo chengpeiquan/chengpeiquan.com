@@ -1,27 +1,24 @@
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import isDev from '@libs/isDev'
 import isArticle from '@libs/isArticle'
 import isCookbook from '@libs/isCookbook'
+import shuffle from '@libs/shuffle'
 import config from '@/config'
 import { useDate, useI18n } from '@/hooks'
+import { getRouteInfo } from '@/router'
 import type { RouteRecordRaw } from 'vue-router'
 import type {
   RouteMeta,
   CategoryConfigItem,
   CategoryItem,
-  CategoryListInfo,
   ArticleItem,
 } from '@/types'
 
-/**
- * @param pageSize - 每页条数，默认10条
- * @param type - 列表类型，article=博客文章，cookbook=菜谱
- * @param categoryPath - 分类的路径，用于拼接分类文章列表的地址
- */
-export function useList({ type, categoryPath }: CategoryListInfo) {
+export function useList(pageType: string) {
   // 获取语言
   const { lang } = useI18n()
+  const { type, categoryPath } = getRouteInfo(pageType)
 
   /**
    * 获取路由列表
@@ -135,6 +132,30 @@ export function useList({ type, categoryPath }: CategoryListInfo) {
   }
 
   /**
+   * 获取文章项目
+   * @param route - 路由
+   */
+  const getArticleItem = (route: RouteRecordRaw): ArticleItem => {
+    const { dateDisplay } = useDate()
+    const { path, meta } = route
+    const { frontmatter } = meta as RouteMeta
+    const { title, desc, cover, date, isHot, repo } = frontmatter
+    const { diffDays, dateAgo } = dateDisplay(+new Date(String(date)))
+
+    return {
+      path,
+      title,
+      desc,
+      cover,
+      date,
+      isHot: Boolean(isHot),
+      repo: repo || '',
+      diffDays,
+      dateAgo,
+    }
+  }
+
+  /**
    * 获取文章列表
    * @param page - 页码
    * @param pageSize - 每页条数
@@ -147,42 +168,48 @@ export function useList({ type, categoryPath }: CategoryListInfo) {
     page: number
     pageSize: number
   }): ArticleItem[] => {
-    const { dateDisplay } = useDate()
-    const routeList = getRouteList()
-
     // 根据页码获取对应数量的路由列表
     const start: number = 0 + pageSize * (page - 1)
     const end: number = start + pageSize
+    const routeList: RouteRecordRaw[] = getRouteList()
     const curRouteList: RouteRecordRaw[] = routeList.slice(start, end)
 
     // 提取要用到的字段
     const articleList: ArticleItem[] = curRouteList.map(
-      (route: RouteRecordRaw) => {
-        const { path, meta } = route
-        const { frontmatter } = meta as RouteMeta
-        const { title, desc, cover, date, isHot, repo } = frontmatter
-        const { diffDays, dateAgo } = dateDisplay(+new Date(String(date)))
-
-        return {
-          path,
-          title,
-          desc,
-          cover,
-          date,
-          isHot: Boolean(isHot),
-          repo: repo || '',
-          diffDays,
-          dateAgo,
-        }
-      }
+      (route: RouteRecordRaw) => getArticleItem(route)
     )
 
     return articleList
   }
 
+  /**
+   * 猜你喜欢列表
+   * @param max - 返回的列表上限
+   */
+  const guessList = ref<ArticleItem[]>([])
+  const getGuessList = (max = 5): void => {
+    const routeList: RouteRecordRaw[] = getRouteList()
+    console.log(routeList);
+
+    const articleList: ArticleItem[] = shuffle(routeList).map((route) =>
+      getArticleItem(route)
+    )
+
+    // 不超过渲染上限
+    if (articleList.length > max) {
+      articleList.length = max
+    }
+
+    guessList.value = articleList
+  }
+
   return {
     getRouteList,
     getCategoryList,
+    getArticleItem,
     getArticleList,
+
+    guessList,
+    getGuessList,
   }
 }

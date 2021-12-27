@@ -129,17 +129,14 @@
 
 <script setup lang="ts">
 import { useHead } from '@vueuse/head'
-import { categoryConfigList } from '@/router/categories'
+import { categoryConfigList } from '@/router/article'
 import { useList, usePagination, useI18n } from '@/hooks'
-import type { ArticleItem, CategoryItem, CategoryListInfo } from '@/types'
+import type { ArticleItem, CategoryItem } from '@/types'
 
-const categoryListInfo: CategoryListInfo = {
-  type: 'article',
-  categoryPath: 'category',
-}
-const { getCategoryList, getArticleList } = useList(categoryListInfo)
-const { page, pageSize, lastPage, total, openPage } =
-  usePagination(categoryListInfo)
+const { getCategoryList, getArticleList } = useList('article')
+const { page, pageSize, lastPage, total, openPage } = usePagination({
+  pageType: 'article',
+})
 
 // 获取语言
 const { isDefaultLang, getText } = useI18n()

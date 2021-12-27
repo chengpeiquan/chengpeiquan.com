@@ -1,5 +1,5 @@
 import type { RouteRecordRaw } from 'vue-router'
-import type { CategoryConfigItem } from '@/types'
+import type { CategoryConfigItem, CategoryListInfo } from '@/types'
 
 // 分类配置
 export const categoryConfigList: CategoryConfigItem[] = [
@@ -32,6 +32,12 @@ export const categoryConfigList: CategoryConfigItem[] = [
     },
   },
 ]
+
+// 分类信息
+export const categoryListInfo: CategoryListInfo = {
+  type: 'cookbook',
+  categoryPath: 'cooking',
+}
 
 // 根据分类配置创建分类路由
 const routes: RouteRecordRaw[] = categoryConfigList.map((item) => {

@@ -20,6 +20,7 @@ declare module 'vue' {
     CookingList: typeof import('D:/Project/chengpeiquan.com/src/components/cooking/List.vue')['default']
     Detail: typeof import('D:/Project/chengpeiquan.com/src/components/Detail.vue')['default']
     Footer: typeof import('D:/Project/chengpeiquan.com/src/components/Footer.vue')['default']
+    FriendlyLinks: typeof import('D:/Project/chengpeiquan.com/src/components/FriendlyLinks.vue')['default']
     GoogleAdsense: typeof import('D:/Project/chengpeiquan.com/src/components/GoogleAdsense.vue')['default']
     Header: typeof import('D:/Project/chengpeiquan.com/src/components/Header.vue')['default']
     IcTwotoneArrowBackIos: typeof import('virtual:vite-icons/ic/twotone-arrow-back-ios')['default']

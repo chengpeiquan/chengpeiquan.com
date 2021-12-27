@@ -117,15 +117,11 @@
 import { useHead } from '@vueuse/head'
 import { categoryConfigList } from '@/router/cookbook'
 import { useList, usePagination, useI18n } from '@/hooks'
-import type { ArticleItem, CategoryItem, CategoryListInfo } from '@/types'
+import type { ArticleItem, CategoryItem } from '@/types'
 
-const categoryListInfo: CategoryListInfo = {
-  type: 'cookbook',
-  categoryPath: 'cooking',
-}
-const { getCategoryList, getArticleList } = useList(categoryListInfo)
+const { getCategoryList, getArticleList } = useList('cookbook')
 const { page, pageSize, lastPage, total, openPage } = usePagination({
-  ...categoryListInfo,
+  pageType: 'cookbook',
   pageSize: 12,
 })
 

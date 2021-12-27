@@ -1,14 +1,38 @@
 import { RouteRecordRaw, RouterScrollBehavior } from 'vue-router'
 import autoRoutes from 'virtual:generated-pages'
-import categoryRoutes from './categories'
-import cookbookRoutes from './cookbook'
+import articleRoutes, {
+  categoryListInfo as articleCategoryListInfo,
+} from './article'
+import cookbookRoutes, {
+  categoryListInfo as cookbookCategoryListInfo,
+} from './cookbook'
+import type { CategoryListInfo } from '@/types'
+
+/**
+ * 获取路由信息
+ * @param pageType - 页面类型，article=博客路由，cookbook=菜谱路由
+ * @returns 对应的路由信息
+ */
+export const getRouteInfo = (pageType: string): CategoryListInfo => {
+  switch (pageType) {
+    case 'article':
+      return { ...articleCategoryListInfo }
+    case 'cookbook':
+      return { ...cookbookCategoryListInfo }
+    default:
+      return {
+        type: '',
+        categoryPath: '',
+      }
+  }
+}
 
 /**
  * 定义路由
  */
 export const routes: Array<RouteRecordRaw> = [
   ...autoRoutes,
-  ...categoryRoutes,
+  ...articleRoutes,
   ...cookbookRoutes,
 ].map((route: RouteRecordRaw) => {
   if (
