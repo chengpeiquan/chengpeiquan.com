@@ -12,13 +12,13 @@
             cursor-pointer
             select-none
           "
-          @click="getArticleList"
+          @click="getGuessList()"
         >
           换一换
         </span>
       </div>
       <ul>
-        <li class="flex mb-8" v-for="(item, index) in articleList" :key="index">
+        <li class="flex mb-8" v-for="(item, index) in guessList" :key="index">
           <!-- 封面 -->
           <div
             v-if="item.cover"
@@ -70,56 +70,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import { useRouter, useRoute } from 'vue-router'
-import isArticle from '@libs/isArticle'
-import shuffle from '@libs/shuffle'
-import isDev from '@libs/isDev'
-
-interface List {
-  path: string
-  title: string
-  cover: string
-}
-
-const activeRoute = useRoute()
-const router = useRouter()
-const articleList = ref<List[]>([])
-const count: number = 5
-
-/**
- * 猜你喜欢的文章列表
- */
-const getArticleList = (): void => {
-  // 提取文章详情页的路由并按日期排序，同时不能和当前文章重复
-  const routes = router.getRoutes().filter((route) => {
-    const IS_VALID_SUFFIX: boolean = isDev
-      ? !route.path.endsWith('.html')
-      : route.path.endsWith('.html')
-    return (
-      isArticle(route) && IS_VALID_SUFFIX && route.path !== activeRoute.path
-    )
-  })
-
-  // 提取要用到的字段
-  articleList.value = shuffle(routes).map((route) => {
-    const { path } = route
-    const { frontmatter } = route.meta
-    const { title, cover } = frontmatter
-
-    return {
-      path,
-      title,
-      cover,
-    }
-  })
-
-  // 不超过渲染上限
-  if (articleList.value.length > count) {
-    articleList.value.length = count
-  }
-}
-getArticleList()
+import { useList } from '@/hooks'
+const { guessList, getGuessList } = useList('cookbook')
+getGuessList()
 </script>
 
 <style lang="postcss" scoped>

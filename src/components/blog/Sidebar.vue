@@ -27,7 +27,7 @@
             cursor-pointer
             select-none
           "
-          @click="getGuessList"
+          @click="getGuessList()"
         >
           换一换
         </span>

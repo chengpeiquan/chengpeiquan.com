@@ -16,7 +16,6 @@ import type {
 } from '@/types'
 
 export function useList(pageType: string) {
-  // 获取语言
   const { lang } = useI18n()
   const { type, categoryPath } = getRouteInfo(pageType)
 
@@ -26,7 +25,8 @@ export function useList(pageType: string) {
    * @param param0
    * @returns
    */
-  const getRouteList = (): RouteRecordRaw[] => {
+  const routeList = ref<RouteRecordRaw[]>([])
+  const getRouteList = (): void => {
     const route = useRoute()
     const router = useRouter()
     const { defaultLang } = config
@@ -53,7 +53,7 @@ export function useList(pageType: string) {
     }
 
     // 获取路由列表
-    const routeList: RouteRecordRaw[] = router
+    routeList.value = router
       .getRoutes()
       .filter((item) => {
         // 生产环境用html文件后缀
@@ -85,9 +85,8 @@ export function useList(pageType: string) {
           +new Date((b.meta as RouteMeta).frontmatter.date) -
           +new Date((a.meta as RouteMeta).frontmatter.date)
       )
-
-    return routeList
   }
+  getRouteList()
 
   /**
    * 获取分类菜单
@@ -171,8 +170,7 @@ export function useList(pageType: string) {
     // 根据页码获取对应数量的路由列表
     const start: number = 0 + pageSize * (page - 1)
     const end: number = start + pageSize
-    const routeList: RouteRecordRaw[] = getRouteList()
-    const curRouteList: RouteRecordRaw[] = routeList.slice(start, end)
+    const curRouteList: RouteRecordRaw[] = routeList.value.slice(start, end)
 
     // 提取要用到的字段
     const articleList: ArticleItem[] = curRouteList.map(
@@ -188,26 +186,20 @@ export function useList(pageType: string) {
    */
   const guessList = ref<ArticleItem[]>([])
   const getGuessList = (max = 5): void => {
-    const routeList: RouteRecordRaw[] = getRouteList()
-    const articleList: ArticleItem[] = shuffle(routeList).map((route) =>
+    const articleList: ArticleItem[] = shuffle(routeList.value).map((route) =>
       getArticleItem(route)
     )
-
-    // 不超过渲染上限
-    if (articleList.length > max) {
-      articleList.length = max
-    }
-
-    guessList.value = articleList
+    guessList.value = articleList.slice(0, max)
   }
 
   return {
+    routeList,
+    guessList,
+
     getRouteList,
     getCategoryList,
     getArticleItem,
     getArticleList,
-
-    guessList,
     getGuessList,
   }
 }

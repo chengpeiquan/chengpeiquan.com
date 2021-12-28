@@ -1,7 +1,6 @@
 import { reactive, toRefs } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useList } from '@/hooks'
-import type { RouteRecordRaw } from 'vue-router'
 
 export function usePagination({
   pageType,
@@ -12,20 +11,19 @@ export function usePagination({
 }) {
   const route = useRoute()
   const router = useRouter()
-  const { getRouteList } = useList(pageType)
+  const { routeList } = useList(pageType)
   const state = reactive({
     page: 1,
     pageSize: typeof pageSize === 'number' ? pageSize : 10,
     lastPage: 1,
     total: 0,
   })
-  const routeList: RouteRecordRaw[] = getRouteList()
 
   /**
    * 初始化翻页数据
    */
   const init = (): void => {
-    state.total = routeList.length
+    state.total = routeList.value.length
     state.lastPage = Math.ceil(state.total / state.pageSize)
 
     // 获取页码信息
