@@ -189,8 +189,6 @@ export function useList(pageType: string) {
   const guessList = ref<ArticleItem[]>([])
   const getGuessList = (max = 5): void => {
     const routeList: RouteRecordRaw[] = getRouteList()
-    console.log(routeList);
-
     const articleList: ArticleItem[] = shuffle(routeList).map((route) =>
       getArticleItem(route)
     )
