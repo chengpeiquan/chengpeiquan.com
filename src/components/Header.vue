@@ -78,7 +78,7 @@
         <li
           v-for="(item, index) in navList"
           :key="index"
-          class="flex items-center w-1/3 h-14 text-base"
+          class="flex justify-center items-center w-1/4 h-14 text-sm"
         >
           <router-link :to="item.target" :title="item.text" exact>
             {{ item.text }}
