@@ -90,7 +90,7 @@
   <!-- 文章 -->
 
   <!-- 侧边栏 -->
-  <BlogSidebar />
+  <CookbookSidebar />
   <!-- 侧边栏 -->
 </template>
 

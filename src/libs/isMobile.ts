@@ -1,10 +1,10 @@
+import { ref } from 'vue'
+import { isClient } from '@vueuse/core'
+
 /**
  * 判断是否手机平台
  * @description 借用了ref生成为响应式数据，在script里记得通过 isMobile.value 去操作，template则不必
  */
-import { ref } from 'vue'
-import { isClient } from '@vueuse/core'
-
 const isMobile = ref<boolean>(false)
 
 try {

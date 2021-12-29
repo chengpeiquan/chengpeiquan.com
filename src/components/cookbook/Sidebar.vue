@@ -1,20 +1,5 @@
 <template>
   <section class="article-sidebar lg:flex hidden flex-col flex-shrink-0 ml-16">
-    <!-- 热门栏目 -->
-    <section class="mb-16">
-      <h2 class="block-title">热门栏目</h2>
-      <div class="flex flex-col w-full">
-        <a href="https://vue3.chengpeiquan.com/" target="_blank">
-          <img
-            class="w-full"
-            src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/01/1-1.jpg"
-            alt="Vue3.0学习教程与实战案例"
-          />
-        </a>
-      </div>
-    </section>
-    <!-- 热门栏目 -->
-
     <!-- 猜你喜欢 -->
     <section class="mb-8">
       <div class="flex justify-between items-center block-title">
@@ -59,20 +44,20 @@
     </section>
     <!-- 猜你喜欢 -->
 
-    <!-- 在线吸猫 -->
+    <!-- 在线互动 -->
     <section class="mb-16">
-      <h2 class="block-title">在线吸猫</h2>
+      <h2 class="block-title">在线互动</h2>
       <div class="flex flex-col w-full">
         <a href="https://vue3.chengpeiquan.com/" target="_blank">
           <img
             class="w-full"
-            src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/07/20210703235057.jpg"
-            alt="扫码关注我的抖音号"
+            src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/12/20211227005610.jpg"
+            alt="扫码关注我的小红书"
           />
         </a>
       </div>
     </section>
-    <!-- 在线吸猫 -->
+    <!-- 在线互动 -->
 
     <!-- 友情链接 -->
     <FriendlyLinks />
@@ -86,7 +71,7 @@
 
 <script setup lang="ts">
 import { useList } from '@/hooks'
-const { guessList, getGuessList } = useList('article')
+const { guessList, getGuessList } = useList('cookbook')
 getGuessList()
 </script>
 

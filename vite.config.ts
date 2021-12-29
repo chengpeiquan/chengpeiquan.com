@@ -13,6 +13,7 @@ import anchor from 'markdown-it-anchor'
 import toc from 'markdown-it-table-of-contents'
 import externalLinks from 'markdown-it-external-links'
 import implicitFigures from 'markdown-it-implicit-figures'
+import lazyLoading from 'markdown-it-image-lazy-loading'
 import matter from 'gray-matter'
 import WindiCSS from 'vite-plugin-windicss'
 import Banner from 'vite-plugin-banner'
@@ -42,6 +43,7 @@ export default defineConfig({
       '@img': resolve('src/assets/img'),
       '@postcss': resolve('src/assets/postcss'),
       '@libs': resolve('src/libs'),
+      '@hooks': resolve('src/hooks'),
       '@cp': resolve('src/components'),
       '@views': resolve('src/views'),
     },
@@ -119,6 +121,7 @@ export default defineConfig({
         md.use(implicitFigures, {
           figcaption: true,
         })
+        md.use(lazyLoading)
       },
     }),
 
@@ -127,6 +130,7 @@ export default defineConfig({
       deep: true,
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       dts: true,
+      directoryAsNamespace: true,
       resolvers: [
         ViteIconsResolver({
           componentPrefix: '',

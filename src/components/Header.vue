@@ -32,11 +32,11 @@
           width="56"
           height="56"
           src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/avatar-60x60.jpg"
-          :alt="name"
+          :alt="getText('name')"
         />
       </div>
       <span class="md:ml-4 ml-2 md:text-2xl text-l dark:text-white text-black">
-        {{ name }}
+        {{ getText('name') }}
       </span>
     </div>
     <!-- 站点信息 -->
@@ -78,7 +78,7 @@
         <li
           v-for="(item, index) in navList"
           :key="index"
-          class="flex items-center w-1/3 h-14 text-base"
+          class="flex justify-center items-center w-1/4 h-14 text-sm"
         >
           <router-link :to="item.target" :title="item.text" exact>
             {{ item.text }}
@@ -108,7 +108,7 @@
             <ri-github-fill />
           </a>
         </li>
-        <li v-if="lang === defaultLang">
+        <li v-if="isDefaultLang">
           <a
             class="select-none mr-4 text-xl"
             href="https://www.zhihu.com/people/basss"
@@ -154,44 +154,12 @@
 </template>
 
 <script setup lang="ts">
-import { ref, inject, watchEffect } from 'vue'
+import { ref } from 'vue'
 import { useRouter } from 'vue-router'
-import isDark from '@libs/isDark'
 import isMobile from '@libs/isMobile'
-import config from '@/config'
+import { useI18n } from '@/hooks'
 
-interface NavList {
-  path: string
-  text: string
-}
-const navList = ref<NavList>([])
-
-// 获取多语言内容
-const { defaultLang } = config
-const name = ref<string>('')
-const lang: string = inject('lang') || ''
-
-const getI18n = (): void => {
-  const key: string = lang.value
-
-  name.value = config.i18n[key].name
-
-  navList.value = [
-    {
-      target: key === defaultLang ? '/' : `/${key}`,
-      text: 'Home',
-    },
-    {
-      target: key === defaultLang ? '/article' : `/${key}/article`,
-      text: 'Article',
-    },
-    {
-      target: key === defaultLang ? '/about' : `/${key}/about`,
-      text: 'About',
-    },
-  ]
-}
-watchEffect(getI18n)
+const { isDefaultLang, navList, getText } = useI18n()
 
 // 移动端菜单开关
 const isShowMenu = ref<boolean>(false)

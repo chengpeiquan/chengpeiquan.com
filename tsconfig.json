@@ -7,58 +7,36 @@
     "importHelpers": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
+    "suppressImplicitAnyIndexErrors": true,
     "forceConsistentCasingInFileNames": true,
     "experimentalDecorators": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "incremental": true,
+    "incremental": false,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": "./",
     "types": [
       "vite/client",
       "node",
-      "vite-plugin-pages/client",
-      "vite-plugin-pwa/client"
+      "vite-plugin-pages/client"
     ],
     "paths": {
-      "@/*": [
-        "src/*"
-      ],
-      "@img/*": [
-        "src/assets/img/*"
-      ],
-      "@postcss/*": [
-        "src/assets/postcss/*"
-      ],
-      "@libs/*": [
-        "src/libs/*"
-      ],
-      "@cp/*": [
-        "src/components/*"
-      ],
-      "@views/*": [
-        "src/views/*"
-      ]
+      "@/*": ["src/*"],
+      "@img/*": ["src/assets/img/*"],
+      "@postcss/*": ["src/assets/postcss/*"],
+      "@libs/*": ["src/libs/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@cp/*": ["src/components/*"],
+      "@views/*": ["src/views/*"]
     },
-    "lib": [
-      "esnext",
-      "dom"
-    ],
+    "lib": ["esnext", "dom", "dom.iterable"],
     "plugins": [
       {
         "name": "@vuedx/typescript-plugin-vue"
       }
     ]
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue"
-  ],
-  "exclude": [
-    "dist",
-    "node_modules"
-  ]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "exclude": ["dist", "node_modules"]
 }

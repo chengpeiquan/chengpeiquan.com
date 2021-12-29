@@ -1,7 +1,7 @@
 export default {
-  defaultLang: 'zh-CN',
+  defaultLang: 'zh',
   i18n: {
-    'zh-CN': {
+    zh: {
       name: '程沛权',
       title: '程沛权 - 养了三只猫',
       description: '一个养了三只猫的花臂男。',

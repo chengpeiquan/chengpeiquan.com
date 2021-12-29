@@ -1,4 +1,8 @@
 <template>
+  <!-- 目录 -->
+  <TOC />
+  <!-- 目录 -->
+
   <section
     class="
       page-detail
@@ -29,21 +33,22 @@
 </template>
 
 <script setup lang="ts">
-import { computed, inject } from 'vue'
+import { computed } from 'vue'
 import { useHead } from '@vueuse/head'
-import config from '@/config'
+import { useI18n } from '@/hooks'
+import type { Frontmatter } from '@/types'
 
-const lang: string = inject('lang') || ''
-const props = defineProps({
-  frontmatter: Object,
-})
+const props = defineProps<{
+  frontmatter: Frontmatter
+}>()
+const { getText } = useI18n()
 const title = computed(() => props.frontmatter.title)
 const desc = computed(() => props.frontmatter.desc)
 const keywords = computed(() => props.frontmatter.keywords)
 const meta = [
   {
     property: 'og:title',
-    content: `${title.value} - ${config.i18n[lang.value].title}`,
+    content: `${title.value} - ${getText('title')}`,
   },
   { name: 'description', content: desc.value },
 ]
@@ -53,7 +58,7 @@ if (keywords.value) {
 }
 
 useHead({
-  title: `${title.value} - ${config.i18n[lang.value].title}`,
+  title: `${title.value} - ${getText('title')}`,
   meta,
 })
 </script>
