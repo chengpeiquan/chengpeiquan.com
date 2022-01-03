@@ -52,7 +52,6 @@
     "feed": "^4.2.2",
     "fs-extra": "^9.1.0",
     "gray-matter": "^4.0.3",
-    "husky": "4.2.3",
     "lint-staged": "^11.1.2",
     "markdown-it": "^12.2.0",
     "markdown-it-anchor": "^8.3.0",
@@ -78,13 +77,12 @@
     "vite-ssg": "^0.15.1",
     "vue-baidu-analytics": "^2.2.0",
     "vue-tsc": "^0.29.8",
-    "windicss": "^3.1.7"
+    "windicss": "^3.1.7",
+    "yorkie": "^2.0.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "node scripts/verifyCommit.js"
-    }
+  "gitHooks": {
+    "pre-commit": "lint-staged",
+    "commit-msg": "node scripts/verifyCommit.js"
   },
   "lint-staged": {
     "*.{js,jsx,vue,ts,tsx}": [

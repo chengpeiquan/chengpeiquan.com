@@ -1,7 +1,7 @@
 // Invoked on the commit-msg git hook by yorkie.
 const fs = require('fs')
 const chalk = require('chalk')
-const msgPath = process.env.HUSKY_GIT_PARAMS
+const msgPath = process.env.GIT_PARAMS
 const msg = fs.readFileSync(msgPath, 'utf-8').trim()
 
 const commitRE =
