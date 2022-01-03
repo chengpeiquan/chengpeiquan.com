@@ -3,7 +3,7 @@ title: git-commit-analytics
 desc: A tool to analyze your git repository's commit log. It can help you generate daily/weekly or longer work reports.
 keywords: git log,git commit analytics,git report,git commit report,git log report
 date: 2022-01-02 16:00:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220103225914.jpg
+cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220103234230.jpg
 categories:
   - tech
 ---
