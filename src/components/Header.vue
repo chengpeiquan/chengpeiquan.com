@@ -1,9 +1,6 @@
 <template>
   <header
     class="
-      sticky
-      top-0
-      z-999
       flex
       justify-between
       items-center
@@ -14,7 +11,7 @@
       border-b-4
       dark:border-white dark:border-opacity-5 dark:bg-white
       bg-gray-50
-      dark:bg-header
+      dark:bg-opacity-5
     "
   >
     <!-- 站点信息 -->
