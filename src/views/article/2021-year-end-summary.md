@@ -2,17 +2,19 @@
 title: 年终总结：2021年的一些回顾和2022年的一些小规划
 desc: 新年的第一天，我把 GitHub 的全自动流水线搭起来了。
 keywords: 2021 year end summary
-date: 2021-01-01 15:45:00
+date: 2022-01-01 15:45:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220103234636.jpg
 categories:
   - prose
 ---
 
+[[toc]]
+
 可真快啊又是一年年底了，虽然这一年博客没发几篇文章，不过整体的活跃情况其实是提升了，个人的变化也还是蛮大的，今年记忆比较深刻的事情有几件，让我梳理回顾一下。
 
 ## 开源社区
 
-其实我入坑的比较晚， 2020 年底才算开始活跃给开源做贡献，然后 2021 年算是开始放飞自我，真正的活动了起来，哈哈哈哈先记录一下活跃度吧，今年的打卡日期还是铺的比较满的，毕竟今年基本上宅了一年，除了回家的那几天，基本上都是在电脑前呆着（截图生成自 [GitHub Contributions](https://github-contributions.vercel.app/) ）。
+其实我入坑的比较晚（其实是很晚…）， 2020 年底才算开始活跃给开源做贡献，然后 2021 年算是开始放飞自我，真正的活动了起来，哈哈哈哈先记录一下活跃度吧，今年的打卡日期还是铺的比较满的，毕竟今年基本上宅了一年，除了回家的那几天，基本上都是在电脑前呆着（截图生成自 [GitHub Contributions](https://github-contributions.vercel.app/) ）。
 
 ![这两年在 GitHub 的活跃情况](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220104005113.jpg)
 
@@ -20,7 +22,29 @@ categories:
 
 写了一本 [Learning Vue3](https://github.com/chengpeiquan/learning-vue3) ，原本只是我的一些零散笔记，后来太多了，就打算写一些系列博文，结果发现又好像太多了，算了，弄本书吧，于是就有了这本面向 Vue 3.0 入门开发者的电子书。这也是我第一个持续 “维护” 了一年多的项目（哈哈哈更新内容也算维护工作吧），在冬至这天，刚好收获了第 100 个 Star ，也是我第一个达到 100 Star 的个人项目（现在已经超过了耶）。
 
-重构了我的博客
+春节的时候重构了我的博客，并做了一次详细的记录 [重构于Vite](https://chengpeiquan.com/article/rewrite-in-vite.html)，当时纯粹就是那么顺手一发知乎，还只发了一半懒得全部搬运，然后被尤大发现了，给了我一个大大的赞！用了这么久的 Vue ，写的东西被 Vue 作者点赞，太开心了！（当然那个时候他肯定是以 Vite 作者的身份去点赞的哈哈哈）
+
+![尤雨溪给我点赞啦](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220104113148.jpg)
+
+当时还因为自己要用，但没有现成的轮子，刚好顺便学习一下 Vite 插件的开发，写了个 [vite-plugin-banner](https://github.com/chengpeiquan/vite-plugin-banner) ，没想到成为我第一个下载量直逼 5k 的 NPM 包（后续也稳定在每周大约 1k ）
+
+![使用量最多的那一天截图](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220104115518.jpg)
+
+三月份在 Vue 3.2 正式上线前夕，翻译整理了一份定稿文章 [Vue3.0最新动态：script-setup定稿 部分实验性API将弃用](https://chengpeiquan.com/article/vue3-script-setup-finalization.html) ，在知乎得到了挺多的互动，今年最热闹的一篇博文了，尤大还参与到了里面的一些讨论，太惊喜了！
+
+![尤雨溪在文章下讨论](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220104113454.jpg)
+
+之后几个月公司事情太多，慢慢有点淡化开源的投入，不过也还是有参与吧，像一些技术在查文档的时候，发现缺少中文翻译，所以干完活就顺手帮人家翻译了一下，比如 [HTMLInputElement.webkitdirectory - MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLInputElement/webkitdirectory)，所以也断断续续的贡献了一些翻译文档，我的这些知名组织的贡献就是这么来的…
+
+![我参与的 Organizations](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220104115744.jpg)
+
+### 主要的收获
+
+认真参与到开源输出之后，虽然也没有什么惊艳的作品，不过对我个人来说收获还是很大的，首先是技术上的广度提升了不少，了解了很多优秀的开源作品，学习到了很多开发思路。
+
+另外在一些代码规范上也学习了很多，包括 eslint 今年也认真的用了起来了，已经成为自己的项目标配，当年好害怕这个哈哈哈，不过用起来之后也就最开始问题多点，后面几乎很少被拦截，说明什么，说明自己代码越写越规范了！真的很有用！
+
+还有 Git 的操作和 Git Commit 规范，也是学习了不少，并且公司在 Q4 开始执行了日报制度，别的开发都一片唏嘘，觉得好难写，只有我一个人觉得这有啥？因为我每做的一件事情都非常规范（相对以前来说），所以我每天的工作日报都可以很稳定的通过程序去生成，元旦我也把它开源了，有需要的话可以戳 [git-commit-analytics](https://github.com/analyticsjs/git-commit-analytics) 去了解。
 
 ## 参与扶贫
 
