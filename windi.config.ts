@@ -11,5 +11,9 @@ export default defineConfig({
         '3xl': '1600px',
       },
     },
+    backgroundColor: (theme) => ({
+      ...theme('colors'),
+      header: '#121212',
+    }),
   },
 })
