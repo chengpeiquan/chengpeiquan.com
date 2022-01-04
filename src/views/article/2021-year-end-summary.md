@@ -1,6 +1,6 @@
 ---
 title: 年终总结：2021年的一些回顾和2022年的一些小规划
-desc: 新年的第一天，我把 GitHub 的全自动流水线搭起来了。
+desc: 可真快啊又是一年年底了，虽然这一年博客没发几篇文章，不过整体的活跃情况其实是提升了，个人的变化也还是蛮大的，今年记忆比较深刻的事情有几件，让我梳理回顾一下。
 keywords: 2021 year end summary
 date: 2021-12-31 15:45:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220103234636.jpg
