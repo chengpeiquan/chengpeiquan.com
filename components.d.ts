@@ -14,6 +14,7 @@ declare module 'vue' {
     BlogSidebar: typeof import('D:/Project/chengpeiquan.com/src/components/blog/Sidebar.vue')['default']
     CategoryTabs: typeof import('D:/Project/chengpeiquan.com/src/components/CategoryTabs.vue')['default']
     ChildrenList: typeof import('D:/Project/chengpeiquan.com/src/components/ChildrenList.vue')['default']
+    Cite: typeof import('D:/Project/chengpeiquan.com/src/components/Cite.vue')['default']
     CookbookArticle: typeof import('D:/Project/chengpeiquan.com/src/components/cookbook/Article.vue')['default']
     CookbookList: typeof import('D:/Project/chengpeiquan.com/src/components/cookbook/List.vue')['default']
     CookbookSidebar: typeof import('D:/Project/chengpeiquan.com/src/components/cookbook/Sidebar.vue')['default']
