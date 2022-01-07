@@ -8,6 +8,7 @@ categories:
   - thrift
 duration: 3
 price: 2.9
+xiaohongshuId: 61c47e24000000000102493a
 ---
 
 [[toc]]

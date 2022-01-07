@@ -28,6 +28,7 @@ declare module 'vue' {
     Page: typeof import('D:/Project/chengpeiquan.com/src/components/Page.vue')['default']
     Pagination: typeof import('D:/Project/chengpeiquan.com/src/components/Pagination.vue')['default']
     'Ri:listCheck2': typeof import('virtual:vite-icons/ri/list-check2')['default']
+    RiBook3Line: typeof import('virtual:vite-icons/ri/book3-line')['default']
     RiCloseFill: typeof import('virtual:vite-icons/ri/close-fill')['default']
     RiEnglishInput: typeof import('virtual:vite-icons/ri/english-input')['default']
     RiFireFill: typeof import('virtual:vite-icons/ri/fire-fill')['default']
@@ -47,4 +48,4 @@ declare module 'vue' {
   }
 }
 
-export { }
+export {}
