@@ -21,24 +21,41 @@ price: 8.7
 ![成品图：酸梅酱烤巴沙鱼柳](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235259.jpg)
 
 ## 主要食材
+
 1、巴沙鱼柳，1条，美团买菜今天打折买的，8.7元
+
 2、葱1颗
+
 3、姜1小块
 
-
 ## 调味料
+
 1、生抽0.5勺,千万不要太多，鱼很容易入味
+
 2、料酒0.3勺，因为葱姜不少，所以料酒一点点就可以
+
 3、花椒粉
+
 4、黑椒粉
 
 
---- 备料 ---
+## 备料过程
+
 1、鱼柳买来是冷冻的，解冻，然后洗干净，根据你的锅的大小切合适的小块，不要太小，不然收缩会很严重
+
+![整条鱼柳](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235252.jpg)
+
 2、葱和姜都切丝
+
+![姜葱切丝](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235253.jpg)
+
 3、把鱼柳和葱丝、姜丝，还有生抽料酒都到在一起
+
 4、花椒粉和黑椒粉撒上薄薄一层就够
+
 抓匀，放在三只猫看不到的地方，腌制10分钟。
+
+
 
 
 --- 烤鱼 ---
@@ -53,8 +70,6 @@ price: 8.7
 
 至于酸梅酱怎么来的……上次点烧鸭外卖的时候，给多了，我就留下来做菜了2333
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235252.jpg)
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235253.jpg)
 ![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235254.jpg)
 ![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235255.jpg)
 ![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235256.jpg)
