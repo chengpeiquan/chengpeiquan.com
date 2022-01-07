@@ -55,24 +55,30 @@ price: 8.7
 
 抓匀，放在三只猫看不到的地方，腌制10分钟。
 
+![放在三只猫看不到的地方](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235254.jpg)
 
+## 烤鱼过程
 
-
---- 烤鱼 ---
 1、锡纸一小张，半包，所以面积足够铺底就可以
+
 2、葱丝姜丝先抓进去铺在底部
+
 3、鱼柳放上去摆好，有多余的料汁也淋上去
+
+![放进去烤之前](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235255.jpg)
+
 4、空气炸锅200度恒温，烤18分钟
 
+![烤好之后的样子](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235256.jpg)
 
 因为巴沙鱼很软，取出来的时候，可以用饭勺之类的面积大又不锐利的厨具去辅助拿出来，哈哈哈哈然后再拼回去就又是一整条鱼柳了。
+
+![用饭勺辅助](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235257.jpg)
+
+![拼回去哈哈哈哈](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235258.jpg)
+
 最后，淋上酸梅酱，好吃！！！
 
-至于酸梅酱怎么来的……上次点烧鸭外卖的时候，给多了，我就留下来做菜了2333
+![淋上酸梅酱的成品](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235300.jpg)
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235254.jpg)
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235255.jpg)
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235256.jpg)
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235257.jpg)
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235258.jpg)
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235300.jpg)
+至于酸梅酱怎么来的……上次点烧鸭外卖的时候，给多了，我就留下来做菜了2333
