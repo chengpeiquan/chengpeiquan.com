@@ -12,33 +12,46 @@ price: 8.7
 
 [[toc]]
 
-明天的午餐带饭有昨晚留下的半截肉卷，今晚想着就不买肉了，冰箱里的小半把芥兰，搭配一下家里也有的肉皮一起炒个菜。
+今天只上了半天班就被赶回来了，因为深圳出了2例，被要求大家都在家办公，并且要提供3天内至少2次核酸证明，虽然南山离那边好远好远，但还是能理解，这个时候真的不要太轻视疫情了！
 
-哈哈哈因为是昨晚想到的做法，所以提前做了准备，昨晚是提前用热水泡软了肉皮先挤掉油脂，然后又重新泡了一次热水，一直泡到今晚，所以虽然没有焖的环节，但肉皮依然够软！
+然后我中午就去测了核酸才回家了，刚才结果出来了，阴性（必须的啊），明天下午再去测一次，看朋友圈都是好长的队伍，还好我这边今天中午是没什么人，半小时就搞定了！
 
-![成品图：肉皮炒芥兰](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/12/20211225010032.jpg)
+今晚烤了个鱼柳吃，简单方便又好吃！
+
+![成品图：酸梅酱烤巴沙鱼柳](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235259.jpg)
 
 ## 主要食材
+1、巴沙鱼柳，1条，美团买菜今天打折买的，8.7元
+2、葱1颗
+3、姜1小块
 
-1、肉皮（油炸的猪皮制作的食材），大约 1.5 元
-
-2、芥兰小半把，大约 1.4 元
 
 ## 调味料
+1、生抽0.5勺,千万不要太多，鱼很容易入味
+2、料酒0.3勺，因为葱姜不少，所以料酒一点点就可以
+3、花椒粉
+4、黑椒粉
 
-调味方面我用了鱼露，液体的调味料，一勺鱼露搭配两勺开水先兑匀备用。
 
-![准备好的食材](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/12/20211225010029.jpg)
+--- 备料 ---
+1、鱼柳买来是冷冻的，解冻，然后洗干净，根据你的锅的大小切合适的小块，不要太小，不然收缩会很严重
+2、葱和姜都切丝
+3、把鱼柳和葱丝、姜丝，还有生抽料酒都到在一起
+4、花椒粉和黑椒粉撒上薄薄一层就够
+抓匀，放在三只猫看不到的地方，腌制10分钟。
 
-## 烹饪过程
 
-肉皮是油炸好的猪皮，本身也是熟的干货，所以可以先炒芥兰，快熟了就把肉皮倒进去一起炒一会，淋上鱼露汁，翻炒均匀就可以出炉了！
+--- 烤鱼 ---
+1、锡纸一小张，半包，所以面积足够铺底就可以
+2、葱丝姜丝先抓进去铺在底部
+3、鱼柳放上去摆好，有多余的料汁也淋上去
+4、空气炸锅200度恒温，烤18分钟
 
-![简单的过程](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/12/20211225010030.jpg)
 
-![出炉照](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/12/20211225010031.jpg)
+因为巴沙鱼很软，取出来的时候，可以用饭勺之类的面积大又不锐利的厨具去辅助拿出来，哈哈哈哈然后再拼回去就又是一整条鱼柳了。
+最后，淋上酸梅酱，好吃！！！
 
-偶尔换一下食材搭配感觉也会很不一样哈哈哈！
+至于酸梅酱怎么来的……上次点烧鸭外卖的时候，给多了，我就留下来做菜了2333
 
 ![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235252.jpg)
 ![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235253.jpg)
@@ -47,5 +60,4 @@ price: 8.7
 ![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235256.jpg)
 ![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235257.jpg)
 ![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235258.jpg)
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235259.jpg)
 ![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235300.jpg)
