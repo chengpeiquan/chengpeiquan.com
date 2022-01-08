@@ -5,7 +5,7 @@
       cite
       block
       md:w-140
-      w-70
+      w-full
       bg-gray-50
       dark:bg-opacity-5
       md:p-4
@@ -27,8 +27,13 @@
     <!-- 封面 -->
 
     <!-- 标题 -->
-    <div class="w-full md:text-base text-sm line-clamp-2" v-if="title">
-      {{ title }}
+    <div class="flex justify-between items-center w-full" v-if="title">
+      <div class="flex flex-1 overflow-hidden">
+        <span class="md:text-base text-sm truncate">{{ title }}</span>
+      </div>
+      <div class="flex flex-shrink-0 bg-pink-600 rounded px-2 py-1 ml-2">
+        <span class="md:text-sm text-xs text-white">点击查看</span>
+      </div>
     </div>
     <!-- 标题 -->
   </router-link>
