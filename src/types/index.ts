@@ -21,6 +21,7 @@ export interface Frontmatter {
   categories?: string[]
   isHot?: boolean
   repo?: string
+  xiaohongshuId?: string
 }
 
 /**

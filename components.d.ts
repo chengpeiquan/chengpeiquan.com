@@ -14,6 +14,7 @@ declare module 'vue' {
     BlogSidebar: typeof import('D:/Project/chengpeiquan.com/src/components/blog/Sidebar.vue')['default']
     CategoryTabs: typeof import('D:/Project/chengpeiquan.com/src/components/CategoryTabs.vue')['default']
     ChildrenList: typeof import('D:/Project/chengpeiquan.com/src/components/ChildrenList.vue')['default']
+    Cite: typeof import('D:/Project/chengpeiquan.com/src/components/Cite.vue')['default']
     CookbookArticle: typeof import('D:/Project/chengpeiquan.com/src/components/cookbook/Article.vue')['default']
     CookbookList: typeof import('D:/Project/chengpeiquan.com/src/components/cookbook/List.vue')['default']
     CookbookSidebar: typeof import('D:/Project/chengpeiquan.com/src/components/cookbook/Sidebar.vue')['default']
@@ -28,6 +29,7 @@ declare module 'vue' {
     Page: typeof import('D:/Project/chengpeiquan.com/src/components/Page.vue')['default']
     Pagination: typeof import('D:/Project/chengpeiquan.com/src/components/Pagination.vue')['default']
     'Ri:listCheck2': typeof import('virtual:vite-icons/ri/list-check2')['default']
+    RiBook3Line: typeof import('virtual:vite-icons/ri/book3-line')['default']
     RiCloseFill: typeof import('virtual:vite-icons/ri/close-fill')['default']
     RiEnglishInput: typeof import('virtual:vite-icons/ri/english-input')['default']
     RiFireFill: typeof import('virtual:vite-icons/ri/fire-fill')['default']
@@ -47,4 +49,4 @@ declare module 'vue' {
   }
 }
 
-export { }
+export {}
