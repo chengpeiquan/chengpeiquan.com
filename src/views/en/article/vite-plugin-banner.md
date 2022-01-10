@@ -19,17 +19,30 @@ It follows Vite's plugin [development specifications](https://vitejs.dev/guide/a
 
 Adds a banner to the top of each generated chunk.
 
-## Usage
-
 > ℹ️ **Only support for Vite 2.**
 
-### Install
+## Install
 
-Install the package from npm (or yarn).
+Install the package from npm (or yarn, or pnpm).
 
 ```bash
 npm install --save-dev vite-plugin-banner
 ```
+
+## Options
+
+Since `v0.2.0`, This plugin support a `String` or an `Object` to be the plugin options.
+
+Plugin Options Type|Description|Example
+:--|:--|:--
+string|The banner content|[Basic usage](#basic-usage)
+{ outDir: string; content: string }|content: The comment content of the banner<br>outDir: The output directory from vite|[Optional parameter format](#optional-parameter-format)
+
+## Usage
+
+In most cases, just use the `String` format as a plugin option.
+
+In some special cases, such as in [VitePress](https://vitepress.vuejs.org/), you need to use `Object` format to pass in plugin options, see [Optional parameter format](#optional-parameter-format).
 
 ### Basic usage
 
@@ -37,11 +50,13 @@ Add it to `vite.config.ts`
 
 ```ts
 // vite.config.ts
-import Banner from 'vite-plugin-banner'
+import banner from 'vite-plugin-banner'
 // Other dependencies...
 
 export default defineConfig({
-  plugins: [Banner('This is the Banner content.')],
+  plugins: [
+    banner('This is the banner content.'),
+  ]
 })
 ```
 
@@ -50,7 +65,7 @@ When you run `npm run build` on your project, In the `dist` folder(Or the [build
 e.g. in `app.b3a7772e.js`:
 
 ```js
-/* This is the Banner content. */
+/* This is the banner content. */
 var e=Object.assign;import{M as t,d as a,u as r,c......
 ```
 
@@ -61,7 +76,6 @@ Of course, the most ideal banner is related to your package information.
 First, You need to update your `package.json` like this, For example, it contains such field content:
 
 ```json
-// package.json
 {
   "name": "chengpeiquan.com",
   "version": "0.1.0",
@@ -80,10 +94,8 @@ import pkg from './package.json'
 
 export default defineConfig({
   plugins: [
-    Banner(
-      `/**\n * name: ${pkg.name}\n * version: v${pkg.version}\n * description: ${pkg.description}\n * author: ${pkg.author}\n * homepage: ${pkg.homepage}\n */`
-    ),
-  ],
+    banner(`/**\n * name: ${pkg.name}\n * version: v${pkg.version}\n * description: ${pkg.description}\n * author: ${pkg.author}\n * homepage: ${pkg.homepage}\n */`),
+  ]
 })
 ```
 
@@ -116,7 +128,7 @@ Such as:
 // vite.config.ts
 export default defineConfig({
   plugins: [
-    Banner(`
+    banner(`
     ██   ██         ███████   ██      ██ ████████   ██    ██   ███████   ██     ██
     ░██  ░██        ██░░░░░██ ░██     ░██░██░░░░░   ░░██  ██   ██░░░░░██ ░██    ░██
     ░██  ░██       ██     ░░██░██     ░██░██         ░░████   ██     ░░██░██    ░██
@@ -125,26 +137,60 @@ export default defineConfig({
     ░██  ░██      ░░██     ██   ░░████   ░██           ░██   ░░██     ██ ░██    ░██
     ░██  ░████████ ░░███████     ░░██    ░████████     ░██    ░░███████  ░░███████ 
     ░░   ░░░░░░░░   ░░░░░░░       ░░     ░░░░░░░░      ░░      ░░░░░░░    ░░░░░░░  
-    `),
-  ],
+    `)
+  ]
 })
 ```
 
-Run `npm run build`, e.g. in `app.d9a287b8.js`:
+Run `npm run build`,  e.g. in `app.d9a287b8.js`:
 
 ```js
-/*
+/* 
     ██   ██         ███████   ██      ██ ████████   ██    ██   ███████   ██     ██
     ░██  ░██        ██░░░░░██ ░██     ░██░██░░░░░   ░░██  ██   ██░░░░░██ ░██    ░██
     ░██  ░██       ██     ░░██░██     ░██░██         ░░████   ██     ░░██░██    ░██
     ░██  ░██      ░██      ░██░░██    ██ ░███████     ░░██   ░██      ░██░██    ░██
     ░██  ░██      ░██      ░██ ░░██  ██  ░██░░░░       ░██   ░██      ░██░██    ░██
     ░██  ░██      ░░██     ██   ░░████   ░██           ░██   ░░██     ██ ░██    ░██
-    ░██  ░████████ ░░███████     ░░██    ░████████     ░██    ░░███████  ░░███████
-    ░░   ░░░░░░░░   ░░░░░░░       ░░     ░░░░░░░░      ░░      ░░░░░░░    ░░░░░░░
+    ░██  ░████████ ░░███████     ░░██    ░████████     ░██    ░░███████  ░░███████ 
+    ░░   ░░░░░░░░   ░░░░░░░       ░░     ░░░░░░░░      ░░      ░░░░░░░    ░░░░░░░  
      */
 var e=Object.assign;import{M as t,d as a,u as r,c......
 ```
+
+### Optional parameter format
+
+I'm not sure what other scenarios besides VitePress need to use this method to pass in options, so I use VitePress as an example, I hope it can give you a reference
+
+```ts
+// docs/.vitepress/config.ts
+import { defineConfig } from 'vitepress'
+import banner from 'vite-plugin-banner'
+import pkg from '../../package.json'
+
+const outDir = '../dist'
+
+export default defineConfig({
+  // Specify the output directory for packaging
+  outDir,
+
+  // Use Vite plugins
+  vite: {
+    plugins: [
+      // Please remember to use the options in Object format here
+      banner({
+        outDir,
+        content: `/**\n * name: ${pkg.name}\n * version: v${pkg.version}\n * description: ${pkg.description}\n * author: ${pkg.author}\n * homepage: ${pkg.homepage}\n */`,
+      }),
+    ],
+  },
+  // ...
+})
+```
+
+Why do it?
+
+Because in VitePress, what you get through `viteConfig.build.outDir` is always a `.temp` temporary directory, not the final output directory, so you need to manually specify the output directory to inform the plugin
 
 ## License
 
