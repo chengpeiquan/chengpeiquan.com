@@ -1,7 +1,7 @@
 ---
 title: 省钱菜谱：3.7元的韭菜花炒肉卷（3min）
 desc: 今晚难得在菜市场看到有肉卷卖，对于下班回家买菜这个时间点，遇到肉卷真不容易啊。肉卷是潮汕一种美食，是猪肉的一种加工品，很好吃！
-keywords: 潮汕美食,沙茶炒肉,沙茶酱
+keywords: 潮汕美食,韭菜花炒肉卷,韭菜花,肉卷
 date: 2021-12-16 23:26:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220114234142.jpg
 categories:
