@@ -7,6 +7,7 @@ cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220
 categories:
   - thrift
   - bento
+  - teochew
 duration: 3
 price: 4
 xiaohongshuId: 61e03a060000000001028edb
