@@ -11,6 +11,13 @@ export const categoryConfigList: CategoryConfigItem[] = [
     },
   },
   {
+    path: 'teochew',
+    text: {
+      zh: '潮州特色',
+      en: 'Teochew',
+    },
+  },
+  {
     path: 'bento',
     text: {
       zh: '上班带饭',

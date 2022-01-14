@@ -7,6 +7,7 @@ cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220
 categories:
   - thrift
   - staple
+  - teochew
 duration: 10
 price: 2.7
 xiaohongshuId: 6120fcd80000000001028170

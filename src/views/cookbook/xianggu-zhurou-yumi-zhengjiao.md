@@ -8,6 +8,7 @@ categories:
   - thrift
   - bento
   - staple
+  - teochew
 duration: 30
 price: 0.57
 xiaohongshuId: 61bf2e4e000000002103470d
