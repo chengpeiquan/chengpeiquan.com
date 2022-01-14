@@ -6,7 +6,6 @@ date: 2021-12-16 23:26:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220114235441.jpg
 categories:
   - thrift
-  - bento
   - teochew
 duration: 120
 price: 0.8
@@ -27,11 +26,14 @@ xiaohongshuId: 61ab5ad000000000010296c8
 
 ## 煮粥过程
 
-出门前先定时煲粥（因为有糯米和豆子啥的，我的隔水炖煲粥开了2小时，平时白粥1小时不到就可以了），回来就有暖暖的八宝粥喝，呜呜呜真舒服！！！
+出门前先定时煲粥（因为有糯米和豆子啥的，我的隔水炖煲粥开了 2 小时，平时白粥 1 小时不到就可以了），回来就有暖暖的八宝粥喝，呜呜呜真舒服！！！
 
 ## 成品图
 
-今晚这点材料大概2.5元，盛了有三碗粥，调味的话我是加了冰糖在碗里再盛粥，这样调味比较好控制！
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220114235443.jpg)
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220114235444.jpg)
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220114235445.jpg)
+今晚这点材料大概 2.5 元，盛了有三碗粥，调味的话我是加了冰糖在碗里再盛粥，这样调味比较好控制！
+
+![好浓稠](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220114235445.jpg)
+
+![好暖和](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220114235443.jpg)
+
+![好好喝](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220114235444.jpg)
