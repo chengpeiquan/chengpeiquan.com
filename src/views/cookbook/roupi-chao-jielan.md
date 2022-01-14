@@ -6,6 +6,7 @@ date: 2021-12-23 21:48:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/12/20211225001910.jpg
 categories:
   - thrift
+  - teochew
 duration: 3
 price: 2.9
 xiaohongshuId: 61c47e24000000000102493a
