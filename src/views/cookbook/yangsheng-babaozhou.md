@@ -17,7 +17,13 @@ xiaohongshuId: 61ab5ad000000000010296c8
 
 因为打算下午爬山的时候挑战一下另外一条比较陡峭的小路，担心回来没精力做饭，刚好家里有糯米，早上出去超市顺便买了点配好的杂粮（有黑米、紫薯干、红扁豆挺多料），再搭配点花生，一起浸泡了有两个小时。
 
+![成品图：养生八宝粥](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220114235442.jpg)
+
 ## 备料过程
+
+准备好的这些料。
+
+![准备好的这些料](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220114235446.jpg)
 
 ## 煮粥过程
 
@@ -26,9 +32,6 @@ xiaohongshuId: 61ab5ad000000000010296c8
 ## 成品图
 
 今晚这点材料大概2.5元，盛了有三碗粥，调味的话我是加了冰糖在碗里再盛粥，这样调味比较好控制！
-
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220114235442.jpg)
 ![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220114235443.jpg)
 ![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220114235444.jpg)
 ![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220114235445.jpg)
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220114235446.jpg)
