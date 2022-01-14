@@ -15,7 +15,7 @@ xiaohongshuId: 61ab5ad000000000010296c8
 
 [[toc]]
 
-今晚煮了个养生八宝粥
+今天好冷啊，今晚煮了个养生八宝粥，好暖和！
 
 ![成品图：养生八宝粥](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220114235442.jpg)
 
