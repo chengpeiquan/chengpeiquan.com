@@ -3,7 +3,7 @@ title: 省钱菜谱：4.4元的土豆烤脆皮鸡腿扒（20min）
 desc: 告诉大家一个好消息，我终于快忙完了！赶开发了一个多月，项目终于要上线，这周末我要休个年假回家几天，然后接下来又可以跟大家一起天天做饭了！（希望不要又来一波赶项目……
 keywords: 烤鸡,脆皮鸡,土豆烤鸡,脆皮烤鸡,鸡腿扒
 date: 2021-12-04 20:10:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220115000525.jpg
+cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220115001907.jpg
 categories:
   - thrift
   - bento
@@ -21,7 +21,7 @@ xiaohongshuId: 61ae2f55000000000102d110
 
 哈哈哈哈哈说回今晚的烤鸡了！！！
 
-![成品图：土豆烤脆皮鸡腿扒](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220115001301.jpg)
+![成品图：土豆烤脆皮鸡腿扒](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220115001303.jpg)
 
 ## 主要食材
 
@@ -57,7 +57,7 @@ xiaohongshuId: 61ae2f55000000000102d110
 
 啧啧啧，超级赞！真·脆皮烤鸡！！！土豆带了鸡汁还有调料汁的味道，比我前天发的黑椒烤土豆粒更好吃！
 
-![好香啊！](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220115001303.jpg)
+![好香啊！](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220115001301.jpg)
 
 ![这个脆皮，爱了爱了！](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220115001302.jpg)
 
