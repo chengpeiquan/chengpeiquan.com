@@ -122,7 +122,7 @@ import type { ArticleItem, CategoryItem } from '@/types'
 const { getCategoryList, getArticleList } = useList('cookbook')
 const { page, pageSize, lastPage, total, openPage } = usePagination({
   pageType: 'cookbook',
-  pageSize: 12,
+  pageSize: 15,
 })
 
 // 获取语言
