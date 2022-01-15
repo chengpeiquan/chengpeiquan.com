@@ -17,13 +17,9 @@ xiaohongshuId: 61e234e9000000000102d232
 
 今天起床的时候看到8点54分，心里一惊！内心第一反应是完了，长这么大第一次要旷工，然后瞬间想起周六啊！！！被自己笑死！
 
-·
-
 9点左右这个点起床还是凉嗖嗖的，在阳台听到楼下通知测核酸，洗漱完煮个面暖和暖和，等会排队也不太冷！
 
-·
-
-·
+![成品图：清汤面](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220116000010.jpg)
 
 ## 主要食材
 
@@ -41,12 +37,9 @@ xiaohongshuId: 61e234e9000000000102d232
 
 6、胡椒粉
 
-·
-
-·
 ## 准备过程
 
-0、先用电热壶煮一壶热水
+先用电热壶煮一壶热水备用。
 
 1、葱洗净，切葱花
 
@@ -56,9 +49,9 @@ xiaohongshuId: 61e234e9000000000102d232
 
 这个时候水不用很多，等面条加到碗里你再看实际上需要多少汤，再补充热水进来拌匀。
 
-·
+![准备好的碗底](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220116000015.jpg)
 
-·
+![兑好的汤底](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220116000014.jpg)
 
 ## 煮面过程
 
@@ -66,9 +59,7 @@ xiaohongshuId: 61e234e9000000000102d232
 
 煮面过程就简简单单了，煮好了用笊篱捞干出来，把面放碗里。
 
-·
-
-·
+![捞出来](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220116000013.jpg)
 
 ## 准备上桌
 
@@ -80,17 +71,13 @@ xiaohongshuId: 61e234e9000000000102d232
 
 4、加上一小勺蒜头油
 
-·
+![搞定了！](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220116000011.jpg)
 
-·
+![热乎乎好暖和](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220116000012.jpg)
+
+![好好吃](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220116000009.jpg)
+
+![全吃完啦](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220116000008.jpg)
 
 吃完面喝完汤超暖和！哈哈哈哈我下楼去排队了！
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220116000008.jpg)
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220116000009.jpg)
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220116000010.jpg)
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220116000011.jpg)
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220116000012.jpg)
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220116000013.jpg)
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220116000014.jpg)
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220116000015.jpg)
