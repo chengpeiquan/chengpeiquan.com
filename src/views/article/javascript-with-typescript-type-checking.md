@@ -112,6 +112,12 @@ const greet = (name) => `Hello, ${name}!`
 
 ![VSCode 提示](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/11/20220119153103.jpg)
 
+如果你不按照要求传入对应的数据类型， ESLint 会给你提示报错，太爽了！！！
+
+![哈哈哈哈报错了！](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/11/20220119155720.jpg)
+
+联合类型也是可以写在里面，还有像数组、对象的格式也支持。
+
 ```js
 /**
  * 打个招呼
@@ -123,12 +129,6 @@ const greet = (name) => `Hello, ${name}!`
  */
 const greet = ({ action, name }) => `${action}, ${name}!`
 ```
-
-如果你不按照要求传入对应的数据类型， ESLint 会给你提示报错，太爽了！！！
-
-![哈哈哈哈报错了！](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/11/20220119155720.jpg)
-
-联合类型也是可以写在里面，还有像数组、对象的格式也支持。
 
 ![对象的注释也可以清晰提示](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/11/20220119153658.jpg)
 
