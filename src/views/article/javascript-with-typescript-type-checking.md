@@ -61,6 +61,39 @@ module.exports = {
 }
 ```
 
+## 开启检查
+
+要在 JavaScript 文件中开启检查，需要在 JS 文件最前面打上一句注释，这样就会以 TS 的标准来检查你的 JS 代码。
+
+```js
+// @ts-check
+
+const foo = () => {
+  // ...
+}
+```
+
+虽然就一句注释，但非常关键，如果缺少，后面的检查都不会生效。
+
+## 忽略检查
+
+如果有一些地方确实可以忽略检查的，可以通过 `ignore` 注释语句来跳过检查。
+
+```js
+// @ts-check
+
+// @ts-ignore
+const foo = () => {
+  // ...
+}
+```
+
+## 检查配置
+
+采用这种方式的检查机制，你可以参考 `tsconfig.json` 的配置，在你的项目根目录下创建一个 `jsconfig.json` 去管理的检查配置。
+
+可以在 TS 官网查看如何配置：[What is a tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) 。
+
 ## 定义类型
 
 简单的类型定义可以通过普通注释实现：
@@ -90,6 +123,12 @@ const greet = (name) => `Hello, ${name}!`
  */
 const greet = ({ action, name }) => `${action}, ${name}!`
 ```
+
+如果你不按照要求传入对应的数据类型， ESLint 会给你提示报错，太爽了！！！
+
+![哈哈哈哈报错了！](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/11/20220119155720.jpg)
+
+联合类型也是可以写在里面，还有像数组、对象的格式也支持。
 
 ![对象的注释也可以清晰提示](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/11/20220119153658.jpg)
 
