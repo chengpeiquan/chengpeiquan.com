@@ -1,5 +1,5 @@
 <template>
-  <div class="w-48" v-if="isShowTOC">
+  <div class="w-48 xl:block hidden" v-if="isShowTOC">
     <div class="sticky top-16 w-full">
       <!-- 模块标题 -->
       <div
