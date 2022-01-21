@@ -1,5 +1,5 @@
 ---
-title: TSC编译时指定生成d.ts的目录 并解决无法导入package.json的问题
+title: TSC编译时指定生成d.ts的目录 并解决无法导入package.json和alias别名的问题
 desc: 虽然之前在构建 JS Library 的时候，也是有生成 `d.ts` 文件在输出目录，但总归比较凌乱，意思就是构建出来的 JS Library 和 DTS 文件都在同一级文件夹里。不是说不能用吧，总归看起来有点 low ，如果是单个 DTS 文件还好，但有时候构建出来会有好几个 DTS 这种情况下都放在一起总觉得有点别扭，所以今天想看一下能不能更优雅一点，存档在 types 文件夹里。
 keywords: javascript type,js type,javascript with typescript
 date: 2022-01-21 12:22:00
@@ -107,10 +107,38 @@ declare module '*.json'
 
 e.g. [dts-generator](https://github.com/SitePen/dts-generator)
 
-这样构建出来的 DTS 文件只有一个，比如 `dist/types/index.d.ts` ，不过目前初步尝试是发现不支持 `alias` 别名（比如源码里通过 `@/types` 来代替 `src/types` 或者 `../../types` ），所以可能需要结合实际情况考虑一下是否要这么做。
+这样构建出来的 DTS 文件只有一个，比如 `dist/types/index.d.ts` 。
+
+## 处理别名
+
+到目前，如果你只是简单的项目结构，都是通过 `../foo/bar` 的相对路径来引入的话，没有什么问题。
+
+但如果你跟我一样用了 `alias` 别名，会发现生成的 DTS 文件并不支持 `alias` （比如源码里通过 `@foo/bar` 来代替 `src/foo/bar` 或者 `../../foo/bar` ）。
+
+这个也是要借助外部插件来实现转换，这里测试了几款外部工具，最有效的是 [tscpaths](https://github.com/joonhocho/tscpaths) 。
+
+需要明确的是，它本身不支持编译生成 DTS 文件，而是在 TSC 编译时，根据 `tsconfig.json` 的 `paths` 配置，将 TypeScript 编译出来的 DTS 文件里的绝对路径替换为相对路径。
+
+```bash
+pnpm add -D tscpaths
+```
+
+然后在你的 `package.json` 的 `build` 命令里面，将它补充在 tsc 命令后面，比如：
+
+```json
+{
+  "scripts": {
+    "build": "tsc && tscpaths -p tsconfig.json -s ./src -o ./dist/types && vite build"
+  }
+}
+```
+
+这样 DTS 里的路径就不再是 `@foo/bar` 了，而是根据目录层级自动转换成 `../../foo/bar` 这样的相对路径。
 
 ## 参考资料
 
 ['package.json' is not under 'rootDir' - StackOverflow](https://stackoverflow.com/questions/55753163/package-json-is-not-under-rootdir/61426303#61426303)
 
 [Export single .d.ts from several typescript files + entrypoint - StackOverflow](https://stackoverflow.com/questions/39722682/export-single-d-ts-from-several-typescript-files-entrypoint)
+
+[tsc - doesn't compile alias paths - StackOverflow](https://stackoverflow.com/questions/59179787/tsc-doesnt-compile-alias-paths#comment112917582_59386941)
