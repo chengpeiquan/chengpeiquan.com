@@ -59,7 +59,8 @@
           class="
             flex flex-shrink-0
             w-full
-            md:h-59
+            xl:h-40
+            2xl:h-59
             h-auto
             overflow-hidden
             mb-2
