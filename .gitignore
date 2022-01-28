@@ -4,3 +4,4 @@ dist
 dist-ssr
 *.local
 .vite-ssg-temp
+components.d.ts

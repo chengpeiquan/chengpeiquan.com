@@ -7,6 +7,7 @@ cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220
 categories:
   - thrift
   - teochew
+  - orthodontic
 duration: 120
 price: 0.8
 xiaohongshuId: 61ab5ad000000000010296c8
