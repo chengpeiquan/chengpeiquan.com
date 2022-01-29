@@ -136,6 +136,18 @@ Navigator.pushNamed(context, 'list');
 
 点击阅读：[路由管理](https://book.flutterchina.club/chapter2/flutter_router.html#_2-4-1-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%A4%BA%E4%BE%8B) 这一章。
 
+## 设计风格对比
+
+在 Flutter 有两类主流的设计风格： Material 和 Cupertino 。
+
+[Material widgets](https://api.flutter.dev/flutter/material/material-library.html) 实现了 iOS，Android 和 web 三端的 Material 设计风格。
+
+[Cupertino widgets](https://api.flutter.dev/flutter/cupertino/cupertino-library.html) 基于 Apple Human Interface Guidelines 实现了当前的 iOS 设计风格。
+
+一般情况下都是默认采用 Android 的 Material 风格， DEMO 也是这样，不知道实际开发的时候会不会用 Cupertino 还是其他，有待实践。
+
+有一篇文章做了一些选择方面的介绍： [Material 還是 Cupertino？](https://kendevlog.wordpress.com/2020/11/04/flutter_mat_vs_cup/)
+
 ## 部件速记对比
 
 都说写前端的人比较容易上手 Dart 和 Flutter ，感觉虽然确实没有那么难入门，不过一开始也会觉得一头雾水，这里放一些标签对比，在实现功能的时候可以快速找到应该用什么部件：
@@ -154,6 +166,16 @@ img|Image
 :-:|:-
 StatelessWidget|无状态变更，UI静态固化的Widget， 页面渲染性能更高。
 StatefulWidget|因状态变更可以导致UI变更的的Widget，涉及到数据渲染场景，都使用StatefulWidget。
+
+## 运算符
+
+虽然 Dart 的运算符和 TypeScript / JavaScript 大同小异，但还是有些不太一样，比如…
+
+```bash
+The '===' operator is not supported.dart(unsupported_operator)
+```
+
+建议看一遍：[Dart 运算符、流程控制](https://juejin.cn/post/6844903983882960909)
 
 ## 常见问题
 
@@ -174,6 +196,40 @@ Flutter 开发需要有 Android Studio 环境，但是安装了 Android SDK 后�
 暂时无解，折腾了 2 个上午都没搞明白怎么弄，可能公司电脑的问题，等回家再试试。
 
 ![报错界面](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220129104628.jpg)
+
+### GlobalKey 报错
+
+在调整路由结构的时候，遇到一个 GlobalKey 的报错如下：
+
+```bash
+A GlobalKey was used multiple times inside one widge's child list…
+```
+
+一开始是把所有路由都挂到了命令路由里去了，包括 `home` ，所以首页就崩溃了。
+
+```dart
+MaterialApp(
+  title: 'Flutter Demo',
+  theme: ThemeData(primarySwatch: Colors.blueGrey),
+  darkTheme: ThemeData(primarySwatch: black),
+  routes: routes,
+);
+```
+
+然后把首页配置回来才可以，看来首页还是要独立抽离一个配置。
+
+```diff
+MaterialApp(
+  title: 'Flutter Demo',
+  theme: ThemeData(primarySwatch: Colors.blueGrey),
+  darkTheme: ThemeData(primarySwatch: black),
+  routes: routes,
++  home: const HomePage(
++    title: '程沛权',
++    avatar: 'https://avatars.githubusercontent.com/u/24845958?v=4',
++  ),
+);
+```
 
 ### 自定义 Widget
 
@@ -318,3 +374,57 @@ Image.network(
 ```
 
 关于图片的更多说明可以戳：[图片及ICON](https://book.flutterchina.club/chapter3/img_and_icon.html#_3-3-%E5%9B%BE%E7%89%87%E5%8F%8Aicon)
+
+### 设置圆角
+
+这个一定要点名！笑死，一个设置圆角的问题被浏览了 20 多万次…
+
+![209k 的浏览量…](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220129164221.jpg)
+
+具体戳：[Add border to a Container with borderRadius in Flutter](https://stackoverflow.com/questions/58350235/add-border-to-a-container-with-borderradius-in-flutter)
+
+### 静态资源
+
+Flutter 也有类似于 Vue 的 public 文件夹，存放一些静态资源，但是这里的路径有个坑，反复查了很多遍文档都没有说引入的时候文件是要放在哪里，从哪里引入（ Vue 就有明确的说明 public 下的资源是从根目录读取），所以花了很多时间在调试路径的问题。
+
+不过还好机智的打印了一波路径和看请求，最终还是跑通了。
+
+首先需要去项目根目录下的 `pubspec.yaml` 文件里配置 `assets` 字段的数据：
+
+```yaml
+flutter:
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/mock/
+```
+
+这里的路径注意了！ `assets/mock/` 代表着我把 `mock` 文件夹放在了项目根目录下的 `assets` 文件夹里，为什么不是别的地方？
+
+因为经过不断打印错误的路径，发现 Flutter 的静态资源真的是从 `/assets/` 开始的，不是根目录，也不是基于当前文件去写相对地址。
+
+注释里的 `like this` 真的就是要跟他一样从 assets 开始配置，而不是 YAML 语法格式相同就好…也就是我这里的 JSON 文件的路径是类似：
+
+```bash
+http://localhost:52128/assets/mock/list.json
+```
+
+这样在 Dart 文件里就可以直接省略掉 assets 开头：
+
+```dart
+await DefaultAssetBundle.of(context).loadString('/mock/list.json');
+```
+
+否则你还要一直 `../` 之类的去写更复杂的相对路径。
+
+### 解析 JSON
+
+因为要 Mock 一些数据，所以写了几个 JSON 文件作为静态资产去导入，有几个需要注意的：
+
+```dart
+// 确保导入了这个库
+import 'dart:convert';
+```
+
+然后才可以使用 `jsonDecode()` 或者 `json.decode()` 去解析 JSON 内容。
+
+参考资料：[How to decode JSON in Flutter?](https://stackoverflow.com/questions/51601519/how-to-decode-json-in-flutter/51601542#51601542)
