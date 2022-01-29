@@ -22,6 +22,7 @@ export interface Frontmatter {
   isHot?: boolean
   repo?: string
   xiaohongshuId?: string
+  isDraft?: boolean
 }
 
 /**
@@ -60,14 +61,8 @@ export interface CategoryListInfo {
 /**
  * 文章的项目类型
  */
-export interface ArticleItem {
+export interface ArticleItem extends Frontmatter {
   path: string
-  title: string
-  desc: string
-  cover: string
-  date: string
-  isHot: boolean
-  repo: string
   diffDays: number
   dateAgo: string
 }

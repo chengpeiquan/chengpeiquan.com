@@ -6,6 +6,7 @@ date: 2022-01-27 16:02:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/11/20220127161927.jpg
 categories:
   - tech
+isDraft: true
 ---
 
 [[toc]]
@@ -167,6 +168,12 @@ Flutter 开发需要有 Android Studio 环境，但是安装了 Android SDK 后�
 3. 测试 `youtube.com`
 
 参考链接 [Unable to access Android SDK add-on list](https://stackoverflow.com/questions/28918069/unable-to-access-android-sdk-add-on-list)
+
+### 安卓模拟器报错
+
+暂时无解，折腾了 2 个上午都没搞明白怎么弄，可能公司电脑的问题，等回家再试试。
+
+![报错界面](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220129104628.jpg)
 
 ### 自定义 Widget
 
