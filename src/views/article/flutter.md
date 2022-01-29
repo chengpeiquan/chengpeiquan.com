@@ -385,7 +385,7 @@ Image.network(
 
 ### 静态资源
 
-Flutter 也有类似于 Vue 的 public 文件夹，存放一些静态资源，但是这里的路径有个坑，反复查了很多遍文档都没有说引入的时候文件是要放在哪里，从哪里引入（ Vue 就有明确的说明 public 下的资源是从根目录读取），所以花了很多时间在调试路径的问题。
+Flutter 也有类似于 Vue 的 public 文件夹，存放一些静态资源，但是这里的路径有个坑，反复查了很多遍 [Adding assets and images](https://docs.flutter.dev/development/ui/assets-and-images) 文档都没有说引入的时候文件是要放在哪里，从哪里引入（ Vue 就有明确的说明 public 下的资源是从根目录读取），所以花了很多时间在调试路径的问题。
 
 不过还好机智的打印了一波路径和看请求，最终还是跑通了。
 
@@ -411,10 +411,10 @@ http://localhost:52128/assets/mock/list.json
 这样在 Dart 文件里就可以直接省略掉 assets 开头：
 
 ```dart
-await DefaultAssetBundle.of(context).loadString('/mock/list.json');
+await DefaultAssetBundle.of(context).loadString('mock/list.json');
 ```
 
-否则你还要一直 `../` 之类的去写更复杂的相对路径。
+否则放别的地方你还要一直 `../` 之类的去写更复杂的相对路径。
 
 ### 解析 JSON
 
@@ -428,3 +428,15 @@ import 'dart:convert';
 然后才可以使用 `jsonDecode()` 或者 `json.decode()` 去解析 JSON 内容。
 
 参考资料：[How to decode JSON in Flutter?](https://stackoverflow.com/questions/51601519/how-to-decode-json-in-flutter/51601542#51601542)
+
+### 构建异步部件
+
+APP 肯定离不开网络请求，包括 Mock 的 JSON 数据，都是请求回来的，在这里折腾了很长时间才解决，倒不是文档看不懂，而是因为 VSCode 的 Dart 代码补全和类型补全帮我搞了几个麻烦的问题… 所以在没有绝对把握之前，还是先看文档，再去各种补全代码才是王道。
+
+直接贴上相关的文章吧。
+
+点击阅读：[Dart 的异步支持](https://book.flutterchina.club/chapter1/dart.html#_1-4-4-%E5%BC%82%E6%AD%A5%E6%94%AF%E6%8C%81)
+
+点击阅读：[Flutter 异步 UI 更新](https://book.flutterchina.club/chapter7/futurebuilder_and_streambuilder.html#_7-6-1-futurebuilder)
+
+点击阅读：[How to Build Widgets with an Async Method Call](https://flutterigniter.com/build-widget-with-async-method-call/)
