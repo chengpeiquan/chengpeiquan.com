@@ -231,6 +231,14 @@ MaterialApp(
 );
 ```
 
+### 打印 LOG
+
+类似于 `console.log` ， Dart 使用 `print` 来打印 LOG ，如果是在 Chrome 模拟器预览的话，按 F12 打开 Console 面板就可以看到 LOG 了。
+
+不过有个问题就是 VSCode 一直报一个很烦人的提示，查了一下原来是新版本的 Flutter 要求用 `debugPrint` 代替 `print` 了。
+
+点击查看：[Avoid `print` calls in production code. (Documentation)](https://stackoverflow.com/a/69531249/15117507)
+
 ### 自定义 Widget
 
 在 Flutter ， `widget` 类似于前端项目的 `component` ，在实现的时候目前探索是有两种方式可以写出来：
