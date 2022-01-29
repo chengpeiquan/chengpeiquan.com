@@ -138,17 +138,12 @@ export function useList(pageType: string) {
     const { dateDisplay } = useDate()
     const { path, meta } = route
     const { frontmatter } = meta as RouteMeta
-    const { title, desc, cover, date, isHot, repo } = frontmatter
+    const { date } = frontmatter
     const { diffDays, dateAgo } = dateDisplay(+new Date(String(date)))
 
     return {
+      ...frontmatter,
       path,
-      title,
-      desc,
-      cover,
-      date,
-      isHot: Boolean(isHot),
-      repo: repo || '',
       diffDays,
       dateAgo,
     }
