@@ -20,6 +20,15 @@ xiaohongshuId: 61f698f9000000000102e66e
 
 ![成品图：卤猪耳朵](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220130233625.jpg)
 
+## 相关菜谱
+
+完整的过程跟之前做卤水五花肉是一样的！！！
+
+<Cite
+  type="cookbook"
+  name="chaoshan-lushui-wuhuarou"
+/>
+
 ## 制作步骤
 
 ![好大一只猪耳朵](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220130233617.jpg)

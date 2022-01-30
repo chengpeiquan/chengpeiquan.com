@@ -29,7 +29,9 @@
     <!-- 标题 -->
     <div class="flex justify-between items-center w-full" v-if="title">
       <div class="flex flex-1 overflow-hidden">
-        <span class="md:text-base text-sm truncate">{{ title }}</span>
+        <span class="md:text-base text-sm truncate indent-0em">
+          {{ title }}
+        </span>
       </div>
       <div class="flex flex-shrink-0 bg-pink-600 rounded px-2 py-1 ml-2">
         <span class="md:text-sm text-xs text-white">点击查看</span>
