@@ -50,6 +50,15 @@ xiaohongshuId: 61b5c1cb00000000210399e6
 
 ![剥下来的蛋壳都没有特别碎的](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220201002316.jpg)
 
+## 相关教程
+
+完整的卤水教程可以看这个。
+
+<Cite
+  type="cookbook"
+  name="chaoshan-lushui-wuhuarou"
+/>
+
 ## 卤蛋过程
 
 卤蛋跟卤肉一起卤就好，不过不用很久，因为卤蛋主要靠浸泡入味。
