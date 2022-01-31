@@ -1,11 +1,13 @@
 ---
 title: 空气韭菜煎饺！空气炸锅的发明者真是现代爱迪生！
-desc: 是什么动力让我放假第一天早起？哈哈哈哈哈哈哈哈哈哈是为了跟大妈们抢猪耳朵，之前几个周末就想做卤猪耳了，结果每次去到都卖完了，一只猪就两只耳朵哈哈哈哈…
-keywords: 潮州,潮州卤水,潮汕卤水,卤猪耳朵,卤猪头肉
+desc: 昨天下午做了卤水，但是为了更入味所以昨晚没有立即吃，继续先卤着，然后昨晚又另外包了韭菜饺子，留了一盒今天晚上回来做煎饺。
+keywords: 潮州,潮州韭菜饺子,煎饺
 date: 2021-12-13 21:07:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220131234851.jpg
 categories:
+  - thrift
   - bento
+  - staple
   - teochew
 duration: 0
 price: 0
