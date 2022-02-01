@@ -84,7 +84,7 @@
           :title="item.title"
           :to="item.path"
         >
-          <h2 class="text-base line-clamp-2">
+          <h2 class="text-base line-clamp-2 break-all">
             {{ item.title }}
           </h2>
         </router-link>
