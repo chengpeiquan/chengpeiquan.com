@@ -1,57 +1,76 @@
 ---
-title: 超下饭的辣酱蘸酱！几块排骨吃了我两碗饭！
-desc: 今晚本来想包饺子，不过程序写的挺入神的不想起身做饭，所以炖了个花生莲藕排骨汤（炖汤不用人看着，方便！
-keywords: 辣椒酱,排骨酱,排骨蘸酱,饺子蘸酱
-date: 2022-02-01 23:40:00
+title: 潮汕特色调味品 葱珠朥做法
+desc: 今天又煮了粿汁，刚好葱珠朥要做新的了，单独记录一篇菜谱哈哈哈。
+keywords: 葱珠油,葱珠朥,潮汕调味品
+date: 2022-02-02 00:17:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220201234256.jpg
 categories:
   - teochew
   - condiment
 duration: 0
 price: 0
-xiaohongshuId: 61d1a2e5000000002103e669
+xiaohongshuId: 61f95d0c000000002103dc4c
 ---
 
 [[toc]]
 
-今晚本来想包饺子，不过程序写的挺入神的不想起身做饭，所以炖了个花生莲藕排骨汤（炖汤不用人看着，方便！
+今天又煮了粿汁，刚好葱珠朥要做新的了，单独记录一篇菜谱哈哈哈。之前也陆陆续续在菜谱里穿插写了几次，比如粿条卷、粿汁，反正经常用，单独写一篇好。
 
-还弄了个蘸酱用来蘸排骨，特别好吃，超下饭！哈哈哈哈哈分享一下这个蘸酱的做法。
+![成品图：葱珠朥](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220201234430.jpg)
 
-![成品图：辣酱蘸酱](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220108005139.jpg)
+## 主要材料
 
-## 准备配料
+香葱 1 ~ 2 棵，因为这个超级容易做，所以每次不需要做很多，不像蒜头朥因为制作的时间比较长，所以每次才做一大瓶。
 
-1、蒜头三瓣，拍碎去皮，剁蒜蓉
+还可以做成芝麻葱珠朥，准备多一小把白芝麻即可，我今天做原味的，所以没有加芝麻。
 
-2、豆瓣酱一勺
+## 准备工作
 
-3、白芝麻半勺
+1、葱洗净，切掉带根须的葱头，剥掉那几片滑滑的葱衣
 
-4、一点点盐
+2、葱滴干水，放在通风的地方让洗葱时带上的水份尽量吹干
 
-5、一点点糖
+3、用厨房剪刀剪成大约 1 厘米长的小段
 
-6、撒上一层花椒粉
+![准备好的材料](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220201234421.jpg)
 
-7、撒上一层辣椒粉
+## 制作过程
 
-8、一勺生抽酱油
+1、炒锅热油，平时炒菜的温度（我是电磁炉 800 度），油量不用很多，覆盖锅底就可以了
 
-![配料都放碗里](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220108005142.jpg)
+![在热油中](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220201234422.jpg)
 
-## 调制过程
+2、油温上来了，把葱丁都倒进去，时不时拨动一下，让葱都能被油炸的均匀。
 
-1、炒锅热油，加热到有点冒泡，油温上来了就可以关火
+![下锅了](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220201234423.jpg)
 
-![这么多油就够了，其实可以更少](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220108005141.jpg)
+3、葱丁会慢慢变焦，观察颜色，只要都开始有焦色（也就是几乎没有水份了）就可以关火了
 
-2、倒进碗里把调料烫熟，拌匀，搞定
+![开始变焦](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220201234424.jpg)
 
-![倒进碗里搅拌均匀](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220108005143.jpg)
+![陆续变色](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220201234425.jpg)
 
-![配排骨汤好吃](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220108005140.jpg)
+4、期间先炸好的可以先推到锅沿，最后都推上来，免得油温继续加热，就过度了。
 
-![蘸排骨好吃](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220108005138.jpg)
+![炸好了，先推上来冷却](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220201234426.jpg)
 
+## 成品展示
+
+冷却的时候也可以像蒜头朥那样把葱珠朥和葱油分开冷却，如果你做芝麻葱珠朥，就可以把葱油淋在白芝麻上面先把白芝麻烫熟了！
+
+哈哈哈因为我还要做别的东西，所以没有占用炒锅，盛出来分开冷却了。
+
+![分开冷却中](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220201234427.jpg)
+
+## 保存方法
+
+密封罐保存，置于阴凉处，要用的时候也记得要用干燥的勺子去舀！！！
+
+## 食物搭配
+
+搭配潮汕粿汁好好吃！！！
+
+![粿汁](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220201234429.jpg)
+
+![粿汁](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220201234428.jpg)
 
