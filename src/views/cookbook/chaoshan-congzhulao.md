@@ -74,3 +74,9 @@ xiaohongshuId: 61f95d0c000000002103dc4c
 
 ![粿汁](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220201234428.jpg)
 
+粿汁的做法可以参考这一篇：
+
+<Cite
+  type="cookbook"
+  name="chaoshan-guozhi"
+/>

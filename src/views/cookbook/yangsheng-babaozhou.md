@@ -2,7 +2,7 @@
 title: 省钱菜单：天冷舒服！0.8元/碗的养生八宝粥（2h）
 desc: 因为打算下午爬山的时候挑战一下另外一条比较陡峭的小路，担心回来没精力做饭，刚好家里有糯米，早上出去超市顺便买了点配好的杂粮（有黑米、紫薯干、红扁豆挺多料），再搭配点花生，一起浸泡了有两个小时。
 keywords: 潮汕美食,八宝粥
-date: 2021-12-16 23:26:00
+date: 2021-12-04 20:10:00
 cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220114235441.jpg
 categories:
   - thrift
