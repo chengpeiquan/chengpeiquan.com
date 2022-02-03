@@ -1,0 +1,81 @@
+---
+title: 省钱菜谱：4.3元的鲜嫩多汁炸鸡腿（15min）
+desc: 用空气炸锅炸出来的鸡腿特别好吃，跟麦当劳的那个麦麦脆汁鸡腿很像，都是外层金黄酥脆，但是咬开却鲜嫩多汁！当然调味方面我比较简单，没有麦当劳那么复杂（emm懒就直说），但是也很好吃！
+keywords: 鲜嫩多汁炸鸡腿,脆皮炸鸡腿
+date: 2021-10-21 13:33:00
+cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204003700.jpg
+categories:
+  - thrift
+  - bento
+duration: 15
+price: 4.3
+xiaohongshuId: 6170fbb40000000021039299
+---
+
+[[toc]]
+
+哈哈哈哈哈哈哈哈哈哈哈哈“炸个鸡腿都是爱你的形状”，昨天晚上无心插柳出来的效果，在做的时候从头到尾都没看出来，做完装盘里才发现居然是个爱心！
+
+用空气炸锅炸出来的鸡腿特别好吃，跟麦当劳的那个麦麦脆汁鸡腿很像，都是外层金黄酥脆，但是咬开却鲜嫩多汁！当然调味方面我比较简单，没有麦当劳那么复杂（emm懒就直说），但是也很好吃！
+
+![成品图：鲜嫩多汁炸鸡腿](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204003826.jpg)
+
+## 主要食材
+
+1、琵琶腿2只
+
+2、方便面调味料（自己就用胡椒粉、花椒粉、盐来代替）
+
+3、方便面麻油（自己就用芝麻香油代替）
+
+4、料酒0.5勺
+
+5、炸鸡粉
+
+6、面包糠
+
+鸡腿买的冻品6.46元有3只，这里用了2只就4.3元（哈哈哈一开始算错价格了！！！）
+
+![我用的蟹皇面调味包](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204003819.jpg)
+
+## 腌制鸡腿
+
+1、鸡腿解冻，洗净，用牙签戳小孔方便入味，也可以把血水泡出来
+
+2、在水里泡上十几分钟，让鸡腿的血水都出来（可能看起来不多，但是对成品的颜值影响还是巨大的）
+
+3、放保鲜盒里，半勺料酒去腥，然后把调味料和麻油都放进去抓匀
+
+放冷藏腌制一晚上，第二天再做。
+
+![腌制鸡腿](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204003821.jpg)
+
+## 炸鸡过程
+
+我用的是空气炸锅，无油炸鸡。
+
+1、撒上一层炸鸡粉抓匀，这一步是为了锁住鸡腿的水分，能够达到外脆里嫩的口感
+
+2、裹上面包糠，这一步是为了做出脆皮效果
+
+![裹粉，裹面包糠](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204003822.jpg)
+
+空气炸锅200度恒温，烤15分钟，搞定（我今晚的鸡腿不是很大，所以可以完全熟透，大鸡腿记得自己延长时间哦！！！）。
+
+![炸之前](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204003823.jpg)
+
+![炸好后](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204003820.jpg)
+
+## 成品展示
+
+这道菜没啥难度哈哈哈哈，简直就是传说中的“啥事不干，坐等吃饭”，很适合新手和懒人！
+
+![爱你的形状哈哈哈](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204003830.jpg)
+
+![非常成功](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204003825.jpg)
+
+![非常好吃](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204003827.jpg)
+
+![肉质很嫩](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204003829.jpg)
+
+![全部啃完](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204003828.jpg)
