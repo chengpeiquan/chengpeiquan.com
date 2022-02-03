@@ -32,6 +32,13 @@ export const categoryConfigList: CategoryConfigItem[] = [
     },
   },
   {
+    path: 'soup',
+    text: {
+      zh: '煲个靓汤',
+      en: 'Soup',
+    },
+  },
+  {
     path: 'orthodontic',
     text: {
       zh: '正畸食谱',
