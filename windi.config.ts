@@ -10,6 +10,9 @@ export default defineConfig({
       screens: {
         '3xl': '1600px',
       },
+      colors: {
+        header: '#121212',
+      },
     },
   },
 })
