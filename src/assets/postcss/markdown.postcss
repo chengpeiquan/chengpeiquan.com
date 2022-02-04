@@ -116,6 +116,20 @@ blockquote {
   text-align: justify;
   @apply text-base;
 
+  /* 防止锚点定位被导航遮挡 */
+  h2 {
+    padding-top: 5em;
+    margin-top: -4em;
+  }
+  h3 {
+    padding-top: 6em;
+    margin-top: -5em;
+  }
+  h4 {
+    padding-top: 7.5em;
+    margin-top: -6.5em;
+  }
+
   /* 段落 */
   p {
     text-indent: 2em;
