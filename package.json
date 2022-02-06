@@ -8,11 +8,14 @@
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development vite --host",
-    "build": "cross-env NODE_ENV=production vite-ssg build && esno ./scripts/rss.ts",
+    "build": "npm run page && npm run rss && npm run cookbook",
+    "page": "cross-env NODE_ENV=production vite-ssg build",
+    "rss": "esno ./scripts/rss",
+    "cookbook": "esno ./scripts/cookbook",
     "tsc": "vue-tsc --noEmit",
     "lint": "eslint src --ext .js,.ts",
     "format": "prettier --write .",
-    "backup": "git add . && git commit -m \"chore: back up some code adjustments.\" && git push"
+    "backup": "git add . && git commit -m \"chore: backup\" && git push"
   },
   "repository": {
     "type": "git",
@@ -82,7 +85,7 @@
   },
   "gitHooks": {
     "pre-commit": "lint-staged",
-    "commit-msg": "node scripts/verifyCommit.js"
+    "commit-msg": "esno scripts/verifyCommit.ts"
   },
   "lint-staged": {
     "*.{js,jsx,vue,ts,tsx}": [
