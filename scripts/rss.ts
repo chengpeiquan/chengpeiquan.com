@@ -1,7 +1,7 @@
 import fg from 'fast-glob'
 import fs from 'fs-extra'
 import matter from 'gray-matter'
-import MarkdownIt from 'markdown-it'
+import markdownIt from 'markdown-it'
 import { Feed } from 'feed'
 
 const isExist: boolean = fs.existsSync('dist')
@@ -10,7 +10,7 @@ if (!isExist) {
 }
 
 async function run() {
-  const markdown = MarkdownIt({
+  const markdown = markdownIt({
     html: true,
     breaks: true,
     linkify: true,
