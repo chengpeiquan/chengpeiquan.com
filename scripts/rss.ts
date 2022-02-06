@@ -4,6 +4,11 @@ import matter from 'gray-matter'
 import MarkdownIt from 'markdown-it'
 import { Feed } from 'feed'
 
+const isExist: boolean = fs.existsSync('dist')
+if (!isExist) {
+  fs.mkdirSync('dist')
+}
+
 async function run() {
   const markdown = MarkdownIt({
     html: true,
@@ -11,7 +16,10 @@ async function run() {
     linkify: true,
   })
 
-  const files = await fg('src/views/article/*.md')
+  const files = [
+    ...(await fg('src/views/article/*.md')),
+    ...(await fg('src/views/en/article/*.md')),
+  ]
 
   const posts: any[] = (
     await Promise.all(
