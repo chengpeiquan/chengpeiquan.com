@@ -5,15 +5,34 @@ import markdownIt from 'markdown-it'
 import toc from 'markdown-it-table-of-contents'
 import implicitFigures from 'markdown-it-implicit-figures'
 import dayjs from 'dayjs'
+import { categoryConfigList } from '../src/router/cookbook'
 
 const outDir = './dist/assets/json/cookbook'
-fs.mkdirp(`${outDir}/page`)
+fs.mkdirpSync(`${outDir}/page`)
+fs.mkdirpSync(`${outDir}/common`)
+fs.mkdirpSync(`${outDir}/detail`)
 
 const author = {
   name: 'chengpeiquan',
   email: 'chengpeiquan@chengpeiquan.com',
   link: 'https://chengpeiquan.com',
 }
+
+async function writeCategory() {
+  const res = categoryConfigList.map((i) => {
+    return {
+      id: i.path,
+      text: i.text.zh,
+    }
+  })
+
+  await fs.writeFile(
+    `${outDir}/common/category.json`,
+    JSON.stringify(res, null, 2),
+    'utf-8'
+  )
+}
+writeCategory()
 
 async function run() {
   const markdown = markdownIt({
@@ -57,7 +76,7 @@ async function run() {
             content: html,
           }
           await fs.writeFile(
-            `${outDir}/${id}.json`,
+            `${outDir}/detail/${id}.json`,
             JSON.stringify(res, null, 2),
             'utf-8'
           )
@@ -73,7 +92,9 @@ async function run() {
 
   posts.sort((a, b) => +new Date(b.date) - +new Date(a.date))
 
-  // 分页存储列表
+  /**
+   * 分页存储列表
+   */
   const pageSize = 10
   let page = 1
   let lastPage = Math.round(posts.length / pageSize)
