@@ -3,7 +3,6 @@ import fs from 'fs-extra'
 import matter from 'gray-matter'
 import markdownIt from 'markdown-it'
 import toc from 'markdown-it-table-of-contents'
-import implicitFigures from 'markdown-it-implicit-figures'
 import dayjs from 'dayjs'
 import { categoryConfigList } from '../src/router/cookbook'
 
@@ -50,9 +49,6 @@ async function run() {
           .toLowerCase()
           .replace(/\s+|\.+/g, '-')
       ),
-  })
-  markdown.use(implicitFigures, {
-    figcaption: true,
   })
 
   const files = await fg('src/views/cookbook/*.md')
