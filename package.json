@@ -8,10 +8,10 @@
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development vite --host",
-    "build": "npm run page && npm run rss && npm run cookbook",
+    "build": "npm run page && npm run rss && npm run json",
     "page": "cross-env NODE_ENV=production vite-ssg build",
     "rss": "esno ./scripts/rss",
-    "cookbook": "esno ./scripts/cookbook",
+    "json": "esno ./scripts/json",
     "tsc": "vue-tsc --noEmit",
     "lint": "eslint src --ext .js,.ts",
     "format": "prettier --write .",
