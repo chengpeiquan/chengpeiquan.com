@@ -2,7 +2,6 @@ import fg from 'fast-glob'
 import fs from 'fs-extra'
 import matter from 'gray-matter'
 import markdownIt from 'markdown-it'
-import toc from 'markdown-it-table-of-contents'
 import dayjs from 'dayjs'
 import { categoryConfigList } from '../src/router/cookbook'
 import type { Frontmatter } from '../src/types'
@@ -103,17 +102,6 @@ async function run() {
     html: true,
     breaks: true,
     linkify: true,
-  })
-  markdown.use(toc, {
-    includeLevel: [2, 3, 4],
-    containerClass: 'article-toc prose',
-    slugify: (s: string) =>
-      encodeURIComponent(
-        String(s)
-          .trim()
-          .toLowerCase()
-          .replace(/\s+|\.+/g, '-')
-      ),
   })
 
   const files = await fg('src/views/cookbook/*.md')
