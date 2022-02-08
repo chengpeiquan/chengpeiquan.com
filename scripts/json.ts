@@ -1,10 +1,14 @@
 import fg from 'fast-glob'
 import fs from 'fs-extra'
+import { resolve } from 'path'
 import matter from 'gray-matter'
 import markdownIt from 'markdown-it'
 import dayjs from 'dayjs'
 import { categoryConfigList } from '../src/router/cookbook'
 import type { Frontmatter } from '../src/types'
+import { createSSRApp } from 'vue'
+import { renderToString } from '@vue/server-renderer'
+import compiler from './compiler'
 
 interface PostItem extends Frontmatter {
   id: string
@@ -98,6 +102,18 @@ async function writePagination(category: string, posts: PostItem[]) {
  * 运行程序
  */
 async function run() {
+  const filePath = resolve(__dirname, '../src/components/Cite.vue')
+  const { template } = compiler(filePath)
+  // const app = createSSRApp({
+  //   template,
+  // })
+  // // app.component('Cite', {
+  // //   template,
+  // // })
+  // console.log('app', app);
+  // const appContent = await renderToString(app)
+  // console.log('appContent', appContent)
+
   const markdown = markdownIt({
     html: true,
     breaks: true,
@@ -118,6 +134,26 @@ async function run() {
           // 写入内容文件
           const id = i.replace(/src\/views\/cookbook\/(.*)\.md/, '$1')
           const html: string = markdown.render(content)
+
+          const match = html.match(/<Cite.*?>/)
+          // console.log(match)
+          if (Array.isArray(match)) {
+            const app = createSSRApp({
+              components: {
+                Cite: {
+                  template,
+                },
+              },
+              template: match[0],
+            })
+            // app.component('Cite', {
+            //   template,
+            // })
+            console.log('app', app)
+            const appContent = await renderToString(app)
+            console.log('appContent', appContent)
+          }
+
           const res = {
             id,
             author,
