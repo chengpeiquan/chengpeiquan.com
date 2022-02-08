@@ -5,10 +5,14 @@ import markdownIt from 'markdown-it'
 import toc from 'markdown-it-table-of-contents'
 import dayjs from 'dayjs'
 import { categoryConfigList } from '../src/router/cookbook'
+import type { Frontmatter } from '../src/types'
+
+interface PostItem extends Frontmatter {
+  id: string
+}
 
 const outDir = './dist/assets/json/cookbook'
-fs.mkdirpSync(`${outDir}/page`)
-fs.mkdirpSync(`${outDir}/common`)
+fs.mkdirpSync(`${outDir}/list/all`)
 fs.mkdirpSync(`${outDir}/detail`)
 
 const author = {
@@ -17,22 +21,83 @@ const author = {
   link: 'https://chengpeiquan.com',
 }
 
-async function writeCategory() {
+/**
+ * 写入分类信息
+ */
+async function writeCategory(posts: PostItem[]) {
   const res = categoryConfigList.map((i) => {
+    // 创建存放分类分页数据的文件夹
+    fs.mkdirpSync(`${outDir}/list/${i.path}`)
+
+    // 筛选分类下的内容，写入分类的分页列表
+    const _posts = posts.filter((p) => p.categories.includes(i.path))
+    writePagination(i.path, _posts)
+
     return {
       id: i.path,
-      text: i.text.zh,
+      name: i.text.zh,
     }
   })
 
+  res.unshift({
+    id: 'all',
+    name: '全部',
+  })
+
+  // 生成分类JSON
   await fs.writeFile(
-    `${outDir}/common/category.json`,
+    `${outDir}/list/category.json`,
     JSON.stringify(res, null, 2),
     'utf-8'
   )
 }
-writeCategory()
 
+/**
+ * 写入分页列表
+ */
+async function writePagination(category: string, posts: PostItem[]) {
+  const pageSize = 10
+  let page = 1
+  let lastPage = Math.round(posts.length / pageSize)
+  let start = 0
+  let end = start + pageSize
+  async function write() {
+    const data = []
+    for (let i = start; i < end; i++) {
+      posts[i] && data.push(posts[i])
+    }
+
+    // 分页内容
+    const res = {
+      author,
+      total: posts.length,
+      page,
+      lastPage,
+      category,
+      data,
+    }
+
+    // 写入分页数据
+    await fs.writeFile(
+      `${outDir}/list/${category}/${page}.json`,
+      JSON.stringify(res, null, 2),
+      'utf-8'
+    )
+
+    // 存储下一个分页
+    if (end < posts.length) {
+      start = end
+      end = start + pageSize
+      page++
+      write()
+    }
+  }
+  write()
+}
+
+/**
+ * 运行程序
+ */
 async function run() {
   const markdown = markdownIt({
     html: true,
@@ -53,7 +118,7 @@ async function run() {
 
   const files = await fg('src/views/cookbook/*.md')
 
-  const posts: any[] = (
+  const posts: PostItem[] = (
     await Promise.all(
       files
         .filter((i) => !i.includes('index'))
@@ -80,7 +145,7 @@ async function run() {
           // 返回给列表
           return {
             id,
-            ...data,
+            ...(data as Frontmatter),
           }
         })
     )
@@ -88,43 +153,10 @@ async function run() {
 
   posts.sort((a, b) => +new Date(b.date) - +new Date(a.date))
 
-  /**
-   * 分页存储列表
-   */
-  const pageSize = 10
-  let page = 1
-  let lastPage = Math.round(posts.length / pageSize)
-  let start = 0
-  let end = start + pageSize
-  async function writePage() {
-    const data = []
-    for (let i = start; i < end; i++) {
-      posts[i] && data.push(posts[i])
-    }
+  // 写入全部分页数据
+  writePagination('all', posts)
 
-    const res = {
-      author,
-      total: posts.length,
-      page,
-      lastPage,
-      data,
-    }
-
-    await fs.writeFile(
-      `${outDir}/page/${page}.json`,
-      JSON.stringify(res, null, 2),
-      'utf-8'
-    )
-
-    // 存储下一个分页
-    if (end < posts.length) {
-      start = end
-      end = start + pageSize
-      page++
-      writePage()
-    }
-  }
-  writePage()
+  // 根据分类写入分页数据
+  writeCategory(posts)
 }
-
 run()
