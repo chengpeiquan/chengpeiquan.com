@@ -145,6 +145,9 @@ async function run() {
   const res = {
     author,
     total: posts.length,
+    page: 1,
+    lastPage: 1,
+    category: 'all',
     data: posts,
   }
   await fs.writeFile(
