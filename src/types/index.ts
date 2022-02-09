@@ -24,6 +24,7 @@ export interface Frontmatter {
   duration?: number
   price?: number
   xiaohongshuId?: string
+  cite?: string[]
   isDraft?: boolean
 }
 
