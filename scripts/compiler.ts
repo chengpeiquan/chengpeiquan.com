@@ -12,8 +12,9 @@ export default function compiler(filePath: string) {
   // console.log('fileContent', fileContent)
 
   // 解析文件
-  const parsed = parse(fileContent)
-  // console.log(parsed.descriptor.styles);
+  const ast = parse(fileContent)
+  // console.log('ast', ast)
+  // console.log(ast.descriptor.styles);
 
   const id = 'temp'
 
@@ -21,13 +22,13 @@ export default function compiler(filePath: string) {
   const { code: template } = compileTemplate({
     id,
     filename: `${id}.vue`,
-    source: parsed.descriptor.template.content,
+    source: ast.descriptor.template.content,
     // ssr: true,
   })
   // console.log('compileTemplate', template)
 
   // 编译脚本
-  const { content: script } = compileScript(parsed.descriptor, { id })
+  const { content: script } = compileScript(ast.descriptor, { id })
   // console.log('compileScript', script)
 
   // 编译样式
@@ -35,11 +36,13 @@ export default function compiler(filePath: string) {
 
   //   id,
   //   filename: `${id}.vue`,
-  //   source: parsed.descriptor.styles[0].content,
+  //   source: ast.descriptor.styles[0].content,
   // })
   // console.log('compileStyle', r)
 
   return {
+    fileContent,
+    ast,
     template,
     script,
   }
