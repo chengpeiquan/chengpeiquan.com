@@ -141,6 +141,21 @@ async function run() {
 
   posts.sort((a, b) => +new Date(b.date) - +new Date(a.date))
 
+  // 写入不分页的数据
+  const res = {
+    author,
+    total: posts.length,
+    page: 1,
+    lastPage: 1,
+    category: 'all',
+    data: posts,
+  }
+  await fs.writeFile(
+    `${outDir}/list/all.json`,
+    JSON.stringify(res, null, 2),
+    'utf-8'
+  )
+
   // 写入全部分页数据
   writePagination('all', posts)
 
