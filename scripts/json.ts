@@ -1,15 +1,10 @@
 import fg from 'fast-glob'
 import fs from 'fs-extra'
-import { resolve } from 'path'
 import matter from 'gray-matter'
 import markdownIt from 'markdown-it'
 import dayjs from 'dayjs'
 import { categoryConfigList } from '../src/router/cookbook'
 import type { Frontmatter } from '../src/types'
-import { createSSRApp, compile } from 'vue'
-import 'vue-router'
-import { renderToString } from '@vue/server-renderer'
-import compiler from './compiler'
 
 interface PostItem extends Frontmatter {
   id: string
@@ -103,18 +98,6 @@ async function writePagination(category: string, posts: PostItem[]) {
  * 运行程序
  */
 async function run() {
-  const filePath = resolve(__dirname, '../src/components/Cite.vue')
-  const { ast } = compiler(filePath)
-  // const app = createSSRApp({
-  //   template,
-  // })
-  // // app.component('Cite', {
-  // //   template,
-  // // })
-  // console.log('app', app);
-  // const appContent = await renderToString(app)
-  // console.log('appContent', appContent)
-
   const markdown = markdownIt({
     html: true,
     breaks: true,
@@ -135,71 +118,6 @@ async function run() {
           // 写入内容文件
           const id = i.replace(/src\/views\/cookbook\/(.*)\.md/, '$1')
           const html: string = markdown.render(content)
-
-          const match = html.match(/<Cite.*?>/)
-          if (Array.isArray(match)) {
-            // console.log('macth[0]', match[0])
-
-            // const app = createSSRApp({
-            //   components: {
-            //     Cite: {
-            //       template,
-            //     },
-            //   },
-            //   template: `<div>${match[0]}</div>`,
-            // })
-
-            // const app = createSSRApp({
-            //   components: {
-            //     Cite: {
-            //       props: {
-            //         type: String,
-            //         name: String,
-            //       },
-            //       render() {
-            //         return ast.descriptor.template.content
-            //       },
-            //     },
-            //   },
-            //   template: `<div>${match[0]}</div>`,
-            // })
-
-            const app = createSSRApp({
-              // compilerOptions: {
-              //   isCustomElement: (tag) => tag === 'Cite',
-              // },
-              components: {
-                Cite: {
-                  props: {
-                    type: String,
-                    name: String,
-                  },
-                  // template: fileContent,
-                  // template: ast.descriptor.template.content,
-                  // render: compile(fileContent),
-                  render: compile(ast.descriptor.template.content),
-                  // render() {
-                  //   return h(ast.descriptor.template.content)
-                  // },
-                },
-              },
-              render: compile(match[0]),
-              // render() {
-              //   return h(compile(match[0]))
-              // },
-            })
-            // app.use(
-            //   createRouter({
-            //     history: createWebHistory(process.env.BASE_URL),
-            //     routes: [],
-            //   })
-            // )
-
-            console.log('app', app)
-            const appContent = await renderToString(app)
-            console.log('appContent', appContent)
-          }
-
           const res = {
             id,
             author,
