@@ -11,6 +11,8 @@ categories:
 duration: 5
 price: 1.8
 xiaohongshuId: 61a258a200000000210380a9
+cite:
+  - chaoshan-congzhulao
 ---
 
 [[toc]]
@@ -38,13 +40,6 @@ xiaohongshuId: 61a258a200000000210380a9
 搭配的话，一般是“粿汁 + 葱珠朥 + 盐”这样的组合（粿条面条常用鱼露，粿汁一般用盐）。
 
 ![普通吃法](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220201224532.jpg)
-
-葱珠朥的做法可以查看这一篇菜谱。
-
-<Cite
-  type="cookbook"
-  name="chaoshan-congzhulao"
-/>
 
 平民的豪华版就像我这样再搭配一些卤豆干、卤蛋、卤五花肉，还有卤大肠卤鹅肠卤肉都有，哈哈哈其实就是搭配潮汕卤水，葱珠朥就是葱花低温炸干出来的一种调味品（我之前在粿条卷那个菜谱里有做法） 。
 

@@ -12,6 +12,8 @@ categories:
 duration: 30
 price: 0.57
 xiaohongshuId: 61bf2e4e000000002103470d
+cite:
+  - xianggu-zhurou-yumi-jianjiao
 ---
 
 [[toc]]
@@ -101,9 +103,5 @@ xiaohongshuId: 61bf2e4e000000002103470d
 今天是包了 48 个，算下来一个饺子 0.57 元，玉米比较贵主要是，但是甜玉米真的好好吃！好甜！而且焯水 + 翻炒过的玉米粒很嫩很软，一点都不会生硬。
 
 ![好好吃！！！](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220108020354.jpg)
-
-## 相关菜谱
-
-<Cite type="cookbook" name="xianggu-zhurou-yumi-jianjiao" />
 
 哈哈哈留着下一餐做煎饺，也超级好吃！！！
