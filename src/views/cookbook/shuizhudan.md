@@ -10,6 +10,8 @@ categories:
 duration: 0
 price: 0
 xiaohongshuId: 61b5c1cb00000000210399e6
+cite:
+  - chaoshan-lushui-wuhuarou
 ---
 
 [[toc]]
@@ -52,12 +54,7 @@ xiaohongshuId: 61b5c1cb00000000210399e6
 
 ## 相关教程
 
-完整的卤水教程可以看这个。
-
-<Cite
-  type="cookbook"
-  name="chaoshan-lushui-wuhuarou"
-/>
+完整的卤水教程可以看文末的相关菜谱。
 
 ## 卤蛋过程
 
