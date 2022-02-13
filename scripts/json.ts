@@ -8,6 +8,7 @@ import type { Frontmatter } from '../src/types'
 
 interface PostItem extends Frontmatter {
   id: string
+  shortDate: string
 }
 
 const outDir = './dist/assets/json/cookbook'
@@ -118,9 +119,11 @@ async function run() {
           // 写入内容文件
           const id = i.replace(/src\/views\/cookbook\/(.*)\.md/, '$1')
           const html: string = markdown.render(content)
+          const shortDate = dayjs(data.date).format('YYYY-MM-DD')
           const res = {
             id,
             author,
+            shortDate,
             ...data,
             content: html,
           }
@@ -133,6 +136,7 @@ async function run() {
           // 返回给列表
           return {
             id,
+            shortDate,
             ...(data as Frontmatter),
           }
         })
