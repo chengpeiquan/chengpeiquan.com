@@ -11,6 +11,9 @@ categories:
 duration: 40
 price: 6.3
 xiaohongshuId: 617430aa0000000001026a23
+cite:
+  - cuipi-jujitui
+  - baicaisi-haoyou-chaomian
 ---
 
 [[toc]]
@@ -25,19 +28,7 @@ xiaohongshuId: 617430aa0000000001026a23
 
 ## 相关菜谱
 
-关于这次的鸡腿，建议看推荐做法：
-
-<Cite
-  type="cookbook"
-  name="cuipi-jujitui"
-/>
-
-炒面也建议直接看完整版菜谱：
-
-<Cite
-  type="cookbook"
-  name="baicaisi-haoyou-chaomian"
-/>
+关于这次的鸡腿，建议看文末相关菜谱的推荐做法，炒面也建议直接看完整版菜谱。
 
 ## 步骤参考
 

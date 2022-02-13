@@ -12,6 +12,8 @@ categories:
 duration: 3
 price: 4.7
 xiaohongshuId: 61c079f70000000001028f90
+cite:
+  - xianggu-zhurou-yumi-zhengjiao
 ---
 
 [[toc]]
@@ -22,9 +24,7 @@ xiaohongshuId: 61c079f70000000001028f90
 
 ## 相关菜谱
 
-这是昨天的蒸饺做好后，留一保鲜盒今天煎着吃，做法可以参考这一篇。
-
-<Cite type="cookbook" name="xianggu-zhurou-yumi-zhengjiao" />
+这是昨天的蒸饺做好后，留一保鲜盒今天煎着吃，做法可以参考文末的相关菜谱。
 
 ## 煎饺过程
 

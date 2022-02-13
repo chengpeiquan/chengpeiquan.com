@@ -12,7 +12,7 @@ interface PostItem extends Frontmatter {
 }
 
 const outDir = './dist/assets/json/cookbook'
-fs.mkdirpSync(`${outDir}/list/all`)
+fs.mkdirpSync(`${outDir}/list/default`)
 fs.mkdirpSync(`${outDir}/detail`)
 
 const author = {
@@ -37,11 +37,6 @@ async function writeCategory(posts: PostItem[]) {
       id: i.path,
       name: i.text.zh,
     }
-  })
-
-  res.unshift({
-    id: 'all',
-    name: '全部',
   })
 
   // 生成分类JSON
@@ -161,7 +156,7 @@ async function run() {
   )
 
   // 写入全部分页数据
-  writePagination('all', posts)
+  writePagination('default', posts)
 
   // 根据分类写入分页数据
   writeCategory(posts)

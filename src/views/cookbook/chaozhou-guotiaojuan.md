@@ -12,6 +12,8 @@ categories:
 duration: 15
 price: 3
 xiaohongshuId: 615d5350000000002103db4d
+cite:
+  - chaoshan-congzhulao
 ---
 
 [[toc]]
@@ -72,12 +74,7 @@ xiaohongshuId: 615d5350000000002103db4d
 
 ![搞定](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204221021.jpg)
 
-详细版本可以看这个：
-
-<Cite
-  type="cookbook"
-  name="chaoshan-congzhulao"
-/>
+详细版本可以看文末的相关菜谱。
 
 ## 卷粿步骤
 

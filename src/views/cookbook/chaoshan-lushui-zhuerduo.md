@@ -10,6 +10,8 @@ categories:
 duration: 0
 price: 0
 xiaohongshuId: 61f698f9000000000102e66e
+cite:
+  - chaoshan-lushui-wuhuarou
 ---
 
 [[toc]]
@@ -22,12 +24,7 @@ xiaohongshuId: 61f698f9000000000102e66e
 
 ## 相关菜谱
 
-完整的过程跟之前做卤水五花肉是一样的！！！
-
-<Cite
-  type="cookbook"
-  name="chaoshan-lushui-wuhuarou"
-/>
+完整的过程跟之前做卤水五花肉是一样的！！！可参考文末的相关菜谱。
 
 ## 制作步骤
 
