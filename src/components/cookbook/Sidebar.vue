@@ -44,6 +44,19 @@
     </section>
     <!-- 猜你喜欢 -->
 
+    <!-- 小程序码 -->
+    <section class="mb-16">
+      <h2 class="block-title">菜谱专栏 · 小程序版本</h2>
+      <div class="flex flex-col w-full">
+        <img
+          class="w-full"
+          src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220213232446.png"
+          alt="扫码关注本菜谱的小程序版"
+        />
+      </div>
+    </section>
+    <!-- 小程序码 -->
+
     <!-- 在线互动 -->
     <section class="mb-16">
       <h2 class="block-title">在线互动</h2>
