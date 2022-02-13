@@ -36,6 +36,7 @@ async function writeCategory(posts: PostItem[]) {
     return {
       id: i.path,
       name: i.text.zh,
+      icon: i.icon,
     }
   })
 
