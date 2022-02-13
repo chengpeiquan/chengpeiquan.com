@@ -9,6 +9,7 @@ export const categoryConfigList: CategoryConfigItem[] = [
       zh: '省钱菜谱',
       en: 'Thrift',
     },
+    icon: 'https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220213200704.jpg',
   },
   {
     path: 'teochew',
@@ -16,6 +17,7 @@ export const categoryConfigList: CategoryConfigItem[] = [
       zh: '潮州特色',
       en: 'Teochew',
     },
+    icon: 'https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220213200445.jpg',
   },
   {
     path: 'bento',
@@ -23,6 +25,7 @@ export const categoryConfigList: CategoryConfigItem[] = [
       zh: '上班带饭',
       en: 'Bento',
     },
+    icon: 'https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220213200259.jpg',
   },
   {
     path: 'staple',
@@ -30,6 +33,7 @@ export const categoryConfigList: CategoryConfigItem[] = [
       zh: '特色主食',
       en: 'Staple',
     },
+    icon: 'https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220213195746.jpg',
   },
   {
     path: 'soup',
@@ -37,6 +41,7 @@ export const categoryConfigList: CategoryConfigItem[] = [
       zh: '煲个靓汤',
       en: 'Soup',
     },
+    icon: 'https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220213200137.jpg',
   },
   {
     path: 'orthodontic',
@@ -44,6 +49,7 @@ export const categoryConfigList: CategoryConfigItem[] = [
       zh: '正畸食谱',
       en: 'Orthodontic',
     },
+    icon: 'https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220213195910.jpg',
   },
   {
     path: 'condiment',
@@ -51,6 +57,7 @@ export const categoryConfigList: CategoryConfigItem[] = [
       zh: '调味辅料',
       en: 'condiment',
     },
+    icon: 'https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220213200054.jpg',
   },
 ]
 

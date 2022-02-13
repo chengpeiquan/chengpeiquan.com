@@ -42,6 +42,7 @@ export interface RouteMeta extends DefaultRouteMeta {
 export interface CategoryConfigItem {
   path: string
   text: i18nTextConfig
+  icon?: string
 }
 
 /**
