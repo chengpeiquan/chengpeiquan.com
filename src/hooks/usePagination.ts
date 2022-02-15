@@ -6,8 +6,8 @@ export function usePagination({
   pageType,
   pageSize,
 }: {
-  pageType: string,
-  pageSize?: number,
+  pageType: string
+  pageSize?: number
 }) {
   const route = useRoute()
   const router = useRouter()
