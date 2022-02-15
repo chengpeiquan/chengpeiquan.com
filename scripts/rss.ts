@@ -43,7 +43,7 @@ async function run() {
           }
         })
     )
-  ).filter(Boolean)
+  ).filter((i) => !(i as any).isDraft)
 
   posts.sort((a, b) => +new Date(b.date) - +new Date(a.date))
 
