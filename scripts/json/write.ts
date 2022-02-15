@@ -78,7 +78,7 @@ export async function writeCategory({ type, posts }: WriteCategoryOptions) {
       return {
         id: i.path,
         name: i.text.zh,
-        icon: i.icon,
+        icon: i.icon || '',
       }
     })
 
