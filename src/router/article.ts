@@ -1,4 +1,4 @@
-import config from '@/config'
+import config from '../config'
 import type { RouteRecordRaw } from 'vue-router'
 import type { CategoryConfigItem, CategoryListInfo } from '@/types'
 

@@ -8,10 +8,6 @@ import { writePagination, writeCategory, writePost } from './write'
 import type { PostItem, PostDetail } from './types'
 import type { Frontmatter } from '../../src/types'
 
-const outDir = './dist/assets/json/cookbook'
-fs.mkdirpSync(`${outDirRoot}/list/default`)
-fs.mkdirpSync(`${outDirRoot}/detail`)
-
 /**
  * 运行程序
  * @param type - 写入类型， article=博客文章， cookbook=菜谱
@@ -39,7 +35,8 @@ export default async function run(type: string) {
           data.date = dayjs(data.date).format('YYYY-MM-DD HH:mm:ss')
 
           // 写入内容文件
-          const id = i.replace(/src\/views\/cookbook\/(.*)\.md/, '$1')
+          const regexp: RegExp = new RegExp(`src/views/${type}/(.*).md`)
+          const id = i.replace(regexp, '$1')
           const html: string = markdown.render(content)
           const shortDate = dayjs(data.date).format('YYYY-MM-DD')
 
@@ -79,7 +76,7 @@ export default async function run(type: string) {
     data: posts,
   }
   await fs.writeFile(
-    `${outDir}/list/all.json`,
+    `${outDirRoot}/${type}/list/all.json`,
     JSON.stringify(res, null, 2),
     'utf-8'
   )

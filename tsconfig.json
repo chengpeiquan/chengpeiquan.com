@@ -16,11 +16,7 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": "./",
-    "types": [
-      "vite/client",
-      "node",
-      "vite-plugin-pages/client"
-    ],
+    "types": ["vite/client", "node", "vite-plugin-pages/client"],
     "paths": {
       "@/*": ["src/*"],
       "@img/*": ["src/assets/img/*"],

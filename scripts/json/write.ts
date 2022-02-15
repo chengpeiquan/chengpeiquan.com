@@ -1,11 +1,23 @@
 import fs from 'fs-extra'
-import { categoryConfigList } from '../../src/router/cookbook'
+import { categoryConfigList as articleCategoryConfigList } from '../../src/router/article'
+import { categoryConfigList as cookbookCategoryConfigList } from '../../src/router/cookbook'
 import { outDirRoot, author } from './config'
 import {
   WritePaginationOptions,
   WriteCategoryOptions,
   WritePostOptions,
 } from './types'
+import type { CategoryConfigItem } from '../../src/types'
+
+/**
+ * 分类配置
+ */
+const categoryConfigList: {
+  [key: string]: CategoryConfigItem[]
+} = {
+  article: articleCategoryConfigList,
+  cookbook: cookbookCategoryConfigList,
+}
 
 /**
  * 写入分页列表
@@ -17,7 +29,7 @@ export async function writePagination({
 }: WritePaginationOptions) {
   const pageSize = 10
   let page = 1
-  let lastPage = Math.round(posts.length / pageSize)
+  let lastPage = Math.ceil(posts.length / pageSize)
   let start = 0
   let end = start + pageSize
   async function write() {
@@ -63,7 +75,7 @@ export async function writePagination({
  */
 export async function writeCategory({ type, posts }: WriteCategoryOptions) {
   try {
-    const res = categoryConfigList.map((i) => {
+    const res = categoryConfigList[type].map((i) => {
       // 创建存放分类分页数据的文件夹
       fs.mkdirpSync(`${outDirRoot}/${type}/list/${i.path}`)
 
@@ -78,7 +90,7 @@ export async function writeCategory({ type, posts }: WriteCategoryOptions) {
       return {
         id: i.path,
         name: i.text.zh,
-        icon: i.icon,
+        icon: i.icon || '',
       }
     })
 
