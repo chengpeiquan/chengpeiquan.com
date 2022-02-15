@@ -10,6 +10,8 @@ categories:
 duration: 10
 price: 3.5
 xiaohongshuId: 616853c7000000002103bd72
+cite:
+  - xianmei-roujiang-zhuchangfen
 ---
 
 [[toc]]
@@ -17,6 +19,8 @@ xiaohongshuId: 616853c7000000002103bd72
 今天台风终于走了！看来我这周末可以去爬山了！
 
 哈哈哈哈哈我发现做饭跟敲代码真是异曲同工，敲代码经常会涉及到封装和复用，做菜也是，前几天做那个肉酱猪肠粉的时候对那个肉酱念念不忘，今晚骑车回来的时候，路上就想到要不我再复用一下，换个食材搞事情，于是想起了豆腐，果然，超好吃！！！
+
+![成品图：肉酱水豆腐](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204163600.jpg)
 
 ## 主要食材
 
