@@ -12,6 +12,8 @@ categories:
 duration: 10
 price: 2
 xiaohongshuId: 612f9f75000000002103524d
+cite:
+  - chaoshan-suantoulao
 ---
 
 [[toc]]
@@ -27,6 +29,8 @@ xiaohongshuId: 612f9f75000000002103524d
 2、切点瘦肉，大约 1 元，剁成肉末
 
 3、切点葱花，不算钱
+
+4、蒜头朥（文末相关菜谱有做法）
 
 因为下班去的晚，所以只买到最后卖剩下的客家豆腐了，没有水豆腐那种软软滑滑的，但是也还不错！
 

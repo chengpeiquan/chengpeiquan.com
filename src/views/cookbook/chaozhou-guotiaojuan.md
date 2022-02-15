@@ -14,6 +14,7 @@ price: 3
 xiaohongshuId: 615d5350000000002103db4d
 cite:
   - chaoshan-congzhulao
+  - chaoshan-suantoulao
 ---
 
 [[toc]]
@@ -40,7 +41,7 @@ cite:
 
 7、整张的粿条皮（我买不到！所以我用猪肠粉代替了， 2.5 元）
 
-8、蒜头朥（置顶笔记有做法）
+8、蒜头朥（文末相关菜谱有做法）
 
 可以电热壶先煮一壶开水备用。
 
