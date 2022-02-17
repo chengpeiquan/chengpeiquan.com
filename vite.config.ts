@@ -19,16 +19,15 @@ import WindiCSS from 'vite-plugin-windicss'
 import Banner from 'vite-plugin-banner'
 import { slugify } from './scripts/slugify'
 import dayjs from './src/libs/dayjs'
-// import isDev from './src/libs/isDev'
+import isDev from './src/libs/isDev'
 
 const resolve = (dir: string): string => path.resolve(__dirname, dir)
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // base: isDev
-  //   ? '/'
-  //   : 'https://cdn.jsdelivr.net/gh/chengpeiquan/chengpeiquan.com@gh-pages/',
-  base: '/',
+  base: isDev
+    ? '/'
+    : 'https://cdn.jsdelivr.net/gh/chengpeiquan/chengpeiquan.com@gh-pages/',
   server: {
     port: 80,
     proxy: {
