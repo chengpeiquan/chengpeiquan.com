@@ -5,6 +5,7 @@ import markdownIt from 'markdown-it'
 import dayjs from 'dayjs'
 import { outDirRoot, author } from './config'
 import { writePagination, writeCategory, writePost } from './write'
+import { formatImgUrl, formatContent } from './format'
 import type { PostItem, PostDetail } from './types'
 import type { Frontmatter } from '../../src/types'
 
@@ -33,6 +34,9 @@ export default async function run(type: string) {
           const raw = await fs.readFile(i, 'utf-8')
           const { data, content } = matter(raw)
           data.date = dayjs(data.date).format('YYYY-MM-DD HH:mm:ss')
+          if (Object.prototype.hasOwnProperty.call(data, 'cover')) {
+            data.cover = formatImgUrl(String(data.cover))
+          }
 
           // 写入内容文件
           const regexp: RegExp = new RegExp(`src/views/${type}/(.*).md`)
@@ -46,7 +50,7 @@ export default async function run(type: string) {
             author,
             shortDate,
             ...(data as PostItem),
-            content: html,
+            content: formatContent(html),
           }
           await writePost({
             type,

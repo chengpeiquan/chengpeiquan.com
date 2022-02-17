@@ -3,7 +3,7 @@ title: 省钱菜谱：2.7元一碗的纯肉云吞（10min）
 desc: 云吞虽然都是肉，但因为做法实在太多，所以不太挑剔的话，成本其实可以很低！分享一个省钱的做法，平均一个云吞1毛8，按照15个一碗的话，2块7毛钱解决晚餐。
 keywords: 云吞,云吞包法,云吞怎么包
 date: 2021-08-21 21:17:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220110235534.jpg
+cover: https://cdn.chengpeiquan.com/img/2022/01/20220110235534.jpg?x-oss-process=image/interlace,1
 categories:
   - thrift
   - staple
@@ -19,7 +19,7 @@ cite:
 
 云吞虽然都是肉，但因为做法实在太多，所以不太挑剔的话，成本其实可以很低！分享一个省钱的做法，平均一个云吞1 毛 8 ，按照 15 个一碗的话， 2 块 7 毛钱解决晚餐。
 
-![成品图：一碗汤云吞](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220110235705.jpg)
+![成品图：一碗汤云吞](https://cdn.chengpeiquan.com/img/2022/01/20220110235705.jpg?x-oss-process=image/interlace,1)
 
 因为是周末，所以我买的材料比较多，最终包了 71 个云吞，煮了两碗（早上睡懒觉中午只是随便吃了点东西，所以云吞吃了两碗哈哈哈），一碗汤云吞，一碗拌云吞，剩下的放冰箱以后再煮。
 
@@ -43,28 +43,28 @@ cite:
 
 1、拿一张云吞皮，放上适量的肉馅
 
-![拿一张云吞皮，放上适量的肉馅](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220110235712.jpg)
+![拿一张云吞皮，放上适量的肉馅](https://cdn.chengpeiquan.com/img/2022/01/20220110235712.jpg?x-oss-process=image/interlace,1)
 
 2、拉起对角盖向中心点
 
-![拉起对角盖向中心点](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220110235711.jpg)
+![拉起对角盖向中心点](https://cdn.chengpeiquan.com/img/2022/01/20220110235711.jpg?x-oss-process=image/interlace,1)
 
 3、朝中心点卷一下
 
-![朝中心点卷一下](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220110235710.jpg)
+![朝中心点卷一下](https://cdn.chengpeiquan.com/img/2022/01/20220110235710.jpg?x-oss-process=image/interlace,1)
 
 4、右手食指沾点水，点在左上角
 
-![右手食指沾点水，点在左上角](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220110235709.jpg)
+![右手食指沾点水，点在左上角](https://cdn.chengpeiquan.com/img/2022/01/20220110235709.jpg?x-oss-process=image/interlace,1)
 
 5、右手拉起另一侧，去与左侧粘合
 
-![右手拉起另一侧，去与左侧粘合](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220110235708.jpg)
+![右手拉起另一侧，去与左侧粘合](https://cdn.chengpeiquan.com/img/2022/01/20220110235708.jpg?x-oss-process=image/interlace,1)
 
 6、一个云吞就包好了， 10 秒钟都不到
 
-![一个云吞就包好了](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220110235707.jpg)
+![一个云吞就包好了](https://cdn.chengpeiquan.com/img/2022/01/20220110235707.jpg?x-oss-process=image/interlace,1)
 
 今晚的材料一共包了71个，可以吃好几顿！云吞这东西可以煮，可以拌，可以炸，吃的花样很多，省钱不一定要天天煮汤面，纯肉云吞也是可选方案哟！
 
-![全部包好的样子](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220110235706.jpg)
+![全部包好的样子](https://cdn.chengpeiquan.com/img/2022/01/20220110235706.jpg?x-oss-process=image/interlace,1)
