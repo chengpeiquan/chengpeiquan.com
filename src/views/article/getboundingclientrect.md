@@ -3,7 +3,7 @@ title: 使用getBoundingClientRect 针对scrollTop一直为0且documentElement�
 desc: 今天在上线一个移动端需求的时候，QA妹子跟我反馈在她们一部iPhone X上面出现了一个滚动加载会同时触发下拉刷新的bug…我就 ？？？……一个在顶部一个在底部这也能扯上关系？然后再进一步测试，发现这个坑是出现在自家app的内置webview上，在浏览器和微信等环境都正常。
 keywords: scrollTop 0,scrollTop bug,getBoundingClientRect
 date: 2020-09-15 01:41:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/09/3.jpg
+cover: https://cdn.chengpeiquan.com/img/2020/09/3.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 ---
@@ -33,7 +33,7 @@ const SCROLL_TOP = document.documentElement.scrollTop || document.body.scrollTop
 
 这个 api 的作用是，获取元素的 top/right/bottom/left/x/y/width/height 信息，引用 MDN 的一张图可以直观了解：
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/09/2.jpg)
+![](https://cdn.chengpeiquan.com/img/2020/09/2.jpg?x-oss-process=image/interlace,1)
 
 > Element.getBoundingClientRect() - Web API 接口参考 | MDN
 > https://developer.mozilla.org/zh-CN/docs/Web/API/Element/getBoundingClientRect
@@ -49,7 +49,7 @@ console.log(INFO)
 
 获取到的属性类似如下：
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/09/1.jpg)
+![](https://cdn.chengpeiquan.com/img/2020/09/1.jpg?x-oss-process=image/interlace,1)
 
 可以看到，这里面获取到的 `top` 和 `y` 的绝对值，就是我们需要的 `scrollTop` 数据。
 

@@ -6,7 +6,7 @@ You can see [Rewrite in vite](https://chengpeiquan.com/article/rewrite-in-vite.h
 
 ## Architecture
 
-![Architecture](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/01/20210222154414.jpg)
+![Architecture](https://cdn.chengpeiquan.com/img/2021/01/20210222154414.jpg?x-oss-process=image/interlace,1)
 
 ## License
 

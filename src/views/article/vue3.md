@@ -3,7 +3,7 @@ title: 资料专题：Vue3.0学习教程与实战案例
 desc: 自从海贼王更新后，就开始正式用 `Vue 3.0` + `typescript` 写业务了，在经过这段时间的尝试，发现从测试到正式版本变化还是很大，很多过往的博文已经对不上了，还是踩了不少坑，这个过程也打了不少笔记，整理起来，供需要的朋友避坑，也免得以后自己忘记了。
 keywords: vue 3.0,vue 3.x,vue 3.0 教程,学习 vue 3.0,vue 3.0 案例,vue 3.0 教学,vue 3.0 好用吗
 date: 2020-10-25 22:30:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/10/vue3.jpg
+cover: https://cdn.chengpeiquan.com/img/2020/10/vue3.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 isHot: true
@@ -12,7 +12,7 @@ repo: https://github.com/chengpeiquan/learning-vue3
 
 这是一个关于 Vue 3.0 + TypeScript 的起步学习教程，适合完全的 Vue 新手和 Vue 2.0 的老手，在官方文档的基础上融入自己的一些实践经验。
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/01/vue3.png)
+![](https://cdn.chengpeiquan.com/img/2021/01/vue3.png)
 
 ## 文档地址
 

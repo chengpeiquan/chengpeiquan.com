@@ -3,7 +3,7 @@ title: Vue插件：封装独立的通用组件 可复用的单文件式全局Toa
 desc: 最近突然很想简化一些自己写的，项目常用的调用小功能，比如一些弹窗等等，之前都是H/J/C分离，每次复用都要分别写到对应的文件里，略显麻烦。最近看了Vue官网有关于插件打包的说明，尝试了一下还可以，目前成功打包了一个Toast组件。以后每次项目要用到Toast弹窗，只需要引入一个 showToast.vue 即可直接生效调用，而不必在多个文件里维护自己的那部分代码。
 keywords: vue,toast,vue弹窗,vue toast,vue插件
 date: 2018-10-11 00:09:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/10/1-9.jpg
+cover: https://cdn.chengpeiquan.com/img/2018/10/1-9.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 repo: https://github.com/chengpeiquan/vue-toast
@@ -78,7 +78,7 @@ this.$showToast('发布成功，即将进入首页…', 2000, () => {
 
 ## 效果预览
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210217012731.jpg)
+![](https://cdn.chengpeiquan.com/img/2021/02/20210217012731.jpg?x-oss-process=image/interlace,1)
 
 ## 组件源码
 

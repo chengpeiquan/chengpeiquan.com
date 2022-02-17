@@ -3,7 +3,7 @@ title: vue-baidu-analytics
 desc: A data collection tool that supports reporting of single-page application data built by Vue 3.0 & 2.0 & VuePress, based on baidu statistics.
 keywords: vue-baidu-analytics,vue百度统计,vue流量上报,spa流量,spa百度统计,vue统计代码,spa统计代码,vuepress统计,vuepress百度统计
 date: 2021-01-07 23:21:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2019/12/1.jpg
+cover: https://cdn.chengpeiquan.com/img/2019/12/1.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 repo: https://github.com/analyticsjs/vue-baidu-analytics

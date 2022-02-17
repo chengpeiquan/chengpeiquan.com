@@ -3,7 +3,7 @@ title: vue-cnzz-analytics
 desc: A data collection tool that supports reporting of single-page application data built by Vue 3.0 & 2.0 & VuePress, based on cnzz statistics.
 keywords: cnzz,vue cnzz,vue umeng,vue analytics,spa analytics,cnzz统计,umeng统计,友盟统计,vuepress统计,vuepress cnzz统计
 date: 2021-01-08 22:37:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/08/1-3.jpg
+cover: https://cdn.chengpeiquan.com/img/2020/08/1-3.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 repo: https://github.com/analyticsjs/vue-cnzz-analytics

@@ -3,7 +3,7 @@ title: 基于Vue-CLI 3.0的骨架屏实现方案
 desc: 大型Project的首次载入速度一般会比较慢，虽然Vue可以配置路由懒加载，但有时候打包出来的chunk还是会比较大，这个时候可以结合骨架屏来提高用户等待加载时的体验。
 keywords: Vue骨架屏,Vue3.0骨架屏,Vue Skeleton
 date: 2019-03-01 16:14:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2019/03/1.jpg
+cover: https://cdn.chengpeiquan.com/img/2019/03/1.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 repo: https://github.com/chengpeiquan/vue-skeleton
@@ -11,7 +11,7 @@ repo: https://github.com/chengpeiquan/vue-skeleton
 
 大型 Project 的首次载入速度一般会比较慢，虽然 Vue 可以配置路由懒加载，但有时候打包出来的 chunk 还是会比较大，这个时候可以结合骨架屏来提高用户等待加载时的体验。
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2019/03/2.jpg)
+![](https://cdn.chengpeiquan.com/img/2019/03/2.jpg?x-oss-process=image/interlace,1)
 
 ## 安装依赖
 

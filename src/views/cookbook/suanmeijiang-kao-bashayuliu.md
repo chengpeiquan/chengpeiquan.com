@@ -3,7 +3,7 @@ title: 省钱菜谱：8.7元的酸梅酱烤巴沙鱼柳（18min）
 desc: 今天只上了半天班就被赶回来了，因为深圳出了 2 例，被要求大家都在家办公，并且周一上班要提供 3 天内至少 2 次核酸证明才能回公司，虽然南山离那边好远好远，但还是能理解，这个时候真的不要太轻视疫情了！
 keywords: 省钱菜谱,巴沙鱼,龙利鱼,鱼柳,烤鱼,巴沙鱼柳,龙利鱼柳,种牙食谱,整牙食谱
 date: 2022-01-07 23:54:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235442.jpg
+cover: https://cdn.chengpeiquan.com/img/2022/01/20220107235442.jpg?x-oss-process=image/interlace,1
 categories:
   - thrift
   - orthodontic
@@ -22,7 +22,7 @@ xiaohongshuId: 61d85fe200000000010284ad
 
 今晚烤了个鱼柳吃，简单方便又好吃！
 
-![成品图：酸梅酱烤巴沙鱼柳](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235259.jpg)
+![成品图：酸梅酱烤巴沙鱼柳](https://cdn.chengpeiquan.com/img/2022/01/20220107235259.jpg?x-oss-process=image/interlace,1)
 
 ## 主要食材
 
@@ -47,11 +47,11 @@ xiaohongshuId: 61d85fe200000000010284ad
 
 1、鱼柳买来是冷冻的，解冻，然后洗干净，根据你的锅的大小切合适的小块，不要太小，不然收缩会很严重
 
-![整条鱼柳](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235252.jpg)
+![整条鱼柳](https://cdn.chengpeiquan.com/img/2022/01/20220107235252.jpg?x-oss-process=image/interlace,1)
 
 2、葱和姜都切丝
 
-![姜葱切丝](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235253.jpg)
+![姜葱切丝](https://cdn.chengpeiquan.com/img/2022/01/20220107235253.jpg?x-oss-process=image/interlace,1)
 
 3、把鱼柳和葱丝、姜丝，还有生抽料酒都到在一起
 
@@ -59,7 +59,7 @@ xiaohongshuId: 61d85fe200000000010284ad
 
 抓匀，放在三只猫看不到的地方，腌制10分钟。
 
-![放在三只猫看不到的地方](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235254.jpg)
+![放在三只猫看不到的地方](https://cdn.chengpeiquan.com/img/2022/01/20220107235254.jpg?x-oss-process=image/interlace,1)
 
 ## 烤鱼过程
 
@@ -69,20 +69,20 @@ xiaohongshuId: 61d85fe200000000010284ad
 
 3、鱼柳放上去摆好，有多余的料汁也淋上去
 
-![放进去烤之前](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235255.jpg)
+![放进去烤之前](https://cdn.chengpeiquan.com/img/2022/01/20220107235255.jpg?x-oss-process=image/interlace,1)
 
 4、空气炸锅200度恒温，烤18分钟
 
-![烤好之后的样子](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235256.jpg)
+![烤好之后的样子](https://cdn.chengpeiquan.com/img/2022/01/20220107235256.jpg?x-oss-process=image/interlace,1)
 
 因为巴沙鱼很软，取出来的时候，可以用饭勺之类的面积大又不锐利的厨具去辅助拿出来，哈哈哈哈然后再拼回去就又是一整条鱼柳了。
 
-![用饭勺辅助](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235257.jpg)
+![用饭勺辅助](https://cdn.chengpeiquan.com/img/2022/01/20220107235257.jpg?x-oss-process=image/interlace,1)
 
-![拼回去哈哈哈哈](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235258.jpg)
+![拼回去哈哈哈哈](https://cdn.chengpeiquan.com/img/2022/01/20220107235258.jpg?x-oss-process=image/interlace,1)
 
 最后，淋上酸梅酱，好吃！！！
 
-![淋上酸梅酱的成品](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220107235300.jpg)
+![淋上酸梅酱的成品](https://cdn.chengpeiquan.com/img/2022/01/20220107235300.jpg?x-oss-process=image/interlace,1)
 
 至于酸梅酱怎么来的……上次点烧鸭外卖的时候，给多了，我就留下来做菜了2333

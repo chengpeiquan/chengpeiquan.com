@@ -3,7 +3,7 @@ title: 解决axios的responseType为"json"时IE9报undefined的兼容办法
 desc: 虽然axios说可以兼容IE9，但实际上在项目开发过程中，IE9报错，而且目前的情况是responseType为"json"时才会报这个异常，相关请求代码大致如下
 keywords: axios undefined,axios ie9,axios response undefined
 date: 2018-10-20 23:16:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/10/1-8.jpg
+cover: https://cdn.chengpeiquan.com/img/2018/10/1-8.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 ---
@@ -14,7 +14,7 @@ categories:
 
 因为 IE9 下，指定 json 格式的请求，response 只返回 responseText，而其他浏览器都可以正常返回 data
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/10/1-5.jpg)
+![](https://cdn.chengpeiquan.com/img/2018/10/1-5.jpg?x-oss-process=image/interlace,1)
 
 相关请求代码大致如下：
 

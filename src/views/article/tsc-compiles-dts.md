@@ -3,7 +3,7 @@ title: TSC编译时指定生成d.ts的目录 并解决无法导入package.json�
 desc: 虽然之前在构建 JS Library 的时候，也是有生成 `d.ts` 文件在输出目录，但总归比较凌乱，意思就是构建出来的 JS Library 和 DTS 文件都在同一级文件夹里。不是说不能用吧，总归看起来有点 low ，如果是单个 DTS 文件还好，但有时候构建出来会有好几个 DTS 这种情况下都放在一起总觉得有点别扭，所以今天想看一下能不能更优雅一点，存档在 types 文件夹里。
 keywords: javascript type,js type,javascript with typescript
 date: 2022-01-21 12:22:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/11/20220121141631.jpg
+cover: https://cdn.chengpeiquan.com/img/2021/11/20220121141631.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 ---
@@ -38,7 +38,7 @@ categories:
 
 不过好像有哪里不对，原来是它还根据源码的目录格式，生成多了一级 `src` ，变成了 `dist/types/src` ，强迫症不能忍啊！
 
-![多了一级 src 目录](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/11/20220121112339.jpg)
+![多了一级 src 目录](https://cdn.chengpeiquan.com/img/2021/11/20220121112339.jpg?x-oss-process=image/interlace,1)
 
 ## 修改 rootDir
 
@@ -65,7 +65,7 @@ categories:
 
 但是！但是程序的正常编译居然报错了！源码里有一部分数据是导入了 `package.json` 的字段作为值，比如版本号，包名等等，所以这里出现了一个报错。
 
-![修改 rootDir 之后报错了](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/11/20220121113324.jpg)
+![修改 rootDir 之后报错了](https://cdn.chengpeiquan.com/img/2021/11/20220121113324.jpg?x-oss-process=image/interlace,1)
 
 ## 解决方案
 
@@ -97,7 +97,7 @@ declare module '*.json'
 
 再次执行 build ，完美达成预期！
 
-![完美达到预期](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/11/20220121113455.jpg)
+![完美达到预期](https://cdn.chengpeiquan.com/img/2021/11/20220121113455.jpg?x-oss-process=image/interlace,1)
 
 来到这里第一个小目标是已经达成了！接下来看看怎么合并成单个文件。
 

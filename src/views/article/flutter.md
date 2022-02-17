@@ -3,7 +3,7 @@ title: 从前端开发者身份入门Flutter和Dart的学习笔记
 desc: 有很多相似，又有很多不同，慢慢适应一下
 keywords: flutter,dart
 date: 2022-01-27 16:02:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/11/20220127161927.jpg
+cover: https://cdn.chengpeiquan.com/img/2021/11/20220127161927.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 isDraft: true
@@ -13,7 +13,7 @@ isDraft: true
 
 最近有空，接触一下 Flutter 和 Dart 的开发，虽然说前端入门 Flutter 比较友好，但个人觉得最最最开始其实不怎么友好，当然写了几个小时 Dart 之后感觉确实都是熟悉的身影，但真的刚入门的那一两个小时真的特别困，所以还是要不定期记录一些遇到的问题。
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/11/20220127163236.jpg)
+![](https://cdn.chengpeiquan.com/img/2021/11/20220127163236.jpg?x-oss-process=image/interlace,1)
 
 本文主要面向平时写 Vue + TypeScript 的开发者，主要通过一些常用知识点的对比，来加快对 Flutter 的入门学习，因为很多道理是相同的，区别只在于怎么用。
 
@@ -195,7 +195,7 @@ Flutter 开发需要有 Android Studio 环境，但是安装了 Android SDK 后�
 
 暂时无解，折腾了 2 个上午都没搞明白怎么弄，可能公司电脑的问题，等回家再试试。
 
-![报错界面](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220129104628.jpg)
+![报错界面](https://cdn.chengpeiquan.com/img/2022/01/20220129104628.jpg?x-oss-process=image/interlace,1)
 
 ### GlobalKey 报错
 
@@ -376,7 +376,7 @@ Flutter 的图片部件效果和 HTML 的 `img` 整体还是比较相似，不�
 
 ```dart
 Image.network(
-  'https://example.com/cover.jpg',
+  'https://example.com/cover.jpg?x-oss-process=image/interlace,1',
   fit: BoxFit.cover,
 )
 ```
@@ -387,7 +387,7 @@ Image.network(
 
 这个一定要点名！笑死，一个设置圆角的问题被浏览了 20 多万次…
 
-![209k 的浏览量…](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220129164221.jpg)
+![209k 的浏览量…](https://cdn.chengpeiquan.com/img/2022/01/20220129164221.jpg?x-oss-process=image/interlace,1)
 
 具体戳：[Add border to a Container with borderRadius in Flutter](https://stackoverflow.com/questions/58350235/add-border-to-a-container-with-borderradius-in-flutter)
 

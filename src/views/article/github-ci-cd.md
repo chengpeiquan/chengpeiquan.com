@@ -3,7 +3,7 @@ title: 2022 年的第一天，把开源工作交给了 CI / CD（待完善）
 desc: 新年的第一天，我把 GitHub 的全自动流水线搭起来了。
 keywords: github ci cd,github workflows
 date: 2022-01-01 23:49:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220103233657.jpg
+cover: https://cdn.chengpeiquan.com/img/2022/01/20220103233657.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 ---
@@ -46,6 +46,6 @@ categories:
 
 可以戳 [Releases - Git Commit Analytics](https://github.com/analyticsjs/git-commit-analytics/releases) 查看效果。
 
-![在 Release 可下载构建好的程序](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220104161947.jpg)
+![在 Release 可下载构建好的程序](https://cdn.chengpeiquan.com/img/2022/01/20220104161947.jpg?x-oss-process=image/interlace,1)
 
 >TODO: 这里后面补充一下具体打 workflow 配置，暂时需要观察效果稳定性

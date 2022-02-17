@@ -3,7 +3,7 @@ title: 省钱菜谱：4元的甜辣炸鸡柳（10min）
 desc: 今晚跟我妈语音了半天，应该月底回家一趟了，深圳回潮州还是方便啊，不用赶着节假日出行，可以错峰回家，虽然没有像之前在广州的时候，佛山的同事周末回家那么方便，不过一个周末也是够用哈哈哈，三只猫也不用找人帮忙喂，养猫也是省心在这点。前两天吃的有点潦草，因为这几天工作突然忙碌了起来，虽然也没有加班很久，但回到家还是要看看资料啥的，今晚终于可以好好做点东西吃。
 keywords: 甜辣炸鸡柳,炸鸡柳,酸甜鸡柳,炸鸡胸肉
 date: 2021-10-19 23:43:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204004826.jpg
+cover: https://cdn.chengpeiquan.com/img/2022/02/20220204004826.jpg?x-oss-process=image/interlace,1
 categories:
   - thrift
   - bento
@@ -18,7 +18,7 @@ xiaohongshuId: 616ee7a80000000001028d84
 
 前两天吃的有点潦草，因为这几天工作突然忙碌了起来，虽然也没有加班很久，但回到家还是要看看资料啥的，今晚终于可以好好做点东西吃。
 
-![成品图：甜辣炸鸡柳](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204004847.jpg)
+![成品图：甜辣炸鸡柳](https://cdn.chengpeiquan.com/img/2022/02/20220204004847.jpg?x-oss-process=image/interlace,1)
 
 ## 主要食材
 
@@ -48,44 +48,44 @@ xiaohongshuId: 616ee7a80000000001028d84
 
 腌制主要是让鸡胸肉适当提升一下口感，像料酒去一下腥味，淀粉可以让鸡肉更嫩滑一些。
 
-![切好的鸡胸肉](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204004840.jpg)
+![切好的鸡胸肉](https://cdn.chengpeiquan.com/img/2022/02/20220204004840.jpg?x-oss-process=image/interlace,1)
 
-![腌制一下](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204004841.jpg)
+![腌制一下](https://cdn.chengpeiquan.com/img/2022/02/20220204004841.jpg?x-oss-process=image/interlace,1)
 
 ## 油炸过程
 
 1、倒油烧热到开始冒小泡，用筷子把鸡胸肉夹进去油炸（推荐用筷子，容易控制，锅铲在这里有点不好发挥）
 
-![开始炸](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204004842.jpg)
+![开始炸](https://cdn.chengpeiquan.com/img/2022/02/20220204004842.jpg?x-oss-process=image/interlace,1)
 
 2、准备好盘子，铺上吸油纸（没有也没事，等下多滴干几下油）
 
 3、炸到金黄就可以先夹出来了，一边出炉一边继续炸
 
-![陆续出锅](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204004843.jpg)
+![陆续出锅](https://cdn.chengpeiquan.com/img/2022/02/20220204004843.jpg?x-oss-process=image/interlace,1)
 
 4、全部炸好，吸油纸可以抽出来扔了
 
 今晚的分量大概炸了8分钟，炸好了可以先洗一下锅。
 
-![炸好啦](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204004844.jpg)
+![炸好啦](https://cdn.chengpeiquan.com/img/2022/02/20220204004844.jpg?x-oss-process=image/interlace,1)
 
 ## 裹酱过程
 
 1、根据今晚的肉量，我是用了3勺甜辣酱，把白芝麻加进去，再兑3勺开水拌匀，这样甜辣酱不会很粘稠，比较好裹到肉上，不然裹匀要用很多酱料就太重口了
 
-![兑好的甜辣酱](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204004845.jpg)
+![兑好的甜辣酱](https://cdn.chengpeiquan.com/img/2022/02/20220204004845.jpg?x-oss-process=image/interlace,1)
 
 2、一点点油，电磁炉300度就可以，把调好的酱汁到进去，开小火加热
 
 3、煮到冒泡有点粘稠了，就可以把炸好的鸡胸肉倒进去翻炒
 
-![状态 OK 了](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204004846.jpg)
+![状态 OK 了](https://cdn.chengpeiquan.com/img/2022/02/20220204004846.jpg?x-oss-process=image/interlace,1)
 
 4、还是保持这个温度，等到酱汁都快收干了就可以出锅了，这个过程也就1分钟左右
 
-![裹上了酱](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204004849.jpg)
+![裹上了酱](https://cdn.chengpeiquan.com/img/2022/02/20220204004849.jpg?x-oss-process=image/interlace,1)
 
 因为甜辣酱本身是成品酱料来着，也比较粘稠，所以我没有大火收汁，怕糊锅哈哈哈，这样直接裹上去色泽也很亮。
 
-![很好吃！！！](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204004848.jpg)
+![很好吃！！！](https://cdn.chengpeiquan.com/img/2022/02/20220204004848.jpg?x-oss-process=image/interlace,1)

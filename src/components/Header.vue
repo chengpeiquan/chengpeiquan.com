@@ -34,7 +34,7 @@
           class="img"
           width="56"
           height="56"
-          src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/avatar-60x60.jpg"
+          src="https://cdn.chengpeiquan.com/img/avatar-60x60.jpg?x-oss-process=image/interlace,1"
           :alt="getText('name')"
         />
       </div>

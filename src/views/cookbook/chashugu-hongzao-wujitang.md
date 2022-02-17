@@ -3,7 +3,7 @@ title: 煲个又清澈又鲜甜味美的茶树菇红枣乌鸡汤（1.5h）
 desc: 想着明天再出去爬山，今晚继续放纵一下哈哈哈哈，煲个乌鸡汤来吃吃！我记得过年的时候我朋友问我，为什么我的鸡汤那么清澈，当时也简单跟她分享过，今晚再煲汤我就在这里记录下过程。
 keywords: 茶树菇红枣乌鸡汤,鸡汤,乌鸡汤,茶树菇鸡汤
 date: 2021-10-05 22:49:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204223052.jpg
+cover: https://cdn.chengpeiquan.com/img/2022/02/20220204223052.jpg?x-oss-process=image/interlace,1
 categories:
   - thrift
   - teochew
@@ -20,7 +20,7 @@ xiaohongshuId: 615c65fb000000002103f694
 
 其实单论煲汤这事，谁都会煲，而且现在的厨具都很智能了，想煲个能喝的汤超简单的说，但作为一个老广，更乐意去琢磨怎么能煲得更精致一些，今晚的乌鸡汤虽然清澈，但喝起来非常鲜甜，步骤很简单，只是在细节上的稍微把控一下就可以了。
 
-![成品图：茶树菇红枣乌鸡汤](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204223303.jpg)
+![成品图：茶树菇红枣乌鸡汤](https://cdn.chengpeiquan.com/img/2022/02/20220204223303.jpg?x-oss-process=image/interlace,1)
 
 ## 主要食材
 
@@ -54,9 +54,9 @@ xiaohongshuId: 615c65fb000000002103f694
 
 5、炖锅里加水，淹没鸡肉即可
 
-![材料铺底](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204223300.jpg)
+![材料铺底](https://cdn.chengpeiquan.com/img/2022/02/20220204223300.jpg?x-oss-process=image/interlace,1)
 
-![放入鸡块并加水](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204223301.jpg)
+![放入鸡块并加水](https://cdn.chengpeiquan.com/img/2022/02/20220204223301.jpg?x-oss-process=image/interlace,1)
 
 ## 煲汤过程
 
@@ -70,7 +70,7 @@ xiaohongshuId: 615c65fb000000002103f694
 
 1、拿出来先静置几分钟，让汤里的渣渣沉淀下去，还有汤里的油浮上来
 
-![先静置](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204223302.jpg)
+![先静置](https://cdn.chengpeiquan.com/img/2022/02/20220204223302.jpg?x-oss-process=image/interlace,1)
 
 2、用小汤勺把表面的油舀掉，动作慢一点舀，薄薄一层而已
 
@@ -78,12 +78,12 @@ xiaohongshuId: 615c65fb000000002103f694
 
 4、炖锅里的汤不要用倒的，用我这种大汤勺先舀两勺汤把盐化开，然后鸡肉和剩下的汤都是舀出来
 
-![这种大汤勺](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204223306.jpg)
+![这种大汤勺](https://cdn.chengpeiquan.com/img/2022/02/20220204223306.jpg?x-oss-process=image/interlace,1)
 
 5、最后炖盅里留一点点底就不要了，那个底就会有很多渣渣
 
-![完成啦](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204223259.jpg)
+![完成啦](https://cdn.chengpeiquan.com/img/2022/02/20220204223259.jpg?x-oss-process=image/interlace,1)
 
-![好多肉](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204223304.jpg)
+![好多肉](https://cdn.chengpeiquan.com/img/2022/02/20220204223304.jpg?x-oss-process=image/interlace,1)
 
-![汤也好好喝，好甜](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204223305.jpg)
+![汤也好好喝，好甜](https://cdn.chengpeiquan.com/img/2022/02/20220204223305.jpg?x-oss-process=image/interlace,1)

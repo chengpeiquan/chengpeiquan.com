@@ -3,7 +3,7 @@ title: 省钱菜谱：5元的黑椒汁土豆烤肉粒（23min）
 desc: 周末啦周末啦！！！今天安利一支芬兰乐队Nightwish，国内习惯称呼“夜愿”，没有接触过美声金属的话，可以从最热门的《I Want My Tears Back》听听看，苏格兰风笛好厉害！另外一首《Last Ride Of The Day》我也超喜欢，经常能单曲循环大半天！然后开始做菜哈哈哈哈哈，话说之前师妹给我买澳洲牛肉粒的时候，我就做过一道黑椒汁烤牛肉粒，今天用类似的方法做这道土豆烤肉粒，这次用的是猪瘦肉。
 keywords: 黑椒汁土豆烤肉粒,黑椒土豆,黑椒烤肉,土豆烤肉
 date: 2021-10-15 22:40:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204161129.jpg
+cover: https://cdn.chengpeiquan.com/img/2022/02/20220204161129.jpg?x-oss-process=image/interlace,1
 categories:
   - thrift
   - bento
@@ -20,7 +20,7 @@ xiaohongshuId: 616992e70000000021039c1d
 
 之所以只是类似，是因为当时怕牛肉太老，所以最后的裹汁环节只是淋上去，没有像今天一样再下锅收汁。
 
-![成品图：黑椒汁土豆烤肉粒](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204161451.jpg)
+![成品图：黑椒汁土豆烤肉粒](https://cdn.chengpeiquan.com/img/2022/02/20220204161451.jpg?x-oss-process=image/interlace,1)
 
 ## 主要食材
 
@@ -58,9 +58,9 @@ xiaohongshuId: 616992e70000000021039c1d
 
 把土豆和腌制好的肉丁都放进去，锡纸包住， 200 度恒温烤 20 分钟。
 
-![放一起包好](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204161445.jpg)
+![放一起包好](https://cdn.chengpeiquan.com/img/2022/02/20220204161445.jpg?x-oss-process=image/interlace,1)
 
-![包好放进去烤](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204161446.jpg)
+![包好放进去烤](https://cdn.chengpeiquan.com/img/2022/02/20220204161446.jpg?x-oss-process=image/interlace,1)
 
 ## 调制料汁
 
@@ -84,7 +84,7 @@ xiaohongshuId: 616992e70000000021039c1d
 
 加小半碗开水，拌匀备用。
 
-![调好的料汁](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204161447.jpg)
+![调好的料汁](https://cdn.chengpeiquan.com/img/2022/02/20220204161447.jpg?x-oss-process=image/interlace,1)
 
 ## 裹汁过程
 
@@ -92,21 +92,21 @@ xiaohongshuId: 616992e70000000021039c1d
 
 1、拆开锡纸，拿出来放盘子里比较好操作。
 
-![烤好的肉和土豆粒](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204161448.jpg)
+![烤好的肉和土豆粒](https://cdn.chengpeiquan.com/img/2022/02/20220204161448.jpg?x-oss-process=image/interlace,1)
 
 2、炒锅里加一点油润锅，300度小火把料汁倒进去加热，时不时推来推去，避免糊底
 
-![煮料汁](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204161449.jpg)
+![煮料汁](https://cdn.chengpeiquan.com/img/2022/02/20220204161449.jpg?x-oss-process=image/interlace,1)
 
 3、等料汁开始变粘稠，把烤好的土豆和肉丁倒进去，调到800度，不断翻炒均匀
 
-![下锅裹匀](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204161450.jpg)
+![下锅裹匀](https://cdn.chengpeiquan.com/img/2022/02/20220204161450.jpg?x-oss-process=image/interlace,1)
 
 4、上色均匀并且料汁开始变少，调到1300度不断翻炒，大火收汁，几秒后就可以关火了！
 
-![成品图](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204161452.jpg)
+![成品图](https://cdn.chengpeiquan.com/img/2022/02/20220204161452.jpg?x-oss-process=image/interlace,1)
 
-![好吃！！！](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204161453.jpg)
+![好吃！！！](https://cdn.chengpeiquan.com/img/2022/02/20220204161453.jpg?x-oss-process=image/interlace,1)
 
 别看都是0.3勺的用量好像不多，其实加起来也差不多有2勺…很够味！！！如果怕太重口可以适当在腌制环节减少一下用量，这个环节主要是给肉去腥和提一下口感。
 

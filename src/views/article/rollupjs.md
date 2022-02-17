@@ -3,7 +3,7 @@ title: JSSDK开发思路 基于RollupJS的经验记录
 desc: 虽然Rollup的推出时间应该是比Webpack早，但之前类库的工作都是公司其他前端部门负责维护，还真的没有去接触过它，直到最近自己要负责开发一个用于新业务线的JSBridge和JSLibrary，才对它有了一定的了解。
 keywords: rollup,rollupjs,rollup打包,rollup babel
 date: 2020-08-09 23:42:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/08/1.jpg
+cover: https://cdn.chengpeiquan.com/img/2020/08/1.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 ---
@@ -196,13 +196,13 @@ export default demo
 
 dist 文件夹是最终要发版的混淆压缩版，每个版本都有独立的归类；demo 文件夹是用于开发调试的，这里的是未混淆的版本。
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/08/1-1.jpg)
+![](https://cdn.chengpeiquan.com/img/2020/08/1-1.jpg?x-oss-process=image/interlace,1)
 
 切到 demo 这边，引入打包好的文件，即可通过 `demo.xxx` 来获取类库的能力。
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/08/1-2.jpg)
+![](https://cdn.chengpeiquan.com/img/2020/08/1-2.jpg?x-oss-process=image/interlace,1)
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/08/2.jpg)
+![](https://cdn.chengpeiquan.com/img/2020/08/2.jpg?x-oss-process=image/interlace,1)
 
 觉得 demo 这个变量没什么逼格？换成$试试……
 

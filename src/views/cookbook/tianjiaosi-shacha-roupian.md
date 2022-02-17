@@ -3,7 +3,7 @@ title: 省钱菜谱：6.2元的甜椒丝沙茶肉片（5min）
 desc: 哈哈哈哈哈哈我昨晚买到了一个咆哮的甜椒，对半切的时候没想到收获了表情包笑死了！去的晚没什么菜买，不过甜椒也不错，刚好适合中午带饭！！！
 keywords: 甜椒丝沙茶肉片,甜椒炒肉,沙茶炒肉
 date: 2021-11-09 13:28:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203171233.jpg
+cover: https://cdn.chengpeiquan.com/img/2022/02/20220203171233.jpg?x-oss-process=image/interlace,1
 categories:
   - thrift
   - bento
@@ -16,11 +16,11 @@ xiaohongshuId: 618a06fb0000000021035aea
 
 哈哈哈哈哈哈我昨晚买到了一个咆哮的甜椒，对半切的时候没想到收获了表情包笑死了！
 
-![表情包哈哈哈哈](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203171251.jpg)
+![表情包哈哈哈哈](https://cdn.chengpeiquan.com/img/2022/02/20220203171251.jpg?x-oss-process=image/interlace,1)
 
 去的晚没什么菜买，不过甜椒也不错，刚好适合中午带饭！！！
 
-![成品图：甜椒丝沙茶肉片](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203171257.jpg)
+![成品图：甜椒丝沙茶肉片](https://cdn.chengpeiquan.com/img/2022/02/20220203171257.jpg?x-oss-process=image/interlace,1)
 
 ## 主要食材
 
@@ -40,22 +40,22 @@ xiaohongshuId: 618a06fb0000000021035aea
 
 3、沙茶酱1.5勺，加1勺水稍微兑一下，有点浓稠的感觉就好，不用太稀
 
-![准备好的材料](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203171252.jpg)
+![准备好的材料](https://cdn.chengpeiquan.com/img/2022/02/20220203171252.jpg?x-oss-process=image/interlace,1)
 
 ## 烹饪过程
 
 1、一点油热锅，油温上来了先把肉片炒熟，加一点盐调味，盛到沙茶酱的碗里拌匀
 
-![炒肉](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203171253.jpg)
+![炒肉](https://cdn.chengpeiquan.com/img/2022/02/20220203171253.jpg?x-oss-process=image/interlace,1)
 
-![拌匀，简单腌制](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203171254.jpg)
+![拌匀，简单腌制](https://cdn.chengpeiquan.com/img/2022/02/20220203171254.jpg?x-oss-process=image/interlace,1)
 
 2、甜椒炒熟，加一点盐调味
 
-![炒甜椒](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203171255.jpg)
+![炒甜椒](https://cdn.chengpeiquan.com/img/2022/02/20220203171255.jpg?x-oss-process=image/interlace,1)
 
 3、把沙茶肉片倒进去炒匀就可以了
 
-![炒匀即可](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203171256.jpg)
+![炒匀即可](https://cdn.chengpeiquan.com/img/2022/02/20220203171256.jpg?x-oss-process=image/interlace,1)
 
 小时候我不怎么爱吃甜椒的，不过现在倒是很喜欢，我感觉沙茶酱的功劳最大哈哈哈哈！！！

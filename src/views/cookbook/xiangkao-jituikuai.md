@@ -3,7 +3,7 @@ title: 省钱菜谱：4.3元的香烤鸡腿块（18min）
 desc: 今天深圳还在下雨，早上出门的时候风特别大，然后我今天循环了一天BEYOND的歌，93年不插电版本的《海阔天空》live在这个天气里听，特别有感觉！昨晚提前腌制了鸡腿，今晚拿出来烤了，空气炸锅真是方便快捷！
 keywords: 香烤鸡腿块,鸡腿块,烤鸡
 date: 2021-10-14 00:11:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204164906.jpg
+cover: https://cdn.chengpeiquan.com/img/2022/02/20220204164906.jpg?x-oss-process=image/interlace,1
 categories:
   - thrift
   - bento
@@ -18,13 +18,13 @@ xiaohongshuId: 6167054d000000000102ed52
 
 昨晚提前腌制了鸡腿，今晚拿出来烤了，空气炸锅真是方便快捷！
 
-![成品图：香烤鸡腿块](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204164925.jpg)
+![成品图：香烤鸡腿块](https://cdn.chengpeiquan.com/img/2022/02/20220204164925.jpg?x-oss-process=image/interlace,1)
 
 ## 主要食材
 
 鸡腿 2 个，我周末在猫超买的是冷冻琵琶腿， 6.46 元 / 盒，一盒有 3 只，分 3 次做菜每次 2 个，所以今天大约 4.3 元。
 
-![鸡腿](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204164919.jpg)
+![鸡腿](https://cdn.chengpeiquan.com/img/2022/02/20220204164919.jpg?x-oss-process=image/interlace,1)
 
 ## 调制料汁
 
@@ -56,11 +56,11 @@ xiaohongshuId: 6167054d000000000102ed52
 
 3、放进冰箱冷藏一晚上
 
-![洗净剁块](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204164921.jpg)
+![洗净剁块](https://cdn.chengpeiquan.com/img/2022/02/20220204164921.jpg?x-oss-process=image/interlace,1)
 
-![腌制](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204164922.jpg)
+![腌制](https://cdn.chengpeiquan.com/img/2022/02/20220204164922.jpg?x-oss-process=image/interlace,1)
 
-![抓匀](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204164923.jpg)
+![抓匀](https://cdn.chengpeiquan.com/img/2022/02/20220204164923.jpg?x-oss-process=image/interlace,1)
 
 ## 烤鸡过程
 
@@ -68,8 +68,8 @@ xiaohongshuId: 6167054d000000000102ed52
 
 烤箱的话，时间基本上是要翻倍才行。
 
-![准备烤](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204164920.jpg)
+![准备烤](https://cdn.chengpeiquan.com/img/2022/02/20220204164920.jpg?x-oss-process=image/interlace,1)
 
-![烤好出炉](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204164924.jpg)
+![烤好出炉](https://cdn.chengpeiquan.com/img/2022/02/20220204164924.jpg?x-oss-process=image/interlace,1)
 
-![好吃](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204164926.jpg)
+![好吃](https://cdn.chengpeiquan.com/img/2022/02/20220204164926.jpg?x-oss-process=image/interlace,1)

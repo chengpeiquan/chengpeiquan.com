@@ -3,7 +3,7 @@ title: 接口设计：从前端开发的角度谈一谈接口规范
 desc: 从前端的角度，以一个接口消费者的身份来谈一谈如何设计一套比较合理的接口，本文主要分为两部分：“接口的基本数据格式”和“接口的业务数据格式”。本文的目的是想减少前后端对接过程中产生的沟通问题，还有优化一些可以避免的错误，甚至于你可以不提供接口文档，前端也能快速上手你的接口。
 keywords: 接口设计,接口格式,接口规范
 date: 2020-02-17 01:01:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/02/1.jpg
+cover: https://cdn.chengpeiquan.com/img/2020/02/1.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
   - design
@@ -173,9 +173,9 @@ key 是用来读取指定数据的标识，**在 JSON 的格式规范中，统�
 ```json
 {
   "pictures": [
-    "https://example.com/111.jpg",
-    "https://example.com/222.jpg",
-    "https://example.com/333.jpg"
+    "https://example.com/111.jpg?x-oss-process=image/interlace,1",
+    "https://example.com/222.jpg?x-oss-process=image/interlace,1",
+    "https://example.com/333.jpg?x-oss-process=image/interlace,1"
   ]
 }
 ```
@@ -272,7 +272,7 @@ if ('key' in data) {
 
 以腾讯新闻为例，它包含了“首页推荐”、“搜索结果页”、“专题聚合页”、“热点聚合页”等不同页面，但这些页面都包含了相同的模块 —— “新闻列表”。
 
-![新闻列表](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/02/20210216230213.jpg)
+![新闻列表](https://cdn.chengpeiquan.com/img/2020/02/20210216230213.jpg?x-oss-process=image/interlace,1)
 
 可以看出，“新闻列表”这个模块，每个新闻基本上都是包含了“新闻标题”、“新闻来源”、“评论数”、“发布时间”以及“缩略图（1 - 3 张）”这几个数据信息，那么在指定接口格式的时候，这一部分最好就要统一起来：
 
@@ -286,9 +286,9 @@ if ('key' in data) {
       "commentCount": 1234,
       "createTime": 1581850220403,
       "thumbs": [
-        "https://example.com/111.jpg",
-        "https://example.com/222.jpg",
-        "https://example.com/333.jpg"
+        "https://example.com/111.jpg?x-oss-process=image/interlace,1",
+        "https://example.com/222.jpg?x-oss-process=image/interlace,1",
+        "https://example.com/333.jpg?x-oss-process=image/interlace,1"
       ]
     },
     {
@@ -297,7 +297,7 @@ if ('key' in data) {
       "source": "人民日报",
       "commentCount": 2333,
       "createTime": 1581850528657,
-      "thumbs": ["https://example.com/444.jpg"]
+      "thumbs": ["https://example.com/444.jpg?x-oss-process=image/interlace,1"]
     }
   ]
 }

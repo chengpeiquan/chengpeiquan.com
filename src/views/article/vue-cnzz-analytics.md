@@ -3,7 +3,7 @@ title: vue-cnzz-analytics 基于Vue SPA项目的友盟CNZZ统计插件（支持V
 desc: 一个专为SPA项目开发的友盟统计插件，支持Vue 3.0以及2.0版本同时使用，也可用于VuePress项目，支持在路由切换时，自动上报流量数据等功能。
 keywords: cnzz,vue cnzz,vue umeng,vue analytics,spa analytics,cnzz统计,umeng统计,友盟统计,vuepress统计,vuepress cnzz统计
 date: 2021-01-08 22:37:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/08/1-3.jpg
+cover: https://cdn.chengpeiquan.com/img/2020/08/1-3.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 repo: https://github.com/analyticsjs/vue-cnzz-analytics

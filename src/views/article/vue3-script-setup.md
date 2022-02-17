@@ -3,7 +3,7 @@ title: 聊一聊Vue3.0的script-setup 以及全新的props/emits专属API
 desc: 今天想聊一聊 Vue 3.0 的 script-setup，以及目前三个很少被提及到的 API —— defineProps 、 defineEmit 和 useContext。截止到我撰写本文，它们在 Vue 3.0 的官网都还没有相关的用法说明，因为目前还属于实验性的新特性，什么时候会并入正式轨道，时间上还不清楚，但事实上在项目里已经可以使用起来了，自己体验了一段时间，真的爽！！！
 keywords: script setup,vue 3.0 script setup,vue3 script setup,script setup prop,script setup emit,defineProps,vue 3.0 defineProps,vue defineProps,vue3 defineProps,prop defineProps,setup defineProps,defineEmit,vue 3.0 defineEmit,vue defineEmit,vue3 defineEmit,emit defineEmit,setup defineEmit,useContext,vue 3.0 useContext,vue useContext,vue3 useContext,setup useContext
 date: 2021-03-05 00:48:13
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210305211036.jpg
+cover: https://cdn.chengpeiquan.com/img/2021/02/20210305211036.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 repo: https://github.com/chengpeiquan/learning-vue3
@@ -113,7 +113,7 @@ Vue 会通过单组件编译器，在编译的时候将其处理回标准组件�
 
 通常我们为了避免一个页面（父组件）写的又长又臭，会根据布局/功能模块，把页面切割为不同的小模块（子组件），最后再像搭积木一样把它搭回来，完成我们的作品，我画了一个示例图，就是下面这样子：
 
-![每一个“积木”都是一个组件](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/01/20210303180727.png)
+![每一个“积木”都是一个组件](https://cdn.chengpeiquan.com/img/2021/01/20210303180727.png)
 
 比如上面是一个 home.vue , 它包含了 Header.vue / Footer.vue / Content.vue / Sidebar.vue 等子组件，如果此时页面上有一个公共的数据，有多个子组件都需要用到的话，就没有必要在诸如 Content / Sidebar 里分别获取或者定义了，而是在父组件 home 里面处理好后，传递给子组件使用。
 

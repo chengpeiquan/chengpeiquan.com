@@ -3,7 +3,7 @@ title: 电影故障抖动视觉效果实现：对大话手游愚人节专题的�
 desc: 前几天愚人节的时候，大话手游官网上了一个专题，里面很多图片位置都使用了一个类似电影那种画面抖动的效果（目前只剩下一个slogan了，其他都下线了），很好奇是怎么实现的，于是扒了一下页面的源码，了解了一些实现思路，整理一下以后可能会用到。
 keywords: 抖屏效果
 date: 2020-04-20 23:47:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/04/1.jpg
+cover: https://cdn.chengpeiquan.com/img/2020/04/1.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 repo: https://github.com/chengpeiquan/canvas-movie-jitter-effect
@@ -15,7 +15,7 @@ repo: https://github.com/chengpeiquan/canvas-movie-jitter-effect
 
 ## 效果
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/04/1.gif)
+![](https://cdn.chengpeiquan.com/img/2020/04/1.gif)
 
 ## 起因
 
@@ -39,7 +39,7 @@ repo: https://github.com/chengpeiquan/canvas-movie-jitter-effect
 
 我开始以为是用的视频，因为按网易游戏以往的尿性来说，营销页面上的动态类主视觉基本都是用视频来实现的…那么要怎么看实现方法呢？当然是看 DOM 啊！
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/04/1-1.jpg)
+![](https://cdn.chengpeiquan.com/img/2020/04/1-1.jpg?x-oss-process=image/interlace,1)
 
 所以，用的是 canvas，那就有趣了！还好不是视频，直接弄个视频引入的话也就没这篇文章什么事了…
 
@@ -47,11 +47,11 @@ canvas 的动画效果，都是一帧一帧的定时走出来的，这说明素�
 
 接下来就找素材了，这种效果的素材，基本上都是图片，找图片的过程就比较简单了，作为主视觉上这么大的 slogan，结合刚刚查看 DOM 的时候，你发现那个地方的 className 就叫 slogan，那么对应的素材命名，肯定也跟 slogan 有关，单刀直入切到 img，搜索 slogan 关键词，全都出来了。
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/04/2.jpg)
+![](https://cdn.chengpeiquan.com/img/2020/04/2.jpg?x-oss-process=image/interlace,1)
 
 可以看出他们是把整个动画过程的每一帧，都处理了一张图片素材，我们先把素材弄下来。
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/04/3.jpg)
+![](https://cdn.chengpeiquan.com/img/2020/04/3.jpg?x-oss-process=image/interlace,1)
 
 一共有 30 帧，30 张一样尺寸的素材，现在素材有了，接下来就可以开始尝试效果复原。
 
@@ -216,9 +216,9 @@ canvas 的动画效果，都是一帧一帧的定时走出来的，这说明素�
 
 终于来到一开头提到的 canvas 实现方案了。大话官网专题，我看了一下源代码，虽然代码被混淆，但还是可以看出，应该是通过引入插件来实现的。
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/04/4.jpg)
+![](https://cdn.chengpeiquan.com/img/2020/04/4.jpg?x-oss-process=image/interlace,1)
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/04/5.jpg)
+![](https://cdn.chengpeiquan.com/img/2020/04/5.jpg?x-oss-process=image/interlace,1)
 
 我们自己写其实也不难，因为知道了本身的实现套路（有逐帧素材，然后通过逐帧逐帧去绘制渲染出来），那就可以着手编写代码了。
 

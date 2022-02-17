@@ -3,7 +3,7 @@ title: 让你在编写 JavaScript 的时候也能享受 TypeScript 的类型检�
 desc: 现在前端没有几个不写 TypeScript 了吧，但是有时候还是不得不写 JS ，比如我最近写脚手架的时候，代码是直接跑在 Node Runtime 里，没有编译环节，所以用的依然还是 JavaScript 。然而，发现离开了类型限制之后，感觉要写很多注释才能保证一个项目的完整性，就很烦…
 keywords: javascript type,js type,javascript with typescript
 date: 2022-01-19 14:42:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/11/20220119155350.jpg
+cover: https://cdn.chengpeiquan.com/img/2021/11/20220119155350.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 ---
@@ -110,11 +110,11 @@ const greet = (name) => `Hello, ${name}!`
 
 你在调用这个函数的时候，就可以通过 VSCode 的提示轻松了解它的入参、返回都是些什么格式要求。
 
-![VSCode 提示](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/11/20220119153103.jpg)
+![VSCode 提示](https://cdn.chengpeiquan.com/img/2021/11/20220119153103.jpg?x-oss-process=image/interlace,1)
 
 如果你不按照要求传入对应的数据类型， ESLint 会给你提示报错，太爽了！！！
 
-![哈哈哈哈报错了！](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/11/20220119155720.jpg)
+![哈哈哈哈报错了！](https://cdn.chengpeiquan.com/img/2021/11/20220119155720.jpg?x-oss-process=image/interlace,1)
 
 联合类型也是可以写在里面，还有像数组、对象的格式也支持。
 
@@ -130,7 +130,7 @@ const greet = (name) => `Hello, ${name}!`
 const greet = ({ action, name }) => `${action}, ${name}!`
 ```
 
-![对象的注释也可以清晰提示](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/11/20220119153658.jpg)
+![对象的注释也可以清晰提示](https://cdn.chengpeiquan.com/img/2021/11/20220119153658.jpg?x-oss-process=image/interlace,1)
 
 关于如何编写注释来定义类型可以参考 TS 官网的这篇文章：[Type Checking JavaScript Files](https://www.typescriptlang.org/docs/handbook/type-checking-javascript-files.html) 。
 
@@ -140,7 +140,7 @@ const greet = ({ action, name }) => `${action}, ${name}!`
 
 首先梳理一下自己的目录，建立一个 `types` 文件夹和 `index.d.ts` 文件。
 
-![目录结构](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/11/20220119150609.jpg)
+![目录结构](https://cdn.chengpeiquan.com/img/2021/11/20220119150609.jpg?x-oss-process=image/interlace,1)
 
 里面的类型都需要导出：
 

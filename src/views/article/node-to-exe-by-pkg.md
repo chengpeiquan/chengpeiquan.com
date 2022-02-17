@@ -3,7 +3,7 @@ title: 把node脚本打包成exe文件 在无node环境的机器上运行
 desc: 有时候做的一些活动页面，会涉及到数据存储，虽然有一套公共业务接口，具备对应的数据导出，但是活动这种东西，一向没有那么中规中矩，总会有那么几次无法用公共接口来满足，遇到一些需要定制的情况，在赶工期的时候就只能是先满足数据录入需要部分，保证顺利上线，至于数据的导出，那往往是不在考虑范围的。
 keywords: node打包exe,js打包exe,pkg如何使用
 date: 2019-10-02 10:48:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2019/10/1.jpg
+cover: https://cdn.chengpeiquan.com/img/2019/10/1.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 ---
@@ -16,7 +16,7 @@ categories:
 
 脚本怎么写就不说啦，主要是说一下最后怎么分享出去，毕竟我们写的时候都是基于 node 环境，npm 各种包，再 npm run xxxxx 运行，不可能也让每个运营同学都安装一遍 node 吧！最不济的，还要把 node 主程序放到项目文件夹里，像下面这样，把 start.js 拖到 node.exe 上面运行，但也是很难受的一堆文件，如果被手痒改了里面的文件内容，报错了你还要去修 - -。
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210216230555.jpg)
+![](https://cdn.chengpeiquan.com/img/2021/02/20210216230555.jpg?x-oss-process=image/interlace,1)
 
 不过 node 这么万能，肯定有他自己的解决办法，那就是直接打包成一个可运行的程序，比如 Windows 的 exe 文件，目前亲测好用的就是一个 pkg 包，操作简单，效果靠谱，还支持 MacOS 和 Linux 平台的文件打包。
 
@@ -42,6 +42,6 @@ pkg start.js
 
 对比原来一堆文件的文件夹，现在就只需要变成简洁的工具目录，可太友好了：
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210216230610.jpg)
+![](https://cdn.chengpeiquan.com/img/2021/02/20210216230610.jpg?x-oss-process=image/interlace,1)
 
 直接双击 start.exe，即可运行脚本，读取 log 文件夹的 log 文件，生成 result.xlsx 结果文件（根据实际需求调整目录结构）。

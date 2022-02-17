@@ -3,7 +3,7 @@ title: 基于lnmp配置WordPress的Nginx伪静态方法
 desc: Nginx配置rewrite，基于lnmp搭建的话，其实配置起来非常简单，只需要在lnmp上输入几个简单的指令就可以把域名和伪静态类型关联上，重启Nginx后直接生效~
 keywords: wordpress,rewrite,nginx,lnmp
 date: 2018-09-06 01:43:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/09/1-2.jpg
+cover: https://cdn.chengpeiquan.com/img/2018/09/1-2.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 ---

@@ -7,7 +7,7 @@
         <a href="https://vue3.chengpeiquan.com/" target="_blank">
           <img
             class="w-full"
-            src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/01/1-1.jpg"
+            src="https://cdn.chengpeiquan.com/img/2021/01/1-1.jpg?x-oss-process=image/interlace,1"
             alt="Vue3.0学习教程与实战案例"
           />
         </a>
@@ -66,7 +66,7 @@
         <a href="https://vue3.chengpeiquan.com/" target="_blank">
           <img
             class="w-full"
-            src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/07/20210703235057.jpg"
+            src="https://cdn.chengpeiquan.com/img/2021/07/20210703235057.jpg?x-oss-process=image/interlace,1"
             alt="扫码关注我的抖音号"
           />
         </a>

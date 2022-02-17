@@ -3,7 +3,7 @@ title: 省钱菜单：香脆又香甜！香菇猪肉玉米煎饺太好吃了！
 desc: 耶耶耶！昨晚的香菇玉米猪肉饺子煎出来太好吃了！！！虽然玉米饺子贵一点，不过这一大碗也就11块钱，自己包饺子划算太多了！
 keywords: 香菇猪肉玉米煎饺,玉米饺子,玉米煎饺
 date: 2021-12-20 20:41:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220108014330.jpg
+cover: https://cdn.chengpeiquan.com/img/2022/01/20220108014330.jpg?x-oss-process=image/interlace,1
 categories:
   - thrift
   - bento
@@ -20,7 +20,7 @@ cite:
 
 耶耶耶！昨晚的香菇玉米猪肉饺子煎出来太好吃了！！！虽然玉米饺子贵一点，不过这一大碗也就11块钱，自己包饺子划算太多了！
 
-![成品图：香菇猪肉玉米煎饺](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220108014435.jpg)
+![成品图：香菇猪肉玉米煎饺](https://cdn.chengpeiquan.com/img/2022/01/20220108014435.jpg?x-oss-process=image/interlace,1)
 
 ## 相关菜谱
 
@@ -28,10 +28,10 @@ cite:
 
 ## 煎饺过程
 
-![煎饺](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220108014433.jpg)
+![煎饺](https://cdn.chengpeiquan.com/img/2022/01/20220108014433.jpg?x-oss-process=image/interlace,1)
 
-![嗷嗷嗷好好吃](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220108014434.jpg)
+![嗷嗷嗷好好吃](https://cdn.chengpeiquan.com/img/2022/01/20220108014434.jpg?x-oss-process=image/interlace,1)
 
-![煎好了](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220108014436.jpg)
+![煎好了](https://cdn.chengpeiquan.com/img/2022/01/20220108014436.jpg?x-oss-process=image/interlace,1)
 
 

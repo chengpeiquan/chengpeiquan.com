@@ -3,7 +3,7 @@ title: 省钱菜谱：4.3元的鲜嫩多汁炸鸡腿（15min）
 desc: 用空气炸锅炸出来的鸡腿特别好吃，跟麦当劳的那个麦麦脆汁鸡腿很像，都是外层金黄酥脆，但是咬开却鲜嫩多汁！当然调味方面我比较简单，没有麦当劳那么复杂（emm懒就直说），但是也很好吃！
 keywords: 鲜嫩多汁炸鸡腿,脆皮炸鸡腿
 date: 2021-10-21 13:33:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204003700.jpg
+cover: https://cdn.chengpeiquan.com/img/2022/02/20220204003700.jpg?x-oss-process=image/interlace,1
 categories:
   - thrift
   - bento
@@ -18,7 +18,7 @@ xiaohongshuId: 6170fbb40000000021039299
 
 用空气炸锅炸出来的鸡腿特别好吃，跟麦当劳的那个麦麦脆汁鸡腿很像，都是外层金黄酥脆，但是咬开却鲜嫩多汁！当然调味方面我比较简单，没有麦当劳那么复杂（emm懒就直说），但是也很好吃！
 
-![成品图：鲜嫩多汁炸鸡腿](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204003826.jpg)
+![成品图：鲜嫩多汁炸鸡腿](https://cdn.chengpeiquan.com/img/2022/02/20220204003826.jpg?x-oss-process=image/interlace,1)
 
 ## 主要食材
 
@@ -36,7 +36,7 @@ xiaohongshuId: 6170fbb40000000021039299
 
 鸡腿买的冻品6.46元有3只，这里用了2只就4.3元（哈哈哈一开始算错价格了！！！）
 
-![我用的蟹皇面调味包](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204003819.jpg)
+![我用的蟹皇面调味包](https://cdn.chengpeiquan.com/img/2022/02/20220204003819.jpg?x-oss-process=image/interlace,1)
 
 ## 腌制鸡腿
 
@@ -48,7 +48,7 @@ xiaohongshuId: 6170fbb40000000021039299
 
 放冷藏腌制一晚上，第二天再做。
 
-![腌制鸡腿](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204003821.jpg)
+![腌制鸡腿](https://cdn.chengpeiquan.com/img/2022/02/20220204003821.jpg?x-oss-process=image/interlace,1)
 
 ## 炸鸡过程
 
@@ -58,24 +58,24 @@ xiaohongshuId: 6170fbb40000000021039299
 
 2、裹上面包糠，这一步是为了做出脆皮效果
 
-![裹粉，裹面包糠](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204003822.jpg)
+![裹粉，裹面包糠](https://cdn.chengpeiquan.com/img/2022/02/20220204003822.jpg?x-oss-process=image/interlace,1)
 
 空气炸锅200度恒温，烤15分钟，搞定（我今晚的鸡腿不是很大，所以可以完全熟透，大鸡腿记得自己延长时间哦！！！）。
 
-![炸之前](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204003823.jpg)
+![炸之前](https://cdn.chengpeiquan.com/img/2022/02/20220204003823.jpg?x-oss-process=image/interlace,1)
 
-![炸好后](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204003820.jpg)
+![炸好后](https://cdn.chengpeiquan.com/img/2022/02/20220204003820.jpg?x-oss-process=image/interlace,1)
 
 ## 成品展示
 
 这道菜没啥难度哈哈哈哈，简直就是传说中的“啥事不干，坐等吃饭”，很适合新手和懒人！
 
-![爱你的形状哈哈哈](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204003830.jpg)
+![爱你的形状哈哈哈](https://cdn.chengpeiquan.com/img/2022/02/20220204003830.jpg?x-oss-process=image/interlace,1)
 
-![非常成功](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204003825.jpg)
+![非常成功](https://cdn.chengpeiquan.com/img/2022/02/20220204003825.jpg?x-oss-process=image/interlace,1)
 
-![非常好吃](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204003827.jpg)
+![非常好吃](https://cdn.chengpeiquan.com/img/2022/02/20220204003827.jpg?x-oss-process=image/interlace,1)
 
-![肉质很嫩](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204003829.jpg)
+![肉质很嫩](https://cdn.chengpeiquan.com/img/2022/02/20220204003829.jpg?x-oss-process=image/interlace,1)
 
-![全部啃完](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204003828.jpg)
+![全部啃完](https://cdn.chengpeiquan.com/img/2022/02/20220204003828.jpg?x-oss-process=image/interlace,1)

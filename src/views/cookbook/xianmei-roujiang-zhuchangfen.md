@@ -3,7 +3,7 @@ title: 省钱菜谱：3.3元的鲜美肉酱猪肠粉（5min）
 desc: 今晚看到档口还有最后一份猪肠粉，又馋小吃了，哈哈哈买了做了个肉酱猪肠粉当晚餐！7点多就吃完晚餐了，因为朋友准备领养两只小奶猫，在给她分享一些养猫的事情，所以耽搁到现在才来发哈哈哈哈！你们都睡了吧，我也准备发完就睡觉！
 keywords: 鲜美肉酱猪肠粉,猪肠粉,肉酱猪肠粉
 date: 2021-10-14 00:11:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204170111.jpg
+cover: https://cdn.chengpeiquan.com/img/2022/02/20220204170111.jpg?x-oss-process=image/interlace,1
 categories:
   - thrift
   - bento
@@ -22,7 +22,7 @@ cite:
 
 安利一首适合睡前听的曲子，王三溥的《我们的太阳（钢琴版）》，三哥是一个不太为人所知的音乐巨人，他的作品编曲都非常精致，虽然当初入坑是他那首死嗓唱腔的《命运之匙》，但听了他的其他作品才发现写的最多的其实是安安静静的纯音乐，有个评价是专门写他的：“左手新古典，右手金属，踽踽行于音乐旅途”。
 
-![成品图：鲜美肉酱猪肠粉](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204170127.jpg)
+![成品图：鲜美肉酱猪肠粉](https://cdn.chengpeiquan.com/img/2022/02/20220204170127.jpg?x-oss-process=image/interlace,1)
 
 ## 主要食材
 
@@ -60,26 +60,26 @@ cite:
 
 4、调料混合一起，做成料汁备用
 
-![准备好的食材](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204170123.jpg)
+![准备好的食材](https://cdn.chengpeiquan.com/img/2022/02/20220204170123.jpg?x-oss-process=image/interlace,1)
 
 ## 制作过程
 
 1、第一步挺简单的，炒锅倒点油润锅，然后把猪肠粉倒进去慢慢煎一下，不用加啥酱料，煎到表层有一层煎出来的效果（emm词穷，看图感受一下吧哈哈哈哈），就可以装碗里了
 
-![煎猪肠粉](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204170124.jpg)
+![煎猪肠粉](https://cdn.chengpeiquan.com/img/2022/02/20220204170124.jpg?x-oss-process=image/interlace,1)
 
-![煎好的样子](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204170125.jpg)
+![煎好的样子](https://cdn.chengpeiquan.com/img/2022/02/20220204170125.jpg?x-oss-process=image/interlace,1)
 
 2、第二步就更简单了，肉末炒熟，把葱花和那半碗料汁倒进去一起煮一会，因为加了淀粉，所以会有一点点勾芡的效果，你感觉出稍微有点粘稠的感觉了，就可以关火了
 
-![炒制肉酱](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204170126.jpg)
+![炒制肉酱](https://cdn.chengpeiquan.com/img/2022/02/20220204170126.jpg?x-oss-process=image/interlace,1)
 
 然后把煮好的肉酱汁淋上去就搞定！
 
-![淋上肉酱搞定](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204170128.jpg)
+![淋上肉酱搞定](https://cdn.chengpeiquan.com/img/2022/02/20220204170128.jpg?x-oss-process=image/interlace,1)
 
 这个做法，因为猪肠粉煎过，所以它的口感和平时点外卖买的小吃很不一样，平时应该都是蒸熟的我记得。搭配我自己调的这个料汁，特别好吃！
 
-![好好吃](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204170129.jpg)
+![好好吃](https://cdn.chengpeiquan.com/img/2022/02/20220204170129.jpg?x-oss-process=image/interlace,1)
 
 料汁因为加了老抽和白砂糖，对比单纯加生抽，会带有一点点甜味，如果喜欢纯咸味的话，白砂糖可以去掉，但我觉得搭配一点点白糖，整个料汁会显得更鲜美！

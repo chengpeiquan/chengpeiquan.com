@@ -3,7 +3,7 @@ title: 省钱菜谱：3.5元的内柔外刚煎鸡胸肉片（5min）
 desc: 今晚试了一个鸡胸肉的新做法，平时煎鸡胸肉比较让人纠结的就是口感比较柴，今晚这个做法虽然很小众（不敢说完全没有人这样搞哈哈哈），口感很不一样！外层是焦香的煎鸡肉，内层却超嫩有汁，就是这么神奇！
 keywords: 鸡胸肉,煎鸡胸肉,鸡胸肉做法,上班族带饭,空气炸锅食谱
 date: 2021-12-28 23:13:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/12/20211230010054.jpg
+cover: https://cdn.chengpeiquan.com/img/2021/12/20211230010054.jpg?x-oss-process=image/interlace,1
 categories:
   - thrift
   - bento
@@ -18,7 +18,7 @@ xiaohongshuId: 61cb297d0000000001028272
 
 今晚试了一个鸡胸肉的新做法，平时煎鸡胸肉比较让人纠结的就是口感比较柴，今晚这个做法虽然很小众（不敢说完全没有人这样搞哈哈哈），口感很不一样！外层是焦香的煎鸡肉，内层却超嫩有汁，就是这么神奇！
 
-![成品图：内柔外刚煎鸡胸肉片](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/12/20211230010429.jpg)
+![成品图：内柔外刚煎鸡胸肉片](https://cdn.chengpeiquan.com/img/2021/12/20211230010429.jpg?x-oss-process=image/interlace,1)
 
 ## 主要食材
 
@@ -30,7 +30,7 @@ xiaohongshuId: 61cb297d0000000001028272
 
 另外准备多一把厨房剪刀，用来剪熟食用的，没有的话那就要拿砧板和刀，等会还要多洗一套厨具了。
 
-![方便面调味包和厨房剪刀](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/12/20211230010424.jpg)
+![方便面调味包和厨房剪刀](https://cdn.chengpeiquan.com/img/2021/12/20211230010424.jpg?x-oss-process=image/interlace,1)
 
 ## 准备过程
 
@@ -40,17 +40,17 @@ xiaohongshuId: 61cb297d0000000001028272
 
 3、料酒0.3勺，加上调料包，抹匀，提前腌制一晚上
 
-![腌制好的鸡胸肉](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/12/20211230010425.jpg)
+![腌制好的鸡胸肉](https://cdn.chengpeiquan.com/img/2021/12/20211230010425.jpg?x-oss-process=image/interlace,1)
 
 ## 烹饪过程
 
 1、给腌制好的鸡胸肉撒上一层炸鸡粉，薄薄一层就可以，用来锁住鸡胸肉里面的水份，也是避免腌制鸡胸肉的时候有些料汁，等下下锅会溅油
 
-![裹粉后的鸡胸肉](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/12/20211230010426.jpg)
+![裹粉后的鸡胸肉](https://cdn.chengpeiquan.com/img/2021/12/20211230010426.jpg?x-oss-process=image/interlace,1)
 
 2、炒锅加入一点油热锅，别看很厚的鸡胸，我们只是煎的，所以油量不需要特别多
 
-![油量不需要特别多](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/12/20211230010427.jpg)
+![油量不需要特别多](https://cdn.chengpeiquan.com/img/2021/12/20211230010427.jpg?x-oss-process=image/interlace,1)
 
 3、油温上来了，放入鸡胸肉，先把表面煎到焦焦的感觉，翻面多煎一会
 
@@ -60,12 +60,12 @@ xiaohongshuId: 61cb297d0000000001028272
 
 最后撒上一层辣椒粉、孜然粉，超好吃！！！
 
-![撒了辣椒粉的鸡胸肉片](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/12/20211230010428.jpg)
+![撒了辣椒粉的鸡胸肉片](https://cdn.chengpeiquan.com/img/2021/12/20211230010428.jpg?x-oss-process=image/interlace,1)
 
 咬开，里面超级嫩！
 
-![外焦里嫩](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/12/20211230010431.jpg)
+![外焦里嫩](https://cdn.chengpeiquan.com/img/2021/12/20211230010431.jpg?x-oss-process=image/interlace,1)
 
-![嫩嫩的切面](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/12/20211230010430.jpg)
+![嫩嫩的切面](https://cdn.chengpeiquan.com/img/2021/12/20211230010430.jpg?x-oss-process=image/interlace,1)
 
 不仅简单，而且适合上班带饭！

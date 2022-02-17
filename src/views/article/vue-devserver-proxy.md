@@ -3,7 +3,7 @@ title: 基于Vue-CLI 3.0配置webpack的跨域限制代理功能devServer.proxy
 desc: 接口跨域一直是个头疼的问题，之前的业务页面都基于一套限制比较少的接口在交互，所以大部分还是写完静态页面然后替换数据部分，直接打包到测试环境即可，所以一直不太在意本地调试的问题。
 keywords: vue跨域,webpack跨域
 date: 2019-03-08 11:10:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2019/03/1-1.jpg
+cover: https://cdn.chengpeiquan.com/img/2019/03/1-1.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 ---
@@ -26,7 +26,7 @@ categories:
 
 1、以下的所有方式，调试的时候都是 npm run serve 启动本机测试服，打包的时候都是 npm run build 跟平时一样打包。
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2019/03/2-1.jpg)
+![](https://cdn.chengpeiquan.com/img/2019/03/2-1.jpg?x-oss-process=image/interlace,1)
 
 2、配置的 proxy 指向，在项目文件里的请求必须都是相对地址，不能是以 http/https 开头的绝对地址，只有相对地址才会发起代理请求。
 

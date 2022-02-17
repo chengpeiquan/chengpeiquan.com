@@ -3,7 +3,7 @@ title: 省钱菜谱：3.09元的蒜香烤鸡腿扒（15min）
 desc: 是我前天晚餐和昨天的午餐和晚餐，蒸饺和煎饺都好吃哈哈哈哈！想做这个是因为那天买的芋头太大个了，剩下的感觉要吃好久，干脆包成饺子！也是潮汕这边比较常见的小吃用料，这个做法是沿袭了我家那边的芋粿、芋丝球（芋丸）、芋丝糕等小吃的做法，做了一点调整。
 keywords: 蒜香烤鸡扒,蒜香鸡扒,烤鸡腿扒
 date: 2022-02-04 20:12:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204215537.jpg
+cover: https://cdn.chengpeiquan.com/img/2022/02/20220204215537.jpg?x-oss-process=image/interlace,1
 categories:
   - thrift
   - bento
@@ -22,7 +22,7 @@ xiaohongshuId: 61fd1ebb0000000001028d75
 
 说回今天的腿扒，今天没有用煎的方式来做，空气炸锅烤的，不用油（香油算调味品不算油吧哈哈哈哈）。
 
-![成品图：蒜香烤鸡腿扒](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204215359.jpg)
+![成品图：蒜香烤鸡腿扒](https://cdn.chengpeiquan.com/img/2022/02/20220204215359.jpg?x-oss-process=image/interlace,1)
 
 ## 主要食材
 
@@ -40,23 +40,23 @@ xiaohongshuId: 61fd1ebb0000000001028d75
 
 8、生粉，用量和盐一样（适当锁住蒜香和水份）
 
-![用了这个量的蒜头](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204215353.jpg)
+![用了这个量的蒜头](https://cdn.chengpeiquan.com/img/2022/02/20220204215353.jpg?x-oss-process=image/interlace,1)
 
 ## 腌制过程
 
 1、腿扒是冻的，泡水解冻顺便泡出血水，用厨房剪刀剔骨，洗净
 
-![腿扒剔骨](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204215352.jpg)
+![腿扒剔骨](https://cdn.chengpeiquan.com/img/2022/02/20220204215352.jpg?x-oss-process=image/interlace,1)
 
 2、蒜头拍碎，去皮，剁成蒜末，不需要很细腻
 
-![剁成蒜末](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204215354.jpg)
+![剁成蒜末](https://cdn.chengpeiquan.com/img/2022/02/20220204215354.jpg?x-oss-process=image/interlace,1)
 
 3、所有食材抓匀，腌制 2 小时（应该不需要这么久，不过我一般都是提前弄好放冷藏让它腌着）
 
-![全部料一起](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204215355.jpg)
+![全部料一起](https://cdn.chengpeiquan.com/img/2022/02/20220204215355.jpg?x-oss-process=image/interlace,1)
 
-![抓匀腌制](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204215356.jpg)
+![抓匀腌制](https://cdn.chengpeiquan.com/img/2022/02/20220204215356.jpg?x-oss-process=image/interlace,1)
 
 ## 烤制过程
 
@@ -64,12 +64,12 @@ xiaohongshuId: 61fd1ebb0000000001028d75
 
 2、腿扒放进去，半包式放进去烤
 
-![烤之前](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204215357.jpg)
+![烤之前](https://cdn.chengpeiquan.com/img/2022/02/20220204215357.jpg?x-oss-process=image/interlace,1)
 
-![出炉后](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204215358.jpg)
+![出炉后](https://cdn.chengpeiquan.com/img/2022/02/20220204215358.jpg?x-oss-process=image/interlace,1)
 
 我的锅是恒温 200 度，烤 15 分钟就行，出锅的时候蒜末会被烤焦，拨弄掉就好！
 
-![切小块摆盘](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204215400.jpg)
+![切小块摆盘](https://cdn.chengpeiquan.com/img/2022/02/20220204215400.jpg?x-oss-process=image/interlace,1)
 
-![好好吃](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204215401.jpg)
+![好好吃](https://cdn.chengpeiquan.com/img/2022/02/20220204215401.jpg?x-oss-process=image/interlace,1)

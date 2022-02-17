@@ -3,7 +3,7 @@ title: Truffle初探和踩坑笔记
 desc: 能找到的教程都好老，记录一版踩坑笔记，后面遇到类似的问题可以快速处理。
 keywords: truffle,trufflesuite,智能合约,DAPP
 date: 2021-10-11 22:32:20
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/10/20211012094643.jpg
+cover: https://cdn.chengpeiquan.com/img/2021/10/20211012094643.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 ---
@@ -131,7 +131,7 @@ module.exports = {
 
 然后启动 Ganache ，点击 "Quick Start" ，就可以运行个人区块链了。
 
-![Ganache UI](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/10/20211012095732.jpg)
+![Ganache UI](https://cdn.chengpeiquan.com/img/2021/10/20211012095732.jpg?x-oss-process=image/interlace,1)
 
 在命令行运行 `truffle console` 可以进入 GUI 情况下的调试命令状态（等价于命令行情况的 `truffle develop`）。
 
@@ -167,13 +167,13 @@ Node v16.1.0
 
 1. 重新启动 Ganache ，点击 "New Workspace" ，进入配置：
 
-![配置 Ganache 的工作区](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/11/20211108105128.jpg)
+![配置 Ganache 的工作区](https://cdn.chengpeiquan.com/img/2021/11/20211108105128.jpg?x-oss-process=image/interlace,1)
 
 2. 点击 “Add Project” ，进入到你的 truffle 项目文件夹，把项目的 `truffle-config.js` 添加到工作区，然后点击右上角的 “Start” 或者 “Restart” 启动运行。
 
 在启动 Ganache 的时候，运行 `truffle test` 就不会出现网络问题了（下次启动 GUI 的时候，选择工作区的配置启动连接，就可以对应的给你的项目开启测试支持了）。
 
-![后续选择工作区来启动](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/11/20211108142643.jpg)
+![后续选择工作区来启动](https://cdn.chengpeiquan.com/img/2021/11/20211108142643.jpg?x-oss-process=image/interlace,1)
 
 ### 解决方法二
 
@@ -285,7 +285,7 @@ contract Migrations {
 
 ### 缺少构造函数可见性
 
-接上一个问题，移除了 `constructor` 的可见性，又会报缺少可见性的问题（韩红听了都想打人.jpg）：
+接上一个问题，移除了 `constructor` 的可见性，又会报缺少可见性的问题（韩红听了都想打人.jpg?x-oss-process=image/interlace,1）：
 
 ```bash
 SyntaxError: No visibility specified. Did you intend to add "public"?

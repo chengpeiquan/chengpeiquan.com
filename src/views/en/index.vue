@@ -6,7 +6,7 @@
         class="img"
         width="400"
         height="225"
-        src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/01/20210222114425.jpg"
+        src="https://cdn.chengpeiquan.com/img/2021/01/20210222114425.jpg?x-oss-process=image/interlace,1"
         alt="chengpeiquan"
       />
     </section>

@@ -3,7 +3,7 @@ title: 低成本实现“猜你喜欢”需求的几种思路（本质为随机�
 desc: 这个话题的第一次出现，是在2017年8月份的时候，到现在也蛮久了，之所以想起来说要小结一下，是因为这一年里不少新同学都过问过这么个问题，自己虽然做的不算多，但也通过几种情况完成了各类需求，写个笔记也方便以后用。那会自己第一次遇到一个需求是做一个“猜你喜欢”，然后没有后端的支持，也就是实际上这个“猜你喜欢”本质并不是“猜”，而是一个随机展示，也就是所谓的“换一换”。
 keywords: js猜你喜欢,js换一换
 date: 2018-10-24 00:50:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/10/1-7.jpg
+cover: https://cdn.chengpeiquan.com/img/2018/10/1-7.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 ---

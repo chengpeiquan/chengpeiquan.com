@@ -3,7 +3,7 @@ title: iOS设备显示时间为NaN的原因及处理方法
 desc: 其实是个存在很久的问题啦，之前在IE的年代应该也是有遇到过的，只不过后来日常涉及到时间的需求都是用时间戳比较多，加上现在各种屏蔽IE访问（我们公司的项目都是引导使用chrome/firefox），所以给忘记了！
 keywords: iOS时间NaN,iOS时间显示异常
 date: 2019-09-15 02:04:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2019/09/1-2.jpg
+cover: https://cdn.chengpeiquan.com/img/2019/09/1-2.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 ---

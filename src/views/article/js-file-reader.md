@@ -3,7 +3,7 @@ title: js-file-reader 一句代码把input的file转换为base64和blob格式
 desc: 目前除了美团之外，其他的外卖app（像饿了么啊、瑞幸啊、麦当劳肯德基啊）都没提供自动计算账单的功能，自己每次拉excel算的蛋疼，所以写了这个，无需纠结红包、抵扣券等乱七八糟的减免，会自动计算折扣比例来得到最终账单。
 keywords: file reader,js file reader,web file reader,read file
 date: 2020-09-28 00:22:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/09/2-3.jpg
+cover: https://cdn.chengpeiquan.com/img/2020/09/2-3.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 repo: https://github.com/chengpeiquan/js-file-reader
@@ -29,7 +29,7 @@ demo 已集成了 `native`原生 DOM 、 `vue`虚拟 DOM，以及基于 Vue 生�
 
 点击预览：[js-file-reader demo](https://chengpeiquan.github.io/js-file-reader/demo/ 'js-file-reader demo')
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/09/2-2.jpg)
+![](https://cdn.chengpeiquan.com/img/2020/09/2-2.jpg?x-oss-process=image/interlace,1)
 
 ## 参数
 

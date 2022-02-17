@@ -3,7 +3,7 @@ title: 基于CKEditor4的富文本编辑器 WebPack引入说明与配置注意�
 desc: 前几天对接了个需求，说因为传统的CMS太笨重，并且一些业务结合点想落地的话改造太麻烦，想让我这边帮他做一个发布后台，前后端分离，他只负责数据和接口，其他的由我自己把控。我当时没立即答应，因为我不会啊 - - 哈哈哈没玩过这东西，之前做发布都是直接走CMS或者WordPress这种直接现成的发布系统，偶尔自己做一些活动用的传图发布页面也是简单的一个textarea就完事。不过好奇心又很强，也想学多点东西，还是接了过来，然后让他给我点时间我得尝试一下。
 keywords: ckeditor,ckeditor4,ckeditor传图,ckeditor编辑,ckeditor赋值,ckeditor路径
 date: 2018-10-22 00:48:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/10/1-3.jpg
+cover: https://cdn.chengpeiquan.com/img/2018/10/1-3.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 ---
@@ -49,7 +49,7 @@ CKEDITOR.instances.editor.getData()
 
 由于编辑器工具是个无需频繁修改的插件文件，所以在 public 下创建了个 plugins 插件并放进去，这样每次打包都不会影响到 plugins，如果需要发布到线上预览，也只需要更新原来的 index 和 static，无需一直重复发布 plugins。
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/10/1-4.jpg)
+![](https://cdn.chengpeiquan.com/img/2018/10/1-4.jpg?x-oss-process=image/interlace,1)
 
 ### 动态引入插件
 
@@ -90,7 +90,7 @@ $.getScript('./plugins/ckeditor/ckeditor.js').done(function () {
 
 那么到这一步，编辑器就可以出来了（上面的标题和类别选择不是富文本的）。
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/10/2-1.jpg)
+![](https://cdn.chengpeiquan.com/img/2018/10/2-1.jpg?x-oss-process=image/interlace,1)
 
 ### 传图功能实现
 
@@ -105,7 +105,7 @@ filebrowserImageUploadUrl: api.image
 
 但是在上传后，出现了一个提示“不正确的服务器响应”。
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/10/233.jpg)
+![](https://cdn.chengpeiquan.com/img/2018/10/233.jpg?x-oss-process=image/interlace,1)
 
 一脸懵逼的翻阅文档，找到了原因，是接口返回的格式不对（相对于编辑器需要的返回结果的不对，有固定要求），解决办法如下：
 
@@ -115,10 +115,10 @@ filebrowserImageUploadUrl: api.image
 // 成功的返回格式
 {
     "uploaded": 1,
-    "fileName": "foo(2).jpg",
-    "url": "/files/foo(2).jpg",
+    "fileName": "foo(2).jpg?x-oss-process=image/interlace,1",
+    "url": "/files/foo(2).jpg?x-oss-process=image/interlace,1",
     "error": {
-        "message": "A file with the same name already exists. The uploaded file was renamed to \"foo(2).jpg\"."
+        "message": "A file with the same name already exists. The uploaded file was renamed to \"foo(2).jpg?x-oss-process=image/interlace,1\"."
     }
 }
 

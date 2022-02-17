@@ -3,7 +3,7 @@ title: 省钱菜谱：3.6元的包菜丝蚝油炒面（10min）
 desc: 我最近菜谱发的比较少是因为工作忙了，项目工期最近有点紧，天天加班，11月估计大部分时间也是这样，老板给的工期是11月底要出版本，所以，最近没有太多时间好好做饭，我这几天都是做一些豉油猪肉、榨菜炒肉这样的超快速出餐的菜品…哈哈哈哈不过答应过要发的不会忘！前几天说要炒面，今天来了！
 keywords: 包菜丝蚝油炒面,包菜炒面
 date: 2021-10-29 00:22:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203223718.jpg
+cover: https://cdn.chengpeiquan.com/img/2022/02/20220203223718.jpg?x-oss-process=image/interlace,1
 categories:
   - thrift
   - teochew
@@ -22,13 +22,13 @@ xiaohongshuId: 617ace5c000000002103e46e
 
 哈哈哈哈不过答应过要发的不会忘！前几天说要炒面，今天来了！
 
-![成品图：包菜丝蚝油炒面](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203223805.jpg)
+![成品图：包菜丝蚝油炒面](https://cdn.chengpeiquan.com/img/2022/02/20220203223805.jpg?x-oss-process=image/interlace,1)
 
 ## 主要食材
 
 1、平包菜，今天买到一个特别迷你，特别适合一个人吃的，3毛钱！！！
 
-![哈哈哈超迷你包菜](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203223808.jpg)
+![哈哈哈超迷你包菜](https://cdn.chengpeiquan.com/img/2022/02/20220203223808.jpg?x-oss-process=image/interlace,1)
 
 2、面条2饼，这次买的是超市包装的挂面，平均1饼1块钱（因为我看这个造型就很适合炒面）
 
@@ -60,7 +60,7 @@ xiaohongshuId: 617ace5c000000002103e46e
 
 比例可以根据自己的口味适当调整~
 
-![准备好的食材](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203223758.jpg)
+![准备好的食材](https://cdn.chengpeiquan.com/img/2022/02/20220203223758.jpg?x-oss-process=image/interlace,1)
 
 ## 前期工作
 
@@ -80,34 +80,34 @@ xiaohongshuId: 617ace5c000000002103e46e
 
 2、刚才锅里的油继续炒菜，包菜丝先翻炒几次，然后加一锅铲的水再继续炒，这样炒出来的包菜丝容易熟，而且很软嫩，不然光靠干炒的话，时间久还容易糊
 
-![炒包菜丝](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203223759.jpg)
+![炒包菜丝](https://cdn.chengpeiquan.com/img/2022/02/20220203223759.jpg?x-oss-process=image/interlace,1)
 
 3、包菜丝都变软变得晶莹剔透了，就说明熟了，加盐调味炒匀，盛出来的时候可以像我一样先用锅铲把水滤一下，就不会很多汤汁带出来
 
-![滤掉包菜出的水](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203223800.jpg)
+![滤掉包菜出的水](https://cdn.chengpeiquan.com/img/2022/02/20220203223800.jpg?x-oss-process=image/interlace,1)
 
 ## 炒面过程
 
 处理好了食材，就可以准备炒面了。
 
-![炒面前的食材](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203223801.jpg)
+![炒面前的食材](https://cdn.chengpeiquan.com/img/2022/02/20220203223801.jpg?x-oss-process=image/interlace,1)
 
 1、洗一下锅，重新加油热锅，油温上来了再下面，先炒散
 
-![先炒散面条](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203223802.jpg)
+![先炒散面条](https://cdn.chengpeiquan.com/img/2022/02/20220203223802.jpg?x-oss-process=image/interlace,1)
 
 2、淋上料汁，快速翻炒，让面条上色均匀
 
-![给面条上色](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203223803.jpg)
+![给面条上色](https://cdn.chengpeiquan.com/img/2022/02/20220203223803.jpg?x-oss-process=image/interlace,1)
 
 3、翻炒几次后，把刚才炒好的香菇丝、肉片、包菜丝一起倒进去炒均匀，面条就好了！
 
-![炒匀所有材料](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203223804.jpg)
+![炒匀所有材料](https://cdn.chengpeiquan.com/img/2022/02/20220203223804.jpg?x-oss-process=image/interlace,1)
 
 ## 成品展示
 
 这个面我特别喜欢！超级推荐！！！
 
-![好看又好吃](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203223806.jpg)
+![好看又好吃](https://cdn.chengpeiquan.com/img/2022/02/20220203223806.jpg?x-oss-process=image/interlace,1)
 
-![真的好好吃](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203223807.jpg)
+![真的好好吃](https://cdn.chengpeiquan.com/img/2022/02/20220203223807.jpg?x-oss-process=image/interlace,1)

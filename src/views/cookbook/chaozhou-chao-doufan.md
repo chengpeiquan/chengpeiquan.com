@@ -3,7 +3,7 @@ title: 省钱菜谱：3.4元的潮州炒豆饭（10min）
 desc: 炒豆饭，也是我家比较常做的炒饭之一，也是以前还在潮州家里的时候我妈经常做给我吃的炒饭品类的其中一种。
 keywords: 潮州炒饭,豆角炒饭,潮州炒豆饭
 date: 2021-11-01 21:40:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203180355.jpg
+cover: https://cdn.chengpeiquan.com/img/2022/02/20220203180355.jpg?x-oss-process=image/interlace,1
 categories:
   - thrift
   - bento
@@ -22,7 +22,7 @@ xiaohongshuId: 617fee5b0000000021038882
 
 哈哈哈哈哈继续说我们的炒饭！
 
-![成品图：潮州炒豆饭](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203180413.jpg)
+![成品图：潮州炒豆饭](https://cdn.chengpeiquan.com/img/2022/02/20220203180413.jpg?x-oss-process=image/interlace,1)
 
 ## 主要食材
 
@@ -48,7 +48,7 @@ xiaohongshuId: 617fee5b0000000021038882
 
 3、然后长豆角放进汤锅，加一勺盐一起，电磁炉 800 度，盖上盖子让它倒计时煮 5 分钟
 
-![豆角飞水](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203180406.jpg)
+![豆角飞水](https://cdn.chengpeiquan.com/img/2022/02/20220203180406.jpg?x-oss-process=image/interlace,1)
 
 4、期间继续切肉，切成薄肉片或者肉丝都可以
 
@@ -60,7 +60,7 @@ xiaohongshuId: 617fee5b0000000021038882
 
 这个环节处理的长豆角，可以去掉豆角草酸，也可以让它等下更容易熟，过一下冷水则可以让它保持爽脆一些的口感，颜值也好看。
 
-![准备好的所有材料](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203180407.jpg)
+![准备好的所有材料](https://cdn.chengpeiquan.com/img/2022/02/20220203180407.jpg?x-oss-process=image/interlace,1)
 
 ## 炒饭过程
 
@@ -68,28 +68,28 @@ xiaohongshuId: 617fee5b0000000021038882
 
 2、豆角段先翻炒均匀都过一遍热油，然后加两锅铲的水一起半煮半炒，直到水被豆角差不多吸收走了，就可以加盐调味，也是盛出来备用
 
-![炒豆角，加点水](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203180408.jpg)
+![炒豆角，加点水](https://cdn.chengpeiquan.com/img/2022/02/20220203180408.jpg?x-oss-process=image/interlace,1)
 
-![水会被吸干](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203180409.jpg)
+![水会被吸干](https://cdn.chengpeiquan.com/img/2022/02/20220203180409.jpg?x-oss-process=image/interlace,1)
 
 3、洗一下锅，重新倒一点油加热，等油温上来了，把饭倒进去，锅铲一边翻炒一边压散
 
-![炒饭](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203180410.jpg)
+![炒饭](https://cdn.chengpeiquan.com/img/2022/02/20220203180410.jpg?x-oss-process=image/interlace,1)
 
 4、等饭都炒的很散很颗粒了，把准备好的酱油料汁倒进去，快速翻炒，均匀上色
 
-![上色](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203180411.jpg)
+![上色](https://cdn.chengpeiquan.com/img/2022/02/20220203180411.jpg?x-oss-process=image/interlace,1)
 
 5、火关到最小，把肉片和香菇丝、虾皮都倒进去翻炒均匀，就可以了
 
-![炒匀](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203180412.jpg)
+![炒匀](https://cdn.chengpeiquan.com/img/2022/02/20220203180412.jpg?x-oss-process=image/interlace,1)
 
 ## 成品展示
 
 可好吃了用豆角来炒饭！
 
-![好吃的炒饭](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203180414.jpg)
+![好吃的炒饭](https://cdn.chengpeiquan.com/img/2022/02/20220203180414.jpg?x-oss-process=image/interlace,1)
 
-![有荤有素](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203180415.jpg)
+![有荤有素](https://cdn.chengpeiquan.com/img/2022/02/20220203180415.jpg?x-oss-process=image/interlace,1)
 
-![吃光光哈哈哈](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203180416.jpg)
+![吃光光哈哈哈](https://cdn.chengpeiquan.com/img/2022/02/20220203180416.jpg?x-oss-process=image/interlace,1)

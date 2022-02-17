@@ -3,7 +3,7 @@ title: vite-plugin-banner
 desc: A banner plugin for Vite. It can adds a banner to the top of each generated chunk.
 keywords: vite-plugin-banner,vite plugin,vite banner,vite comment,vite copyright
 date: 2021-02-23 23:10:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/01/20210224102526.jpg
+cover: https://cdn.chengpeiquan.com/img/2021/01/20210224102526.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 repo: https://github.com/chengpeiquan/vite-plugin-banner

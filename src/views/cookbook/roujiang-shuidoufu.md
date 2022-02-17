@@ -3,7 +3,7 @@ title: 省钱菜谱：3.5元的肉酱水豆腐（10min）
 desc: 哈哈哈哈哈我发现做饭跟敲代码真是异曲同工，敲代码经常会涉及到封装和复用，做菜也是，前几天做那个肉酱猪肠粉的时候对那个肉酱念念不忘，今晚骑车回来的时候，路上就想到要不我再复用一下，换个食材搞事情，于是想起了豆腐，果然，超好吃！！！
 keywords: 肉酱水豆腐,肉酱豆腐,水豆腐
 date: 2021-10-14 23:59:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204163435.jpg
+cover: https://cdn.chengpeiquan.com/img/2022/02/20220204163435.jpg?x-oss-process=image/interlace,1
 categories:
   - thrift
   - orthodontic
@@ -20,7 +20,7 @@ cite:
 
 哈哈哈哈哈我发现做饭跟敲代码真是异曲同工，敲代码经常会涉及到封装和复用，做菜也是，前几天做那个肉酱猪肠粉的时候对那个肉酱念念不忘，今晚骑车回来的时候，路上就想到要不我再复用一下，换个食材搞事情，于是想起了豆腐，果然，超好吃！！！
 
-![成品图：肉酱水豆腐](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204163600.jpg)
+![成品图：肉酱水豆腐](https://cdn.chengpeiquan.com/img/2022/02/20220204163600.jpg?x-oss-process=image/interlace,1)
 
 ## 主要食材
 
@@ -62,9 +62,9 @@ cite:
 
 4、所有调料拌匀成料汁备用
 
-![切好的水豆腐](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204163554.jpg)
+![切好的水豆腐](https://cdn.chengpeiquan.com/img/2022/02/20220204163554.jpg?x-oss-process=image/interlace,1)
 
-![准备好的其他材料](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204163556.jpg)
+![准备好的其他材料](https://cdn.chengpeiquan.com/img/2022/02/20220204163556.jpg?x-oss-process=image/interlace,1)
 
 ## 制作过程
 
@@ -78,7 +78,7 @@ cite:
 
 2、勺子舀掉浮沫，用笊篱把豆腐捞出来，滴干水份备用
 
-![豆腐焯水](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204163555.jpg)
+![豆腐焯水](https://cdn.chengpeiquan.com/img/2022/02/20220204163555.jpg?x-oss-process=image/interlace,1)
 
 ### 豆腐加工
 
@@ -90,9 +90,9 @@ cite:
 
 3、铺满盘底就可以
 
-![煎炒一下豆腐](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204163557.jpg)
+![煎炒一下豆腐](https://cdn.chengpeiquan.com/img/2022/02/20220204163557.jpg?x-oss-process=image/interlace,1)
 
-![盛出来](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204163558.jpg)
+![盛出来](https://cdn.chengpeiquan.com/img/2022/02/20220204163558.jpg?x-oss-process=image/interlace,1)
 
 ### 制作肉酱
 
@@ -106,12 +106,12 @@ cite:
 
 4、淋到豆腐上就做好了
 
-![炒制肉酱](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204163559.jpg)
+![炒制肉酱](https://cdn.chengpeiquan.com/img/2022/02/20220204163559.jpg?x-oss-process=image/interlace,1)
 
-![淋上去即可](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204163600.jpg)
+![淋上去即可](https://cdn.chengpeiquan.com/img/2022/02/20220204163600.jpg?x-oss-process=image/interlace,1)
 
 超级简单！超级下饭！！！
 
-![好吃好看](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204163601.jpg)
+![好吃好看](https://cdn.chengpeiquan.com/img/2022/02/20220204163601.jpg?x-oss-process=image/interlace,1)
 
-![哈哈哈哈饭扫光](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204163602.jpg)
+![哈哈哈哈饭扫光](https://cdn.chengpeiquan.com/img/2022/02/20220204163602.jpg?x-oss-process=image/interlace,1)
