@@ -3,7 +3,7 @@ title: 弹窗大背景优化方案 png大图片预加载处理方法
 desc: 因为一直做游戏风格的需求，而日常维护的游戏也比较朴素，都是用纯css处理的渐变底色即可满足弹窗背景的配置，最近处理了一个比较花哨的需求，弹窗设计方面比较下功夫，带来的一个问题就是这个弹窗背景图只能切成png，哪怕经过tinypng优化之后还有50多kb。50kb的图片说实话也不算特别大，如果作为常规的img加载其实没什么问题，但作为背景图来加载，问题就会被放大 —— 用户访问页面后，第一次打开弹窗的体验非常差，会先显示弹窗内容，再慢慢加载弹窗背景（隐藏层的背景需要层变为可见才会加载）。
 keywords: png优化,图片预加载,js预加载
 date: 2018-10-12 11:49:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/10/1.jpg
+cover: https://cdn.chengpeiquan.com/img/2018/10/1.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 ---

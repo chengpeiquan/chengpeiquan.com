@@ -3,7 +3,7 @@ title: 项目代码风格统一神器 editorconfig的作用与配置说明
 desc: 团队协作，或者有时候你从GitHub或者其他地方拷贝人家的组件插件下来，想修改，发现代码风格不一致，比如自己习惯2个空格的缩进，但别人是4个空格，或者直接用tab，这就emmm了不是…
 keywords: editorconfig,统一编辑器格式
 date: 2019-03-15 23:36:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2019/03/1-2.jpg
+cover: https://cdn.chengpeiquan.com/img/2019/03/1-2.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 ---
@@ -12,7 +12,7 @@ categories:
 
 分享一个神器，只需要命名为 .editorconfig ，保存到自己的项目根目录下，即可让项目下所有文件都统一代码风格，非常棒！
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2019/03/2-2.jpg)
+![](https://cdn.chengpeiquan.com/img/2019/03/2-2.jpg?x-oss-process=image/interlace,1)
 
 > 官网 https://editorconfig.org/
 

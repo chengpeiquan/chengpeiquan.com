@@ -3,7 +3,7 @@ title: 省钱菜单：4.7元的青瓜丝火腿炒面（10min）
 desc: 爽脆可口的青瓜丝，搭配煎过的火腿丝，真好吃！！！
 keywords: 青瓜丝火腿炒面,炒面,火腿炒面
 date: 2021-11-06 05:44:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203174848.jpg
+cover: https://cdn.chengpeiquan.com/img/2022/02/20220203174848.jpg?x-oss-process=image/interlace,1
 categories:
   - thrift
   - bento
@@ -17,13 +17,13 @@ xiaohongshuId: 6185a5c2000000002103744b
 
 爽脆可口的青瓜丝，搭配煎过的火腿丝，真好吃！！！
 
-![成品图：青瓜丝火腿炒面](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203174907.jpg)
+![成品图：青瓜丝火腿炒面](https://cdn.chengpeiquan.com/img/2022/02/20220203174907.jpg?x-oss-process=image/interlace,1)
 
 ## 主要食材
 
 1、火腿肠，大半个月前超市做活动买了一捆 3 根 11.9 元，切了 4 分之 1 根，算 1 元
 
-![大火腿肠](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203174859.jpg)
+![大火腿肠](https://cdn.chengpeiquan.com/img/2022/02/20220203174859.jpg?x-oss-process=image/interlace,1)
 
 2、青瓜半根， 1.2 元
 
@@ -39,7 +39,7 @@ xiaohongshuId: 6185a5c2000000002103744b
 
 先煮软，然后捞出来过一下凉水，倒掉凉水，淋上一勺香油拌匀，这样就不会坨了！
 
-![准备好的所有材料](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203174900.jpg)
+![准备好的所有材料](https://cdn.chengpeiquan.com/img/2022/02/20220203174900.jpg?x-oss-process=image/interlace,1)
 
 ## 炒面过程
 
@@ -49,30 +49,30 @@ xiaohongshuId: 6185a5c2000000002103744b
 
 1、试探一下油温，油温热了再炒。
 
-![试探一下油温](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203174901.jpg)
+![试探一下油温](https://cdn.chengpeiquan.com/img/2022/02/20220203174901.jpg?x-oss-process=image/interlace,1)
 
 2、煎一下火腿丝
 
-![煎一下火腿丝](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203174902.jpg)
+![煎一下火腿丝](https://cdn.chengpeiquan.com/img/2022/02/20220203174902.jpg?x-oss-process=image/interlace,1)
 
 3、把香菇丝爆香
 
-![香菇爆香](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203174903.jpg)
+![香菇爆香](https://cdn.chengpeiquan.com/img/2022/02/20220203174903.jpg?x-oss-process=image/interlace,1)
 
 4、炒面，淋上生抽酱油上色
 
-![炒面](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203174904.jpg)
+![炒面](https://cdn.chengpeiquan.com/img/2022/02/20220203174904.jpg?x-oss-process=image/interlace,1)
 
-![上色](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203174905.jpg)
+![上色](https://cdn.chengpeiquan.com/img/2022/02/20220203174905.jpg?x-oss-process=image/interlace,1)
 
 5、把材料都倒进去炒匀
 
-![炒匀](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203174906.jpg)
+![炒匀](https://cdn.chengpeiquan.com/img/2022/02/20220203174906.jpg?x-oss-process=image/interlace,1)
 
 ## 成品展示
 
 过程也不复杂，好吃哈哈哈哈
 
-![好看](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203174908.jpg)
+![好看](https://cdn.chengpeiquan.com/img/2022/02/20220203174908.jpg?x-oss-process=image/interlace,1)
 
-![又好吃](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203174909.jpg)
+![又好吃](https://cdn.chengpeiquan.com/img/2022/02/20220203174909.jpg?x-oss-process=image/interlace,1)

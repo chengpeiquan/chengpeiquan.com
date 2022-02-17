@@ -3,7 +3,7 @@ title: 简单的六个步骤 让你写出技术爱看的需求文档
 desc: 提需求”应该是每个同学在工作中最不可避免的三个字，有句很流行的话叫“人人都是产品经理”（源自一本产品书籍的书名），为什么这句话会流行起来？因为只要我们把这句话换个方式表达，本质上就是“人人都是需求方”，是不是瞬间感觉“对对对”！
 keywords: 需求设计,需求文档,需求规范
 date: 2021-05-05 00:01:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/05/20210505005328.jpg
+cover: https://cdn.chengpeiquan.com/img/2021/05/20210505005328.jpg?x-oss-process=image/interlace,1
 categories:
   - design
 isHot: true
@@ -15,7 +15,7 @@ isHot: true
 
 这一篇其实大概在三月份的时候就说想写了，四月份清明假期因为赶项目，结果也没写出来，五一终于可以好好码一码字，终于不用再拖到儿童节了。
 
-![拖稿狂魔说的就是我了](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/05/20210505010156.jpg)
+![拖稿狂魔说的就是我了](https://cdn.chengpeiquan.com/img/2021/05/20210505010156.jpg?x-oss-process=image/interlace,1)
 
 之前在 UC 工作，后来又到网易搬砖，来来往往的接触过一些的阿里和网易的产品需求，从校招新人到产品大佬，不同级别的需求看的多了，也算是总结到一些需求设计方面的技巧。
 
@@ -126,7 +126,7 @@ isHot: true
 
 建议使用 “金字塔分析法” 来梳理我们的功能，最后生成一个产品的架构图。
 
-![金字塔分析法](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/05/20210505020501.jpg)
+![金字塔分析法](https://cdn.chengpeiquan.com/img/2021/05/20210505020501.jpg?x-oss-process=image/interlace,1)
 
 如上图，金字塔分析法其实很简单：
 
@@ -203,17 +203,17 @@ isHot: true
 
 针对异常流程，我们需要在每个可能出现意外的环节，设计对应的处理方案，来给用户最好的体验，**及时引导他们回到正常流程中。**
 
-![知乎提问的时候就考虑了多个异常流程，并进行了正确引导](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/05/20210505003033.png)
+![知乎提问的时候就考虑了多个异常流程，并进行了正确引导](https://cdn.chengpeiquan.com/img/2021/05/20210505003033.png)
 
 ## 四、绘制框架
 
 框架是为了让你的想法可以具象化的表达出来，减少在沟通过程中的理解偏差。比如本文最开始的段子，与其形容半天还不知所云，不如简单明了的出示你画好的框架。
 
-![把冗长的文字转化为简明的图形表达](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/05/20210505020355.jpg)
+![把冗长的文字转化为简明的图形表达](https://cdn.chengpeiquan.com/img/2021/05/20210505020355.jpg?x-oss-process=image/interlace,1)
 
 框架不是设计稿，不需要做的非常精美，你可以像小时候搭积木一样，用各种点、线、方块拼到一起，把你心中想要的效果，用图形界面表达出来就可以。目前市面上主流的网站、APP 设计，都可以采用积木大法来绘制你的框架。
 
-![积木大法能应付常见的布局排版](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/05/20210505020316.jpg)
+![积木大法能应付常见的布局排版](https://cdn.chengpeiquan.com/img/2021/05/20210505020316.jpg?x-oss-process=image/interlace,1)
 
 画框架的工具有很多种，推荐使用专门做原型的 Axure，也可以用你擅长的 Excel 、PPT 来画，工具只是辅助，关键是你的表达要 OK 。
 
@@ -286,7 +286,7 @@ isHot: true
 
 复读文档的作用，一个是查漏补缺，减少理解偏差。
 
-![查漏补缺，把遗漏的细节补充起来](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/05/20210505020140.jpg)
+![查漏补缺，把遗漏的细节补充起来](https://cdn.chengpeiquan.com/img/2021/05/20210505020140.jpg?x-oss-process=image/interlace,1)
 
 有些地方，同样的功能，命名不一致，或者功能描述不清晰等等，都会导致在对接的过程中理解产生偏差，通常可以考虑这几个方面的检查。
 
@@ -322,7 +322,7 @@ isHot: true
 
 复读文档另外一个作用是精益求精，很多时候最佳实践不是一次性就能想到，那么就可以在复读文档的时候，检查是否可以再作优化。
 
-![精益求精，不断完善你的需求，增强体验](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/05/20210505020022.jpg)
+![精益求精，不断完善你的需求，增强体验](https://cdn.chengpeiquan.com/img/2021/05/20210505020022.jpg?x-oss-process=image/interlace,1)
 
 同样的，可以在这几个维度进行精益求精：
 

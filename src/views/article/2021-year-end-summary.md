@@ -3,7 +3,7 @@ title: 年终总结：2021年的一些回顾和2022年的一些小规划
 desc: 可真快啊又是一年年底了，虽然这一年博客没发几篇文章，不过整体的活跃情况其实是提升了，个人的变化也还是蛮大的，今年记忆比较深刻的事情有几件，让我梳理回顾一下。
 keywords: 2021 year end summary
 date: 2021-12-31 15:45:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220103234636.jpg
+cover: https://cdn.chengpeiquan.com/img/2022/01/20220103234636.jpg?x-oss-process=image/interlace,1
 categories:
   - prose
 ---
@@ -16,7 +16,7 @@ categories:
 
 其实我入坑的比较晚（其实是很晚…）， 2020 年底才算开始活跃给开源做贡献，然后 2021 年算是开始放飞自我，真正的活动了起来，哈哈哈哈先记录一下活跃度吧，今年的打卡日期还是铺的比较满的，毕竟今年基本上宅了一年，除了回家的那几天，基本上都是在电脑前呆着（截图生成自 [GitHub Contributions](https://github-contributions.vercel.app/) ）。
 
-![这两年在 GitHub 的活跃情况](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220104005113.jpg)
+![这两年在 GitHub 的活跃情况](https://cdn.chengpeiquan.com/img/2022/01/20220104005113.jpg?x-oss-process=image/interlace,1)
 
 ### 主要的工作
 
@@ -24,19 +24,19 @@ categories:
 
 春节的时候重构了我的博客，并做了一次详细的记录 [重构于Vite](https://chengpeiquan.com/article/rewrite-in-vite.html)，当时纯粹就是那么顺手一发知乎，还只发了一半懒得全部搬运，然后被尤大发现了，给了我一个大大的赞！用了这么久的 Vue ，写的东西被 Vue 作者点赞，太开心了！（当然那个时候他肯定是以 Vite 作者的身份去点赞的哈哈哈）
 
-![尤雨溪给我点赞啦](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220104113148.jpg)
+![尤雨溪给我点赞啦](https://cdn.chengpeiquan.com/img/2022/01/20220104113148.jpg?x-oss-process=image/interlace,1)
 
 当时还因为自己要用，但没有现成的轮子，刚好顺便学习一下 Vite 插件的开发，写了个 [vite-plugin-banner](https://github.com/chengpeiquan/vite-plugin-banner) ，没想到成为我第一个下载量直逼 5k 的 NPM 包（后续也稳定在每周大约 1k ）
 
-![使用量最多的那一天截图](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220104115518.jpg)
+![使用量最多的那一天截图](https://cdn.chengpeiquan.com/img/2022/01/20220104115518.jpg?x-oss-process=image/interlace,1)
 
 三月份在 Vue 3.2 正式上线前夕，翻译整理了一份定稿文章 [Vue3.0最新动态：script-setup定稿 部分实验性API将弃用](https://chengpeiquan.com/article/vue3-script-setup-finalization.html) ，在知乎得到了挺多的互动，今年最热闹的一篇博文了，尤大还参与到了里面的一些讨论，太惊喜了！
 
-![尤雨溪在文章下讨论](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220104113454.jpg)
+![尤雨溪在文章下讨论](https://cdn.chengpeiquan.com/img/2022/01/20220104113454.jpg?x-oss-process=image/interlace,1)
 
 之后几个月公司事情太多，慢慢有点淡化开源的投入，不过也还是有参与吧，像一些技术在查文档的时候，发现缺少中文翻译，所以干完活就顺手帮人家翻译了一下，比如 [HTMLInputElement.webkitdirectory - MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLInputElement/webkitdirectory)，所以也断断续续的贡献了一些翻译文档，我的这些知名组织的贡献就是这么来的…
 
-![我参与的 Organizations](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220104115744.jpg)
+![我参与的 Organizations](https://cdn.chengpeiquan.com/img/2022/01/20220104115744.jpg?x-oss-process=image/interlace,1)
 
 ### 主要的收获
 
@@ -60,7 +60,7 @@ categories:
 
 不过目前的短板还是比较大问题，就是很多细节，比如说语法，谓语啥的用的还不是很好，其实当年的成绩也没那么差啊，真的是太多年没用，完全还给老师了…练起来练起来！今年除了中文博客部分，其他能用英语的就都用起来吧，希望再过一年之后，会变得更好！
 
-![新一年的规划](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220104143643.jpg)
+![新一年的规划](https://cdn.chengpeiquan.com/img/2022/01/20220104143643.jpg?x-oss-process=image/interlace,1)
 
 ### 关于做菜
 
@@ -68,7 +68,7 @@ categories:
 
 好像是 9 月份入驻的吧，因为白切鸡一战成名，然后这几个月下来慢慢的居然 3k 多的粉丝了，也得到很多认可，很开心！
 
-![我的小红书，美食博主了哈哈哈](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220104122353.jpg)
+![我的小红书，美食博主了哈哈哈](https://cdn.chengpeiquan.com/img/2022/01/20220104122353.jpg?x-oss-process=image/interlace,1)
 
 这部分的落实也算 OK 吧，[菜谱](https://chengpeiquan.com/cookbook) 专栏已经上线，慢慢把内容重新填上去。
 
@@ -80,7 +80,7 @@ categories:
 
 今年刷到了一条关于贫困儿童的微信广告（难得啊，看到公益的微信广告），点进去了，然后看到一些比较合适的项目，参与了进去，目前是参与到了一个给孩子们加餐的月捐项目里，每月钱不多，自己也没太当回事，结果年底还收到了短信跟我说，会给我寄过来证书和福字，突然就觉得心里酸酸，有点想哭，可能对自己来说很小很小的一点点钱，但是对于那边的孩子来说，非常珍贵！
 
-![没想到居然还有证书，好期待！](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220104004957.jpg)
+![没想到居然还有证书，好期待！](https://cdn.chengpeiquan.com/img/2022/01/20220104004957.jpg?x-oss-process=image/interlace,1)
 
 ## 新年展望
 

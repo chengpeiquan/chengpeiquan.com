@@ -105,7 +105,8 @@ onMounted(() => {
   if (isDev) {
     childrenList.value = [
       {
-        photo: 'https://www.baobeihuijia.com/photo/water/water_528467.jpg',
+        photo:
+          'https://www.baobeihuijia.com/photo/water/water_528467.jpg?x-oss-process=image/interlace,1',
         name: '王小妹（照片是家人）（送养）',
         gender: '女',
         birthday: '1991年04月18日',
@@ -115,7 +116,8 @@ onMounted(() => {
         url: 'https://www.baobeihuijia.com/view.aspx?type=1&id=528467',
       },
       {
-        photo: 'https://www.baobeihuijia.com/photo/water/water_526589.jpg',
+        photo:
+          'https://www.baobeihuijia.com/photo/water/water_526589.jpg?x-oss-process=image/interlace,1',
         name: '彭家琪（珠珠）',
         gender: '女',
         birthday: '1953年07月01日',
@@ -125,7 +127,8 @@ onMounted(() => {
         url: 'https://www.baobeihuijia.com/view.aspx?type=1&id=526589',
       },
       {
-        photo: 'https://www.baobeihuijia.com/photo/water/water_530083.jpg',
+        photo:
+          'https://www.baobeihuijia.com/photo/water/water_530083.jpg?x-oss-process=image/interlace,1',
         name: '胡鑫灵',
         gender: '男',
         birthday: '2008年03月29日',

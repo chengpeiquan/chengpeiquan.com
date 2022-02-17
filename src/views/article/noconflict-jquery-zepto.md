@@ -3,7 +3,7 @@ title: 只写一次执行函数 同时兼容桌面noConflict后的jQuery与移�
 desc: 今天遇到一个比较特殊的情况是这样子，维护一个年代比较久远的项目，说年代久远也就三年前开发上线的，实际生产线还是用的很稳，只不过中间经历了一次改版，后端倒没啥，同一个部门维护的，前端当时因为排期问题，为了及时上线，所以做桌面端模板和移动端模板是两个不同的部门的开发，于是，现在需要做一些中间层的需求就遇到了这么一个稍微有点坑爹的情况。
 keywords: jquery zepto 兼容
 date: 2018-10-19 23:53:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/10/1-2.jpg
+cover: https://cdn.chengpeiquan.com/img/2018/10/1-2.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 ---
@@ -16,7 +16,7 @@ categories:
 
 功能本身不复杂，就是后台系统有一个模块是存放提前配置好的函数功能，里面包含一些模板参数，到时候用户在前台的发布界面上填好参数，提交后，就会渲染到浏览器去执行相应的功能，有点类似于我们常用的插入视频 url 生成视频等功能。
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/10/1-1.jpg)
+![](https://cdn.chengpeiquan.com/img/2018/10/1-1.jpg?x-oss-process=image/interlace,1)
 
 如上图，其中桌面版是引入了 jQuery 库，并由于$符号与其他库冲突，当时的开发对jQ做了noConflict，所以在桌面版除非自己使用形参函数，否则都得用jq或者jQuery来代替$，移动端是使用了 Zepto，默认是$，并且双端引入库的位置也不一样，编辑器渲染的代码是在页面中间，这就需要等页面加载完毕才能执行编辑器代码，才不会导致出现异常。
 

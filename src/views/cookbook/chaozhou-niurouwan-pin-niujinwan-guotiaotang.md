@@ -3,7 +3,7 @@ title: 菜单分享：潮州牛肉丸拼牛筋丸粿条汤
 desc: 啊哈哈哈分享个菜单，牛肉丸和牛筋丸是年前买的，过年过节哪怕没回家，牛肉丸一煮，家乡的感觉就出来了！！！
 keywords: 牛筋丸,牛肉丸,粿条汤,潮汕汤粉
 date: 2022-02-07 05:20:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220214005726.jpg
+cover: https://cdn.chengpeiquan.com/img/2022/02/20220214005726.jpg?x-oss-process=image/interlace,1
 categories:
   - staple
   - teochew
@@ -22,7 +22,7 @@ cite:
 
 啊哈哈哈分享个菜单，牛肉丸和牛筋丸是年前买的，过年过节哪怕没回家，牛肉丸一煮，家乡的感觉就出来了！！！
 
-![牛肉丸牛筋丸粿条汤](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220214005734.jpg)
+![牛肉丸牛筋丸粿条汤](https://cdn.chengpeiquan.com/img/2022/02/20220214005734.jpg?x-oss-process=image/interlace,1)
 
 ## 牛肉丸价格
 

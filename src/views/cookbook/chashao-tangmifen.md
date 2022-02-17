@@ -3,7 +3,7 @@ title: 省钱菜谱：4.5元的叉烧汤米粉（15min）
 desc: 昨晚买回来的瘦肉特别的呈圆柱体……我感觉如果不拿来干点啥，直接切肉片似乎有点对不起它，想想好久没吃叉烧了，哈哈哈哈所以我用叉烧酱把它腌制了！！！
 keywords: 包菜丝蚝油炒面,包菜炒面
 date: 2021-10-24 19:04:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203230110.jpg
+cover: https://cdn.chengpeiquan.com/img/2022/02/20220203230110.jpg?x-oss-process=image/interlace,1
 categories:
   - thrift
   - teochew
@@ -23,7 +23,7 @@ cite:
 
 今天安利黑豹乐队一首综艺现场， 2014 年“不朽之名曲”现场版的《明天我要嫁给你》，是张淇加入黑豹乐队第二年的一次演出，虽然很多人是因为最近“披荆斩棘的哥哥”才认识张淇，但我是 7 年前看这个节目知道的他，这个现场真的太牛逼了， 2 分 30 秒那个高音！！！爱死了！！！（深深记得鹿晗当时那个惊讶的表情 hhhhh ）
 
-![成品图：叉烧汤米粉](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203230343.jpg)
+![成品图：叉烧汤米粉](https://cdn.chengpeiquan.com/img/2022/02/20220203230343.jpg?x-oss-process=image/interlace,1)
 
 ## 主要食材
 
@@ -45,7 +45,7 @@ cite:
 
 3、葱一根，切葱花
 
-![这种细米粉](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203230919.jpg)
+![这种细米粉](https://cdn.chengpeiquan.com/img/2022/02/20220203230919.jpg?x-oss-process=image/interlace,1)
 
 ### 汤底调料
 
@@ -65,17 +65,17 @@ cite:
 
 2、我加了1.5勺的叉烧酱，还有一点点精幼白砂糖，抓匀，放保鲜盒，冰箱冷藏腌制一晚上（如果是粗白糖可以适当加一点点热水先把糖化开）
 
-![切小块](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203230346.jpg)
+![切小块](https://cdn.chengpeiquan.com/img/2022/02/20220203230346.jpg?x-oss-process=image/interlace,1)
 
-![腌制一晚上](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203230347.jpg)
+![腌制一晚上](https://cdn.chengpeiquan.com/img/2022/02/20220203230347.jpg?x-oss-process=image/interlace,1)
 
 ## 制作过程
 
 1、叉烧还是用空气炸锅烤的，铺满炸篮的底就不要再叠了，所以我烤了 2 次， 200 度恒温，一次 7 分钟，烤第二次的时候就可以去煮水准备煮米粉了。
 
-![拿出来烤](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203230348.jpg)
+![拿出来烤](https://cdn.chengpeiquan.com/img/2022/02/20220203230348.jpg?x-oss-process=image/interlace,1)
 
-![烤好的样子](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203230349.jpg)
+![烤好的样子](https://cdn.chengpeiquan.com/img/2022/02/20220203230349.jpg?x-oss-process=image/interlace,1)
 
 2、汤米粉就跟之前的菜谱一样了，先煮开一锅水，碗底先加鱼露和胡椒粉，水开了就兑好汤底
 
@@ -83,7 +83,7 @@ cite:
 
 4、生菜叶烫熟，铺在米粉上面
 
-![快好了](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203230350.jpg)
+![快好了](https://cdn.chengpeiquan.com/img/2022/02/20220203230350.jpg?x-oss-process=image/interlace,1)
 
 5、烤好的叉烧片铺在生菜叶上，这样就不会一直被汤泡着失去了颜值和味道（划重点）
 
@@ -91,9 +91,9 @@ cite:
 
 搞定！可以吃了！
 
-![又好看](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203230345.jpg)
+![又好看](https://cdn.chengpeiquan.com/img/2022/02/20220203230345.jpg?x-oss-process=image/interlace,1)
 
-![又好吃](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203230344.jpg)
+![又好吃](https://cdn.chengpeiquan.com/img/2022/02/20220203230344.jpg?x-oss-process=image/interlace,1)
 
 过程还是挺快的，有一半的时间是用在烤叉烧上面，如果你的炸锅比较大一次可以烤完，基本上七八分钟就可以吃上了！
 

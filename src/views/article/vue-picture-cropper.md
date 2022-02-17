@@ -3,7 +3,7 @@ title: Vue 3.0图片裁切插件：vue-picture-cropper
 desc: 开始玩Vue 3.0之后发现生态上要啥没啥，所以自己弄了一个，基于cropper.js，支持Vue 3.0的图片裁切工具组件，支持在Vue组件里按需引入，模板和实例也仅限在组件内使用，根据Vue 3.x的设计思想，官方也不推荐全局导入各类插件。
 keywords: vue picture cropper,vue 3.0 cropper,vue 3.0 图片裁切
 date: 2020-11-16 00:12:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/12/1.jpg
+cover: https://cdn.chengpeiquan.com/img/2020/12/1.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 repo: https://github.com/chengpeiquan/vue-picture-cropper
@@ -25,7 +25,7 @@ NPM： [https://www.npmjs.com/package/vue-picture-cropper](https://www.npmjs.com
 
 点击查看：[vue-picture-cropper-demo](https://chengpeiquan.github.io/vue-picture-cropper-demo/)
 
-![vue-picture-cropper-demo](https://chengpeiquan.github.io/vue-picture-cropper-demo/static/img/preview.jpg)
+![vue-picture-cropper-demo](https://chengpeiquan.github.io/vue-picture-cropper-demo/static/img/preview.jpg?x-oss-process=image/interlace,1)
 
 ## 安装
 

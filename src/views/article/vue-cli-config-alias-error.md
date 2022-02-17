@@ -3,7 +3,7 @@ title: 记录vue.config设置alias无法生效的一次问题排查
 desc: 昨晚把Node和Vue-CLI等工具都升级到了最新版，create了一个新项目，因为之前干活的时候为了方便都是拷贝之前的配置文件下来，很多东西都是基于旧版的解构，所以想针对新版本也处理一份配置，于是只拿了vue.config.js来到新项目这边。
 keywords: vue cli alias,vue alias,webpack alias
 date: 2020-05-22 16:58:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/05/4.jpg
+cover: https://cdn.chengpeiquan.com/img/2020/05/4.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 ---
@@ -12,13 +12,13 @@ categories:
 
 基本都没什么问题，直到我在 main.js 准备引入一个常用的配置文件的时候，控制台报错了！
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/05/1.jpg)
+![](https://cdn.chengpeiquan.com/img/2020/05/1.jpg?x-oss-process=image/interlace,1)
 
 出现这个提示还是蛮明显的，因为`@js`是我设置的一个别名，对应的路径是`src/assets/js`，同理的还有一堆别名用于快捷使用。
 
 因为这个提示的原因，陷入了持续很久的排查为什么 alias 不生效的过程，然而根据各种文档和博客，我的配置并没有问题。
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/05/2.jpg)
+![](https://cdn.chengpeiquan.com/img/2020/05/2.jpg?x-oss-process=image/interlace,1)
 
 后来昨晚一看时间已经凌晨 2 点了，决定睡觉。
 
@@ -30,7 +30,7 @@ categories:
 
 于是类似的方法排查完，你猜怎么着？？？是因为我这个 config 配置了 css 插件，但这次忘记安装了！（日常多处理 H5 需求，所以默认都带上了这个配置，平时需求目的很明显所以记得装，这次因为在调试，当时没想起来）。
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/05/3.jpg)
+![](https://cdn.chengpeiquan.com/img/2020/05/3.jpg?x-oss-process=image/interlace,1)
 
 把 css 的插件安装完，就一切正常了。
 

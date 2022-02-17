@@ -3,7 +3,7 @@ title: vue-baidu-analytics 基于Vue SPA项目的百度统计插件（支持Vue 
 desc: 一个专为SPA项目开发的百度统计插件，支持Vue 3.0以及2.0版本同时使用，也可用于VuePress项目，支持在路由切换时，自动上报流量数据等功能。
 keywords: vue-baidu-analytics,vue百度统计,vue流量上报,spa流量,spa百度统计,vue统计代码,spa统计代码,vuepress统计,vuepress百度统计
 date: 2021-01-07 23:21:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2019/12/1.jpg
+cover: https://cdn.chengpeiquan.com/img/2019/12/1.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 repo: https://github.com/analyticsjs/vue-baidu-analytics

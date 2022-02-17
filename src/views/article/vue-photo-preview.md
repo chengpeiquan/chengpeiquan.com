@@ -3,7 +3,7 @@ title: Vue插件安利：看大图插件vue-photo-preview
 desc: 最近一段时间，涉及到看大图功能的需求，用的比较多的一款看大图插件，PC和移动端适配良好，之前也用过一些别的插件，但还是这个方便，也比较轻量级。
 keywords: vue看大图,vue photo preview,vue图片放大
 date: 2019-09-15 11:10:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2019/09/1-1.jpg
+cover: https://cdn.chengpeiquan.com/img/2019/09/1-1.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 ---
@@ -26,7 +26,7 @@ import 'vue-photo-preview/dist/skin.css';
 Vue.use(preview);
 
 // 在vue组件里，调用看大图功能，就可以直接生效
-<img src="xxx.jpg" preview="0" />
+<img src="xxx.jpg?x-oss-process=image/interlace,1" preview="0" />
 
 // 另外，如果图片是从接口请求回来的，记得在处理好数据后，刷新一下
 this.$previewRefresh();

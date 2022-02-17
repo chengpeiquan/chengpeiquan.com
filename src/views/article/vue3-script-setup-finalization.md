@@ -3,7 +3,7 @@ title: Vue3.0最新动态：script-setup定稿 部分实验性API将弃用
 desc: 从尤大的Twitter上获取到了最新的开发进展，期待已久的script-setup组件模式终于定稿，不再是实验性功能了，当然对比之前的实验性阶段也有一些新的变化，包括一些API被弃用，同时也有新的API补充进来代替原有的功能。
 keywords: script setup,vue 3.0 script setup,vue3 script setup,script setup prop,script setup emit,defineProps,vue 3.0 defineProps,vue defineProps,vue3 defineProps,prop defineProps,setup defineProps,defineEmits,vue 3.0 defineEmits,vue defineEmits,vue3 defineEmits,emit defineEmits,setup defineEmits,useAttrs,vue 3.0 useAttrs,vue useAttrs,vue3 useAttrs,setup useAttrs,useSlots,vue 3.0 useSlots,vue useSlots,vue3 useSlots,setup useSlots
 date: 2021-07-05 13:15:13
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage//img/2021/07/20210705181949.jpg
+cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage//img/2021/07/20210705181949.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 repo: https://github.com/chengpeiquan/learning-vue3

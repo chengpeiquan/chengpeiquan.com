@@ -3,7 +3,7 @@ title: 潮汕卤水之卤五花肉
 desc: 上周五有小姐姐问我说最近很忙，有什么菜可以提前几天准备，这样每天带饭就可以只煮饭，都是潮汕人，那必须首选潮汕卤水哈哈哈，周末提前做，真的可以吃好几天，而且卤汁还可以再用，可以再做几次卤蛋之类的小卤味，美滋滋！
 keywords: 潮州,潮州卤水,潮汕卤水,卤五花肉,卤蛋
 date: 2021-11-28 20:19:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220130235640.jpg
+cover: https://cdn.chengpeiquan.com/img/2022/01/20220130235640.jpg?x-oss-process=image/interlace,1
 categories:
   - bento
   - teochew
@@ -18,7 +18,7 @@ xiaohongshuId: 61a373df000000002103cea1
 
 然后今天准备的是无高压锅版本的做法，高压锅平时没怎么用到，一个人住所以小家电只买了常用的，因此今天的工具是“普通汤锅（飞水） + 隔水炖锅（炖肉） + 普通炒锅（卤制）”。
 
-![成品图：卤五花肉](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220130235744.jpg)
+![成品图：卤五花肉](https://cdn.chengpeiquan.com/img/2022/01/20220130235744.jpg?x-oss-process=image/interlace,1)
 
 ## 主要食材
 
@@ -50,7 +50,7 @@ xiaohongshuId: 61a373df000000002103cea1
 
 9、桂皮1块
 
-![卤水香料](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220130235754.jpg)
+![卤水香料](https://cdn.chengpeiquan.com/img/2022/01/20220130235754.jpg?x-oss-process=image/interlace,1)
 
 ## 调味料
 
@@ -68,7 +68,7 @@ xiaohongshuId: 61a373df000000002103cea1
 
 2、炖锅的炖盅先铺满所有配料，五花肉码进去，加水淹没，没有高压锅就用这个方法，炖1.5个小时，肉也可以变得很嫩。
 
-![炖好的肉](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220130235753.jpg)
+![炖好的肉](https://cdn.chengpeiquan.com/img/2022/01/20220130235753.jpg?x-oss-process=image/interlace,1)
 
 然后先把鸡蛋煮了，剥壳备用，我用的电热壶煮蛋超方便！
 
@@ -78,32 +78,32 @@ xiaohongshuId: 61a373df000000002103cea1
 
 1、先给食材打卤，把调味料都加进去，然后电磁炉800度先煮15分钟，这个过程卤汁会沸腾的比较厉害，期间用锅铲不定期翻一下食材避免糊锅
 
-![加老抽的时候，一锅铲的分量](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220130235752.jpg)
+![加老抽的时候，一锅铲的分量](https://cdn.chengpeiquan.com/img/2022/01/20220130235752.jpg?x-oss-process=image/interlace,1)
 
-![冰糖用量](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220130235751.jpg)
+![冰糖用量](https://cdn.chengpeiquan.com/img/2022/01/20220130235751.jpg?x-oss-process=image/interlace,1)
 
 2、然后开始进行浸卤，把火调低到300度，让肉半煮半浸，盖上盖子，慢慢卤20分钟，期间偶尔去翻动一下食材，让食材全方位能被卤到
 
-![慢慢浸卤](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220130235750.jpg)
+![慢慢浸卤](https://cdn.chengpeiquan.com/img/2022/01/20220130235750.jpg?x-oss-process=image/interlace,1)
 
 炸豆腐干等出锅之前再下，稍微泡一会就好了。
 
-![全部卤好了](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220130235749.jpg)
+![全部卤好了](https://cdn.chengpeiquan.com/img/2022/01/20220130235749.jpg?x-oss-process=image/interlace,1)
 
 卤好的肉可以立即吃一部分。
 
-![卤好的卤蛋](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220130235745.jpg)
+![卤好的卤蛋](https://cdn.chengpeiquan.com/img/2022/01/20220130235745.jpg?x-oss-process=image/interlace,1)
 
-![卤好的卤肉](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220130235746.jpg)
+![卤好的卤肉](https://cdn.chengpeiquan.com/img/2022/01/20220130235746.jpg?x-oss-process=image/interlace,1)
 
 剩下的可以直接在锅里继续泡着冷却，然后捞走香料，连肉带卤汁一起装大碗里，铺好保鲜膜冷藏，下次拿出来加热就可以，越卤越香！
 
-![剩下的装大碗里](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220130235748.jpg)
+![剩下的装大碗里](https://cdn.chengpeiquan.com/img/2022/01/20220130235748.jpg?x-oss-process=image/interlace,1)
 
-![倒入卤汁浸着冷藏](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220130235747.jpg)
+![倒入卤汁浸着冷藏](https://cdn.chengpeiquan.com/img/2022/01/20220130235747.jpg?x-oss-process=image/interlace,1)
 
 最开始的封面图就是卤了一天的效果，超入味！！！
 
 当然，卤水是可以上班带饭吃哈哈哈哈！
 
-![普通潮汕人带饭](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220130235743.jpg)
+![普通潮汕人带饭](https://cdn.chengpeiquan.com/img/2022/01/20220130235743.jpg?x-oss-process=image/interlace,1)

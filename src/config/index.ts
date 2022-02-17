@@ -18,9 +18,9 @@ export default {
   },
   avatar: {
     small:
-      'https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/avatar-60x60.jpg',
+      'https://cdn.chengpeiquan.com/img/avatar-60x60.jpg?x-oss-process=image/interlace,1',
     normal:
-      'https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/avatar-120x120.jpg',
-    big: 'https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/avatar-300x300.jpg',
+      'https://cdn.chengpeiquan.com/img/avatar-120x120.jpg?x-oss-process=image/interlace,1',
+    big: 'https://cdn.chengpeiquan.com/img/avatar-300x300.jpg?x-oss-process=image/interlace,1',
   },
 }

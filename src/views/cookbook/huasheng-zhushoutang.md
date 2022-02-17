@@ -3,7 +3,7 @@ title: 两个步骤煲出超级软糯的花生猪手汤（3h）
 desc: 立冬啦！虽然深圳今天是30度的冬天，不过明天新的一周还真的是要降温，今天煲个汤先提前暖和暖和哈哈哈哈（刚好傍晚开始就有点凉飕飕了…因为昨天晚上去爬山了，运动量略大，所以今晚煲的是肉量超满足的猪手，超级软糯，几乎入口即化，你看那猪皮，稍微一抖就断了，嗷嗷嗷~汤也是超级鲜甜！！！
 keywords: 花生猪手汤,猪手汤,花生猪手
 date: 2021-11-07 21:57:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203172535.jpg
+cover: https://cdn.chengpeiquan.com/img/2022/02/20220203172535.jpg?x-oss-process=image/interlace,1
 categories:
   - thrift
   - bento
@@ -23,7 +23,7 @@ xiaohongshuId: 6187db60000000002103af12
 
 然而过程超级简单，用料也非常简单，就两个步骤，适合新手，适合懒人！
 
-![成品图：花生猪手汤](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203172714.jpg)
+![成品图：花生猪手汤](https://cdn.chengpeiquan.com/img/2022/02/20220203172714.jpg?x-oss-process=image/interlace,1)
 
 ## 主要食材
 
@@ -55,7 +55,7 @@ xiaohongshuId: 6187db60000000002103af12
 
 4、捞走浮沫杂质
 
-![大火飞水](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203172711.jpg)
+![大火飞水](https://cdn.chengpeiquan.com/img/2022/02/20220203172711.jpg?x-oss-process=image/interlace,1)
 
 ## 煲汤过程
 
@@ -63,11 +63,11 @@ xiaohongshuId: 6187db60000000002103af12
 
 2、花生米洗净，也是铺在炖锅底部
 
-![铺好材料](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203172712.jpg)
+![铺好材料](https://cdn.chengpeiquan.com/img/2022/02/20220203172712.jpg?x-oss-process=image/interlace,1)
 
 3、飞水完毕的猪手，用筷子夹到炖锅里，骨头多的优先放在底部，比如蹄尖，这样这些部位可以被炖的比较充分，等会吃的时候基本上一碰就脱骨
 
-![把猪手夹出来](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203172713.jpg)
+![把猪手夹出来](https://cdn.chengpeiquan.com/img/2022/02/20220203172713.jpg?x-oss-process=image/interlace,1)
 
 4、刚才提前煮好的开水，炖锅里加到8分满（因为今天分量多了点，所以有一点点没法淹没猪手，但不能再加了，等会沸腾的时候会溢出来）
 
@@ -83,14 +83,14 @@ xiaohongshuId: 6187db60000000002103af12
 
 时间到了就可以盛出来了，先拿出来静置一会，汤勺刮走汤表层的油脂，然后大碗里加一小勺盐，先舀几勺汤兑匀，然后就可以把猪手盛出来了，就搞定啦！！！
 
-![好软糯的皮](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203172718.jpg)
+![好软糯的皮](https://cdn.chengpeiquan.com/img/2022/02/20220203172718.jpg?x-oss-process=image/interlace,1)
 
-![稍微抖一抖就软烂到要断](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203172719.jpg)
+![稍微抖一抖就软烂到要断](https://cdn.chengpeiquan.com/img/2022/02/20220203172719.jpg?x-oss-process=image/interlace,1)
 
 好好吃，好软糯，大冷天吃猪手汤太舒服了！
 
-![一大碗](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203172715.jpg)
+![一大碗](https://cdn.chengpeiquan.com/img/2022/02/20220203172715.jpg?x-oss-process=image/interlace,1)
 
-![全是肉肉](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203172717.jpg)
+![全是肉肉](https://cdn.chengpeiquan.com/img/2022/02/20220203172717.jpg?x-oss-process=image/interlace,1)
 
-![呜呜呜好吃](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203172716.jpg)
+![呜呜呜好吃](https://cdn.chengpeiquan.com/img/2022/02/20220203172716.jpg?x-oss-process=image/interlace,1)

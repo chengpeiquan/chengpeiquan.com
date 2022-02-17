@@ -3,7 +3,7 @@ title: Github发布项目与删除文件夹操作指令
 desc: Git的指令还是记不太住，发篇文帮助记忆，记录起来方便查阅。
 keywords: github,github上传,github删除文件夹
 date: 2019-02-05 14:56:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2019/02/1-2.jpg
+cover: https://cdn.chengpeiquan.com/img/2019/02/1-2.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 ---

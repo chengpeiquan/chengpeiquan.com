@@ -3,7 +3,7 @@ title: 世界，您好！
 desc: 这是这次博客的第一篇文章，不是历史以来的第一篇。以前也在这个域名下搭过一次WordPress，但后来写的东西有点杂，而且觉得以前记录的问题已经都不是什么问题了，所以在之前的新浪云到期之后，果断就舍弃了。
 keywords: hello world
 date: 2018-09-02 14:19:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/09/1.jpg
+cover: https://cdn.chengpeiquan.com/img/2018/09/1.jpg?x-oss-process=image/interlace,1
 categories:
   - prose
 ---

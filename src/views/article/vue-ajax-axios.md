@@ -3,7 +3,7 @@ title: Vue使用ajax 关于axios遇到乱码等问题的那些坑
 desc: 这个情况当时是很懵逼的，因为在PC端，以及使用Chrome的移动端模拟器测试都一切正常，但到了真机上提交数据时，只要包含了中文，post到服务端的结果永远是【銆愭姤鍚嶇粍鍒】，这个至今还是不知道到底是什么鬼。
 keywords: vue ajax,vue axios,axios乱码,axios get,axios post,axios,qs,axios qs
 date: 2018-09-06 01:46:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/09/1-1.jpg
+cover: https://cdn.chengpeiquan.com/img/2018/09/1-1.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 ---

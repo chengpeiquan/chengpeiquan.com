@@ -3,7 +3,7 @@ title: 原生JS实现带动画的返回顶部按钮
 desc: 添加的第一个参数destination，终点位置，含义是指终点坐标与窗口顶部的Y轴距离，非必须，默认为0，也就是直接返回到窗口顶部。通过window.scrollY > destination的条件判断，如果当前窗口滚动距离比预设的终点距离大，就执行滚动，否则就结束，到达目的地。
 keywords: 原生JS回到顶部,原生JS带动画回到顶部
 date: 2019-01-09 00:45:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2019/01/1.jpg
+cover: https://cdn.chengpeiquan.com/img/2019/01/1.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 ---

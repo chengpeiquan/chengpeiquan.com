@@ -3,7 +3,7 @@ title: 对文章又重新做了一次分类
 desc: 时隔两年，改版的时候去掉了分类，想了想，还是加回来吧，又把所有内容重新分了个类。
 keywords: 原生JS回到顶部,原生JS带动画回到顶部
 date: 2021-03-16 01:17:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/03/20210316221139.jpg
+cover: https://cdn.chengpeiquan.com/img/2021/03/20210316221139.jpg?x-oss-process=image/interlace,1
 categories:
   - prose
 ---
@@ -14,7 +14,7 @@ categories:
 
 啊哈哈哈最近好多朋友都找我问养猫的一些技巧，新手猫奴多了不少，大家都知道我养了好几年猫，还养了三只，之前也是时不时会有咨询一些怎么照顾猫之类的问题…
 
-![最近每天都有朋友来问怎么养猫](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/03/20210316215030.png)
+![最近每天都有朋友来问怎么养猫](https://cdn.chengpeiquan.com/img/2021/03/20210316215030.png)
 
 大概就是这些七七八八的原因吧，老是在微信上一问一答也挺累的，都可以公开的东西，不如找时间整理整理。
 

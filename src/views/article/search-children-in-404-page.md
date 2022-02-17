@@ -3,7 +3,7 @@ title: Node爬取宝贝回家最新走失儿童信息 生成接口API在404页�
 desc: 很久没采购成箱的东西了，大部分情况下都是零零散散的京东散件或者天猫半日达，一个购物袋就给我装了送过来，周末刚好在天猫超市买了箱东西，开箱一看，发现箱子里面印刷上了走失儿童的信息，感动！突然想起很久没有关注到这方面的信息。
 keywords: node爬虫,宝贝回家404,宝贝回家API
 date: 2021-04-11 15:40:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/04/20210411154503.jpg
+cover: https://cdn.chengpeiquan.com/img/2021/04/20210411154503.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 repo: https://github.com/chengpeiquan/search-children-api-example
@@ -29,7 +29,7 @@ repo: https://github.com/chengpeiquan/search-children-api-example
 
 周末刚好在天猫超市买了箱东西，开箱一看，发现箱子里面印刷上了走失儿童的信息，感动！突然想起很久没有关注到这方面的信息了。
 
-![天猫超市在箱子里的公益信息](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/04/20210411154352.jpg)
+![天猫超市在箱子里的公益信息](https://cdn.chengpeiquan.com/img/2021/04/20210411154352.jpg?x-oss-process=image/interlace,1)
 
 自从各种 APP 横行和移动端浏览之后，对于各类网页版的新闻网站，都看的比较少了，所以也很久没有看到这个走失儿童的 404 信息。
 
@@ -43,7 +43,7 @@ repo: https://github.com/chengpeiquan/search-children-api-example
 
 因为数据都是来自于 [宝贝回家寻子网](https://www.baobeihuijia.com/)，去官网看了一下，发现官网和官方论坛上的信息是非常的新，在衡量了论坛数据源和官网数据源的优劣势之后（论坛格式不统一，图片排序不规则也导致不知道哪一张是被寻人的照片），所以决定抓取官网的数据过来。
 
-![宝贝回家官网的最新寻人模块](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/04/20210411161843.jpg)
+![宝贝回家官网的最新寻人模块](https://cdn.chengpeiquan.com/img/2021/04/20210411161843.jpg?x-oss-process=image/interlace,1)
 
 ## 如何实现
 
@@ -201,7 +201,7 @@ router.get('/api/searchChildren', async (req, res) => {
 
 可以戳: [404](https://chengpeiquan.com/404) 或者随便打一个不存在的路径查看效果（因为需要走多次请求才能拿回数据，所以倒计时我改成 10s 了）。
 
-![404页面的效果预览](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/04/20210411154858.jpg)
+![404页面的效果预览](https://cdn.chengpeiquan.com/img/2021/04/20210411154858.jpg?x-oss-process=image/interlace,1)
 
 当然以上是作为一个技术男力所能及的一点小公益贡献，生活里时不时还是有机会可以帮助到更多的人，比如之前在知乎就看到一个新闻： [以偶像之名——百站联合公益计划 以爱心共筑校园](https://zhuanlan.zhihu.com/p/344492192) ，追星的同时做公益，也是一个特别好的方式，希望有能力有影响力的人，能够多带头多响应，让世界更好！
 

@@ -3,7 +3,7 @@ title: 空气韭菜煎饺！空气炸锅的发明者真是现代爱迪生！
 desc: 昨天下午做了卤水，但是为了更入味所以昨晚没有立即吃，继续先卤着，然后昨晚又另外包了韭菜饺子，留了一盒今天晚上回来做煎饺。
 keywords: 潮州,潮州韭菜饺子,煎饺
 date: 2021-12-13 21:07:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220131234851.jpg
+cover: https://cdn.chengpeiquan.com/img/2022/01/20220131234851.jpg?x-oss-process=image/interlace,1
 categories:
   - thrift
   - bento
@@ -22,24 +22,24 @@ xiaohongshuId: 61b7459b000000002103c463
 
 ## 成品图
 
-![成品图：空气韭菜煎饺](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220131235108.jpg)
+![成品图：空气韭菜煎饺](https://cdn.chengpeiquan.com/img/2022/01/20220131235108.jpg?x-oss-process=image/interlace,1)
 
 ## 制作过程
 
 我是昨晚先蒸好了饺子的，吃剩下的就保鲜盒冷藏，刚刚冷藏拿出来，加热4分钟就好，外层焦脆，里面还是跟原来一样，也不会很干！
 
-![拿出前一晚冷藏的饺子](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220131235111.jpg)
+![拿出前一晚冷藏的饺子](https://cdn.chengpeiquan.com/img/2022/01/20220131235111.jpg?x-oss-process=image/interlace,1)
 
-![码好在空气炸锅底部](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220131235112.jpg)
+![码好在空气炸锅底部](https://cdn.chengpeiquan.com/img/2022/01/20220131235112.jpg?x-oss-process=image/interlace,1)
 
 ## 出炉效果
 
 口感方面和油煎的对比，一样好吃，皮会稍微硬一些，感觉下次可以先洒洒水再放进去烤，关键是无油！！！
 
-![真的漂亮](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220131235106.jpg)
+![真的漂亮](https://cdn.chengpeiquan.com/img/2022/01/20220131235106.jpg?x-oss-process=image/interlace,1)
 
-![一点也不逊色油煎出来的](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220131235107.jpg)
+![一点也不逊色油煎出来的](https://cdn.chengpeiquan.com/img/2022/01/20220131235107.jpg?x-oss-process=image/interlace,1)
 
-![哈哈哈哈哈好吃](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220131235110.jpg)
+![哈哈哈哈哈好吃](https://cdn.chengpeiquan.com/img/2022/01/20220131235110.jpg?x-oss-process=image/interlace,1)
 
-![又一炉很快就烤好](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220131235109.jpg)
+![又一炉很快就烤好](https://cdn.chengpeiquan.com/img/2022/01/20220131235109.jpg?x-oss-process=image/interlace,1)

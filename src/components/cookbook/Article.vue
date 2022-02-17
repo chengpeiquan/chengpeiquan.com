@@ -110,7 +110,7 @@ useHead({
 
 <style lang="postcss">
 .btn-open-xiaohongshu {
-  background-image: url('https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220108012511.png');
+  background-image: url('https://cdn.chengpeiquan.com/img/2022/01/20220108012511.png');
   @apply w-9rem h-2.7rem bg-center bg-no-repeat bg-cover mt-8 mx-auto;
 }
 .article-detail {

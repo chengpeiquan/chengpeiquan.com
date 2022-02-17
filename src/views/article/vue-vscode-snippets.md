@@ -3,7 +3,7 @@ title: 解决vscode保存vue文件时 压缩stylus代码为一行以及无法注
 desc: 目前除了美团之外，其他的外卖app（像饿了么啊、瑞幸啊、麦当劳肯德基啊）都没提供自动计算账单的功能，自己每次拉excel算的蛋疼，所以写了这个，无需纠结红包、抵扣券等乱七八糟的减免，会自动计算折扣比例来得到最终账单。
 keywords: stylus保存压缩,stylus错乱,stylus格式化
 date: 2020-09-20 17:02:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/09/vue-vscode-snippets.jpg
+cover: https://cdn.chengpeiquan.com/img/2020/09/vue-vscode-snippets.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 ---
@@ -20,11 +20,11 @@ categories:
 
 最近有好长一段时间都出现了一个诡异的情况，我保存 vue 文件的时候，stylus 写的好好的，就像下面这样：
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/09/4.jpg)
+![](https://cdn.chengpeiquan.com/img/2020/09/4.jpg?x-oss-process=image/interlace,1)
 
 然后当我按下 Ctrl+S，老是变成这样一行……还能不能玩了？？
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/09/3-1.jpg)
+![](https://cdn.chengpeiquan.com/img/2020/09/3-1.jpg?x-oss-process=image/interlace,1)
 
 然后 less/sass 都不会，唯独 stylus 出现了，我又比较喜欢 stylus，无需花括号，无需冒号，无需分号的简洁…
 
@@ -41,7 +41,7 @@ emmm，发现原来居然是因为 vue 3.0 的 `Vue3snippets` 插件引起的 = 
 
 然后我把设置里面的 format 关闭了，好了…
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/09/2-1.jpg)
+![](https://cdn.chengpeiquan.com/img/2020/09/2-1.jpg?x-oss-process=image/interlace,1)
 
 终于告别噩梦…你知道我这段时间是怎么过来的吗？
 
@@ -55,7 +55,7 @@ emmm，发现原来居然是因为 vue 3.0 的 `Vue3snippets` 插件引起的 = 
 
 就是按 `ctrl+/` 会生成这样的注释：
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/09/5.jpg)
+![](https://cdn.chengpeiquan.com/img/2020/09/5.jpg?x-oss-process=image/interlace,1)
 
 网上很多方法说把 vue 的默认关联方式改成 html（具体操作就不说了，搜出来几乎全是这个答案…
 
@@ -66,11 +66,11 @@ emmm，发现原来居然是因为 vue 3.0 的 `Vue3snippets` 插件引起的 = 
 > vue-vscode-snippets
 > https://marketplace.visualstudio.com/items?itemName=sdras.vue-vscode-snippets
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/09/7.jpg)
+![](https://cdn.chengpeiquan.com/img/2020/09/7.jpg?x-oss-process=image/interlace,1)
 
 尝试安装了一下，顺手禁掉了之前的 `Vue3snippets`，注释的问题完美解决。
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/09/6.jpg)
+![](https://cdn.chengpeiquan.com/img/2020/09/6.jpg?x-oss-process=image/interlace,1)
 
 当然，上面 stylus 被压缩的问题也完美解决，暂时先用这个了！
 

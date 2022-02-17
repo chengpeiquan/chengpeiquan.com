@@ -3,7 +3,7 @@ title: 重构于Vite
 desc: 从 2021 年元旦 Vite 发布 2.0 Beta 版就一直在关注 Vite 的动态，借着春节放假有时间，而且 Vue 3.0 和 Vite 2.0 都才大版本更新上线不久，预感后面会火，先开荒尝试一波，也当给以后工作上的业务先提前踩踩坑，对博客做了第三次重构，这一次把客户端和服务端都重新写了，由 PHP 的 LNMP 全家桶全部换成了前端侧的技术栈。
 keywords: vite,vite ssr,vite ssg,vite blog
 date: 2021-02-18 23:54:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210219234631.jpg
+cover: https://cdn.chengpeiquan.com/img/2021/02/20210219234631.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 isHot: true
@@ -18,13 +18,13 @@ repo: https://github.com/chengpeiquan/chengpeiquan.com
 
 而且特别巧的是，这一天也是 Vite 2.0 正式版发布的日子：[Vite 2.0 发布了 - 尤雨溪](https://zhuanlan.zhihu.com/p/351147547)，同一天上线，就感觉特别美好，值得纪念。
 
-![LightHouse的打分](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/01/20210222114853.jpg)
+![LightHouse的打分](https://cdn.chengpeiquan.com/img/2021/01/20210222114853.jpg?x-oss-process=image/interlace,1)
 
 ## 运作流程
 
 本次重构后，从开发到部署更新的运作流程图如下，日常只需要维护 GitHub 仓库的代码，其他的都是自动化完成。
 
-![博客运作流程](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/01/20210222154414.jpg)
+![博客运作流程](https://cdn.chengpeiquan.com/img/2021/01/20210222154414.jpg?x-oss-process=image/interlace,1)
 
 ## 重构的价值
 
@@ -281,7 +281,7 @@ useHead({
 
 关于 jsdelivr 的速度可以参考：[国内有哪些靠谱的 Javascript 库 CDN 可用？](https://www.zhihu.com/question/20227463/answer/370662453)，也可以测试下我的博客，我自己对测试结果还是挺满意的。
 
-![测试我自己网站的速度](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210221185258.jpg)
+![测试我自己网站的速度](https://cdn.chengpeiquan.com/img/2021/02/20210221185258.jpg?x-oss-process=image/interlace,1)
 
 所以最后我是把所有静态资源都指向了 jsdelivr CDN ，它无需你自己再做任何部署工作，只需要把代码文件更新到你的 GitHub 仓库里，就会自动同步到 jsdelivr 。
 
@@ -301,7 +301,7 @@ export default defineConfig({
 
 当然这种方式如果你用平时的命令行或者老乌龟界面工具来提交文件，始终还是比较麻烦，这里推荐一个现成的图床工具 [PicGo](https://github.com/Molunerfinn/PicGo) ，支持多个平台的 CDN 服务，其中就有 Github 。
 
-![PicGo 图床界面](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/02/20210221185205.jpg)
+![PicGo 图床界面](https://cdn.chengpeiquan.com/img/2021/02/20210221185205.jpg?x-oss-process=image/interlace,1)
 
 你可以在 Github 仓库上的 [Releases](https://github.com/Molunerfinn/PicGo/releases) 下载最新的客户端版本，只是使用的话，可以单独下载对应系统的安装文件，不需要克隆整个仓库下来自己构建。
 

@@ -3,7 +3,7 @@ title: Vue-CLI脚手架3.0升级小结（含Win版Node升级与PowerShell踩坑�
 desc: Vue脚手架3.0出来也蛮久了，秉着前人先踩坑的习惯，最近才开始升级。整个过程还是蛮顺利的，不过也有一些小小的问题，简单记录起来。
 keywords: vue cli 3.0 升级,vue cli 升级报错
 date: 2018-11-21 19:50:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/11/1-2.jpg
+cover: https://cdn.chengpeiquan.com/img/2018/11/1-2.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 ---
@@ -28,7 +28,7 @@ Vue-cli 3.0 需要 8.9 或者更高的 node，官方推荐 8.11+，我 check 了
 
 > https://stackoverflow.com/questions/50597159/npm-err-asyncwrite-is-not-a-function
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/11/1.jpg)
+![](https://cdn.chengpeiquan.com/img/2018/11/1.jpg?x-oss-process=image/interlace,1)
 
 附上 Node 的相关下载地址。
 
@@ -40,7 +40,7 @@ Vue-cli 3.0 需要 8.9 或者更高的 node，官方推荐 8.11+，我 check 了
 
 方法也比较简单，就直接截图示范了，path 的内容就是你的 node 的路径。
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/11/2.jpg)
+![](https://cdn.chengpeiquan.com/img/2018/11/2.jpg?x-oss-process=image/interlace,1)
 
 ## 安装 Vue-CLI 3.0
 
@@ -48,13 +48,13 @@ Vue-cli 3.0 需要 8.9 或者更高的 node，官方推荐 8.11+，我 check 了
 
 根据官方文档说明，卸载了旧版脚手架之后，使用 `npm install -g @vue/cli` 就可以直接安装，但是频繁报错，说存在无法识别的标记，如下图：
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/11/3.jpg)
+![](https://cdn.chengpeiquan.com/img/2018/11/3.jpg?x-oss-process=image/interlace,1)
 
 并且这个问题，百度和谷歌都找不到原因，根本没有人提问，我能怎么办，我很绝望啊！
 
 幸亏天无绝人之路，有位同事对 PowerShell 比较熟，一眼就帮我看出问题所在，是@引起的，在 CMD 是可以直接这么安装，但是在 PS，@是个特殊字符，需要进行转义，需要在@前面加上\`，再次尝试 ，转义后立即可以安装了，感动到哭。
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/11/4.jpg)
+![](https://cdn.chengpeiquan.com/img/2018/11/4.jpg?x-oss-process=image/interlace,1)
 
 ## 修改 Vue 项目配置
 

@@ -3,7 +3,7 @@ title: 针对document.write渲染的优化方案（适用webpack按需加载）
 desc: write方法去渲染html，更多情况是适合手写页面的年代，现在前端开发都是通过node+webpack工程化打包，那么遇到必须write又不想write的情况应该怎么办？最近刚好对手里的一个项目做了渲染优化，在这里顺便做个总结，讲一下对`document.write`渲染html的一个优化思路，可以结合到MVVM框架（如Vue.js）里去使用。
 keywords: document.write渲染优化,vue document.write
 date: 2018-12-15 16:34:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/12/1.jpg
+cover: https://cdn.chengpeiquan.com/img/2018/12/1.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 ---
@@ -134,13 +134,13 @@ articleList: [
     tid: '123',
     subject: '文章的标题111',
     date: '2018-11-11',
-    cover: 'https://chengpeiquan.com/img/cover1.jpg',
+    cover: 'https://chengpeiquan.com/img/cover1.jpg?x-oss-process=image/interlace,1',
   },
   {
     tid: '456',
     subject: '文章的标题222',
     date: '2018-12-12',
-    cover: 'https://chengpeiquan.com/img/cover2.jpg',
+    cover: 'https://chengpeiquan.com/img/cover2.jpg?x-oss-process=image/interlace,1',
   },
 ]
 ```

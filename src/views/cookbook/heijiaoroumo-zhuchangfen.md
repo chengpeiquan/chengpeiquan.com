@@ -3,7 +3,7 @@ title: 省钱菜谱：3.7元的黑椒肉末猪肠粉（5min）
 desc: 昨晚加班回去的比较晚，买不到什么菜了，看到还有猪肠粉就买了点，换个料汁来做感觉也不错！
 keywords: 猪肠粉,黑椒肉末猪肠粉
 date: 2021-11-10 23:23:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203165751.jpg
+cover: https://cdn.chengpeiquan.com/img/2022/02/20220203165751.jpg?x-oss-process=image/interlace,1
 categories:
   - thrift
   - bento
@@ -17,7 +17,7 @@ xiaohongshuId: 618b528a0000000021038407
 
 昨晚加班回去的比较晚，买不到什么菜了，看到还有猪肠粉就买了点，换个料汁来做感觉也不错！
 
-![成品图：黑椒肉末猪肠粉](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203165808.jpg)
+![成品图：黑椒肉末猪肠粉](https://cdn.chengpeiquan.com/img/2022/02/20220203165808.jpg?x-oss-process=image/interlace,1)
 
 ## 主要食材
 
@@ -41,7 +41,7 @@ xiaohongshuId: 618b528a0000000021038407
 
 我加了白芝麻，但是感觉好像可以不加，把这些调料加3勺水兑匀备用。
 
-![食材和料汁](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203165806.jpg)
+![食材和料汁](https://cdn.chengpeiquan.com/img/2022/02/20220203165806.jpg?x-oss-process=image/interlace,1)
 
 ## 烹饪过程
 
@@ -51,18 +51,18 @@ xiaohongshuId: 618b528a0000000021038407
 
 3、锅里一点点油，把肉末煸炒熟
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203165809.jpg)
+![](https://cdn.chengpeiquan.com/img/2022/02/20220203165809.jpg?x-oss-process=image/interlace,1)
 
 4、料汁倒进去，跟肉末一起翻炒一下
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203165804.jpg)
+![](https://cdn.chengpeiquan.com/img/2022/02/20220203165804.jpg?x-oss-process=image/interlace,1)
 
 5、猪肠粉再倒进去，跟料汁肉末一起翻炒均匀就可以了
 
-![炒匀](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203165807.jpg)
+![炒匀](https://cdn.chengpeiquan.com/img/2022/02/20220203165807.jpg?x-oss-process=image/interlace,1)
 
 就可以出炉啦！
 
-![搞定出炉](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220203165805.jpg)
+![搞定出炉](https://cdn.chengpeiquan.com/img/2022/02/20220203165805.jpg?x-oss-process=image/interlace,1)
 
 哈哈哈哈我这个做来今天中午带饭的，微波炉热一下，口感跟昨晚刚做好之后偷吃了几块感觉没太大差别，带饭的同学也可以参考带下猪肠粉！

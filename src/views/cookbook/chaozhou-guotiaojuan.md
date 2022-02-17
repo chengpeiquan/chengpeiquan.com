@@ -3,7 +3,7 @@ title: 省钱菜谱：尚！3元一盘的潮州粿条卷（15min）
 desc: 哈哈哈前几天做菜脯炒粿条的时候说改天弄一下粿条卷，好久没吃了！也是潮州街头很常见的小吃！不过老家都是用整张的粿条来做（平时买的都是切好的），但是在菜市场问了，我这边买不到，所以今天是用猪肠粉来代替了，你也可以用陈村粉来代替，只要是像这种整张的皮就可以，出门在外，没办法，有些食材确实得这样取巧代替一下。
 keywords: 潮州小吃,潮州粿条卷,潮汕小吃
 date: 2021-10-06 15:42:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204221005.jpg
+cover: https://cdn.chengpeiquan.com/img/2022/02/20220204221005.jpg?x-oss-process=image/interlace,1
 categories:
   - thrift
   - teochew
@@ -23,7 +23,7 @@ cite:
 
 今天的食材加起来是 6 元，可以卷 6 条粿条卷，刚好 2 盘的分量。
 
-![成品图：潮州粿条卷](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204221028.jpg)
+![成品图：潮州粿条卷](https://cdn.chengpeiquan.com/img/2022/02/20220204221028.jpg?x-oss-process=image/interlace,1)
 
 ## 主要食材
 
@@ -45,7 +45,7 @@ cite:
 
 可以电热壶先煮一壶开水备用。
 
-![超大个的芋头](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204221017.jpg)
+![超大个的芋头](https://cdn.chengpeiquan.com/img/2022/02/20220204221017.jpg?x-oss-process=image/interlace,1)
 
 ## 备料过程
 
@@ -59,21 +59,21 @@ cite:
 
 5、葱切成葱花
 
-![准备好的材料](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204221018.jpg)
+![准备好的材料](https://cdn.chengpeiquan.com/img/2022/02/20220204221018.jpg?x-oss-process=image/interlace,1)
 
 ## 调馅过程
 
 把芋头、菜脯、肉末、香菇都炒熟，适量加一点盐调味（菜脯多就盐少点，菜脯本身是咸的），再加上一勺蒜头朥，撒入一点葱花，拌匀就可以了。
 
-![调制好的馅料](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204221019.jpg)
+![调制好的馅料](https://cdn.chengpeiquan.com/img/2022/02/20220204221019.jpg?x-oss-process=image/interlace,1)
 
 ## 芝麻葱珠朥
 
 洗干净炒锅，擦干不要有水份，倒一点油，300度小火热锅，油温有点上来了就下葱花慢慢熬，保持小火就可以了，差不多焦脆就可以熄火，用余温继续加热到完美，碗里倒点白芝麻，葱油倒进去拌匀就是芝麻葱珠朥了
 
-![炸葱花](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204221020.jpg)
+![炸葱花](https://cdn.chengpeiquan.com/img/2022/02/20220204221020.jpg?x-oss-process=image/interlace,1)
 
-![搞定](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204221021.jpg)
+![搞定](https://cdn.chengpeiquan.com/img/2022/02/20220204221021.jpg?x-oss-process=image/interlace,1)
 
 详细版本可以看文末的相关菜谱。
 
@@ -85,24 +85,24 @@ cite:
 
 2、把猪肠粉展开铺平，两三勺馅料，像我图里这样铺平，不用很厚
 
-![铺好的状态](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204221022.jpg)
+![铺好的状态](https://cdn.chengpeiquan.com/img/2022/02/20220204221022.jpg?x-oss-process=image/interlace,1)
 
 3、卷起来就可以了，再切成小块，我的是切了三段，等会吃的时候刚好一勺子就是一段
 
-![卷起来](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204221023.jpg)
+![卷起来](https://cdn.chengpeiquan.com/img/2022/02/20220204221023.jpg?x-oss-process=image/interlace,1)
 
-![切段](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204221024.jpg)
+![切段](https://cdn.chengpeiquan.com/img/2022/02/20220204221024.jpg?x-oss-process=image/interlace,1)
 
 4、装盘里，然后上锅蒸5分钟（可以用刚才电热壶的热水去蒸，就不用等待煮水的时间了）
 
-![装盘里](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204221025.jpg)
+![装盘里](https://cdn.chengpeiquan.com/img/2022/02/20220204221025.jpg?x-oss-process=image/interlace,1)
 
-![上锅蒸](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204221026.jpg)
+![上锅蒸](https://cdn.chengpeiquan.com/img/2022/02/20220204221026.jpg?x-oss-process=image/interlace,1)
 
 蒸好了拿出来，淋上芝麻葱珠朥就可以吃啦！
 
 哈哈哈哈哈哈我去爬山了！中午吃了一盘，晚上再来一盘，今天愉快的度过！！！耶耶耶！！！
 
-![出锅了！](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204221027.jpg)
+![出锅了！](https://cdn.chengpeiquan.com/img/2022/02/20220204221027.jpg?x-oss-process=image/interlace,1)
 
-![好吃](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220204221029.jpg)
+![好吃](https://cdn.chengpeiquan.com/img/2022/02/20220204221029.jpg?x-oss-process=image/interlace,1)

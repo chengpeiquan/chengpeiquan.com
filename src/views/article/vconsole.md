@@ -3,7 +3,7 @@ title: 移动端真机debug调试神器 vConsole的引入说明（原生态与We
 desc: 距离这个神器发布第一个版本的时间，已经过去3年了，不过还是有蛮多新同学不知道他的存在，在做项目的时候，移动端真机调试还是用alert来弹，不仅调试起来很烦，也蛮不好定位问题的。安利过的每个人，都对vConsole有着100%的好评哈哈哈，写个博文记录下吧，好东西应该持续推荐。
 keywords: vconsole,手机控制台,手机debug,真机调试,移动端debug
 date: 2018-11-25 01:16:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/11/1-1.jpg
+cover: https://cdn.chengpeiquan.com/img/2018/11/1-1.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 ---
@@ -16,7 +16,7 @@ categories:
 
 在项目页面上引入 vConsole 之后，会在页面右下角生成一个控制台按钮，打开控制台后，会类似 Chrome 的 console 一样，打印我们输出的 log 信息，以及各种页面报错，还可以查看到浏览器 UA 信息、结构 DOM、本地存储信息等等。
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2018/11/11.jpg)
+![](https://cdn.chengpeiquan.com/img/2018/11/11.jpg?x-oss-process=image/interlace,1)
 
 ## 下载地址
 

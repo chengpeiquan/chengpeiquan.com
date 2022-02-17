@@ -3,7 +3,7 @@ title: 省钱菜谱：3块钱一餐的芋粿（60min）
 desc: 我来了！昨晚的电饭煲做的芋粿，留了一半今晚煎，还是好吃哈哈哈哈！算了一下成本，分了两顿吃完，一顿 3 块钱，大约有 5 两重，性价比还蛮高的！芋粿是潮汕的小吃，我不确定和芋丝糕是不是完全一样哈哈哈，老家的粿是用的粘米粉，所以我也是用这个来做。
 keywords: 芋粿,芋丝糕,潮州小吃,潮汕小吃
 date: 2022-01-17 23:04:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220120003111.jpg
+cover: https://cdn.chengpeiquan.com/img/2022/01/20220120003111.jpg?x-oss-process=image/interlace,1
 categories:
   - thrift
   - staple
@@ -19,7 +19,7 @@ xiaohongshuId: 61e5856b0000000021035146
 
 芋粿是潮汕的小吃，我不确定和芋丝糕是不是完全一样哈哈哈，老家的粿是用的粘米粉，所以我也是用这个来做。
 
-![成品图：潮州芋粿](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220120003528.jpg)
+![成品图：潮州芋粿](https://cdn.chengpeiquan.com/img/2022/01/20220120003528.jpg?x-oss-process=image/interlace,1)
 
 ## 主要食材
 
@@ -39,7 +39,7 @@ xiaohongshuId: 61e5856b0000000021035146
 
 我做的基础斋款，你可以自己加肉末啊腊肠啊之类的，做成腊味芋丝糕！然后，粘米粉多点也没关系，所以不一定要拿称，自己目测一下差不多就行，但不要明显太少，太稀了挂不住，成不了型。
 
-![这个是粘米粉](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220120003529.jpg)
+![这个是粘米粉](https://cdn.chengpeiquan.com/img/2022/01/20220120003529.jpg?x-oss-process=image/interlace,1)
 
 ## 备料过程
 
@@ -49,21 +49,21 @@ xiaohongshuId: 61e5856b0000000021035146
 
 1、芋头削皮，用刮丝器拓成丝（潮州话把这个动作叫 tua，找不到字哈哈哈 ）
 
-![用刮丝器拓成丝](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220120003513.jpg)
+![用刮丝器拓成丝](https://cdn.chengpeiquan.com/img/2022/01/20220120003513.jpg?x-oss-process=image/interlace,1)
 
 2、洗净芋丝，洗几次没什么杂质就可以，然后捞干备用
 
-![洗净芋丝](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220120003514.jpg)
+![洗净芋丝](https://cdn.chengpeiquan.com/img/2022/01/20220120003514.jpg?x-oss-process=image/interlace,1)
 
-![捞干备用](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220120003515.jpg)
+![捞干备用](https://cdn.chengpeiquan.com/img/2022/01/20220120003515.jpg?x-oss-process=image/interlace,1)
 
 3、泡好的花生米搓皮，炸成金黄色
 
-![搓好皮的花生米](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220120003516.jpg)
+![搓好皮的花生米](https://cdn.chengpeiquan.com/img/2022/01/20220120003516.jpg?x-oss-process=image/interlace,1)
 
 4、泡好的香菇拧掉水，切细细的丝，用刚才炸花生米的油爆炒一下，不用调味，也是盛出来备用
 
-![爆炒香菇丝](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220120003517.jpg)
+![爆炒香菇丝](https://cdn.chengpeiquan.com/img/2022/01/20220120003517.jpg?x-oss-process=image/interlace,1)
 
 ## 做粿
 
@@ -73,19 +73,19 @@ xiaohongshuId: 61e5856b0000000021035146
 
 3、撒上一层五香粉
 
-![这么多五香粉就差不多了](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220120003518.jpg)
+![这么多五香粉就差不多了](https://cdn.chengpeiquan.com/img/2022/01/20220120003518.jpg?x-oss-process=image/interlace,1)
 
-![所有料放进去](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220120003519.jpg)
+![所有料放进去](https://cdn.chengpeiquan.com/img/2022/01/20220120003519.jpg?x-oss-process=image/interlace,1)
 
 4、抓匀，稍微压一压让他们结实一点（不用特别大力）
 
-![抓匀，稍微压一压](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220120003520.jpg)
+![抓匀，稍微压一压](https://cdn.chengpeiquan.com/img/2022/01/20220120003520.jpg?x-oss-process=image/interlace,1)
 
 5、粘米粉慢慢加水，用筷子打成米浆（陆陆续续慢慢加，别一下子不小心加太多水了）
 
 6、把米浆倒进电饭锅里，淹没芋头丝
 
-![加入米浆](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220120003521.jpg)
+![加入米浆](https://cdn.chengpeiquan.com/img/2022/01/20220120003521.jpg?x-oss-process=image/interlace,1)
 
 小技巧：在调味之前，可以先用清水和芋头丝模拟一下需要多少水，然后再开始弄粿
 
@@ -95,26 +95,26 @@ xiaohongshuId: 61e5856b0000000021035146
 
 2、煮好了端出来冷却，等冷却固定了，用饭勺沿着四周转一圈，很容易就拿出来
 
-![刚出炉的样子](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220120003522.jpg)
+![刚出炉的样子](https://cdn.chengpeiquan.com/img/2022/01/20220120003522.jpg?x-oss-process=image/interlace,1)
 
-![准备拿出来了](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220120003523.jpg)
+![准备拿出来了](https://cdn.chengpeiquan.com/img/2022/01/20220120003523.jpg?x-oss-process=image/interlace,1)
 
 一定要冷却了再去切，那样定型了就很好切，切小块去煎，就很棒！！！
 
-![在冷却](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220120003524.jpg)
+![在冷却](https://cdn.chengpeiquan.com/img/2022/01/20220120003524.jpg?x-oss-process=image/interlace,1)
 
-![可以切了，厚的再对半切](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220120003525.jpg)
+![可以切了，厚的再对半切](https://cdn.chengpeiquan.com/img/2022/01/20220120003525.jpg?x-oss-process=image/interlace,1)
 
 ## 煎粿
 
 一定要等油温上来了再放下去煎，不然会粘锅，油温够高就不怕了！中火煎到两面金黄就可以了！
 
-![煎好的样子](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220120003528.jpg)
+![煎好的样子](https://cdn.chengpeiquan.com/img/2022/01/20220120003528.jpg?x-oss-process=image/interlace,1)
 
 ## 最终成品
 
 外焦里嫩好好吃，配点辣椒酱，太棒了！
 
-![外焦里嫩好好吃](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220120003526.jpg)
+![外焦里嫩好好吃](https://cdn.chengpeiquan.com/img/2022/01/20220120003526.jpg?x-oss-process=image/interlace,1)
 
-![配点辣椒酱，太棒了！](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/01/20220120003527.jpg)
+![配点辣椒酱，太棒了！](https://cdn.chengpeiquan.com/img/2022/01/20220120003527.jpg?x-oss-process=image/interlace,1)

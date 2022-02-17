@@ -3,7 +3,7 @@ title: 百度地图API实例销毁方案 可用于Vue单页面项目
 desc: 最近项目用到了百度地图的API，用倒是没啥毛病，就是发现用完之后留下来的垃圾太多 = = 项目是基于Vue做的，当时发现在需要百度地图的那个路由用完之后，切去其他页面，积累了很多DOM，并且再次进入会再次创建，在项目里体验越久，DOM树越累赘，并且由百度地图创建的定时器越攒越多。
 keywords: 百度地图销毁,百度地图API销毁
 date: 2020-12-24 16:00:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/12/baidu-map.jpg
+cover: https://cdn.chengpeiquan.com/img/2020/12/baidu-map.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 ---
@@ -14,15 +14,15 @@ categories:
 
 这当然不是什么好事……
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/12/2.jpg)
+![](https://cdn.chengpeiquan.com/img/2020/12/2.jpg?x-oss-process=image/interlace,1)
 
 在接入的时候就发现了这个问题，查了好久都没有找到销毁的 API ，包括官方贴吧和各种博客都没有找到，打了个 TODO 直到今天才有空优化这个问题。
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/12/1.png)
+![](https://cdn.chengpeiquan.com/img/2020/12/1.png)
 
 一开始尝试直接移除创建的 DOM ，但发现会带来另外的问题，控制台一片血海……（很明显是定时器在执行时找不到 DOM 而产生的报错…
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2020/12/3.jpg)
+![](https://cdn.chengpeiquan.com/img/2020/12/3.jpg?x-oss-process=image/interlace,1)
 
 根据打印出来的报错日志，可以看到这个报错是百度地图 API 的 JS 文件产生出来的。
 

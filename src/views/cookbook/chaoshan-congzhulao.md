@@ -3,7 +3,7 @@ title: 潮汕特色调味品 葱珠朥做法
 desc: 今天又煮了粿汁，刚好葱珠朥要做新的了，单独记录一篇菜谱哈哈哈。
 keywords: 葱珠油,葱珠朥,潮汕调味品
 date: 2022-02-02 00:17:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220201234256.jpg
+cover: https://cdn.chengpeiquan.com/img/2022/02/20220201234256.jpg?x-oss-process=image/interlace,1
 categories:
   - teochew
   - condiment
@@ -19,7 +19,7 @@ cite:
 
 今天又煮了粿汁，刚好葱珠朥要做新的了，单独记录一篇菜谱哈哈哈。之前也陆陆续续在菜谱里穿插写了几次，比如粿条卷、粿汁，反正经常用，单独写一篇好。
 
-![成品图：葱珠朥](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220201234430.jpg)
+![成品图：葱珠朥](https://cdn.chengpeiquan.com/img/2022/02/20220201234430.jpg?x-oss-process=image/interlace,1)
 
 ## 主要材料
 
@@ -35,27 +35,27 @@ cite:
 
 3、用厨房剪刀剪成大约 1 厘米长的小段
 
-![准备好的材料](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220201234421.jpg)
+![准备好的材料](https://cdn.chengpeiquan.com/img/2022/02/20220201234421.jpg?x-oss-process=image/interlace,1)
 
 ## 制作过程
 
 1、炒锅热油，平时炒菜的温度（我是电磁炉 800 度），油量不用很多，覆盖锅底就可以了
 
-![在热油中](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220201234422.jpg)
+![在热油中](https://cdn.chengpeiquan.com/img/2022/02/20220201234422.jpg?x-oss-process=image/interlace,1)
 
 2、油温上来了，把葱丁都倒进去，时不时拨动一下，让葱都能被油炸的均匀。
 
-![下锅了](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220201234423.jpg)
+![下锅了](https://cdn.chengpeiquan.com/img/2022/02/20220201234423.jpg?x-oss-process=image/interlace,1)
 
 3、葱丁会慢慢变焦，观察颜色，只要都开始有焦色（也就是几乎没有水份了）就可以关火了
 
-![开始变焦](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220201234424.jpg)
+![开始变焦](https://cdn.chengpeiquan.com/img/2022/02/20220201234424.jpg?x-oss-process=image/interlace,1)
 
-![陆续变色](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220201234425.jpg)
+![陆续变色](https://cdn.chengpeiquan.com/img/2022/02/20220201234425.jpg?x-oss-process=image/interlace,1)
 
 4、期间先炸好的可以先推到锅沿，最后都推上来，免得油温继续加热，就过度了。
 
-![炸好了，先推上来冷却](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220201234426.jpg)
+![炸好了，先推上来冷却](https://cdn.chengpeiquan.com/img/2022/02/20220201234426.jpg?x-oss-process=image/interlace,1)
 
 ## 成品展示
 
@@ -63,7 +63,7 @@ cite:
 
 哈哈哈因为我还要做别的东西，所以没有占用炒锅，盛出来分开冷却了。
 
-![分开冷却中](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220201234427.jpg)
+![分开冷却中](https://cdn.chengpeiquan.com/img/2022/02/20220201234427.jpg?x-oss-process=image/interlace,1)
 
 ## 保存方法
 
@@ -73,6 +73,6 @@ cite:
 
 搭配潮汕粿汁好好吃！！！
 
-![粿汁](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220201234429.jpg)
+![粿汁](https://cdn.chengpeiquan.com/img/2022/02/20220201234429.jpg?x-oss-process=image/interlace,1)
 
-![粿汁](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220201234428.jpg)
+![粿汁](https://cdn.chengpeiquan.com/img/2022/02/20220201234428.jpg?x-oss-process=image/interlace,1)

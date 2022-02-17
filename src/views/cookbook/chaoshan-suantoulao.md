@@ -3,7 +3,7 @@ title: 超简单的潮汕蒜头朥做法（我菜谱里常出现的）
 desc: 前几天做菜的时候我就在想，会不会有人问我“蒜头油”是什么，然后昨晚评论区真的有人问了，刚好周五做灌面的时候把瓶底最后一点用完了，周末重新做一次，顺便分享一下。
 keywords: 潮汕美食,蒜头朥,蒜头油
 date: 2021-09-05 23:43:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220215232444.jpg
+cover: https://cdn.chengpeiquan.com/img/2022/02/20220215232444.jpg?x-oss-process=image/interlace,1
 categories:
   - teochew
   - condiment
@@ -20,7 +20,7 @@ xiaohongshuId: 6134e584000000000102f1ad
 
 外面买还挺贵的，自己做其实很简单（稍微花点时间），分享一下制作步骤，我做的是原味版的，有的地方还喜欢加入八角之类的，但我个人还是更喜欢原汁原味的蒜头味。
 
-![成品图：潮汕蒜头朥](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220215232503.jpg)
+![成品图：潮汕蒜头朥](https://cdn.chengpeiquan.com/img/2022/02/20220215232503.jpg?x-oss-process=image/interlace,1)
 
 ## 主要食材
 
@@ -30,7 +30,7 @@ xiaohongshuId: 6134e584000000000102f1ad
 
 蒜头记得买这种颗粒饱满的，可以减少很多掰蒜头的时间…
 
-![选这种饱满的](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220215232455.jpg)
+![选这种饱满的](https://cdn.chengpeiquan.com/img/2022/02/20220215232455.jpg?x-oss-process=image/interlace,1)
 
 ## 所需工具
 
@@ -48,15 +48,15 @@ xiaohongshuId: 6134e584000000000102f1ad
 
 1、蒜头掰瓣，用刀拍一下，拍碎了手一搓就可以脱掉蒜衣了，非常简单
 
-![用刀拍碎](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220215232456.jpg)
+![用刀拍碎](https://cdn.chengpeiquan.com/img/2022/02/20220215232456.jpg?x-oss-process=image/interlace,1)
 
-![先拍碎一把](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220215232457.jpg)
+![先拍碎一把](https://cdn.chengpeiquan.com/img/2022/02/20220215232457.jpg?x-oss-process=image/interlace,1)
 
-![再一起剥掉蒜皮](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220215232458.jpg)
+![再一起剥掉蒜皮](https://cdn.chengpeiquan.com/img/2022/02/20220215232458.jpg?x-oss-process=image/interlace,1)
 
 2、快刀剁成蒜蓉（刚开始可以用另外一只手按着刀背，垂直的慢慢剁，这样蒜末不会跳来跳去）
 
-![剁成蒜蓉](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220215232459.jpg)
+![剁成蒜蓉](https://cdn.chengpeiquan.com/img/2022/02/20220215232459.jpg?x-oss-process=image/interlace,1)
 
 ## 制作过程
 
@@ -66,19 +66,19 @@ xiaohongshuId: 6134e584000000000102f1ad
 
 3、期间一直保持这个温度，锅铲要一直时不时来回拨动一下蒜蓉，防止糊锅
 
-![开始炸的样子](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220215232500.jpg)
+![开始炸的样子](https://cdn.chengpeiquan.com/img/2022/02/20220215232500.jpg?x-oss-process=image/interlace,1)
 
 4、等到蒜蓉开始逐渐呈现金黄色了，关小火（我调到800度）
 
 5、片刻后，金黄色越来越明显，关火
 
-![关火了](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220215232501.jpg)
+![关火了](https://cdn.chengpeiquan.com/img/2022/02/20220215232501.jpg?x-oss-process=image/interlace,1)
 
 6、让余温把蒜蓉继续加热到完美（不熄火会烧焦）
 
 7、完美了，把蒜末推到周围降温冷却（不推到周围也是会焦…焦了就会发苦，前功尽弃）
 
-![推到周围](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220215232502.jpg)
+![推到周围](https://cdn.chengpeiquan.com/img/2022/02/20220215232502.jpg?x-oss-process=image/interlace,1)
 
 ## 冷却过程
 
@@ -94,10 +94,10 @@ xiaohongshuId: 6134e584000000000102f1ad
 
 平时用干燥的勺子去舀，切记不要带水，这样密封存储和保持干燥接触，几个月都能够保持很酥脆的状态！
 
-![用密封罐保存](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220215232503.jpg)
+![用密封罐保存](https://cdn.chengpeiquan.com/img/2022/02/20220215232503.jpg?x-oss-process=image/interlace,1)
 
 ## 平时调味
 
 平时煮牛肉丸汤啊、面条啊，加一勺子蒜头油，美味啊！如果你做饺子，陈醋加上一勺蒜头油拌匀，也是特别美味的饺子醋！
 
-![之前做的饺子醋](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220215232504.jpg)
+![之前做的饺子醋](https://cdn.chengpeiquan.com/img/2022/02/20220215232504.jpg?x-oss-process=image/interlace,1)

@@ -50,7 +50,7 @@
       <div class="flex flex-col w-full">
         <img
           class="w-full"
-          src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2022/02/20220213232446.png"
+          src="https://cdn.chengpeiquan.com/img/2022/02/20220213232446.png"
           alt="扫码关注本菜谱的小程序版"
         />
       </div>
@@ -64,7 +64,7 @@
         <a href="https://vue3.chengpeiquan.com/" target="_blank">
           <img
             class="w-full"
-            src="https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2021/12/20211227005610.jpg"
+            src="https://cdn.chengpeiquan.com/img/2021/12/20211227005610.jpg?x-oss-process=image/interlace,1"
             alt="扫码关注我的小红书"
           />
         </a>

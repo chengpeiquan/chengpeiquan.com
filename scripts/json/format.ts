@@ -17,6 +17,6 @@ export function formatImgUrl(html: string): string {
  */
 export function formatContent(html: string): string {
   html = formatImgUrl(html)
-  html = html.replace(/image\/interlace,1/g, 'image/interlace,1/resize,w_500')
+  html = html.replace(/image\/interlace,1/g, 'image/interlace,1/resize,w_750')
   return html
 }

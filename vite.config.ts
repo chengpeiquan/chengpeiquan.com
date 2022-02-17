@@ -30,7 +30,7 @@ export default defineConfig({
   //   : 'https://cdn.jsdelivr.net/gh/chengpeiquan/chengpeiquan.com@gh-pages/',
   base: '/',
   server: {
-    port: 33333,
+    port: 80,
     proxy: {
       '/api': 'https://chengpeiquan.com/api',
     },

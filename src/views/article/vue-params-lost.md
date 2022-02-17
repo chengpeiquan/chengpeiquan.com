@@ -3,7 +3,7 @@ title: Vue路由params丢失、错误路由白屏的解决方案
 desc: 使用带params的路由的时候，如果params不正确，路由就不会渲染，导致页面出现空白，本来想跟query一样，指定其中一个query为默认值，没想到并不能如己所愿，不过最终问题还是解决了，采用了一个路由的api来判断当前路由是否存在，顺带解决了其他非正常路由的指向问题。
 keywords: vue路由空白处理,vue默认params
 date: 2019-02-26 13:54:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2019/02/1-1.jpg
+cover: https://cdn.chengpeiquan.com/img/2019/02/1-1.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 ---
@@ -14,7 +14,7 @@ categories:
 
 带有 params 的路由，比如一些文章页、用户个人页等等，输入 ./article/123 这样是可以正常进入文章 ID 为 123 的详情页，但是如果只有 ./article ，这样页面就会变成空白。
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2019/02/1.jpg)
+![](https://cdn.chengpeiquan.com/img/2019/02/1.jpg?x-oss-process=image/interlace,1)
 
 ## 解决思路：
 

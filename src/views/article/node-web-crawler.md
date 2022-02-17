@@ -3,7 +3,7 @@ title: 网站改版迁移经验记录：基于node的爬虫编写
 desc: 以往的网站迁移服务器，数据方面的东西都是由服务端直接处理，不过这一次的需求比较特殊，就比如门户首页本来抓的是门户的资讯，但改版后是抓微博的动态，原来的资讯基本舍弃，只保留一部分专题和文章页，类似酱紫的一个改版迁移emmm，所以经过商讨，需要由前端来将需要保存的旧页面从客户端保存，再发布上传到新服务器上。
 keywords: node爬虫,node crawler
 date: 2019-07-22 17:28:00
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2019/07/1.jpg
+cover: https://cdn.chengpeiquan.com/img/2019/07/1.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 ---
@@ -152,8 +152,8 @@ urlList.forEach(function (url) {
 
 一切顺利，最终爬了有将近 150 篇文章，数据量说大不大，但如果人工处理肯定是不小（至少创建层级文件夹就会累死人）。
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2019/07/1-1.jpg)
+![](https://cdn.chengpeiquan.com/img/2019/07/1-1.jpg?x-oss-process=image/interlace,1)
 
-![](https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage/img/2019/07/2.jpg)
+![](https://cdn.chengpeiquan.com/img/2019/07/2.jpg?x-oss-process=image/interlace,1)
 
 刚搞完这次需求，需求方又找过来说还会有个网站想迁移，emmm，坐等新一波挑战了~
