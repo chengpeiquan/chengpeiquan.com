@@ -5,7 +5,7 @@ import markdownIt from 'markdown-it'
 import dayjs from 'dayjs'
 import { outDirRoot, author } from './config'
 import { writePagination, writeCategory, writePost } from './write'
-import { formatContent } from './format'
+import { formatImgUrl, formatContent } from './format'
 import type { PostItem, PostDetail } from './types'
 import type { Frontmatter } from '../../src/types'
 
@@ -35,10 +35,7 @@ export default async function run(type: string) {
           const { data, content } = matter(raw)
           data.date = dayjs(data.date).format('YYYY-MM-DD HH:mm:ss')
           if (Object.prototype.hasOwnProperty.call(data, 'cover')) {
-            data.cover = String(data.cover).replace(
-              /https:\/\/cdn/g,
-              'http://cdn'
-            )
+            data.cover = formatImgUrl(String(data.cover))
           }
 
           // 写入内容文件
