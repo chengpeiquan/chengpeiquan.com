@@ -1,6 +1,6 @@
 ---
 title: 关于底迪
-desc: 关于底迪的故事
+desc: 因为当时在注册账号的时候要取名和设置头像，刚好手机里最新的照片是我家猫「 底迪 」的照片，所以就用这张照片做了头像，名字也就顺其自然的用了我家底迪的名，一直用到了现在。
 keywords: 底迪
 date: 2022-02-14 22:02:14
 cover: https://cdn.chengpeiquan.com/img/2022/01/20220215133323.jpg?x-oss-process=image/interlace,1
