@@ -26,6 +26,7 @@ export interface Frontmatter {
   xiaohongshuId?: string
   cite?: string[]
   isDraft?: boolean
+  simplify?: boolean
 }
 
 /**

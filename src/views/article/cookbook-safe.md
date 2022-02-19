@@ -7,6 +7,7 @@ cover: https://cdn.chengpeiquan.com/img/2022/01/20220215133323.jpg?x-oss-process
 categories:
   - prose
 isDraft: true
+simplify: true
 ---
 
 [[toc]]

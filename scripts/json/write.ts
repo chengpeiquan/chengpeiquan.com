@@ -42,6 +42,7 @@ export async function writePagination({
       // 分页内容
       const res = {
         author,
+        type,
         total: posts.length,
         page,
         lastPage,
