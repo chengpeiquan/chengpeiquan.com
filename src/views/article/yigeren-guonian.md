@@ -1,5 +1,5 @@
 ---
-title: 一个人的过年指南（第一次留守异地可以看看）
+title: 异地过年指南
 desc: 最近刷到好多小伙伴在说今年要留深圳/广州回不去，外卖到时又很贵，很纠结过年怎么办。我原本想着要不今年回去吧，我去年没回，结果前几天疫情每天都在+1，我妈倒是挺直接的叫我别回了，哈哈哈哈（正合我意呢），所以今年又在外面自己过年。
 keywords: 过年,一个人过年,过年怎么准备
 date: 2022-01-23 18:40:00
@@ -7,6 +7,7 @@ cover: https://cdn.chengpeiquan.com/img/2022/01/20220123233134.jpg?x-oss-process
 categories:
   - prose
 xiaohongshuId: 61ed309f000000000102b14f
+simplify: true
 ---
 
 [[toc]]
