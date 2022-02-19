@@ -18,6 +18,8 @@ simplify: true
 
 小程序的内容和我的菜谱笔记大部分一样，并且小红书会优先更新，那么小程序版本的菜谱和小红书的笔记有什么区别？
 
+[AAAAAA](https://www.xiaohongshu.com/discovery/item/6209e5620000000021038de3?share_from_user_hidden=true&xhsshare=WeixinSession&appuid=5c6cf700000000001003f7f6&apptime=1645241481)
+
 ---
 
 ## 内容方面
