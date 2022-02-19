@@ -47,6 +47,7 @@ export default async function run(type: string) {
           // 写入详情内容
           const post: PostDetail = {
             id,
+            type,
             author,
             shortDate,
             ...(data as PostItem),
@@ -60,6 +61,7 @@ export default async function run(type: string) {
           // 返回给列表
           return {
             id,
+            type,
             shortDate,
             ...(data as Frontmatter),
           }

@@ -16,6 +16,7 @@ export interface Author {
  */
 export interface PostItem extends Frontmatter {
   id: string
+  type: string
   shortDate: string
 }
 

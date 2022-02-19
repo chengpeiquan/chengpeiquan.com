@@ -7,11 +7,14 @@ cover: https://cdn.chengpeiquan.com/img/2022/01/20220215133323.jpg?x-oss-process
 categories:
   - prose
 isDraft: true
+simplify: true
 ---
 
 [[toc]]
 
 这里记录菜谱小程序的版本迭代记录，如果你在体验的过程中有功能建议、体验优化建议，或者发现了什么 BUG ，欢迎在小程序的 “反馈” 功能里给我留言（打开小程序右上角的 “···” 就能看到），我会评估需求的优先级和可实现成本，在后续的版本迭代中优化。
+
+---
 
 ## v1.2.0
 
