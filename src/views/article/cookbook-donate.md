@@ -24,7 +24,9 @@ simplify: true
 
 ![GitHub Sponsors](https://cdn.chengpeiquan.com/img/2022/02/20220219203236.jpg?x-oss-process=image/interlace,1)
 
-![捐赠者和被捐赠者](https://cdn.chengpeiquan.com/img/2022/02/20220219203336.jpg?x-oss-process=image/interlace,1)
+![捐赠者和被捐赠者](https://cdn.chengpeiquan.com/img/2022/02/20220219214558.jpg?x-oss-process=image/interlace,1)
+
+![我参与的扶贫基金会的一些捐赠](https://cdn.chengpeiquan.com/img/2022/02/20220219215230.jpg?x-oss-process=image/interlace,1)
 
 当我贡献出第一个菜谱的时候，本身也是以开源的目的在进行创作，把我的经验分享给更多的人，在这个交流的过程中，大家有更好的建议或者想法也可以通过笔记评论来反馈给我进步，这是一个良性的循环。
 
