@@ -55,9 +55,17 @@ export const categoryConfigList: CategoryConfigItem[] = [
     path: 'condiment',
     text: {
       zh: '调味辅料',
-      en: 'condiment',
+      en: 'Condiment',
     },
     icon: 'https://cdn.chengpeiquan.com/img/2022/02/20220213200054.jpg?x-oss-process=image/interlace,1',
+  },
+  {
+    path: 'beginner',
+    text: {
+      zh: '新人起步',
+      en: 'Beginner',
+    },
+    icon: 'https://cdn.chengpeiquan.com/img/2022/02/20220221141035.jpg?x-oss-process=image/interlace,1',
   },
 ]
 

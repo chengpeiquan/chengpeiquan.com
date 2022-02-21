@@ -7,6 +7,7 @@ cover: https://cdn.chengpeiquan.com/img/2022/02/20220202223006.jpg?x-oss-process
 categories:
   - thrift
   - bento
+  - beginner
 duration: 20
 price: 4.93
 xiaohongshuId: 618e8a0300000000210373e9

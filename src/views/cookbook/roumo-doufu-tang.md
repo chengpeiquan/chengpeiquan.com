@@ -9,6 +9,7 @@ categories:
   - teochew
   - soup
   - orthodontic
+  - beginner
 duration: 10
 price: 2
 xiaohongshuId: 612f9f75000000002103524d

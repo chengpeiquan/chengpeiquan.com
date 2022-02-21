@@ -6,6 +6,7 @@ date: 2021-11-17 00:58:00
 cover: https://cdn.chengpeiquan.com/img/2022/02/20220202181323.jpg?x-oss-process=image/interlace,1
 categories:
   - thrift
+  - beginner
 duration: 5
 price: 5
 xiaohongshuId: 619a0aa50000000001028c11

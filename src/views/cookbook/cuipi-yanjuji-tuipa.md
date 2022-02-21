@@ -7,6 +7,7 @@ cover: https://cdn.chengpeiquan.com/img/2022/01/20220119232320.jpg?x-oss-process
 categories:
   - thrift
   - bento
+  - beginner
 duration: 20
 price: 3.78
 xiaohongshuId: 61e8292d000000000102ff43
@@ -38,7 +39,7 @@ xiaohongshuId: 61e8292d000000000102ff43
 
 ## 烤鸡过程
 
-空气炸锅恒温200度烤20分钟，因为我的锅小，所以每次只烤一块，大锅可以一起烤。
+空气炸锅恒温 200 度烤 20 分钟，因为我的锅小，所以每次只烤一块，大锅可以一起烤。
 
 ![放在空气炸锅里](https://cdn.chengpeiquan.com/img/2022/01/20220119232609.jpg?x-oss-process=image/interlace,1)
 
