@@ -8,6 +8,7 @@ categories:
   - thrift
   - staple
   - teochew
+  - beginner
 duration: 5
 price: 0.3
 xiaohongshuId: 61e234e9000000000102d232

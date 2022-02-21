@@ -8,6 +8,7 @@ categories:
   - thrift
   - bento
   - teochew
+  - beginner
 duration: 1
 price: 3
 xiaohongshuId: 618be40f000000002103d97b
