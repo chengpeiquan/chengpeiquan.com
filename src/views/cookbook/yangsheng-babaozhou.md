@@ -8,6 +8,7 @@ categories:
   - thrift
   - teochew
   - orthodontic
+  - beginner
 duration: 120
 price: 0.8
 xiaohongshuId: 61ab5ad000000000010296c8
