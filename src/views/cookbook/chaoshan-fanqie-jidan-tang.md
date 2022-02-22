@@ -7,6 +7,7 @@ cover: https://cdn.chengpeiquan.com/img/2022/02/20220222132411.jpg?x-oss-process
 categories:
   - thrift
   - teochew
+  - orthodontic
   - soup
   - beginner
 duration: 7
