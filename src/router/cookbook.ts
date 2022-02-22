@@ -62,7 +62,7 @@ export const categoryConfigList: CategoryConfigItem[] = [
   {
     path: 'beginner',
     text: {
-      zh: '新人起步',
+      zh: '新手入门',
       en: 'Beginner',
     },
     icon: 'https://cdn.chengpeiquan.com/img/2022/02/20220221141035.jpg?x-oss-process=image/interlace,1',

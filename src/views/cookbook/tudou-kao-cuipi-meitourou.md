@@ -10,6 +10,8 @@ categories:
 duration: 20
 price: 8
 xiaohongshuId: 6207bf29000000002103ff54
+cite:
+  - chaoshan-fanqie-jidan-tang
 ---
 
 [[toc]]

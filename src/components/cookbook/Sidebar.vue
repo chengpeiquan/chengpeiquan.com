@@ -50,7 +50,7 @@
       <div class="flex flex-col w-full">
         <img
           class="w-full"
-          src="https://cdn.chengpeiquan.com/img/2022/02/20220213232446.png"
+          src="https://cdn.chengpeiquan.com/img/2022/02/20220221111852.jpg?x-oss-process=image/interlace,1"
           alt="扫码关注本菜谱的小程序版"
         />
       </div>
