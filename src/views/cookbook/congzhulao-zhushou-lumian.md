@@ -1,0 +1,95 @@
+---
+title: 省钱菜谱：10元的潮汕葱珠朥猪手卤面（10min）
+desc: 昨晚说今天中午要吃卤面，哈哈哈搭配我老家那边的另外一种特色调味品 —— 葱珠油，我们那也叫葱珠朥，可好吃了！
+keywords: 葱珠油,葱珠朥,猪手面,卤面
+date: 2021-10-04 14:28:00
+cover: https://cdn.chengpeiquan.com/img/2022/02/20220225132323.jpg?x-oss-process=image/interlace,1
+categories:
+  - thrift
+  - teochew
+  - bento
+  - staple
+duration: 10
+price: 10
+xiaohongshuId: 615a9f26000000000102b3e4
+cite:
+  - chaoshan-congzhulao
+---
+
+[[toc]]
+
+昨晚说今天中午要吃卤面，哈哈哈搭配我老家那边的另外一种特色调味品 —— 葱珠油，我们那也叫葱珠朥，可好吃了！
+
+它跟蒜头油齐名，极具潮汕特色，做法更简单，葱花 + 少量油，小火熬制，2分钟就可以搞定！一般可以用在粿汁（潮汕特色小吃，不是果汁！）、芋泥、拌面等食物，超级香！！！
+
+今天还是安利一首萨满乐队的歌，《Whalesong》，一首写给52赫兹的鲸的歌，如果你有兴趣，还可以去了解一下52Hz背后的故事。
+
+今年本来可以在深圳看到萨满乐队的演出的，结果受疫情影响，从6月延期到8月，8月又通知不得不取消，希望年底或者明年他们还会再过来。
+
+![成品图：葱珠朥猪手卤面](https://cdn.chengpeiquan.com/img/2022/02/20220225132350.jpg?x-oss-process=image/interlace,1)
+
+## 主要食材
+
+1、昨晚留下的小半份猪手，约10元，做法可以看我昨晚的猪手菜谱
+
+2、葱1颗
+
+3、面条，家里有的，可以跟粉面档老板说你要做拌面，拿那种比较有嚼劲的
+
+4、一碗凉开水
+
+5、电热壶再烧一壶开水备用
+
+## 备料过程
+
+1、猪手昨晚是放在保鲜盒冷藏了，拿出来，水开了就放进去隔水加热，倒计时5分钟自动关火，然后先让它在锅里呆着保温
+
+![冷藏的猪手](https://cdn.chengpeiquan.com/img/2022/02/20220225132355.jpg?x-oss-process=image/interlace,1)
+
+![放到盘子里](https://cdn.chengpeiquan.com/img/2022/02/20220225132356.jpg?x-oss-process=image/interlace,1)
+
+![继续保温](https://cdn.chengpeiquan.com/img/2022/02/20220225132345.jpg?x-oss-process=image/interlace,1)
+
+2、加热猪手的时候可以切葱花备用
+
+3、拿出油锅倒一点油，电磁炉300度小火档次热锅，温度不能太高了
+
+4、等油温有点热度（手伸上去能感受到热），就可以下葱花
+
+![下葱花](https://cdn.chengpeiquan.com/img/2022/02/20220225132346.jpg?x-oss-process=image/interlace,1)
+
+5、锅铲不定时来回拨动葱花，等到稍微变焦，就可以关火了
+
+![差不多关火](https://cdn.chengpeiquan.com/img/2022/02/20220225132347.jpg?x-oss-process=image/interlace,1)
+
+6、利用油锅的温度继续让葱花加热，焦脆焦脆就可以盛到碗里备用了
+
+![做好了](https://cdn.chengpeiquan.com/img/2022/02/20220225132348.jpg?x-oss-process=image/interlace,1)
+
+葱珠油大约花费2分钟就可以做好，特别快，因为分量很少，很容易就糊，所以油温不能太高。
+
+## 卤面过程
+
+1、把刚才锅里保温的猪手拿出来，把三脚架和锅洗一下
+
+2、电热壶煮好的开水倒进汤锅，重新开火煮面（这样就不用再次等水开啦，直接就有开水可以煮面）
+
+![在煮面了](https://cdn.chengpeiquan.com/img/2022/02/20220225132353.jpg?x-oss-process=image/interlace,1)
+
+3、因为是拌面类型的，所以面条不需要煮的很软，熟了就可以捞干出来了（3分钟不到就煮好了）
+
+4、面条过一下凉水稍微浸一下，十几秒就好，再次捞干
+
+5、葱珠油倒进去先把面拌匀，这样可以防止面条变坨黏在一起
+
+![葱珠油淋上去](https://cdn.chengpeiquan.com/img/2022/02/20220225132354.jpg?x-oss-process=image/interlace,1)
+
+6、哈哈哈哈把加热好的猪手和卤汁一起倒进去，拌匀就可以开吃了！！！
+
+![猪手也倒进去](https://cdn.chengpeiquan.com/img/2022/02/20220225132349.jpg?x-oss-process=image/interlace,1)
+
+搞定！开吃！
+
+![哈哈哈我爱猪手](https://cdn.chengpeiquan.com/img/2022/02/20220225132352.jpg?x-oss-process=image/interlace,1)
+
+![面条也好吃！](https://cdn.chengpeiquan.com/img/2022/02/20220225132351.jpg?x-oss-process=image/interlace,1)
