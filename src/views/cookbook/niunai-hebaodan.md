@@ -23,9 +23,9 @@ xiaohongshuId: 613c1a060000000001029fbb
 
 ## 主要食材
 
-1、鸡蛋1个，0.6元
+1、鸡蛋 1 个， 0.6 元
 
-2、牛奶1盒，之前是趁着活动买的整箱，算下来一盒2.2元，如果活动力度大应该能更便宜
+2、牛奶 1 盒，之前是趁着活动买的整箱，算下来一盒 2.2 元，如果活动力度大应该能更便宜
 
 3、白砂糖，具体多少看自己喜好，先倒在等下要盛出来的碗里
 
@@ -66,6 +66,10 @@ xiaohongshuId: 613c1a060000000001029fbb
 ![倒出来](https://cdn.chengpeiquan.com/img/2022/03/20220301132743.jpg?x-oss-process=image/interlace,1)
 
 ![好吃哈哈哈](https://cdn.chengpeiquan.com/img/2022/03/20220301132744.jpg?x-oss-process=image/interlace,1)
+
+从小到大的最爱！
+
+![很好吃哈哈哈](https://cdn.chengpeiquan.com/img/2022/03/20220301132746.jpg?x-oss-process=image/interlace,1)
 
 然后其实加了水的牛奶还是有点容易糊底，你看，已经煮出了一层奶皮，是在锅底捞起来的，但是这层奶皮也很好吃！
 
