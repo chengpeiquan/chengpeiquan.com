@@ -14,6 +14,7 @@ price: 10
 xiaohongshuId: 615a9f26000000000102b3e4
 cite:
   - chaoshan-congzhulao
+  - chaoshan-luzhushou
 ---
 
 [[toc]]
