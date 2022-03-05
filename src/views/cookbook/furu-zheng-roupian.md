@@ -12,6 +12,8 @@ categories:
 duration: 20
 price: 8
 xiaohongshuId: 62025c99000000000102efef
+cite:
+  - furu-zheng-paigu
 ---
 
 [[toc]]
