@@ -6,6 +6,7 @@ date: 2022-03-05 19:34:00
 cover: https://cdn.chengpeiquan.com/img/2022/02/20220306012707.jpg?x-oss-process=image/interlace,1
 categories:
   - teochew
+  - beginner
 duration: 30
 price: 24
 xiaohongshuId: 62234aad000000000102c18e
