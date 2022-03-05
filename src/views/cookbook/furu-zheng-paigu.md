@@ -5,6 +5,7 @@ keywords: 腐乳蒸排骨,腐乳
 date: 2022-03-05 19:34:00
 cover: https://cdn.chengpeiquan.com/img/2022/02/20220306012707.jpg?x-oss-process=image/interlace,1
 categories:
+  - bento
   - teochew
   - beginner
 duration: 30
