@@ -8,7 +8,6 @@ categories:
   - thrift
   - bento
   - teochew
-  - orthodontic
 duration: 15
 price: 3.35
 xiaohongshuId: 61659f180000000001024194

@@ -29,6 +29,8 @@ xiaohongshuId: 6158751b000000000102ae70
 
 1、肉皮先用热水泡软（大概 10min ），挤掉油脂（因为我买的是油炸的，不是砂暴的），这个步骤主要是滤油
 
+![泡软的肉皮](https://cdn.chengpeiquan.com/img/2022/02/20220307001923.jpg?x-oss-process=image/interlace,1)
+
 2、然后汤锅水开了再放进去煮 15min （电磁炉 800 度，平时炒菜的温度），这个步骤是让肉皮变软更容易吃
 
 ![煮肉皮](https://cdn.chengpeiquan.com/img/2022/03/20220302132144.jpg?x-oss-process=image/interlace,1)
