@@ -10,8 +10,6 @@ categories:
 duration: 12
 price: 5.5
 xiaohongshuId: 62277c31000000000102a8ed
-cite:
-  - chaoshan-congzhulao
 ---
 
 [[toc]]
