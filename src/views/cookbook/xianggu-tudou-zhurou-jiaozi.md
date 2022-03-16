@@ -10,7 +10,7 @@ categories:
   - teochew
 duration: 60
 price: 0.29
-xiaohongshuId: 623203580000000001028725
+xiaohongshuId: "623203580000000001028725"
 ---
 
 [[toc]]
