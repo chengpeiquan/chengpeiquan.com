@@ -11,6 +11,8 @@ categories:
 duration: 60
 price: 0.29
 xiaohongshuId: "623203580000000001028725"
+cite:
+  - xianggu-tudou-zhurou-jianjiao
 ---
 
 [[toc]]
