@@ -60,15 +60,23 @@ xiaohongshuId: 6234a705000000000102f82f
 
 空气炸锅烤的， 200 度恒温是固定的，所以我分了 2 个阶段：
 
-1、取比较大的锡纸，铺在烤篮底部，排骨裹一下酱汁再放进去，码好排骨后，锡纸全包，先烤 15 分钟
+### 第一阶段
+
+取比较大的锡纸，铺在烤篮底部，排骨裹一下酱汁再放进去，码好排骨后，锡纸全包，先烤 15 分钟
 
 ![码好排骨](https://cdn.chengpeiquan.com/img/2022/02/20220318234543.jpg?x-oss-process=image/interlace,1)
 
 ![全包放进去烤](https://cdn.chengpeiquan.com/img/2022/02/20220318234544.jpg?x-oss-process=image/interlace,1)
 
+第一阶段出炉的效果，主要是烤熟。
+
 ![第一阶段的效果](https://cdn.chengpeiquan.com/img/2022/02/20220318234545.jpg?x-oss-process=image/interlace,1)
 
-2、时间到了，取出烤篮，把锡纸掀开，周围卷起来，呈半包状态，用勺子舀几勺腌制排骨时碗底的料汁，均匀的淋上去，锡纸半包状态下再烤 8 分钟
+### 第二阶段
+
+时间到了，取出烤篮，把锡纸掀开，周围卷起来，呈半包状态，用勺子舀几勺腌制排骨时碗底的料汁，均匀的淋上去，锡纸半包状态下再烤 8 分钟。
+
+第二阶段出炉的效果，外表焦香焦脆更好吃！
 
 ![第二阶段的效果](https://cdn.chengpeiquan.com/img/2022/02/20220318234546.jpg?x-oss-process=image/interlace,1)
 
@@ -87,3 +95,9 @@ xiaohongshuId: 6234a705000000000102f82f
 呜呜呜敲好吃！！！
 
 ![好吃！](https://cdn.chengpeiquan.com/img/2022/02/20220318234550.jpg?x-oss-process=image/interlace,1)
+
+## 烤箱版做法
+
+如果没有空气炸锅，你们也可以试试漂亮妹妹说的这个烤箱做法，我在她的做法上调整的哈哈哈哈…
+
+![烤箱版本做法](https://cdn.chengpeiquan.com/img/2022/02/20220319003815.jpg?x-oss-process=image/interlace,1)
