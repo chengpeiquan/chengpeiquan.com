@@ -65,9 +65,11 @@ xiaohongshuId: 6235e97c000000000102c1d8
 
 4、下葱段，再次翻炒，直到土豆丝都软软的，晶莹剔透了，就说明熟了。
 
-![下葱段继续翻炒](https://cdn.chengpeiquan.com/img/2022/03/20220319224723.jpg?x-oss-process=image/interlace,1)
+5、这个时候加盐调味，翻炒均匀后，关火。
 
-5、这个时候加盐调味，翻炒均匀后，关火，把肉片倒进去翻炒均匀就可以装盘了。
+![下葱段继续翻炒到土豆丝熟](https://cdn.chengpeiquan.com/img/2022/03/20220319224723.jpg?x-oss-process=image/interlace,1)
+
+6、最后，把肉片倒进去翻炒均匀就可以装盘了。
 
 ![最后炒均匀](https://cdn.chengpeiquan.com/img/2022/03/20220319224724.jpg?x-oss-process=image/interlace,1)
 
