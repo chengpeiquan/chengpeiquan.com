@@ -108,7 +108,7 @@ xiaohongshuId: 6236df9c000000000102b95f
 
 ![背面](https://cdn.chengpeiquan.com/img/2022/03/20220320160923.jpg?x-oss-process=image/interlace,1)
 
-这个搭配很好吃哈哈哈！我感觉有烤肉的酱汁就足够了，所以没有另外加酱料。
+这个搭配很好吃哈哈哈！我感觉有烤肉的酱汁就足够了，所以没有另外加酱，可以根据你的喜好加蛋黄酱、千岛酱、沙拉酱之类的一起搭配。
 
 ![好吃](https://cdn.chengpeiquan.com/img/2022/03/20220320160924.jpg?x-oss-process=image/interlace,1)
 
