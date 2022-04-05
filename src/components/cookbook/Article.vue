@@ -30,8 +30,8 @@
       >
         <div class="flex items-center">
           <span class="md:mr-8 mr-4">作者：程沛权</span>
-          <span :title="date.substr(0, 10)">
-            {{ diffDays > 7 ? date.substr(0, 10) : dateAgo }}
+          <span :title="date.substring(0, 10)">
+            {{ date.substring(0, 10) }}
           </span>
         </div>
       </div>
@@ -64,23 +64,19 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useHead } from '@vueuse/head'
-import { useDate, useI18n } from '@/hooks'
+import { useI18n } from '@/hooks'
 import isMobile from '@libs/isMobile'
 import type { Frontmatter } from '@/types'
 
 const props = defineProps<{
   frontmatter: Frontmatter
 }>()
-const { dateDisplay } = useDate()
 const { getText } = useI18n()
 const title = computed(() => props.frontmatter.title)
 const desc = computed(() => props.frontmatter.desc)
 const keywords = computed(() => props.frontmatter.keywords)
 const date = computed(() => props.frontmatter.date)
 const xiaohongshuId = computed(() => props.frontmatter.xiaohongshuId)
-const { diffDays, dateAgo } = dateDisplay(
-  +new Date(date.value) - 8 * 60 * 60 * 1000
-)
 
 /**
  * 打开小红书

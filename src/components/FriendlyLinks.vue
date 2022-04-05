@@ -7,7 +7,7 @@
         href="https://vue3.chengpeiquan.com/"
         target="_blank"
         rel="noopener noreferrer"
-        >Vue3.0学习教程与实战案例</a
+        >Vue3入门指南与实战案例</a
       >
       <span class="text-gray-900 mx-2">|</span>
       <a
