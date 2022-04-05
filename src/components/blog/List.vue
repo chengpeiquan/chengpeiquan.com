@@ -104,9 +104,9 @@
 
             <p
               class="flex justify-between md:text-sm text-xs text-gray-400"
-              :title="item.date.substr(0, 10)"
+              :title="item.date.substring(0, 10)"
             >
-              {{ item.diffDays > 7 ? item.date.substr(0, 10) : item.dateAgo }}
+              {{ item.date.substring(0, 10) }}
             </p>
           </div>
           <!-- 信息 -->

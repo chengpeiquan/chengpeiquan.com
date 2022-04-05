@@ -30,8 +30,8 @@
       >
         <div class="flex items-center">
           <span class="md:mr-8 mr-4">作者：程沛权</span>
-          <span :title="date.substr(0, 10)">
-            {{ diffDays > 7 ? date.substr(0, 10) : dateAgo }}
+          <span :title="date.substring(0, 10)">
+            {{ date.substring(0, 10) }}
           </span>
         </div>
 
@@ -111,9 +111,7 @@ const desc = computed(() => props.frontmatter.desc)
 const keywords = computed(() => props.frontmatter.keywords)
 const date = computed(() => props.frontmatter.date)
 const repo = computed(() => props.frontmatter.repo)
-const { diffDays, dateAgo } = dateDisplay(
-  +new Date(date.value) - 8 * 60 * 60 * 1000
-)
+const { diffDays } = dateDisplay(+new Date(date.value) - 8 * 60 * 60 * 1000)
 
 /**
  * 打开仓库
