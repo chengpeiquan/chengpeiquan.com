@@ -5,7 +5,6 @@ keywords: 红枣薏米乌鸡汤,鸡汤,乌鸡汤,薏米鸡汤
 date: 2022-04-16 23:40:00
 cover: https://cdn.chengpeiquan.com/img/2022/04/20220416235437.jpg?x-oss-process=image/interlace,1
 categories:
-  - thrift
   - soup
 duration: 90
 price: 0
