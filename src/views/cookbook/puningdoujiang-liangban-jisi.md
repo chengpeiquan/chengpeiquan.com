@@ -7,7 +7,6 @@ cover: https://cdn.chengpeiquan.com/img/2022/04/20220413234520.jpg?x-oss-process
 categories:
   - thrift
   - bento
-  - staple
   - teochew
 duration: 20
 price: 2.7
