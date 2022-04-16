@@ -8,7 +8,6 @@ categories:
   - thrift
   - teochew
   - orthodontic
-  - soup
   - beginner
 duration: 2
 price: 3
