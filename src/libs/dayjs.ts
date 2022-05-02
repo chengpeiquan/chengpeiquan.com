@@ -1,7 +1,7 @@
 import dayjs from 'dayjs'
-import LocalizedFormat from 'dayjs/plugin/localizedFormat'
-import relativeTime from 'dayjs/plugin/relativeTime'
-import 'dayjs/locale/zh-cn'
+import LocalizedFormat from 'dayjs/plugin/localizedFormat.js'
+import relativeTime from 'dayjs/plugin/relativeTime.js'
+import 'dayjs/locale/zh-cn.js'
 
 dayjs.extend(LocalizedFormat)
 dayjs.extend(relativeTime)
