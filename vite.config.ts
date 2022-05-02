@@ -5,7 +5,8 @@ import path from 'path'
 import fs from 'fs-extra'
 import Pages from 'vite-plugin-pages'
 import PurgeIcons from 'vite-plugin-purge-icons'
-import Icons, { ViteIconsResolver } from 'vite-plugin-icons'
+import Icons from 'unplugin-icons/vite'
+import IconsResolver from 'unplugin-icons/resolver'
 import ViteComponents from 'unplugin-vue-components/vite'
 import Markdown from 'vite-plugin-md'
 import Prism from 'markdown-it-prism'
@@ -133,7 +134,7 @@ export default defineConfig({
       dts: true,
       directoryAsNamespace: true,
       resolvers: [
-        ViteIconsResolver({
+        IconsResolver({
           componentPrefix: '',
         }),
       ],
