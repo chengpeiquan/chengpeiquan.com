@@ -1,0 +1,74 @@
+---
+title: 淮山红枣排骨汤（2h）
+desc: 五一因为打了疫苗，安慰自己要休息，然后就没有运动哈哈哈哈，所以今天才出去爬山，下山的时候还下雨了，累死！还好出门前先处理好了食材，定时煲汤，回到家洗个热水澡舒舒服服的喝汤，好爽啊！
+keywords: 淮山红枣排骨汤,排骨汤
+date: 2022-05-08 22:48:00
+cover: https://cdn.chengpeiquan.com/img/2022/05/20220514010919.jpg?x-oss-process=image/interlace,1
+categories:
+  - soup
+  - teochew
+  - beginner
+duration: 120
+price: 18
+xiaohongshuId: 6277d83d00000000210351f5
+---
+
+[[toc]]
+
+五一因为打了疫苗，安慰自己要休息，然后就没有运动哈哈哈哈，所以今天才出去爬山，下山的时候还下雨了，累死！还好出门前先处理好了食材，定时煲汤，回到家洗个热水澡舒舒服服的喝汤，好爽啊！
+
+今天食材的体积都不大，隔水炖的锅够用，加上要定时，所以用的隔水炖锅来煲汤的，整个过程需要手动处理的只有食材准备环节。
+
+![成品图：淮山红枣排骨汤](https://cdn.chengpeiquan.com/img/2022/05/20220514010933.jpg?x-oss-process=image/interlace,1)
+
+## 主要食材
+
+1、排骨一条，剁小块
+
+2、红枣 6 粒
+
+3、淮山 3 片
+
+4、花生一小把
+
+5、枸杞几粒
+
+6、姜一小块（飞水用）
+
+7、葱一根（飞水用，有葱就加，没有也可以不用）
+
+我是家里有之前我妈妈寄给我的干淮山片，药店应该可以买到，中药材来的，没有就不加哈哈哈。
+
+## 处理食材
+
+1、排骨提前浸泡大约 40 分钟，浸出里面的血水
+
+2、葱扎一圈，姜切片，和排骨一起冷水下锅，没过排骨的水量，大火到沸腾就关火，夹出葱姜扔掉，刮掉浮沫
+
+![排骨焯水](https://cdn.chengpeiquan.com/img/2022/05/20220514010929.jpg?x-oss-process=image/interlace,1)
+
+3、花生提前冷水浸泡一下，然后洗净
+
+4、红枣也洗净，有厨房剪刀可以去一下核，用剪刀比较方便，嫌麻烦就划一刀开个口就行
+
+5、淮山洗净，弄成小片就可以
+
+![准备好的配料](https://cdn.chengpeiquan.com/img/2022/05/20220514010930.jpg?x-oss-process=image/interlace,1)
+
+## 煲汤
+
+所有食材放在炖锅里，连汤和排骨一起转移到炖锅。
+
+![煲汤之前](https://cdn.chengpeiquan.com/img/2022/05/20220514010931.jpg?x-oss-process=image/interlace,1)
+
+煲汤模式定时 2 小时就可以了。
+
+![煲好了！](https://cdn.chengpeiquan.com/img/2022/05/20220514010932.jpg?x-oss-process=image/interlace,1)
+
+## 盛汤
+
+出锅前丢几粒枸杞进去焖一下，然后就可以盛出来了，先加点盐调味就搞定！
+
+![排骨炖的很软嫩](https://cdn.chengpeiquan.com/img/2022/05/20220514010934.jpg?x-oss-process=image/interlace,1)
+
+![很甜很甜的汤](https://cdn.chengpeiquan.com/img/2022/05/20220514010935.jpg?x-oss-process=image/interlace,1)
