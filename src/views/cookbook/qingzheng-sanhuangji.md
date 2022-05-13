@@ -11,6 +11,8 @@ categories:
 duration: 30
 price: 16
 xiaohongshuId: 627e85e9000000000102b689
+cite:
+  - chiyou-jiangcong-zhanliao
 ---
 
 [[toc]]
