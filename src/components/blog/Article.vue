@@ -4,7 +4,7 @@
   <!-- 目录 -->
 
   <!-- 文章 -->
-  <div class="flex flex-1 md:pl-10 overflow-hidden">
+  <div class="flex flex-1 overflow-hidden">
     <section class="article-detail flex justify-start flex-col w-full">
       <!-- 标题 -->
       <h1 class="flex items-center w-full md:text-3xl text-xl md:mb-4 mb-2">
@@ -14,19 +14,7 @@
 
       <!-- 发布信息 -->
       <div
-        class="
-          flex
-          justify-between
-          items-center
-          w-full
-          text-sm text-gray-400
-          md:mb-8
-          mb-4
-          md:pb-8
-          pb-4
-          border-b
-          dark:border-white dark:border-opacity-5
-        "
+        class="flex justify-between items-center w-full text-sm text-gray-400 md:mb-8 mb-4 md:pb-8 pb-4 border-b dark:border-white dark:border-opacity-5"
       >
         <div class="flex items-center">
           <span class="md:mr-8 mr-4">作者：程沛权</span>
@@ -37,13 +25,7 @@
 
         <div
           v-if="repo && !isMobile"
-          class="
-            flex
-            items-center
-            cursor-pointer
-            hover:text-red-500
-            dark:hover:text-rose-500
-          "
+          class="flex items-center cursor-pointer hover:text-red-500 dark:hover:text-rose-500"
           :title="
             getText({
               zh: '给仓库一个Star',
@@ -61,21 +43,7 @@
       <!-- 过期提示 -->
       <p
         v-if="diffDays > 730"
-        class="
-          flex
-          justify-center
-          items-center
-          w-full
-          p-4
-          md:mb-8
-          mb-4
-          bg-gray-50
-          dark:bg-white dark:bg-opacity-5
-          rounded
-          text-gray-600
-          dark:text-gray-300
-          text-sm
-        "
+        class="flex justify-center items-center w-full p-4 md:mb-8 mb-4 bg-gray-50 dark:bg-white dark:bg-opacity-5 rounded text-gray-600 dark:text-gray-300 text-sm"
       >
         本文最后更新于
         {{ diffDays }} 天前，部分内容可能不适合当前所有情况，仅供参考。

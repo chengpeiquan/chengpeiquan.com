@@ -1,17 +1,9 @@
 <template>
-  <div class="w-48 xl:block hidden" v-if="isShowTOC">
+  <div class="w-48 mr-10 xl:block hidden" v-if="isShowTOC">
     <div class="sticky top-40 w-full">
       <!-- 模块标题 -->
       <div
-        class="
-          flex
-          items-center
-          bg-gray-50
-          dark:bg-opacity-5
-          box-border
-          p-2
-          select-none
-        "
+        class="flex items-center bg-gray-50 dark:bg-opacity-5 box-border p-2 select-none"
       >
         <div class="flex items-center">
           <ri:list-check-2 class="mr-2" />

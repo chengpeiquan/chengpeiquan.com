@@ -20,13 +20,7 @@
       <div class="flex justify-between items-center block-title">
         <h2>猜你喜欢</h2>
         <span
-          class="
-            dark:text-gray-400
-            text-gray-500 text-base
-            font-normal
-            cursor-pointer
-            select-none
-          "
+          class="dark:text-gray-400 text-gray-500 text-base font-normal cursor-pointer select-none"
           @click="getGuessList()"
         >
           换一换
