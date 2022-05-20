@@ -4,7 +4,7 @@
   <!-- 目录 -->
 
   <!-- 文章 -->
-  <div class="flex flex-1 md:pl-10 overflow-hidden">
+  <div class="flex flex-1 overflow-hidden">
     <section class="article-detail flex justify-start flex-col w-full">
       <!-- 标题 -->
       <h1 class="flex items-center w-full md:text-3xl text-xl md:mb-4 mb-2">
@@ -14,19 +14,7 @@
 
       <!-- 发布信息 -->
       <div
-        class="
-          flex
-          justify-between
-          items-center
-          w-full
-          text-sm text-gray-400
-          md:mb-8
-          mb-4
-          md:pb-8
-          pb-4
-          border-b
-          dark:border-white dark:border-opacity-5
-        "
+        class="flex justify-between items-center w-full text-sm text-gray-400 md:mb-8 mb-4 md:pb-8 pb-4 border-b dark:border-white dark:border-opacity-5"
       >
         <div class="flex items-center">
           <span class="md:mr-8 mr-4">作者：程沛权</span>
