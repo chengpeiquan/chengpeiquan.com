@@ -10,6 +10,8 @@ categories:
 duration: 10
 price: 3
 xiaohongshuId: 62851473000000000102610a
+cite:
+  - chaoshan-suantoulao
 ---
 
 [[toc]]
@@ -30,7 +32,7 @@ xiaohongshuId: 62851473000000000102610a
 
 4、虾皮一小撮
 
-5、蒜头朥 1 勺（自己做的，我收藏夹的调味品菜谱有做法）
+5、蒜头朥 1 勺（自己做的，在调味品菜谱分类里可以找到做法）
 
 ## 处理食材
 
