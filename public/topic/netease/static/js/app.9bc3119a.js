@@ -82,7 +82,7 @@
     (i.o = function (e, t) {
       return Object.prototype.hasOwnProperty.call(e, t)
     }),
-    (i.p = '/topic/my-netease/')
+    (i.p = '/topic/netease/')
   var s = (window['webpackJsonp'] = window['webpackJsonp'] || []),
     p = s.push.bind(s)
   ;(s.push = t), (s = s.slice())
