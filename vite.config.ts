@@ -3,12 +3,12 @@ import vue from '@vitejs/plugin-vue'
 import pkg from './package.json'
 import path from 'path'
 import fs from 'fs-extra'
-import Pages from 'vite-plugin-pages'
-import PurgeIcons from 'vite-plugin-purge-icons'
-import Icons from 'unplugin-icons/vite'
-import IconsResolver from 'unplugin-icons/resolver'
-import ViteComponents from 'unplugin-vue-components/vite'
-import Markdown from 'vite-plugin-md'
+import pages from 'vite-plugin-pages'
+import purgeIcons from 'vite-plugin-purge-icons'
+import icons from 'unplugin-icons/vite'
+import iconsResolver from 'unplugin-icons/resolver'
+import viteComponents from 'unplugin-vue-components/vite'
+import markdown from 'vite-plugin-md'
 import Prism from 'markdown-it-prism'
 import anchor from 'markdown-it-anchor'
 import toc from 'markdown-it-table-of-contents'
@@ -16,8 +16,8 @@ import externalLinks from 'markdown-it-external-links'
 import implicitFigures from 'markdown-it-implicit-figures'
 import lazyLoading from 'markdown-it-image-lazy-loading'
 import matter from 'gray-matter'
-import WindiCSS from 'vite-plugin-windicss'
-import Banner from 'vite-plugin-banner'
+import windiCSS from 'vite-plugin-windicss'
+import banner from 'vite-plugin-banner'
 import { slugify } from './scripts/slugify'
 import dayjs from './src/libs/dayjs'
 // import isDev from './src/libs/isDev'
@@ -67,7 +67,7 @@ export default defineConfig({
       include: [/\.vue$/, /\.md$/],
     }),
 
-    Pages({
+    pages({
       pagesDir: 'src/views',
       extensions: ['vue', 'md'],
       extendRoute(route) {
@@ -88,7 +88,7 @@ export default defineConfig({
       },
     }),
 
-    Markdown({
+    markdown({
       wrapperComponent: 'detail',
       wrapperClasses: 'article-content prose mx-auto',
       headEnabled: true,
@@ -127,28 +127,28 @@ export default defineConfig({
       },
     }),
 
-    ViteComponents({
+    viteComponents({
       extensions: ['vue', 'md'],
       deep: true,
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       dts: true,
       directoryAsNamespace: true,
       resolvers: [
-        IconsResolver({
+        iconsResolver({
           componentPrefix: '',
         }),
       ],
     }),
 
-    PurgeIcons(),
+    purgeIcons(),
 
-    Icons(),
+    icons(),
 
-    ...WindiCSS({
+    ...windiCSS({
       safelist: 'prose prose-sm m-auto dark',
     }),
 
-    Banner(
+    banner(
       `/**\n * name: ${pkg.name}\n * version: v${pkg.version}\n * description: ${pkg.description}\n * author: ${pkg.author}\n * homepage: ${pkg.homepage}\n */`
     ),
   ],
