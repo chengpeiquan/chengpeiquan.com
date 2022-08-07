@@ -7,6 +7,7 @@ cover: https://cdn.chengpeiquan.com/img/2022/08/20220807205511.jpg?x-oss-process
 categories:
   - soup
   - beginner
+  - teochew
 duration: 60
 price: 25
 xiaohongshuId: 62efb47100000000150097cb
