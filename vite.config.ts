@@ -1,3 +1,5 @@
+/// <reference types="vite-ssg" />
+
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import pkg from './package.json'
@@ -9,7 +11,7 @@ import icons from 'unplugin-icons/vite'
 import iconsResolver from 'unplugin-icons/resolver'
 import viteComponents from 'unplugin-vue-components/vite'
 import markdown from 'vite-plugin-md'
-import Prism from 'markdown-it-prism'
+import prism from 'markdown-it-prism'
 import anchor from 'markdown-it-anchor'
 import toc from 'markdown-it-table-of-contents'
 import externalLinks from 'markdown-it-external-links'
@@ -62,6 +64,9 @@ export default defineConfig({
       'dayjs/locale/zh-cn',
     ],
   },
+  ssgOptions: {
+    format: 'esm',
+  },
   plugins: [
     vue({
       include: [/\.vue$/, /\.md$/],
@@ -93,7 +98,7 @@ export default defineConfig({
       wrapperClasses: 'article-content prose mx-auto',
       headEnabled: true,
       markdownItSetup(md) {
-        md.use(Prism)
+        md.use(prism)
         md.use(anchor, {
           slugify,
           permalink: true,
