@@ -4187,10 +4187,10 @@ uuid@^3.3.3:
   resolved "https://registry.npmmirror.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
 
-vite-plugin-banner@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.npmmirror.com/vite-plugin-banner/-/vite-plugin-banner-0.4.0.tgz#0b0b149917edd889b5e2c13a032fd6892a7a9fc8"
-  integrity sha512-M78tCenhspTiNd3cGcXzG9Hw60Bcfh2w1tKHDy9GjVoiS5XtkAK2D7LjWumHiSX7vMnQ4DkMjcZ87Ola+qj0Hw==
+vite-plugin-banner@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.npmmirror.com/vite-plugin-banner/-/vite-plugin-banner-0.5.0.tgz#d51b874498d64bd60a3681ac5674a48a116df9b8"
+  integrity sha512-GDyecw4mb7uUeE6BFsicFOJ4sL9KWof+QNRvASXehpNNwwQVYCtB9HAjvKt6ixgvwSp6jWR1gM9dKLqNDZaEjQ==
 
 vite-plugin-md@^0.18.1:
   version "0.18.1"
