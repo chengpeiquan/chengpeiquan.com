@@ -1,11 +1,12 @@
-import fs from 'fs-extra'
+import fs from '@withtypes/fs-extra'
 import { categoryConfigList as articleCategoryConfigList } from '../../src/router/article'
 import { categoryConfigList as cookbookCategoryConfigList } from '../../src/router/cookbook'
 import { outDirRoot, author } from './config'
-import {
+import type {
   WritePaginationOptions,
   WriteCategoryOptions,
   WritePostOptions,
+  PostItem,
 } from './types'
 import type { CategoryConfigItem } from '../../src/types'
 
@@ -34,7 +35,7 @@ export async function writePagination({
   let end = start + pageSize
   async function write() {
     try {
-      const data = []
+      const data: PostItem[] = []
       for (let i = start; i < end; i++) {
         posts[i] && data.push(posts[i])
       }
@@ -81,7 +82,7 @@ export async function writeCategory({ type, posts }: WriteCategoryOptions) {
       fs.mkdirpSync(`${outDirRoot}/${type}/list/${i.path}`)
 
       // 筛选分类下的内容，写入分类的分页列表
-      const _posts = posts.filter((p) => p.categories.includes(i.path))
+      const _posts = posts.filter((p) => p.categories!.includes(i.path))
       writePagination({
         type,
         category: i.path,
