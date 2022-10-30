@@ -502,13 +502,6 @@
   dependencies:
     "@types/node" "*"
 
-"@types/fs-extra@^9.0.13":
-  version "9.0.13"
-  resolved "https://registry.npmmirror.com/@types/fs-extra/-/fs-extra-9.0.13.tgz#7594fbae04fe7f1918ce8b3d213f74ff44ac1f45"
-  integrity sha512-nEnwB++1u5lVDM2UI4c1+5R+FYaKfaAzS4OococimjVm3nQw3TuzH5UNsocrcTBbhnerblyHj4A49qXbIiZdpA==
-  dependencies:
-    "@types/node" "*"
-
 "@types/json-schema@^7.0.9":
   version "7.0.11"
   resolved "https://registry.npmmirror.com/@types/json-schema/-/json-schema-7.0.11.tgz#d421b6c527a3037f7c84433fd2c4229e016863d3"
@@ -929,6 +922,13 @@
     magic-string "^0.26.2"
     micromatch "^4.0.5"
     windicss "^3.5.6"
+
+"@withtypes/fs-extra@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.npmmirror.com/@withtypes/fs-extra/-/fs-extra-0.1.0.tgz#fcd245f2b0a36e40609d398d9985a5d1b574e5bc"
+  integrity sha512-HrvyshstkzAmAME+hMtiXVsJT941JmXdFbeivEDNDShW7xnqkdq7iaYs1/0pMLGmkVtBNPHrpuZatXu24QEVEQ==
+  dependencies:
+    fs-extra "^10.1.0"
 
 abab@^2.0.6:
   version "2.0.6"

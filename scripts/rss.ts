@@ -1,5 +1,5 @@
 import fg from 'fast-glob'
-import fs from 'fs-extra'
+import fs from '@withtypes/fs-extra'
 import matter from 'gray-matter'
 import markdownIt from 'markdown-it'
 import { Feed } from 'feed'

@@ -1,5 +1,5 @@
 // Invoked on the commit-msg git hook by yorkie.
-import fs from 'fs-extra'
+import fs from '@withtypes/fs-extra'
 import chalk from 'chalk'
 const msgPath = process.env.GIT_PARAMS
 const msg = fs.readFileSync(msgPath, 'utf-8').trim()
