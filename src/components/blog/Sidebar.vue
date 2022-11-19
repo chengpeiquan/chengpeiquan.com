@@ -71,10 +71,6 @@
     <!-- 友情链接 -->
     <FriendlyLinks />
     <!-- 友情链接 -->
-
-    <!-- 谷歌广告 -->
-    <GoogleAdsense />
-    <!-- 谷歌广告 -->
   </section>
 </template>
 
