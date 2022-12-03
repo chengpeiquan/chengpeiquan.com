@@ -923,10 +923,10 @@
     micromatch "^4.0.5"
     windicss "^3.5.6"
 
-"@withtypes/fs-extra@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.npmmirror.com/@withtypes/fs-extra/-/fs-extra-0.1.0.tgz#fcd245f2b0a36e40609d398d9985a5d1b574e5bc"
-  integrity sha512-HrvyshstkzAmAME+hMtiXVsJT941JmXdFbeivEDNDShW7xnqkdq7iaYs1/0pMLGmkVtBNPHrpuZatXu24QEVEQ==
+"@withtypes/fs-extra@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.npmmirror.com/@withtypes/fs-extra/-/fs-extra-0.1.1.tgz#1a78404bb5cc68a95e6965d0cad8bdf84524c684"
+  integrity sha512-CRkgyqOU00CYHaxjcA7lKyUc9XxHqrtWtBc6TcH7jPeKtBMlSW3SWuizf2b73w3Y1w8+SdlPa2/1V4cQGKLpww==
   dependencies:
     fs-extra "^10.1.0"
 
