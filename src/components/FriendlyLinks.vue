@@ -33,6 +33,14 @@
         rel="noopener noreferrer"
         >旅行家龙猫</a
       >
+      <span class="text-gray-900 mx-2">|</span>
+      <a
+        class="mb-2"
+        href="https://muki.tw/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Muki Space</a
+      >
     </div>
   </section>
 </template>
