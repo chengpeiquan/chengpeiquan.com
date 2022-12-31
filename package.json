@@ -23,6 +23,7 @@
     "url": "git+https://github.com/chengpeiquan/chengpeiquan.com.git"
   },
   "dependencies": {
+    "@bassist/utils": "^0.5.1",
     "@iconify/iconify": "^2.2.1",
     "@vueuse/core": "^8.9.4",
     "@vueuse/head": "^0.7.6",
