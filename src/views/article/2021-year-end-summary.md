@@ -6,6 +6,8 @@ date: 2021-12-31 15:45:00
 cover: https://cdn.chengpeiquan.com/img/2022/01/20220103234636.jpg?x-oss-process=image/interlace,1
 categories:
   - prose
+cite:
+  - 2022-year-end-summary
 ---
 
 [[toc]]

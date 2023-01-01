@@ -86,6 +86,13 @@
     "@babel/helper-validator-identifier" "^7.16.7"
     to-fast-properties "^2.0.0"
 
+"@bassist/utils@^0.5.1":
+  version "0.5.1"
+  resolved "https://registry.npmmirror.com/@bassist/utils/-/utils-0.5.1.tgz#f7a08194f5dc14c19a014e4da969b7a5eedd2919"
+  integrity sha512-vljQ2mjnxgp2Eo5uQ7BXdhbx2jVdCyE+LGEH5VD7lOHktp5fAnLEKvO+KaVDs4rv46UCPNAQvaKEPD7UBiA7VQ==
+  dependencies:
+    "@withtypes/mime" "^0.1.2"
+
 "@esbuild-kit/cjs-loader@^2.0.1":
   version "2.0.1"
   resolved "https://registry.npmmirror.com/@esbuild-kit/cjs-loader/-/cjs-loader-2.0.1.tgz#3684cb94a79ce19eb73c76e9d79547634732dcc3"
@@ -929,6 +936,13 @@
   integrity sha512-CRkgyqOU00CYHaxjcA7lKyUc9XxHqrtWtBc6TcH7jPeKtBMlSW3SWuizf2b73w3Y1w8+SdlPa2/1V4cQGKLpww==
   dependencies:
     fs-extra "^10.1.0"
+
+"@withtypes/mime@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.npmmirror.com/@withtypes/mime/-/mime-0.1.2.tgz#956883251b0786f2c898ed76a23594ea6d9939e0"
+  integrity sha512-PB9BfZGzwblUONJY0LiOwsHCA6uV3DIPj/w9ReekdHxPOl0VdUFgI5s4avKycuuq9Gf5Nz2ZPA2O36GAUzlMPA==
+  dependencies:
+    mime "^3.0.0"
 
 abab@^2.0.6:
   version "2.0.6"
@@ -3086,6 +3100,11 @@ mime-types@^2.1.12:
   integrity sha512-ZDY+bPm5zTTF+YpCrAU9nK0UgICYPT0QtT1NZWFv4s++TNkcgVaT0g6+4R2uI4MjQjzysHB1zxuWL50hzaeXiw==
   dependencies:
     mime-db "1.52.0"
+
+mime@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npmmirror.com/mime/-/mime-3.0.0.tgz#b374550dca3a0c18443b0c950a6a58f1931cf7a7"
+  integrity sha512-jSCU7/VB1loIWBZe14aEYHU/+1UMEHoaO7qxCOVJOw9GgH72VAWppxNcjU+x9a2k3GSIBXNKxXQFqRvvZ7vr3A==
 
 mimic-fn@^2.1.0:
   version "2.1.0"
