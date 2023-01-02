@@ -10,6 +10,7 @@ duration: 90
 price: 28
 xiaohongshuId: 6230a968000000000102cfca
 cite:
+  - hongzao-yumi-gouqi-paigu-tang
   - lajiang-zhanjiang
 ---
 
