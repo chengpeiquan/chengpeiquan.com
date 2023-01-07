@@ -3,13 +3,15 @@ title: 简单的六个步骤 让你写出技术爱看的需求文档
 desc: 提需求”应该是每个同学在工作中最不可避免的三个字，有句很流行的话叫“人人都是产品经理”（源自一本产品书籍的书名），为什么这句话会流行起来？因为只要我们把这句话换个方式表达，本质上就是“人人都是需求方”，是不是瞬间感觉“对对对”！
 keywords: 需求设计,需求文档,需求规范
 date: 2021-05-05 00:01:00
-cover: https://cdn.chengpeiquan.com/img/2021/05/20210505005328.jpg?x-oss-process=image/interlace,1
+cover: https://cdn.chengpeiquan.com/img/2023/01/20230107234550.jpg?x-oss-process=image/interlace,1
 categories:
   - design
 isHot: true
 ---
 
 [[toc]]
+
+>演讲稿的在线 PPT 版本可以戳 [这里](https://requirement-design.ppt.chengpeiquan.com) 。
 
 五一啊五一，虽然很想去迷笛音乐节，但经不住太懒，加上最近太忙，实在想休息，所以还是宅家吹空调，三只猫陪着码字写东西也很舒服。也幸亏没出门，广深大暴雨，朋友圈还看着各种大塞车，还是过段日子再用年假来错峰出行吧哈哈哈哈。
 
