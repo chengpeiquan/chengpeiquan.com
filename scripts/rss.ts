@@ -1,7 +1,7 @@
 import fg from 'fast-glob'
 import fs from '@withtypes/fs-extra'
 import matter from 'gray-matter'
-import markdownIt from 'markdown-it'
+import markdownIt from '@withtypes/markdown-it'
 import { Feed } from 'feed'
 
 const isExist: boolean = fs.existsSync('dist')

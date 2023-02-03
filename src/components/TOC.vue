@@ -20,8 +20,8 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
 import { useNavigate } from '@/hooks'
-import { ref } from 'vue-demi'
 
 const tocHTML = ref<string>('')
 const { isShowTOC, tocTitle, initTOC } = useNavigate()
