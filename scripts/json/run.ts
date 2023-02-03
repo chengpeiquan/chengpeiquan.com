@@ -1,7 +1,7 @@
 import fg from 'fast-glob'
 import fs from '@withtypes/fs-extra'
 import matter from 'gray-matter'
-import markdownIt from 'markdown-it'
+import markdownIt from '@withtypes/markdown-it'
 import dayjs from 'dayjs'
 import { outDirRoot, author } from './config'
 import { writePagination, writeCategory, writePost } from './write'
@@ -46,11 +46,11 @@ export default async function run(type: string) {
 
           // 写入详情内容
           const post: PostDetail = {
+            ...(data as PostItem),
             id,
             type,
             author,
             shortDate,
-            ...(data as PostItem),
             content: formatContent(html),
           }
           await writePost({

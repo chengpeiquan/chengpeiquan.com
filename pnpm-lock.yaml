@@ -18,6 +18,7 @@ specifiers:
   '@vueuse/core': ^8.9.4
   '@vueuse/head': ^0.7.6
   '@withtypes/fs-extra': ^0.1.1
+  '@withtypes/markdown-it': ^0.1.1
   cross-env: ^7.0.3
   dayjs: ^1.11.3
   diacritics: ^1.3.0
@@ -25,11 +26,11 @@ specifiers:
   eslint-config-prettier: ^8.5.0
   eslint-plugin-prettier: ^4.2.1
   eslint-plugin-vue: ^9.2.0
+  fast-glob: ^3.2.12
   feed: ^4.2.2
   gray-matter: ^4.0.3
   happy-dom: ^6.0.3
   lint-staged: ^13.0.3
-  markdown-it: ^13.0.1
   markdown-it-anchor: ^8.6.4
   markdown-it-external-links: ^0.0.6
   markdown-it-image-lazy-loading: ^1.2.0
@@ -84,18 +85,19 @@ devDependencies:
   '@vuedx/typecheck': 0.7.6
   '@vuedx/typescript-plugin-vue': 0.7.6
   '@withtypes/fs-extra': 0.1.1
+  '@withtypes/markdown-it': 0.1.1
   cross-env: 7.0.3
   diacritics: 1.3.0
   eslint: 8.33.0
   eslint-config-prettier: 8.6.0_eslint@8.33.0
   eslint-plugin-prettier: 4.2.1_jqplj6qf3uqpxpu4gdyhwwasnq
   eslint-plugin-vue: 9.9.0_eslint@8.33.0
+  fast-glob: 3.2.12
   feed: 4.2.2
   gray-matter: 4.0.3
   happy-dom: 6.0.4
   lint-staged: 13.1.0
-  markdown-it: 13.0.1
-  markdown-it-anchor: 8.6.6_markdown-it@13.0.1
+  markdown-it-anchor: 8.6.6
   markdown-it-external-links: 0.0.6
   markdown-it-image-lazy-loading: 1.2.0
   markdown-it-implicit-figures: 0.10.0
@@ -113,7 +115,7 @@ devDependencies:
   unplugin-vue-components: 0.21.2_vite@2.9.15+vue@3.2.47
   vite: 2.9.15
   vite-plugin-banner: 0.5.0
-  vite-plugin-md: 0.18.1_lck22gtod33i5xxd2cybo2qpga
+  vite-plugin-md: 0.18.1_c4ur6ders45onhsjxe4z4hcibm
   vite-plugin-pages: 0.25.0_vmbj2u4dq2rwgmafd5nvdo6m7q
   vite-plugin-purge-icons: 0.8.2_vite@2.9.15
   vite-plugin-windicss: 1.8.10_vite@2.9.15
@@ -1072,6 +1074,12 @@ packages:
     resolution: {integrity: sha512-CRkgyqOU00CYHaxjcA7lKyUc9XxHqrtWtBc6TcH7jPeKtBMlSW3SWuizf2b73w3Y1w8+SdlPa2/1V4cQGKLpww==}
     dependencies:
       fs-extra: 10.1.0
+    dev: true
+
+  /@withtypes/markdown-it/0.1.1:
+    resolution: {integrity: sha512-g3WmggGg0TpwaBo9rXJWn0sidqqEIvjygF5tJJw9yYF1CVSmgTOwYNh1a+h7fvFsWNtf5zI//7Sc2AR/A7cbsQ==}
+    dependencies:
+      markdown-it: 13.0.1
     dev: true
 
   /@zhead/schema-vue/0.7.4_vue@3.2.47:
@@ -3190,13 +3198,11 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
 
-  /markdown-it-anchor/8.6.6_markdown-it@13.0.1:
+  /markdown-it-anchor/8.6.6:
     resolution: {integrity: sha512-jRW30YGywD2ESXDc+l17AiritL0uVaSnWsb26f+68qaW9zgbIIr1f4v2Nsvc0+s0Z2N3uX6t/yAw7BwCQ1wMsA==}
     peerDependencies:
       '@types/markdown-it': '*'
       markdown-it: '*'
-    dependencies:
-      markdown-it: 13.0.1
     dev: true
 
   /markdown-it-external-links/0.0.6:
@@ -4378,7 +4384,7 @@ packages:
     resolution: {integrity: sha512-GDyecw4mb7uUeE6BFsicFOJ4sL9KWof+QNRvASXehpNNwwQVYCtB9HAjvKt6ixgvwSp6jWR1gM9dKLqNDZaEjQ==}
     dev: true
 
-  /vite-plugin-md/0.18.1_lck22gtod33i5xxd2cybo2qpga:
+  /vite-plugin-md/0.18.1_c4ur6ders45onhsjxe4z4hcibm:
     resolution: {integrity: sha512-A8uqQV2yO+iKOkvDmbQCj47nKo5z2g6n8mOZLN16fo4kCI8ktW/27MkflzR9KmyZd34IZ5wX8B0PR3UBNlJjqA==}
     peerDependencies:
       happy-dom: ^5.3.1
@@ -4393,7 +4399,6 @@ packages:
       '@vueuse/core': 8.9.4_vue@3.2.47
       gray-matter: 4.0.3
       happy-dom: 6.0.4
-      markdown-it: 13.0.1
       source-map-js: 1.0.2
       ts-morph: 15.1.0
       vite: 2.9.15
