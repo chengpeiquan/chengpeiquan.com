@@ -9,11 +9,9 @@ categories:
   - teochew
   - staple
   - beginner
-duration: 10
-price: 2
-xiaohongshuId: 620a63e00000000001027237
-cite:
-  - chaoshan-suantoulao
+duration: 5
+price: 1.8
+xiaohongshuId: 63de514b000000001d012d21
 ---
 
 [[toc]]
