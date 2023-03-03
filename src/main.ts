@@ -1,7 +1,7 @@
 /**
  * 导入npm包
  */
-import NProgress from 'nprogress'
+import progress from '@bassist/progress'
 import { ViteSSG } from 'vite-ssg'
 import baiduAnalytics from 'vue-baidu-analytics'
 import '@purge-icons/generated'
@@ -33,11 +33,12 @@ export const createApp = ViteSSG(
   ({ app, router, isClient }) => {
     // 路由切换的加载进度条
     if (isClient) {
+      progress.setColor('#db2777')
       router.beforeEach(() => {
-        NProgress.start()
+        progress.start()
       })
       router.afterEach(() => {
-        NProgress.done()
+        progress.done()
       })
     }
 

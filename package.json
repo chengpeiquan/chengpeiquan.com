@@ -24,12 +24,12 @@
     "url": "git+https://github.com/chengpeiquan/chengpeiquan.com.git"
   },
   "dependencies": {
+    "@bassist/progress": "^0.2.0",
     "@bassist/utils": "^0.9.0",
     "@iconify/iconify": "^2.2.1",
     "@vueuse/core": "^8.9.4",
     "@vueuse/head": "^0.7.6",
     "dayjs": "^1.11.3",
-    "nprogress": "^0.2.0",
     "vue": "^3.2.37",
     "vue-router": "^4.1.2"
   },
@@ -38,7 +38,6 @@
     "@octokit/rest": "^19.0.3",
     "@types/diacritics": "^1.3.1",
     "@types/node": "^18.0.5",
-    "@types/nprogress": "^0.2.0",
     "@typescript-eslint/eslint-plugin": "^5.30.6",
     "@typescript-eslint/parser": "^5.30.6",
     "@vitejs/plugin-vue": "^2.3.3",
