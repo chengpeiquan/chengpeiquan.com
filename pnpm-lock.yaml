@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@bassist/progress': ^0.2.0
-  '@bassist/utils': ^0.9.0
+  '@bassist/utils': ^0.11.0
   '@iconify/iconify': ^2.2.1
   '@iconify/json': ^2.1.78
   '@octokit/rest': ^19.0.3
@@ -58,7 +58,7 @@ specifiers:
 
 dependencies:
   '@bassist/progress': 0.2.0
-  '@bassist/utils': 0.9.0
+  '@bassist/utils': 0.11.0
   '@iconify/iconify': 2.2.1
   '@vueuse/core': 8.9.4_vue@3.2.47
   '@vueuse/head': 0.7.13_vue@3.2.47
@@ -165,8 +165,8 @@ packages:
     resolution: {integrity: sha512-p29dOXJbRhQyFl9PYe3NYaR+cqwETFMxjPyu1PAnXa2MnCUn36qP9FC8jDh2RrAel/aqgMC8A9ex9N//zHyA6Q==}
     dev: false
 
-  /@bassist/utils/0.9.0:
-    resolution: {integrity: sha512-6/CuUUB+oidRFt4T7ZqKukQ429VhJO7cURuxcceAuOmCrjednQpgT+kcEL+LC1ccXnNkMK91NTz+6xgRFGRFwQ==}
+  /@bassist/utils/0.11.0:
+    resolution: {integrity: sha512-lLnMCSJ278ZZAL49UVv95ruoSIw3rmPGPDlt/MlSLGtFoMJOT7wmfgXDJ2lcxHMYwRsGzde7Ud5Gt3pS49n+vA==}
     dev: false
 
   /@esbuild-kit/cjs-loader/2.4.1:
