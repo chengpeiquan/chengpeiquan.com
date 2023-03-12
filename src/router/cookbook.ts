@@ -67,6 +67,14 @@ export const categoryConfigList: CategoryConfigItem[] = [
     },
     icon: 'https://cdn.chengpeiquan.com/img/2022/02/20220213200054.jpg?x-oss-process=image/interlace,1',
   },
+  {
+    path: 'clever',
+    text: {
+      zh: '生活妙招',
+      en: 'Clever',
+    },
+    icon: 'https://cdn.chengpeiquan.com/img/2023/03/20230312234314.jpg?x-oss-process=image/interlace,1',
+  },
 ]
 
 // 分类信息
