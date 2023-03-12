@@ -2,7 +2,7 @@
 title: 菜谱：简易版木耳炒肉（5min）
 desc: 今天分享一个木耳炒肉，过年的时候好朋友兼好邻居送了我一袋木耳，好好吃哈哈哈哈！
 keywords: 木耳炒肉,黑木耳炒肉片
-date: 2023-14-35 00:11:00
+date: 2023-03-03 00:11:00
 cover: https://cdn.chengpeiquan.com/img/2023/02/20230303145446.jpg?x-oss-process=image/interlace,1
 categories:
   - thrift
