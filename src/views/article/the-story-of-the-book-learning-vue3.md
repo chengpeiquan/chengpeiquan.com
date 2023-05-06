@@ -1,7 +1,7 @@
 ---
 title: 我写了一本书《前端工程化：基于 Vue.js 3.0 的设计与实践》 想分享一下它背后的故事
 desc: 大家好，我是程沛权，经过差不多一年时间的打磨和优化，我的第一本技术书籍《前端工程化：基于 Vue.js 3.0 的设计与实践》出版上市啦！这是一本以 Vue.js 的 3.0 版本为核心技术栈，围绕 “前端工程化” 和 TypeScript 的知识点展开讲解的前端入门书籍。
-keywords: 网易,在网易工作是什么体验,网易游戏
+keywords: 前端工程化：基于 Vue.js 3.0 的设计与实践,前端工程化,Vue3,Vue3 入门指南与实战案例
 date: 2023-05-06 22:03:00
 cover: https://cdn.chengpeiquan.com/img/2023/05/20230506220635.jpg?x-oss-process=image/interlace,1
 categories:
