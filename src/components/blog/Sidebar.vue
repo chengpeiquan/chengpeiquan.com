@@ -4,7 +4,7 @@
     <section class="mb-16">
       <h2 class="block-title">我出版的书</h2>
       <div class="flex flex-col w-full">
-        <a href="./the-story-of-the-book-learning-vue3" target="_blank">
+        <a :href="bookLink" target="_blank">
           <img
             class="w-full"
             src="https://cdn.chengpeiquan.com/img/2023/05/20230508232214.jpg?x-oss-process=image/interlace,1"
@@ -91,7 +91,13 @@
 </template>
 
 <script setup lang="ts">
+import isDev from '@libs/isDev'
 import { useList } from '@/hooks'
+
+const bookLink = `/article/the-story-of-the-book-learning-vue3${
+  isDev ? '' : '.html'
+}`
+
 const { guessList, getGuessList } = useList('article')
 getGuessList()
 </script>
