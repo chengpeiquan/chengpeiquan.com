@@ -2,7 +2,7 @@
 title: 组建 NAS 设备 挑选合适的硬件搭配
 desc: 最近在一千元预算内搞了一台 NAS ，在这个过程也算蛮自定义的搭配，记录一下这个过程中的主要知识点和最终搭配结果。
 keywords: nas,群晖,dsm
-date: 2023-06-04 23:39:00
+date: 2023-06-10 23:39:00
 cover: https://cdn.chengpeiquan.com/img/2023/06/20230604234144.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
