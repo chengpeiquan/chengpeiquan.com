@@ -1,0 +1,150 @@
+---
+title: 菜谱：潮汕凉菜之潮州肉冻（1.5h）
+desc: 哈哈哈哈哈天气热就想吃凉菜，潮汕地区也有自己的凉菜（虽然在广州和深圳的外卖基本上买不到…），今天的潮州肉冻也是其中之一，我妈妈时不时会买，有时她也会自己做，我这次也是凭着十几岁那会帮她打下手时留下的记忆把潮州肉冻做了出来，竟然没有记错哈哈哈…
+keywords: 潮州肉冻,潮州小吃,潮汕凉菜,潮汕小吃
+date: 2023-06-18 21:08:00
+cover: https://cdn.chengpeiquan.com/img/2023/06/20230618212009.jpg?x-oss-process=image/interlace,1
+categories:
+  - teochew
+  - thrift
+  - beginner
+duration: 90
+price: 20.7
+xiaohongshuId: 648f01ba0000000013004f8d
+---
+
+[[toc]]
+
+哈哈哈哈哈天气热就想吃凉菜，潮汕地区也有自己的凉菜（虽然在广州和深圳的外卖基本上买不到…），今天的潮州肉冻也是其中之一，不知道其他潮汕有没有这个，我从小在潮州市区是经常见到，我妈妈也时不时会买，有时她也会自己做，我这次也是凭着十几岁那会帮她打下手时留下的记忆把潮州肉冻做了出来，竟然没有记错哈哈哈…
+
+![成品图：潮汕凉菜之潮州肉冻](https://cdn.chengpeiquan.com/img/2023/06/20230618212704.jpg?x-oss-process=image/interlace,1)
+
+![可以搭配芫荽和豆酱一起吃](https://cdn.chengpeiquan.com/img/2023/06/20230618212705.jpg?x-oss-process=image/interlace,1)
+
+## 主要厨具
+
+难得我要特地交代一下厨具…
+
+1、汤锅（用来飞水）
+
+2、高压锅（如果没有的话也得准备一个能炖肉的炖锅，如果炖的不够软烂，汤底里熬出来的胶质太少，很难凝固）
+
+3、电热水壶（煮壶热水备用，飞水后，进高压锅之前是加热水）
+
+4、两个保鲜盒（因为一顿吃不完，我分两顿吃，所以我准备了两个保鲜盒单独储存）。
+
+5、冰箱（这个需要冰箱冷藏，所以租房如果没有冰箱可能不太适合做这个）
+
+## 主要食材
+
+在潮州老城区这边的肉冻都是猪皮猪脚冻，所以我也是用了这两种原材料。
+
+1、小猪脚一只（吐槽一下现在的猪脚都是不怎么带肉的…要肉多的话可能得再单独买一份猪腿肉）
+
+2、猪皮小半斤（肉冻要成型，得有很多胶质的食材一起熬，猪皮真的是绝佳）
+
+3、姜（飞水用）
+
+4、葱（飞水用）
+
+5、鱼露（汤底调味用）
+
+6、生抽（汤底调味用）
+
+其他备选调味辅料，吃的时候才用：
+
+1、普宁豆酱（如果鱼露下少点，吃的时候可以搭配豆酱蘸着吃）
+
+2、芫荽（也就是香菜在潮州的叫法，潮州的卤鹅、卤猪脚、蚝烙、肠粉都有搭配芫荽的习惯，这个也不例外哈哈哈哈）
+
+![普宁豆酱](https://cdn.chengpeiquan.com/img/2023/06/20230618214241.jpg?x-oss-process=image/interlace,1)
+
+## 处理食材
+
+猪皮和猪脚在档口一般都会先处理干净，回家不太需要干啥准备工作，一般都是这样处理：
+
+1、猪脚烧掉毛、剁成小块
+
+![猪脚剁成小块](https://cdn.chengpeiquan.com/img/2023/06/20230618212644.jpg?x-oss-process=image/interlace,1)
+
+2、猪皮烧掉毛，刮掉皮上脂肪，切成大片（不要太小，太小一煮就缩没了 - - ）
+
+![猪皮切成大片](https://cdn.chengpeiquan.com/img/2023/06/20230618212642.jpg?x-oss-process=image/interlace,1)
+
+然后洗净，加入葱和切片的姜，一起在汤锅里下锅后冷水淹没，开大火煮到差不多沸腾就完成飞水的准备工作。
+
+![准备飞水](https://cdn.chengpeiquan.com/img/2023/06/20230618212645.jpg?x-oss-process=image/interlace,1)
+
+## 制作步骤
+
+1、飞水后的猪脚和猪皮都弄干净（不要带飞水后的浮沫，飞水的姜葱也不要），放入高压锅的内锅里
+
+2、加入热水淹没食材，按蹄筋之类的能炖比较久的功能，让它慢慢炖（高压锅这个过程大概 40 分钟，等开锅要 20 分钟）
+
+![加入热水淹没食材](https://cdn.chengpeiquan.com/img/2023/06/20230618212646.jpg?x-oss-process=image/interlace,1)
+
+![按蹄筋之类的能炖比较久的功能](https://cdn.chengpeiquan.com/img/2023/06/20230618212647.jpg?x-oss-process=image/interlace,1)
+
+3、炖好后，先把猪脚和猪皮捞到大碗里稍微晾凉，然后给猪脚去骨头，再码到保鲜盒里
+
+![猪皮好软烂](https://cdn.chengpeiquan.com/img/2023/06/20230618212648.jpg?x-oss-process=image/interlace,1)
+
+![猪蹄好容易就去骨](https://cdn.chengpeiquan.com/img/2023/06/20230618212649.jpg?x-oss-process=image/interlace,1)
+
+![把猪脚和猪皮捞到大碗里稍微晾凉](https://cdn.chengpeiquan.com/img/2023/06/20230618212650.jpg?x-oss-process=image/interlace,1)
+
+4、高压锅里的猪脚高汤先用勺子把上面的油脂尽量去掉，然后加入一大勺鱼露和半勺生抽（用的是盛汤的小汤勺，不是平时那种小餐勺），搅拌均匀后倒入保鲜盒里淹没食材即可
+
+![把上面的油脂尽量去掉](https://cdn.chengpeiquan.com/img/2023/06/20230618212651.jpg?x-oss-process=image/interlace,1)
+
+![加入一大勺鱼露和半勺生抽，用的是盛汤的小汤勺](https://cdn.chengpeiquan.com/img/2023/06/20230618212643.jpg?x-oss-process=image/interlace,1)
+
+![搅拌均匀](https://cdn.chengpeiquan.com/img/2023/06/20230618212652.jpg?x-oss-process=image/interlace,1)
+
+![食材先在保鲜盒里码好](https://cdn.chengpeiquan.com/img/2023/06/20230618212653.jpg?x-oss-process=image/interlace,1)
+
+![倒入保鲜盒里淹没食材即可](https://cdn.chengpeiquan.com/img/2023/06/20230618212654.jpg?x-oss-process=image/interlace,1)
+
+5、最后放入冰箱冷藏一个晚上，第二天就有凝固成型的肉冻吃啦！
+
+![放入冰箱冷藏一个晚上](https://cdn.chengpeiquan.com/img/2023/06/20230618212655.jpg?x-oss-process=image/interlace,1)
+
+![第二天就有凝固成型的肉冻吃啦](https://cdn.chengpeiquan.com/img/2023/06/20230618212656.jpg?x-oss-process=image/interlace,1)
+
+我是吃的时候会蘸豆酱，所以鱼露没有加太多，直接吃会有点淡。如果打算不蘸调料的话可以下多一点（可以试味道，觉得比平时喝汤要咸了的时候，做出来就刚刚好）。
+
+## 取出食用
+
+最后取出来的时候也容易，先用盛饭的饭勺把四周稍微切一下。
+
+![用盛饭的饭勺把四周稍微切一下](https://cdn.chengpeiquan.com/img/2023/06/20230618212657.jpg?x-oss-process=image/interlace,1)
+
+然后倒扣在熟食砧板上一拍就下来了（嗯嗯，我的砧板是生熟分开的，如果只有一块砧板可以垫个保鲜袋隔一下）。
+
+![倒扣在熟食砧板上](https://cdn.chengpeiquan.com/img/2023/06/20230618212658.jpg?x-oss-process=image/interlace,1)
+
+![一下子就取下来了](https://cdn.chengpeiquan.com/img/2023/06/20230618212659.jpg?x-oss-process=image/interlace,1)
+
+因为胶质足够多，所以切的时候不会散也不容易融化！
+
+![切的时候不会散](https://cdn.chengpeiquan.com/img/2023/06/20230618212700.jpg?x-oss-process=image/interlace,1)
+
+## 最终成品
+
+切好码盘里，整整齐齐。
+
+![切好码盘里](https://cdn.chengpeiquan.com/img/2023/06/20230618212701.jpg?x-oss-process=image/interlace,1)
+
+一块块的特别好看，很 Q 弹！
+
+![一块块的特别好看](https://cdn.chengpeiquan.com/img/2023/06/20230618212702.jpg?x-oss-process=image/interlace,1)
+
+蘸普宁豆酱吃哈哈哈哈！
+
+![蘸普宁豆酱吃](https://cdn.chengpeiquan.com/img/2023/06/20230618212703.jpg?x-oss-process=image/interlace,1)
+
+还可以搭配芫荽和豆酱一起吃！
+
+![搭配起来好好看](https://cdn.chengpeiquan.com/img/2023/06/20230618212704.jpg?x-oss-process=image/interlace,1)
+
+![更有潮汕风味！](https://cdn.chengpeiquan.com/img/2023/06/20230618212705.jpg?x-oss-process=image/interlace,1)
