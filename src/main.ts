@@ -3,7 +3,7 @@
  */
 import progress from '@bassist/progress'
 import { ViteSSG } from 'vite-ssg'
-import baiduAnalytics from 'vue-baidu-analytics'
+import { createVueBaiduAnalytics } from '@web-analytics/vue'
 import '@purge-icons/generated'
 
 /**
@@ -18,6 +18,8 @@ import App from '@/App.vue'
 import 'windi.css'
 import '@postcss/global.postcss'
 import '@postcss/markdown.postcss'
+
+const { installVueBaiduAnalytics } = createVueBaiduAnalytics()
 
 /**
  * 创建实例
@@ -43,10 +45,9 @@ export const createApp = ViteSSG(
     }
 
     // 启动百度统计插件
-    app.use(baiduAnalytics, {
-      router: router,
-      siteIdList: ['8dca8e2532df48ea7f1b15c714588691'],
-      isDebug: false,
+    app.use(installVueBaiduAnalytics, {
+      router,
+      websiteIds: ['8dca8e2532df48ea7f1b15c714588691'],
     })
   }
 )
