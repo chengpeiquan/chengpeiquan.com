@@ -21,8 +21,8 @@ dependencies:
     specifier: ^0.7.6
     version: 0.7.6(vue@3.2.37)
   '@web-analytics/vue':
-    specifier: ^0.1.0
-    version: 0.1.0
+    specifier: ^0.2.0
+    version: 0.2.0
   dayjs:
     specifier: ^1.11.3
     version: 1.11.3
@@ -1155,8 +1155,8 @@ packages:
       '@bassist/utils': 0.11.2
     dev: false
 
-  /@web-analytics/vue@0.1.0:
-    resolution: {integrity: sha512-E9AaAFGKRoJDbxLw+HceYFYMDwOcV7UvPq4bGWAisEEV6pzdSi1u+eZPiX8Zt3rsCcCsSZsrsd7LBun3a+nmTA==}
+  /@web-analytics/vue@0.2.0:
+    resolution: {integrity: sha512-kujH3x2p1AmEI6eYwdJmoLwpgMc9MGCFPQWLOXnZVXZJKUT/IYQUxQkhd7eg9FZv3JIXlqkTZq1yHPttFC3KWA==}
     dependencies:
       '@bassist/utils': 0.11.2
       '@web-analytics/core': 0.1.3

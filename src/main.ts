@@ -19,7 +19,7 @@ import 'windi.css'
 import '@postcss/global.postcss'
 import '@postcss/markdown.postcss'
 
-const { installVueBaiduAnalytics } = createVueBaiduAnalytics()
+const { registerBaiduAnalytics } = createVueBaiduAnalytics()
 
 /**
  * 创建实例
@@ -45,7 +45,7 @@ export const createApp = ViteSSG(
     }
 
     // 启动百度统计插件
-    app.use(installVueBaiduAnalytics, {
+    app.use(registerBaiduAnalytics, {
       router,
       websiteIds: ['8dca8e2532df48ea7f1b15c714588691'],
     })
