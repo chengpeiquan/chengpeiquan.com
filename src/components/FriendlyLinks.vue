@@ -12,14 +12,6 @@
       <span class="text-gray-900 mx-2">|</span>
       <a
         class="mb-2"
-        href="https://wuyabala.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-        >佩恩的博客</a
-      >
-      <span class="text-gray-900 mx-2">|</span>
-      <a
-        class="mb-2"
         href="https://chawyehsu.com/"
         target="_blank"
         rel="noopener noreferrer"
