@@ -3,10 +3,15 @@ import fs from '@withtypes/fs-extra'
 import matter from 'gray-matter'
 import markdownIt from '@withtypes/markdown-it'
 import { Feed } from 'feed'
+import { author } from './json/config'
 
 const isExist: boolean = fs.existsSync('dist')
 if (!isExist) {
   fs.mkdirSync('dist')
+}
+
+function getLink(file: string) {
+  return file.replace('src/views', author.link).replace('.md', '.html')
 }
 
 async function run() {
@@ -29,17 +34,13 @@ async function run() {
           const raw = await fs.readFile(i, 'utf-8')
           const { data, content } = matter(raw)
           const html = markdown.render(content)
+          const link = getLink(i)
 
           return {
             ...data,
+            link,
             content: html,
-            author: [
-              {
-                name: 'chengpeiquan',
-                email: 'chengpeiquan@chengpeiquan.com',
-                link: 'https://chengpeiquan.com',
-              },
-            ],
+            author: [{ ...author }],
           }
         })
     )
@@ -50,21 +51,17 @@ async function run() {
   const feed = new Feed({
     title: '程沛权 - 养了三只猫',
     description: '一个养了三只猫的花臂男。',
-    id: 'https://chengpeiquan.com/',
-    link: 'https://chengpeiquan.com/',
-    image: 'https://chengpeiquan.com/avatar-256x256.png',
-    favicon: 'https://chengpeiquan.com/favicon.ico',
-    copyright: '© 2021 程沛权',
+    id: `${author.link}/`,
+    link: `${author.link}/`,
+    image: `${author.link}/avatar-256x256.png`,
+    favicon: `${author.link}/favicon.ico`,
+    copyright: '© 2021-PRESENT 程沛权',
     feedLinks: {
-      json: 'https://chengpeiquan.com/feed.json',
-      atom: 'https://chengpeiquan.com/feed.atom',
-      rss: 'https://chengpeiquan.com/feed.xml',
+      json: `${author.link}/feed.json`,
+      atom: `${author.link}/feed.atom`,
+      rss: `${author.link}/feed.xml`,
     },
-    author: {
-      name: 'chengpeiquan',
-      email: 'chengpeiquan@chengpeiquan.com',
-      link: 'https://chengpeiquan.com',
-    },
+    author,
   })
 
   posts.forEach((i) => feed.addItem(i))
