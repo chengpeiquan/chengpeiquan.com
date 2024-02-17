@@ -1,0 +1,47 @@
+[
+  {
+    "id": "beginner",
+    "name": "新手入门",
+    "icon": "https://cdn.chengpeiquan.com/img/2022/02/20220221141035.jpg?x-oss-process=image/interlace,1"
+  },
+  {
+    "id": "thrift",
+    "name": "省钱菜谱",
+    "icon": "https://cdn.chengpeiquan.com/img/2022/02/20220213200704.jpg?x-oss-process=image/interlace,1"
+  },
+  {
+    "id": "bento",
+    "name": "上班带饭",
+    "icon": "https://cdn.chengpeiquan.com/img/2022/02/20220213200259.jpg?x-oss-process=image/interlace,1"
+  },
+  {
+    "id": "teochew",
+    "name": "潮汕风味",
+    "icon": "https://cdn.chengpeiquan.com/img/2022/02/20220213200445.jpg?x-oss-process=image/interlace,1"
+  },
+  {
+    "id": "staple",
+    "name": "特色主食",
+    "icon": "https://cdn.chengpeiquan.com/img/2022/02/20220213195746.jpg?x-oss-process=image/interlace,1"
+  },
+  {
+    "id": "soup",
+    "name": "煲个靓汤",
+    "icon": "https://cdn.chengpeiquan.com/img/2022/02/20220213200137.jpg?x-oss-process=image/interlace,1"
+  },
+  {
+    "id": "orthodontic",
+    "name": "正畸食谱",
+    "icon": "https://cdn.chengpeiquan.com/img/2022/02/20220213195910.jpg?x-oss-process=image/interlace,1"
+  },
+  {
+    "id": "condiment",
+    "name": "调味辅料",
+    "icon": "https://cdn.chengpeiquan.com/img/2022/02/20220213200054.jpg?x-oss-process=image/interlace,1"
+  },
+  {
+    "id": "clever",
+    "name": "生活妙招",
+    "icon": "https://cdn.chengpeiquan.com/img/2023/03/20230312234314.jpg?x-oss-process=image/interlace,1"
+  }
+]
