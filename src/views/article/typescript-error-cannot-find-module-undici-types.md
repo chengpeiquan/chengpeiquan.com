@@ -1,7 +1,7 @@
 ---
 title: 干净的 TypeScript 项目在编译时报错 Cannot find module 'undici-types' 的原因和解决
 desc: 很久前配合 《前端工程化：基于 Vue.js 3.0 的设计与实践》 一书在 TypeScript 章节里讲解的内容，提供了一个很干净的 demo （见 hello-node ），除了必要的基础技术栈外，没有过多的第三方依赖，一直运行良好，直到这个假期收到了读者反馈，和我说在运行 npm run build 时出现类似下方的报错，无法正确编译。
-keywords: javascript type,js type,javascript with typescript
+keywords: typescript error undici-types,cannot find module undici-types
 date: 2024-04-06 21:55:00
 cover: https://cdn.chengpeiquan.com/img/2024/04/202404062211878.jpg?x-oss-process=image/interlace,1
 categories:
