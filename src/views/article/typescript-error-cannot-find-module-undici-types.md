@@ -14,6 +14,8 @@ categories:
 
 当然在教程里还是主动引导读者自己从零开始创建这个 Hello 项目，这也带来了这个假期遇到的一个读者反馈的问题。
 
+## 事情起因
+
 前几天在 GitHub Issue 的评论区，有位读者和我反馈说在运行 `npm run build` 时出现类似下方的报错，无法正确编译（见 [#193 (comment)](https://github.com/chengpeiquan/learning-vue3/issues/193#issuecomment-2036541817) ）。
 
 ![读者反馈](https://cdn.chengpeiquan.com/img/2024/04/202404062221402.jpg?x-oss-process=image/interlace,1)
