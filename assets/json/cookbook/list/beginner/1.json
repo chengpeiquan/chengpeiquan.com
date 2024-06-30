@@ -1,0 +1,197 @@
+{
+  "author": {
+    "name": "chengpeiquan",
+    "email": "chengpeiquan@chengpeiquan.com",
+    "link": "https://chengpeiquan.com"
+  },
+  "type": "cookbook",
+  "total": 46,
+  "page": 1,
+  "lastPage": 5,
+  "category": "beginner",
+  "data": [
+    {
+      "id": "chaozhou-roudong",
+      "type": "cookbook",
+      "shortDate": "2023-06-18",
+      "title": "菜谱：潮汕凉菜之潮州肉冻（1.5h）",
+      "desc": "哈哈哈哈哈天气热就想吃凉菜，潮汕地区也有自己的凉菜（虽然在广州和深圳的外卖基本上买不到…），今天的潮州肉冻也是其中之一，我妈妈时不时会买，有时她也会自己做，我这次也是凭着十几岁那会帮她打下手时留下的记忆把潮州肉冻做了出来，竟然没有记错哈哈哈…",
+      "keywords": "潮州肉冻,潮州小吃,潮汕凉菜,潮汕小吃",
+      "date": "2023-06-18 21:08:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2023/06/20230618212009.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "teochew",
+        "thrift",
+        "beginner"
+      ],
+      "duration": 90,
+      "price": 20.7,
+      "xiaohongshuId": "648f01ba0000000013004f8d"
+    },
+    {
+      "id": "nanru-kaorou-juan-shengcai",
+      "type": "cookbook",
+      "shortDate": "2023-04-30",
+      "title": "省钱菜谱：5.4元的南乳烤肉卷生菜（20min）",
+      "desc": "今天搞个南乳烤肉，之前几次我叫它腐乳的时候老是被问不是白色才是腐乳吗，这个其实也是啊，有红色也有白色，像我家那边说腐乳汁就是指这种红色的，当然有的地方更习惯叫它南乳，我也用南乳来叫它吧，减少歧义哈哈哈哈~",
+      "keywords": "潮汕美食,清汤面",
+      "date": "2023-04-30 23:32:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2023/05/20230430234407.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "bento",
+        "teochew",
+        "beginner"
+      ],
+      "duration": 20,
+      "price": 5.4,
+      "xiaohongshuId": "644e8a260000000027012696"
+    },
+    {
+      "id": "muer-chaorou",
+      "type": "cookbook",
+      "shortDate": "2023-03-03",
+      "title": "菜谱：简易版木耳炒肉（5min）",
+      "desc": "今天分享一个木耳炒肉，过年的时候好朋友兼好邻居送了我一袋木耳，好好吃哈哈哈哈！",
+      "keywords": "木耳炒肉,黑木耳炒肉片",
+      "date": "2023-03-03 00:11:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2023/02/20230303145446.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "beginner"
+      ],
+      "duration": 5,
+      "price": 6,
+      "xiaohongshuId": "640195370000000013011c7b"
+    },
+    {
+      "id": "gali-chaofan",
+      "type": "cookbook",
+      "shortDate": "2023-02-04",
+      "title": "菜谱：超简单的咖喱炒饭（5min）",
+      "desc": "咖喱炒饭也是我很喜欢吃的一个炒法，过程超简单！就是在普通蛋炒饭的基础上，上色步骤将生抽酱油换成咖喱粉就行！",
+      "keywords": "潮汕美食,咖喱炒饭,炒饭",
+      "date": "2023-02-04 20:36:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2023/02/20230204204833.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "teochew",
+        "staple",
+        "beginner"
+      ],
+      "duration": 5,
+      "price": 1.8,
+      "xiaohongshuId": "63de514b000000001d012d21"
+    },
+    {
+      "id": "baitang-zheng-jidan",
+      "type": "cookbook",
+      "shortDate": "2023-01-12",
+      "title": "食疗菜谱：用白糖蒸鸡蛋治疗感冒鼻音（1min）",
+      "desc": "我在圣诞节那天弱阳，在元旦节那天阳康，但我的鼻音一直迟迟不好，然后我老妈教了我这招，试了几天真的好了！网上搜了一下确实有这个说法，分享一下有同样困扰的人，可以试试。",
+      "keywords": "白糖蒸鸡蛋,雪里藏珠",
+      "date": "2023-01-12 22:56:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2023/01/20230112231503.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "beginner",
+        "bento",
+        "teochew",
+        "staple"
+      ],
+      "duration": 1,
+      "price": 0.8,
+      "xiaohongshuId": "630a282a000000001902aa22"
+    },
+    {
+      "id": "tudouli-kao-xinaoerliang-paigu",
+      "type": "cookbook",
+      "shortDate": "2022-10-03",
+      "title": "菜谱：土豆粒烤新奥尔良排骨（30min）",
+      "desc": "做完卤肉实在没忍住哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈，切了一块卤肉，吃个宵夜！！！这个点最好的搭配就是潮汕粿汁了！！！",
+      "keywords": "烤土豆,空气炸锅烤土豆,烤排骨,空气炸锅烤排骨,土豆粒烤新奥尔良排骨,土豆烤排骨",
+      "date": "2022-10-03 21:58:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/10/20221003221155.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "beginner",
+        "bento"
+      ],
+      "duration": 30,
+      "price": 20,
+      "xiaohongshuId": "633aea73000000001d01a808"
+    },
+    {
+      "id": "chaoshan-yuwan-mian",
+      "type": "cookbook",
+      "shortDate": "2022-09-12",
+      "title": "菜谱：简简单单的潮汕鱼丸面（10min）",
+      "desc": "昨天打边炉还剩了一些丸子，今晚煮个鱼丸面，潮汕的鱼丸也很好吃！",
+      "keywords": "潮汕美食,潮汕鱼丸面",
+      "date": "2022-09-12 20:26:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/09/20220912203715.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "teochew",
+        "beginner"
+      ],
+      "duration": 10,
+      "price": 25,
+      "xiaohongshuId": "631f2571000000000801cf84"
+    },
+    {
+      "id": "baocaisi-chao-guotiao",
+      "type": "cookbook",
+      "shortDate": "2022-08-27",
+      "title": "省钱菜谱：3.5元的包菜丝炒粿条（5min）",
+      "desc": "下午物业在小区里举办了一个沙井盖美化的活动，好多小朋友画了很可爱的图案，有我喜欢的哆啦A梦和海绵宝宝哈哈哈哈，居然还有滑稽表情，也解决了我住了三个月以来的疑惑，哈哈哈哈我就说怎么看到有一些沙井盖还有图案，是有人偷偷去画的还是咋地，原来是物业组织的，好玩！",
+      "keywords": "潮州,潮州卤水,包菜丝炒粿条,炒粿条",
+      "date": "2022-08-27 22:20:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/08/20220827223411.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "beginner",
+        "bento",
+        "teochew",
+        "staple"
+      ],
+      "duration": 5,
+      "price": 3.5,
+      "xiaohongshuId": "630a282a000000001902aa22"
+    },
+    {
+      "id": "wawacai-fensi-men-roupi",
+      "type": "cookbook",
+      "shortDate": "2022-08-13",
+      "title": "娃娃菜粉丝焖肉皮（15min）",
+      "desc": "今晚做个娃娃菜粉丝焖肉皮，也是潮州老家的特色做法，最近买了砂暴肉皮（之前是油炸的），虽然贵了好多，但确实是更好吃！这道菜做法简单，就是备料的时间比较久，都是需要花时间提前浸泡。",
+      "keywords": "娃娃菜粉丝焖肉皮,潮州肉皮",
+      "date": "2022-08-13 22:32:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/08/20220814001629.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "teochew",
+        "beginner"
+      ],
+      "duration": 15,
+      "price": 15,
+      "xiaohongshuId": "62f7b611000000001603686d"
+    },
+    {
+      "id": "baizhou-lin-jiangyou",
+      "type": "cookbook",
+      "shortDate": "2022-08-11",
+      "title": "😂难受时最爱的晚餐：潮州特色·南时油",
+      "desc": "hhhhh “南时油” 是潮州话的读音，实际上就是白粥淋酱油，超级简单！煮碗白粥，淋上两勺酱油就超级无敌美味！！！特别适合身体不舒服的时候吃！",
+      "keywords": "南时油,白粥淋酱油",
+      "date": "2022-08-11 22:50:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/08/20220814004625.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "teochew",
+        "staple",
+        "orthodontic",
+        "beginner"
+      ],
+      "duration": 1,
+      "price": 0.5,
+      "xiaohongshuId": "62f517520000000012027571"
+    }
+  ]
+}

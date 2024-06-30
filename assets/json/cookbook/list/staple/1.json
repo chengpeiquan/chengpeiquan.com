@@ -1,0 +1,201 @@
+{
+  "author": {
+    "name": "chengpeiquan",
+    "email": "chengpeiquan@chengpeiquan.com",
+    "link": "https://chengpeiquan.com"
+  },
+  "type": "cookbook",
+  "total": 47,
+  "page": 1,
+  "lastPage": 5,
+  "category": "staple",
+  "data": [
+    {
+      "id": "caishen-zhushou",
+      "type": "cookbook",
+      "shortDate": "2024-02-14",
+      "title": "菜谱：一年一度的仪式感 正月初五的财神猪手（1.5h）",
+      "desc": "今天正月初五，接财神，每年今天的仪式感都是做只猪手哈哈哈哈，发财就手～今天是高压锅版，如果没有高压锅也可以用隔水炖或者电饭煲来炖猪手。",
+      "keywords": "潮州猪手,潮汕猪手,潮州卤猪手,财神猪手",
+      "date": "2024-02-14 22:56:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2024/02/202402180015053.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "staple",
+        "teochew",
+        "bento"
+      ],
+      "duration": 90,
+      "price": 33,
+      "xiaohongshuId": "65ccd49d000000000b00f337"
+    },
+    {
+      "id": "qincai-xianggu-xianrou-yuntun",
+      "type": "cookbook",
+      "shortDate": "2023-04-02",
+      "title": "省钱菜谱：3.25元/碗的芹菜香菇鲜肉云吞（20min）",
+      "desc": "今天这个菜谱是上周的，上周末包了芹菜香菇云吞，今天才来整理哈哈哈哈哈。",
+      "keywords": "芹菜香菇鲜肉云吞,香菇肉云吞,芹菜肉云吞",
+      "date": "2023-04-02 19:06:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2023/04/20230402223302.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "staple",
+        "teochew"
+      ],
+      "duration": 20,
+      "price": 3.25,
+      "xiaohongshuId": "642961a0000000000703afe9"
+    },
+    {
+      "id": "gali-chaofan",
+      "type": "cookbook",
+      "shortDate": "2023-02-04",
+      "title": "菜谱：超简单的咖喱炒饭（5min）",
+      "desc": "咖喱炒饭也是我很喜欢吃的一个炒法，过程超简单！就是在普通蛋炒饭的基础上，上色步骤将生抽酱油换成咖喱粉就行！",
+      "keywords": "潮汕美食,咖喱炒饭,炒饭",
+      "date": "2023-02-04 20:36:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2023/02/20230204204833.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "teochew",
+        "staple",
+        "beginner"
+      ],
+      "duration": 5,
+      "price": 1.8,
+      "xiaohongshuId": "63de514b000000001d012d21"
+    },
+    {
+      "id": "chaoshan-baicai-xianrou-jiaozi",
+      "type": "cookbook",
+      "shortDate": "2023-01-21",
+      "title": "菜谱：口感细腻的白菜鲜肉饺子v2版（1h）",
+      "desc": "祝大家新年快乐！新的一年身体健康，事事如意！今天除夕，中午包顿饺子！前段时间研究了馅料的新的加工方式，虽然花的时间比平时的饺子馅要多一点，但做出来的饺子有薄皮小笼包的感觉，口感非常细腻，特别好吃！！！",
+      "keywords": "白菜饺,潮式白菜饺子,潮汕饺子",
+      "date": "2023-01-21 17:05:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2023/01/20230121233847.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "teochew",
+        "staple"
+      ],
+      "duration": 60,
+      "price": 24,
+      "xiaohongshuId": "63cbaaec000000001f00fa5f"
+    },
+    {
+      "id": "baitang-zheng-jidan",
+      "type": "cookbook",
+      "shortDate": "2023-01-12",
+      "title": "食疗菜谱：用白糖蒸鸡蛋治疗感冒鼻音（1min）",
+      "desc": "我在圣诞节那天弱阳，在元旦节那天阳康，但我的鼻音一直迟迟不好，然后我老妈教了我这招，试了几天真的好了！网上搜了一下确实有这个说法，分享一下有同样困扰的人，可以试试。",
+      "keywords": "白糖蒸鸡蛋,雪里藏珠",
+      "date": "2023-01-12 22:56:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2023/01/20230112231503.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "beginner",
+        "bento",
+        "teochew",
+        "staple"
+      ],
+      "duration": 1,
+      "price": 0.8,
+      "xiaohongshuId": "630a282a000000001902aa22"
+    },
+    {
+      "id": "shacha-dansi-chao-mifen",
+      "type": "cookbook",
+      "shortDate": "2023-01-07",
+      "title": "省钱菜谱：2.6元的沙茶蛋丝炒米粉（10min）",
+      "desc": "中午起来有点晚，冰箱里只有生菜和鸡蛋，家里还有米粉，炒个半斋的米粉吃哈哈哈，因为没有肉，所以今天没加辣椒酱，用的沙茶酱炒。",
+      "keywords": "沙茶蛋丝炒米粉,潮汕炒米粉,潮州细米粉",
+      "date": "2023-01-07 15:37:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2023/01/20230107154722.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "teochew",
+        "staple"
+      ],
+      "duration": 10,
+      "price": 2.6,
+      "xiaohongshuId": "63b92144000000001f025b8a"
+    },
+    {
+      "id": "chaoshan-caitou-jiaozi",
+      "type": "cookbook",
+      "shortDate": "2022-10-23",
+      "title": "菜谱：鲜甜可口的潮式菜头饺（60min）",
+      "desc": "“菜头”在潮州话里是指萝卜，不带颜色就默认是白色，像胡萝卜就会带上颜色称为“红菜头”，所以来潮州看到说“白菜头”不要以为是白菜的头哈哈哈哈，两者毫无关系~",
+      "keywords": "菜头饺,白萝卜饺子,潮汕饺子",
+      "date": "2022-10-23 21:16:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/10/20221023212711.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "teochew",
+        "staple"
+      ],
+      "duration": 60,
+      "price": 24,
+      "xiaohongshuId": "63553ebf0000000014034a2a"
+    },
+    {
+      "id": "baocaisi-chao-guotiao",
+      "type": "cookbook",
+      "shortDate": "2022-08-27",
+      "title": "省钱菜谱：3.5元的包菜丝炒粿条（5min）",
+      "desc": "下午物业在小区里举办了一个沙井盖美化的活动，好多小朋友画了很可爱的图案，有我喜欢的哆啦A梦和海绵宝宝哈哈哈哈，居然还有滑稽表情，也解决了我住了三个月以来的疑惑，哈哈哈哈我就说怎么看到有一些沙井盖还有图案，是有人偷偷去画的还是咋地，原来是物业组织的，好玩！",
+      "keywords": "潮州,潮州卤水,包菜丝炒粿条,炒粿条",
+      "date": "2022-08-27 22:20:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/08/20220827223411.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "beginner",
+        "bento",
+        "teochew",
+        "staple"
+      ],
+      "duration": 5,
+      "price": 3.5,
+      "xiaohongshuId": "630a282a000000001902aa22"
+    },
+    {
+      "id": "baizhou-lin-jiangyou",
+      "type": "cookbook",
+      "shortDate": "2022-08-11",
+      "title": "😂难受时最爱的晚餐：潮州特色·南时油",
+      "desc": "hhhhh “南时油” 是潮州话的读音，实际上就是白粥淋酱油，超级简单！煮碗白粥，淋上两勺酱油就超级无敌美味！！！特别适合身体不舒服的时候吃！",
+      "keywords": "南时油,白粥淋酱油",
+      "date": "2022-08-11 22:50:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/08/20220814004625.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "teochew",
+        "staple",
+        "orthodontic",
+        "beginner"
+      ],
+      "duration": 1,
+      "price": 0.5,
+      "xiaohongshuId": "62f517520000000012027571"
+    },
+    {
+      "id": "tian-qiugualao",
+      "type": "cookbook",
+      "shortDate": "2022-06-19",
+      "title": "省钱菜谱：3块钱的潮州甜款秋瓜烙（10min）",
+      "desc": "今天做个秋瓜烙，做法还是之前在潮州跟我妈学的，秋瓜烙有甜口味也有咸口味，今天做个甜的，配杯茶一起吃很赞哈哈哈哈哈哈哈…",
+      "keywords": "潮州小吃,潮汕小吃,潮州秋瓜烙,潮汕秋瓜烙",
+      "date": "2022-06-19 22:16:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/06/20220625183437.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "staple",
+        "teochew"
+      ],
+      "duration": 5,
+      "price": 1.8,
+      "xiaohongshuId": "62af2fca000000000102bf27"
+    }
+  ]
+}

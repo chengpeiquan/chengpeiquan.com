@@ -1,0 +1,8 @@
+/**
+ * name: chengpeiquan.com
+ * version: v0.1.0
+ * description: My personal website, technology stack based on Vue.js 3.0, and Vite 2.0, use Server Side Generation.
+ * author: chengpeiquan
+ * homepage: https://chengpeiquan.com/
+ */
+.dark .category-tabs[data-v-2d2aefbb]{--tw-border-opacity: 1;border-color:rgba(255,255,255,var(--tw-border-opacity));--tw-border-opacity: .05}.category-tabs[data-v-2d2aefbb]{border-bottom-width:1px;margin-bottom:.5rem;padding-bottom:.5rem;padding-left:1rem;padding-right:1rem;width:100%}@media (min-width: 768px){.category-tabs[data-v-2d2aefbb]{margin-bottom:1rem;padding-bottom:1rem;padding-left:0;padding-right:0}}.category-tabs .item[data-v-2d2aefbb]{font-size:.875rem;line-height:1.25rem;margin-right:1rem;opacity:.7}@media (min-width: 768px){.category-tabs .item[data-v-2d2aefbb]{font-size:1rem;line-height:1.5rem;margin-right:2rem}}.category-tabs .item.cur[data-v-2d2aefbb]{font-weight:700;font-size:1rem;line-height:1.5rem;opacity:1}@media (min-width: 768px){.category-tabs .item.cur[data-v-2d2aefbb]{font-size:1.25rem;line-height:1.75rem}}

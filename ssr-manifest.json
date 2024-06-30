@@ -1,0 +1,889 @@
+{
+  "vite/modulepreload-polyfill": [],
+  "\u0000commonjsHelpers.js": [],
+  "\u0000/home/runner/work/chengpeiquan.com/chengpeiquan.com/node_modules/.pnpm/nprogress@0.2.0/node_modules/nprogress/nprogress.js?commonjs-module": [],
+  "node_modules/.pnpm/nprogress@0.2.0/node_modules/nprogress/nprogress.js": [],
+  "node_modules/.pnpm/@bassist+utils@0.10.0/node_modules/@bassist/utils/lib/index.mjs": [],
+  "node_modules/.pnpm/@bassist+progress@0.2.0/node_modules/@bassist/progress/lib/index.mjs": [],
+  "node_modules/.pnpm/@vue+shared@3.2.37/node_modules/@vue/shared/dist/shared.esm-bundler.js": [],
+  "node_modules/.pnpm/@vue+reactivity@3.2.37/node_modules/@vue/reactivity/dist/reactivity.esm-bundler.js": [],
+  "node_modules/.pnpm/@vue+runtime-core@3.2.37/node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js": [],
+  "node_modules/.pnpm/@vue+runtime-dom@3.2.37/node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js": [],
+  "node_modules/.pnpm/vue-router@4.1.2_vue@3.2.37/node_modules/vue-router/dist/vue-router.mjs": [],
+  "node_modules/.pnpm/@vueuse+head@0.7.6_vue@3.2.37/node_modules/@vueuse/head/dist/index.mjs": [],
+  "node_modules/.pnpm/vite-ssg@0.20.2_@vueuse+head@0.7.6_vite@2.9.14_vue-router@4.1.2_vue@3.2.37/node_modules/vite-ssg/dist/chunks/state.mjs": [],
+  "node_modules/.pnpm/vite-ssg@0.20.2_@vueuse+head@0.7.6_vite@2.9.14_vue-router@4.1.2_vue@3.2.37/node_modules/vite-ssg/dist/chunks/ClientOnly.mjs": [],
+  "node_modules/.pnpm/vite-ssg@0.20.2_@vueuse+head@0.7.6_vite@2.9.14_vue-router@4.1.2_vue@3.2.37/node_modules/vite-ssg/dist/index.mjs": [],
+  "node_modules/.pnpm/@bassist+utils@0.11.2/node_modules/@bassist/utils/lib/index.mjs": [],
+  "node_modules/.pnpm/@web-analytics+core@0.1.5/node_modules/@web-analytics/core/lib/index.mjs": [],
+  "node_modules/.pnpm/@web-analytics+vue@0.2.2/node_modules/@web-analytics/vue/lib/index.mjs": [],
+  "node_modules/.pnpm/@iconify+iconify@2.2.1/node_modules/@iconify/iconify/dist/iconify.mjs": [],
+  "@purge-icons/generated": [],
+  "vite/preload-helper": [],
+  "\u0000/home/runner/work/chengpeiquan.com/chengpeiquan.com/node_modules/.pnpm/dayjs@1.11.3/node_modules/dayjs/dayjs.min.js?commonjs-module": [],
+  "node_modules/.pnpm/dayjs@1.11.3/node_modules/dayjs/dayjs.min.js": [],
+  "\u0000/home/runner/work/chengpeiquan.com/chengpeiquan.com/node_modules/.pnpm/dayjs@1.11.3/node_modules/dayjs/plugin/localizedFormat.js?commonjs-module": [],
+  "node_modules/.pnpm/dayjs@1.11.3/node_modules/dayjs/plugin/localizedFormat.js": [],
+  "\u0000/home/runner/work/chengpeiquan.com/chengpeiquan.com/node_modules/.pnpm/dayjs@1.11.3/node_modules/dayjs/plugin/relativeTime.js?commonjs-module": [],
+  "node_modules/.pnpm/dayjs@1.11.3/node_modules/dayjs/plugin/relativeTime.js": [],
+  "\u0000/home/runner/work/chengpeiquan.com/chengpeiquan.com/node_modules/.pnpm/dayjs@1.11.3/node_modules/dayjs/locale/zh-cn.js?commonjs-module": [],
+  "node_modules/.pnpm/dayjs@1.11.3/node_modules/dayjs/locale/zh-cn.js": [],
+  "src/libs/dayjs.ts": [],
+  "node_modules/.pnpm/@bassist+utils@0.11.0/node_modules/@bassist/utils/lib/index.mjs": [],
+  "src/config/index.ts": [],
+  "src/hooks/useI18n.ts": [],
+  "node_modules/.pnpm/@vueuse+shared@8.9.4_vue@3.2.37/node_modules/@vueuse/shared/index.mjs": [],
+  "node_modules/.pnpm/@vueuse+core@8.9.4_vue@3.2.37/node_modules/@vueuse/core/index.mjs": [],
+  "src/libs/isMobile.ts": [],
+  "src/views/index.vue?vue&type=style&index=0&scoped=true&lang.postcss": [],
+  "plugin-vue:export-helper": [],
+  "src/views/index.vue": [],
+  "../../../../../@vite-plugin-pages/generated-pages?id=virtual:generated-pages": [],
+  "src/router/article.ts": [],
+  "src/router/cookbook.ts": [],
+  "src/router/index.ts": [],
+  "~icons/ic/twotone-arrow-back-ios": [],
+  "src/components/BackToTop.vue": [],
+  "src/components/Footer.vue?vue&type=style&index=0&scoped=true&lang.postcss": [],
+  "src/components/Footer.vue": [],
+  "~icons/ri/rss-fill": [],
+  "~icons/ri/twitter-fill": [],
+  "~icons/ri/zhihu-fill": [],
+  "~icons/ri/github-fill": [],
+  "~icons/ri/sun-line": [],
+  "~icons/ri/moon-line": [],
+  "src/libs/isDark.ts": [],
+  "src/components/ToggleTheme.vue": [],
+  "~icons/ri/english-input": [],
+  "~icons/uil/letter-chinese-a": [],
+  "src/components/ToggleLang.vue": [],
+  "~icons/ri/close-fill": [],
+  "~icons/ri/menu-fill": [],
+  "src/components/Header.vue?vue&type=style&index=0&scoped=true&lang.postcss": [],
+  "src/components/Header.vue": [],
+  "src/App.vue": [],
+  "../../../../../@windicss/windi.css": [],
+  "src/assets/postcss/global.postcss": [],
+  "src/assets/postcss/markdown.postcss": [],
+  "src/main.ts": [],
+  "index.html": [],
+  "src/components/ChildrenList.vue?vue&type=style&index=0&scoped=true&lang.postcss": [
+    "/assets/_...all_.acd8b7b9.js",
+    "/assets/_...all_.af73c895.css"
+  ],
+  "src/components/ChildrenList.vue": [
+    "/assets/_...all_.acd8b7b9.js",
+    "/assets/_...all_.af73c895.css"
+  ],
+  "src/views/[...all].vue?vue&type=style&index=0&scoped=true&lang.postcss": [
+    "/assets/_...all_.acd8b7b9.js",
+    "/assets/_...all_.af73c895.css"
+  ],
+  "src/views/[...all].vue": [
+    "/assets/_...all_.acd8b7b9.js",
+    "/assets/_...all_.af73c895.css"
+  ],
+  "src/views/about.md": [
+    "/assets/about.f3385498.js"
+  ],
+  "src/hooks/useNavigate.ts": [
+    "/assets/Detail.155b50ec.js",
+    "/assets/Detail.d566d5cf.css"
+  ],
+  "~icons/ri/list-check2": [
+    "/assets/Detail.155b50ec.js",
+    "/assets/Detail.d566d5cf.css"
+  ],
+  "src/components/TOC.vue?vue&type=style&index=0&scoped=true&lang.postcss": [
+    "/assets/Detail.155b50ec.js",
+    "/assets/Detail.d566d5cf.css"
+  ],
+  "src/components/TOC.vue": [
+    "/assets/Detail.155b50ec.js",
+    "/assets/Detail.d566d5cf.css"
+  ],
+  "src/components/Page.vue?vue&type=style&index=0&lang.postcss": [
+    "/assets/Detail.155b50ec.js",
+    "/assets/Detail.d566d5cf.css"
+  ],
+  "src/components/Page.vue": [
+    "/assets/Detail.155b50ec.js",
+    "/assets/Detail.d566d5cf.css"
+  ],
+  "src/components/cookbook/Sidebar.vue?vue&type=style&index=0&scoped=true&lang.postcss": [
+    "/assets/Detail.155b50ec.js",
+    "/assets/Detail.d566d5cf.css"
+  ],
+  "src/components/cookbook/Sidebar.vue": [
+    "/assets/Detail.155b50ec.js",
+    "/assets/Detail.d566d5cf.css"
+  ],
+  "src/components/cookbook/Article.vue?vue&type=style&index=0&lang.postcss": [
+    "/assets/Detail.155b50ec.js",
+    "/assets/Detail.d566d5cf.css"
+  ],
+  "src/components/cookbook/Article.vue": [
+    "/assets/Detail.155b50ec.js",
+    "/assets/Detail.d566d5cf.css"
+  ],
+  "~icons/ri/star-line": [
+    "/assets/Detail.155b50ec.js",
+    "/assets/Detail.d566d5cf.css"
+  ],
+  "src/components/blog/Article.vue?vue&type=style&index=0&lang.postcss": [
+    "/assets/Detail.155b50ec.js",
+    "/assets/Detail.d566d5cf.css"
+  ],
+  "src/components/blog/Article.vue": [
+    "/assets/Detail.155b50ec.js",
+    "/assets/Detail.d566d5cf.css"
+  ],
+  "src/components/Detail.vue": [
+    "/assets/Detail.155b50ec.js",
+    "/assets/Detail.d566d5cf.css"
+  ],
+  "src/hooks/useDate.ts": [
+    "/assets/useList.2d80cbd4.js"
+  ],
+  "src/libs/isArticle.ts": [
+    "/assets/useList.2d80cbd4.js"
+  ],
+  "src/libs/isCookbook.ts": [
+    "/assets/useList.2d80cbd4.js"
+  ],
+  "src/hooks/useList.ts": [
+    "/assets/useList.2d80cbd4.js"
+  ],
+  "src/components/FriendlyLinks.vue?vue&type=style&index=0&scoped=true&lang.postcss": [
+    "/assets/Sidebar.07e7476c.js",
+    "/assets/Sidebar.636805ed.css"
+  ],
+  "src/components/FriendlyLinks.vue": [
+    "/assets/Sidebar.07e7476c.js",
+    "/assets/Sidebar.636805ed.css"
+  ],
+  "src/components/blog/Sidebar.vue?vue&type=style&index=0&scoped=true&lang.postcss": [
+    "/assets/Sidebar.07e7476c.js",
+    "/assets/Sidebar.636805ed.css"
+  ],
+  "src/components/blog/Sidebar.vue": [
+    "/assets/Sidebar.07e7476c.js",
+    "/assets/Sidebar.636805ed.css"
+  ],
+  "src/views/article/2021-year-end-summary.md": [
+    "/assets/2021-year-end-summary.811fa9ed.js"
+  ],
+  "src/components/VideoPlayer.vue?vue&type=style&index=0&scoped=true&lang.postcss": [
+    "/assets/2022-year-end-summary.4d6492a8.js",
+    "/assets/2022-year-end-summary.454657f3.css"
+  ],
+  "src/components/VideoPlayer.vue": [
+    "/assets/2022-year-end-summary.4d6492a8.js",
+    "/assets/2022-year-end-summary.454657f3.css"
+  ],
+  "src/views/article/2022-year-end-summary.md": [
+    "/assets/2022-year-end-summary.4d6492a8.js",
+    "/assets/2022-year-end-summary.454657f3.css"
+  ],
+  "src/views/article/2023-year-end-summary.md": [
+    "/assets/2023-year-end-summary.f91bb420.js"
+  ],
+  "src/views/article/[page].vue": [
+    "/assets/_page_.4187d89c.js"
+  ],
+  "~icons/fluent/drafts16-filled": [
+    "/assets/List.9574f76a.js"
+  ],
+  "~icons/ri/fire-fill": [
+    "/assets/List.9574f76a.js"
+  ],
+  "src/components/blog/List.vue": [
+    "/assets/List.9574f76a.js"
+  ],
+  "src/hooks/usePagination.ts": [
+    "/assets/CategoryTabs.1e5f4dd8.js",
+    "/assets/CategoryTabs.79202695.css"
+  ],
+  "src/components/Pagination.vue": [
+    "/assets/CategoryTabs.1e5f4dd8.js",
+    "/assets/CategoryTabs.79202695.css"
+  ],
+  "src/components/CategoryTabs.vue?vue&type=style&index=0&scoped=true&lang.postcss": [
+    "/assets/CategoryTabs.1e5f4dd8.js",
+    "/assets/CategoryTabs.79202695.css"
+  ],
+  "src/components/CategoryTabs.vue": [
+    "/assets/CategoryTabs.1e5f4dd8.js",
+    "/assets/CategoryTabs.79202695.css"
+  ],
+  "src/views/article/a-week-time-of-a-markdown-engineer.md": [
+    "/assets/a-week-time-of-a-markdown-engineer.ce1aa713.js"
+  ],
+  "src/views/article/about-didi.md": [
+    "/assets/about-didi.c0291a10.js"
+  ],
+  "src/views/article/aliyun-ecs-server-migration.md": [
+    "/assets/aliyun-ecs-server-migration.6525f42f.js"
+  ],
+  "src/views/article/api-design.md": [
+    "/assets/api-design.5a6cd689.js"
+  ],
+  "src/views/article/axios-ie9.md": [
+    "/assets/axios-ie9.a8a3ea1c.js"
+  ],
+  "src/views/article/baidu-map-api-destroy.md": [
+    "/assets/baidu-map-api-destroy.d98374fc.js"
+  ],
+  "src/views/article/blog-articles-sort-out.md": [
+    "/assets/blog-articles-sort-out.b109f7c4.js"
+  ],
+  "src/views/article/canvas-movie-jitter-effect.md": [
+    "/assets/canvas-movie-jitter-effect.8efd2960.js"
+  ],
+  "src/views/article/ckeditor4-rich-text-editor-webpack.md": [
+    "/assets/ckeditor4-rich-text-editor-webpack.34851ba0.js"
+  ],
+  "src/views/article/cookbook-changelog.md": [
+    "/assets/cookbook-changelog.152cfeeb.js"
+  ],
+  "src/views/article/cookbook-donate.md": [
+    "/assets/cookbook-donate.29d32b93.js"
+  ],
+  "src/views/article/cookbook-faq.md": [
+    "/assets/cookbook-faq.52e215be.js"
+  ],
+  "src/views/article/cookbook-guide.md": [
+    "/assets/cookbook-guide.5b089393.js"
+  ],
+  "src/views/article/cookbook-safe.md": [
+    "/assets/cookbook-safe.f3f311d4.js"
+  ],
+  "src/views/article/cooking-cookbook.md": [
+    "/assets/cooking-cookbook.b532d132.js"
+  ],
+  "src/views/article/css-conf-5.md": [
+    "/assets/css-conf-5.bcd3efeb.js"
+  ],
+  "src/views/article/document-write-optimize-webpack.md": [
+    "/assets/document-write-optimize-webpack.b4a93b78.js"
+  ],
+  "src/views/article/editorconfig.md": [
+    "/assets/editorconfig.bf6d27d0.js"
+  ],
+  "src/views/article/flutter.md": [
+    "/assets/flutter.fb987a65.js"
+  ],
+  "src/views/article/getboundingclientrect.md": [
+    "/assets/getboundingclientrect.0fb9bca9.js"
+  ],
+  "src/views/article/git-commit-analytics.md": [
+    "/assets/git-commit-analytics.0e9605a5.js"
+  ],
+  "src/views/article/git-selective-merge.md": [
+    "/assets/git-selective-merge.0325fc7a.js"
+  ],
+  "src/views/article/github-ci-cd.md": [
+    "/assets/github-ci-cd.3d1b3f81.js"
+  ],
+  "src/views/article/github-upload-delete.md": [
+    "/assets/github-upload-delete.b55e80b5.js"
+  ],
+  "src/views/article/group-buy-calculator.md": [
+    "/assets/group-buy-calculator.46e444bf.js"
+  ],
+  "src/views/article/hello-world.md": [
+    "/assets/hello-world.f9004b0c.js"
+  ],
+  "src/views/article/ios-time-nan.md": [
+    "/assets/ios-time-nan.a79992f8.js"
+  ],
+  "src/views/article/javascript-with-typescript-type-checking.md": [
+    "/assets/javascript-with-typescript-type-checking.edc13119.js"
+  ],
+  "src/views/article/js-exchange-random.md": [
+    "/assets/js-exchange-random.f4b80347.js"
+  ],
+  "src/views/article/js-file-reader.md": [
+    "/assets/js-file-reader.fd7e5df2.js"
+  ],
+  "src/views/article/js-go-to-top.md": [
+    "/assets/js-go-to-top.4c2c8beb.js"
+  ],
+  "src/views/article/large-image-preload-fast.md": [
+    "/assets/large-image-preload-fast.d54927c7.js"
+  ],
+  "src/views/article/macos-android-studio-emulator-hosts.md": [
+    "/assets/macos-android-studio-emulator-hosts.f1cff9e6.js"
+  ],
+  "src/views/article/my-custom-nas.md": [
+    "/assets/my-custom-nas.18fa68b1.js"
+  ],
+  "src/views/article/my-netease.md": [
+    "/assets/my-netease.bc197b96.js"
+  ],
+  "src/views/article/new-mac-2024.md": [
+    "/assets/new-mac-2024.8e081c58.js"
+  ],
+  "src/views/article/noconflict-jquery-zepto.md": [
+    "/assets/noconflict-jquery-zepto.b78244cb.js"
+  ],
+  "src/views/article/node-to-exe-by-pkg.md": [
+    "/assets/node-to-exe-by-pkg.80a412be.js"
+  ],
+  "src/views/article/node-web-crawler.md": [
+    "/assets/node-web-crawler.d61b5de9.js"
+  ],
+  "src/views/article/pinia.md": [
+    "/assets/pinia.e7cf65c7.js"
+  ],
+  "src/views/article/reclassify-articles.md": [
+    "/assets/reclassify-articles.4b75b26e.js"
+  ],
+  "src/views/article/refresh-token.md": [
+    "/assets/refresh-token.06a89cf2.js"
+  ],
+  "src/views/article/requirement-design.md": [
+    "/assets/requirement-design.49482795.js"
+  ],
+  "src/views/article/rewrite-in-vite.md": [
+    "/assets/rewrite-in-vite.0ec85a37.js"
+  ],
+  "src/views/article/rollupjs.md": [
+    "/assets/rollupjs.86003d51.js"
+  ],
+  "src/views/article/search-children-in-404-page.md": [
+    "/assets/search-children-in-404-page.7a87d64e.js"
+  ],
+  "src/views/article/sublime-text-install-package.md": [
+    "/assets/sublime-text-install-package.8cabaea1.js"
+  ],
+  "src/views/article/the-story-of-the-book-learning-vue3.md": [
+    "/assets/the-story-of-the-book-learning-vue3.1aeceb13.js"
+  ],
+  "src/views/article/truffle.md": [
+    "/assets/truffle.d76a3f73.js"
+  ],
+  "src/views/article/tsc-compiles-dts.md": [
+    "/assets/tsc-compiles-dts.26267fe7.js"
+  ],
+  "src/views/article/typescript-error-cannot-find-module-undici-types.md": [
+    "/assets/typescript-error-cannot-find-module-undici-types.7596e979.js"
+  ],
+  "src/views/article/vconsole.md": [
+    "/assets/vconsole.061a6b72.js"
+  ],
+  "src/views/article/vite-plugin-banner.md": [
+    "/assets/vite-plugin-banner.c68b3fbf.js"
+  ],
+  "src/views/article/vite-vue3-prerender.md": [
+    "/assets/vite-vue3-prerender.c8e94964.js"
+  ],
+  "src/views/article/vue-ajax-axios.md": [
+    "/assets/vue-ajax-axios.91c7a0f6.js"
+  ],
+  "src/views/article/vue-baidu-analytics.md": [
+    "/assets/vue-baidu-analytics.d55b8825.js"
+  ],
+  "src/views/article/vue-cli-3.md": [
+    "/assets/vue-cli-3.ddf5d261.js"
+  ],
+  "src/views/article/vue-cli-config-alias-error.md": [
+    "/assets/vue-cli-config-alias-error.6d77ab91.js"
+  ],
+  "src/views/article/vue-cli-webpack-banner-plugin.md": [
+    "/assets/vue-cli-webpack-banner-plugin.5f5b5f7d.js"
+  ],
+  "src/views/article/vue-cnzz-analytics.md": [
+    "/assets/vue-cnzz-analytics.6880e5de.js"
+  ],
+  "src/views/article/vue-devserver-proxy.md": [
+    "/assets/vue-devserver-proxy.cc94cfbc.js"
+  ],
+  "src/views/article/vue-params-lost.md": [
+    "/assets/vue-params-lost.da28ecb7.js"
+  ],
+  "src/views/article/vue-photo-preview.md": [
+    "/assets/vue-photo-preview.d1393032.js"
+  ],
+  "src/views/article/vue-picture-cropper.md": [
+    "/assets/vue-picture-cropper.0284d14a.js"
+  ],
+  "src/views/article/vue-skeleton.md": [
+    "/assets/vue-skeleton.8e252369.js"
+  ],
+  "src/views/article/vue-toast.md": [
+    "/assets/vue-toast.e6e962e0.js"
+  ],
+  "src/views/article/vue-vscode-snippets.md": [
+    "/assets/vue-vscode-snippets.fd1f6579.js"
+  ],
+  "src/views/article/vue3-script-setup-finalization.md": [
+    "/assets/vue3-script-setup-finalization.ce6cf351.js"
+  ],
+  "src/views/article/vue3-script-setup.md": [
+    "/assets/vue3-script-setup.b27ab0ba.js"
+  ],
+  "src/views/article/vue3.md": [
+    "/assets/vue3.c582ef0a.js"
+  ],
+  "src/views/article/wechat-bug-input-textarea.md": [
+    "/assets/wechat-bug-input-textarea.054b32c4.js"
+  ],
+  "src/views/article/wordpress-rewrite-nginx-lnmp.md": [
+    "/assets/wordpress-rewrite-nginx-lnmp.6248edbe.js"
+  ],
+  "src/views/article/yidi-guonian.md": [
+    "/assets/yidi-guonian.f0e36f90.js"
+  ],
+  "src/views/article/zhihu-collection-helper.md": [
+    "/assets/zhihu-collection-helper.b6be6504.js"
+  ],
+  "src/components/cookbook/List.vue": [
+    "/assets/_page_.da5079c9.js"
+  ],
+  "src/views/cookbook/[page].vue": [
+    "/assets/_page_.da5079c9.js"
+  ],
+  "src/views/cookbook/baicaisi-haoyou-chaomian.md": [
+    "/assets/baicaisi-haoyou-chaomian.9fdde6a3.js"
+  ],
+  "src/views/cookbook/baitang-zheng-jidan.md": [
+    "/assets/baitang-zheng-jidan.642d5590.js"
+  ],
+  "src/views/cookbook/baizhou-lin-jiangyou.md": [
+    "/assets/baizhou-lin-jiangyou.80060644.js"
+  ],
+  "src/views/cookbook/baocaisi-chao-guotiao.md": [
+    "/assets/baocaisi-chao-guotiao.e8072c6c.js"
+  ],
+  "src/views/cookbook/caifu-chao-guotiao.md": [
+    "/assets/caifu-chao-guotiao.b02f3f29.js"
+  ],
+  "src/views/cookbook/caishen-zhushou.md": [
+    "/assets/caishen-zhushou.ff93801c.js"
+  ],
+  "src/views/cookbook/chaoshan-baicai-xianrou-jiaozi.md": [
+    "/assets/chaoshan-baicai-xianrou-jiaozi.12fff0d6.js"
+  ],
+  "src/views/cookbook/chaoshan-caitou-jiaozi.md": [
+    "/assets/chaoshan-caitou-jiaozi.9f156ea8.js"
+  ],
+  "src/views/cookbook/chaoshan-congzhulao.md": [
+    "/assets/chaoshan-congzhulao.806c120f.js"
+  ],
+  "src/views/cookbook/chaoshan-fanqie-jidan-tang.md": [
+    "/assets/chaoshan-fanqie-jidan-tang.e5a47077.js"
+  ],
+  "src/views/cookbook/chaoshan-guozhi.md": [
+    "/assets/chaoshan-guozhi.19129e19.js"
+  ],
+  "src/views/cookbook/chaoshan-lushui-wuhuarou.md": [
+    "/assets/chaoshan-lushui-wuhuarou.93a57e61.js"
+  ],
+  "src/views/cookbook/chaoshan-lushui-zhuerduo.md": [
+    "/assets/chaoshan-lushui-zhuerduo.efc57235.js"
+  ],
+  "src/views/cookbook/chaoshan-luzhushou.md": [
+    "/assets/chaoshan-luzhushou.9198a7a4.js"
+  ],
+  "src/views/cookbook/chaoshan-shacha-banmian.md": [
+    "/assets/chaoshan-shacha-banmian.edd7f8cc.js"
+  ],
+  "src/views/cookbook/chaoshan-shacha-jielan-chaomian.md": [
+    "/assets/chaoshan-shacha-jielan-chaomian.14a4c21c.js"
+  ],
+  "src/views/cookbook/chaoshan-suancai-chao-niurou.md": [
+    "/assets/chaoshan-suancai-chao-niurou.a7bf2fd4.js"
+  ],
+  "src/views/cookbook/chaoshan-suantoulao.md": [
+    "/assets/chaoshan-suantoulao.3e781bd2.js"
+  ],
+  "src/views/cookbook/chaoshan-tese-qingtangmian.md": [
+    "/assets/chaoshan-tese-qingtangmian.f74de598.js"
+  ],
+  "src/views/cookbook/chaoshan-xiyangcai-roupian-tang.md": [
+    "/assets/chaoshan-xiyangcai-roupian-tang.1d38296c.js"
+  ],
+  "src/views/cookbook/chaoshan-yuwan-mian.md": [
+    "/assets/chaoshan-yuwan-mian.99443bd5.js"
+  ],
+  "src/views/cookbook/chaozhou-chao-doufan.md": [
+    "/assets/chaozhou-chao-doufan.443953ee.js"
+  ],
+  "src/views/cookbook/chaozhou-guotiaojuan.md": [
+    "/assets/chaozhou-guotiaojuan.de7569fa.js"
+  ],
+  "src/views/cookbook/chaozhou-niurouwan-pin-niujinwan-guotiaotang.md": [
+    "/assets/chaozhou-niurouwan-pin-niujinwan-guotiaotang.9e9150a7.js"
+  ],
+  "src/views/cookbook/chaozhou-roudong.md": [
+    "/assets/chaozhou-roudong.86e9f791.js"
+  ],
+  "src/views/cookbook/chaozhou-sunjiao.md": [
+    "/assets/chaozhou-sunjiao.0531408a.js"
+  ],
+  "src/views/cookbook/chaozhou-xiancai-chao-rousi.md": [
+    "/assets/chaozhou-xiancai-chao-rousi.63312efc.js"
+  ],
+  "src/views/cookbook/chaozhou-yuguo-yusigao.md": [
+    "/assets/chaozhou-yuguo-yusigao.64f96044.js"
+  ],
+  "src/views/cookbook/chaozhou-yutou-chaoxiangfan.md": [
+    "/assets/chaozhou-yutou-chaoxiangfan.9d7f8d9d.js"
+  ],
+  "src/views/cookbook/chaozhou-zhafanshu.md": [
+    "/assets/chaozhou-zhafanshu.a6e286e1.js"
+  ],
+  "src/views/cookbook/chashao-tangmifen.md": [
+    "/assets/chashao-tangmifen.ffa63691.js"
+  ],
+  "src/views/cookbook/chashugu-hongzao-wujitang.md": [
+    "/assets/chashugu-hongzao-wujitang.12c84d30.js"
+  ],
+  "src/views/cookbook/chiyou-jiangcong-zhanliao.md": [
+    "/assets/chiyou-jiangcong-zhanliao.f73d6ba1.js"
+  ],
+  "src/views/cookbook/chiyou-zhurou.md": [
+    "/assets/chiyou-zhurou.c93bfc62.js"
+  ],
+  "src/views/cookbook/chunrou-yuntun.md": [
+    "/assets/chunrou-yuntun.a8d57017.js"
+  ],
+  "src/views/cookbook/congzhulao-zhushou-lumian.md": [
+    "/assets/congzhulao-zhushou-lumian.5b345790.js"
+  ],
+  "src/views/cookbook/cuipi-jujitui.md": [
+    "/assets/cuipi-jujitui.14658615.js"
+  ],
+  "src/views/cookbook/cuipi-yanjuji-tuipa.md": [
+    "/assets/cuipi-yanjuji-tuipa.242238f3.js"
+  ],
+  "src/views/cookbook/donggua-paigu-tang.md": [
+    "/assets/donggua-paigu-tang.41e019fd.js"
+  ],
+  "src/views/cookbook/douchilingyu-chao-youmaicai.md": [
+    "/assets/douchilingyu-chao-youmaicai.461ecda6.js"
+  ],
+  "src/views/cookbook/fenou-paigu-tang.md": [
+    "/assets/fenou-paigu-tang.1650317b.js"
+  ],
+  "src/views/cookbook/furu-zheng-paigu.md": [
+    "/assets/furu-zheng-paigu.0281a55b.js"
+  ],
+  "src/views/cookbook/furu-zheng-roupian.md": [
+    "/assets/furu-zheng-roupian.e22e4b3a.js"
+  ],
+  "src/views/cookbook/fuzhu-chao-roupian.md": [
+    "/assets/fuzhu-chao-roupian.5e15a1ab.js"
+  ],
+  "src/views/cookbook/gali-chaofan.md": [
+    "/assets/gali-chaofan.8bb5727d.js"
+  ],
+  "src/views/cookbook/ganbian-jitui-ding.md": [
+    "/assets/ganbian-jitui-ding.5377ab73.js"
+  ],
+  "src/views/cookbook/heijiao-kao-tudouli.md": [
+    "/assets/heijiao-kao-tudouli.d025511e.js"
+  ],
+  "src/views/cookbook/heijiaoroumo-zhuchangfen.md": [
+    "/assets/heijiaoroumo-zhuchangfen.90fa65e3.js"
+  ],
+  "src/views/cookbook/heijiaozhi-tudou-kao-rouli.md": [
+    "/assets/heijiaozhi-tudou-kao-rouli.53d2f37f.js"
+  ],
+  "src/views/cookbook/heiyu-qiugua-tang.md": [
+    "/assets/heiyu-qiugua-tang.ab9fd40d.js"
+  ],
+  "src/views/cookbook/honghuban-cuipi-safen-zhajitui.md": [
+    "/assets/honghuban-cuipi-safen-zhajitui.d3a89cec.js"
+  ],
+  "src/views/cookbook/hongtang-jidan-mian.md": [
+    "/assets/hongtang-jidan-mian.b8f77482.js"
+  ],
+  "src/views/cookbook/hongzao-yimi-wujitang.md": [
+    "/assets/hongzao-yimi-wujitang.dc3af6b7.js"
+  ],
+  "src/views/cookbook/hongzao-yumi-gouqi-paigu-tang.md": [
+    "/assets/hongzao-yumi-gouqi-paigu-tang.d7d8a5ac.js"
+  ],
+  "src/views/cookbook/hongzao-yumi-paigu-tang.md": [
+    "/assets/hongzao-yumi-paigu-tang.6361e4b1.js"
+  ],
+  "src/views/cookbook/huaishan-hongzao-paigu-tang.md": [
+    "/assets/huaishan-hongzao-paigu-tang.275fcaa7.js"
+  ],
+  "src/views/cookbook/huanggua-zhan-baitang.md": [
+    "/assets/huanggua-zhan-baitang.4f90edb0.js"
+  ],
+  "src/views/cookbook/huasheng-lianou-paigu-tang.md": [
+    "/assets/huasheng-lianou-paigu-tang.93189736.js"
+  ],
+  "src/views/cookbook/huasheng-zhushoutang.md": [
+    "/assets/huasheng-zhushoutang.19ba94d1.js"
+  ],
+  "src/views/cookbook/hujiao-chao-suidan.md": [
+    "/assets/hujiao-chao-suidan.ebbf9549.js"
+  ],
+  "src/views/cookbook/jiaofen-roumo-jiandan.md": [
+    "/assets/jiaofen-roumo-jiandan.3355337c.js"
+  ],
+  "src/views/cookbook/jinzhengu-fanqie-feiniu-mian.md": [
+    "/assets/jinzhengu-fanqie-feiniu-mian.65ee9589.js"
+  ],
+  "src/views/cookbook/jinzhengu-feiniu-fanqie-tang.md": [
+    "/assets/jinzhengu-feiniu-fanqie-tang.d87411c9.js"
+  ],
+  "src/views/cookbook/jinzhengu-roupi-men-doufu.md": [
+    "/assets/jinzhengu-roupi-men-doufu.3d3853a1.js"
+  ],
+  "src/views/cookbook/jiucaihua-chao-roujuan.md": [
+    "/assets/jiucaihua-chao-roujuan.b9b879a7.js"
+  ],
+  "src/views/cookbook/jujitui-pei-haoyou-chaomian.md": [
+    "/assets/jujitui-pei-haoyou-chaomian.c93e10de.js"
+  ],
+  "src/views/cookbook/kao-jinzhengu-roujiang-roufu.md": [
+    "/assets/kao-jinzhengu-roujiang-roufu.80773f81.js"
+  ],
+  "src/views/cookbook/kaorou-shengcai-shala.md": [
+    "/assets/kaorou-shengcai-shala.8d71a970.js"
+  ],
+  "src/views/cookbook/kongqizhaguo-jiucai-jianjiao.md": [
+    "/assets/kongqizhaguo-jiucai-jianjiao.a0d606e8.js"
+  ],
+  "src/views/cookbook/lajiang-zhanjiang.md": [
+    "/assets/lajiang-zhanjiang.647c202f.js"
+  ],
+  "src/views/cookbook/liangban-roupi.md": [
+    "/assets/liangban-roupi.78b8b219.js"
+  ],
+  "src/views/cookbook/liangban-shacha-feiniu.md": [
+    "/assets/liangban-shacha-feiniu.5cd431bb.js"
+  ],
+  "src/views/cookbook/mijiang-kao-paigu.md": [
+    "/assets/mijiang-kao-paigu.55167f6c.js"
+  ],
+  "src/views/cookbook/muer-chaorou.md": [
+    "/assets/muer-chaorou.849ee7e8.js"
+  ],
+  "src/views/cookbook/nanru-jiang-jichi.md": [
+    "/assets/nanru-jiang-jichi.9eb74c5e.js"
+  ],
+  "src/views/cookbook/nanru-kaorou-juan-shengcai.md": [
+    "/assets/nanru-kaorou-juan-shengcai.d8945616.js"
+  ],
+  "src/views/cookbook/neizhidoufu-jidangeng.md": [
+    "/assets/neizhidoufu-jidangeng.82ecd639.js"
+  ],
+  "src/views/cookbook/nenjian-jixiongroupian.md": [
+    "/assets/nenjian-jixiongroupian.ef000c87.js"
+  ],
+  "src/views/cookbook/niunai-hebaodan.md": [
+    "/assets/niunai-hebaodan.9e29b75c.js"
+  ],
+  "src/views/cookbook/puning-doujiang-chao-fanshuye.md": [
+    "/assets/puning-doujiang-chao-fanshuye.bd76ef92.js"
+  ],
+  "src/views/cookbook/puningdoujiang-liangban-jisi.md": [
+    "/assets/puningdoujiang-liangban-jisi.a7e98cd4.js"
+  ],
+  "src/views/cookbook/qincai-xianggu-xianrou-yuntun.md": [
+    "/assets/qincai-xianggu-xianrou-yuntun.622ca63a.js"
+  ],
+  "src/views/cookbook/qinggua-haoyou-menroupi.md": [
+    "/assets/qinggua-haoyou-menroupi.04f86d68.js"
+  ],
+  "src/views/cookbook/qingguasi-huotui-chaomian.md": [
+    "/assets/qingguasi-huotui-chaomian.30e102d9.js"
+  ],
+  "src/views/cookbook/qingzheng-sanhuangji.md": [
+    "/assets/qingzheng-sanhuangji.bb56d1df.js"
+  ],
+  "src/views/cookbook/roujiang-shuidoufu.md": [
+    "/assets/roujiang-shuidoufu.978bc153.js"
+  ],
+  "src/views/cookbook/roumo-chao-qiugua.md": [
+    "/assets/roumo-chao-qiugua.a796e4aa.js"
+  ],
+  "src/views/cookbook/roumo-doufu-tang.md": [
+    "/assets/roumo-doufu-tang.e550713a.js"
+  ],
+  "src/views/cookbook/roumo-yusi-jiaozi.md": [
+    "/assets/roumo-yusi-jiaozi.e956f42a.js"
+  ],
+  "src/views/cookbook/roupi-chao-jielan.md": [
+    "/assets/roupi-chao-jielan.e1c201ae.js"
+  ],
+  "src/views/cookbook/roupian-chao-baocaisi.md": [
+    "/assets/roupian-chao-baocaisi.6dae4986.js"
+  ],
+  "src/views/cookbook/roupian-qingchao-tudousi.md": [
+    "/assets/roupian-qingchao-tudousi.49558f4f.js"
+  ],
+  "src/views/cookbook/shacha-chao-jielan.md": [
+    "/assets/shacha-chao-jielan.f7fecfe7.js"
+  ],
+  "src/views/cookbook/shacha-chaorou.md": [
+    "/assets/shacha-chaorou.61cdfde6.js"
+  ],
+  "src/views/cookbook/shacha-dansi-chao-mifen.md": [
+    "/assets/shacha-dansi-chao-mifen.5a3db3db.js"
+  ],
+  "src/views/cookbook/shacha-roupi-men-fensi.md": [
+    "/assets/shacha-roupi-men-fensi.aaba0330.js"
+  ],
+  "src/views/cookbook/shacha-xilanhua.md": [
+    "/assets/shacha-xilanhua.96806c49.js"
+  ],
+  "src/views/cookbook/shachajiang-bian-jiding.md": [
+    "/assets/shachajiang-bian-jiding.61d11b01.js"
+  ],
+  "src/views/cookbook/shacharoupian-kao-tudouli.md": [
+    "/assets/shacharoupian-kao-tudouli.e8cdf4ad.js"
+  ],
+  "src/views/cookbook/shajiang-shousi-jitui.md": [
+    "/assets/shajiang-shousi-jitui.f1f4a74b.js"
+  ],
+  "src/views/cookbook/shengcai-jiandan-mian.md": [
+    "/assets/shengcai-jiandan-mian.150d14e0.js"
+  ],
+  "src/views/cookbook/shuizhudan.md": [
+    "/assets/shuizhudan.1094f16e.js"
+  ],
+  "src/views/cookbook/suanmeijiang-kao-bashayuliu.md": [
+    "/assets/suanmeijiang-kao-bashayuliu.bf4fb14e.js"
+  ],
+  "src/views/cookbook/suanxiang-kao-jituipa.md": [
+    "/assets/suanxiang-kao-jituipa.9da88e79.js"
+  ],
+  "src/views/cookbook/suchengban-lurou-lurougan.md": [
+    "/assets/suchengban-lurou-lurougan.109b283b.js"
+  ],
+  "src/views/cookbook/suzha-heiyupian.md": [
+    "/assets/suzha-heiyupian.10cef4ad.js"
+  ],
+  "src/views/cookbook/tian-qiugualao.md": [
+    "/assets/tian-qiugualao.ca2ea541.js"
+  ],
+  "src/views/cookbook/tianjiaosi-shacha-roupian.md": [
+    "/assets/tianjiaosi-shacha-roupian.9e089784.js"
+  ],
+  "src/views/cookbook/tianla-zhajiliu.md": [
+    "/assets/tianla-zhajiliu.e6bb9935.js"
+  ],
+  "src/views/cookbook/tudou-kao-cuipi-jituipa.md": [
+    "/assets/tudou-kao-cuipi-jituipa.94337c36.js"
+  ],
+  "src/views/cookbook/tudou-kao-cuipi-meitourou.md": [
+    "/assets/tudou-kao-cuipi-meitourou.b8329d9e.js"
+  ],
+  "src/views/cookbook/tudou-men-wuhuarou.md": [
+    "/assets/tudou-men-wuhuarou.d91ebe12.js"
+  ],
+  "src/views/cookbook/tudouli-kao-xinaoerliang-paigu.md": [
+    "/assets/tudouli-kao-xinaoerliang-paigu.87b92cb8.js"
+  ],
+  "src/views/cookbook/tusi-jia-jiandan.md": [
+    "/assets/tusi-jia-jiandan.20bf5942.js"
+  ],
+  "src/views/cookbook/wandouli-chao-roumo.md": [
+    "/assets/wandouli-chao-roumo.f03e4430.js"
+  ],
+  "src/views/cookbook/wawacai-fensi-men-roupi.md": [
+    "/assets/wawacai-fensi-men-roupi.7239b4df.js"
+  ],
+  "src/views/cookbook/wujitangmian.md": [
+    "/assets/wujitangmian.79b0481a.js"
+  ],
+  "src/views/cookbook/xiancai-chao-roujuan.md": [
+    "/assets/xiancai-chao-roujuan.5b0273a8.js"
+  ],
+  "src/views/cookbook/xianggu-tudou-zhurou-jianjiao.md": [
+    "/assets/xianggu-tudou-zhurou-jianjiao.65077a31.js"
+  ],
+  "src/views/cookbook/xianggu-tudou-zhurou-jiaozi.md": [
+    "/assets/xianggu-tudou-zhurou-jiaozi.a4b6070f.js"
+  ],
+  "src/views/cookbook/xianggu-yumili-chao-roupian.md": [
+    "/assets/xianggu-yumili-chao-roupian.a8a35f9f.js"
+  ],
+  "src/views/cookbook/xianggu-zhurou-yumi-jianjiao.md": [
+    "/assets/xianggu-zhurou-yumi-jianjiao.8d418c8a.js"
+  ],
+  "src/views/cookbook/xianggu-zhurou-yumi-zhengjiao.md": [
+    "/assets/xianggu-zhurou-yumi-zhengjiao.805bbf0f.js"
+  ],
+  "src/views/cookbook/xiangkao-jituikuai.md": [
+    "/assets/xiangkao-jituikuai.abd658ab.js"
+  ],
+  "src/views/cookbook/xianmei-roujiang-zhuchangfen.md": [
+    "/assets/xianmei-roujiang-zhuchangfen.db354890.js"
+  ],
+  "src/views/cookbook/xiannengduozhi-zhajitui.md": [
+    "/assets/xiannengduozhi-zhajitui.aed0d400.js"
+  ],
+  "src/views/cookbook/xinaoerliang-kaorou-juanbing.md": [
+    "/assets/xinaoerliang-kaorou-juanbing.c10062e9.js"
+  ],
+  "src/views/cookbook/yangcongsi-chao-feiniu.md": [
+    "/assets/yangcongsi-chao-feiniu.3889cf93.js"
+  ],
+  "src/views/cookbook/yangsheng-babaozhou.md": [
+    "/assets/yangsheng-babaozhou.b1d31aa9.js"
+  ],
+  "src/views/cookbook/yuntun-dabao-cunchu-xiaojiqiao.md": [
+    "/assets/yuntun-dabao-cunchu-xiaojiqiao.29f57f3c.js"
+  ],
+  "src/views/cookbook/yurou-yuntun.md": [
+    "/assets/yurou-yuntun.b54f2864.js"
+  ],
+  "src/views/cookbook/zhacai-roupian-tangmifen.md": [
+    "/assets/zhacai-roupian-tangmifen.22bfba92.js"
+  ],
+  "src/views/cookbook/zhuhou-kaorou-pei-qingguasi-juanbing.md": [
+    "/assets/zhuhou-kaorou-pei-qingguasi-juanbing.f04dce8f.js"
+  ],
+  "src/views/cookbook/zhuhou-roujiang-laomian.md": [
+    "/assets/zhuhou-roujiang-laomian.89f334f3.js"
+  ],
+  "src/views/cookbook/ziran-roupian-ban-qingguasi.md": [
+    "/assets/ziran-roupian-ban-qingguasi.4351e83f.js"
+  ],
+  "src/views/cookbook/ziran-suanxiang-jixiongli.md": [
+    "/assets/ziran-suanxiang-jixiongli.87087435.js"
+  ],
+  "src/views/en/[...all].vue?vue&type=style&index=0&scoped=true&lang.postcss": [
+    "/assets/_...all_.5518400c.js",
+    "/assets/_...all_.47431ebf.css"
+  ],
+  "src/views/en/[...all].vue": [
+    "/assets/_...all_.5518400c.js",
+    "/assets/_...all_.47431ebf.css"
+  ],
+  "src/views/en/about.md": [
+    "/assets/about.c9a949df.js"
+  ],
+  "src/views/en/index.vue?vue&type=style&index=0&scoped=true&lang.postcss": [
+    "/assets/index.c9294567.js",
+    "/assets/index.96f2611b.css"
+  ],
+  "src/views/en/index.vue": [
+    "/assets/index.c9294567.js",
+    "/assets/index.96f2611b.css"
+  ],
+  "src/views/en/article/[page].vue": [
+    "/assets/_page_.368849ad.js"
+  ],
+  "src/views/en/article/git-commit-analytics.md": [
+    "/assets/git-commit-analytics.28108b3e.js"
+  ],
+  "src/views/en/article/vite-plugin-banner.md": [
+    "/assets/vite-plugin-banner.e90818eb.js"
+  ],
+  "src/views/en/article/vue-baidu-analytics.md": [
+    "/assets/vue-baidu-analytics.bf0facbe.js"
+  ],
+  "src/views/en/article/vue-cnzz-analytics.md": [
+    "/assets/vue-cnzz-analytics.61ff0248.js"
+  ]
+}

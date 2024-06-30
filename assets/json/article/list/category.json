@@ -1,0 +1,17 @@
+[
+  {
+    "id": "tech",
+    "name": "技术",
+    "icon": ""
+  },
+  {
+    "id": "design",
+    "name": "设计",
+    "icon": ""
+  },
+  {
+    "id": "prose",
+    "name": "随笔",
+    "icon": ""
+  }
+]
