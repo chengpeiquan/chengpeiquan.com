@@ -1,10 +1,4 @@
 {
-  "cSpell.words": [
-    "avds",
-    "bento",
-    "teochew",
-    "Waka",
-    "withtypes",
-    "xiaohongshu"
-  ]
+  "cSpell.words": ["clsx", "tailwindcss", "taze"],
+  "eslint.useFlatConfig": true
 }
