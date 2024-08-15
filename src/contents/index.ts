@@ -41,6 +41,12 @@ const getFileMap = (folder: ContentFolder) => {
   return fileMap
 }
 
+const getFilePaths = (folder: ContentFolder, locale: Locale) => {
+  if (!contentFolders.includes(folder)) return []
+  if (!locales.includes(locale)) return []
+  return getFileMap(folder).get(locale) || []
+}
+
 /**
  * In fact, the original date in markdown file is CST time,
  * e.g. `2019/09/15 01:35:00`
@@ -65,7 +71,7 @@ const parseDate = (utcDate: string) => {
   return { date, timestamp }
 }
 
-export const getContent = async (
+const getContentByFilePath = async (
   filePath: string,
 ): Promise<ContentItem | null> => {
   try {
@@ -84,6 +90,28 @@ export const getContent = async (
   } catch (e) {
     return null
   }
+}
+
+interface GetContentOptions {
+  folder: ContentFolder
+  slug: string
+  locale: Locale
+}
+
+export const getContent = ({ folder, slug, locale }: GetContentOptions) => {
+  const filePaths = getFilePaths(folder, locale)
+  if (!filePaths.length) return null
+
+  // This is a convention:
+  // The same slug can only correspond to one extension.
+  const possibleFileNames = fileExtensions.map((ext) => slug + ext)
+  const filePath = filePaths.find((path) =>
+    possibleFileNames.some((name) => path.endsWith(name)),
+  )
+
+  if (!filePath) return null
+
+  return getContentByFilePath(filePath)
 }
 
 interface GetContentsOptions {
@@ -115,13 +143,10 @@ export const getContents = async (
   const defaultRes = contentsResponseSchema.parse({})
 
   try {
-    if (!contentFolders.includes(folder)) return defaultRes
-
-    const fileMap = getFileMap(folder)
-    const filePaths = fileMap.get(locale) || []
+    const filePaths = getFilePaths(folder, locale)
     if (!filePaths.length) return defaultRes
 
-    const allContents = await Promise.all(filePaths.map(getContent))
+    const allContents = await Promise.all(filePaths.map(getContentByFilePath))
     const contents = allContents
       .filter(isValidContentItem)
       .filter((i) => !i.metadata.isDraft)
