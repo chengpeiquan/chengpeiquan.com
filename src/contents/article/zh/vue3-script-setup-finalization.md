@@ -3,7 +3,7 @@ title: Vue3.0最新动态：script-setup定稿 部分实验性API将弃用
 desc: 从尤大的Twitter上获取到了最新的开发进展，期待已久的script-setup组件模式终于定稿，不再是实验性功能了，当然对比之前的实验性阶段也有一些新的变化，包括一些API被弃用，同时也有新的API补充进来代替原有的功能。
 keywords: script setup,vue 3.0 script setup,vue3 script setup,script setup prop,script setup emit,defineProps,vue 3.0 defineProps,vue defineProps,vue3 defineProps,prop defineProps,setup defineProps,defineEmits,vue 3.0 defineEmits,vue defineEmits,vue3 defineEmits,emit defineEmits,setup defineEmits,useAttrs,vue 3.0 useAttrs,vue useAttrs,vue3 useAttrs,setup useAttrs,useSlots,vue 3.0 useSlots,vue useSlots,vue3 useSlots,setup useSlots
 date: 2021-07-05 13:15:13
-cover: https://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage//img/2021/07/20210705181949.jpg?x-oss-process=image/interlace,1
+cover: https://cdn.chengpeiquan.com/img/2021/07/20210705181949.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
 repo: https://github.com/chengpeiquan/learning-vue3
@@ -49,7 +49,7 @@ import { useAttrs } from 'vue'
 const attrs = useAttrs()
 
 // attrs是个对象，和 props 一样，需要通过 key 来得到对应的单个 attr
-console.log(attrs.msg);
+console.log(attrs.msg)
 ```
 
 如果当前组件里没有将某个属性指定为 props，那么父组件绑定下来的属性值，都会进入到 attrs 里，通过这个新 API 来拿到。
@@ -82,7 +82,7 @@ console.log(attrs.msg);
 </template>
 
 <script setup lang="ts">
-import ChildTSX from '@cp/context/Child.tsx'
+  import ChildTSX from '@cp/context/Child.tsx'
 </script>
 ```
 
@@ -125,15 +125,15 @@ expose 也是 context 的一个组件成员，原来的用法，是从 useContex
 import { useContext } from 'vue'
 
 // 启用expose组件
-const { expose } = useContext();
+const { expose } = useContext()
 
 // 定义一个想提供给父组件拿到的数据
-const msg: string = 'Hello World!';
+const msg: string = 'Hello World!'
 
 // 显示暴露的数据，才可以在父组件拿到
 expose({
-  msg
-});
+  msg,
+})
 ```
 
 由于 useContext 会在未来版本里移除，所以新增了 defineExpose API 来实现 expose 的功能。
@@ -149,7 +149,7 @@ const msg: string = 'Hello World!'
 
 // 暴露给父组件
 defineExpose({
-  msg
+  msg,
 })
 ```
 
@@ -170,13 +170,13 @@ defineExpose({
 import { defineEmits } from 'vue'
 
 // 获取 emit
-const emit = defineEmits(['say-hi', 'change-name']);
+const emit = defineEmits(['say-hi', 'change-name'])
 
 // 调用 emit 打招呼
-emit('say-hi', 'Hello!');
+emit('say-hi', 'Hello!')
 
 // 调用 emit 改名
-emit('change-name', 'Tom');
+emit('change-name', 'Tom')
 ```
 
 ## 新增 withDefaults API
@@ -234,23 +234,26 @@ defineProps<{
 
 它接收两个入参：
 
-参数|类型|含义
-:--|:--|:--
-props|object|通过 defineProps 传入的 props
-defaultValues|object|根据 props 的 key 传入默认值
+| 参数          | 类型   | 含义                          |
+| :------------ | :----- | :---------------------------- |
+| props         | object | 通过 defineProps 传入的 props |
+| defaultValues | object | 根据 props 的 key 传入默认值  |
 
 可能缺乏一些官方描述，还是看参考用法可能更直观：
 
 ```ts
 import { defineProps, withDefaults } from 'vue'
 
-withDefaults(defineProps<{
-  size?: number
-  labels?: string[]
-}>(), {
-  size: 3,
-  labels: () => ['default label']
-})
+withDefaults(
+  defineProps<{
+    size?: number
+    labels?: string[]
+  }>(),
+  {
+    size: 3,
+    labels: () => ['default label'],
+  },
+)
 ```
 
 ## 顶级 await 的支持
@@ -267,19 +270,19 @@ withDefaults(defineProps<{
 
 ```html
 <script lang="ts">
-import { defineComponent, withAsyncContext } from 'vue'
+  import { defineComponent, withAsyncContext } from 'vue'
 
-export default defineComponent({
-  async setup() {
-    const post = await withAsyncContext(
-      fetch(`/api/post/1`).then((r) => r.json())
-    )
+  export default defineComponent({
+    async setup() {
+      const post = await withAsyncContext(
+        fetch(`/api/post/1`).then((r) => r.json()),
+      )
 
-    return {
-      post
-    }
-  }
-})
+      return {
+        post,
+      }
+    },
+  })
 </script>
 ```
 
