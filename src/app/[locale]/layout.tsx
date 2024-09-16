@@ -15,9 +15,9 @@ import {
 import { isUndefined } from '@bassist/utils'
 import { sideConfig } from '@/config/site-config'
 import { type LocalePageParams } from '@/config/locale-config'
-import { NavigationLinks } from '@/components/client/navigation-links'
-import { LanguageToggle } from '@/components/client/language-toggle'
-import { ThemeToggle } from '@/components/client/theme-toggle'
+import { NavigationLinks } from '@/components/layouts/navigation-links'
+import { LanguageToggle } from '@/components/layouts/language-toggle'
+import { ThemeToggle } from '@/components/layouts/theme-toggle'
 import 'blackwork/ui-globals.css'
 import '@/styles/globals.css'
 
@@ -74,7 +74,7 @@ export default async function LocaleLayout({
 
   return (
     <RootLayout lang={params.locale} className={inter.className}>
-      <NextIntlClientProvider messages={messages}>
+      <NextIntlClientProvider locale={params.locale} messages={messages}>
         <LayoutHeader
           wrapperClassName="gap-12"
           contentClassName="gap-6"
