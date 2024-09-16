@@ -4,7 +4,7 @@ import { type Locale, locales } from '@/config/locale-config'
 
 export default getRequestConfig(async ({ locale }) => {
   if (!locales.includes(locale as Locale)) {
-    return notFound()
+    notFound()
   }
 
   return {

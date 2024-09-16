@@ -1,0 +1,36 @@
+{
+  "globalConfig": {
+    "lang": "en",
+    "error": {
+      "title": "Something went wrong",
+      "retry": "Try again"
+    },
+    "notFound": {
+      "title": "This page could not be found"
+    }
+  },
+  "siteConfig": {
+    "name": "Paul Ching",
+    "title": "Paul Ching - Raised three cats",
+    "description": "A man with full tattoo on arm, raised three cats.",
+    "icp": "Guangdong ICP No. 200111269-1",
+    "emptyTips": "There is currently no content with this page.",
+    "nav": {
+      "home": "Home",
+      "article": "Article",
+      "cookbook": "Cookbook",
+      "about": "About"
+    },
+    "socialLink": {
+      "github": "GitHub",
+      "zhihu": "Zhi Hu",
+      "x": "X",
+      "rss": "RSS"
+    }
+  },
+  "action": {
+    "toggle": "Click to switch to ",
+    "sameTab": "Visit {label} in the same tab",
+    "newTab": "Visit {label} in a new tab"
+  }
+}

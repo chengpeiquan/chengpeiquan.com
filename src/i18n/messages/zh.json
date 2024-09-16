@@ -1,0 +1,36 @@
+{
+  "basicConfig": {
+    "lang": "zh",
+    "error": {
+      "title": "服务开小差了",
+      "retry": "点击重试"
+    },
+    "notFound": {
+      "title": "页面不存在"
+    }
+  },
+  "siteConfig": {
+    "name": "程沛权",
+    "title": "程沛权 - 养了三只猫",
+    "description": "一个养了三只猫的花臂男。",
+    "icp": "粤ICP备20011269号-1",
+    "emptyTips": "_(:з)∠)_ 当前暂无内容…",
+    "nav": {
+      "home": "首页",
+      "article": "文章",
+      "cookbook": "菜谱",
+      "about": "关于"
+    },
+    "socialLink": {
+      "github": "GitHub",
+      "zhihu": "知乎",
+      "x": "X",
+      "rss": "RSS"
+    }
+  },
+  "action": {
+    "toggle": "点击切换到",
+    "sameTab": "在当前标签访问{label}",
+    "newTab": "新标签访问{label}"
+  }
+}
