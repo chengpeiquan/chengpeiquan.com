@@ -22,19 +22,20 @@ export const PublishedBooks: React.FC = () => {
   return (
     <SidebarBlock title={title}>
       <div className="flex flex-col w-full">
-        <div className="relative w-full aspect-[500/740] rounded-lg overflow-hidden">
-          <Link
-            href="/article/the-story-of-the-book-learning-vue3"
-            target="_blank"
-          >
+        <Link
+          href="/article/the-story-of-the-book-learning-vue3"
+          target="_blank"
+        >
+          <div className="relative w-full aspect-[500/740] rounded-lg overflow-hidden">
             <Image
               src="https://cdn.chengpeiquan.com/img/2023/05/20230508232214.jpg?x-oss-process=image/interlace,1"
               alt={title}
               fill
+              sizes="(max-width: 1024px) 256px, (max-width: 1280px) 320px, 384px"
               style={{ objectFit: 'cover' }}
             />
-          </Link>
-        </div>
+          </div>
+        </Link>
 
         <div className="flex items-center justify-center w-full">
           {links.map((i) => {
