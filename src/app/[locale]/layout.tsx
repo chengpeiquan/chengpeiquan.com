@@ -19,7 +19,6 @@ import { NavigationLinks } from '@/components/layouts/navigation-links'
 import { LanguageToggle } from '@/components/layouts/language-toggle'
 import { ThemeToggle } from '@/components/layouts/theme-toggle'
 import 'blackwork/ui-globals.css'
-import '@/styles/globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
