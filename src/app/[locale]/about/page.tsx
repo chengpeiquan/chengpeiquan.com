@@ -1,4 +1,5 @@
 import React from 'react'
+import { notFound } from 'next/navigation'
 import { LayoutMain } from 'blackwork'
 import { type LocalePageParams } from '@/config/locale-config'
 import { getContent } from '@/contents'
@@ -15,7 +16,10 @@ export default async function AboutPage({ params }: AboutPageProps) {
     locale: params.locale,
   })
 
-  if (!res) return null
+  if (!res) {
+    notFound()
+  }
+
   return (
     <LayoutMain>
       <MarkdownRenderer {...res} />
