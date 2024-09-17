@@ -10,6 +10,9 @@ export const contentFolders = ['about', 'article', 'cookbook'] as const
 
 export type ContentFolder = (typeof contentFolders)[number]
 
+// With item's slug
+export type ContentDetailsLink = `/${ContentFolder}/${string}`
+
 // Define the Zod schema for `ContentMetadata`
 const contentMetadataSchema = z.object({
   // Shared
@@ -31,6 +34,7 @@ const contentMetadataSchema = z.object({
 
 // Define the Zod schema for `ContentItem`
 export const contentItemSchema = z.object({
+  slug: z.string(),
   metadata: contentMetadataSchema,
   content: z.string(),
 })
@@ -55,6 +59,14 @@ export interface CategoryConfigItem {
   slug: string
   label: Record<Locale, string>
   icon?: string
+}
+
+export const allCategory: CategoryConfigItem = {
+  slug: '',
+  label: {
+    zh: '全部',
+    en: 'All',
+  },
 }
 
 export const articleCategories: CategoryConfigItem[] = [
@@ -155,3 +167,5 @@ export const cookbookCategories: CategoryConfigItem[] = [
     icon: 'https://cdn.chengpeiquan.com/img/2023/03/20230312234314.jpg?x-oss-process=image/interlace,1',
   },
 ]
+
+export type CategoryGroup = 'articles' | 'cookbooks'

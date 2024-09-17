@@ -71,6 +71,15 @@ const parseDate = (utcDate: string) => {
   return { date, timestamp }
 }
 
+const getSlugByPath = (filePath: string) => {
+  const fragments = filePath.split('/')
+  const lastFragment = fragments.at(-1)
+  if (!lastFragment) return ''
+
+  const extension = fileExtensions.find((ext) => lastFragment.endsWith(ext))
+  return extension ? lastFragment.slice(0, -extension.length) : ''
+}
+
 const getContentByFilePath = async (
   filePath: string,
 ): Promise<ContentItem | null> => {
@@ -80,13 +89,19 @@ const getContentByFilePath = async (
     const { date: utcDate, ...rest } = data
     const { date, timestamp } = parseDate(utcDate)
 
+    const slug = getSlugByPath(filePath)
+
     const metadata = {
       ...rest,
       date,
       timestamp,
     } as unknown as ContentMetadata
 
-    return { content, metadata } satisfies ContentItem
+    return {
+      slug,
+      content,
+      metadata,
+    } satisfies ContentItem
   } catch (e) {
     return null
   }
@@ -116,6 +131,7 @@ export const getContent = ({ folder, slug, locale }: GetContentOptions) => {
 
 interface GetContentsOptions {
   locale: Locale
+  category?: string
   page: number
   pageSize?: number
 }
@@ -130,11 +146,11 @@ interface GetContentsResponse {
 
 export const getContents = async (
   folder: ContentFolder,
-  { locale, page = 1, pageSize = PAGE_SIZE }: GetContentsOptions,
+  { locale, category, page = 1, pageSize = PAGE_SIZE }: GetContentsOptions,
 ) => {
   const contentsResponseSchema = z.object({
     items: z.array(contentItemSchema).default([]),
-    page: z.number().default(page),
+    page: z.number().default(page || 1),
     pageSize: z.number().default(pageSize),
     total: z.number().default(0),
     lastPage: z.number().default(1),
@@ -150,6 +166,9 @@ export const getContents = async (
     const contents = allContents
       .filter(isValidContentItem)
       .filter((i) => !i.metadata.isDraft)
+      .filter((i) =>
+        category ? i.metadata.categories?.includes(category) : true,
+      )
       .sort((a, b) => b.metadata.timestamp - a.metadata.timestamp)
 
     const start = 0 + pageSize * (page - 1)
