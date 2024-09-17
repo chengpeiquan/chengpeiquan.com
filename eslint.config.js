@@ -33,6 +33,28 @@ export default defineFlatConfig([
   ...typescript,
   ...next,
   {
+    rules: {
+      // Consistently import navigation APIs from `@/navigation`
+      'no-restricted-imports': [
+        'error',
+        {
+          name: 'next/link',
+          message: 'Please import from `@/navigation` instead.',
+        },
+        {
+          name: 'next/navigation',
+          importNames: [
+            'redirect',
+            'permanentRedirect',
+            'useRouter',
+            'usePathname',
+          ],
+          message: 'Please import from `@/navigation` instead.',
+        },
+      ],
+    },
+  },
+  {
     ignores: ['dist'],
   },
 ])
