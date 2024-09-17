@@ -1,6 +1,5 @@
 import React from 'react'
 import { type Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, getTranslations } from 'next-intl/server'
 import {
@@ -10,7 +9,7 @@ import {
   ExternalLink,
   LayoutFooter,
   LayoutHeader,
-  RootLayout,
+  ScrollToTop,
 } from 'blackwork'
 import { isUndefined } from '@bassist/utils'
 import { sideConfig } from '@/config/site-config'
@@ -19,8 +18,6 @@ import { NavigationLinks } from '@/components/layouts/navigation-links'
 import { LanguageToggle } from '@/components/layouts/language-toggle'
 import { ThemeToggle } from '@/components/layouts/theme-toggle'
 import 'blackwork/ui-globals.css'
-
-const inter = Inter({ subsets: ['latin'] })
 
 interface LocaleLayoutProps {
   params: LocalePageParams
@@ -71,46 +68,48 @@ export default async function LocaleLayout({
       }
     })
 
+  // About `Failed to execute 'removeChild' on 'Node'`
+  // https://github.com/vercel/next.js/issues/58055#issuecomment-2198556687
   return (
-    <RootLayout lang={params.locale} className={inter.className}>
-      <NextIntlClientProvider locale={params.locale} messages={messages}>
-        <LayoutHeader
-          wrapperClassName="gap-12"
-          contentClassName="gap-6"
-          socialLinks={socialLinks}
-          languageToggle={<LanguageToggle />}
-          themeToggle={<ThemeToggle />}
-          className="shadow-[inset_0_-1px_0_0_#333] backdrop-saturate-150 backdrop-blur"
-        >
-          <div className="flex flex-shrink-0 items-center gap-3">
-            <Avatar className="w-7 h-7">
-              <AvatarImage
-                src={sideConfig.avatar.small}
-                alt={sideConfig.author.name}
-              />
-              <AvatarFallback>CPQ</AvatarFallback>
-            </Avatar>
+    <NextIntlClientProvider locale={params.locale} messages={messages}>
+      <LayoutHeader
+        wrapperClassName="gap-12"
+        contentClassName="gap-6"
+        socialLinks={socialLinks}
+        languageToggle={<LanguageToggle />}
+        themeToggle={<ThemeToggle />}
+        className="shadow-[inset_0_-1px_0_0_#333] backdrop-saturate-150 backdrop-blur"
+      >
+        <div className="flex flex-shrink-0 items-center gap-3">
+          <Avatar className="w-7 h-7">
+            <AvatarImage
+              src={sideConfig.avatar.small}
+              alt={sideConfig.author.name}
+            />
+            <AvatarFallback>CPQ</AvatarFallback>
+          </Avatar>
 
-            <h2 className="text-foreground text-lg">{t('name')}</h2>
-          </div>
+          <h2 className="text-foreground text-lg">{t('name')}</h2>
+        </div>
 
-          <div className="flex flex-1 items-center justify-end h-full box-border pr-1 overflow-hidden">
-            <NavigationLinks />
-          </div>
-        </LayoutHeader>
+        <div className="flex flex-1 items-center justify-end h-full box-border pr-1 overflow-hidden">
+          <NavigationLinks />
+        </div>
+      </LayoutHeader>
 
-        {children}
+      {children}
 
-        <LayoutFooter className="gap-4 sm:gap-12 flex-col sm:flex-row">
-          <span>
-            © 2014-{new Date().getFullYear()} {t('name')}
-          </span>
+      <LayoutFooter className="gap-4 sm:gap-12 flex-col sm:flex-row">
+        <span>
+          © 2014-{new Date().getFullYear()} {t('name')}
+        </span>
 
-          <ExternalLink href="https://beian.miit.gov.cn/">
-            {t('icp')}
-          </ExternalLink>
-        </LayoutFooter>
-      </NextIntlClientProvider>
-    </RootLayout>
+        <ExternalLink href="https://beian.miit.gov.cn/">
+          {t('icp')}
+        </ExternalLink>
+      </LayoutFooter>
+
+      <ScrollToTop />
+    </NextIntlClientProvider>
   )
 }
