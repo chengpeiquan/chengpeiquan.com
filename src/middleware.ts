@@ -1,7 +1,21 @@
 import createMiddleware from 'next-intl/middleware'
+import { type NextRequest, userAgent } from 'next/server'
 import { routing } from '@/i18n/routing'
+import { defaultHeaderValue, headerFields } from '@/config/middleware-config'
 
-export default createMiddleware(routing)
+export default async function middleware(request: NextRequest) {
+  const { device } = userAgent(request)
+
+  const handleI18nRouting = createMiddleware(routing)
+  const response = handleI18nRouting(request)
+
+  response.headers.set(
+    headerFields.device,
+    device.type || defaultHeaderValue.device,
+  )
+
+  return response
+}
 
 export const config = {
   matcher: [
