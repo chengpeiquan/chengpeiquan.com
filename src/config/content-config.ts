@@ -169,3 +169,20 @@ export const cookbookCategories: CategoryConfigItem[] = [
 ]
 
 export type CategoryGroup = 'articles' | 'cookbooks'
+
+// If there are many categories in the list,
+// It will be presented in a collapsed form on the mobile,
+// Here is the title of the collapsed panel
+export const categoryGroupTitleConfig: Record<
+  CategoryGroup,
+  Record<Locale, string>
+> = {
+  articles: {
+    zh: '文章分类',
+    en: 'Article Categories',
+  },
+  cookbooks: {
+    zh: '菜谱分类',
+    en: 'Cookbook Categories',
+  },
+}

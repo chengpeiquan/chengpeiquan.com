@@ -19,6 +19,7 @@ import { CategoryLinks } from '@/components/layouts/category-links'
 import { PublishedBooks } from '@/components/sidebar/published-books'
 import { CatHuffing } from '@/components/sidebar/cat-huffing'
 import { FriendlyLinks } from '@/components/sidebar/friendly-links'
+import { TimeDisplay } from '@/components/shared/time-display'
 import { Link } from '@/navigation'
 
 const ArticleCard: React.FC<{
@@ -27,12 +28,14 @@ const ArticleCard: React.FC<{
 }> = ({ slug, metadata }) => {
   const { title, desc, cover, date } = metadata
   const link = `/article/${slug}` satisfies ContentDetailsLink
-  const createBy = date.split(' ')[0]
 
   return (
     <li className="flex flex-col gap-4 w-full">
       <Link href={link}>
-        <Heading level={3} className="text-lg md:text-2xl line-clamp-2">
+        <Heading
+          level={3}
+          className="text-lg md:text-2xl line-clamp-2 break-all"
+        >
           {title}
         </Heading>
       </Link>
@@ -53,16 +56,11 @@ const ArticleCard: React.FC<{
         )}
 
         <div className="flex flex-col justify-between">
-          <p className="md:h-auto h-0 md:text-base text-sm text-gray-400 md:mb-4 mb-0 md:line-clamp-3 line-clamp-2">
+          <p className="md:h-auto h-0 text-sm md:text-base text-gray-400 md:mb-4 mb-0 md:line-clamp-3 line-clamp-2">
             {desc}
           </p>
 
-          <p
-            className="flex justify-between md:text-sm text-xs text-gray-400"
-            title={createBy}
-          >
-            {createBy}
-          </p>
+          <TimeDisplay value={date} className="md:text-sm" />
         </div>
       </div>
     </li>
