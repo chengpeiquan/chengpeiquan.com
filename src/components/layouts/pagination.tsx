@@ -13,13 +13,13 @@ import {
   Pagination as PaginationRoot,
   generatePages,
 } from 'blackwork'
-import { isMobile } from '@bassist/utils'
 import { Link } from '@/navigation'
 
 interface PaginationProps {
   slug: string
   currentPage: number
   totalPages: number
+  isMobile?: boolean
 }
 
 interface PaginationButtonProps extends PaginationProps {
@@ -83,9 +83,10 @@ export const Pagination: React.FC<PaginationProps> = (props) => {
   const [delta, setDelta] = useState(2)
 
   useEffect(() => {
-    if (isMobile()) {
+    if (props?.isMobile) {
       setDelta(1)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const pages = useMemo(() => {

@@ -13,6 +13,7 @@ import {
   type ContentMetadata,
   articleCategories,
 } from '@/config/content-config'
+import { isMobileDevice } from '@/config/middleware-config'
 import { getContents } from '@/contents'
 import { Pagination } from '@/components/layouts/pagination'
 import { CategoryLinks } from '@/components/layouts/category-links'
@@ -80,6 +81,8 @@ export default async function ArticlesPage({ params }: ArticlesPageProps) {
     notFound()
   }
 
+  const isMobile = isMobileDevice()
+
   const isCategory = params.args.length === 2
   const category = isCategory ? params.args[0] : undefined
   const pageNumber = +(isCategory ? params.args[1] : params.args[0])
@@ -112,7 +115,12 @@ export default async function ArticlesPage({ params }: ArticlesPageProps) {
           ))}
         </ul>
 
-        <Pagination slug="articles" currentPage={page} totalPages={lastPage} />
+        <Pagination
+          slug="articles"
+          currentPage={page}
+          totalPages={lastPage}
+          isMobile={isMobile}
+        />
       </TwoColumnContent>
 
       <TwoColumnSidebar>
