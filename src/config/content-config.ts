@@ -1,3 +1,4 @@
+import React from 'react'
 import { z } from 'zod'
 import { type Locale } from './locale-config'
 
@@ -32,11 +33,44 @@ const contentMetadataSchema = z.object({
   xiaohongshuId: z.string().optional(),
 })
 
+// Mapping to `h2` / `h3` and so on
+export const headingDepths = [2, 3, 4, 5, 6] as const
+
+export type HeadingDepth = (typeof headingDepths)[number]
+
+export interface HeadingItem {
+  depth: HeadingDepth
+  value: string // e.g. `Hello World`
+  id: string // e.g. `hello-world`
+  children?: HeadingItem[]
+}
+
+const headingSchema: z.ZodType<HeadingItem> = z.lazy(() =>
+  z.object({
+    depth: z.union([z.literal(2), z.literal(3), z.literal(4)]),
+    value: z.string(),
+    id: z.string(),
+    children: z.array(z.lazy(() => headingSchema)).optional(),
+  }),
+)
+
+// To avoid using `dangerouslySetInnerHTML` property,
+// and better utilize the capabilities of React components,
+// Markdown will be compiled into JSX and rendered into React components.
+const jsxElementSchema = z.union([
+  z.any().refine((value) => React.isValidElement(value), {
+    message: 'Expected a React element',
+  }),
+  z.null(),
+])
+
 // Define the Zod schema for `ContentItem`
 export const contentItemSchema = z.object({
   slug: z.string(),
   metadata: contentMetadataSchema,
-  content: z.string(),
+  headings: z.array(headingSchema),
+  jsxElement: jsxElementSchema,
+  html: z.string(),
 })
 
 export type ContentMetadata = z.infer<typeof contentMetadataSchema>

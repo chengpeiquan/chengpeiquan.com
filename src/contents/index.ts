@@ -1,6 +1,5 @@
 'use server'
 
-import matter from 'gray-matter'
 import { extname, join } from 'node:path'
 import { fs } from '@bassist/node-utils'
 import { z } from 'zod'
@@ -8,7 +7,6 @@ import { type Locale, locales } from '@/config/locale-config'
 import {
   type ContentFolder,
   type ContentItem,
-  type ContentMetadata,
   PAGE_SIZE,
   contentFolders,
   contentItemSchema,
@@ -16,6 +14,7 @@ import {
   fileExtensions,
   isValidContentItem,
 } from '@/config/content-config'
+import { parse } from './parser'
 
 const contentRootPath = join(process.cwd(), 'src', contentRootFolder)
 
@@ -47,66 +46,6 @@ const getFilePaths = (folder: ContentFolder, locale: Locale) => {
   return getFileMap(folder).get(locale) || []
 }
 
-/**
- * In fact, the original date in markdown file is CST time,
- * e.g. `2019/09/15 01:35:00`
- *
- * Btw: Here, CST refers to China Standard Time UT+8:00
- *
- * But the `matter` method will return a UTC time,
- * e.g. `2019/09/15T01:35:00.000Z`
- *
- * @param utcDate - The `date` from `matter(markdown)`
- */
-const parseDate = (utcDate: string) => {
-  const cstDate = new Date(utcDate)
-  cstDate.setHours(cstDate.getHours() - 8)
-
-  const date = cstDate.toLocaleString('zh-CN', {
-    timeZone: 'Asia/Shanghai',
-  })
-
-  const timestamp = cstDate.getTime()
-
-  return { date, timestamp }
-}
-
-const getSlugByPath = (filePath: string) => {
-  const fragments = filePath.split('/')
-  const lastFragment = fragments.at(-1)
-  if (!lastFragment) return ''
-
-  const extension = fileExtensions.find((ext) => lastFragment.endsWith(ext))
-  return extension ? lastFragment.slice(0, -extension.length) : ''
-}
-
-const getContentByFilePath = async (
-  filePath: string,
-): Promise<ContentItem | null> => {
-  try {
-    const markdown = (await fs.readFile(filePath, 'utf-8')) || ''
-    const { content = '', data = {} } = matter(markdown)
-    const { date: utcDate, ...rest } = data
-    const { date, timestamp } = parseDate(utcDate)
-
-    const slug = getSlugByPath(filePath)
-
-    const metadata = {
-      ...rest,
-      date,
-      timestamp,
-    } as unknown as ContentMetadata
-
-    return {
-      slug,
-      content,
-      metadata,
-    } satisfies ContentItem
-  } catch (e) {
-    return null
-  }
-}
-
 interface GetContentOptions {
   folder: ContentFolder
   slug: string
@@ -126,7 +65,7 @@ export const getContent = ({ folder, slug, locale }: GetContentOptions) => {
 
   if (!filePath) return null
 
-  return getContentByFilePath(filePath)
+  return parse(filePath)
 }
 
 interface GetContentsOptions {
@@ -162,7 +101,7 @@ export const getContents = async (
     const filePaths = getFilePaths(folder, locale)
     if (!filePaths.length) return defaultRes
 
-    const allContents = await Promise.all(filePaths.map(getContentByFilePath))
+    const allContents = await Promise.all(filePaths.map(parse))
     const contents = allContents
       .filter(isValidContentItem)
       .filter((i) => !i.metadata.isDraft)
