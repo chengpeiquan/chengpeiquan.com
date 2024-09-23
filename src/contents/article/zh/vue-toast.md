@@ -9,8 +9,6 @@ categories:
 repo: https://github.com/chengpeiquan/vue-toast
 ---
 
-[[toc]]
-
 最近突然很想简化一些自己写的，项目常用的调用小功能，比如一些弹窗等等，之前都是 Html/JavaScript/Css 分离，每次复用都要分别写到对应的文件里，略显麻烦。
 
 最近看了 Vue 官网有关于插件打包的说明，尝试了一下还可以，目前成功打包了一个 Toast 组件。以后每次项目要用到 Toast 弹窗，只需要引入一个 showToast.vue 即可直接生效调用，而不必在多个文件里维护自己的那部分代码。

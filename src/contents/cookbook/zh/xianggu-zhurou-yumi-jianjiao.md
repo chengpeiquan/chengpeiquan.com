@@ -16,8 +16,6 @@ cite:
   - xianggu-zhurou-yumi-zhengjiao
 ---
 
-[[toc]]
-
 耶耶耶！昨晚的香菇玉米猪肉饺子煎出来太好吃了！！！虽然玉米饺子贵一点，不过这一大碗也就11块钱，自己包饺子划算太多了！
 
 ![成品图：香菇猪肉玉米煎饺](https://cdn.chengpeiquan.com/img/2022/01/20220108014435.jpg?x-oss-process=image/interlace,1)
@@ -33,5 +31,3 @@ cite:
 ![嗷嗷嗷好好吃](https://cdn.chengpeiquan.com/img/2022/01/20220108014434.jpg?x-oss-process=image/interlace,1)
 
 ![煎好了](https://cdn.chengpeiquan.com/img/2022/01/20220108014436.jpg?x-oss-process=image/interlace,1)
-
-

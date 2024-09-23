@@ -13,8 +13,6 @@ price: 3.7
 xiaohongshuId: 618b528a0000000021038407
 ---
 
-[[toc]]
-
 昨晚加班回去的比较晚，买不到什么菜了，看到还有猪肠粉就买了点，换个料汁来做感觉也不错！
 
 ![成品图：黑椒肉末猪肠粉](https://cdn.chengpeiquan.com/img/2022/02/20220203165808.jpg?x-oss-process=image/interlace,1)

@@ -15,8 +15,6 @@ price: 4.5
 xiaohongshuId: 613f59520000000001027482
 ---
 
-[[toc]]
-
 今晚分享一个我很喜欢的番茄鸡蛋汤的做法，甜口，和平时在外面吃的番茄鸡蛋汤不太一样，对比外面常见的咸口的番茄鸡蛋，我更钟爱于酸酸甜甜的口感。
 
 ![成品图：番茄鸡蛋汤](https://cdn.chengpeiquan.com/img/2022/02/20220222132426.jpg?x-oss-process=image/interlace,1)

@@ -14,8 +14,6 @@ cite:
   - chaoshan-fanqie-jidan-tang
 ---
 
-[[toc]]
-
 今晚突然想吃脆皮烧肉，但是家里只有一块还没切的梅头肉，所以弄了个简易版本的，除了包锡纸之外，貌似没有相似之处哈哈哈哈哈哈哈哈哈哈哈哈哈哈。
 
 ![成品图：土豆烤脆皮梅头肉](https://cdn.chengpeiquan.com/img/2022/02/20220213234004.jpg?x-oss-process=image/interlace,1)

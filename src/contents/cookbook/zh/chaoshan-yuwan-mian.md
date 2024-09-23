@@ -12,8 +12,6 @@ price: 25
 xiaohongshuId: 631f2571000000000801cf84
 ---
 
-[[toc]]
-
 昨天打边炉还剩了一些丸子，今晚煮个鱼丸面，潮汕的鱼丸也很好吃！
 
 ![成品图：潮汕鱼丸面](https://cdn.chengpeiquan.com/img/2022/09/20220912203733.jpg?x-oss-process=image/interlace,1)

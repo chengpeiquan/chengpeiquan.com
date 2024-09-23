@@ -14,8 +14,6 @@ price: 0.8
 xiaohongshuId: 61ab5ad000000000010296c8
 ---
 
-[[toc]]
-
 今天好冷啊，今晚煮了个养生八宝粥，好暖和！
 
 ![成品图：养生八宝粥](https://cdn.chengpeiquan.com/img/2022/01/20220114235442.jpg?x-oss-process=image/interlace,1)

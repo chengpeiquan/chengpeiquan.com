@@ -8,8 +8,6 @@ categories:
   - tech
 ---
 
-[[toc]]
-
 一个刚入门的 Truffle DEMO 和学习笔记，能找到的教程都好老，记录一版踩坑笔记，后面遇到类似的问题可以快速处理，啃的 Truffle 的英文文档，国内的翻译文档都太老了，都快速找到的停留在 2019 年之前，实在没法看。
 
 官方文档：[Truffle Document](https://www.trufflesuite.com/docs/truffle/overview)
@@ -24,9 +22,9 @@ Truffle 的模板库有点类似于 GitHub 仓库的 template 功能，你可以
 
 Truffle 是一个开发智能合约的工具，也可以用来做 DAPP ，这两个概念，引用别的地方的说明大概了解一下：
 
->智能合约 —— 可以简单理解为脚本，用来处理各种业务逻辑
+> 智能合约 —— 可以简单理解为脚本，用来处理各种业务逻辑
 
->DAPP —— 包含完整的智能合约 + 用户UI交互界面，载体可以是 Android APP/ iOS APP/ WEB APP ，只要主要逻辑和数据在区块链上就可以
+> DAPP —— 包含完整的智能合约 + 用户UI交互界面，载体可以是 Android APP/ iOS APP/ WEB APP ，只要主要逻辑和数据在区块链上就可以
 
 至于怎么把数据和界面连接起来，后面了解了再补充，先记录一下前期的一些学习体验问题。
 
@@ -45,10 +43,10 @@ yarn global add truffle
 
 不过其实我之前都有装过，看了报错都是 gyp 相关的，更新了 gyp 就可以了。
 
-依赖环境|下载地址
-:-:|:-:
-C++|[Visual Studio](https://visualstudio.microsoft.com/zh-hans/)
-Python|[node-gyp](https://github.com/nodejs/node-gyp)
+| 依赖环境 |                           下载地址                           |
+| :------: | :----------------------------------------------------------: |
+|   C++    | [Visual Studio](https://visualstudio.microsoft.com/zh-hans/) |
+|  Python  |        [node-gyp](https://github.com/nodejs/node-gyp)        |
 
 然后再次全局安装 Truffle 就可以了，如果可以正确查询到版本号，说明安装成功了。
 
@@ -99,13 +97,13 @@ truffle-demo
 
 ## 常用命令
 
-命令|作用
-:-:|:-:
-truffle compile|编译成 JSON 文件
-truffle test|运行 JavaScript 和 Solidity 测试
-truffle develop|调试个人区块链（命令行）
-truffle console|调试个人区块链（GUI）
-truffle publish|将包发布到以太坊包注册表
+|      命令       |               作用               |
+| :-------------: | :------------------------------: |
+| truffle compile |         编译成 JSON 文件         |
+|  truffle test   | 运行 JavaScript 和 Solidity 测试 |
+| truffle develop |     调试个人区块链（命令行）     |
+| truffle console |      调试个人区块链（GUI）       |
+| truffle publish |     将包发布到以太坊包注册表     |
 
 完整命令参见：[Commands](https://www.trufflesuite.com/docs/truffle/reference/truffle-commands)
 
@@ -126,7 +124,7 @@ module.exports = {
     },
   },
   // ...
-};
+}
 ```
 
 然后启动 Ganache ，点击 "Quick Start" ，就可以运行个人区块链了。
@@ -302,7 +300,7 @@ module.exports = {
       version: '^0.8.6',
     },
   },
-};
+}
 ```
 
 ### 导入依赖报错
@@ -320,7 +318,7 @@ import "truffle/DeployedAddresses.sol";
 Source "truffle/Assert.sol" not found: File import callback not supported
 ```
 
-因为出现的问题只存在于 VS Code ，所以可以确认是语法插件的问题，后面在插件仓库的 Issue  [#193](https://github.com/juanfranblanco/vscode-solidity/issues/193) 找到了原因。
+因为出现的问题只存在于 VS Code ，所以可以确认是语法插件的问题，后面在插件仓库的 Issue [#193](https://github.com/juanfranblanco/vscode-solidity/issues/193) 找到了原因。
 
 不过好像当前无法解决，所以目前只能是人肉忽视，强迫症也没办法…
 

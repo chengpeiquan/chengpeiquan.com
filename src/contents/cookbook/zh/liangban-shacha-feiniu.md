@@ -13,8 +13,6 @@ price: 15
 xiaohongshuId: 62d306fd000000002103f7fe
 ---
 
-[[toc]]
-
 今晚还是吃肥牛！不过换了一个做法，做成了凉拌！
 
 ![成品图：凉拌沙茶肥牛](https://cdn.chengpeiquan.com/img/2022/07/20220717214223.jpg?x-oss-process=image/interlace,1)

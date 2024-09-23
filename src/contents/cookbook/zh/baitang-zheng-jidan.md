@@ -15,8 +15,6 @@ price: 0.8
 xiaohongshuId: 630a282a000000001902aa22
 ---
 
-[[toc]]
-
 我在圣诞节那天弱阳，在元旦节那天阳康，但我的鼻音一直迟迟不好，然后我老妈教了我这招，试了几天真的好了！网上搜了一下确实有这个说法，分享一下有同样困扰的人，可以试试。
 
 ![成品图：白糖蒸鸡蛋](https://cdn.chengpeiquan.com/img/2023/01/20230112231541.jpg?x-oss-process=image/interlace,1)

@@ -13,8 +13,6 @@ cite:
   - qingzheng-sanhuangji
 ---
 
-[[toc]]
-
 这个是蘸料的做法，搭配清蒸三黄鸡、白切鸡之类的比较清口的鸡一起做，等鸡好了的时候，将鸡汁或者鸡汤拿来兑制这个蘸料。
 
 ![成品图：豉油姜葱蘸料](https://cdn.chengpeiquan.com/img/2022/05/20220514003259.jpg?x-oss-process=image/interlace,1)

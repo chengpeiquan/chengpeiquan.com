@@ -13,8 +13,6 @@ price: 4.7
 xiaohongshuId: 6185a5c2000000002103744b
 ---
 
-[[toc]]
-
 爽脆可口的青瓜丝，搭配煎过的火腿丝，真好吃！！！
 
 ![成品图：青瓜丝火腿炒面](https://cdn.chengpeiquan.com/img/2022/02/20220203174907.jpg?x-oss-process=image/interlace,1)

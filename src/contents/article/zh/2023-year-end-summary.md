@@ -11,8 +11,6 @@ cite:
   - 2021-year-end-summary
 ---
 
-[[toc]]
-
 ![我家三只超级乖的猫](https://cdn.chengpeiquan.com/img/2023/12/20231230212147.jpg?x-oss-process=image/interlace,1)
 
 在落笔之前想起一个古早笑话……

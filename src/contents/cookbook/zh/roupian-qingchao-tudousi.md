@@ -14,8 +14,6 @@ price: 3
 xiaohongshuId: 6235e97c000000000102c1d8
 ---
 
-[[toc]]
-
 玉米的价格看来下不去了，最近看好土豆哈哈哈，来做个潮汕做法的清炒土豆丝，口感清脆又好吃。
 
 ![成品图：肉片清炒土豆丝](https://cdn.chengpeiquan.com/img/2022/03/20220319224726.jpg?x-oss-process=image/interlace,1)

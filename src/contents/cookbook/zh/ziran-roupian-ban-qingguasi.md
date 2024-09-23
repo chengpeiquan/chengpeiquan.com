@@ -11,8 +11,6 @@ price: 3.8
 xiaohongshuId: 61a065310000000001029d76
 ---
 
-[[toc]]
-
 买了根青瓜好几天没想好怎么吃（原本打算炒面的，但这几天回家都比较晚，不想动…），昨晚试了一下这个做法，还不错，算半个凉菜吧！
 
 ![成品图：孜然肉片拌青瓜丝](https://cdn.chengpeiquan.com/img/2022/02/20220202152025.jpg?x-oss-process=image/interlace,1)

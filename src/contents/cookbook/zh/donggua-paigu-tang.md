@@ -13,8 +13,6 @@ price: 25
 xiaohongshuId: 62efb47100000000150097cb
 ---
 
-[[toc]]
-
 -0- 今天感觉有点上火，可惜附近没有凉茶店（也不是完全没有，配送费 7 块钱实在太贵…），不然一瓶癍痧凉茶就很爽了！所以今晚煲个冬瓜汤来吃吃！
 
 ![成品图：冬瓜排骨汤](https://cdn.chengpeiquan.com/img/2022/08/20220807205556.jpg?x-oss-process=image/interlace,1)

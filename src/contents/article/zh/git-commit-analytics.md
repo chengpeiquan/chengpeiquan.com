@@ -8,8 +8,6 @@ categories:
   - tech
 ---
 
-[[toc]]
-
 一个可以分析你的 Git 仓库 commit 记录的工具。它可以帮你生成一份工作日报 / 周报，或者你需要的更长时间范围的工作报告。
 
 ![git-commit-analytics](https://cdn.chengpeiquan.com/img/2022/01/20220103021254.gif)
@@ -33,47 +31,28 @@ categories:
 ```json
 {
   "lang": "en",
-  "authors": [
-    "chengpeiquan"
-  ],
-  "dateRange": [
-    "2021-12-01",
-    "2022-01-31"
-  ],
-  "repos": [
-    "D:\\Git\\git-commit-analytics"
-  ],
+  "authors": ["chengpeiquan"],
+  "dateRange": ["2021-12-01", "2022-01-31"],
+  "repos": ["D:\\Git\\git-commit-analytics"],
   "format": {
     "git-commit-analytics": "Git Commit Analytics"
   },
-  "includes": [
-    "feat",
-    "fix",
-    "docs",
-    "style",
-    "refactor",
-    "test",
-    "chore"
-  ],
-  "excludes": [
-    "typo",
-    "backup",
-    "progress"
-  ]
+  "includes": ["feat", "fix", "docs", "style", "refactor", "test", "chore"],
+  "excludes": ["typo", "backup", "progress"]
 }
 ```
 
 配置项说明如下：
 
-key|type|description
-:-:|:-:|:--
-lang|string|设置软件的默认语言，支持 `en` （英语）和 `zh` （简体中文）。
-authors|string[]|筛选 commit 的作者名称，支持多个作者名称，用于你在不同的仓库可能有不同的名字。
-dateRange|[string, string]|填写 [开始日期， 结束日期] ， 支持合法的时间格式，会从开始日期的 `00:00:00` 统计到截止日期的 `23:59:59` 。
-repos|string[]|你电脑里的 Git 仓库文件夹，需要提前切换到你要统计的分支。
-format|{ [key: string]: string }|格式化你的文件夹名称为项目名。
-includes|string[]|要纳入统计的 commit message 前缀。
-excludes|string[]|在统计出来的结果里，排除掉包含了这些关键词的 commit message 。
+|    key    |           type            | description                                                                                                |
+| :-------: | :-----------------------: | :--------------------------------------------------------------------------------------------------------- |
+|   lang    |          string           | 设置软件的默认语言，支持 `en` （英语）和 `zh` （简体中文）。                                               |
+|  authors  |         string[]          | 筛选 commit 的作者名称，支持多个作者名称，用于你在不同的仓库可能有不同的名字。                             |
+| dateRange |     [string, string]      | 填写 [开始日期， 结束日期] ， 支持合法的时间格式，会从开始日期的 `00:00:00` 统计到截止日期的 `23:59:59` 。 |
+|   repos   |         string[]          | 你电脑里的 Git 仓库文件夹，需要提前切换到你要统计的分支。                                                  |
+|  format   | { [key: string]: string } | 格式化你的文件夹名称为项目名。                                                                             |
+| includes  |         string[]          | 要纳入统计的 commit message 前缀。                                                                         |
+| excludes  |         string[]          | 在统计出来的结果里，排除掉包含了这些关键词的 commit message 。                                             |
 
 Among them, `authors` / `includes` / `excludes` will be created as regular expressions to match data.
 
@@ -89,14 +68,14 @@ The project name will be classified as the second-level title, and 7 types of co
 
 会以项目名称作为二级标题归类，以 7 个类型的 commit 前缀作为三级标题归类：
 
-type|description
-:-:|:-:
-feat|功能开发
-fix|BUG修复
-docs|完善文档
-style|优化样式
-refactor|代码重构
-test|测试用例
-chore|其他优化
+|   type   | description |
+| :------: | :---------: |
+|   feat   |  功能开发   |
+|   fix    |   BUG修复   |
+|   docs   |  完善文档   |
+|  style   |  优化样式   |
+| refactor |  代码重构   |
+|   test   |  测试用例   |
+|  chore   |  其他优化   |
 
 你可以点击 [Commit message 和 Change log 编写指南](https://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html) 学习如何规范化提交 Git Commit 。

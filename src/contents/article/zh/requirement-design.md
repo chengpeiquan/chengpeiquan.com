@@ -9,9 +9,7 @@ categories:
 isHot: true
 ---
 
-[[toc]]
-
->演讲稿的在线 PPT 版本可以戳 [这里](https://requirement-design.ppt.chengpeiquan.com) 。
+> 演讲稿的在线 PPT 版本可以戳 [这里](https://requirement-design.ppt.chengpeiquan.com) 。
 
 五一啊五一，虽然很想去迷笛音乐节，但经不住太懒，加上最近太忙，实在想休息，所以还是宅家吹空调，三只猫陪着码字写东西也很舒服。也幸亏没出门，广深大暴雨，朋友圈还看着各种大塞车，还是过段日子再用年假来错峰出行吧哈哈哈哈。
 

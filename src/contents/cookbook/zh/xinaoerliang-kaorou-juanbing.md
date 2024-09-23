@@ -13,8 +13,6 @@ price: 20
 xiaohongshuId: 624bfb9c000000000102fdb0
 ---
 
-[[toc]]
-
 今天天气好好，中午又搞了一波烤肉卷饼，这次换成了新奥尔良烤鸡腿肉。
 
 ![成品图：新奥尔良烤肉卷饼](https://cdn.chengpeiquan.com/img/2022/04/20220405215423.jpg?x-oss-process=image/interlace,1)

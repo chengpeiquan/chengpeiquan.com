@@ -15,8 +15,6 @@ cite:
   - chaoshan-suantoulao
 ---
 
-[[toc]]
-
 云吞虽然都是肉，但因为做法实在太多，所以不太挑剔的话，成本其实可以很低！分享一个省钱的做法，平均一个云吞1 毛 8 ，按照 15 个一碗的话， 2 块 7 毛钱解决晚餐。
 
 ![成品图：一碗汤云吞](https://cdn.chengpeiquan.com/img/2022/01/20220110235705.jpg?x-oss-process=image/interlace,1)

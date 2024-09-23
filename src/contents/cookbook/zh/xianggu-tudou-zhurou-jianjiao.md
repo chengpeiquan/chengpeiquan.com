@@ -15,8 +15,6 @@ cite:
   - xianggu-tudou-zhurou-jiaozi
 ---
 
-[[toc]]
-
 哈哈哈哈昨晚的饺子，留了一份21个，中午拿出来煎！好香好吃！
 
 ## 成品图

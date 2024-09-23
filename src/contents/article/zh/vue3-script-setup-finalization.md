@@ -9,8 +9,6 @@ categories:
 repo: https://github.com/chengpeiquan/learning-vue3
 ---
 
-[[toc]]
-
 今天一早收到一条 issue [#107](https://github.com/chengpeiquan/learning-vue3/issues/107) ，有开发者在咨询我 Vue 3.0 script setup 的新 API 怎么用。
 
 最近一段时间挺忙，加上官方的开发动态也不是很多新东西，所以关注的比较少，看了一下 release 记录，发现最新的 2 个小版本对这个新特性改动还算蛮大的，之前的用法都调整了不少。

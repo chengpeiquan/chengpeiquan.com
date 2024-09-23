@@ -8,11 +8,9 @@ categories:
   - prose
 ---
 
-[[toc]]
-
 大家好，我是小红书的美食博主 [@底迪](https://www.xiaohongshu.com/user/profile/5c6cf700000000001003f7f6) ，哈哈哈哈哈哈哈哈哈哈哈哈没错，我是一个喜欢做饭的程序员。
 
->不过这不是重点，我建这个 [只有一个文档的仓库](https://github.com/chengpeiquan/cooking-cookbook) 只是想把它置顶在我的 GitHub 主页，菜谱是托管在我的 [个人博客仓库](https://github.com/chengpeiquan/chengpeiquan.com) 上，因为不想搞太多域名不好管理维护，所以只是作为一个二级目录作为开放访问。 
+> 不过这不是重点，我建这个 [只有一个文档的仓库](https://github.com/chengpeiquan/cooking-cookbook) 只是想把它置顶在我的 GitHub 主页，菜谱是托管在我的 [个人博客仓库](https://github.com/chengpeiquan/chengpeiquan.com) 上，因为不想搞太多域名不好管理维护，所以只是作为一个二级目录作为开放访问。
 
 从 2021 年底陆续开始维护这个菜谱栏目，终于有一些像模像样的作品沉淀了，你可以在这里了解一些关于如何下厨烹饪的菜谱和教程，这是来自一名从小就学做饭的程序员的原创经验。
 

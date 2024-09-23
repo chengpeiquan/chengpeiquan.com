@@ -13,8 +13,6 @@ price: 2.6
 xiaohongshuId: 63b92144000000001f025b8a
 ---
 
-[[toc]]
-
 中午起来有点晚，冰箱里只有生菜和鸡蛋，家里还有米粉，炒个半斋的米粉吃哈哈哈，因为没有肉，所以今天没加辣椒酱，用的沙茶酱炒。
 
 ![成品图：沙茶蛋丝炒米粉](https://cdn.chengpeiquan.com/img/2023/01/20230107154630.jpg?x-oss-process=image/interlace,1)

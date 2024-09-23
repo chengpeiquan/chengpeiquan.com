@@ -8,8 +8,6 @@ categories:
   - tech
 ---
 
-[[toc]]
-
 参与过 discuz 相关业务开发的同学应该都知道，dz 论坛有一套自带的 api 系统叫数据调用（后台-门户-模块管理-数据调用），对于论坛运营同学来说，可以将模块的外部调用作为广告位数据源、或者引用到专题页面去展示论坛内容，很受运营的喜爱。
 
 但这套系统有个问题就是，所有的渲染方式都是通过`document.write`去抓取模板语法生成的 html 数据，而`document.write`我们都知道，在现代化的前端开发里是越来越排斥这个方法，因为会引起性能问题，影响网页的渲染速度，write 的越多，渲染越慢。
@@ -134,13 +132,15 @@ articleList: [
     tid: '123',
     subject: '文章的标题111',
     date: '2018-11-11',
-    cover: 'https://chengpeiquan.com/img/cover1.jpg?x-oss-process=image/interlace,1',
+    cover:
+      'https://chengpeiquan.com/img/cover1.jpg?x-oss-process=image/interlace,1',
   },
   {
     tid: '456',
     subject: '文章的标题222',
     date: '2018-12-12',
-    cover: 'https://chengpeiquan.com/img/cover2.jpg?x-oss-process=image/interlace,1',
+    cover:
+      'https://chengpeiquan.com/img/cover2.jpg?x-oss-process=image/interlace,1',
   },
 ]
 ```
