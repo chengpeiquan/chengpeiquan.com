@@ -13,8 +13,6 @@ price: 6
 xiaohongshuId: 62694f8c0000000021038c55
 ---
 
-[[toc]]
-
 🤣🤣🤣写下标题的时候，我点开了温拿乐队的《Sha La La La》哈哈哈哈…今晚吃个沙拉，自己做也不贵，大概 6 块钱…
 
 ![成品图：烤肉生菜沙拉](https://cdn.chengpeiquan.com/img/2022/04/20220502152136.jpg?x-oss-process=image/interlace,1)

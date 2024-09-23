@@ -10,8 +10,6 @@ isHot: true
 repo: https://github.com/chengpeiquan/refresh-token
 ---
 
-[[toc]]
-
 如今在涉及到用户登录的系统设计里面，基本上都是通过 OAuth 2.0 来设计授权，当你在调用登录接口的时候，可以看到在返回来的数据里面会有 2 个 Token：一个 `accessToken` 和一个 `refreshToken` 。
 
 为什么会有两个 Token，之间有什么区别？这其实是 [OAuth 2.0 的四种方式](http://www.ruanyifeng.com/blog/2019/04/oauth-grant-types.html) 之一的 “凭证式”，一个是平时请求接口时的用户凭证，一个是用来刷新用户凭证的刷新凭证。
@@ -143,7 +141,7 @@ instance.interceptors.request.use(
   },
 
   // 拦截失败
-  (err) => Promise.reject(err)
+  (err) => Promise.reject(err),
 )
 ```
 
@@ -186,7 +184,7 @@ instance.interceptors.response.use(
   },
 
   // 异常响应（统一返回一个msg提示即可）
-  (err) => Promise.reject('网络异常')
+  (err) => Promise.reject('网络异常'),
 )
 
 export default instance

@@ -9,8 +9,6 @@ categories:
 repo: https://github.com/chengpeiquan/vite-plugin-banner
 ---
 
-[[toc]]
-
 我很久前有一篇博客是介绍了一个 WebPack 插件，可以在打包后给 JS / CSS 文件添加一个版权注释，可以表明项目归属，用于声明版权信息或者如果出了什么问题知道可以联系谁。
 
 传送门：[基于 Vue-CLI 3.0 让 WebPack 在打包的时候添加版权注释](https://chengpeiquan.com/article/vue-cli-webpack-banner-plugin.html)
@@ -31,10 +29,10 @@ npm install --save-dev vite-plugin-banner
 
 ## 选项
 
-插件选项类型|作用描述|使用例子
-:--|:--|:--
-string|横幅注释的内容|[基础用法](#基础用法)
-BannerPluginOptions|请参阅下方的类型声明|[可选参数格式](#可选参数格式)
+| 插件选项类型        | 作用描述             | 使用例子                      |
+| :------------------ | :------------------- | :---------------------------- |
+| string              | 横幅注释的内容       | [基础用法](#基础用法)         |
+| BannerPluginOptions | 请参阅下方的类型声明 | [可选参数格式](#可选参数格式) |
 
 · Type Declarations:
 
@@ -80,9 +78,7 @@ import banner from 'vite-plugin-banner'
 // 其他依赖...
 
 export default defineConfig({
-  plugins: [
-    banner('This is the banner content.'),
-  ]
+  plugins: [banner('This is the banner content.')],
 })
 ```
 
@@ -120,8 +116,10 @@ import pkg from './package.json'
 
 export default defineConfig({
   plugins: [
-    banner(`/**\n * name: ${pkg.name}\n * version: v${pkg.version}\n * description: ${pkg.description}\n * author: ${pkg.author}\n * homepage: ${pkg.homepage}\n */`),
-  ]
+    banner(
+      `/**\n * name: ${pkg.name}\n * version: v${pkg.version}\n * description: ${pkg.description}\n * author: ${pkg.author}\n * homepage: ${pkg.homepage}\n */`,
+    ),
+  ],
 })
 ```
 
@@ -163,23 +161,23 @@ export default defineConfig({
     ░██  ░██      ░░██     ██   ░░████   ░██           ░██   ░░██     ██ ░██    ░██
     ░██  ░████████ ░░███████     ░░██    ░████████     ░██    ░░███████  ░░███████ 
     ░░   ░░░░░░░░   ░░░░░░░       ░░     ░░░░░░░░      ░░      ░░░░░░░    ░░░░░░░  
-    `)
-  ]
+    `),
+  ],
 })
 ```
 
-执行 `npm run build` 打包,  还是在 `app.d9a287b8.js` ，现在变成了：
+执行 `npm run build` 打包, 还是在 `app.d9a287b8.js` ，现在变成了：
 
 ```js
-/* 
+/*
     ██   ██         ███████   ██      ██ ████████   ██    ██   ███████   ██     ██
     ░██  ░██        ██░░░░░██ ░██     ░██░██░░░░░   ░░██  ██   ██░░░░░██ ░██    ░██
     ░██  ░██       ██     ░░██░██     ░██░██         ░░████   ██     ░░██░██    ░██
     ░██  ░██      ░██      ░██░░██    ██ ░███████     ░░██   ░██      ░██░██    ░██
     ░██  ░██      ░██      ░██ ░░██  ██  ░██░░░░       ░██   ░██      ░██░██    ░██
     ░██  ░██      ░░██     ██   ░░████   ░██           ░██   ░░██     ██ ░██    ░██
-    ░██  ░████████ ░░███████     ░░██    ░████████     ░██    ░░███████  ░░███████ 
-    ░░   ░░░░░░░░   ░░░░░░░       ░░     ░░░░░░░░      ░░      ░░░░░░░    ░░░░░░░  
+    ░██  ░████████ ░░███████     ░░██    ░████████     ░██    ░░███████  ░░███████
+    ░░   ░░░░░░░░   ░░░░░░░       ░░     ░░░░░░░░      ░░      ░░░░░░░    ░░░░░░░
      */
 var e=Object.assign;import{M as t,d as a,u as r,c......
 ```

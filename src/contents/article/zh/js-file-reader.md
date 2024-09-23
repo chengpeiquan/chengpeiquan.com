@@ -9,8 +9,6 @@ categories:
 repo: https://github.com/chengpeiquan/js-file-reader
 ---
 
-[[toc]]
-
 最近做后台比较多，而且经常要用到文件上传和预览，写的有点烦 - -，所以弄了这个小玩意…
 
 NpmJS 主页：[https://www.npmjs.com/package/js-file-reader](https://www.npmjs.com/package/js-file-reader 'js-file-reader')

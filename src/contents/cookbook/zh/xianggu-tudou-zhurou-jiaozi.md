@@ -10,12 +10,10 @@ categories:
   - teochew
 duration: 60
 price: 0.29
-xiaohongshuId: "623203580000000001028725"
+xiaohongshuId: '623203580000000001028725'
 cite:
   - xianggu-tudou-zhurou-jianjiao
 ---
-
-[[toc]]
 
 居家办公的第三天，今天楼下好安静，往楼下看，很明显的没什么人在外面了，大家都好配合防疫工作！
 

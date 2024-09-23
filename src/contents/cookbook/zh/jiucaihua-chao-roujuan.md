@@ -14,8 +14,6 @@ price: 3.7
 xiaohongshuId: 61bb5a88000000000102ded0
 ---
 
-[[toc]]
-
 今晚难得在菜市场看到有肉卷卖，对于下班回家买菜这个时间点，遇到肉卷真不容易啊。
 
 ![成品图：韭菜花炒肉卷](https://cdn.chengpeiquan.com/img/2022/01/20220114234215.jpg?x-oss-process=image/interlace,1)

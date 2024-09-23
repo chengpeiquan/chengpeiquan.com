@@ -8,8 +8,6 @@ categories:
   - tech
 ---
 
-[[toc]]
-
 用回 macOS 一段时间了，各种软件对 M 系列芯片基本上也都有支持的版本，除了安卓模拟器 - - 。之前在 Windows 上面常用的 MuMu 、雷电、夜神等模拟器，不是没有 Mac 版，就是虽然有 Mac 版，但不支持 M 系列芯片（ ARM 架构），所以抛弃一系列国产模拟器，回归 Android Studio 。
 
 ## 创建模拟器
@@ -74,7 +72,7 @@ Running on Darwin 23.1.0 (arm64)
 
 ![通过 Android Studio 启动模拟器](https://cdn.chengpeiquan.com/img/2024/02/202402102220607.png?x-oss-process=image/interlace,1)
 
-开始修改 Hosts 啦。 
+开始修改 Hosts 啦。
 
 ```bash
 # 通过 ADB 开启 Root 权限

@@ -13,8 +13,6 @@ price: 0.86
 xiaohongshuId: 61a9a76f000000000102d9ed
 ---
 
-[[toc]]
-
 啊哈哈哈周末在猫超捡的漏，加上省钱卡啥的最后这斤土豆是 1.73 元，有 4 个，这一盘用了两个所以 0.86 元。
 
 ## 成品图
@@ -38,4 +36,3 @@ xiaohongshuId: 61a9a76f000000000102d9ed
 口感挺特别的，外层是烤焦焦的口感，里面是土豆的粉糯口感，好吃！还可以留一部分带饭加菜。
 
 ![好吃！！！](https://cdn.chengpeiquan.com/img/2022/01/20220201221856.jpg?x-oss-process=image/interlace,1)
-

@@ -12,8 +12,6 @@ price: 4
 xiaohongshuId: 6251c258000000002103c432
 ---
 
-[[toc]]
-
 我不仅喜欢烤番薯、炸番薯片、糕烧番薯、反沙番薯，对番薯叶也是超爱！今天分享来自我妈的经典做法，哈哈哈哈感觉这 3 个食材搭配特别好吃！
 
 ![成品图：普宁豆酱炒番薯叶](https://cdn.chengpeiquan.com/img/2022/04/20220410015147.jpg?x-oss-process=image/interlace,1)

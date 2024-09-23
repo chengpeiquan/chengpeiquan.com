@@ -9,8 +9,6 @@ categories:
 repo: https://github.com/chengpeiquan/canvas-movie-jitter-effect
 ---
 
-[[toc]]
-
 前几天愚人节的时候，大话手游官网上了一个专题（[专题地址](https://dhxy.163.com/2020/gsq/)），里面很多图片位置都使用了一个类似电影那种画面抖动的效果（目前只剩下一个 slogan 了，其他都下线了），很好奇是怎么实现的，于是扒了一下页面的源码，了解了一些实现思路，整理一下以后可能会用到。
 
 ## 效果

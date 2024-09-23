@@ -9,8 +9,6 @@ categories:
 isDraft: true
 ---
 
-[[toc]]
-
 最近有空，接触一下 Flutter 和 Dart 的开发，虽然说前端入门 Flutter 比较友好，但个人觉得最最最开始其实不怎么友好，当然写了几个小时 Dart 之后感觉确实都是熟悉的身影，但真的刚入门的那一两个小时真的特别困，所以还是要不定期记录一些遇到的问题。
 
 ![](https://cdn.chengpeiquan.com/img/2021/11/20220127163236.jpg?x-oss-process=image/interlace,1)
@@ -41,7 +39,7 @@ Dart 语言上手倒是没有太大的难度，主要了解一下语法结构就
 
 看完了，就开始折腾了，作为一个前端，相对于 Android Studio ，当然是更愿意用 VSCode 啦！
 
->用 VSCode 的好处是自动热重载， 用 Terminal 需要自己手动在命令行敲 `r` 才能刷新，就很 emmm…
+> 用 VSCode 的好处是自动热重载， 用 Terminal 需要自己手动在命令行敲 `r` 才能刷新，就很 emmm…
 
 ### VSCode 支持
 
@@ -152,20 +150,20 @@ Navigator.pushNamed(context, 'list');
 
 都说写前端的人比较容易上手 Dart 和 Flutter ，感觉虽然确实没有那么难入门，不过一开始也会觉得一头雾水，这里放一些标签对比，在实现功能的时候可以快速找到应该用什么部件：
 
-HTML Tag|Flutter Widget
-:-:|:-:
-div|Container
-span|Text
-img|Image
+| HTML Tag | Flutter Widget |
+| :------: | :------------: |
+|   div    |   Container    |
+|   span   |      Text      |
+|   img    |     Image      |
 
 更多的部件可以查看官网的 API 文档：[API Docs - Flutter](https://api.flutter.dev/)
 
 还有两个比较重要的部件类型需要记住：
 
-类型|用途说明
-:-:|:-
-StatelessWidget|无状态变更，UI静态固化的Widget， 页面渲染性能更高。
-StatefulWidget|因状态变更可以导致UI变更的的Widget，涉及到数据渲染场景，都使用StatefulWidget。
+|      类型       | 用途说明                                                                       |
+| :-------------: | :----------------------------------------------------------------------------- |
+| StatelessWidget | 无状态变更，UI静态固化的Widget， 页面渲染性能更高。                            |
+| StatefulWidget  | 因状态变更可以导致UI变更的的Widget，涉及到数据渲染场景，都使用StatefulWidget。 |
 
 ## 运算符
 
@@ -282,16 +280,16 @@ class Avatar extends StatelessWidget {
 
 #### Classes 的优点
 
->允许性能优化（ const 构造函数，更细粒度的重建）<br>
->确保在两个不同布局之间切换正确处理资源（函数可能会重用某些先前的状态）<br>
->确保热重载正常工作（使用函数可能会破坏 showDialogs 之类的热重载）<br>
->已集成到小部件检查器中。<br>
->我们 ClassWidget 在 devtool 显示的小部件树中看到，这有助于理解屏幕上的内容<br>
->我们可以重写 debugFillProperties 以打印传递给小部件的参数是什么<br>
->更好的错误消息<br>
->如果发生异常（如 ProviderNotFound ），框架将为您提供当前构建的小部件的名称。如果您仅在函数 + 中拆分小部件树 Builder ，则您的错误将没有有用的名称<br>
->可以定义 Keys<br>
->可以使用上下文 API
+> 允许性能优化（ const 构造函数，更细粒度的重建）<br>
+> 确保在两个不同布局之间切换正确处理资源（函数可能会重用某些先前的状态）<br>
+> 确保热重载正常工作（使用函数可能会破坏 showDialogs 之类的热重载）<br>
+> 已集成到小部件检查器中。<br>
+> 我们 ClassWidget 在 devtool 显示的小部件树中看到，这有助于理解屏幕上的内容<br>
+> 我们可以重写 debugFillProperties 以打印传递给小部件的参数是什么<br>
+> 更好的错误消息<br>
+> 如果发生异常（如 ProviderNotFound ），框架将为您提供当前构建的小部件的名称。如果您仅在函数 + 中拆分小部件树 Builder ，则您的错误将没有有用的名称<br>
+> 可以定义 Keys<br>
+> 可以使用上下文 API
 
 #### Functions 的优点
 
@@ -346,7 +344,7 @@ class Foo extends StatelessWidget {
 1 positional argument(s) expected, but 0 found.
 ```
 
->我明明不需要传 key 啊！！！为什么？？？
+> 我明明不需要传 key 啊！！！为什么？？？
 
 Dart 和 TypeScript 不一样的地方在于， TS 通过 `?` 直接可以定义参数可选，但是 Dart 的可选参数需要用花括号 `{}` 括起来，在类型后面加上问号 `?` 仅仅只是用来声明为可空，所以这样定义实际上还是表示必须传 `key` 。
 

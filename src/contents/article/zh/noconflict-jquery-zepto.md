@@ -8,8 +8,6 @@ categories:
   - tech
 ---
 
-[[toc]]
-
 今天遇到一个比较特殊的情况是这样子，维护一个年代比较久远的项目，说年代久远也就三年前开发上线的，实际生产线还是用的很稳，只不过中间经历了一次改版，后端倒没啥，同一个部门维护的，前端当时因为排期问题，为了及时上线，所以做桌面端模板和移动端模板是两个不同的部门的开发，于是，现在需要做一些中间层的需求就遇到了这么一个稍微有点坑爹的情况。
 
 ## 需求回顾
@@ -50,7 +48,7 @@ fn(jQuery)
 
 //所以只需要写一次代码，封装到一个函数里，再根据不同平台去判断调用jQuery还是Zepto
 var mobileUA = /iPhone|phone|android|iPod|pad|iPad/i.test(
-  navigator.userAgent.toLowerCase()
+  navigator.userAgent.toLowerCase(),
 )
 if (mobileUA) {
   fn(Zepto)
@@ -97,7 +95,7 @@ function loadDone() {
 
 ```javascript
 var mobileUA = /iPhone|phone|android|iPod|pad|iPad/i.test(
-  navigator.userAgent.toLowerCase()
+  navigator.userAgent.toLowerCase(),
 )
 if (mobileUA) {
   window.addEventListener('load', loadDone)

@@ -8,8 +8,6 @@ categories:
   - tech
 ---
 
-[[toc]]
-
 接触 CI / CD 不是一天两天了，从最开始的在 GitHub Actions 到公司的 Jenkins ，2021 年也用的不少，确实感受到了自动化带来的很多便利，最基础的打包构建环节也已经全部交给了 CI 来处理。
 
 不过很长时间也就停留在打包构建环节，没了… 原因也比较简单，就是公司的前端业务主要还是页面为主，确实用不到太多 CI 环节的东西。
@@ -36,7 +34,7 @@ categories:
 
 前端的包理所当然是要发布到 NPM 了，所以接下来会执行自动发包操作。
 
->TODO: 这里后面补充一下具体打 workflow 配置，暂时需要观察效果稳定性
+> TODO: 这里后面补充一下具体打 workflow 配置，暂时需要观察效果稳定性
 
 ### Program
 
@@ -48,4 +46,4 @@ categories:
 
 ![在 Release 可下载构建好的程序](https://cdn.chengpeiquan.com/img/2022/01/20220104161947.jpg?x-oss-process=image/interlace,1)
 
->TODO: 这里后面补充一下具体打 workflow 配置，暂时需要观察效果稳定性
+> TODO: 这里后面补充一下具体打 workflow 配置，暂时需要观察效果稳定性

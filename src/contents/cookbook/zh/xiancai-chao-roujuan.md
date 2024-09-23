@@ -14,8 +14,6 @@ price: 4.7
 xiaohongshuId: 61c33f36000000000102d2e7
 ---
 
-[[toc]]
-
 哈哈哈哈上次的韭菜花炒肉卷下面评论好几个小姐姐都推荐了咸菜炒肉卷！我也来啦！！！好吃！！！
 
 ![成品图：咸菜炒肉卷](https://cdn.chengpeiquan.com/img/2022/01/20220108010626.jpg?x-oss-process=image/interlace,1)
@@ -39,5 +37,3 @@ xiaohongshuId: 61c33f36000000000102d2e7
 ![搞定！好吃！](https://cdn.chengpeiquan.com/img/2022/01/20220108010627.jpg?x-oss-process=image/interlace,1)
 
 ![肉卷超爱](https://cdn.chengpeiquan.com/img/2022/01/20220108010625.jpg?x-oss-process=image/interlace,1)
-
-

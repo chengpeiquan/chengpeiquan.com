@@ -15,8 +15,6 @@ cite:
   - chaozhou-guotiaojuan
 ---
 
-[[toc]]
-
 今天又煮了粿汁，刚好葱珠朥要做新的了，单独记录一篇菜谱哈哈哈。之前也陆陆续续在菜谱里穿插写了几次，比如粿条卷、粿汁，反正经常用，单独写一篇好。
 
 ![成品图：葱珠朥](https://cdn.chengpeiquan.com/img/2022/02/20220201234430.jpg?x-oss-process=image/interlace,1)

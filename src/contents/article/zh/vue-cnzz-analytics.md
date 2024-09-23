@@ -9,39 +9,37 @@ categories:
 repo: https://github.com/analyticsjs/vue-cnzz-analytics
 ---
 
-[[toc]]
-
 一个只有 3 kB 大小的插件，可以帮你轻松解决 SPA 单页面项目浏览数据不准确的问题，基于 Vue 路由访问轨迹自动向友盟统计平台上报 PV / 事件数据。
 
->本插件自 v2.0.0 开始，最新版插件支持在 Vue 3.0 项目下使用，同时兼容 Vue 2.0 项目的使用，具体使用方法请看下方说明以及在线 demo 。<br>对 Vue 3.0 感兴趣，但还在观望的同学，欢迎阅读我踩坑总结的：[Vue3.0学习教程与实战案例](https://vue3.chengpeiquan.com/) （持续更新ing）
+> 本插件自 v2.0.0 开始，最新版插件支持在 Vue 3.0 项目下使用，同时兼容 Vue 2.0 项目的使用，具体使用方法请看下方说明以及在线 demo 。<br>对 Vue 3.0 感兴趣，但还在观望的同学，欢迎阅读我踩坑总结的：[Vue3.0学习教程与实战案例](https://vue3.chengpeiquan.com/) （持续更新ing）
 
 ## 功能
 
-* 异步载入友盟统计脚本，无需修改入口 HTML
+- 异步载入友盟统计脚本，无需修改入口 HTML
 
-* 支持部署多个站点 ID ，并对应进行数据上报（跨部门合作项目，双方均要收集数据时非常有用）
+- 支持部署多个站点 ID ，并对应进行数据上报（跨部门合作项目，双方均要收集数据时非常有用）
 
-* 支持自动上报路由切换产生的 PV 数据（需引入 [Vue Router](https://router.vuejs.org/)，支持 hash 模式和 history 模式的地址）
+- 支持自动上报路由切换产生的 PV 数据（需引入 [Vue Router](https://router.vuejs.org/)，支持 hash 模式和 history 模式的地址）
 
-* 支持手动提交 PV 上报
+- 支持手动提交 PV 上报
 
-* 支持手动提交事件分析上报
+- 支持手动提交事件分析上报
 
-* 自动识别 Vue 版本，自动适配 Vue 2.0 / Vue 3.0 使用（本插件 v2.0.0 版本新增）
+- 自动识别 Vue 版本，自动适配 Vue 2.0 / Vue 3.0 使用（本插件 v2.0.0 版本新增）
 
-* 提供了 Hooks API（本插件 v2.1.0 版本新增，因此 CDN 安装的用法略有调整，请留意使用说明）
+- 提供了 Hooks API（本插件 v2.1.0 版本新增，因此 CDN 安装的用法略有调整，请留意使用说明）
 
 ## 项目
 
 理论上只要引入了 Vue （必须） 和 Vue Router （自 v2.2.0 起是可选） 的项目均可以正常使用，包括但不限于以下类型：
 
-* Vue-CLI 脚手架项目
+- Vue-CLI 脚手架项目
 
-* Vite 项目
+- Vite 项目
 
-* 引入 Vue 相关 CDN 的 HTML 页面
+- 引入 Vue 相关 CDN 的 HTML 页面
 
-* VuePress 项目
+- VuePress 项目
 
 也不仅限于 SPA 单页面项目，在 SSG / SSR 项目里也可以使用。
 
@@ -49,17 +47,17 @@ repo: https://github.com/analyticsjs/vue-cnzz-analytics
 
 两个在线 demo 均已开启 debug 模式，可开启控制台查看上报情况。
 
-Vue 2.0 版本：[vue-cnzz-analytics demo for Vue 2.x](https://analyticsjs.github.io/vue-cnzz-analytics/demo/vue2.html "vue-cnzz-analytics demo for Vue 2.x")
+Vue 2.0 版本：[vue-cnzz-analytics demo for Vue 2.x](https://analyticsjs.github.io/vue-cnzz-analytics/demo/vue2.html 'vue-cnzz-analytics demo for Vue 2.x')
 
-Vue 3.0 版本：[vue-cnzz-analytics demo for Vue 3.x](https://analyticsjs.github.io/vue-cnzz-analytics/demo/vue3.html "vue-cnzz-analytics demo for Vue 3.x")
+Vue 3.0 版本：[vue-cnzz-analytics demo for Vue 3.x](https://analyticsjs.github.io/vue-cnzz-analytics/demo/vue3.html 'vue-cnzz-analytics demo for Vue 3.x')
 
 ## 选项
 
-选项|是否必填|选项类型|选项说明
-:-:|:-:|:-:|-
-router|否|object|Vue Router（自 v2.2.0 版本开始为可选，无路由的单页则不必传该选项）
-siteIdList|是|number[]|友盟统计的站点 id 列表，只有一个站点需要上报就保留一个 id 即可
-isDebug|否|boolean|是否开启 debug 模式，默认 `false`，开启后会在 F12 控制台打印上报信息
+|    选项    | 是否必填 | 选项类型 | 选项说明                                                             |
+| :--------: | :------: | :------: | -------------------------------------------------------------------- |
+|   router   |    否    |  object  | Vue Router（自 v2.2.0 版本开始为可选，无路由的单页则不必传该选项）   |
+| siteIdList |    是    | number[] | 友盟统计的站点 id 列表，只有一个站点需要上报就保留一个 id 即可       |
+|  isDebug   |    否    | boolean  | 是否开启 debug 模式，默认 `false`，开启后会在 F12 控制台打印上报信息 |
 
 友情提示：上线前记得关闭 debug 模式。
 
@@ -85,7 +83,7 @@ npm install vue-cnzz-analytics --save-dev
 import cnzzAnalytics from 'vue-cnzz-analytics'
 ```
 
-安装插件后，在 main.js  引入以下代码（注意 Vue 2.0 和 Vue 3.0 的用法区别），即可开启自动上报功能，首次访问页面会部署统计代码并提交第一次访问数据上报。
+安装插件后，在 main.js 引入以下代码（注意 Vue 2.0 和 Vue 3.0 的用法区别），即可开启自动上报功能，首次访问页面会部署统计代码并提交第一次访问数据上报。
 
 后续在路由切换过程中，也会根据路由的切换提交相应的 URL 信息到友盟统计。
 
@@ -93,28 +91,25 @@ import cnzzAnalytics from 'vue-cnzz-analytics'
 
 可参考demo：[main.js - Vue 2.0 demo](https://analyticsjs.github.io/vue-cnzz-analytics/demo/js/main-for-vue2.js)
 
->自 v2.1.0 版本开始，如果是通过 CDN 安装，需要使用 `cnzzAnalytics.default` 去激活插件，通过 NPM 安装的脚手架项目则使用 `cnzzAnalytics` 就可以
+> 自 v2.1.0 版本开始，如果是通过 CDN 安装，需要使用 `cnzzAnalytics.default` 去激活插件，通过 NPM 安装的脚手架项目则使用 `cnzzAnalytics` 就可以
 
 ```js
 // 启动插件
 Vue.use(cnzzAnalytics, {
   router: router,
-  siteIdList: [
-    11111,
-    22222
-  ],
-  isDebug: false
-});
+  siteIdList: [11111, 22222],
+  isDebug: false,
+})
 ```
 
 ### 在 Vue 3.0 里使用
 
 可参考demo：[main.js - Vue 3.0 demo](https://analyticsjs.github.io/vue-cnzz-analytics/demo/js/main-for-vue3.js)
 
->自 v2.1.0 版本开始，如果是通过 CDN 安装，需要使用 `cnzzAnalytics.default` 去激活插件，通过 NPM 安装的脚手架项目则使用 `cnzzAnalytics` 就可以
+> 自 v2.1.0 版本开始，如果是通过 CDN 安装，需要使用 `cnzzAnalytics.default` 去激活插件，通过 NPM 安装的脚手架项目则使用 `cnzzAnalytics` 就可以
 
 ```js
-/** 
+/**
  * 初始化Vue
  */
 createApp(app)
@@ -124,15 +119,12 @@ createApp(app)
   // 启动插件
   .use(cnzzAnalytics, {
     router: router,
-    siteIdList: [
-      11111,
-      22222
-    ],
-    isDebug: false
+    siteIdList: [11111, 22222],
+    isDebug: false,
   })
-  
+
   // 挂载到节点上
-  .mount('#app');
+  .mount('#app')
 ```
 
 ### 在 VuePress 里使用
@@ -149,13 +141,10 @@ import cnzzAnalytics from 'vue-cnzz-analytics'
 export default ({ Vue, router }) => {
   Vue.use(cnzzAnalytics, {
     router: router,
-    siteIdList: [
-      11111,
-      22222
-    ],
-    isDebug: false
-  });
-};
+    siteIdList: [11111, 22222],
+    isDebug: false,
+  })
+}
 ```
 
 可在开发环境打开 debug 模式了解相关的上报情况（上线前记得关闭 debug ）。
@@ -176,8 +165,8 @@ export default ({ Vue, router }) => {
 // xxx.vue in Vue 2.0
 export default {
   // ...
-  mounted () {
-    this.$pushCNZZ.pv('/example-url/');
+  mounted() {
+    this.$pushCNZZ.pv('/example-url/')
   },
   // ...
 }
@@ -190,10 +179,10 @@ export default {
 import { getCurrentInstance } from 'vue'
 
 export default {
-  setup () {
-    const app = getCurrentInstance();
-    app.appContext.config.globalProperties.$pushCNZZ.pv('/example-url/');
-  }
+  setup() {
+    const app = getCurrentInstance()
+    app.appContext.config.globalProperties.$pushCNZZ.pv('/example-url/')
+  },
 }
 ```
 
@@ -204,16 +193,16 @@ export default {
 import { getCurrentInstance } from 'vue'
 
 export default {
-  setup () {
-    const { proxy } = getCurrentInstance();
-    proxy.$pushCNZZ.pv('/example-url/');
-  }
+  setup() {
+    const { proxy } = getCurrentInstance()
+    proxy.$pushCNZZ.pv('/example-url/')
+  },
 }
 ```
 
 ### 钩子 API
 
->钩子 API 需要在用到的组件里 import 导入才可以使用。
+> 钩子 API 需要在用到的组件里 import 导入才可以使用。
 
 在 Vue 2.0 里，你可以绑定一个钩子变量去使用：
 
@@ -223,15 +212,15 @@ import { usePush } from 'vue-cnzz-analytics'
 
 export default {
   // ...
-  data () {
+  data() {
     return {
       // 创建钩子变量
-      cnzz: usePush()
+      cnzz: usePush(),
     }
   },
-  mounted () {
+  mounted() {
     // 通过钩子变量去触发方法
-    this.cnzz.pv('/example-url/');
+    this.cnzz.pv('/example-url/')
   },
   // ...
 }
@@ -244,13 +233,13 @@ export default {
 import { usePush } from 'vue-cnzz-analytics'
 
 export default {
-  setup () {
+  setup() {
     // 创建钩子变量
-    const cnzz = usePush();
+    const cnzz = usePush()
 
     // 通过钩子变量去触发方法
-    cnzz.pv('/example-url/');
-  }
+    cnzz.pv('/example-url/')
+  },
 }
 ```
 
@@ -258,17 +247,17 @@ export default {
 
 ```js
 import { usePush as useCnzz } from 'vue-cnzz-analytics'
-const cnzz = useCnzz();
+const cnzz = useCnzz()
 ```
 
 ## 方法
 
 方法需要通过 API 去触发，全局 API 和 钩子 API 支持的方法都是完全一样的。
 
-方法功能|使用说明
-:--|:--
-手动上报页面 PV|[点击查看](#手动上报页面PV)
-手动上报事件分析|[点击查看](#手动上报事件分析)
+| 方法功能         | 使用说明                      |
+| :--------------- | :---------------------------- |
+| 手动上报页面 PV  | [点击查看](#手动上报页面PV)   |
+| 手动上报事件分析 | [点击查看](#手动上报事件分析) |
 
 > 由于目前 Vue 2.0 的使用者还比较多，下面的举例均只用 Vue 2.0 的操作方法进行演示，Vue 3.0 可根据钩子 API 的说明去调用具体的方法。
 
@@ -278,40 +267,40 @@ const cnzz = useCnzz();
 
 如果你有些页面是通过 Tab 切页进行内容渲染切换，但又需要上报访问数据的话，就可以使用这个方法来进行手动上报。
 
-方法名称|功能说明
-:-:|-
-pv|手动执行 PV 数据上报
+| 方法名称 | 功能说明             |
+| :------: | -------------------- |
+|    pv    | 手动执行 PV 数据上报 |
 
 **参数**
 
-参数|是否必填|参数类型|参数说明
-:-:|:-:|:-:|-
-pageUrl|否|string|提交上报的 URL ，必须是以 `/` 开头的相对路径，如果不填，则会默认提交为域名根目录
-fromUrl|否|string|来路页面的url，必须是以 `http` 或 `https` 开头的绝对地址，如果不填，则统计平台会认为访问来源为直接输入地址
+|  参数   | 是否必填 | 参数类型 | 参数说明                                                                                                   |
+| :-----: | :------: | :------: | ---------------------------------------------------------------------------------------------------------- |
+| pageUrl |    否    |  string  | 提交上报的 URL ，必须是以 `/` 开头的相对路径，如果不填，则会默认提交为域名根目录                           |
+| fromUrl |    否    |  string  | 来路页面的url，必须是以 `http` 或 `https` 开头的绝对地址，如果不填，则统计平台会认为访问来源为直接输入地址 |
 
 **使用示范**
 
 ```js
-this.$pushCNZZ.pv('/example-url/', 'https://example.com/example-from-url/');
+this.$pushCNZZ.pv('/example-url/', 'https://example.com/example-from-url/')
 ```
 
 ### 手动上报事件分析
 
 比如你的页面上有个 “换一换” 的功能按钮，想要统计这个按钮的点击情况，就可以通过给按钮绑定上报事件来进行点击情况分析。
 
-方法名称|功能说明
-:-:|-
-event|手动执行事件分析数据上报
+| 方法名称 | 功能说明                 |
+| :------: | ------------------------ |
+|  event   | 手动执行事件分析数据上报 |
 
 **参数**
 
-参数|是否必填|参数类型|参数说明
-:-:|:-:|:-:|-
-category|是|string|产生该事件的位置名称，比如 `首页banner`
-action|是|string|产生该事件的行为描述，比如 `点击`
-label|否|string|产生该事件的标签名称，可以用来记录事件子 id，比如 `bannerId_123`，默认为空
-value|否|number|该事件的分值，默认 0
-nodeId|否|string|产生该事件的元素id，默认为空
+|   参数   | 是否必填 | 参数类型 | 参数说明                                                                   |
+| :------: | :------: | :------: | -------------------------------------------------------------------------- |
+| category |    是    |  string  | 产生该事件的位置名称，比如 `首页banner`                                    |
+|  action  |    是    |  string  | 产生该事件的行为描述，比如 `点击`                                          |
+|  label   |    否    |  string  | 产生该事件的标签名称，可以用来记录事件子 id，比如 `bannerId_123`，默认为空 |
+|  value   |    否    |  number  | 该事件的分值，默认 0                                                       |
+|  nodeId  |    否    |  string  | 产生该事件的元素id，默认为空                                               |
 
 **使用示范**
 
@@ -321,8 +310,8 @@ this.$pushCNZZ.event(
   this.action,
   this.label,
   this.value,
-  this.nodeId
-);
+  this.nodeId,
+)
 ```
 
 ## 更新记录
@@ -332,4 +321,3 @@ this.$pushCNZZ.event(
 ## License
 
 [MIT License](https://github.com/analyticsjs/vue-cnzz-analytics/blob/master/LICENSE) © 2020 [chengpeiquan](https://github.com/chengpeiquan)
-

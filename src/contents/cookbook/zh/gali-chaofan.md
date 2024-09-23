@@ -14,8 +14,6 @@ price: 1.8
 xiaohongshuId: 63de514b000000001d012d21
 ---
 
-[[toc]]
-
 咖喱炒饭也是我很喜欢吃的一个炒法，过程超简单！就是在普通蛋炒饭的基础上，上色步骤将生抽酱油换成咖喱粉就行！
 
 ![](https://cdn.chengpeiquan.com/img/2023/02/20230204205006.jpg?x-oss-process=image/interlace,1)

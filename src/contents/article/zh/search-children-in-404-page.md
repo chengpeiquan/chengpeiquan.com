@@ -9,8 +9,6 @@ categories:
 repo: https://github.com/chengpeiquan/search-children-api-example
 ---
 
-[[toc]]
-
 在 404 页面投放走失儿童信息，这不是什么新鲜事了，到现在起码有近 10 年的历史，本来腾讯公益也有提供一个公共的 JS 文件可以直接调用，但是发现，数据竟然不更新了…… 2021 年都过去了快一半，JS 提供的数据源竟然还停留在一年前甚至更久，甚至我搜了一下里面的一些孩子信息，在腾讯 404 的 “最新” 数据源里，竟然有一个小宝宝已经成为了天使……
 
 相关新闻：[河南走失自闭症女孩确认死亡，被找到时仅剩上衣](https://zhuanlan.zhihu.com/p/146604155)
@@ -63,7 +61,7 @@ const getSearchChildrenData = async () => {
 
   try {
     const RES = await fetch(
-      `${__CONFIG__.domain}/list.aspx?tid=${__CONFIG__.tid}&photo=1&page=${__CONFIG__.page}`
+      `${__CONFIG__.domain}/list.aspx?tid=${__CONFIG__.tid}&photo=1&page=${__CONFIG__.page}`,
     )
     const RES_HTML = await RES.text()
     const DOM = new JSDOM(RES_HTML)

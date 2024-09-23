@@ -8,8 +8,6 @@ categories:
   - tech
 ---
 
-[[toc]]
-
 很久前配合 [《前端工程化：基于 Vue.js 3.0 的设计与实践》](https://vue3.chengpeiquan.com/) 一书在 TypeScript 章节里讲解的内容，提供了一个很干净的 demo （见 [hello-node](https://github.com/learning-vue3/hello-node) ），这里的 “干净” 是指除了必要的基础技术栈外，没有过多的第三方依赖，一直运行良好。
 
 当然在教程里还是主动引导读者自己从零开始创建这个 Hello 项目，这也带来了这个假期遇到的一个读者反馈的问题。

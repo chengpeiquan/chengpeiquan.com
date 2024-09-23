@@ -9,8 +9,6 @@ categories:
 repo: https://github.com/chengpeiquan/vite-vue3-prerender-demo
 ---
 
-[[toc]]
-
 之前 Webpack 项目经常会用到预渲染，现在团队都开始用 Vite 了，所以弄一个基于 Vite 的 Vue 3 预渲染 demo 可以参考。
 
 预渲染和静态生成器比较接近，也可以参考我的 [SSG 博客](https://github.com/chengpeiquan/chengpeiquan.com/blob/main/src/router/index.ts) 用 [vite-ssg](https://www.npmjs.com/package/vite-ssg) 和 [vite-plugin-pages](https://www.npmjs.com/package/vite-plugin-pages) 来处理。
@@ -21,20 +19,20 @@ repo: https://github.com/chengpeiquan/vite-vue3-prerender-demo
 
 项目根目录下 `index.html` 里需要追加至少两条资源注入位置的注释：
 
-注释语句|作用|是否必须
-:-:|:-:|:-:
-`<!--preload-links-->`|预加载资源|是
-`<!--app-html-->`|页面内容|是
-`<!--title-->`|SEO 优化：写入标题|否
-`<!--description-->`|SEO 优化：写入描述|否
-`<!--keywords-->`|SEO 优化：写入关键词|否
+|        注释语句        |         作用         | 是否必须 |
+| :--------------------: | :------------------: | :------: |
+| `<!--preload-links-->` |      预加载资源      |    是    |
+|   `<!--app-html-->`    |       页面内容       |    是    |
+|     `<!--title-->`     |  SEO 优化：写入标题  |    否    |
+|  `<!--description-->`  |  SEO 优化：写入描述  |    否    |
+|   `<!--keywords-->`    | SEO 优化：写入关键词 |    否    |
 
 并把入口文件改成 `entry-client.ts` ，原来的 `main.ts` 会作为客户端和服务端启动时的引用。
 
 完整代码如下（源码：[index.html](https://github.com/chengpeiquan/vite-vue3-prerender-demo/blob/main/index.html) ）：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -58,10 +56,10 @@ repo: https://github.com/chengpeiquan/vite-vue3-prerender-demo
 
 普通项目是使用 `src/main.ts` 作为入口文件，需要改造成两个入口：
 
-注释语句|作用|源码
-:-:|:-:|:-:
-`entry-client.ts`|客户端入口|[查看源码](https://github.com/chengpeiquan/vite-vue3-prerender-demo/blob/main/src/entry-client.ts)
-`entry-server.ts`|服务端入口|[查看源码](https://github.com/chengpeiquan/vite-vue3-prerender-demo/blob/main/src/entry-server.ts)
+|     注释语句      |    作用    |                                                源码                                                |
+| :---------------: | :--------: | :------------------------------------------------------------------------------------------------: |
+| `entry-client.ts` | 客户端入口 | [查看源码](https://github.com/chengpeiquan/vite-vue3-prerender-demo/blob/main/src/entry-client.ts) |
+| `entry-server.ts` | 服务端入口 | [查看源码](https://github.com/chengpeiquan/vite-vue3-prerender-demo/blob/main/src/entry-server.ts) |
 
 而原来的 `main.ts` 只作为入口函数导出，详见源码： [main.ts](https://github.com/chengpeiquan/vite-vue3-prerender-demo/blob/main/src/main.ts)
 
@@ -111,8 +109,8 @@ export default [
 
 ```bash
 Hydration node mismatch:
-- Client vnode: div 
-- Server rendered DOM: <!--app-html-->  
+- Client vnode: div
+- Server rendered DOM: <!--app-html-->
 ```
 
 警告来自于 [hydration.ts](https://github.com/vuejs/core/blob/main/packages/runtime-core/src/hydration.ts) ，一般可以无视……

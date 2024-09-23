@@ -17,8 +17,6 @@ cite:
   - chaoshan-suantoulao
 ---
 
-[[toc]]
-
 今晚临下班下起了雨，穿着背心裤衩还有点凉飕飕的，想想煮点汤好了，暖一暖~
 
 ![成品图：肉末豆腐汤](https://cdn.chengpeiquan.com/img/2022/02/20220215010615.jpg?x-oss-process=image/interlace,1)

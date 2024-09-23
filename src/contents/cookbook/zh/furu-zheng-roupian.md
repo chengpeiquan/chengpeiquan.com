@@ -16,8 +16,6 @@ cite:
   - furu-zheng-paigu
 ---
 
-[[toc]]
-
 这是跟我妈学的一个做法，我以前读书在家的时候就很喜欢吃了，蒸肉蒸排骨都好吃，偏甜口。
 
 ![成品图：腐乳蒸肉片](https://cdn.chengpeiquan.com/img/2022/02/20220214004448.jpg?x-oss-process=image/interlace,1)

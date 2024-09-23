@@ -12,8 +12,6 @@ price: 6.2
 xiaohongshuId: 618a06fb0000000021035aea
 ---
 
-[[toc]]
-
 哈哈哈哈哈哈我昨晚买到了一个咆哮的甜椒，对半切的时候没想到收获了表情包笑死了！
 
 ![表情包哈哈哈哈](https://cdn.chengpeiquan.com/img/2022/02/20220203171251.jpg?x-oss-process=image/interlace,1)

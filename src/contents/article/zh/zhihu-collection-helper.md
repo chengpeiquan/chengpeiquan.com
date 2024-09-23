@@ -9,8 +9,6 @@ categories:
 repo: https://github.com/chengpeiquan/zhihu-collection-helper
 ---
 
-[[toc]]
-
 知乎收藏夹助手，可将专栏的文章添加到收藏夹中（因为专栏的内容通常比较垂直，不会太杂），适用于收藏夹在创建初期需要大量内容填充的情况。
 
 参考收藏夹：[凶杀案·刑侦与法医](https://www.zhihu.com/collection/839257512)

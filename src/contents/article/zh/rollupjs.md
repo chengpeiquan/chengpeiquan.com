@@ -8,8 +8,6 @@ categories:
   - tech
 ---
 
-[[toc]]
-
 虽然 Rollup 的推出时间应该是比 Webpack 早，但之前类库的工作都是公司其他前端部门负责维护，还真的没有去接触过它，直到最近自己要负责开发一个用于新业务线的 JSBridge 和 JSLibrary，才对它有了一定的了解。
 
 起步还是建议先阅读一遍官网的介绍，以便对它有一个基本的了解。
@@ -120,7 +118,7 @@ export default {
       entries: [{ find: '@', replacement: resolveDir('src') }],
     }),
     banner(
-      `name: <%= pkg.name %>\nversion: v<%= pkg.version %>\nauthor: <%= pkg.author %>`
+      `name: <%= pkg.name %>\nversion: v<%= pkg.version %>\nauthor: <%= pkg.author %>`,
     ),
   ],
 }

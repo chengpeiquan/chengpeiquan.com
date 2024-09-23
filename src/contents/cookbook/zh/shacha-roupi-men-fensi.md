@@ -13,8 +13,6 @@ price: 7.68
 xiaohongshuId: 63bed26f000000001f00c6a3
 ---
 
-[[toc]]
-
 这是前几天的晚餐了，今天才有时间来发哈哈哈哈，我好爱沙茶！变着法子玩一下肉皮的新做法，好吃！但是会有点干，建议搭配个汤一起吃，或者准备点 AD 钙奶啥的饮料嘿嘿。
 
 ![成品图：沙茶肉皮焖粉丝](https://cdn.chengpeiquan.com/img/2023/01/20230111232727.jpg?x-oss-process=image/interlace,1)
