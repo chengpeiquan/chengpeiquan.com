@@ -3,9 +3,9 @@ import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import {
   Heading,
+  HolyGrailAside,
+  HolyGrailContent,
   LayoutMain,
-  TwoColumnContent,
-  TwoColumnSidebar,
 } from 'blackwork'
 import { type LocalePageParams } from '@/config/locale-config'
 import {
@@ -97,7 +97,7 @@ export default async function ArticlesPage({ params }: ArticlesPageProps) {
 
   return (
     <LayoutMain className="sm:flex-row justify-between gap-16">
-      <TwoColumnContent>
+      <HolyGrailContent>
         <CategoryLinks
           locale={params.locale}
           group="articles"
@@ -121,13 +121,13 @@ export default async function ArticlesPage({ params }: ArticlesPageProps) {
           totalPages={lastPage}
           isMobile={isMobile}
         />
-      </TwoColumnContent>
+      </HolyGrailContent>
 
-      <TwoColumnSidebar>
+      <HolyGrailAside>
         <PublishedBooks />
         <CatHuffing />
         <FriendlyLinks />
-      </TwoColumnSidebar>
+      </HolyGrailAside>
     </LayoutMain>
   )
 }

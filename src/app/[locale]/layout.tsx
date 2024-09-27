@@ -13,11 +13,13 @@ import {
 } from 'blackwork'
 import { isUndefined } from '@bassist/utils'
 import { sideConfig } from '@/config/site-config'
+import { isMobileDevice } from '@/config/middleware-config'
 import { type LocalePageParams } from '@/config/locale-config'
 import { NavigationLinks } from '@/components/layouts/navigation-links'
 import { LanguageToggle } from '@/components/layouts/language-toggle'
 import { ThemeToggle } from '@/components/layouts/theme-toggle'
 import 'blackwork/ui-globals.css'
+import '@/styles/globals.css'
 
 interface LocaleLayoutProps {
   params: LocalePageParams
@@ -45,6 +47,7 @@ export default async function LocaleLayout({
   children,
 }: Readonly<LocaleLayoutProps>) {
   const messages = await getMessages()
+  const isMobile = isMobileDevice()
 
   const t = await getTranslations({
     locale: params.locale,
@@ -109,7 +112,10 @@ export default async function LocaleLayout({
         </ExternalLink>
       </LayoutFooter>
 
-      <ScrollToTop />
+      <ScrollToTop
+        className={isMobile ? 'right-5 bottom-5' : ''}
+        variant={isMobile ? 'outline' : 'ghost'}
+      />
     </NextIntlClientProvider>
   )
 }
