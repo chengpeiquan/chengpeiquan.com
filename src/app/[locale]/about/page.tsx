@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 import { LayoutMain } from 'blackwork'
 import { type LocalePageParams } from '@/config/locale-config'
 import { getContent } from '@/contents'
-import { MarkdownRenderer } from '@/components/markdown-renderer'
+import { MarkupRenderer } from '@/components/markup/renderer'
 
 interface AboutPageProps {
   params: LocalePageParams
@@ -22,7 +22,11 @@ export default async function AboutPage({ params }: AboutPageProps) {
 
   return (
     <LayoutMain>
-      <MarkdownRenderer {...res} />
+      <MarkupRenderer
+        locale={params.locale}
+        metadata={res.metadata}
+        jsxElement={res.jsxElement}
+      />
     </LayoutMain>
   )
 }

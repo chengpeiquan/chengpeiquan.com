@@ -1,9 +1,9 @@
 import React from 'react'
 import { notFound } from 'next/navigation'
-import { LayoutMain, TwoColumnContent, TwoColumnSidebar } from 'blackwork'
+import { HolyGrailAside, HolyGrailContent, LayoutMain } from 'blackwork'
 import { type LocalePageParams } from '@/config/locale-config'
 import { getContent } from '@/contents'
-import { MarkdownRenderer } from '@/components/markdown-renderer'
+import { MarkupRenderer } from '@/components/markup/renderer'
 import { FriendlyLinks } from '@/components/sidebar/friendly-links'
 import {
   CookbookOnline,
@@ -31,15 +31,19 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
   return (
     <LayoutMain className="sm:flex-row justify-between gap-16">
-      <TwoColumnContent>
-        <MarkdownRenderer {...res} />
-      </TwoColumnContent>
+      <HolyGrailContent>
+        <MarkupRenderer
+          locale={params.locale}
+          metadata={res.metadata}
+          jsxElement={res.jsxElement}
+        />
+      </HolyGrailContent>
 
-      <TwoColumnSidebar>
+      <HolyGrailAside>
         <CookbookQrCode />
         <CookbookOnline />
         <FriendlyLinks />
-      </TwoColumnSidebar>
+      </HolyGrailAside>
     </LayoutMain>
   )
 }
