@@ -14,12 +14,12 @@ import {
   generatePages,
 } from 'blackwork'
 import { Link } from '@/navigation'
+import { type PropsWithDevice } from '@/types'
 
-interface PaginationProps {
+interface PaginationProps extends PropsWithDevice {
   slug: string
   currentPage: number
   totalPages: number
-  isMobile?: boolean
 }
 
 interface PaginationButtonProps extends PaginationProps {

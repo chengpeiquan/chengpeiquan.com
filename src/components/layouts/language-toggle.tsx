@@ -9,14 +9,14 @@ import {
 } from 'blackwork'
 import { type Locale, localeLabelMapping } from '@/config/locale-config'
 import { usePathname, useRouter } from '@/navigation'
-import { useLocales } from '@/hooks/data-hooks'
+import { useClientLocale } from '@/hooks'
 
 export const LanguageToggle: React.FC = () => {
   const router = useRouter()
   const pathname = usePathname()
   const params = useParams()
   const t = useTranslations('action')
-  const { locale, isEnglish } = useLocales()
+  const { locale, isEnglish } = useClientLocale()
 
   const onClick = useCallback(
     (value: string) => {

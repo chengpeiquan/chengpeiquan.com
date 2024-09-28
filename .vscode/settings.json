@@ -1,4 +1,22 @@
 {
-  "cSpell.words": ["clsx", "tailwindcss", "taze"],
+  "cSpell.words": [
+    "bento",
+    "blackwork",
+    "clsx",
+    "jsxs",
+    "mdast",
+    "Peiquan",
+    "Rehype",
+    "Shiki",
+    "shikijs",
+    "stefanprobst",
+    "tailwindcss",
+    "taze",
+    "Teochew",
+    "unoptimized",
+    "vfile",
+    "xiaohongshu",
+    "zhihu"
+  ],
   "eslint.useFlatConfig": true
 }
