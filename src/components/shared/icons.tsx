@@ -2,37 +2,6 @@ import React from 'react'
 
 export type IconProps = React.SVGProps<SVGSVGElement>
 
-export const BookShelfIcon: React.FC<IconProps> = (props) => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="1em"
-      height="1em"
-      viewBox="0 0 14 14"
-      {...props}
-    >
-      <g
-        fill="none"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <rect width="3.5" height="13" x=".55" y=".5" rx=".5"></rect>
-        <rect width="3.5" height="11" x="4.05" y="2.5" rx=".5"></rect>
-        <rect
-          width="3"
-          height="11"
-          x="9.26"
-          y="2.3"
-          rx=".5"
-          transform="rotate(-14.05 10.779 7.795)"
-        ></rect>
-        <path d="M.55 10h3.5m0-1h3.5m2.5 2l2.88-.72"></path>
-      </g>
-    </svg>
-  )
-}
-
 export const TocIcon: React.FC<IconProps> = (props) => {
   return (
     <svg
@@ -87,6 +56,97 @@ export const MenuIcon: React.FC<IconProps> = (props) => {
         fill="currentColor"
         d="M9 19v-2h12v2zm0-6v-2h12v2zm0-6V5h12v2zM5 20q-.825 0-1.412-.587T3 18t.588-1.412T5 16t1.413.588T7 18t-.587 1.413T5 20m0-6q-.825 0-1.412-.587T3 12t.588-1.412T5 10t1.413.588T7 12t-.587 1.413T5 14m0-6q-.825 0-1.412-.587T3 6t.588-1.412T5 4t1.413.588T7 6t-.587 1.413T5 8"
       ></path>
+    </svg>
+  )
+}
+
+export const HomeIcon: React.FC<IconProps> = (props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <g
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+      >
+        <path d="M21 19v-6.733a4 4 0 0 0-1.245-2.9L13.378 3.31a2 2 0 0 0-2.755 0L4.245 9.367A4 4 0 0 0 3 12.267V19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2"></path>
+        <path d="M9 15a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v6H9z"></path>
+      </g>
+    </svg>
+  )
+}
+
+export const ArticleIcon: React.FC<IconProps> = (props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 14 14"
+      {...props}
+    >
+      <g
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <rect width="3.5" height="13" x=".55" y=".5" rx=".5"></rect>
+        <rect width="3.5" height="11" x="4.05" y="2.5" rx=".5"></rect>
+        <rect
+          width="3"
+          height="11"
+          x="9.26"
+          y="2.3"
+          rx=".5"
+          transform="rotate(-14.05 10.779 7.795)"
+        ></rect>
+        <path d="M.55 10h3.5m0-1h3.5m2.5 2l2.88-.72"></path>
+      </g>
+    </svg>
+  )
+}
+
+export const FoodIcon: React.FC<IconProps> = (props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 14 14"
+      {...props}
+    >
+      <path
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M7 12a6.51 6.51 0 0 0 6.48-6a.5.5 0 0 0-.48-.5H1a.5.5 0 0 0-.48.5A6.51 6.51 0 0 0 7 12Zm-2.95-.71L3.5 13.5m6.45-2.21l.55 2.21M3.5 3V2m7 1V2M7 3V.5"
+      ></path>
+    </svg>
+  )
+}
+
+export const AboutIcon: React.FC<IconProps> = (props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 16 16"
+      {...props}
+    >
+      <g fill="currentColor">
+        <path d="M4 16s-1 0-1-1s1-4 5-4s5 3 5 4s-1 1-1 1zm4-5.95a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5"></path>
+        <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.4 5.4 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2z"></path>
+      </g>
     </svg>
   )
 }
