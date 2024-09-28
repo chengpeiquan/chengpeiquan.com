@@ -11,13 +11,13 @@ import {
   LayoutHeader,
   ScrollToTop,
 } from 'blackwork'
-import { isUndefined } from '@bassist/utils'
-import { sideConfig } from '@/config/site-config'
+import { getLocaleSocialLinks, sideConfig } from '@/config/site-config'
 import { isMobileDevice } from '@/config/middleware-config'
 import { type LocalePageParams } from '@/config/locale-config'
 import { NavigationLinks } from '@/components/layouts/navigation-links'
 import { LanguageToggle } from '@/components/layouts/language-toggle'
 import { ThemeToggle } from '@/components/layouts/theme-toggle'
+import { NavigationDrawer } from '@/components/layouts/navigation-drawer'
 import 'blackwork/ui-globals.css'
 import '@/styles/globals.css'
 
@@ -59,17 +59,15 @@ export default async function LocaleLayout({
     namespace: 'action',
   })
 
-  const socialLinks = sideConfig.socialLinks
-    .filter((i) => isUndefined(i.locale) || i.locale === params.locale)
-    .map((i) => {
-      const label = t(`socialLink.${i.type}`)
-      const ariaLabel = ta('newTab', { label })
-      return {
-        ...i,
-        label,
-        ariaLabel,
-      }
-    })
+  const socialLinks = getLocaleSocialLinks(params.locale).map((i) => {
+    const label = t(`socialLink.${i.type}`)
+    const ariaLabel = ta('newTab', { label })
+    return {
+      ...i,
+      label,
+      ariaLabel,
+    }
+  })
 
   // About `Failed to execute 'removeChild' on 'Node'`
   // https://github.com/vercel/next.js/issues/58055#issuecomment-2198556687
@@ -78,12 +76,15 @@ export default async function LocaleLayout({
       <LayoutHeader
         wrapperClassName="gap-12"
         contentClassName="gap-6"
+        socialLinksVisible={!isMobile}
         socialLinks={socialLinks}
         languageToggle={<LanguageToggle />}
         themeToggle={<ThemeToggle />}
         className="shadow-[inset_0_-1px_0_0_#333] backdrop-saturate-150 backdrop-blur"
       >
         <div className="flex flex-shrink-0 items-center gap-3">
+          <NavigationDrawer isMobile={isMobile} />
+
           <Avatar className="w-7 h-7">
             <AvatarImage
               src={sideConfig.avatar.small}
@@ -95,9 +96,11 @@ export default async function LocaleLayout({
           <h2 className="text-foreground text-lg">{t('name')}</h2>
         </div>
 
-        <div className="flex flex-1 items-center justify-end h-full box-border pr-1 overflow-hidden">
-          <NavigationLinks />
-        </div>
+        {!isMobile && (
+          <div className="flex flex-1 items-center justify-end h-full box-border pr-1 overflow-hidden">
+            <NavigationLinks />
+          </div>
+        )}
       </LayoutHeader>
 
       {children}

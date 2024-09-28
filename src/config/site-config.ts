@@ -1,6 +1,14 @@
 import { type Metadata } from 'next'
 import { type SocialLinkProps } from 'blackwork'
 import { type Locale } from './locale-config'
+import { isUndefined } from '@bassist/utils'
+import {
+  AboutIcon,
+  ArticleIcon,
+  FoodIcon,
+  HomeIcon,
+  type IconProps,
+} from '@/components/shared/icons'
 
 const cdnRoot = 'https://cdn.chengpeiquan.com'
 
@@ -28,6 +36,15 @@ const author: Readonly<Metadata['authors']> = {
 
 const navSlugs = ['home', 'article', 'cookbook', 'about'] as const
 
+export type NavSlug = (typeof sideConfig.navSlugs)[number]
+
+export const navIconMap: Record<NavSlug, React.FC<IconProps>> = {
+  home: HomeIcon,
+  article: ArticleIcon,
+  cookbook: FoodIcon,
+  about: AboutIcon,
+}
+
 interface ExtraSocialLinkProps extends SocialLinkProps {
   locale?: Locale
 }
@@ -45,3 +62,9 @@ export const sideConfig = {
   navSlugs,
   socialLinks,
 } as const
+
+export const getLocaleSocialLinks = (locale: Locale) => {
+  return sideConfig.socialLinks.filter(
+    (i) => isUndefined(i.locale) || i.locale === locale,
+  )
+}

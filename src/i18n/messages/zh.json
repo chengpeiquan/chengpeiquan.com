@@ -2,11 +2,21 @@
   "basicConfig": {
     "lang": "zh",
     "error": {
-      "title": "服务开小差了",
-      "retry": "点击重试"
+      "title": "服务开小差了"
     },
     "notFound": {
       "title": "页面不存在"
+    },
+    "navigation": {
+      "title": "导航",
+      "close": "关闭"
+    },
+    "outline": {
+      "title": "文章目录"
+    },
+    "starOnGitHub": {
+      "label": "Star on GitHub",
+      "title": "给仓库一个 Star"
     }
   },
   "siteConfig": {

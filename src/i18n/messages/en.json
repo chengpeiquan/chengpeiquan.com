@@ -1,12 +1,22 @@
 {
-  "globalConfig": {
+  "basicConfig": {
     "lang": "en",
     "error": {
-      "title": "Something went wrong",
-      "retry": "Try again"
+      "title": "Something went wrong"
     },
     "notFound": {
       "title": "This page could not be found"
+    },
+    "navigation": {
+      "title": "Navigation",
+      "close": "Close"
+    },
+    "outline": {
+      "title": "On this page"
+    },
+    "starOnGitHub": {
+      "label": "Star on GitHub",
+      "title": "Star this repository"
     }
   },
   "siteConfig": {
