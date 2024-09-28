@@ -161,15 +161,24 @@ const parseSlug = (filePath: string) => {
   return extension ? lastFragment.slice(0, -extension.length) : ''
 }
 
-export const parse = async (filePath: string): Promise<ContentItem | null> => {
+interface ParseOptions {
+  /**
+   * When only using the introductory data for a list,
+   * ignore the parsing of the detailed information.
+   */
+  ignoreDetails?: boolean
+}
+
+export const parse = async (
+  filePath: string,
+  { ignoreDetails = false }: ParseOptions = {},
+): Promise<ContentItem | null> => {
   try {
     const raw = (await fs.readFile(filePath, 'utf-8')) || ''
     const { content: markdown = '', data = {} } = matter(raw)
 
     const { date: utcDate, ...rest } = data
     const { date, timestamp } = parseDate(utcDate)
-
-    const { headings, jsxElement, html } = await parseMarkdown(markdown)
     const slug = parseSlug(filePath)
 
     const metadata = {
@@ -177,6 +186,18 @@ export const parse = async (filePath: string): Promise<ContentItem | null> => {
       date,
       timestamp,
     } as unknown as ContentMetadata
+
+    if (ignoreDetails) {
+      return {
+        slug,
+        headings: [],
+        jsxElement: null,
+        html: '',
+        metadata,
+      } satisfies ContentItem
+    }
+
+    const { headings, jsxElement, html } = await parseMarkdown(markdown)
 
     return {
       slug,
