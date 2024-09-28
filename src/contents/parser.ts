@@ -136,6 +136,10 @@ const parseMarkdown = async (markdown: string): Promise<ParseMarkdownRes> => {
  * @param utcDate - The `date` from `matter(markdown)`
  */
 const parseDate = (utcDate: string) => {
+  if (!utcDate) {
+    return { date: '', timestamp: 0 }
+  }
+
   const cstDate = new Date(utcDate)
   cstDate.setHours(cstDate.getHours() - 8)
 
