@@ -11,7 +11,7 @@ import {
   Heading,
 } from 'blackwork'
 import { cn } from '@/utils'
-import { useLocales } from '@/hooks/data-hooks'
+import { useClientLocale } from '@/hooks'
 
 interface CollapsibleProps extends React.PropsWithChildren {
   title: string
@@ -23,7 +23,7 @@ export const Collapsible: React.FC<CollapsibleProps> = ({
   className,
   children,
 }) => {
-  const { isChinese } = useLocales()
+  const { isChinese } = useClientLocale()
 
   const [isOpen, setIsOpen] = useState(false)
 

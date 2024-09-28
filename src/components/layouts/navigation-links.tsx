@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl'
 import { cn } from 'blackwork'
 import { sideConfig } from '@/config/site-config'
 import { Link, usePathname } from '@/navigation'
+import { type PropsWithDevice } from '@/types'
 
 const NavigationLink: React.FC<{
   slug: (typeof sideConfig.navSlugs)[number]
@@ -68,9 +69,18 @@ const NavigationLink: React.FC<{
   )
 }
 
-export const NavigationLinks: React.FC = () => {
+export const NavigationLinks: React.FC<PropsWithDevice> = ({ isMobile }) => {
+  const cls = cn(
+    // 'hidden flex-col gap-6 text-lg font-medium md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6',
+    'flex-row gap-6 text-lg font-medium md:items-center md:gap-5 md:text-sm lg:gap-6',
+    {
+      'hidden md:flex': !isMobile,
+      flex: isMobile,
+    },
+  )
+
   return (
-    <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
+    <nav className={cls}>
       {sideConfig.navSlugs.map((i) => (
         <NavigationLink key={i} slug={i} />
       ))}

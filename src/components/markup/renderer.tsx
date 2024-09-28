@@ -7,6 +7,7 @@ import { type LocalePageParams } from '@/config/locale-config'
 import { isMobileDevice } from '@/config/middleware-config'
 import { Link } from '@/navigation'
 import { MiniGithubIcon } from '../shared/icons'
+import { type PropsWithDevice } from '@/types'
 
 interface StarOnGitHubProps extends LocalePageParams {
   repo: ContentMetadata['repo']
@@ -37,8 +38,7 @@ const StarOnGitHub = async ({ locale, repo }: StarOnGitHubProps) => {
   )
 }
 
-interface AuthorDataProps extends StarOnGitHubProps {
-  isMobile?: boolean
+interface AuthorDataProps extends StarOnGitHubProps, PropsWithDevice {
   author: string
   date: ContentMetadata['date']
 }
@@ -57,9 +57,11 @@ const AuthorData = async ({
       <Paragraph className="text-sm text-gray-400 dark:text-gray-500 m-0">
         <span aria-label={author}>{author}</span>
 
-        <span className="ml-6" aria-label={date}>
-          {date}
-        </span>
+        {!!date && (
+          <span className="ml-6" aria-label={date}>
+            {date}
+          </span>
+        )}
       </Paragraph>
 
       {starVisible && <StarOnGitHub locale={locale} repo={repo} />}

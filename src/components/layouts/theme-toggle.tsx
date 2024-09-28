@@ -9,11 +9,11 @@ import {
   useTheme,
 } from 'blackwork'
 import { themeLabelMapping } from '@/config/locale-config'
-import { useLocales } from '@/hooks/data-hooks'
+import { useClientLocale } from '@/hooks'
 
 export const ThemeToggle: React.FC = () => {
   const t = useTranslations('action')
-  const { isEnglish } = useLocales()
+  const { isEnglish } = useClientLocale()
   const { isDark } = useTheme()
 
   const options = useMemo(() => {

@@ -34,6 +34,8 @@ export default defineFlatConfig([
   ...next,
   {
     rules: {
+      'require-await': 'off',
+
       // Consistently import navigation APIs from `@/navigation`
       'no-restricted-imports': [
         'error',
