@@ -101,7 +101,8 @@ export const getContents = async (
     const filePaths = getFilePaths(folder, locale)
     if (!filePaths.length) return defaultRes
 
-    const allContents = await Promise.all(filePaths.map(parse))
+    const getIntro = (i: string) => parse(i, { ignoreDetails: true })
+    const allContents = await Promise.all(filePaths.map(getIntro))
     const contents = allContents
       .filter(isValidContentItem)
       .filter((i) => !i.metadata.isDraft)
