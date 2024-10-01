@@ -3,32 +3,47 @@
 import React from 'react'
 import Image from 'next/image'
 import sizeOf from 'image-size'
-import { URL } from 'node:url'
 import { Buffer } from 'node:buffer'
+
+const MAX_WIDTH = 1024
 
 const getImageSize = async (imgUrl: string) => {
   try {
-    const options = new URL(imgUrl)
-    const res = await fetch(options)
+    const res = await fetch(imgUrl)
     const arrayBuffer = await res.arrayBuffer()
     const buffer = Buffer.from(arrayBuffer)
     return sizeOf(buffer)
   } catch (e) {}
 }
 
+// Max width 1024px
+const getConstrainedSize = async (imgUrl: string) => {
+  const size = await getImageSize(imgUrl)
+  if (!size) return { width: 0, height: 0 }
+
+  const realWidth = size.width ?? 0
+  const realHeight = size.height ?? 0
+  if (realWidth <= MAX_WIDTH || !realHeight) {
+    return { width: realWidth, height: realHeight }
+  }
+
+  const aspectRatio = realWidth / realHeight
+  const width = MAX_WIDTH
+  const height = width / aspectRatio
+  return { width, height }
+}
+
 export const img = async ({
   src = '',
   alt = '',
 }: React.ImgHTMLAttributes<HTMLImageElement>) => {
-  const size = await getImageSize(src)
-  const width = size?.width || 0
-  const height = size?.height || 0
+  const { width, height } = await getConstrainedSize(src)
 
   if (!src) return null
   return (
-    <figure className="relative inline-block w-full text-center">
+    <figure className="relative inline-block w-full max-w-screen-lg text-center mx-auto">
       <Image
-        className="mx-auto"
+        className="mx-auto rounded-lg"
         src={src}
         alt={alt}
         fill={false}
