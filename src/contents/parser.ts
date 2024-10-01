@@ -23,13 +23,14 @@ import {
   type HeadingItem,
   fileExtensions,
 } from '@/config/content-config'
-import { img } from './components'
+import { a, img } from './components'
 import { Fragment, jsx as _jsx, jsxs as _jsxs } from 'react/jsx-runtime'
 import type React from 'react'
 
 const isValidHeading = (v: unknown): v is HeadingItem => isObject(v) && !!v.id
 
 const components = {
+  a,
   img,
 } as unknown as RehypeReactOptions['components']
 
