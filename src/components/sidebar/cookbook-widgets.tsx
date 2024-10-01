@@ -29,7 +29,7 @@ export const CookbookOnline: React.FC = () => {
       <Link
         href="https://www.xiaohongshu.com/user/profile/5c6cf700000000001003f7f6"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="nofollow noopener noreferrer"
       >
         <div className="relative w-full aspect-[500/797] rounded-lg overflow-hidden">
           <Image

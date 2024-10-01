@@ -45,7 +45,7 @@ export const FriendlyLinks: React.FC = () => {
                 key={i.href}
                 href={i.href}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="nofollow noopener noreferrer"
                 className="text-sm"
               >
                 {i.title}

@@ -4,6 +4,7 @@ import React from 'react'
 import Image from 'next/image'
 import sizeOf from 'image-size'
 import { Buffer } from 'node:buffer'
+import { Link } from '@/navigation'
 
 const MAX_WIDTH = 1024
 
@@ -60,5 +61,21 @@ export const img = async ({
         </figcaption>
       )}
     </figure>
+  )
+}
+
+export const a = async ({
+  href,
+  children,
+}: React.AnchorHTMLAttributes<HTMLAnchorElement>) => {
+  const isExternal = href?.startsWith('http')
+  const target = isExternal ? '_blank' : undefined
+  const rel = isExternal ? 'nofollow noopener noreferrer' : undefined
+
+  if (!href) return children
+  return (
+    <Link href={href} target={target} rel={rel}>
+      {children}
+    </Link>
   )
 }
