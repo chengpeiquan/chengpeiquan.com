@@ -1,12 +1,6 @@
 {
   "basicConfig": {
     "lang": "zh",
-    "error": {
-      "title": "服务开小差了"
-    },
-    "notFound": {
-      "title": "页面不存在"
-    },
     "navigation": {
       "title": "导航",
       "close": "关闭"
@@ -42,5 +36,16 @@
     "toggle": "点击切换到",
     "sameTab": "在当前标签访问{label}",
     "newTab": "新标签访问{label}"
+  },
+  "errorConfig": {
+    "error": {
+      "title": "服务开小差了"
+    },
+    "notFound": {
+      "title": "页面不存在",
+      "description": "这是 2017 年我给黑妹洗澡时拍下的照片，那是她的猫生中第一次洗澡，又好奇又惊慌的表情，像极了此刻来到 404 页面的你。",
+      "feedback": "如果你以前收藏的链接被移除了，请提 <issue></issue> 联系我。",
+      "button": "返回首页"
+    }
   }
 }

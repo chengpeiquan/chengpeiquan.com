@@ -56,11 +56,15 @@ const socialLinks: ExtraSocialLinkProps[] = [
   { type: 'rss', link: 'https://chengpeiquan.com/feed.xml' },
 ]
 
+const feedbackLink =
+  'https://github.com/chengpeiquan/chengpeiquan.com/issues/new'
+
 export const sideConfig = {
   author,
   avatar,
   navSlugs,
   socialLinks,
+  feedbackLink,
 } as const
 
 export const getLocaleSocialLinks = (locale: Locale) => {
