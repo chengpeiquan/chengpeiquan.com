@@ -1,12 +1,6 @@
 {
   "basicConfig": {
     "lang": "en",
-    "error": {
-      "title": "Something went wrong"
-    },
-    "notFound": {
-      "title": "This page could not be found"
-    },
     "navigation": {
       "title": "Navigation",
       "close": "Close"
@@ -42,5 +36,16 @@
     "toggle": "Click to switch to ",
     "sameTab": "Visit {label} in the same tab",
     "newTab": "Visit {label} in a new tab"
+  },
+  "errorConfig": {
+    "error": {
+      "title": "Something went wrong"
+    },
+    "notFound": {
+      "title": "Page not found",
+      "description": "This is a picture I took when I was giving Luna a bath in 2017. It was the first time she had a bath in her cat life. Her curious and frightened expression was just like you who have come to the 404 page now.",
+      "feedback": "If your previously favorite link has been removed，Please create an <issue></issue> so I can fix it.",
+      "button": "Go back Home"
+    }
   }
 }

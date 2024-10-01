@@ -15,7 +15,7 @@ export default function ServerError({ error }: ErrorProps) {
     console.log(error)
   }, [error])
 
-  const t = useTranslations('basicConfig')
+  const t = useTranslations('errorConfig')
 
   return (
     <html lang={t('lang')}>
