@@ -10,18 +10,12 @@ interface ErrorProps {
 }
 
 export default function ServerError({ error }: ErrorProps) {
+  const t = useTranslations('errorConfig.error')
+
   useEffect(() => {
     // eslint-disable-next-line no-console
     console.log(error)
   }, [error])
 
-  const t = useTranslations('errorConfig')
-
-  return (
-    <html lang={t('lang')}>
-      <body>
-        <NextError statusCode={500} title={t('error.title')} />
-      </body>
-    </html>
-  )
+  return <NextError statusCode={500} title={t('title')} />
 }
