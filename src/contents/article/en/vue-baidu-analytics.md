@@ -7,6 +7,7 @@ cover: https://cdn.chengpeiquan.com/img/2019/12/1.jpg?x-oss-process=image/interl
 categories:
   - tech
 repo: https://github.com/analyticsjs/vue-baidu-analytics
+maybeLegacy: true
 ---
 
 Only 3 kB, this plugin base on the Baidu analytics, it can help you quickly to collect the page views on your website, including single page web application.

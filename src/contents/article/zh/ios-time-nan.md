@@ -6,6 +6,7 @@ date: 2019-09-15 02:04:00
 cover: https://cdn.chengpeiquan.com/img/2019/09/1-2.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
+maybeLegacy: true
 ---
 
 其实是个存在很久的问题啦，之前在 IE 的年代应该也是有遇到过的，只不过后来日常涉及到时间的需求都是用时间戳比较多，加上现在各种屏蔽 IE 访问（我们公司的项目都是引导使用 chrome/firefox），所以给忘记了！

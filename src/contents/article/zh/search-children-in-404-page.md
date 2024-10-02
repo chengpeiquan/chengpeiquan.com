@@ -7,6 +7,7 @@ cover: https://cdn.chengpeiquan.com/img/2021/04/20210411154503.jpg?x-oss-process
 categories:
   - tech
 repo: https://github.com/chengpeiquan/search-children-api-example
+maybeLegacy: true
 ---
 
 在 404 页面投放走失儿童信息，这不是什么新鲜事了，到现在起码有近 10 年的历史，本来腾讯公益也有提供一个公共的 JS 文件可以直接调用，但是发现，数据竟然不更新了…… 2021 年都过去了快一半，JS 提供的数据源竟然还停留在一年前甚至更久，甚至我搜了一下里面的一些孩子信息，在腾讯 404 的 “最新” 数据源里，竟然有一个小宝宝已经成为了天使……

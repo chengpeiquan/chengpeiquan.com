@@ -6,6 +6,7 @@ date: 2018-11-25 01:16:00
 cover: https://cdn.chengpeiquan.com/img/2018/11/1-1.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
+maybeLegacy: true
 ---
 
 距离这个神器发布第一个版本的时间，已经过去 3 年了，不过还是有蛮多新同学不知道他的存在，在做项目的时候，移动端真机调试还是用 alert 来弹，不仅调试起来很烦，也蛮不好定位问题的。

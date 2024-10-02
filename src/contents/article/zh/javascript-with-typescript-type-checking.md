@@ -6,6 +6,7 @@ date: 2022-01-19 14:42:00
 cover: https://cdn.chengpeiquan.com/img/2021/11/20220119155350.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
+maybeLegacy: true
 ---
 
 现在前端没有几个不写 TypeScript 了吧，但是有时候还是不得不写 JS ，比如我最近写脚手架的时候，代码是直接跑在 Node Runtime 里，没有编译环节，所以用的依然还是 JavaScript 。

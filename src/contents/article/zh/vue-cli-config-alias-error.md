@@ -6,6 +6,7 @@ date: 2020-05-22 16:58:00
 cover: https://cdn.chengpeiquan.com/img/2020/05/4.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
+maybeLegacy: true
 ---
 
 昨晚把 Node 和 Vue-CLI 等工具都升级到了最新版，create 了一个新项目，因为之前干活的时候为了方便都是拷贝之前的配置文件下来，很多东西都是基于旧版的解构，所以想针对新版本也处理一份配置，于是只拿了 vue.config.js 来到新项目这边。

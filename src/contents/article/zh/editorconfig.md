@@ -6,6 +6,7 @@ date: 2019-03-15 23:36:00
 cover: https://cdn.chengpeiquan.com/img/2019/03/1-2.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
+maybeLegacy: true
 ---
 
 团队协作，或者有时候你从 GitHub 或者其他地方拷贝人家的组件插件下来，想修改，发现代码风格不一致，比如自己习惯 2 个空格的缩进，但别人是 4 个空格，或者直接用 tab，这就 emmm 了不是…

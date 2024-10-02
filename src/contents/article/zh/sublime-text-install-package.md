@@ -6,6 +6,7 @@ date: 2019-07-24 23:39:00
 cover: https://cdn.chengpeiquan.com/img/2019/07/1-3.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
+maybeLegacy: true
 ---
 
 今天无聊更新了一下 Sublime Text 3 的最新版，结果坑爹了，无法使用 Ctrl+Shift+P 选择 install 安装各种插件，会报错。

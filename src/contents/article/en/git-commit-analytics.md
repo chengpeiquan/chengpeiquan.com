@@ -6,6 +6,7 @@ date: 2022-01-02 16:00:00
 cover: https://cdn.chengpeiquan.com/img/2022/01/20220103234230.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
+maybeLegacy: true
 ---
 
 A tool to analyze your git repository's commit log. It can help you generate daily/weekly or longer work reports.

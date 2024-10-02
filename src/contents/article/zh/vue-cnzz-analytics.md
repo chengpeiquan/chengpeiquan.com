@@ -7,6 +7,7 @@ cover: https://cdn.chengpeiquan.com/img/2020/08/1-3.jpg?x-oss-process=image/inte
 categories:
   - tech
 repo: https://github.com/analyticsjs/vue-cnzz-analytics
+maybeLegacy: true
 ---
 
 一个只有 3 kB 大小的插件，可以帮你轻松解决 SPA 单页面项目浏览数据不准确的问题，基于 Vue 路由访问轨迹自动向友盟统计平台上报 PV / 事件数据。

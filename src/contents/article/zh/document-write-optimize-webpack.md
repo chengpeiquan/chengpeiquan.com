@@ -6,6 +6,7 @@ date: 2018-12-15 16:34:00
 cover: https://cdn.chengpeiquan.com/img/2018/12/1.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
+maybeLegacy: true
 ---
 
 参与过 discuz 相关业务开发的同学应该都知道，dz 论坛有一套自带的 api 系统叫数据调用（后台-门户-模块管理-数据调用），对于论坛运营同学来说，可以将模块的外部调用作为广告位数据源、或者引用到专题页面去展示论坛内容，很受运营的喜爱。

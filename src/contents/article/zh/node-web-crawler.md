@@ -6,6 +6,7 @@ date: 2019-07-22 17:28:00
 cover: https://cdn.chengpeiquan.com/img/2019/07/1.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
+maybeLegacy: true
 ---
 
 以往的网站迁移服务器，数据方面的东西都是由服务端直接处理，不过这一次的需求比较特殊，先来看一下需求的几个特征点：

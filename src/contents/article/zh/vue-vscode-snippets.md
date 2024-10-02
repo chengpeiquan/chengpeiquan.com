@@ -6,6 +6,7 @@ date: 2020-09-20 17:02:00
 cover: https://cdn.chengpeiquan.com/img/2020/09/vue-vscode-snippets.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
+maybeLegacy: true
 ---
 
 这篇博客主要解决使用 vscode 在编辑 vue 文件时，遇到的两个困扰了一段时间的问题：

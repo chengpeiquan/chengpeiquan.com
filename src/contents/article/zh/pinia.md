@@ -8,6 +8,7 @@ categories:
   - tech
 isHot: true
 repo: https://github.com/chengpeiquan/learning-vue3
+maybeLegacy: true
 ---
 
 Vue 官方推出的全局状态管理工具目前有 Vuex 和 Pinia ，两者的作用和用法都比较相似，但 Pinia 的设计更贴近 Vue 3 组合式 API 的用法。

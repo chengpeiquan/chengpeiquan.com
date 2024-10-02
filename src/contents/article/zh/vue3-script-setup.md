@@ -7,6 +7,7 @@ cover: https://cdn.chengpeiquan.com/img/2021/02/20210305211036.jpg?x-oss-process
 categories:
   - tech
 repo: https://github.com/chengpeiquan/learning-vue3
+maybeLegacy: true
 ---
 
 > 2021-07-05：由于版本更新，本文部分内容已有过期，最新的相关内容请阅读：[Vue3.0最新动态：script-setup定稿 部分实验性API将弃用](https://chengpeiquan.com/article/vue3-script-setup-finalization.html)

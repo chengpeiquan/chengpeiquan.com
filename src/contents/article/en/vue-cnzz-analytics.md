@@ -7,6 +7,7 @@ cover: https://cdn.chengpeiquan.com/img/2020/08/1-3.jpg?x-oss-process=image/inte
 categories:
   - tech
 repo: https://github.com/analyticsjs/vue-cnzz-analytics
+maybeLegacy: true
 ---
 
 Only 3 kB, this plugin base on the CNZZ analytics, it can help you quickly to collect the page views on your website, including single page web application.

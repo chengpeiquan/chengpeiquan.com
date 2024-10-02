@@ -6,6 +6,7 @@ date: 2020-12-24 16:00:00
 cover: https://cdn.chengpeiquan.com/img/2020/12/baidu-map.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
+maybeLegacy: true
 ---
 
 最近项目用到了百度地图的 API ，用倒是没啥毛病，就是发现用完之后留下来的垃圾太多 = =

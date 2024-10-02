@@ -7,6 +7,7 @@ cover: https://cdn.chengpeiquan.com/img/2018/10/1-9.jpg?x-oss-process=image/inte
 categories:
   - tech
 repo: https://github.com/chengpeiquan/vue-toast
+maybeLegacy: true
 ---
 
 最近突然很想简化一些自己写的，项目常用的调用小功能，比如一些弹窗等等，之前都是 Html/JavaScript/Css 分离，每次复用都要分别写到对应的文件里，略显麻烦。

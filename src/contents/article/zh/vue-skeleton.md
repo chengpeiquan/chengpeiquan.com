@@ -7,6 +7,7 @@ cover: https://cdn.chengpeiquan.com/img/2019/03/1.jpg?x-oss-process=image/interl
 categories:
   - tech
 repo: https://github.com/chengpeiquan/vue-skeleton
+maybeLegacy: true
 ---
 
 大型 Project 的首次载入速度一般会比较慢，虽然 Vue 可以配置路由懒加载，但有时候打包出来的 chunk 还是会比较大，这个时候可以结合骨架屏来提高用户等待加载时的体验。
@@ -40,7 +41,7 @@ module.exports = {
         },
         minimize: true,
         quiet: true,
-      })
+      }),
     )
   },
   //这个是让骨架屏的css分离，直接作为内联style处理到html里，提高载入速度

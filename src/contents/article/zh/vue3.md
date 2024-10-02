@@ -8,6 +8,7 @@ categories:
   - tech
 isHot: true
 repo: https://github.com/chengpeiquan/learning-vue3
+maybeLegacy: true
 ---
 
 这是一个关于 Vue 3.0 + TypeScript 的起步学习教程，适合完全的 Vue 新手和 Vue 2.0 的老手，在官方文档的基础上融入自己的一些实践经验。

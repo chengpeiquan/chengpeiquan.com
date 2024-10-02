@@ -7,6 +7,7 @@ cover: https://cdn.chengpeiquan.com/img/2022/10/20221021235753.jpg?x-oss-process
 categories:
   - tech
 repo: https://github.com/chengpeiquan/zhihu-collection-helper
+maybeLegacy: true
 ---
 
 知乎收藏夹助手，可将专栏的文章添加到收藏夹中（因为专栏的内容通常比较垂直，不会太杂），适用于收藏夹在创建初期需要大量内容填充的情况。

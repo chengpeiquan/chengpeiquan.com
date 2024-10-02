@@ -7,6 +7,7 @@ cover: https://cdn.chengpeiquan.com/img/2020/12/1.jpg?x-oss-process=image/interl
 categories:
   - tech
 repo: https://github.com/chengpeiquan/vue-picture-cropper
+maybeLegacy: true
 ---
 
 一个基于 cropper.js ，支持 Vue 3.0 的图片裁切工具组件（目前仅支持 Vue 3.x ）。

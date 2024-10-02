@@ -6,6 +6,7 @@ date: 2018-11-21 19:50:00
 cover: https://cdn.chengpeiquan.com/img/2018/11/1-2.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
+maybeLegacy: true
 ---
 
 Vue 脚手架 3.0 出来也蛮久了，秉着前人先踩坑的习惯，最近才开始升级。整个过程还是蛮顺利的，不过也有一些小小的问题，简单记录起来。

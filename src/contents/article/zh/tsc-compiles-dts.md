@@ -6,6 +6,7 @@ date: 2022-01-21 12:22:00
 cover: https://cdn.chengpeiquan.com/img/2021/11/20220121141631.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
+maybeLegacy: true
 ---
 
 虽然之前在构建 JS Library 的时候，也是有生成 `d.ts` 文件在输出目录，但总归比较凌乱，意思就是构建出来的 JS Library 和 DTS 文件都在同一级文件夹里。
