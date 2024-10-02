@@ -104,6 +104,7 @@ export default async function ArticlesPage({ params }: ListPageProps) {
 
         <Pagination
           slug="articles"
+          category={category}
           currentPage={page}
           totalPages={lastPage}
           isMobile={isMobile}

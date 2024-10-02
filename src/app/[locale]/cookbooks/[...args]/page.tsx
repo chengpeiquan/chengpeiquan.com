@@ -100,6 +100,7 @@ export default async function CookbooksPage({ params }: CookbooksPageProps) {
 
       <Pagination
         slug="cookbooks"
+        category={category}
         currentPage={page}
         totalPages={lastPage}
         isMobile={isMobile}
