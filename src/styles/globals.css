@@ -1,0 +1,52 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Code highlight */
+/* https://shiki.tmrs.site/guide/dual-themes */
+html.dark .shiki,
+html.dark .shiki span {
+  color: var(--shiki-dark) !important;
+  background-color: var(--shiki-dark-bg) !important;
+  font-style: var(--shiki-dark-font-style) !important;
+  font-weight: var(--shiki-dark-font-weight) !important;
+  text-decoration: var(--shiki-dark-text-decoration) !important;
+}
+
+/* Content styles */
+.prose {
+  max-width: 100% !important;
+}
+
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  scroll-margin-top: 76px;
+}
+
+.prose blockquote {
+  @apply text-muted-foreground px-8;
+  position: relative;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+  overflow-wrap: break-word;
+  border: 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.prose blockquote::before {
+  content: '\201c';
+  position: absolute;
+  top: -0.2em;
+  left: 0;
+  font-family:
+    Times New Roman,
+    Times,
+    serif;
+  font-size: 300%;
+  font-weight: 700;
+  line-height: 1;
+}

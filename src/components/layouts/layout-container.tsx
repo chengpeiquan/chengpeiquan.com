@@ -84,11 +84,14 @@ export const LayoutContainer = async ({
       />
 
       <LayoutFooter className="gap-4 sm:gap-12 flex-col sm:flex-row">
-        <span>
+        <span className="text-muted-foreground">
           © 2014-{new Date().getFullYear()} {t('name')}
         </span>
 
-        <ExternalLink href="https://beian.miit.gov.cn/">
+        <ExternalLink
+          href="https://beian.miit.gov.cn/"
+          className="transition-colors hover:text-foreground text-muted-foreground"
+        >
           {t('icp')}
         </ExternalLink>
       </LayoutFooter>
