@@ -79,7 +79,12 @@ export type ContentItem = z.infer<typeof contentItemSchema>
 
 export const isValidContentItem = (v: unknown): v is ContentItem => !!v
 
-export const PAGE_SIZE = 10
+export type ListFolder = Exclude<ContentFolder, 'about'>
+
+export const pageSizeConfig: Record<ListFolder, number> = {
+  article: 10,
+  cookbook: 20,
+}
 
 export interface ContentPaginationData {
   page: number

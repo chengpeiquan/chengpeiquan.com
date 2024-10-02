@@ -5,6 +5,13 @@
       "title": "Navigation",
       "close": "Close"
     },
+    "pagination": {
+      "prefix": {
+        "article": "Article list",
+        "cookbook": "Cookbook list"
+      },
+      "pageNumber": "Page {page}"
+    },
     "outline": {
       "title": "On this page"
     },

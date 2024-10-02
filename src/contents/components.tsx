@@ -4,6 +4,7 @@ import React from 'react'
 import Image from 'next/image'
 import sizeOf from 'image-size'
 import { Buffer } from 'node:buffer'
+import { ExternalLink } from 'blackwork'
 import { Link } from '@/navigation'
 
 const MAX_WIDTH = 1024
@@ -69,13 +70,8 @@ export const a = async ({
   children,
 }: React.AnchorHTMLAttributes<HTMLAnchorElement>) => {
   const isExternal = href?.startsWith('http')
-  const target = isExternal ? '_blank' : undefined
-  const rel = isExternal ? 'nofollow noopener noreferrer' : undefined
+  const Comp = isExternal ? ExternalLink : Link
 
   if (!href) return children
-  return (
-    <Link href={href} target={target} rel={rel}>
-      {children}
-    </Link>
-  )
+  return <Comp href={href}>{children}</Comp>
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import { type Metadata } from 'next'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, getTranslations } from 'next-intl/server'
-import { sideConfig } from '@/config/site-config'
+import { sharedMetadata } from '@/config/site-config'
 import { type LocalePageParams } from '@/config/locale-config'
 import { LayoutContainer } from '@/components/layouts/layout-container'
 
@@ -19,10 +19,12 @@ export const generateMetadata = async ({
   })
 
   return {
-    title: t('title'),
+    title: {
+      template: `%s - ${t('title')}`,
+      default: t('title'),
+    },
     description: t('description'),
-    creator: sideConfig.author.name,
-    authors: sideConfig.author,
+    ...sharedMetadata,
   } satisfies Metadata
 }
 

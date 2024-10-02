@@ -1,9 +1,13 @@
 import React from 'react'
 import { notFound } from 'next/navigation'
 import { HolyGrailAside, HolyGrailContent, LayoutMain } from 'blackwork'
-import { type LocalePageParams } from '@/config/locale-config'
 import { isMobileDevice } from '@/config/middleware-config'
-import { getContent } from '@/contents'
+import { type ContentFolder } from '@/config/content-config'
+import {
+  type DetailsPageProps,
+  getDetails,
+  getDetailsMetadata,
+} from '@/contents'
 import { MarkupRenderer } from '@/components/markup/renderer'
 import { DesktopToc, MobileToc } from '@/components/markup/table-of-contents'
 import { FriendlyLinks } from '@/components/sidebar/friendly-links'
@@ -12,22 +16,14 @@ import {
   CookbookQrCode,
 } from '@/components/sidebar/cookbook-widgets'
 
-interface ArticlePageParams extends LocalePageParams {
-  slug: string
-}
+const folder: ContentFolder = 'cookbook'
 
-interface ArticlePageProps {
-  params: ArticlePageParams
-}
+export const generateMetadata = async ({ params }: DetailsPageProps) =>
+  getDetailsMetadata(folder, params)
 
-export default async function ArticlePage({ params }: ArticlePageProps) {
+export default async function ArticlePage({ params }: DetailsPageProps) {
   const isMobile = isMobileDevice()
-
-  const res = await getContent({
-    folder: 'cookbook',
-    slug: params.slug,
-    locale: params.locale,
-  })
+  const res = await getDetails(folder, params)
 
   if (!res) {
     notFound()

@@ -6,15 +6,21 @@ import { type LocalePageParams } from '@/config/locale-config'
 import {
   type ContentDetailsLink,
   type ContentMetadata,
+  type ListFolder,
   categoryGroupTitleConfig,
   cookbookCategories,
 } from '@/config/content-config'
 import { isMobileDevice } from '@/config/middleware-config'
-import { getContents } from '@/contents'
+import { type ListPageProps, getList, getListMetadata } from '@/contents'
 import { Pagination } from '@/components/layouts/pagination'
 import { CategoryLinks } from '@/components/layouts/category-links'
 import { TimeDisplay } from '@/components/shared/time-display'
 import { Link } from '@/navigation'
+
+const folder: ListFolder = 'cookbook'
+
+export const generateMetadata = async ({ params }: ListPageProps) =>
+  getListMetadata(folder, params)
 
 const ArticleCard: React.FC<{
   slug: string
@@ -68,18 +74,7 @@ export default async function CookbooksPage({ params }: CookbooksPageProps) {
 
   const isMobile = isMobileDevice()
 
-  const isCategory = params.args.length === 2
-  const category = isCategory ? params.args[0] : undefined
-  const pageNumber = +(isCategory ? params.args[1] : params.args[0])
-
-  const res = await getContents('cookbook', {
-    locale: params.locale,
-    category,
-    page: pageNumber,
-    pageSize: 20,
-  })
-
-  const { items, page, lastPage } = res
+  const { items, page, lastPage, category } = await getList(folder, params)
 
   return (
     <LayoutMain className="gap-8">

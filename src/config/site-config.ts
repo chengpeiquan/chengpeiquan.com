@@ -72,3 +72,8 @@ export const getLocaleSocialLinks = (locale: Locale) => {
     (i) => isUndefined(i.locale) || i.locale === locale,
   )
 }
+
+export const sharedMetadata: Metadata = {
+  creator: sideConfig.author.name,
+  authors: sideConfig.author,
+}
