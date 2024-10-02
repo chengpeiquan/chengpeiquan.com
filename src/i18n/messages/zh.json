@@ -15,6 +15,7 @@
     "outline": {
       "title": "文章目录"
     },
+    "legacy": "本文最后更新于 {timeLabel}，部分内容可能不适合当前所有情况，仅供参考。",
     "starOnGitHub": {
       "label": "Star on GitHub",
       "title": "给仓库一个 Star"

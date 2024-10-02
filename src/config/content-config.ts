@@ -27,6 +27,9 @@ const contentMetadataSchema = z.object({
   repo: z.string().optional(),
   isDraft: z.boolean().optional(),
 
+  // For article
+  maybeLegacy: z.boolean().optional(), // Content may be outdated
+
   // For cookbook
   duration: z.number().optional(),
   price: z.number().optional(),
@@ -225,3 +228,8 @@ export const categoryGroupTitleConfig: Record<
     en: 'Cookbook Categories',
   },
 }
+
+// When the difference between the release date
+// and the reading date exceeds this value,
+// legacy tips will be displayed when browsing the content.
+export const legacyThresholdDays = 730
