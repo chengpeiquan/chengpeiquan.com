@@ -18,6 +18,7 @@ import { type PropsWithDevice } from '@/types'
 
 interface PaginationProps extends PropsWithDevice {
   slug: string
+  category?: string
   currentPage: number
   totalPages: number
 }
@@ -28,11 +29,17 @@ interface PaginationButtonProps extends PaginationProps {
 
 const PaginationButton: React.FC<PaginationButtonProps> = ({
   slug,
+  category,
   currentPage,
   totalPages,
   item,
 }) => {
   const { type, page } = item
+
+  const href = useMemo(
+    () => (category ? `/${slug}/${category}/${page}` : `/${slug}/${page}`),
+    [category, page, slug],
+  )
 
   const content = useMemo(() => {
     switch (type) {
@@ -42,39 +49,23 @@ const PaginationButton: React.FC<PaginationButtonProps> = ({
 
       case GeneratedPageType.Previous: {
         const disabled = currentPage <= 1
-        return (
-          <PaginationPrevious
-            as={Link}
-            disabled={disabled}
-            href={`/${slug}/${page}`}
-          />
-        )
+        return <PaginationPrevious as={Link} disabled={disabled} href={href} />
       }
 
       case GeneratedPageType.Next: {
         const disabled = currentPage >= totalPages
-        return (
-          <PaginationNext
-            as={Link}
-            disabled={disabled}
-            href={`/${slug}/${page}`}
-          />
-        )
+        return <PaginationNext as={Link} disabled={disabled} href={href} />
       }
 
       default: {
         return (
-          <PaginationLink
-            as={Link}
-            href={`/${slug}/${page}`}
-            isActive={currentPage === page}
-          >
+          <PaginationLink as={Link} href={href} isActive={currentPage === page}>
             {page}
           </PaginationLink>
         )
       }
     }
-  }, [currentPage, page, slug, totalPages, type])
+  }, [currentPage, href, page, totalPages, type])
 
   return <PaginationItem>{content}</PaginationItem>
 }
