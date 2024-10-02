@@ -8,6 +8,7 @@ import { isMobileDevice } from '@/config/middleware-config'
 import { Link } from '@/navigation'
 import { MiniGithubIcon } from '../shared/icons'
 import { type PropsWithDevice } from '@/types'
+import { LegacyTips } from './legacy-tips'
 
 interface StarOnGitHubProps extends LocalePageParams {
   repo: ContentMetadata['repo']
@@ -101,6 +102,10 @@ export const MarkupRenderer = async ({
         date={metadata.date}
         repo={metadata.repo}
       />
+
+      {metadata.maybeLegacy && (
+        <LegacyTips locale={locale} timestamp={metadata.timestamp} />
+      )}
 
       {toc}
 
