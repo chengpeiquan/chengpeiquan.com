@@ -7,6 +7,7 @@ cover: https://cdn.chengpeiquan.com/img/2021/01/20210224102526.jpg?x-oss-process
 categories:
   - tech
 repo: https://github.com/chengpeiquan/vite-plugin-banner
+maybeLegacy: true
 ---
 
 我很久前有一篇博客是介绍了一个 WebPack 插件，可以在打包后给 JS / CSS 文件添加一个版权注释，可以表明项目归属，用于声明版权信息或者如果出了什么问题知道可以联系谁。

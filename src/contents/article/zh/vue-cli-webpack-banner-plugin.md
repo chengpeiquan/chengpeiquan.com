@@ -6,6 +6,7 @@ date: 2019-04-21 23:03:00
 cover: https://cdn.chengpeiquan.com/img/2019/04/1-1.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
+maybeLegacy: true
 ---
 
 这个不是 Vue 的东西，是 webpack 的功能~

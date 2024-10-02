@@ -7,6 +7,7 @@ cover: https://cdn.chengpeiquan.com/img/2022/06/20220605213042.jpg?x-oss-process
 categories:
   - tech
 repo: https://github.com/chengpeiquan/vite-vue3-prerender-demo
+maybeLegacy: true
 ---
 
 之前 Webpack 项目经常会用到预渲染，现在团队都开始用 Vite 了，所以弄一个基于 Vite 的 Vue 3 预渲染 demo 可以参考。

@@ -6,6 +6,7 @@ date: 2021-10-11 22:32:20
 cover: https://cdn.chengpeiquan.com/img/2021/10/20211012094643.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
+maybeLegacy: true
 ---
 
 一个刚入门的 Truffle DEMO 和学习笔记，能找到的教程都好老，记录一版踩坑笔记，后面遇到类似的问题可以快速处理，啃的 Truffle 的英文文档，国内的翻译文档都太老了，都快速找到的停留在 2019 年之前，实在没法看。

@@ -6,6 +6,7 @@ date: 2019-01-09 00:45:00
 cover: https://cdn.chengpeiquan.com/img/2019/01/1.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
+maybeLegacy: true
 ---
 
 之前 jQuery 走天下的时候，返回顶部按钮倒是很简单，一个 animate 就可以解决，原生 JS 能否实现呢？答案是肯定的！

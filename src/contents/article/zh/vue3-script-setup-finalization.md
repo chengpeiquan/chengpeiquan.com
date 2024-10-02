@@ -7,6 +7,7 @@ cover: https://cdn.chengpeiquan.com/img/2021/07/20210705181949.jpg?x-oss-process
 categories:
   - tech
 repo: https://github.com/chengpeiquan/learning-vue3
+maybeLegacy: true
 ---
 
 今天一早收到一条 issue [#107](https://github.com/chengpeiquan/learning-vue3/issues/107) ，有开发者在咨询我 Vue 3.0 script setup 的新 API 怎么用。

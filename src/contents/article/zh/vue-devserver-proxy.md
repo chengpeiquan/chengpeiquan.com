@@ -6,6 +6,7 @@ date: 2019-03-08 11:10:00
 cover: https://cdn.chengpeiquan.com/img/2019/03/1-1.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
+maybeLegacy: true
 ---
 
 接口跨域一直是个头疼的问题，之前的业务页面都基于一套限制比较少的接口在交互，依赖 chrome 的 Host Switch Plus 和 Allow-Control-Allow-Origin: \*就能简单解决本地调试的问题，所以大部分情况下还是写完静态页面然后替换数据部分，直接打包到测试环境即可，所以一直也不觉得麻烦。

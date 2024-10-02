@@ -6,6 +6,7 @@ date: 2019-02-26 13:54:00
 cover: https://cdn.chengpeiquan.com/img/2019/02/1-1.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
+maybeLegacy: true
 ---
 
 使用带 params 的路由的时候，如果 params 不正确，路由就不会渲染，导致页面出现空白，本来想跟 query 一样，指定其中一个 query 为默认值，没想到并不能如己所愿，不过最终问题还是解决了，采用了一个路由的 api 来判断当前路由是否存在，顺带解决了其他非正常路由的指向问题。

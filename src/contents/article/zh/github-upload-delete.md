@@ -6,6 +6,7 @@ date: 2019-02-05 14:56:00
 cover: https://cdn.chengpeiquan.com/img/2019/02/1-2.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
+maybeLegacy: true
 ---
 
 Git 的指令还是记不太住，发篇文帮助记忆～

@@ -6,6 +6,7 @@ date: 2020-08-09 23:42:00
 cover: https://cdn.chengpeiquan.com/img/2020/08/1.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
+maybeLegacy: true
 ---
 
 虽然 Rollup 的推出时间应该是比 Webpack 早，但之前类库的工作都是公司其他前端部门负责维护，还真的没有去接触过它，直到最近自己要负责开发一个用于新业务线的 JSBridge 和 JSLibrary，才对它有了一定的了解。

@@ -6,6 +6,7 @@ date: 2020-09-15 01:41:00
 cover: https://cdn.chengpeiquan.com/img/2020/09/3.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
+maybeLegacy: true
 ---
 
 今天在上线一个移动端需求的时候，QA 妹子跟我反馈在她们一部 iPhone X 上面出现了一个滚动加载会同时触发下拉刷新的 bug…

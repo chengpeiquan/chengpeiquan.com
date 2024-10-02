@@ -6,6 +6,7 @@ date: 2018-10-24 00:58:00
 cover: https://cdn.chengpeiquan.com/img/2018/10/1-6.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
+maybeLegacy: true
 ---
 
 最近在处理一个 H5 页面的时候，有一个需要用户填写昵称信息的环节，模拟器一切正常，结果到了真机上发现输入信息完毕后，无法点击确认按钮 emmm，黑人问号了半天，联系 QA 又深度测试了一下，发现只有 iOS 的微信浏览器才会。

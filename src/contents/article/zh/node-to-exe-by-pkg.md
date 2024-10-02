@@ -6,6 +6,7 @@ date: 2019-10-02 10:48:00
 cover: https://cdn.chengpeiquan.com/img/2019/10/1.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
+maybeLegacy: true
 ---
 
 有时候做的一些活动页面，会涉及到数据存储，虽然有一套公共业务接口，具备对应的数据导出，但是活动这种东西，一向没有那么中规中矩，总会有那么几次无法用公共接口来满足，遇到一些需要定制的情况，在赶工期的时候就只能是先满足数据录入需要部分，保证顺利上线，至于数据的导出，那往往是不在考虑范围的。

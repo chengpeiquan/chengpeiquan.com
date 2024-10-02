@@ -6,6 +6,7 @@ date: 2018-10-22 00:48:00
 cover: https://cdn.chengpeiquan.com/img/2018/10/1-3.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
+maybeLegacy: true
 ---
 
 前几天对接了个需求，说因为传统的 CMS 太笨重，并且一些业务结合点想落地的话改造太麻烦，想让我这边帮他做一个发布后台，前后端分离，他只负责数据和接口，其他的由我自己把控。简单看了一下需求，说是发布后台，实际上对我来说就是一个前台发布页面，只不过通过 OpenID 登录后，识别不同的用户身份来决定是否允许发布或者修改删除。

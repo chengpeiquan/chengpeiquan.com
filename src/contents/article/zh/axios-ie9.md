@@ -6,6 +6,7 @@ date: 2018-10-20 23:16:00
 cover: https://cdn.chengpeiquan.com/img/2018/10/1-8.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
+maybeLegacy: true
 ---
 
 虽然 axios 说可以兼容 IE9，但实际上在项目开发过程中，IE9 报错，而且目前的情况是 responseType 为"json"时才会报这个异常。

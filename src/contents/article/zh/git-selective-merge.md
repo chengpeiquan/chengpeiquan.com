@@ -6,6 +6,7 @@ date: 2023-02-02 16:56:00
 cover: https://cdn.chengpeiquan.com/img/2023/02/20230202170739.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
+maybeLegacy: true
 ---
 
 今天帮朋友解决了一个代码合并的问题，他有两个项目， B 项目最初是基于 A 项目作为架构底子，根据业务进行了不同需求的开发，沉淀了不少新功能，而 A 项目本身也在继续维护，可以简单的理解为， A 项目是通过类似 [create-preset](https://github.com/awesome-starter/create-preset) 这样的脚手架拉取下来的一个项目模板，而 B 项目是一个业务项目，所以 A 项目通常只提供一些公共功能的维护升级，而 B 项目更注重业务功能开发。

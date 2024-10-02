@@ -7,6 +7,7 @@ cover: https://cdn.chengpeiquan.com/img/2021/01/20210224102526.jpg?x-oss-process
 categories:
   - tech
 repo: https://github.com/chengpeiquan/vite-plugin-banner
+maybeLegacy: true
 ---
 
 This is my first Vite plugin. Before I start using Vite, I used rollup for a while, I have used rollup-plugin-banner and rollup-plugin-banner2. But I import them into vite.config.ts and found that them doesn't work. So, I try to learn the plugin development of vite, so there is this work, Its features is similar to WebPack bannerPlugin.

@@ -1,12 +1,12 @@
 ---
 title: 从前端开发者身份入门Flutter和Dart的学习笔记
-desc: 有很多相似，又有很多不同，慢慢适应一下
+desc: 最近有空，接触一下 Flutter 和 Dart 的开发，虽然说前端入门 Flutter 比较友好，但个人觉得最最最开始其实不怎么友好，当然写了几个小时 Dart 之后感觉确实都是熟悉的身影，但真的刚入门的那一两个小时真的特别困，所以还是要不定期记录一些遇到的问题。
 keywords: flutter,dart
 date: 2022-01-27 16:02:00
 cover: https://cdn.chengpeiquan.com/img/2021/11/20220127161927.jpg?x-oss-process=image/interlace,1
 categories:
   - tech
-isDraft: true
+maybeLegacy: true
 ---
 
 最近有空，接触一下 Flutter 和 Dart 的开发，虽然说前端入门 Flutter 比较友好，但个人觉得最最最开始其实不怎么友好，当然写了几个小时 Dart 之后感觉确实都是熟悉的身影，但真的刚入门的那一两个小时真的特别困，所以还是要不定期记录一些遇到的问题。
