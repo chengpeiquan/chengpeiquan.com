@@ -57,7 +57,9 @@ export const getContent = ({ folder, slug, locale }: GetContentOptions) => {
 
   // This is a convention:
   // The same slug can only correspond to one extension.
-  const possibleFileNames = fileExtensions.map((ext) => slug + ext)
+  const possibleFileNames = fileExtensions.map(
+    (ext) => `${locale}/${slug}${ext}`,
+  )
   const filePath = filePaths.find((path) =>
     possibleFileNames.some((name) => path.endsWith(name)),
   )
