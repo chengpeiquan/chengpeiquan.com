@@ -78,17 +78,17 @@ const parseMarkdown = async (markdown: string): Promise<ParseMarkdownRes> => {
       .use(rehypeSlug, { prefix: '' })
       .use(rehypeAutolinkHeadings)
       .use(rehypeExtractToc)
+      .use(rehypeExternalLink)
+      .use(rehypeSanitize, {
+        // No need `user-content-` prefix
+        clobberPrefix: '',
+      })
       .use(rehypeShiki, {
         // https://shiki.style/themes
         themes: {
           light: 'one-light',
           dark: 'dracula-soft',
         },
-      })
-      .use(rehypeExternalLink)
-      .use(rehypeSanitize, {
-        // No need `user-content-` prefix
-        clobberPrefix: '',
       })
       .use(rehypeStringify)
 
