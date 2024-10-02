@@ -1,130 +1,105 @@
 'use server'
 
-import { extname, join } from 'node:path'
-import { fs } from '@bassist/node-utils'
-import { z } from 'zod'
-import { type Locale, locales } from '@/config/locale-config'
+import { cache } from 'react'
+import { type Metadata } from 'next'
+import { type LocalePageParams } from '@/config/locale-config'
+import { sharedMetadata } from '@/config/site-config'
 import {
   type ContentFolder,
-  type ContentItem,
-  PAGE_SIZE,
-  contentFolders,
-  contentItemSchema,
-  contentRootFolder,
-  fileExtensions,
-  isValidContentItem,
+  type ListFolder,
+  articleCategories,
+  cookbookCategories,
+  pageSizeConfig,
 } from '@/config/content-config'
-import { parse } from './parser'
+import { getContent, getContents } from './io'
+import { getTranslations } from 'next-intl/server'
 
-const contentRootPath = join(process.cwd(), 'src', contentRootFolder)
+interface ListPageParams extends LocalePageParams {
+  args: string[] // [page] | [slug, page]
+}
 
-const getMarkdownFiles = (dir: string) => {
-  try {
-    return fs
-      .readdirSync(dir)
-      .filter((file) => fileExtensions.includes(extname(file)))
-      .map((i) => join(dir, i))
-  } catch (e) {
-    return []
+export interface ListPageProps {
+  params: ListPageParams
+}
+
+const analyzeListParams = cache((params: ListPageParams) => {
+  const isCategory = params.args.length === 2
+  const category = isCategory ? params.args[0] : undefined
+  const page = +(isCategory ? params.args[1] : params.args[0])
+
+  return {
+    category,
+    page,
   }
-}
+})
 
-const getFileMap = (folder: ContentFolder) => {
-  const fileMap = new Map<Locale, string[]>()
+export const getList = cache(
+  async (folder: ListFolder, params: ListPageParams) => {
+    const { category, page } = analyzeListParams(params)
 
-  locales.forEach((i) => {
-    const fileDir = join(contentRootPath, folder, i)
-    fileMap.set(i, getMarkdownFiles(fileDir))
-  })
+    return getContents(folder, {
+      locale: params.locale,
+      category,
+      page,
+      pageSize: pageSizeConfig[folder],
+    })
+  },
+)
 
-  return fileMap
-}
+export const getListMetadata = cache(
+  async (folder: ListFolder, params: ListPageParams): Promise<Metadata> => {
+    const t = await getTranslations({
+      locale: params.locale,
+      namespace: 'basicConfig.pagination',
+    })
 
-const getFilePaths = (folder: ContentFolder, locale: Locale) => {
-  if (!contentFolders.includes(folder)) return []
-  if (!locales.includes(locale)) return []
-  return getFileMap(folder).get(locale) || []
-}
+    const { category, page } = analyzeListParams(params)
 
-interface GetContentOptions {
-  folder: ContentFolder
-  slug: string
-  locale: Locale
-}
+    const isCookbook = folder === 'cookbook'
+    const cateConfig = isCookbook ? cookbookCategories : articleCategories
+    const cateItem = cateConfig.find((i) => i.slug === category)
 
-export const getContent = ({ folder, slug, locale }: GetContentOptions) => {
-  const filePaths = getFilePaths(folder, locale)
-  if (!filePaths.length) return null
-
-  // This is a convention:
-  // The same slug can only correspond to one extension.
-  const possibleFileNames = fileExtensions.map((ext) => slug + ext)
-  const filePath = filePaths.find((path) =>
-    possibleFileNames.some((name) => path.endsWith(name)),
-  )
-
-  if (!filePath) return null
-
-  return parse(filePath)
-}
-
-interface GetContentsOptions {
-  locale: Locale
-  category?: string
-  page: number
-  pageSize?: number
-}
-
-interface GetContentsResponse {
-  items: ContentItem[]
-  page: number
-  pageSize: number
-  total: number
-  lastPage: number
-}
-
-export const getContents = async (
-  folder: ContentFolder,
-  { locale, category, page = 1, pageSize = PAGE_SIZE }: GetContentsOptions,
-) => {
-  const contentsResponseSchema = z.object({
-    items: z.array(contentItemSchema).default([]),
-    page: z.number().default(page || 1),
-    pageSize: z.number().default(pageSize),
-    total: z.number().default(0),
-    lastPage: z.number().default(1),
-  })
-
-  const defaultRes = contentsResponseSchema.parse({})
-
-  try {
-    const filePaths = getFilePaths(folder, locale)
-    if (!filePaths.length) return defaultRes
-
-    const getIntro = (i: string) => parse(i, { ignoreDetails: true })
-    const allContents = await Promise.all(filePaths.map(getIntro))
-    const contents = allContents
-      .filter(isValidContentItem)
-      .filter((i) => !i.metadata.isDraft)
-      .filter((i) =>
-        category ? i.metadata.categories?.includes(category) : true,
-      )
-      .sort((a, b) => b.metadata.timestamp - a.metadata.timestamp)
-
-    const start = 0 + pageSize * (page - 1)
-    const end = start + pageSize
-    const items = contents.slice(start, end)
-    const total = contents.length
-    const lastPage = Math.ceil(total / pageSize)
+    const prefix = t(`prefix.${folder}`)
+    const cateName = cateItem ? cateItem.label[params.locale] : ''
+    const pageNumber = page > 1 ? ` - ${t('pageNumber', { page })}` : ''
+    const title = `${cateName}${prefix}${pageNumber}`
 
     return {
-      items,
-      page,
-      pageSize,
-      total,
-      lastPage,
-    } satisfies GetContentsResponse
-  } catch (e) {
-    return defaultRes
-  }
+      ...sharedMetadata,
+      title,
+    }
+  },
+)
+
+interface DetailsPageParams extends LocalePageParams {
+  slug: string
 }
+
+export interface DetailsPageProps {
+  params: DetailsPageParams
+}
+
+export const getDetails = cache(
+  async (folder: ContentFolder, params: DetailsPageParams) =>
+    getContent({ folder, ...params }),
+)
+
+export const getDetailsMetadata = cache(
+  async (
+    folder: ContentFolder,
+    params: DetailsPageParams,
+  ): Promise<Metadata> => {
+    const res = await getDetails(folder, params)
+    if (!res) return {}
+    const { title, keywords, desc: description } = res.metadata
+    return {
+      ...sharedMetadata,
+      title,
+      keywords,
+      description,
+      // openGraph: {
+      //   images: ['/some-specific-page-image.jpg', ...previousImages],
+      // },
+    }
+  },
+)

@@ -5,6 +5,13 @@
       "title": "导航",
       "close": "关闭"
     },
+    "pagination": {
+      "prefix": {
+        "article": "文章列表",
+        "cookbook": "菜谱列表"
+      },
+      "pageNumber": "第 {page} 页"
+    },
     "outline": {
       "title": "文章目录"
     },

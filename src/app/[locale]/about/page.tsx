@@ -1,20 +1,22 @@
 import React from 'react'
 import { notFound } from 'next/navigation'
 import { LayoutMain } from 'blackwork'
-import { type LocalePageParams } from '@/config/locale-config'
-import { getContent } from '@/contents'
+import { type ContentFolder } from '@/config/content-config'
+import {
+  type DetailsPageProps,
+  getDetails,
+  getDetailsMetadata,
+} from '@/contents'
 import { MarkupRenderer } from '@/components/markup/renderer'
 
-interface AboutPageProps {
-  params: LocalePageParams
-}
+const folder: ContentFolder = 'about'
+const slug = folder
 
-export default async function AboutPage({ params }: AboutPageProps) {
-  const res = await getContent({
-    folder: 'about',
-    slug: 'about',
-    locale: params.locale,
-  })
+export const generateMetadata = async ({ params }: DetailsPageProps) =>
+  getDetailsMetadata(folder, { ...params, slug })
+
+export default async function AboutPage({ params }: DetailsPageProps) {
+  const res = await getDetails(folder, { ...params, slug })
 
   if (!res) {
     notFound()

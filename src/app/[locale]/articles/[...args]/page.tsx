@@ -7,14 +7,14 @@ import {
   HolyGrailContent,
   LayoutMain,
 } from 'blackwork'
-import { type LocalePageParams } from '@/config/locale-config'
 import {
   type ContentDetailsLink,
   type ContentMetadata,
+  type ListFolder,
   articleCategories,
 } from '@/config/content-config'
 import { isMobileDevice } from '@/config/middleware-config'
-import { getContents } from '@/contents'
+import { type ListPageProps, getList, getListMetadata } from '@/contents'
 import { Pagination } from '@/components/layouts/pagination'
 import { CategoryLinks } from '@/components/layouts/category-links'
 import { PublishedBooks } from '@/components/sidebar/published-books'
@@ -22,6 +22,11 @@ import { CatHuffing } from '@/components/sidebar/cat-huffing'
 import { FriendlyLinks } from '@/components/sidebar/friendly-links'
 import { TimeDisplay } from '@/components/shared/time-display'
 import { Link } from '@/navigation'
+
+const folder: ListFolder = 'article'
+
+export const generateMetadata = async ({ params }: ListPageProps) =>
+  getListMetadata(folder, params)
 
 const ArticleCard: React.FC<{
   slug: string
@@ -68,32 +73,14 @@ const ArticleCard: React.FC<{
   )
 }
 
-interface ArticlesPageParams extends LocalePageParams {
-  args: string[] // [page] | [slug, page]
-}
-
-interface ArticlesPageProps {
-  params: ArticlesPageParams
-}
-
-export default async function ArticlesPage({ params }: ArticlesPageProps) {
+export default async function ArticlesPage({ params }: ListPageProps) {
   if (params.args.length > 2) {
     notFound()
   }
 
   const isMobile = isMobileDevice()
 
-  const isCategory = params.args.length === 2
-  const category = isCategory ? params.args[0] : undefined
-  const pageNumber = +(isCategory ? params.args[1] : params.args[0])
-
-  const res = await getContents('article', {
-    locale: params.locale,
-    category,
-    page: pageNumber,
-  })
-
-  const { items, page, lastPage } = res
+  const { items, page, lastPage, category } = await getList(folder, params)
 
   return (
     <LayoutMain className="sm:flex-row justify-between gap-16">
