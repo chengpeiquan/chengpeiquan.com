@@ -7,8 +7,6 @@ import { Buffer } from 'node:buffer'
 import { ExternalLink } from 'blackwork'
 import { Link } from '@/navigation'
 
-const MAX_WIDTH = 1024
-
 const getImageSize = async (imgUrl: string) => {
   try {
     const res = await fetch(imgUrl)
@@ -18,30 +16,13 @@ const getImageSize = async (imgUrl: string) => {
   } catch (e) {}
 }
 
-// Max width 1024px
-const getConstrainedSize = async (imgUrl: string) => {
-  const size = await getImageSize(imgUrl)
-  if (!size) return { width: 0, height: 0 }
-
-  const realWidth = size.width ?? 0
-  const realHeight = size.height ?? 0
-  if (realWidth <= MAX_WIDTH || !realHeight) {
-    return { width: realWidth, height: realHeight }
-  }
-
-  const aspectRatio = realWidth / realHeight
-  const width = MAX_WIDTH
-  const height = width / aspectRatio
-  return { width, height }
-}
-
 export const img = async ({
   src = '',
   alt = '',
 }: React.ImgHTMLAttributes<HTMLImageElement>) => {
-  const { width, height } = await getConstrainedSize(src)
+  const size = await getImageSize(src)
 
-  if (!src) return null
+  if (!src || !size) return null
   return (
     <figure className="relative inline-block w-full max-w-screen-lg text-center mx-auto">
       <Image
@@ -49,8 +30,8 @@ export const img = async ({
         src={src}
         alt={alt}
         fill={false}
-        width={width}
-        height={height}
+        width={size.width}
+        height={size.height}
         sizes="100%"
         priority
         style={{ objectFit: 'cover' }}
