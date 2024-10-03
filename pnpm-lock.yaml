@@ -11,6 +11,9 @@ importers:
       '@bassist/utils':
         specifier: ^0.16.0
         version: 0.16.0
+      '@web-analytics/core':
+        specifier: ^0.1.5
+        version: 0.1.5
       blackwork:
         specifier: ^0.1.0
         version: 0.1.0(@bassist/utils@0.16.0)(clsx@2.1.1)(react-dom@19.0.0-rc-206df66e-20240912(react@19.0.0-rc-206df66e-20240912))(react@19.0.0-rc-206df66e-20240912)(tailwind-merge@2.5.2)(tailwindcss-animate@1.0.7(tailwindcss@3.4.13))(tailwindcss@3.4.13)(types-react-dom@19.0.0-rc.1)(types-react@19.0.0-rc.1)
@@ -184,6 +187,9 @@ packages:
 
   '@bassist/tsconfig@0.1.1':
     resolution: {integrity: sha512-taV8Afet71n5xUGVBqasQAXjjAUdduN9sV0U7bdQJml0cvFT7o8xmk/yQ+7A2wjVZcjOiDQ7cljqQ9E/9rR4YQ==}
+
+  '@bassist/utils@0.11.2':
+    resolution: {integrity: sha512-qybnYCrh/7AYrch4r+sjgrMgUlUIXJ1xmJwnx486nOD9ishFDlel7p6n8uitH6cygNW4n+/AJm5nAKRVSq3yng==}
 
   '@bassist/utils@0.16.0':
     resolution: {integrity: sha512-fxLMF7HkWd+8/sEHrbzSxerGI2J3XtebjqB07NsnOWBDMt67+/N+NbXwwbPEjYNbwXic6mVB0nqAFrqQ8H305A==}
@@ -1183,6 +1189,9 @@ packages:
   '@unocss/eslint-plugin@0.58.9':
     resolution: {integrity: sha512-StlHO850jow2w/PTA01opkGAD6WO+iu65fxel062gp/aeoO/cRwVlQntVX7Z8QHDGXnftjW83RjvX9LqW8+iLw==}
     engines: {node: '>=14'}
+
+  '@web-analytics/core@0.1.5':
+    resolution: {integrity: sha512-oJCaAe7zj1X365ZvNQrso9yE+kszPQD2plbP5/J0EjgppZCmHSpkvqtY+T2lArGNcHezzPDjwBEkmYge6d+fIQ==}
 
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
@@ -3688,6 +3697,8 @@ snapshots:
 
   '@bassist/tsconfig@0.1.1': {}
 
+  '@bassist/utils@0.11.2': {}
+
   '@bassist/utils@0.16.0': {}
 
   '@emnapi/runtime@1.2.0':
@@ -4601,6 +4612,10 @@ snapshots:
       - eslint
       - supports-color
       - typescript
+
+  '@web-analytics/core@0.1.5':
+    dependencies:
+      '@bassist/utils': 0.11.2
 
   acorn-jsx@5.3.2(acorn@8.12.1):
     dependencies:
