@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getMessages } from 'next-intl/server'
 import { RootLayout as BaseRootLayout } from 'blackwork'
 import { type Locale } from '@/config/locale-config'
+import { WebAnalytics } from '@/components/layouts/web-analytics'
 import 'blackwork/ui-globals.css'
 import '@/styles/globals.css'
 
@@ -39,6 +40,8 @@ export default async function RootLayout({
     <BaseRootLayout lang={locale} className={inter.className}>
       <NextIntlClientProvider locale={locale} messages={messages}>
         {children}
+
+        <WebAnalytics />
       </NextIntlClientProvider>
     </BaseRootLayout>
   )

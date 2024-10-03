@@ -61,6 +61,10 @@ const socialLinks: ExtraSocialLinkProps[] = [
 const feedbackLink =
   'https://github.com/chengpeiquan/chengpeiquan.com/issues/new'
 
+const webAnalytics = {
+  baidu: '8dca8e2532df48ea7f1b15c714588691',
+} as const
+
 export const sideConfig = {
   email,
   author,
@@ -68,6 +72,7 @@ export const sideConfig = {
   navSlugs,
   socialLinks,
   feedbackLink,
+  webAnalytics,
 } as const
 
 export const getLocaleSocialLinks = (locale: Locale) => {
