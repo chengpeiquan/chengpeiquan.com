@@ -1,0 +1,119 @@
+{
+  "author": {
+    "name": "chengpeiquan",
+    "email": "chengpeiquan@chengpeiquan.com",
+    "link": "https://chengpeiquan.com"
+  },
+  "type": "article",
+  "total": 58,
+  "page": 6,
+  "lastPage": 6,
+  "category": "tech",
+  "data": [
+    {
+      "id": "js-exchange-random",
+      "type": "article",
+      "shortDate": "2018-10-24",
+      "title": "低成本实现“猜你喜欢”需求的几种思路（本质为随机数与“换一换”）",
+      "desc": "这个话题的第一次出现，是在2017年8月份的时候，到现在也蛮久了，之所以想起来说要小结一下，是因为这一年里不少新同学都过问过这么个问题，自己虽然做的不算多，但也通过几种情况完成了各类需求，写个笔记也方便以后用。那会自己第一次遇到一个需求是做一个“猜你喜欢”，然后没有后端的支持，也就是实际上这个“猜你喜欢”本质并不是“猜”，而是一个随机展示，也就是所谓的“换一换”。",
+      "keywords": "js猜你喜欢,js换一换",
+      "date": "2018-10-24 08:50:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2018/10/1-7.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "ckeditor4-rich-text-editor-webpack",
+      "type": "article",
+      "shortDate": "2018-10-22",
+      "title": "基于CKEditor4的富文本编辑器 WebPack引入说明与配置注意事项",
+      "desc": "前几天对接了个需求，说因为传统的CMS太笨重，并且一些业务结合点想落地的话改造太麻烦，想让我这边帮他做一个发布后台，前后端分离，他只负责数据和接口，其他的由我自己把控。我当时没立即答应，因为我不会啊 - - 哈哈哈没玩过这东西，之前做发布都是直接走CMS或者WordPress这种直接现成的发布系统，偶尔自己做一些活动用的传图发布页面也是简单的一个textarea就完事。不过好奇心又很强，也想学多点东西，还是接了过来，然后让他给我点时间我得尝试一下。",
+      "keywords": "ckeditor,ckeditor4,ckeditor传图,ckeditor编辑,ckeditor赋值,ckeditor路径",
+      "date": "2018-10-22 08:48:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2018/10/1-3.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "axios-ie9",
+      "type": "article",
+      "shortDate": "2018-10-21",
+      "title": "解决axios的responseType为\"json\"时IE9报undefined的兼容办法",
+      "desc": "虽然axios说可以兼容IE9，但实际上在项目开发过程中，IE9报错，而且目前的情况是responseType为\"json\"时才会报这个异常，相关请求代码大致如下",
+      "keywords": "axios undefined,axios ie9,axios response undefined",
+      "date": "2018-10-21 07:16:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2018/10/1-8.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "noconflict-jquery-zepto",
+      "type": "article",
+      "shortDate": "2018-10-20",
+      "title": "只写一次执行函数 同时兼容桌面noConflict后的jQuery与移动端的Zepto",
+      "desc": "今天遇到一个比较特殊的情况是这样子，维护一个年代比较久远的项目，说年代久远也就三年前开发上线的，实际生产线还是用的很稳，只不过中间经历了一次改版，后端倒没啥，同一个部门维护的，前端当时因为排期问题，为了及时上线，所以做桌面端模板和移动端模板是两个不同的部门的开发，于是，现在需要做一些中间层的需求就遇到了这么一个稍微有点坑爹的情况。",
+      "keywords": "jquery zepto 兼容",
+      "date": "2018-10-20 07:53:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2018/10/1-2.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "large-image-preload-fast",
+      "type": "article",
+      "shortDate": "2018-10-12",
+      "title": "弹窗大背景优化方案 png大图片预加载处理方法",
+      "desc": "因为一直做游戏风格的需求，而日常维护的游戏也比较朴素，都是用纯css处理的渐变底色即可满足弹窗背景的配置，最近处理了一个比较花哨的需求，弹窗设计方面比较下功夫，带来的一个问题就是这个弹窗背景图只能切成png，哪怕经过tinypng优化之后还有50多kb。50kb的图片说实话也不算特别大，如果作为常规的img加载其实没什么问题，但作为背景图来加载，问题就会被放大 —— 用户访问页面后，第一次打开弹窗的体验非常差，会先显示弹窗内容，再慢慢加载弹窗背景（隐藏层的背景需要层变为可见才会加载）。",
+      "keywords": "png优化,图片预加载,js预加载",
+      "date": "2018-10-12 19:49:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2018/10/1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "vue-toast",
+      "type": "article",
+      "shortDate": "2018-10-11",
+      "title": "Vue插件：封装独立的通用组件 可复用的单文件式全局Toast弹窗",
+      "desc": "最近突然很想简化一些自己写的，项目常用的调用小功能，比如一些弹窗等等，之前都是H/J/C分离，每次复用都要分别写到对应的文件里，略显麻烦。最近看了Vue官网有关于插件打包的说明，尝试了一下还可以，目前成功打包了一个Toast组件。以后每次项目要用到Toast弹窗，只需要引入一个 showToast.vue 即可直接生效调用，而不必在多个文件里维护自己的那部分代码。",
+      "keywords": "vue,toast,vue弹窗,vue toast,vue插件",
+      "date": "2018-10-11 08:09:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2018/10/1-9.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "repo": "https://github.com/chengpeiquan/vue-toast"
+    },
+    {
+      "id": "vue-ajax-axios",
+      "type": "article",
+      "shortDate": "2018-09-06",
+      "title": "Vue使用ajax 关于axios遇到乱码等问题的那些坑",
+      "desc": "这个情况当时是很懵逼的，因为在PC端，以及使用Chrome的移动端模拟器测试都一切正常，但到了真机上提交数据时，只要包含了中文，post到服务端的结果永远是【銆愭姤鍚嶇粍鍒】，这个至今还是不知道到底是什么鬼。",
+      "keywords": "vue ajax,vue axios,axios乱码,axios get,axios post,axios,qs,axios qs",
+      "date": "2018-09-06 09:46:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2018/09/1-1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "wordpress-rewrite-nginx-lnmp",
+      "type": "article",
+      "shortDate": "2018-09-06",
+      "title": "基于lnmp配置WordPress的Nginx伪静态方法",
+      "desc": "Nginx配置rewrite，基于lnmp搭建的话，其实配置起来非常简单，只需要在lnmp上输入几个简单的指令就可以把域名和伪静态类型关联上，重启Nginx后直接生效~",
+      "keywords": "wordpress,rewrite,nginx,lnmp",
+      "date": "2018-09-06 09:43:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2018/09/1-2.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    }
+  ]
+}

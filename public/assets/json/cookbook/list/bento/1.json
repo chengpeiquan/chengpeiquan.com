@@ -1,0 +1,198 @@
+{
+  "author": {
+    "name": "chengpeiquan",
+    "email": "chengpeiquan@chengpeiquan.com",
+    "link": "https://chengpeiquan.com"
+  },
+  "type": "cookbook",
+  "total": 67,
+  "page": 1,
+  "lastPage": 7,
+  "category": "bento",
+  "data": [
+    {
+      "id": "caishen-zhushou",
+      "type": "cookbook",
+      "shortDate": "2024-02-15",
+      "title": "菜谱：一年一度的仪式感 正月初五的财神猪手（1.5h）",
+      "desc": "今天正月初五，接财神，每年今天的仪式感都是做只猪手哈哈哈哈，发财就手～今天是高压锅版，如果没有高压锅也可以用隔水炖或者电饭煲来炖猪手。",
+      "keywords": "潮州猪手,潮汕猪手,潮州卤猪手,财神猪手",
+      "date": "2024-02-15 06:56:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2024/02/202402180015053.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "staple",
+        "teochew",
+        "bento"
+      ],
+      "duration": 90,
+      "price": 33,
+      "xiaohongshuId": "65ccd49d000000000b00f337"
+    },
+    {
+      "id": "nanru-kaorou-juan-shengcai",
+      "type": "cookbook",
+      "shortDate": "2023-05-01",
+      "title": "省钱菜谱：5.4元的南乳烤肉卷生菜（20min）",
+      "desc": "今天搞个南乳烤肉，之前几次我叫它腐乳的时候老是被问不是白色才是腐乳吗，这个其实也是啊，有红色也有白色，像我家那边说腐乳汁就是指这种红色的，当然有的地方更习惯叫它南乳，我也用南乳来叫它吧，减少歧义哈哈哈哈~",
+      "keywords": "潮汕美食,清汤面",
+      "date": "2023-05-01 07:32:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2023/05/20230430234407.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "bento",
+        "teochew",
+        "beginner"
+      ],
+      "duration": 20,
+      "price": 5.4,
+      "xiaohongshuId": "644e8a260000000027012696"
+    },
+    {
+      "id": "baitang-zheng-jidan",
+      "type": "cookbook",
+      "shortDate": "2023-01-13",
+      "title": "食疗菜谱：用白糖蒸鸡蛋治疗感冒鼻音（1min）",
+      "desc": "我在圣诞节那天弱阳，在元旦节那天阳康，但我的鼻音一直迟迟不好，然后我老妈教了我这招，试了几天真的好了！网上搜了一下确实有这个说法，分享一下有同样困扰的人，可以试试。",
+      "keywords": "白糖蒸鸡蛋,雪里藏珠",
+      "date": "2023-01-13 06:56:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2023/01/20230112231503.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "beginner",
+        "bento",
+        "teochew",
+        "staple"
+      ],
+      "duration": 1,
+      "price": 0.8,
+      "xiaohongshuId": "630a282a000000001902aa22"
+    },
+    {
+      "id": "shacha-roupi-men-fensi",
+      "type": "cookbook",
+      "shortDate": "2023-01-12",
+      "title": "省钱菜谱：7.68元的沙茶肉皮焖粉丝（10min）",
+      "desc": "这是前几天的晚餐了，今天才有时间来发哈哈哈哈，我好爱沙茶！变着法子玩一下肉皮的新做法，好吃！但是会有点干，建议搭配个汤一起吃，或者准备点 AD 钙奶啥的饮料嘿嘿。",
+      "keywords": "沙茶肉皮焖粉丝,潮汕肉皮,肉皮焖粉丝",
+      "date": "2023-01-12 07:14:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2023/01/20230111232706.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "bento",
+        "teochew"
+      ],
+      "duration": 10,
+      "price": 7.68,
+      "xiaohongshuId": "63bed26f000000001f00c6a3"
+    },
+    {
+      "id": "nanru-jiang-jichi",
+      "type": "cookbook",
+      "shortDate": "2022-12-04",
+      "title": "菜谱：鸡翅和酱都很下饭的南乳酱鸡翅（20min）",
+      "desc": "今晚做了个南乳酱鸡翅，做法有点像可乐鸡翅，喜欢腐乳味的话可以尝试下！",
+      "keywords": "鸡翅,腐乳鸡翅,南乳酱鸡翅",
+      "date": "2022-12-04 07:19:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/12/20221203233821.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "bento",
+        "teochew"
+      ],
+      "duration": 20,
+      "price": 20,
+      "xiaohongshuId": "638b6902000000001b014234"
+    },
+    {
+      "id": "tudouli-kao-xinaoerliang-paigu",
+      "type": "cookbook",
+      "shortDate": "2022-10-04",
+      "title": "菜谱：土豆粒烤新奥尔良排骨（30min）",
+      "desc": "做完卤肉实在没忍住哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈，切了一块卤肉，吃个宵夜！！！这个点最好的搭配就是潮汕粿汁了！！！",
+      "keywords": "烤土豆,空气炸锅烤土豆,烤排骨,空气炸锅烤排骨,土豆粒烤新奥尔良排骨,土豆烤排骨",
+      "date": "2022-10-04 05:58:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/10/20221003221155.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "beginner",
+        "bento"
+      ],
+      "duration": 30,
+      "price": 20,
+      "xiaohongshuId": "633aea73000000001d01a808"
+    },
+    {
+      "id": "baocaisi-chao-guotiao",
+      "type": "cookbook",
+      "shortDate": "2022-08-28",
+      "title": "省钱菜谱：3.5元的包菜丝炒粿条（5min）",
+      "desc": "下午物业在小区里举办了一个沙井盖美化的活动，好多小朋友画了很可爱的图案，有我喜欢的哆啦A梦和海绵宝宝哈哈哈哈，居然还有滑稽表情，也解决了我住了三个月以来的疑惑，哈哈哈哈我就说怎么看到有一些沙井盖还有图案，是有人偷偷去画的还是咋地，原来是物业组织的，好玩！",
+      "keywords": "潮州,潮州卤水,包菜丝炒粿条,炒粿条",
+      "date": "2022-08-28 06:20:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/08/20220827223411.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "beginner",
+        "bento",
+        "teochew",
+        "staple"
+      ],
+      "duration": 5,
+      "price": 3.5,
+      "xiaohongshuId": "630a282a000000001902aa22"
+    },
+    {
+      "id": "shajiang-shousi-jitui",
+      "type": "cookbook",
+      "shortDate": "2022-07-24",
+      "title": "省钱菜谱：11.5元的沙姜手撕鸡腿（35min）",
+      "desc": "今晚做个沙姜鸡腿，沙姜的味道和普通的生姜是不一样的，粤菜挺常用的，沙姜鸡、沙姜猪手啥的，因为冰箱里有上周买的冷冻琵琶腿，所以先搞个鸡来吃吃~",
+      "keywords": "沙姜手撕鸡腿,沙姜鸡腿,沙姜鸡",
+      "date": "2022-07-24 05:25:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/07/20220723213517.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "teochew",
+        "beginner",
+        "bento"
+      ],
+      "duration": 35,
+      "price": 11.5,
+      "xiaohongshuId": "62dbf6ce000000001b03cbbf"
+    },
+    {
+      "id": "liangban-shacha-feiniu",
+      "type": "cookbook",
+      "shortDate": "2022-07-17",
+      "title": "凉拌沙茶肥牛（5min）",
+      "desc": "今晚还是吃肥牛！不过换了一个做法，做成了凉拌！",
+      "keywords": "沙茶肥牛,凉拌肥牛,肥牛",
+      "date": "2022-07-17 10:44:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/07/20220717214204.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "bento",
+        "teochew",
+        "beginner"
+      ],
+      "duration": 5,
+      "price": 15,
+      "xiaohongshuId": "62d306fd000000002103f7fe"
+    },
+    {
+      "id": "jinzhengu-fanqie-feiniu-mian",
+      "type": "cookbook",
+      "shortDate": "2022-07-17",
+      "title": "金针菇番茄肥牛面（15min）",
+      "desc": "在“失踪”了三周之后，我终于又有点时间做饭了… 忙飞了最近，上周末本来想做饭的，结果又回公司加了一天班，所以又没做哈哈哈哈 -0-",
+      "keywords": "金针菇番茄肥牛面,番茄肥牛面,肥牛",
+      "date": "2022-07-17 10:30:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/07/20220717215801.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "bento",
+        "beginner"
+      ],
+      "duration": 15,
+      "price": 20,
+      "xiaohongshuId": "62d303be0000000011011bb1"
+    }
+  ]
+}

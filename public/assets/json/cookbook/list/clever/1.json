@@ -1,0 +1,30 @@
+{
+  "author": {
+    "name": "chengpeiquan",
+    "email": "chengpeiquan@chengpeiquan.com",
+    "link": "https://chengpeiquan.com"
+  },
+  "type": "cookbook",
+  "total": 1,
+  "page": 1,
+  "lastPage": 1,
+  "category": "clever",
+  "data": [
+    {
+      "id": "yuntun-dabao-cunchu-xiaojiqiao",
+      "type": "cookbook",
+      "shortDate": "2023-03-13",
+      "title": "包好近百个云吞后，打包存储的小技巧",
+      "desc": "每次包云吞动不动就是六七十个，一个人肯定一顿吃不完，要放冰箱速冻起来。",
+      "keywords": "生活小妙招,打包小技巧,打包存储云吞技巧",
+      "date": "2023-03-13 07:24:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2023/03/20230312234446.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "clever"
+      ],
+      "duration": 0,
+      "price": 0,
+      "xiaohongshuId": "640dee950000000013037d85"
+    }
+  ]
+}

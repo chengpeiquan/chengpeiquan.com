@@ -1,0 +1,87 @@
+{
+  "author": {
+    "name": "chengpeiquan",
+    "email": "chengpeiquan@chengpeiquan.com",
+    "link": "https://chengpeiquan.com"
+  },
+  "type": "cookbook",
+  "total": 4,
+  "page": 1,
+  "lastPage": 1,
+  "category": "condiment",
+  "data": [
+    {
+      "id": "chiyou-jiangcong-zhanliao",
+      "type": "cookbook",
+      "shortDate": "2022-05-14",
+      "title": "豉油姜葱蘸料 搭配白切鸡葱油鸡都好好吃！",
+      "desc": "今晚做了个清蒸三黄鸡，搭配白切鸡的姜葱酱也很好吃，不过今晚搭配的酱料用了另外的做法，平时可以交叉换口味试试！",
+      "keywords": "清蒸三黄鸡,三黄鸡",
+      "date": "2022-05-14 08:23:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/05/20220514004419.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "condiment"
+      ],
+      "duration": 1,
+      "price": 0,
+      "xiaohongshuId": "627e85e9000000000102b689",
+      "cite": [
+        "qingzheng-sanhuangji"
+      ]
+    },
+    {
+      "id": "chaoshan-congzhulao",
+      "type": "cookbook",
+      "shortDate": "2022-02-02",
+      "title": "潮汕特色调味品 葱珠朥做法",
+      "desc": "今天又煮了粿汁，刚好葱珠朥要做新的了，单独记录一篇菜谱哈哈哈。",
+      "keywords": "葱珠油,葱珠朥,潮汕调味品",
+      "date": "2022-02-02 08:17:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/02/20220201234256.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "teochew",
+        "condiment"
+      ],
+      "duration": 0,
+      "price": 0,
+      "xiaohongshuId": "61f95d0c000000002103dc4c",
+      "cite": [
+        "chaoshan-guozhi",
+        "chaozhou-guotiaojuan"
+      ]
+    },
+    {
+      "id": "lajiang-zhanjiang",
+      "type": "cookbook",
+      "shortDate": "2022-01-03",
+      "title": "超下饭的辣酱蘸酱！几块排骨吃了我两碗饭！",
+      "desc": "今晚本来想包饺子，不过程序写的挺入神的不想起身做饭，所以炖了个花生莲藕排骨汤（炖汤不用人看着，方便！",
+      "keywords": "辣椒酱,排骨酱,排骨蘸酱,饺子蘸酱",
+      "date": "2022-01-03 05:04:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/01/20220108005306.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "condiment"
+      ],
+      "duration": 0,
+      "price": 0,
+      "xiaohongshuId": "61d1a2e5000000002103e669"
+    },
+    {
+      "id": "chaoshan-suantoulao",
+      "type": "cookbook",
+      "shortDate": "2021-09-06",
+      "title": "超简单的潮汕蒜头朥做法（我菜谱里常出现的）",
+      "desc": "前几天做菜的时候我就在想，会不会有人问我“蒜头油”是什么，然后昨晚评论区真的有人问了，刚好周五做灌面的时候把瓶底最后一点用完了，周末重新做一次，顺便分享一下。",
+      "keywords": "潮汕美食,蒜头朥,蒜头油",
+      "date": "2021-09-06 07:43:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/02/20220215232444.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "teochew",
+        "condiment"
+      ],
+      "duration": 20,
+      "price": 0,
+      "xiaohongshuId": "6134e584000000000102f1ad"
+    }
+  ]
+}

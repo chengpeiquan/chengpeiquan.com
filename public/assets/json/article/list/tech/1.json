@@ -1,0 +1,150 @@
+{
+  "author": {
+    "name": "chengpeiquan",
+    "email": "chengpeiquan@chengpeiquan.com",
+    "link": "https://chengpeiquan.com"
+  },
+  "type": "article",
+  "total": 58,
+  "page": 1,
+  "lastPage": 6,
+  "category": "tech",
+  "data": [
+    {
+      "id": "typescript-error-cannot-find-module-undici-types",
+      "type": "article",
+      "shortDate": "2024-04-07",
+      "title": "干净的 TypeScript 项目在编译时报错 Cannot find module 'undici-types' 的原因和解决",
+      "desc": "很久前配合 《前端工程化：基于 Vue.js 3.0 的设计与实践》 一书在 TypeScript 章节里讲解的内容，提供了一个很干净的 demo （见 hello-node ），除了必要的基础技术栈外，没有过多的第三方依赖，一直运行良好，直到这个假期收到了读者反馈，和我说在运行 npm run build 时出现类似下方的报错，无法正确编译。",
+      "keywords": "typescript error undici-types,cannot find module undici-types",
+      "date": "2024-04-07 05:55:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2024/04/202404062211878.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "macos-android-studio-emulator-hosts",
+      "type": "article",
+      "shortDate": "2024-02-11",
+      "title": "macOS 基于 Android Studio 修改模拟器 Hosts",
+      "desc": "用回 macOS 一段时间了，各种软件对 M 系列芯片基本上也都有支持的版本，除了安卓模拟器 - - 。之前在 Windows 上面常用的 MuMu 、雷电、夜神等模拟器，不是没有 Mac 版，就是虽然有 Mac 版，但不支持 M 系列芯片（ ARM 架构），所以抛弃一系列国产模拟器，回归 Android Studio 。",
+      "keywords": "mac, macOS, mac emulator, android emulator, android emulator hosts",
+      "date": "2024-02-11 05:03:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2024/02/202402102106942.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "my-custom-nas",
+      "type": "article",
+      "shortDate": "2023-06-11",
+      "title": "千元预算组装了个入门NAS设备 一文分享NAS的硬件基础知识",
+      "desc": "最近在一千元预算内搞了一台 NAS ，在这个过程也算蛮自定义的搭配，记录一下这个过程中的主要知识点和最终搭配结果。初接触 NAS 的时候最迷茫的应该就是它的概念和用途了，就算了解了它的作用，想采购一个合适的 NAS 设备又会涉及到很多硬件知识。既然选择自己配 NAS 做一个 DIY 玩家，肯定还是需要先熟悉一些前置的硬件知识，否则大可花几千块钱买成品 NAS 了，所以有一些前置知识点还是值得先简单了解一下。",
+      "keywords": "千元NAS,NAS,群晖,SDM,PVE",
+      "date": "2023-06-11 07:39:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2023/06/20230611223039.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "git-selective-merge",
+      "type": "article",
+      "shortDate": "2023-02-03",
+      "title": "Git的选择性合并操作笔记：合并某个版本或某个提交",
+      "desc": "今天帮朋友解决了一个代码合并的问题，他有两个项目， B 项目最初是基于 A 项目作为架构底子，根据业务进行了不同需求的开发，沉淀了不少新功能，而 A 项目本身也在继续维护，可以简单的理解为， A 项目是通过类似 create-preset 这样的脚手架拉取下来的一个项目模板，而 B 项目是一个业务项目，所以 A 项目通常只提供一些公共功能的维护升级，而 B 项目更注重业务功能开发。",
+      "keywords": "github,github上传,github删除文件夹",
+      "date": "2023-02-03 00:56:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2023/02/20230202170739.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "zhihu-collection-helper",
+      "type": "article",
+      "shortDate": "2022-10-22",
+      "title": "知乎收藏夹助手：自动化将专栏的文章添加到收藏夹",
+      "desc": "知乎收藏夹助手，可将专栏的文章添加到收藏夹中（因为专栏的内容通常比较垂直，不会太杂），适用于收藏夹在创建初期需要大量内容填充的情况。",
+      "keywords": "知乎,知乎工具,爬虫",
+      "date": "2022-10-22 07:53:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/10/20221021235753.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "repo": "https://github.com/chengpeiquan/zhihu-collection-helper"
+    },
+    {
+      "id": "vite-vue3-prerender",
+      "type": "article",
+      "shortDate": "2022-06-02",
+      "title": "用Vite更简单的解决Vue3项目的预渲染问题",
+      "desc": "之前 Webpack 项目经常会用到预渲染，现在团队都开始用 Vite 了，所以弄一个基于 Vite 的 Vue 3 预渲染 demo 可以参考。",
+      "keywords": "Vite,预渲染,Vite预渲染,Vue3预渲染",
+      "date": "2022-06-02 22:59:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/06/20220605213042.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "repo": "https://github.com/chengpeiquan/vite-vue3-prerender-demo"
+    },
+    {
+      "id": "pinia",
+      "type": "article",
+      "shortDate": "2022-04-05",
+      "title": "Pinia怎么用？Vue3全局状态的管理工具Pinia教程",
+      "desc": "Vue 官方推出的全局状态管理工具目前有 Vuex 和 Pinia ，两者的作用和用法都比较相似，但 Pinia 的设计更贴近 Vue 3 组合式 API 的用法。Pinia 目前还没有被广泛的默认集成在各种脚手架里，官网也只有英文版，整理了教程便于提前学习。",
+      "keywords": "vue 3.0,vue 3.x,vue 3.0 教程,学习 vue 3.0,vue 3.0 案例,vue 3.0 教学,vue 3.0 好用吗,pinia 怎么用,pinia教程",
+      "date": "2022-04-05 07:44:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/04/20220405011839.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "isHot": true,
+      "repo": "https://github.com/chengpeiquan/learning-vue3"
+    },
+    {
+      "id": "flutter",
+      "type": "article",
+      "shortDate": "2022-01-28",
+      "title": "从前端开发者身份入门Flutter和Dart的学习笔记",
+      "desc": "有很多相似，又有很多不同，慢慢适应一下",
+      "keywords": "flutter,dart",
+      "date": "2022-01-28 00:02:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2021/11/20220127161927.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "isDraft": true
+    },
+    {
+      "id": "a-week-time-of-a-markdown-engineer",
+      "type": "article",
+      "shortDate": "2022-01-22",
+      "title": "Markdown工程师的一周",
+      "desc": "马上就快过年了，最近才比较有时间把之前很多想搞一直没时间搞的东西弄一下，比如说最近一周在干的事情就是，补各种文档。我是没想到我一周能敲差不多 25 个小时的 Markdown … 几乎一天有 5 个小时在码字，天了噜…",
+      "keywords": "markdown,markdown engineer,markdown ppt,engineer ppt",
+      "date": "2022-01-22 07:23:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/01/20220121232301.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech",
+        "prose"
+      ]
+    },
+    {
+      "id": "tsc-compiles-dts",
+      "type": "article",
+      "shortDate": "2022-01-21",
+      "title": "TSC编译时指定生成d.ts的目录 并解决无法导入package.json和alias别名的问题",
+      "desc": "虽然之前在构建 JS Library 的时候，也是有生成 `d.ts` 文件在输出目录，但总归比较凌乱，意思就是构建出来的 JS Library 和 DTS 文件都在同一级文件夹里。不是说不能用吧，总归看起来有点 low ，如果是单个 DTS 文件还好，但有时候构建出来会有好几个 DTS 这种情况下都放在一起总觉得有点别扭，所以今天想看一下能不能更优雅一点，存档在 types 文件夹里。",
+      "keywords": "javascript type,js type,javascript with typescript",
+      "date": "2022-01-21 20:22:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2021/11/20220121141631.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    }
+  ]
+}

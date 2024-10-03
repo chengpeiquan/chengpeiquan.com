@@ -1,0 +1,213 @@
+{
+  "author": {
+    "name": "chengpeiquan",
+    "email": "chengpeiquan@chengpeiquan.com",
+    "link": "https://chengpeiquan.com"
+  },
+  "type": "cookbook",
+  "total": 84,
+  "page": 5,
+  "lastPage": 9,
+  "category": "teochew",
+  "data": [
+    {
+      "id": "furu-zheng-roupian",
+      "type": "cookbook",
+      "shortDate": "2022-02-09",
+      "title": "省钱菜谱：6块钱的腐乳蒸肉片（20min）",
+      "desc": "这是跟我妈学的一个做法，我以前读书在家的时候就很喜欢吃了，蒸肉蒸排骨都好吃，偏甜口。",
+      "keywords": "腐乳蒸肉片,腐乳",
+      "date": "2022-02-09 04:05:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/02/20220214004426.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "bento",
+        "teochew",
+        "beginner"
+      ],
+      "duration": 20,
+      "price": 8,
+      "xiaohongshuId": "62025c99000000000102efef",
+      "cite": [
+        "furu-zheng-paigu"
+      ]
+    },
+    {
+      "id": "chaozhou-niurouwan-pin-niujinwan-guotiaotang",
+      "type": "cookbook",
+      "shortDate": "2022-02-07",
+      "title": "菜单分享：潮州牛肉丸拼牛筋丸粿条汤",
+      "desc": "啊哈哈哈分享个菜单，牛肉丸和牛筋丸是年前买的，过年过节哪怕没回家，牛肉丸一煮，家乡的感觉就出来了！！！",
+      "keywords": "牛筋丸,牛肉丸,粿条汤,潮汕汤粉",
+      "date": "2022-02-07 13:20:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/02/20220214005726.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "staple",
+        "teochew"
+      ],
+      "duration": 10,
+      "price": 24,
+      "xiaohongshuId": "62003b92000000000102a6b2",
+      "cite": [
+        "chaoshan-suantoulao"
+      ]
+    },
+    {
+      "id": "chaoshan-congzhulao",
+      "type": "cookbook",
+      "shortDate": "2022-02-02",
+      "title": "潮汕特色调味品 葱珠朥做法",
+      "desc": "今天又煮了粿汁，刚好葱珠朥要做新的了，单独记录一篇菜谱哈哈哈。",
+      "keywords": "葱珠油,葱珠朥,潮汕调味品",
+      "date": "2022-02-02 08:17:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/02/20220201234256.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "teochew",
+        "condiment"
+      ],
+      "duration": 0,
+      "price": 0,
+      "xiaohongshuId": "61f95d0c000000002103dc4c",
+      "cite": [
+        "chaoshan-guozhi",
+        "chaozhou-guotiaojuan"
+      ]
+    },
+    {
+      "id": "chaoshan-lushui-zhuerduo",
+      "type": "cookbook",
+      "shortDate": "2022-01-31",
+      "title": "潮汕卤水之卤猪耳朵",
+      "desc": "是什么动力让我放假第一天早起？哈哈哈哈哈哈哈哈哈哈是为了跟大妈们抢猪耳朵，之前几个周末就想做卤猪耳了，结果每次去到都卖完了，一只猪就两只耳朵哈哈哈哈…",
+      "keywords": "潮州,潮州卤水,潮汕卤水,卤猪耳朵,卤猪头肉",
+      "date": "2022-01-31 05:56:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/01/20220130233409.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "bento",
+        "teochew"
+      ],
+      "duration": 0,
+      "price": 0,
+      "xiaohongshuId": "61f698f9000000000102e66e",
+      "cite": [
+        "chaoshan-lushui-wuhuarou"
+      ]
+    },
+    {
+      "id": "chaozhou-yuguo-yusigao",
+      "type": "cookbook",
+      "shortDate": "2022-01-18",
+      "title": "省钱菜谱：3块钱一餐的芋粿（60min）",
+      "desc": "我来了！昨晚的电饭煲做的芋粿，留了一半今晚煎，还是好吃哈哈哈哈！算了一下成本，分了两顿吃完，一顿 3 块钱，大约有 5 两重，性价比还蛮高的！芋粿是潮汕的小吃，我不确定和芋丝糕是不是完全一样哈哈哈，老家的粿是用的粘米粉，所以我也是用这个来做。",
+      "keywords": "芋粿,芋丝糕,潮州小吃,潮汕小吃",
+      "date": "2022-01-18 07:04:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/01/20220120003111.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "staple",
+        "teochew"
+      ],
+      "duration": 60,
+      "price": 3,
+      "xiaohongshuId": "61e5856b0000000021035146"
+    },
+    {
+      "id": "yurou-yuntun",
+      "type": "cookbook",
+      "shortDate": "2022-01-16",
+      "title": "省钱菜谱：3.15元一碗的鱼肉云吞（25min）",
+      "desc": "我的第一篇菜谱笔记就是关于云吞的，当时是包的纯肉，最近巴沙鱼老是有打折，今晚包个鱼肉云吞吃吃。今晚的食材一共 11 块钱，包了 51 个云吞，平均一个云吞 2 毛 1，按照 15 个一碗刚好吃三碗，一碗就差不多 3.15 元。",
+      "keywords": "云吞,云吞包法,云吞怎么包,鱼肉云吞,巴沙鱼云吞,龙利鱼云吞",
+      "date": "2022-01-16 07:14:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/01/20220115235323.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "staple",
+        "teochew"
+      ],
+      "duration": 25,
+      "price": 3.15,
+      "xiaohongshuId": "61e2e4db000000000102e999",
+      "cite": [
+        "chaoshan-suantoulao"
+      ]
+    },
+    {
+      "id": "chaoshan-tese-qingtangmian",
+      "type": "cookbook",
+      "shortDate": "2022-01-15",
+      "title": "省钱菜谱：0.3元的潮汕特色清汤面（5min）",
+      "desc": "今天起床的时候看到8点54分，心里一惊！内心第一反应是完了，长这么大第一次要旷工，然后瞬间想起周六啊！！！被自己笑死！9点左右这个点起床还是凉嗖嗖的，在阳台听到楼下通知测核酸，洗漱完煮个面暖和暖和，等会排队也不太冷！",
+      "keywords": "潮汕美食,清汤面",
+      "date": "2022-01-15 18:43:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/01/20220116000116.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "staple",
+        "teochew",
+        "beginner"
+      ],
+      "duration": 5,
+      "price": 0.3,
+      "xiaohongshuId": "61e234e9000000000102d232",
+      "cite": [
+        "chaoshan-suantoulao"
+      ]
+    },
+    {
+      "id": "shacha-chaorou",
+      "type": "cookbook",
+      "shortDate": "2022-01-14",
+      "title": "省钱菜谱：4块钱的沙茶炒肉（3min）",
+      "desc": "这几天深圳又出了几例，还好南山这边还是很稳，不过也是测了好几轮核酸，希望疫情快点过去！！！今晚还是做个潮汕风味的快手菜，沙茶酱是主角哈哈哈！",
+      "keywords": "潮汕美食,沙茶炒肉,沙茶酱",
+      "date": "2022-01-14 07:07:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/01/20220113225102.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "bento",
+        "teochew",
+        "beginner"
+      ],
+      "duration": 3,
+      "price": 4,
+      "xiaohongshuId": "61e03a060000000001028edb"
+    },
+    {
+      "id": "roupi-chao-jielan",
+      "type": "cookbook",
+      "shortDate": "2021-12-24",
+      "title": "省钱菜单：2.9元的肉皮炒芥兰（3min）",
+      "desc": "明天的午餐带饭有昨晚留下的半截肉卷，今晚想着就不买肉了，冰箱里的小半把芥兰，搭配一下家里也有的肉皮一起炒个菜。",
+      "keywords": "省钱菜谱,肉皮,芥兰,潮汕美食,潮汕菜,潮州,汕头,上班带饭",
+      "date": "2021-12-24 05:48:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2021/12/20211225001910.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "teochew"
+      ],
+      "duration": 3,
+      "price": 2.9,
+      "xiaohongshuId": "61c47e24000000000102493a"
+    },
+    {
+      "id": "xiancai-chao-roujuan",
+      "type": "cookbook",
+      "shortDate": "2021-12-23",
+      "title": "省钱菜单：4.7元的咸菜炒肉卷（3min）",
+      "desc": "哈哈哈哈上次的韭菜花炒肉卷下面评论好几个小姐姐都推荐了咸菜炒肉卷！我也来啦！！！好吃！！！",
+      "keywords": "潮州肉卷,潮州咸菜,咸菜炒肉卷",
+      "date": "2021-12-23 07:07:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/01/20220108010442.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "bento",
+        "teochew",
+        "beginner"
+      ],
+      "duration": 3,
+      "price": 4.7,
+      "xiaohongshuId": "61c33f36000000000102d2e7"
+    }
+  ]
+}

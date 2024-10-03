@@ -1,0 +1,151 @@
+{
+  "author": {
+    "name": "chengpeiquan",
+    "email": "chengpeiquan@chengpeiquan.com",
+    "link": "https://chengpeiquan.com"
+  },
+  "type": "article",
+  "total": 77,
+  "page": 5,
+  "lastPage": 8,
+  "category": "default",
+  "data": [
+    {
+      "id": "vue3",
+      "type": "article",
+      "shortDate": "2020-10-26",
+      "title": "资料专题：Vue3.0学习教程与实战案例",
+      "desc": "自从海贼王更新后，就开始正式用 `Vue 3.0` + `typescript` 写业务了，在经过这段时间的尝试，发现从测试到正式版本变化还是很大，很多过往的博文已经对不上了，还是踩了不少坑，这个过程也打了不少笔记，整理起来，供需要的朋友避坑，也免得以后自己忘记了。",
+      "keywords": "vue 3.0,vue 3.x,vue 3.0 教程,学习 vue 3.0,vue 3.0 案例,vue 3.0 教学,vue 3.0 好用吗",
+      "date": "2020-10-26 06:30:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2020/10/vue3.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "isHot": true,
+      "repo": "https://github.com/chengpeiquan/learning-vue3"
+    },
+    {
+      "id": "js-file-reader",
+      "type": "article",
+      "shortDate": "2020-09-28",
+      "title": "js-file-reader 一句代码把input的file转换为base64和blob格式",
+      "desc": "目前除了美团之外，其他的外卖app（像饿了么啊、瑞幸啊、麦当劳肯德基啊）都没提供自动计算账单的功能，自己每次拉excel算的蛋疼，所以写了这个，无需纠结红包、抵扣券等乱七八糟的减免，会自动计算折扣比例来得到最终账单。",
+      "keywords": "file reader,js file reader,web file reader,read file",
+      "date": "2020-09-28 08:22:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2020/09/2-3.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "repo": "https://github.com/chengpeiquan/js-file-reader"
+    },
+    {
+      "id": "vue-vscode-snippets",
+      "type": "article",
+      "shortDate": "2020-09-21",
+      "title": "解决vscode保存vue文件时 压缩stylus代码为一行以及无法注释template的问题",
+      "desc": "目前除了美团之外，其他的外卖app（像饿了么啊、瑞幸啊、麦当劳肯德基啊）都没提供自动计算账单的功能，自己每次拉excel算的蛋疼，所以写了这个，无需纠结红包、抵扣券等乱七八糟的减免，会自动计算折扣比例来得到最终账单。",
+      "keywords": "stylus保存压缩,stylus错乱,stylus格式化",
+      "date": "2020-09-21 01:02:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2020/09/vue-vscode-snippets.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "getboundingclientrect",
+      "type": "article",
+      "shortDate": "2020-09-15",
+      "title": "使用getBoundingClientRect 针对scrollTop一直为0且documentElement无效的解决方案",
+      "desc": "今天在上线一个移动端需求的时候，QA妹子跟我反馈在她们一部iPhone X上面出现了一个滚动加载会同时触发下拉刷新的bug…我就 ？？？……一个在顶部一个在底部这也能扯上关系？然后再进一步测试，发现这个坑是出现在自家app的内置webview上，在浏览器和微信等环境都正常。",
+      "keywords": "scrollTop 0,scrollTop bug,getBoundingClientRect",
+      "date": "2020-09-15 09:41:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2020/09/3.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "rollupjs",
+      "type": "article",
+      "shortDate": "2020-08-10",
+      "title": "JSSDK开发思路 基于RollupJS的经验记录",
+      "desc": "虽然Rollup的推出时间应该是比Webpack早，但之前类库的工作都是公司其他前端部门负责维护，还真的没有去接触过它，直到最近自己要负责开发一个用于新业务线的JSBridge和JSLibrary，才对它有了一定的了解。",
+      "keywords": "rollup,rollupjs,rollup打包,rollup babel",
+      "date": "2020-08-10 07:42:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2020/08/1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "my-netease",
+      "type": "article",
+      "shortDate": "2020-06-15",
+      "title": "记录一下在网易五年来的工作与生活",
+      "desc": "虽然加班很多，但回顾起来，工作内外还是很快乐的！",
+      "keywords": "网易,在网易工作是什么体验,网易游戏",
+      "date": "2020-06-15 00:48:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2021/05/20210509201311.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ],
+      "repo": "https://github.com/chengpeiquan/my-netease"
+    },
+    {
+      "id": "vue-cli-config-alias-error",
+      "type": "article",
+      "shortDate": "2020-05-23",
+      "title": "记录vue.config设置alias无法生效的一次问题排查",
+      "desc": "昨晚把Node和Vue-CLI等工具都升级到了最新版，create了一个新项目，因为之前干活的时候为了方便都是拷贝之前的配置文件下来，很多东西都是基于旧版的解构，所以想针对新版本也处理一份配置，于是只拿了vue.config.js来到新项目这边。",
+      "keywords": "vue cli alias,vue alias,webpack alias",
+      "date": "2020-05-23 00:58:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2020/05/4.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "canvas-movie-jitter-effect",
+      "type": "article",
+      "shortDate": "2020-04-21",
+      "title": "电影故障抖动视觉效果实现：对大话手游愚人节专题的探究",
+      "desc": "前几天愚人节的时候，大话手游官网上了一个专题，里面很多图片位置都使用了一个类似电影那种画面抖动的效果（目前只剩下一个slogan了，其他都下线了），很好奇是怎么实现的，于是扒了一下页面的源码，了解了一些实现思路，整理一下以后可能会用到。",
+      "keywords": "抖屏效果",
+      "date": "2020-04-21 07:47:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2020/04/1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "repo": "https://github.com/chengpeiquan/canvas-movie-jitter-effect"
+    },
+    {
+      "id": "aliyun-ecs-server-migration",
+      "type": "article",
+      "shortDate": "2020-02-29",
+      "title": "阿里云ECS从香港迁移至国内节点实战教程",
+      "desc": "之前因为贪图管理上的方便，一直把这个博客的服务器假设在香港那边，其实速度体验和稳定性啥的都挺好，不过最近打算给博客上线一个小程序版本，受于腾讯的政策要求，必须备案和接入https，考虑了一下，看了一下国内地区的ECS价格，刚好有优惠，所以决定做一个迁移。",
+      "keywords": "阿里云ESC迁移,阿里云迁移,阿里云服务器迁移",
+      "date": "2020-02-29 02:10:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2020/02/1-1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "api-design",
+      "type": "article",
+      "shortDate": "2020-02-17",
+      "title": "接口设计：从前端开发的角度谈一谈接口规范",
+      "desc": "从前端的角度，以一个接口消费者的身份来谈一谈如何设计一套比较合理的接口，本文主要分为两部分：“接口的基本数据格式”和“接口的业务数据格式”。本文的目的是想减少前后端对接过程中产生的沟通问题，还有优化一些可以避免的错误，甚至于你可以不提供接口文档，前端也能快速上手你的接口。",
+      "keywords": "接口设计,接口格式,接口规范",
+      "date": "2020-02-17 09:01:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2020/02/1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech",
+        "design"
+      ],
+      "isHot": true
+    }
+  ]
+}

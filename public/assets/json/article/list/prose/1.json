@@ -1,0 +1,162 @@
+{
+  "author": {
+    "name": "chengpeiquan",
+    "email": "chengpeiquan@chengpeiquan.com",
+    "link": "https://chengpeiquan.com"
+  },
+  "type": "article",
+  "total": 19,
+  "page": 1,
+  "lastPage": 2,
+  "category": "prose",
+  "data": [
+    {
+      "id": "new-mac-2024",
+      "type": "article",
+      "shortDate": "2024-01-15",
+      "title": "给猫儿子的新年礼物 它很喜欢！",
+      "desc": "哈哈哈哈哈上一次买 Mac 还是 2015 年，然后在 2019 年换了 Windows 台式机用到现在。最近跑了 5 年的台式机又感觉配置不太够用了，干脆再换回 Mac ，开心！",
+      "keywords": "mac, macOS",
+      "date": "2024-01-15 01:33:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2024/02/202402102245723.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ]
+    },
+    {
+      "id": "2023-year-end-summary",
+      "type": "article",
+      "shortDate": "2023-12-30",
+      "title": "年终总结：2023年的一些回顾和2024年的一些小规划",
+      "desc": "本来今年的总结第一句话想写 “2023 对我算是比较特殊的一年” ，结果看了一眼去年的回顾，去年也是这么写的… 那今年再强化一下，改成 “2023 对我是非常特殊的一年” 哈哈哈哈哈哈哈，确实非常特殊的一年，因为经历了很多之前没有经历过的事情。",
+      "keywords": "2023 year end summary",
+      "date": "2023-12-30 22:52:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2023/12/20231230212146.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ],
+      "cite": [
+        "2022-year-end-summary",
+        "2021-year-end-summary"
+      ]
+    },
+    {
+      "id": "the-story-of-the-book-learning-vue3",
+      "type": "article",
+      "shortDate": "2023-05-07",
+      "title": "我写了一本书《前端工程化：基于 Vue.js 3.0 的设计与实践》 想分享一下它背后的故事",
+      "desc": "大家好，我是程沛权，经过差不多一年时间的打磨和优化，我的第一本技术书籍《前端工程化：基于 Vue.js 3.0 的设计与实践》出版上市啦！这是一本以 Vue.js 的 3.0 版本为核心技术栈，围绕 “前端工程化” 和 TypeScript 的知识点展开讲解的前端入门书籍。",
+      "keywords": "前端工程化：基于 Vue.js 3.0 的设计与实践,前端工程化,Vue3,Vue3 入门指南与实战案例",
+      "date": "2023-05-07 06:03:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2023/05/20230506220635.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ],
+      "repo": "https://github.com/chengpeiquan/learning-vue3"
+    },
+    {
+      "id": "2022-year-end-summary",
+      "type": "article",
+      "shortDate": "2023-01-01",
+      "title": "年终总结：2022年的一些回顾和2023年的一些小规划",
+      "desc": "2022 对我算是比较特殊的一年，虽然因为疫情原因彻底宅了一年，但也没有闲着，换了工作换了城市，回到了阔别两年的第二故乡广州，工作之外的学习和生活对个人的成长也有一些值得复盘的地方。",
+      "keywords": "2022 year end summary",
+      "date": "2023-01-01 05:24:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2023/01/20230101235604.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ],
+      "cite": [
+        "2021-year-end-summary"
+      ]
+    },
+    {
+      "id": "cooking-cookbook",
+      "type": "article",
+      "shortDate": "2022-02-21",
+      "title": "每天吃什么？上班带什么饭？程序员教你做菜啦！",
+      "desc": "从 2021 年底陆续开始维护这个菜谱栏目，终于有一些像模像样的作品沉淀了，你可以在这里了解一些关于如何下厨烹饪的菜谱和教程，这是来自一名从小就学做饭的程序员的原创经验。",
+      "keywords": "小程序,菜谱小程序",
+      "date": "2022-02-21 21:01:14",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/02/20220221130454.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ]
+    },
+    {
+      "id": "cookbook-donate",
+      "type": "article",
+      "shortDate": "2022-02-19",
+      "title": "赞赏计划与赞赏记录",
+      "desc": "我的所有菜谱都是基于日常做饭记录的原创作品，如果你觉得有帮助，欢迎捐赠一个猫罐头给我家三只猫猫，在每篇菜谱的底部都有一个 “喜欢” 按钮，点开后可长按保存再扫描我的赞赏码，十分感谢！",
+      "keywords": "小程序,菜谱小程序",
+      "date": "2022-02-19 21:39:14",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/01/20220215133323.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ],
+      "isDraft": true,
+      "simplify": true
+    },
+    {
+      "id": "cookbook-faq",
+      "type": "article",
+      "shortDate": "2022-02-19",
+      "title": "小程序使用帮助",
+      "desc": "菜谱小程序的使用帮助",
+      "keywords": "小程序,菜谱小程序",
+      "date": "2022-02-19 21:39:14",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/01/20220215133323.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ],
+      "isDraft": true,
+      "simplify": true
+    },
+    {
+      "id": "about-didi",
+      "type": "article",
+      "shortDate": "2022-02-15",
+      "title": "关于底迪",
+      "desc": "因为当时在注册账号的时候要取名和设置头像，刚好手机里最新的照片是我家猫「 底迪 」的照片，所以就用这张照片做了头像，名字也就顺其自然的用了我家底迪的名，一直用到了现在。",
+      "keywords": "底迪",
+      "date": "2022-02-15 06:02:14",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/01/20220215133323.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ],
+      "isDraft": true,
+      "simplify": true
+    },
+    {
+      "id": "cookbook-changelog",
+      "type": "article",
+      "shortDate": "2022-02-15",
+      "title": "小程序版本更新记录",
+      "desc": "这里记录菜谱小程序的版本迭代记录，如果你在体验的过程中有功能建议、体验优化建议，或者发现了什么 BUG ，欢迎在小程序的 “反馈” 功能里给我留言（打开小程序右上角的 “···” 就能看到），我会评估需求的优先级和可实现成本，在后续的版本迭代中优化。",
+      "keywords": "小程序,菜谱小程序",
+      "date": "2022-02-15 06:02:14",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/01/20220215133323.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ],
+      "isDraft": true,
+      "simplify": true
+    },
+    {
+      "id": "cookbook-guide",
+      "type": "article",
+      "shortDate": "2022-02-15",
+      "title": "新手下厨指导",
+      "desc": "所谓万事开头难，只要开了个头，后面就很顺利了，所以这篇文章的本意也是如此，希望能通过我的一些经验，帮助新人朋友适应厨房，喜欢厨房。",
+      "keywords": "小程序,菜谱小程序,新人怎么做饭,新手下厨指南",
+      "date": "2022-02-15 06:02:14",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/01/20220215133323.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ],
+      "isDraft": true,
+      "simplify": true
+    }
+  ]
+}

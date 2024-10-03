@@ -34,6 +34,8 @@ const author: Readonly<Metadata['authors']> = {
   url: 'https://chengpeiquan.com',
 }
 
+const email = 'chengpeiquan@chengpeiquan.com'
+
 const navSlugs = ['home', 'article', 'cookbook', 'about'] as const
 
 export type NavSlug = (typeof sideConfig.navSlugs)[number]
@@ -60,6 +62,7 @@ const feedbackLink =
   'https://github.com/chengpeiquan/chengpeiquan.com/issues/new'
 
 export const sideConfig = {
+  email,
   author,
   avatar,
   navSlugs,

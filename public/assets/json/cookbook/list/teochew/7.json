@@ -1,0 +1,200 @@
+{
+  "author": {
+    "name": "chengpeiquan",
+    "email": "chengpeiquan@chengpeiquan.com",
+    "link": "https://chengpeiquan.com"
+  },
+  "type": "cookbook",
+  "total": 84,
+  "page": 7,
+  "lastPage": 9,
+  "category": "teochew",
+  "data": [
+    {
+      "id": "chaozhou-zhafanshu",
+      "type": "cookbook",
+      "shortDate": "2021-11-22",
+      "title": "省钱菜谱：2个银的潮州浮分割（嗯！炸番薯）",
+      "desc": "今天在家有点馋，搞个潮汕小吃“浮分割”做个下午茶，搭配功夫茶真不错！其实就是“炸番薯”哈哈哈哈，在我家那边都叫它“浮分割”，潮州市区把番薯叫“分割”（读音上，当年数学课教到黄金分割的时候全班都笑炸了哈哈哈哈哈哈哈哈哈哈哈哈哈），当然别的地方不一定这么叫哈哈哈哈，标题的2个银就是两块钱",
+      "keywords": "潮州小吃,潮汕小吃,扎番薯,炸地瓜",
+      "date": "2021-11-22 01:00:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/02/20220202154605.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "teochew",
+        "staple"
+      ],
+      "duration": 15,
+      "price": 2,
+      "xiaohongshuId": "619a0aa50000000001028c11"
+    },
+    {
+      "id": "chaozhou-xiancai-chao-rousi",
+      "type": "cookbook",
+      "shortDate": "2021-11-11",
+      "title": "省钱菜谱：3元的潮州咸菜炒肉丝（1min）",
+      "desc": "今晚回来晚，依然没什么东西买，不过居然看到了“潮州咸菜”……我的家乡小菜啊啊啊！熟悉的感觉！！！六七年前我刚学下厨的时候就经常做这个，因为真的特别简单，又极具家乡风味（虽然我不知道今晚这颗潮州咸菜为什么跑去汕头生产哈哈哈哈哈哈…不过都是胶己人！！！",
+      "keywords": "潮州,潮州咸菜,咸菜炒肉丝",
+      "date": "2021-11-11 07:23:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/02/20220203164003.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "bento",
+        "teochew",
+        "beginner"
+      ],
+      "duration": 1,
+      "price": 3,
+      "xiaohongshuId": "618be40f000000002103d97b"
+    },
+    {
+      "id": "chaozhou-chao-doufan",
+      "type": "cookbook",
+      "shortDate": "2021-11-02",
+      "title": "省钱菜谱：3.4元的潮州炒豆饭（10min）",
+      "desc": "炒豆饭，也是我家比较常做的炒饭之一，也是以前还在潮州家里的时候我妈经常做给我吃的炒饭品类的其中一种。",
+      "keywords": "潮州炒饭,豆角炒饭,潮州炒豆饭",
+      "date": "2021-11-02 05:40:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/02/20220203180355.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "bento",
+        "staple",
+        "teochew"
+      ],
+      "duration": 10,
+      "price": 3.4,
+      "xiaohongshuId": "617fee5b0000000021038882"
+    },
+    {
+      "id": "roupian-chao-baocaisi",
+      "type": "cookbook",
+      "shortDate": "2021-11-01",
+      "title": "省钱菜谱：2.2元的肉片炒包菜丝（5min）",
+      "desc": "买的下午3点多的高铁，回到深圳住的地方还不到6点，来回还是蛮方便的，还赶得上做个晚餐，今晚简单一点，炒了个包菜丝。",
+      "keywords": "肉片炒包菜丝,包菜炒肉",
+      "date": "2021-11-01 06:02:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/02/20220203181229.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "teochew"
+      ],
+      "duration": 5,
+      "price": 2.2,
+      "xiaohongshuId": "617ea611000000002103e52d"
+    },
+    {
+      "id": "baicaisi-haoyou-chaomian",
+      "type": "cookbook",
+      "shortDate": "2021-10-29",
+      "title": "省钱菜谱：3.6元的包菜丝蚝油炒面（10min）",
+      "desc": "我最近菜谱发的比较少是因为工作忙了，项目工期最近有点紧，天天加班，11月估计大部分时间也是这样，老板给的工期是11月底要出版本，所以，最近没有太多时间好好做饭，我这几天都是做一些豉油猪肉、榨菜炒肉这样的超快速出餐的菜品…哈哈哈哈不过答应过要发的不会忘！前几天说要炒面，今天来了！",
+      "keywords": "包菜丝蚝油炒面,包菜炒面",
+      "date": "2021-10-29 08:22:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/02/20220203223718.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "teochew",
+        "bento",
+        "staple"
+      ],
+      "duration": 10,
+      "price": 3.6,
+      "xiaohongshuId": "617ace5c000000002103e46e"
+    },
+    {
+      "id": "chashao-tangmifen",
+      "type": "cookbook",
+      "shortDate": "2021-10-25",
+      "title": "省钱菜谱：4.5元的叉烧汤米粉（15min）",
+      "desc": "昨晚买回来的瘦肉特别的呈圆柱体……我感觉如果不拿来干点啥，直接切肉片似乎有点对不起它，想想好久没吃叉烧了，哈哈哈哈所以我用叉烧酱把它腌制了！！！",
+      "keywords": "包菜丝蚝油炒面,包菜炒面",
+      "date": "2021-10-25 03:04:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/02/20220203230110.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "teochew",
+        "staple"
+      ],
+      "duration": 15,
+      "price": 4.5,
+      "xiaohongshuId": "61753da9000000000102d6ea",
+      "cite": [
+        "chaoshan-suantoulao"
+      ]
+    },
+    {
+      "id": "chaozhou-yutou-chaoxiangfan",
+      "type": "cookbook",
+      "shortDate": "2021-10-17",
+      "title": "省钱菜谱：3元的潮州芋头炒香饭（10min）",
+      "desc": "中午炒了个潮州香饭，我家那边的炒饭也很好吃！之前还在家的时候，我妈时不时会问我“阿弟，日逗食攀饭啊迈？”（就问我中午吃不吃香饭哈哈哈哈…香饭其实没有唯一的做法，你可以用“芋头、土豆、豆粒、菜脯、虾仁、鱿鱼”等等，反正只要能拿来炒饭的食材，都可以，我今天用的是我家比较常用的一个做法，用的芋头。",
+      "keywords": "潮州香饭,潮州芋饭,潮州芋头炒香饭,潮汕炒饭,潮州炒饭",
+      "date": "2021-10-17 01:04:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/02/20220204010243.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "bento",
+        "teochew",
+        "staple"
+      ],
+      "duration": 10,
+      "price": 3,
+      "xiaohongshuId": "616a959b000000000102ee5d"
+    },
+    {
+      "id": "qinggua-haoyou-menroupi",
+      "type": "cookbook",
+      "shortDate": "2021-10-13",
+      "title": "省钱菜谱：3.35元的青瓜蚝油焖肉皮（15min）",
+      "desc": "昨天好天气一天，然后今天又来台风了，晚上下班去到菜市场，都收档了，APP上也买不到菜，我都已经做好炒方便面的打算了，然后喂猫的时候瞄到了冰箱旁边的肉皮，耶耶耶！刚好还有根黄瓜，不用吃方便面了！！！",
+      "keywords": "青瓜蚝油焖肉皮,潮汕肉皮",
+      "date": "2021-10-13 06:43:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/02/20220204171053.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "bento",
+        "teochew"
+      ],
+      "duration": 15,
+      "price": 3.35,
+      "xiaohongshuId": "61659f180000000001024194"
+    },
+    {
+      "id": "shacha-chao-jielan",
+      "type": "cookbook",
+      "shortDate": "2021-10-11",
+      "title": "省钱菜谱：4块钱的沙茶炒芥兰（5min）",
+      "desc": "每次出去吃饭，点芥兰都是问蒜蓉炒还是清炒，其实我每次都很想说，沙茶炒，哈哈哈哈哈不过从来没开过口，因为出去吃饭的次数屈指可数，每次也就点个蒜蓉炒就算了。在家自己炒我更喜欢沙茶炒，就像上次的芥兰炒粿条那样，只不过没有搭配粿条，而是作为一道菜。",
+      "keywords": "沙茶炒芥兰,芥兰怎么炒好吃",
+      "date": "2021-10-11 06:39:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/02/20220204180252.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "teochew"
+      ],
+      "duration": 5,
+      "price": 4,
+      "xiaohongshuId": "6162fb3e000000000102980a"
+    },
+    {
+      "id": "roumo-yusi-jiaozi",
+      "type": "cookbook",
+      "shortDate": "2021-10-09",
+      "title": "省钱菜谱：0.3元/只的肉末芋丝饺子（60min）",
+      "desc": "是我前天晚餐和昨天的午餐和晚餐，蒸饺和煎饺都好吃哈哈哈哈！想做这个是因为那天买的芋头太大个了，剩下的感觉要吃好久，干脆包成饺子！也是潮汕这边比较常见的小吃用料，这个做法是沿袭了我家那边的芋粿、芋丝球（芋丸）、芋丝糕等小吃的做法，做了一点调整。",
+      "keywords": "肉末芋丝饺,芋头饺子,芋头煎饺,芋头蒸饺",
+      "date": "2021-10-09 21:32:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/02/20220204181115.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "thrift",
+        "teochew",
+        "bento",
+        "staple"
+      ],
+      "duration": 60,
+      "price": 0.3,
+      "xiaohongshuId": "61612968000000002103cd83"
+    }
+  ]
+}

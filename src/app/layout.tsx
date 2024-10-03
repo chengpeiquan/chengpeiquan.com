@@ -1,11 +1,11 @@
 import React from 'react'
 import { Inter } from 'next/font/google'
+import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getMessages } from 'next-intl/server'
 import { RootLayout as BaseRootLayout } from 'blackwork'
 import { type Locale } from '@/config/locale-config'
 import 'blackwork/ui-globals.css'
 import '@/styles/globals.css'
-import { NextIntlClientProvider } from 'next-intl'
 
 const inter = Inter({ subsets: ['latin'] })
 

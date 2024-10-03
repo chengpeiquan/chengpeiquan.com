@@ -1,0 +1,106 @@
+{
+  "author": {
+    "name": "chengpeiquan",
+    "email": "chengpeiquan@chengpeiquan.com",
+    "link": "https://chengpeiquan.com"
+  },
+  "type": "article",
+  "total": 77,
+  "page": 8,
+  "lastPage": 8,
+  "category": "default",
+  "data": [
+    {
+      "id": "axios-ie9",
+      "type": "article",
+      "shortDate": "2018-10-21",
+      "title": "解决axios的responseType为\"json\"时IE9报undefined的兼容办法",
+      "desc": "虽然axios说可以兼容IE9，但实际上在项目开发过程中，IE9报错，而且目前的情况是responseType为\"json\"时才会报这个异常，相关请求代码大致如下",
+      "keywords": "axios undefined,axios ie9,axios response undefined",
+      "date": "2018-10-21 07:16:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2018/10/1-8.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "noconflict-jquery-zepto",
+      "type": "article",
+      "shortDate": "2018-10-20",
+      "title": "只写一次执行函数 同时兼容桌面noConflict后的jQuery与移动端的Zepto",
+      "desc": "今天遇到一个比较特殊的情况是这样子，维护一个年代比较久远的项目，说年代久远也就三年前开发上线的，实际生产线还是用的很稳，只不过中间经历了一次改版，后端倒没啥，同一个部门维护的，前端当时因为排期问题，为了及时上线，所以做桌面端模板和移动端模板是两个不同的部门的开发，于是，现在需要做一些中间层的需求就遇到了这么一个稍微有点坑爹的情况。",
+      "keywords": "jquery zepto 兼容",
+      "date": "2018-10-20 07:53:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2018/10/1-2.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "large-image-preload-fast",
+      "type": "article",
+      "shortDate": "2018-10-12",
+      "title": "弹窗大背景优化方案 png大图片预加载处理方法",
+      "desc": "因为一直做游戏风格的需求，而日常维护的游戏也比较朴素，都是用纯css处理的渐变底色即可满足弹窗背景的配置，最近处理了一个比较花哨的需求，弹窗设计方面比较下功夫，带来的一个问题就是这个弹窗背景图只能切成png，哪怕经过tinypng优化之后还有50多kb。50kb的图片说实话也不算特别大，如果作为常规的img加载其实没什么问题，但作为背景图来加载，问题就会被放大 —— 用户访问页面后，第一次打开弹窗的体验非常差，会先显示弹窗内容，再慢慢加载弹窗背景（隐藏层的背景需要层变为可见才会加载）。",
+      "keywords": "png优化,图片预加载,js预加载",
+      "date": "2018-10-12 19:49:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2018/10/1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "vue-toast",
+      "type": "article",
+      "shortDate": "2018-10-11",
+      "title": "Vue插件：封装独立的通用组件 可复用的单文件式全局Toast弹窗",
+      "desc": "最近突然很想简化一些自己写的，项目常用的调用小功能，比如一些弹窗等等，之前都是H/J/C分离，每次复用都要分别写到对应的文件里，略显麻烦。最近看了Vue官网有关于插件打包的说明，尝试了一下还可以，目前成功打包了一个Toast组件。以后每次项目要用到Toast弹窗，只需要引入一个 showToast.vue 即可直接生效调用，而不必在多个文件里维护自己的那部分代码。",
+      "keywords": "vue,toast,vue弹窗,vue toast,vue插件",
+      "date": "2018-10-11 08:09:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2018/10/1-9.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "repo": "https://github.com/chengpeiquan/vue-toast"
+    },
+    {
+      "id": "vue-ajax-axios",
+      "type": "article",
+      "shortDate": "2018-09-06",
+      "title": "Vue使用ajax 关于axios遇到乱码等问题的那些坑",
+      "desc": "这个情况当时是很懵逼的，因为在PC端，以及使用Chrome的移动端模拟器测试都一切正常，但到了真机上提交数据时，只要包含了中文，post到服务端的结果永远是【銆愭姤鍚嶇粍鍒】，这个至今还是不知道到底是什么鬼。",
+      "keywords": "vue ajax,vue axios,axios乱码,axios get,axios post,axios,qs,axios qs",
+      "date": "2018-09-06 09:46:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2018/09/1-1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "wordpress-rewrite-nginx-lnmp",
+      "type": "article",
+      "shortDate": "2018-09-06",
+      "title": "基于lnmp配置WordPress的Nginx伪静态方法",
+      "desc": "Nginx配置rewrite，基于lnmp搭建的话，其实配置起来非常简单，只需要在lnmp上输入几个简单的指令就可以把域名和伪静态类型关联上，重启Nginx后直接生效~",
+      "keywords": "wordpress,rewrite,nginx,lnmp",
+      "date": "2018-09-06 09:43:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2018/09/1-2.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "hello-world",
+      "type": "article",
+      "shortDate": "2018-09-02",
+      "title": "世界，您好！",
+      "desc": "这是这次博客的第一篇文章，不是历史以来的第一篇。以前也在这个域名下搭过一次WordPress，但后来写的东西有点杂，而且觉得以前记录的问题已经都不是什么问题了，所以在之前的新浪云到期之后，果断就舍弃了。",
+      "keywords": "hello world",
+      "date": "2018-09-02 22:19:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2018/09/1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ]
+    }
+  ]
+}

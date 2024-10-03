@@ -1,0 +1,7 @@
+services:
+  chengpeiquan.com:
+    container_name: chengpeiquan.com
+    image: chengpeiquan.com
+    build: .
+    ports:
+      - "4936:4936"

@@ -1,0 +1,145 @@
+{
+  "author": {
+    "name": "chengpeiquan",
+    "email": "chengpeiquan@chengpeiquan.com",
+    "link": "https://chengpeiquan.com"
+  },
+  "type": "article",
+  "total": 77,
+  "page": 7,
+  "lastPage": 8,
+  "category": "default",
+  "data": [
+    {
+      "id": "vue-skeleton",
+      "type": "article",
+      "shortDate": "2019-03-02",
+      "title": "基于Vue-CLI 3.0的骨架屏实现方案",
+      "desc": "大型Project的首次载入速度一般会比较慢，虽然Vue可以配置路由懒加载，但有时候打包出来的chunk还是会比较大，这个时候可以结合骨架屏来提高用户等待加载时的体验。",
+      "keywords": "Vue骨架屏,Vue3.0骨架屏,Vue Skeleton",
+      "date": "2019-03-02 00:14:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2019/03/1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "repo": "https://github.com/chengpeiquan/vue-skeleton"
+    },
+    {
+      "id": "vue-params-lost",
+      "type": "article",
+      "shortDate": "2019-02-26",
+      "title": "Vue路由params丢失、错误路由白屏的解决方案",
+      "desc": "使用带params的路由的时候，如果params不正确，路由就不会渲染，导致页面出现空白，本来想跟query一样，指定其中一个query为默认值，没想到并不能如己所愿，不过最终问题还是解决了，采用了一个路由的api来判断当前路由是否存在，顺带解决了其他非正常路由的指向问题。",
+      "keywords": "vue路由空白处理,vue默认params",
+      "date": "2019-02-26 21:54:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2019/02/1-1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "github-upload-delete",
+      "type": "article",
+      "shortDate": "2019-02-05",
+      "title": "Github发布项目与删除文件夹操作指令",
+      "desc": "Git的指令还是记不太住，发篇文帮助记忆，记录起来方便查阅。",
+      "keywords": "github,github上传,github删除文件夹",
+      "date": "2019-02-05 22:56:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2019/02/1-2.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "js-go-to-top",
+      "type": "article",
+      "shortDate": "2019-01-09",
+      "title": "原生JS实现带动画的返回顶部按钮",
+      "desc": "添加的第一个参数destination，终点位置，含义是指终点坐标与窗口顶部的Y轴距离，非必须，默认为0，也就是直接返回到窗口顶部。通过window.scrollY > destination的条件判断，如果当前窗口滚动距离比预设的终点距离大，就执行滚动，否则就结束，到达目的地。",
+      "keywords": "原生JS回到顶部,原生JS带动画回到顶部",
+      "date": "2019-01-09 08:45:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2019/01/1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "document-write-optimize-webpack",
+      "type": "article",
+      "shortDate": "2018-12-16",
+      "title": "针对document.write渲染的优化方案（适用webpack按需加载）",
+      "desc": "write方法去渲染html，更多情况是适合手写页面的年代，现在前端开发都是通过node+webpack工程化打包，那么遇到必须write又不想write的情况应该怎么办？最近刚好对手里的一个项目做了渲染优化，在这里顺便做个总结，讲一下对`document.write`渲染html的一个优化思路，可以结合到MVVM框架（如Vue.js）里去使用。",
+      "keywords": "document.write渲染优化,vue document.write",
+      "date": "2018-12-16 00:34:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2018/12/1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "vconsole",
+      "type": "article",
+      "shortDate": "2018-11-25",
+      "title": "移动端真机debug调试神器 vConsole的引入说明（原生态与WebPack）",
+      "desc": "距离这个神器发布第一个版本的时间，已经过去3年了，不过还是有蛮多新同学不知道他的存在，在做项目的时候，移动端真机调试还是用alert来弹，不仅调试起来很烦，也蛮不好定位问题的。安利过的每个人，都对vConsole有着100%的好评哈哈哈，写个博文记录下吧，好东西应该持续推荐。",
+      "keywords": "vconsole,手机控制台,手机debug,真机调试,移动端debug",
+      "date": "2018-11-25 09:16:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2018/11/1-1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "vue-cli-3",
+      "type": "article",
+      "shortDate": "2018-11-22",
+      "title": "Vue-CLI脚手架3.0升级小结（含Win版Node升级与PowerShell踩坑记录）",
+      "desc": "Vue脚手架3.0出来也蛮久了，秉着前人先踩坑的习惯，最近才开始升级。整个过程还是蛮顺利的，不过也有一些小小的问题，简单记录起来。",
+      "keywords": "vue cli 3.0 升级,vue cli 升级报错",
+      "date": "2018-11-22 03:50:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2018/11/1-2.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "wechat-bug-input-textarea",
+      "type": "article",
+      "shortDate": "2018-10-24",
+      "title": "微信浏览器input/textarea回收键盘后界面错位bug的解决办法",
+      "desc": "最近在处理一个H5页面的时候，有一个需要用户填写昵称信息的环节，模拟器一切正常，结果到了真机上发现输入信息完毕后，无法点击确认按钮emmm，黑人问号了半天，联系QA又深度测试了一下，发现只有iOS的微信浏览器才会。",
+      "keywords": "微信BUG,微信input,微信键盘,微信textarea,微信错位",
+      "date": "2018-10-24 08:58:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2018/10/1-6.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "js-exchange-random",
+      "type": "article",
+      "shortDate": "2018-10-24",
+      "title": "低成本实现“猜你喜欢”需求的几种思路（本质为随机数与“换一换”）",
+      "desc": "这个话题的第一次出现，是在2017年8月份的时候，到现在也蛮久了，之所以想起来说要小结一下，是因为这一年里不少新同学都过问过这么个问题，自己虽然做的不算多，但也通过几种情况完成了各类需求，写个笔记也方便以后用。那会自己第一次遇到一个需求是做一个“猜你喜欢”，然后没有后端的支持，也就是实际上这个“猜你喜欢”本质并不是“猜”，而是一个随机展示，也就是所谓的“换一换”。",
+      "keywords": "js猜你喜欢,js换一换",
+      "date": "2018-10-24 08:50:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2018/10/1-7.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "ckeditor4-rich-text-editor-webpack",
+      "type": "article",
+      "shortDate": "2018-10-22",
+      "title": "基于CKEditor4的富文本编辑器 WebPack引入说明与配置注意事项",
+      "desc": "前几天对接了个需求，说因为传统的CMS太笨重，并且一些业务结合点想落地的话改造太麻烦，想让我这边帮他做一个发布后台，前后端分离，他只负责数据和接口，其他的由我自己把控。我当时没立即答应，因为我不会啊 - - 哈哈哈没玩过这东西，之前做发布都是直接走CMS或者WordPress这种直接现成的发布系统，偶尔自己做一些活动用的传图发布页面也是简单的一个textarea就完事。不过好奇心又很强，也想学多点东西，还是接了过来，然后让他给我点时间我得尝试一下。",
+      "keywords": "ckeditor,ckeditor4,ckeditor传图,ckeditor编辑,ckeditor赋值,ckeditor路径",
+      "date": "2018-10-22 08:48:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2018/10/1-3.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    }
+  ]
+}

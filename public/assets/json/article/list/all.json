@@ -1,0 +1,1067 @@
+{
+  "author": {
+    "name": "chengpeiquan",
+    "email": "chengpeiquan@chengpeiquan.com",
+    "link": "https://chengpeiquan.com"
+  },
+  "total": 77,
+  "page": 1,
+  "lastPage": 1,
+  "category": "all",
+  "data": [
+    {
+      "id": "typescript-error-cannot-find-module-undici-types",
+      "type": "article",
+      "shortDate": "2024-04-07",
+      "title": "干净的 TypeScript 项目在编译时报错 Cannot find module 'undici-types' 的原因和解决",
+      "desc": "很久前配合 《前端工程化：基于 Vue.js 3.0 的设计与实践》 一书在 TypeScript 章节里讲解的内容，提供了一个很干净的 demo （见 hello-node ），除了必要的基础技术栈外，没有过多的第三方依赖，一直运行良好，直到这个假期收到了读者反馈，和我说在运行 npm run build 时出现类似下方的报错，无法正确编译。",
+      "keywords": "typescript error undici-types,cannot find module undici-types",
+      "date": "2024-04-07 05:55:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2024/04/202404062211878.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "macos-android-studio-emulator-hosts",
+      "type": "article",
+      "shortDate": "2024-02-11",
+      "title": "macOS 基于 Android Studio 修改模拟器 Hosts",
+      "desc": "用回 macOS 一段时间了，各种软件对 M 系列芯片基本上也都有支持的版本，除了安卓模拟器 - - 。之前在 Windows 上面常用的 MuMu 、雷电、夜神等模拟器，不是没有 Mac 版，就是虽然有 Mac 版，但不支持 M 系列芯片（ ARM 架构），所以抛弃一系列国产模拟器，回归 Android Studio 。",
+      "keywords": "mac, macOS, mac emulator, android emulator, android emulator hosts",
+      "date": "2024-02-11 05:03:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2024/02/202402102106942.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "new-mac-2024",
+      "type": "article",
+      "shortDate": "2024-01-15",
+      "title": "给猫儿子的新年礼物 它很喜欢！",
+      "desc": "哈哈哈哈哈上一次买 Mac 还是 2015 年，然后在 2019 年换了 Windows 台式机用到现在。最近跑了 5 年的台式机又感觉配置不太够用了，干脆再换回 Mac ，开心！",
+      "keywords": "mac, macOS",
+      "date": "2024-01-15 01:33:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2024/02/202402102245723.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ]
+    },
+    {
+      "id": "2023-year-end-summary",
+      "type": "article",
+      "shortDate": "2023-12-30",
+      "title": "年终总结：2023年的一些回顾和2024年的一些小规划",
+      "desc": "本来今年的总结第一句话想写 “2023 对我算是比较特殊的一年” ，结果看了一眼去年的回顾，去年也是这么写的… 那今年再强化一下，改成 “2023 对我是非常特殊的一年” 哈哈哈哈哈哈哈，确实非常特殊的一年，因为经历了很多之前没有经历过的事情。",
+      "keywords": "2023 year end summary",
+      "date": "2023-12-30 22:52:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2023/12/20231230212146.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ],
+      "cite": [
+        "2022-year-end-summary",
+        "2021-year-end-summary"
+      ]
+    },
+    {
+      "id": "my-custom-nas",
+      "type": "article",
+      "shortDate": "2023-06-11",
+      "title": "千元预算组装了个入门NAS设备 一文分享NAS的硬件基础知识",
+      "desc": "最近在一千元预算内搞了一台 NAS ，在这个过程也算蛮自定义的搭配，记录一下这个过程中的主要知识点和最终搭配结果。初接触 NAS 的时候最迷茫的应该就是它的概念和用途了，就算了解了它的作用，想采购一个合适的 NAS 设备又会涉及到很多硬件知识。既然选择自己配 NAS 做一个 DIY 玩家，肯定还是需要先熟悉一些前置的硬件知识，否则大可花几千块钱买成品 NAS 了，所以有一些前置知识点还是值得先简单了解一下。",
+      "keywords": "千元NAS,NAS,群晖,SDM,PVE",
+      "date": "2023-06-11 07:39:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2023/06/20230611223039.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "the-story-of-the-book-learning-vue3",
+      "type": "article",
+      "shortDate": "2023-05-07",
+      "title": "我写了一本书《前端工程化：基于 Vue.js 3.0 的设计与实践》 想分享一下它背后的故事",
+      "desc": "大家好，我是程沛权，经过差不多一年时间的打磨和优化，我的第一本技术书籍《前端工程化：基于 Vue.js 3.0 的设计与实践》出版上市啦！这是一本以 Vue.js 的 3.0 版本为核心技术栈，围绕 “前端工程化” 和 TypeScript 的知识点展开讲解的前端入门书籍。",
+      "keywords": "前端工程化：基于 Vue.js 3.0 的设计与实践,前端工程化,Vue3,Vue3 入门指南与实战案例",
+      "date": "2023-05-07 06:03:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2023/05/20230506220635.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ],
+      "repo": "https://github.com/chengpeiquan/learning-vue3"
+    },
+    {
+      "id": "git-selective-merge",
+      "type": "article",
+      "shortDate": "2023-02-03",
+      "title": "Git的选择性合并操作笔记：合并某个版本或某个提交",
+      "desc": "今天帮朋友解决了一个代码合并的问题，他有两个项目， B 项目最初是基于 A 项目作为架构底子，根据业务进行了不同需求的开发，沉淀了不少新功能，而 A 项目本身也在继续维护，可以简单的理解为， A 项目是通过类似 create-preset 这样的脚手架拉取下来的一个项目模板，而 B 项目是一个业务项目，所以 A 项目通常只提供一些公共功能的维护升级，而 B 项目更注重业务功能开发。",
+      "keywords": "github,github上传,github删除文件夹",
+      "date": "2023-02-03 00:56:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2023/02/20230202170739.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "2022-year-end-summary",
+      "type": "article",
+      "shortDate": "2023-01-01",
+      "title": "年终总结：2022年的一些回顾和2023年的一些小规划",
+      "desc": "2022 对我算是比较特殊的一年，虽然因为疫情原因彻底宅了一年，但也没有闲着，换了工作换了城市，回到了阔别两年的第二故乡广州，工作之外的学习和生活对个人的成长也有一些值得复盘的地方。",
+      "keywords": "2022 year end summary",
+      "date": "2023-01-01 05:24:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2023/01/20230101235604.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ],
+      "cite": [
+        "2021-year-end-summary"
+      ]
+    },
+    {
+      "id": "zhihu-collection-helper",
+      "type": "article",
+      "shortDate": "2022-10-22",
+      "title": "知乎收藏夹助手：自动化将专栏的文章添加到收藏夹",
+      "desc": "知乎收藏夹助手，可将专栏的文章添加到收藏夹中（因为专栏的内容通常比较垂直，不会太杂），适用于收藏夹在创建初期需要大量内容填充的情况。",
+      "keywords": "知乎,知乎工具,爬虫",
+      "date": "2022-10-22 07:53:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/10/20221021235753.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "repo": "https://github.com/chengpeiquan/zhihu-collection-helper"
+    },
+    {
+      "id": "vite-vue3-prerender",
+      "type": "article",
+      "shortDate": "2022-06-02",
+      "title": "用Vite更简单的解决Vue3项目的预渲染问题",
+      "desc": "之前 Webpack 项目经常会用到预渲染，现在团队都开始用 Vite 了，所以弄一个基于 Vite 的 Vue 3 预渲染 demo 可以参考。",
+      "keywords": "Vite,预渲染,Vite预渲染,Vue3预渲染",
+      "date": "2022-06-02 22:59:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/06/20220605213042.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "repo": "https://github.com/chengpeiquan/vite-vue3-prerender-demo"
+    },
+    {
+      "id": "pinia",
+      "type": "article",
+      "shortDate": "2022-04-05",
+      "title": "Pinia怎么用？Vue3全局状态的管理工具Pinia教程",
+      "desc": "Vue 官方推出的全局状态管理工具目前有 Vuex 和 Pinia ，两者的作用和用法都比较相似，但 Pinia 的设计更贴近 Vue 3 组合式 API 的用法。Pinia 目前还没有被广泛的默认集成在各种脚手架里，官网也只有英文版，整理了教程便于提前学习。",
+      "keywords": "vue 3.0,vue 3.x,vue 3.0 教程,学习 vue 3.0,vue 3.0 案例,vue 3.0 教学,vue 3.0 好用吗,pinia 怎么用,pinia教程",
+      "date": "2022-04-05 07:44:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/04/20220405011839.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "isHot": true,
+      "repo": "https://github.com/chengpeiquan/learning-vue3"
+    },
+    {
+      "id": "cooking-cookbook",
+      "type": "article",
+      "shortDate": "2022-02-21",
+      "title": "每天吃什么？上班带什么饭？程序员教你做菜啦！",
+      "desc": "从 2021 年底陆续开始维护这个菜谱栏目，终于有一些像模像样的作品沉淀了，你可以在这里了解一些关于如何下厨烹饪的菜谱和教程，这是来自一名从小就学做饭的程序员的原创经验。",
+      "keywords": "小程序,菜谱小程序",
+      "date": "2022-02-21 21:01:14",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/02/20220221130454.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ]
+    },
+    {
+      "id": "cookbook-donate",
+      "type": "article",
+      "shortDate": "2022-02-19",
+      "title": "赞赏计划与赞赏记录",
+      "desc": "我的所有菜谱都是基于日常做饭记录的原创作品，如果你觉得有帮助，欢迎捐赠一个猫罐头给我家三只猫猫，在每篇菜谱的底部都有一个 “喜欢” 按钮，点开后可长按保存再扫描我的赞赏码，十分感谢！",
+      "keywords": "小程序,菜谱小程序",
+      "date": "2022-02-19 21:39:14",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/01/20220215133323.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ],
+      "isDraft": true,
+      "simplify": true
+    },
+    {
+      "id": "cookbook-faq",
+      "type": "article",
+      "shortDate": "2022-02-19",
+      "title": "小程序使用帮助",
+      "desc": "菜谱小程序的使用帮助",
+      "keywords": "小程序,菜谱小程序",
+      "date": "2022-02-19 21:39:14",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/01/20220215133323.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ],
+      "isDraft": true,
+      "simplify": true
+    },
+    {
+      "id": "about-didi",
+      "type": "article",
+      "shortDate": "2022-02-15",
+      "title": "关于底迪",
+      "desc": "因为当时在注册账号的时候要取名和设置头像，刚好手机里最新的照片是我家猫「 底迪 」的照片，所以就用这张照片做了头像，名字也就顺其自然的用了我家底迪的名，一直用到了现在。",
+      "keywords": "底迪",
+      "date": "2022-02-15 06:02:14",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/01/20220215133323.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ],
+      "isDraft": true,
+      "simplify": true
+    },
+    {
+      "id": "cookbook-changelog",
+      "type": "article",
+      "shortDate": "2022-02-15",
+      "title": "小程序版本更新记录",
+      "desc": "这里记录菜谱小程序的版本迭代记录，如果你在体验的过程中有功能建议、体验优化建议，或者发现了什么 BUG ，欢迎在小程序的 “反馈” 功能里给我留言（打开小程序右上角的 “···” 就能看到），我会评估需求的优先级和可实现成本，在后续的版本迭代中优化。",
+      "keywords": "小程序,菜谱小程序",
+      "date": "2022-02-15 06:02:14",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/01/20220215133323.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ],
+      "isDraft": true,
+      "simplify": true
+    },
+    {
+      "id": "cookbook-guide",
+      "type": "article",
+      "shortDate": "2022-02-15",
+      "title": "新手下厨指导",
+      "desc": "所谓万事开头难，只要开了个头，后面就很顺利了，所以这篇文章的本意也是如此，希望能通过我的一些经验，帮助新人朋友适应厨房，喜欢厨房。",
+      "keywords": "小程序,菜谱小程序,新人怎么做饭,新手下厨指南",
+      "date": "2022-02-15 06:02:14",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/01/20220215133323.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ],
+      "isDraft": true,
+      "simplify": true
+    },
+    {
+      "id": "cookbook-safe",
+      "type": "article",
+      "shortDate": "2022-02-15",
+      "title": "厨房安全科普",
+      "desc": "科普一些常见的安全问题，对厨房比较陌生的朋友可以了解一下！",
+      "keywords": "小程序,菜谱小程序,厨房安全,厨房注意事项",
+      "date": "2022-02-15 06:02:14",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/01/20220215133323.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ],
+      "isDraft": true,
+      "simplify": true
+    },
+    {
+      "id": "flutter",
+      "type": "article",
+      "shortDate": "2022-01-28",
+      "title": "从前端开发者身份入门Flutter和Dart的学习笔记",
+      "desc": "有很多相似，又有很多不同，慢慢适应一下",
+      "keywords": "flutter,dart",
+      "date": "2022-01-28 00:02:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2021/11/20220127161927.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "isDraft": true
+    },
+    {
+      "id": "yidi-guonian",
+      "type": "article",
+      "shortDate": "2022-01-24",
+      "title": "异地过年指南",
+      "desc": "最近刷到好多小伙伴在说今年要留深圳/广州回不去，外卖到时又很贵，很纠结过年怎么办。我原本想着要不今年回去吧，我去年没回，结果前几天疫情每天都在+1，我妈倒是挺直接的叫我别回了，哈哈哈哈（正合我意呢），所以今年又在外面自己过年。",
+      "keywords": "过年,一个人过年,过年怎么准备",
+      "date": "2022-01-24 02:40:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/01/20220123233134.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ],
+      "xiaohongshuId": "61ed309f000000000102b14f",
+      "simplify": true
+    },
+    {
+      "id": "a-week-time-of-a-markdown-engineer",
+      "type": "article",
+      "shortDate": "2022-01-22",
+      "title": "Markdown工程师的一周",
+      "desc": "马上就快过年了，最近才比较有时间把之前很多想搞一直没时间搞的东西弄一下，比如说最近一周在干的事情就是，补各种文档。我是没想到我一周能敲差不多 25 个小时的 Markdown … 几乎一天有 5 个小时在码字，天了噜…",
+      "keywords": "markdown,markdown engineer,markdown ppt,engineer ppt",
+      "date": "2022-01-22 07:23:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/01/20220121232301.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech",
+        "prose"
+      ]
+    },
+    {
+      "id": "tsc-compiles-dts",
+      "type": "article",
+      "shortDate": "2022-01-21",
+      "title": "TSC编译时指定生成d.ts的目录 并解决无法导入package.json和alias别名的问题",
+      "desc": "虽然之前在构建 JS Library 的时候，也是有生成 `d.ts` 文件在输出目录，但总归比较凌乱，意思就是构建出来的 JS Library 和 DTS 文件都在同一级文件夹里。不是说不能用吧，总归看起来有点 low ，如果是单个 DTS 文件还好，但有时候构建出来会有好几个 DTS 这种情况下都放在一起总觉得有点别扭，所以今天想看一下能不能更优雅一点，存档在 types 文件夹里。",
+      "keywords": "javascript type,js type,javascript with typescript",
+      "date": "2022-01-21 20:22:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2021/11/20220121141631.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "javascript-with-typescript-type-checking",
+      "type": "article",
+      "shortDate": "2022-01-19",
+      "title": "让你在编写 JavaScript 的时候也能享受 TypeScript 的类型检查",
+      "desc": "现在前端没有几个不写 TypeScript 了吧，但是有时候还是不得不写 JS ，比如我最近写脚手架的时候，代码是直接跑在 Node Runtime 里，没有编译环节，所以用的依然还是 JavaScript 。然而，发现离开了类型限制之后，感觉要写很多注释才能保证一个项目的完整性，就很烦…",
+      "keywords": "javascript type,js type,javascript with typescript",
+      "date": "2022-01-19 22:42:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2021/11/20220119155350.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "git-commit-analytics",
+      "type": "article",
+      "shortDate": "2022-01-03",
+      "title": "git-commit-analytics 分析Git Commit记录生成工作日报",
+      "desc": "一个可以分析你的 Git 仓库 commit 记录的工具。它可以帮你生成一份工作日报 / 周报，或者你需要的更长时间范围的工作报告。",
+      "keywords": "git log,git commit analytics,git report,git commit report,git log report",
+      "date": "2022-01-03 00:00:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/01/20220103234230.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "github-ci-cd",
+      "type": "article",
+      "shortDate": "2022-01-02",
+      "title": "2022 年的第一天，把开源工作交给了 CI / CD（待完善）",
+      "desc": "新年的第一天，我把 GitHub 的全自动流水线搭起来了。",
+      "keywords": "github ci cd,github workflows",
+      "date": "2022-01-02 07:49:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/01/20220103233657.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "2021-year-end-summary",
+      "type": "article",
+      "shortDate": "2021-12-31",
+      "title": "年终总结：2021年的一些回顾和2022年的一些小规划",
+      "desc": "可真快啊又是一年年底了，虽然这一年博客没发几篇文章，不过整体的活跃情况其实是提升了，个人的变化也还是蛮大的，今年记忆比较深刻的事情有几件，让我梳理回顾一下。",
+      "keywords": "2021 year end summary",
+      "date": "2021-12-31 23:45:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/01/20220103234636.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ],
+      "cite": [
+        "2022-year-end-summary"
+      ]
+    },
+    {
+      "id": "truffle",
+      "type": "article",
+      "shortDate": "2021-10-12",
+      "title": "Truffle初探和踩坑笔记",
+      "desc": "能找到的教程都好老，记录一版踩坑笔记，后面遇到类似的问题可以快速处理。",
+      "keywords": "truffle,trufflesuite,智能合约,DAPP",
+      "date": "2021-10-12 06:32:20",
+      "cover": "http://cdn.chengpeiquan.com/img/2021/10/20211012094643.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "vue3-script-setup-finalization",
+      "type": "article",
+      "shortDate": "2021-07-05",
+      "title": "Vue3.0最新动态：script-setup定稿 部分实验性API将弃用",
+      "desc": "从尤大的Twitter上获取到了最新的开发进展，期待已久的script-setup组件模式终于定稿，不再是实验性功能了，当然对比之前的实验性阶段也有一些新的变化，包括一些API被弃用，同时也有新的API补充进来代替原有的功能。",
+      "keywords": "script setup,vue 3.0 script setup,vue3 script setup,script setup prop,script setup emit,defineProps,vue 3.0 defineProps,vue defineProps,vue3 defineProps,prop defineProps,setup defineProps,defineEmits,vue 3.0 defineEmits,vue defineEmits,vue3 defineEmits,emit defineEmits,setup defineEmits,useAttrs,vue 3.0 useAttrs,vue useAttrs,vue3 useAttrs,setup useAttrs,useSlots,vue 3.0 useSlots,vue useSlots,vue3 useSlots,setup useSlots",
+      "date": "2021-07-05 21:15:13",
+      "cover": "http://cdn.jsdelivr.net/gh/chengpeiquan/assets-storage//img/2021/07/20210705181949.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "repo": "https://github.com/chengpeiquan/learning-vue3"
+    },
+    {
+      "id": "requirement-design",
+      "type": "article",
+      "shortDate": "2021-05-05",
+      "title": "简单的六个步骤 让你写出技术爱看的需求文档",
+      "desc": "提需求”应该是每个同学在工作中最不可避免的三个字，有句很流行的话叫“人人都是产品经理”（源自一本产品书籍的书名），为什么这句话会流行起来？因为只要我们把这句话换个方式表达，本质上就是“人人都是需求方”，是不是瞬间感觉“对对对”！",
+      "keywords": "需求设计,需求文档,需求规范",
+      "date": "2021-05-05 08:01:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2023/01/20230107234550.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "design"
+      ],
+      "isHot": true
+    },
+    {
+      "id": "search-children-in-404-page",
+      "type": "article",
+      "shortDate": "2021-04-11",
+      "title": "Node爬取宝贝回家最新走失儿童信息 生成接口API在404页面调用",
+      "desc": "很久没采购成箱的东西了，大部分情况下都是零零散散的京东散件或者天猫半日达，一个购物袋就给我装了送过来，周末刚好在天猫超市买了箱东西，开箱一看，发现箱子里面印刷上了走失儿童的信息，感动！突然想起很久没有关注到这方面的信息。",
+      "keywords": "node爬虫,宝贝回家404,宝贝回家API",
+      "date": "2021-04-11 23:40:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2021/04/20210411154503.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "repo": "https://github.com/chengpeiquan/search-children-api-example"
+    },
+    {
+      "id": "reclassify-articles",
+      "type": "article",
+      "shortDate": "2021-03-16",
+      "title": "对文章又重新做了一次分类",
+      "desc": "时隔两年，改版的时候去掉了分类，想了想，还是加回来吧，又把所有内容重新分了个类。",
+      "keywords": "原生JS回到顶部,原生JS带动画回到顶部",
+      "date": "2021-03-16 09:17:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2021/03/20210316221139.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ]
+    },
+    {
+      "id": "vue3-script-setup",
+      "type": "article",
+      "shortDate": "2021-03-05",
+      "title": "聊一聊Vue3.0的script-setup 以及全新的props/emits专属API",
+      "desc": "今天想聊一聊 Vue 3.0 的 script-setup，以及目前三个很少被提及到的 API —— defineProps 、 defineEmit 和 useContext。截止到我撰写本文，它们在 Vue 3.0 的官网都还没有相关的用法说明，因为目前还属于实验性的新特性，什么时候会并入正式轨道，时间上还不清楚，但事实上在项目里已经可以使用起来了，自己体验了一段时间，真的爽！！！",
+      "keywords": "script setup,vue 3.0 script setup,vue3 script setup,script setup prop,script setup emit,defineProps,vue 3.0 defineProps,vue defineProps,vue3 defineProps,prop defineProps,setup defineProps,defineEmit,vue 3.0 defineEmit,vue defineEmit,vue3 defineEmit,emit defineEmit,setup defineEmit,useContext,vue 3.0 useContext,vue useContext,vue3 useContext,setup useContext",
+      "date": "2021-03-05 08:48:13",
+      "cover": "http://cdn.chengpeiquan.com/img/2021/02/20210305211036.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "repo": "https://github.com/chengpeiquan/learning-vue3"
+    },
+    {
+      "id": "vite-plugin-banner",
+      "type": "article",
+      "shortDate": "2021-02-24",
+      "title": "vite-plugin-banner：让Vite在打包的时候添加版权注释",
+      "desc": "基于Vite，实现一个和webpack banner plugin一样功能的版权注释插件，可以为每个 chunk 文件头部添加 banner 注释。",
+      "keywords": "vite-plugin-banner,vite plugin,vite banner,vite注释,vite版权",
+      "date": "2021-02-24 07:10:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2021/01/20210224102526.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "repo": "https://github.com/chengpeiquan/vite-plugin-banner"
+    },
+    {
+      "id": "rewrite-in-vite",
+      "type": "article",
+      "shortDate": "2021-02-19",
+      "title": "重构于Vite",
+      "desc": "从 2021 年元旦 Vite 发布 2.0 Beta 版就一直在关注 Vite 的动态，借着春节放假有时间，而且 Vue 3.0 和 Vite 2.0 都才大版本更新上线不久，预感后面会火，先开荒尝试一波，也当给以后工作上的业务先提前踩踩坑，对博客做了第三次重构，这一次把客户端和服务端都重新写了，由 PHP 的 LNMP 全家桶全部换成了前端侧的技术栈。",
+      "keywords": "vite,vite ssr,vite ssg,vite blog",
+      "date": "2021-02-19 07:54:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2021/02/20210219234631.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "isHot": true,
+      "repo": "https://github.com/chengpeiquan/chengpeiquan.com"
+    },
+    {
+      "id": "refresh-token",
+      "type": "article",
+      "shortDate": "2021-01-30",
+      "title": "基于OAuth2.0的refreshToken前端刷新方案与演示demo",
+      "desc": "如今在涉及到用户登录的系统设计里面，基本上都是通过 OAuth 2.0 来设计授权，当你在调用登录接口的时候，可以看到在返回来的数据里面会有 2 个 Token：一个 accessToken 和一个 refreshToken 。为什么会有两个 Token，之间有什么区别？这其实是 OAuth 2.0 的四种方式 之一的 “凭证式”，一个是平时请求接口时的用户凭证，一个是用来刷新用户凭证的刷新凭证。",
+      "keywords": "refresh token,refreshtoken,oauth 2.0 refreshtoken,前端刷新token,oauth 刷新token",
+      "date": "2021-01-30 22:56:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2021/01/1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "isHot": true,
+      "repo": "https://github.com/chengpeiquan/refresh-token"
+    },
+    {
+      "id": "vue-cnzz-analytics",
+      "type": "article",
+      "shortDate": "2021-01-09",
+      "title": "vue-cnzz-analytics 基于Vue SPA项目的友盟CNZZ统计插件（支持Vue 3.0）",
+      "desc": "一个专为SPA项目开发的友盟统计插件，支持Vue 3.0以及2.0版本同时使用，也可用于VuePress项目，支持在路由切换时，自动上报流量数据等功能。",
+      "keywords": "cnzz,vue cnzz,vue umeng,vue analytics,spa analytics,cnzz统计,umeng统计,友盟统计,vuepress统计,vuepress cnzz统计",
+      "date": "2021-01-09 06:37:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2020/08/1-3.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "repo": "https://github.com/analyticsjs/vue-cnzz-analytics"
+    },
+    {
+      "id": "vue-baidu-analytics",
+      "type": "article",
+      "shortDate": "2021-01-08",
+      "title": "vue-baidu-analytics 基于Vue SPA项目的百度统计插件（支持Vue 3.0）",
+      "desc": "一个专为SPA项目开发的百度统计插件，支持Vue 3.0以及2.0版本同时使用，也可用于VuePress项目，支持在路由切换时，自动上报流量数据等功能。",
+      "keywords": "vue-baidu-analytics,vue百度统计,vue流量上报,spa流量,spa百度统计,vue统计代码,spa统计代码,vuepress统计,vuepress百度统计",
+      "date": "2021-01-08 07:21:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2019/12/1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "repo": "https://github.com/analyticsjs/vue-baidu-analytics"
+    },
+    {
+      "id": "baidu-map-api-destroy",
+      "type": "article",
+      "shortDate": "2020-12-25",
+      "title": "百度地图API实例销毁方案 可用于Vue单页面项目",
+      "desc": "最近项目用到了百度地图的API，用倒是没啥毛病，就是发现用完之后留下来的垃圾太多 = = 项目是基于Vue做的，当时发现在需要百度地图的那个路由用完之后，切去其他页面，积累了很多DOM，并且再次进入会再次创建，在项目里体验越久，DOM树越累赘，并且由百度地图创建的定时器越攒越多。",
+      "keywords": "百度地图销毁,百度地图API销毁",
+      "date": "2020-12-25 00:00:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2020/12/baidu-map.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "group-buy-calculator",
+      "type": "article",
+      "shortDate": "2020-11-22",
+      "title": "外卖拼单计算器：自动帮你计算合伙点外卖应该支付多少钱",
+      "desc": "目前除了美团之外，其他的外卖app（像饿了么啊、瑞幸啊、麦当劳肯德基啊）都没提供自动计算账单的功能，自己每次拉excel算的蛋疼，所以写了这个，无需纠结红包、抵扣券等乱七八糟的减免，会自动计算折扣比例来得到最终账单。",
+      "keywords": "外卖计算器,拼单计算器",
+      "date": "2020-11-22 23:46:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2020/12/2-1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "repo": "https://github.com/chengpeiquan/group-buy-calculator"
+    },
+    {
+      "id": "vue-picture-cropper",
+      "type": "article",
+      "shortDate": "2020-11-16",
+      "title": "Vue 3.0图片裁切插件：vue-picture-cropper",
+      "desc": "开始玩Vue 3.0之后发现生态上要啥没啥，所以自己弄了一个，基于cropper.js，支持Vue 3.0的图片裁切工具组件，支持在Vue组件里按需引入，模板和实例也仅限在组件内使用，根据Vue 3.x的设计思想，官方也不推荐全局导入各类插件。",
+      "keywords": "vue picture cropper,vue 3.0 cropper,vue 3.0 图片裁切",
+      "date": "2020-11-16 08:12:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2020/12/1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "repo": "https://github.com/chengpeiquan/vue-picture-cropper"
+    },
+    {
+      "id": "vue3",
+      "type": "article",
+      "shortDate": "2020-10-26",
+      "title": "资料专题：Vue3.0学习教程与实战案例",
+      "desc": "自从海贼王更新后，就开始正式用 `Vue 3.0` + `typescript` 写业务了，在经过这段时间的尝试，发现从测试到正式版本变化还是很大，很多过往的博文已经对不上了，还是踩了不少坑，这个过程也打了不少笔记，整理起来，供需要的朋友避坑，也免得以后自己忘记了。",
+      "keywords": "vue 3.0,vue 3.x,vue 3.0 教程,学习 vue 3.0,vue 3.0 案例,vue 3.0 教学,vue 3.0 好用吗",
+      "date": "2020-10-26 06:30:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2020/10/vue3.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "isHot": true,
+      "repo": "https://github.com/chengpeiquan/learning-vue3"
+    },
+    {
+      "id": "js-file-reader",
+      "type": "article",
+      "shortDate": "2020-09-28",
+      "title": "js-file-reader 一句代码把input的file转换为base64和blob格式",
+      "desc": "目前除了美团之外，其他的外卖app（像饿了么啊、瑞幸啊、麦当劳肯德基啊）都没提供自动计算账单的功能，自己每次拉excel算的蛋疼，所以写了这个，无需纠结红包、抵扣券等乱七八糟的减免，会自动计算折扣比例来得到最终账单。",
+      "keywords": "file reader,js file reader,web file reader,read file",
+      "date": "2020-09-28 08:22:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2020/09/2-3.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "repo": "https://github.com/chengpeiquan/js-file-reader"
+    },
+    {
+      "id": "vue-vscode-snippets",
+      "type": "article",
+      "shortDate": "2020-09-21",
+      "title": "解决vscode保存vue文件时 压缩stylus代码为一行以及无法注释template的问题",
+      "desc": "目前除了美团之外，其他的外卖app（像饿了么啊、瑞幸啊、麦当劳肯德基啊）都没提供自动计算账单的功能，自己每次拉excel算的蛋疼，所以写了这个，无需纠结红包、抵扣券等乱七八糟的减免，会自动计算折扣比例来得到最终账单。",
+      "keywords": "stylus保存压缩,stylus错乱,stylus格式化",
+      "date": "2020-09-21 01:02:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2020/09/vue-vscode-snippets.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "getboundingclientrect",
+      "type": "article",
+      "shortDate": "2020-09-15",
+      "title": "使用getBoundingClientRect 针对scrollTop一直为0且documentElement无效的解决方案",
+      "desc": "今天在上线一个移动端需求的时候，QA妹子跟我反馈在她们一部iPhone X上面出现了一个滚动加载会同时触发下拉刷新的bug…我就 ？？？……一个在顶部一个在底部这也能扯上关系？然后再进一步测试，发现这个坑是出现在自家app的内置webview上，在浏览器和微信等环境都正常。",
+      "keywords": "scrollTop 0,scrollTop bug,getBoundingClientRect",
+      "date": "2020-09-15 09:41:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2020/09/3.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "rollupjs",
+      "type": "article",
+      "shortDate": "2020-08-10",
+      "title": "JSSDK开发思路 基于RollupJS的经验记录",
+      "desc": "虽然Rollup的推出时间应该是比Webpack早，但之前类库的工作都是公司其他前端部门负责维护，还真的没有去接触过它，直到最近自己要负责开发一个用于新业务线的JSBridge和JSLibrary，才对它有了一定的了解。",
+      "keywords": "rollup,rollupjs,rollup打包,rollup babel",
+      "date": "2020-08-10 07:42:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2020/08/1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "my-netease",
+      "type": "article",
+      "shortDate": "2020-06-15",
+      "title": "记录一下在网易五年来的工作与生活",
+      "desc": "虽然加班很多，但回顾起来，工作内外还是很快乐的！",
+      "keywords": "网易,在网易工作是什么体验,网易游戏",
+      "date": "2020-06-15 00:48:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2021/05/20210509201311.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ],
+      "repo": "https://github.com/chengpeiquan/my-netease"
+    },
+    {
+      "id": "vue-cli-config-alias-error",
+      "type": "article",
+      "shortDate": "2020-05-23",
+      "title": "记录vue.config设置alias无法生效的一次问题排查",
+      "desc": "昨晚把Node和Vue-CLI等工具都升级到了最新版，create了一个新项目，因为之前干活的时候为了方便都是拷贝之前的配置文件下来，很多东西都是基于旧版的解构，所以想针对新版本也处理一份配置，于是只拿了vue.config.js来到新项目这边。",
+      "keywords": "vue cli alias,vue alias,webpack alias",
+      "date": "2020-05-23 00:58:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2020/05/4.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "canvas-movie-jitter-effect",
+      "type": "article",
+      "shortDate": "2020-04-21",
+      "title": "电影故障抖动视觉效果实现：对大话手游愚人节专题的探究",
+      "desc": "前几天愚人节的时候，大话手游官网上了一个专题，里面很多图片位置都使用了一个类似电影那种画面抖动的效果（目前只剩下一个slogan了，其他都下线了），很好奇是怎么实现的，于是扒了一下页面的源码，了解了一些实现思路，整理一下以后可能会用到。",
+      "keywords": "抖屏效果",
+      "date": "2020-04-21 07:47:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2020/04/1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "repo": "https://github.com/chengpeiquan/canvas-movie-jitter-effect"
+    },
+    {
+      "id": "aliyun-ecs-server-migration",
+      "type": "article",
+      "shortDate": "2020-02-29",
+      "title": "阿里云ECS从香港迁移至国内节点实战教程",
+      "desc": "之前因为贪图管理上的方便，一直把这个博客的服务器假设在香港那边，其实速度体验和稳定性啥的都挺好，不过最近打算给博客上线一个小程序版本，受于腾讯的政策要求，必须备案和接入https，考虑了一下，看了一下国内地区的ECS价格，刚好有优惠，所以决定做一个迁移。",
+      "keywords": "阿里云ESC迁移,阿里云迁移,阿里云服务器迁移",
+      "date": "2020-02-29 02:10:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2020/02/1-1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "api-design",
+      "type": "article",
+      "shortDate": "2020-02-17",
+      "title": "接口设计：从前端开发的角度谈一谈接口规范",
+      "desc": "从前端的角度，以一个接口消费者的身份来谈一谈如何设计一套比较合理的接口，本文主要分为两部分：“接口的基本数据格式”和“接口的业务数据格式”。本文的目的是想减少前后端对接过程中产生的沟通问题，还有优化一些可以避免的错误，甚至于你可以不提供接口文档，前端也能快速上手你的接口。",
+      "keywords": "接口设计,接口格式,接口规范",
+      "date": "2020-02-17 09:01:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2020/02/1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech",
+        "design"
+      ],
+      "isHot": true
+    },
+    {
+      "id": "node-to-exe-by-pkg",
+      "type": "article",
+      "shortDate": "2019-10-02",
+      "title": "把node脚本打包成exe文件 在无node环境的机器上运行",
+      "desc": "有时候做的一些活动页面，会涉及到数据存储，虽然有一套公共业务接口，具备对应的数据导出，但是活动这种东西，一向没有那么中规中矩，总会有那么几次无法用公共接口来满足，遇到一些需要定制的情况，在赶工期的时候就只能是先满足数据录入需要部分，保证顺利上线，至于数据的导出，那往往是不在考虑范围的。",
+      "keywords": "node打包exe,js打包exe,pkg如何使用",
+      "date": "2019-10-02 18:48:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2019/10/1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "vue-photo-preview",
+      "type": "article",
+      "shortDate": "2019-09-15",
+      "title": "Vue插件安利：看大图插件vue-photo-preview",
+      "desc": "最近一段时间，涉及到看大图功能的需求，用的比较多的一款看大图插件，PC和移动端适配良好，之前也用过一些别的插件，但还是这个方便，也比较轻量级。",
+      "keywords": "vue看大图,vue photo preview,vue图片放大",
+      "date": "2019-09-15 19:10:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2019/09/1-1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "ios-time-nan",
+      "type": "article",
+      "shortDate": "2019-09-15",
+      "title": "iOS设备显示时间为NaN的原因及处理方法",
+      "desc": "其实是个存在很久的问题啦，之前在IE的年代应该也是有遇到过的，只不过后来日常涉及到时间的需求都是用时间戳比较多，加上现在各种屏蔽IE访问（我们公司的项目都是引导使用chrome/firefox），所以给忘记了！",
+      "keywords": "iOS时间NaN,iOS时间显示异常",
+      "date": "2019-09-15 10:04:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2019/09/1-2.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "blog-articles-sort-out",
+      "type": "article",
+      "shortDate": "2019-09-15",
+      "title": "对博客的文章重新做了一下归类和整理",
+      "desc": "最近几个月比较忙，虽然没怎么更新博客，不过还是保留着随手记笔记的习惯，也就是遇到坑啊或者一些觉得值得记录的东西，会随手简单的写到备忘录，等有空的时候再更新上来。恰逢中秋小长假，终于闲下来看一下博客了，没想到最近一个多月每天都还是有不少人来看，大部分是搜索过来的，而且搜的关键词，就是当初我遇到的那些坑！",
+      "keywords": "博客归类,博客文章分类",
+      "date": "2019-09-15 09:35:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2019/09/1-3.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ]
+    },
+    {
+      "id": "sublime-text-install-package",
+      "type": "article",
+      "shortDate": "2019-07-25",
+      "title": "解决Sublime Text 3无法安装package的问题",
+      "desc": "今天无聊更新了一下Sublime Text 3的最新版，结果坑爹了，无法使用Ctrl+Shift+P选择install安装各种插件，会报错 Package Control There are no packages available for installation Please see https://packagecontrol.io/docs/troubleshooting for help",
+      "keywords": "sublime text 3 packages",
+      "date": "2019-07-25 07:39:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2019/07/1-3.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "node-web-crawler",
+      "type": "article",
+      "shortDate": "2019-07-23",
+      "title": "网站改版迁移经验记录：基于node的爬虫编写",
+      "desc": "以往的网站迁移服务器，数据方面的东西都是由服务端直接处理，不过这一次的需求比较特殊，就比如门户首页本来抓的是门户的资讯，但改版后是抓微博的动态，原来的资讯基本舍弃，只保留一部分专题和文章页，类似酱紫的一个改版迁移emmm，所以经过商讨，需要由前端来将需要保存的旧页面从客户端保存，再发布上传到新服务器上。",
+      "keywords": "node爬虫,node crawler",
+      "date": "2019-07-23 01:28:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2019/07/1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "vue-cli-webpack-banner-plugin",
+      "type": "article",
+      "shortDate": "2019-04-22",
+      "title": "基于Vue-CLI 3.0 让WebPack在打包的时候添加版权注释",
+      "desc": "其实以前就知道说有这么个东西可以在打包后添加一个版权注释，但是一直没有去用。不过最近觉得最好还是配置一下，版权不版权倒是其次，毕竟打包后都是混淆的东西，要抄也不好抄啊不是，主要还是给一些有需要的人知道说这个东西是谁写的，有什么问题可以咨询谁，或者说以后有什么类似的需求，是不是可以再次找谁做。",
+      "keywords": "WebPack 打包注释,WebPack banner,WebPack 版权",
+      "date": "2019-04-22 07:03:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2019/04/1-1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "css-conf-5",
+      "type": "article",
+      "shortDate": "2019-03-31",
+      "title": "第五届CSS开发者大会：我的第一次参加开发者大会",
+      "desc": "2019年3月30日，在深圳，看了几年张老师的博客，今天终于见到大神真人，开心！",
+      "keywords": "CSS Conf,CSS开发者大会",
+      "date": "2019-03-31 07:59:59",
+      "cover": "http://cdn.chengpeiquan.com/img/2021/09/20210920173259.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ]
+    },
+    {
+      "id": "editorconfig",
+      "type": "article",
+      "shortDate": "2019-03-16",
+      "title": "项目代码风格统一神器 editorconfig的作用与配置说明",
+      "desc": "团队协作，或者有时候你从GitHub或者其他地方拷贝人家的组件插件下来，想修改，发现代码风格不一致，比如自己习惯2个空格的缩进，但别人是4个空格，或者直接用tab，这就emmm了不是…",
+      "keywords": "editorconfig,统一编辑器格式",
+      "date": "2019-03-16 07:36:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2019/03/1-2.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "vue-devserver-proxy",
+      "type": "article",
+      "shortDate": "2019-03-08",
+      "title": "基于Vue-CLI 3.0配置webpack的跨域限制代理功能devServer.proxy",
+      "desc": "接口跨域一直是个头疼的问题，之前的业务页面都基于一套限制比较少的接口在交互，所以大部分还是写完静态页面然后替换数据部分，直接打包到测试环境即可，所以一直不太在意本地调试的问题。",
+      "keywords": "vue跨域,webpack跨域",
+      "date": "2019-03-08 19:10:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2019/03/1-1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "vue-skeleton",
+      "type": "article",
+      "shortDate": "2019-03-02",
+      "title": "基于Vue-CLI 3.0的骨架屏实现方案",
+      "desc": "大型Project的首次载入速度一般会比较慢，虽然Vue可以配置路由懒加载，但有时候打包出来的chunk还是会比较大，这个时候可以结合骨架屏来提高用户等待加载时的体验。",
+      "keywords": "Vue骨架屏,Vue3.0骨架屏,Vue Skeleton",
+      "date": "2019-03-02 00:14:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2019/03/1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "repo": "https://github.com/chengpeiquan/vue-skeleton"
+    },
+    {
+      "id": "vue-params-lost",
+      "type": "article",
+      "shortDate": "2019-02-26",
+      "title": "Vue路由params丢失、错误路由白屏的解决方案",
+      "desc": "使用带params的路由的时候，如果params不正确，路由就不会渲染，导致页面出现空白，本来想跟query一样，指定其中一个query为默认值，没想到并不能如己所愿，不过最终问题还是解决了，采用了一个路由的api来判断当前路由是否存在，顺带解决了其他非正常路由的指向问题。",
+      "keywords": "vue路由空白处理,vue默认params",
+      "date": "2019-02-26 21:54:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2019/02/1-1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "github-upload-delete",
+      "type": "article",
+      "shortDate": "2019-02-05",
+      "title": "Github发布项目与删除文件夹操作指令",
+      "desc": "Git的指令还是记不太住，发篇文帮助记忆，记录起来方便查阅。",
+      "keywords": "github,github上传,github删除文件夹",
+      "date": "2019-02-05 22:56:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2019/02/1-2.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "js-go-to-top",
+      "type": "article",
+      "shortDate": "2019-01-09",
+      "title": "原生JS实现带动画的返回顶部按钮",
+      "desc": "添加的第一个参数destination，终点位置，含义是指终点坐标与窗口顶部的Y轴距离，非必须，默认为0，也就是直接返回到窗口顶部。通过window.scrollY > destination的条件判断，如果当前窗口滚动距离比预设的终点距离大，就执行滚动，否则就结束，到达目的地。",
+      "keywords": "原生JS回到顶部,原生JS带动画回到顶部",
+      "date": "2019-01-09 08:45:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2019/01/1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "document-write-optimize-webpack",
+      "type": "article",
+      "shortDate": "2018-12-16",
+      "title": "针对document.write渲染的优化方案（适用webpack按需加载）",
+      "desc": "write方法去渲染html，更多情况是适合手写页面的年代，现在前端开发都是通过node+webpack工程化打包，那么遇到必须write又不想write的情况应该怎么办？最近刚好对手里的一个项目做了渲染优化，在这里顺便做个总结，讲一下对`document.write`渲染html的一个优化思路，可以结合到MVVM框架（如Vue.js）里去使用。",
+      "keywords": "document.write渲染优化,vue document.write",
+      "date": "2018-12-16 00:34:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2018/12/1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "vconsole",
+      "type": "article",
+      "shortDate": "2018-11-25",
+      "title": "移动端真机debug调试神器 vConsole的引入说明（原生态与WebPack）",
+      "desc": "距离这个神器发布第一个版本的时间，已经过去3年了，不过还是有蛮多新同学不知道他的存在，在做项目的时候，移动端真机调试还是用alert来弹，不仅调试起来很烦，也蛮不好定位问题的。安利过的每个人，都对vConsole有着100%的好评哈哈哈，写个博文记录下吧，好东西应该持续推荐。",
+      "keywords": "vconsole,手机控制台,手机debug,真机调试,移动端debug",
+      "date": "2018-11-25 09:16:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2018/11/1-1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "vue-cli-3",
+      "type": "article",
+      "shortDate": "2018-11-22",
+      "title": "Vue-CLI脚手架3.0升级小结（含Win版Node升级与PowerShell踩坑记录）",
+      "desc": "Vue脚手架3.0出来也蛮久了，秉着前人先踩坑的习惯，最近才开始升级。整个过程还是蛮顺利的，不过也有一些小小的问题，简单记录起来。",
+      "keywords": "vue cli 3.0 升级,vue cli 升级报错",
+      "date": "2018-11-22 03:50:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2018/11/1-2.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "wechat-bug-input-textarea",
+      "type": "article",
+      "shortDate": "2018-10-24",
+      "title": "微信浏览器input/textarea回收键盘后界面错位bug的解决办法",
+      "desc": "最近在处理一个H5页面的时候，有一个需要用户填写昵称信息的环节，模拟器一切正常，结果到了真机上发现输入信息完毕后，无法点击确认按钮emmm，黑人问号了半天，联系QA又深度测试了一下，发现只有iOS的微信浏览器才会。",
+      "keywords": "微信BUG,微信input,微信键盘,微信textarea,微信错位",
+      "date": "2018-10-24 08:58:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2018/10/1-6.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "js-exchange-random",
+      "type": "article",
+      "shortDate": "2018-10-24",
+      "title": "低成本实现“猜你喜欢”需求的几种思路（本质为随机数与“换一换”）",
+      "desc": "这个话题的第一次出现，是在2017年8月份的时候，到现在也蛮久了，之所以想起来说要小结一下，是因为这一年里不少新同学都过问过这么个问题，自己虽然做的不算多，但也通过几种情况完成了各类需求，写个笔记也方便以后用。那会自己第一次遇到一个需求是做一个“猜你喜欢”，然后没有后端的支持，也就是实际上这个“猜你喜欢”本质并不是“猜”，而是一个随机展示，也就是所谓的“换一换”。",
+      "keywords": "js猜你喜欢,js换一换",
+      "date": "2018-10-24 08:50:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2018/10/1-7.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "ckeditor4-rich-text-editor-webpack",
+      "type": "article",
+      "shortDate": "2018-10-22",
+      "title": "基于CKEditor4的富文本编辑器 WebPack引入说明与配置注意事项",
+      "desc": "前几天对接了个需求，说因为传统的CMS太笨重，并且一些业务结合点想落地的话改造太麻烦，想让我这边帮他做一个发布后台，前后端分离，他只负责数据和接口，其他的由我自己把控。我当时没立即答应，因为我不会啊 - - 哈哈哈没玩过这东西，之前做发布都是直接走CMS或者WordPress这种直接现成的发布系统，偶尔自己做一些活动用的传图发布页面也是简单的一个textarea就完事。不过好奇心又很强，也想学多点东西，还是接了过来，然后让他给我点时间我得尝试一下。",
+      "keywords": "ckeditor,ckeditor4,ckeditor传图,ckeditor编辑,ckeditor赋值,ckeditor路径",
+      "date": "2018-10-22 08:48:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2018/10/1-3.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "axios-ie9",
+      "type": "article",
+      "shortDate": "2018-10-21",
+      "title": "解决axios的responseType为\"json\"时IE9报undefined的兼容办法",
+      "desc": "虽然axios说可以兼容IE9，但实际上在项目开发过程中，IE9报错，而且目前的情况是responseType为\"json\"时才会报这个异常，相关请求代码大致如下",
+      "keywords": "axios undefined,axios ie9,axios response undefined",
+      "date": "2018-10-21 07:16:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2018/10/1-8.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "noconflict-jquery-zepto",
+      "type": "article",
+      "shortDate": "2018-10-20",
+      "title": "只写一次执行函数 同时兼容桌面noConflict后的jQuery与移动端的Zepto",
+      "desc": "今天遇到一个比较特殊的情况是这样子，维护一个年代比较久远的项目，说年代久远也就三年前开发上线的，实际生产线还是用的很稳，只不过中间经历了一次改版，后端倒没啥，同一个部门维护的，前端当时因为排期问题，为了及时上线，所以做桌面端模板和移动端模板是两个不同的部门的开发，于是，现在需要做一些中间层的需求就遇到了这么一个稍微有点坑爹的情况。",
+      "keywords": "jquery zepto 兼容",
+      "date": "2018-10-20 07:53:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2018/10/1-2.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "large-image-preload-fast",
+      "type": "article",
+      "shortDate": "2018-10-12",
+      "title": "弹窗大背景优化方案 png大图片预加载处理方法",
+      "desc": "因为一直做游戏风格的需求，而日常维护的游戏也比较朴素，都是用纯css处理的渐变底色即可满足弹窗背景的配置，最近处理了一个比较花哨的需求，弹窗设计方面比较下功夫，带来的一个问题就是这个弹窗背景图只能切成png，哪怕经过tinypng优化之后还有50多kb。50kb的图片说实话也不算特别大，如果作为常规的img加载其实没什么问题，但作为背景图来加载，问题就会被放大 —— 用户访问页面后，第一次打开弹窗的体验非常差，会先显示弹窗内容，再慢慢加载弹窗背景（隐藏层的背景需要层变为可见才会加载）。",
+      "keywords": "png优化,图片预加载,js预加载",
+      "date": "2018-10-12 19:49:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2018/10/1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "vue-toast",
+      "type": "article",
+      "shortDate": "2018-10-11",
+      "title": "Vue插件：封装独立的通用组件 可复用的单文件式全局Toast弹窗",
+      "desc": "最近突然很想简化一些自己写的，项目常用的调用小功能，比如一些弹窗等等，之前都是H/J/C分离，每次复用都要分别写到对应的文件里，略显麻烦。最近看了Vue官网有关于插件打包的说明，尝试了一下还可以，目前成功打包了一个Toast组件。以后每次项目要用到Toast弹窗，只需要引入一个 showToast.vue 即可直接生效调用，而不必在多个文件里维护自己的那部分代码。",
+      "keywords": "vue,toast,vue弹窗,vue toast,vue插件",
+      "date": "2018-10-11 08:09:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2018/10/1-9.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "repo": "https://github.com/chengpeiquan/vue-toast"
+    },
+    {
+      "id": "vue-ajax-axios",
+      "type": "article",
+      "shortDate": "2018-09-06",
+      "title": "Vue使用ajax 关于axios遇到乱码等问题的那些坑",
+      "desc": "这个情况当时是很懵逼的，因为在PC端，以及使用Chrome的移动端模拟器测试都一切正常，但到了真机上提交数据时，只要包含了中文，post到服务端的结果永远是【銆愭姤鍚嶇粍鍒】，这个至今还是不知道到底是什么鬼。",
+      "keywords": "vue ajax,vue axios,axios乱码,axios get,axios post,axios,qs,axios qs",
+      "date": "2018-09-06 09:46:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2018/09/1-1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "wordpress-rewrite-nginx-lnmp",
+      "type": "article",
+      "shortDate": "2018-09-06",
+      "title": "基于lnmp配置WordPress的Nginx伪静态方法",
+      "desc": "Nginx配置rewrite，基于lnmp搭建的话，其实配置起来非常简单，只需要在lnmp上输入几个简单的指令就可以把域名和伪静态类型关联上，重启Nginx后直接生效~",
+      "keywords": "wordpress,rewrite,nginx,lnmp",
+      "date": "2018-09-06 09:43:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2018/09/1-2.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "hello-world",
+      "type": "article",
+      "shortDate": "2018-09-02",
+      "title": "世界，您好！",
+      "desc": "这是这次博客的第一篇文章，不是历史以来的第一篇。以前也在这个域名下搭过一次WordPress，但后来写的东西有点杂，而且觉得以前记录的问题已经都不是什么问题了，所以在之前的新浪云到期之后，果断就舍弃了。",
+      "keywords": "hello world",
+      "date": "2018-09-02 22:19:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2018/09/1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ]
+    }
+  ]
+}

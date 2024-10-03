@@ -1,0 +1,144 @@
+{
+  "author": {
+    "name": "chengpeiquan",
+    "email": "chengpeiquan@chengpeiquan.com",
+    "link": "https://chengpeiquan.com"
+  },
+  "type": "article",
+  "total": 77,
+  "page": 6,
+  "lastPage": 8,
+  "category": "default",
+  "data": [
+    {
+      "id": "node-to-exe-by-pkg",
+      "type": "article",
+      "shortDate": "2019-10-02",
+      "title": "把node脚本打包成exe文件 在无node环境的机器上运行",
+      "desc": "有时候做的一些活动页面，会涉及到数据存储，虽然有一套公共业务接口，具备对应的数据导出，但是活动这种东西，一向没有那么中规中矩，总会有那么几次无法用公共接口来满足，遇到一些需要定制的情况，在赶工期的时候就只能是先满足数据录入需要部分，保证顺利上线，至于数据的导出，那往往是不在考虑范围的。",
+      "keywords": "node打包exe,js打包exe,pkg如何使用",
+      "date": "2019-10-02 18:48:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2019/10/1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "vue-photo-preview",
+      "type": "article",
+      "shortDate": "2019-09-15",
+      "title": "Vue插件安利：看大图插件vue-photo-preview",
+      "desc": "最近一段时间，涉及到看大图功能的需求，用的比较多的一款看大图插件，PC和移动端适配良好，之前也用过一些别的插件，但还是这个方便，也比较轻量级。",
+      "keywords": "vue看大图,vue photo preview,vue图片放大",
+      "date": "2019-09-15 19:10:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2019/09/1-1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "ios-time-nan",
+      "type": "article",
+      "shortDate": "2019-09-15",
+      "title": "iOS设备显示时间为NaN的原因及处理方法",
+      "desc": "其实是个存在很久的问题啦，之前在IE的年代应该也是有遇到过的，只不过后来日常涉及到时间的需求都是用时间戳比较多，加上现在各种屏蔽IE访问（我们公司的项目都是引导使用chrome/firefox），所以给忘记了！",
+      "keywords": "iOS时间NaN,iOS时间显示异常",
+      "date": "2019-09-15 10:04:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2019/09/1-2.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "blog-articles-sort-out",
+      "type": "article",
+      "shortDate": "2019-09-15",
+      "title": "对博客的文章重新做了一下归类和整理",
+      "desc": "最近几个月比较忙，虽然没怎么更新博客，不过还是保留着随手记笔记的习惯，也就是遇到坑啊或者一些觉得值得记录的东西，会随手简单的写到备忘录，等有空的时候再更新上来。恰逢中秋小长假，终于闲下来看一下博客了，没想到最近一个多月每天都还是有不少人来看，大部分是搜索过来的，而且搜的关键词，就是当初我遇到的那些坑！",
+      "keywords": "博客归类,博客文章分类",
+      "date": "2019-09-15 09:35:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2019/09/1-3.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ]
+    },
+    {
+      "id": "sublime-text-install-package",
+      "type": "article",
+      "shortDate": "2019-07-25",
+      "title": "解决Sublime Text 3无法安装package的问题",
+      "desc": "今天无聊更新了一下Sublime Text 3的最新版，结果坑爹了，无法使用Ctrl+Shift+P选择install安装各种插件，会报错 Package Control There are no packages available for installation Please see https://packagecontrol.io/docs/troubleshooting for help",
+      "keywords": "sublime text 3 packages",
+      "date": "2019-07-25 07:39:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2019/07/1-3.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "node-web-crawler",
+      "type": "article",
+      "shortDate": "2019-07-23",
+      "title": "网站改版迁移经验记录：基于node的爬虫编写",
+      "desc": "以往的网站迁移服务器，数据方面的东西都是由服务端直接处理，不过这一次的需求比较特殊，就比如门户首页本来抓的是门户的资讯，但改版后是抓微博的动态，原来的资讯基本舍弃，只保留一部分专题和文章页，类似酱紫的一个改版迁移emmm，所以经过商讨，需要由前端来将需要保存的旧页面从客户端保存，再发布上传到新服务器上。",
+      "keywords": "node爬虫,node crawler",
+      "date": "2019-07-23 01:28:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2019/07/1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "vue-cli-webpack-banner-plugin",
+      "type": "article",
+      "shortDate": "2019-04-22",
+      "title": "基于Vue-CLI 3.0 让WebPack在打包的时候添加版权注释",
+      "desc": "其实以前就知道说有这么个东西可以在打包后添加一个版权注释，但是一直没有去用。不过最近觉得最好还是配置一下，版权不版权倒是其次，毕竟打包后都是混淆的东西，要抄也不好抄啊不是，主要还是给一些有需要的人知道说这个东西是谁写的，有什么问题可以咨询谁，或者说以后有什么类似的需求，是不是可以再次找谁做。",
+      "keywords": "WebPack 打包注释,WebPack banner,WebPack 版权",
+      "date": "2019-04-22 07:03:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2019/04/1-1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "css-conf-5",
+      "type": "article",
+      "shortDate": "2019-03-31",
+      "title": "第五届CSS开发者大会：我的第一次参加开发者大会",
+      "desc": "2019年3月30日，在深圳，看了几年张老师的博客，今天终于见到大神真人，开心！",
+      "keywords": "CSS Conf,CSS开发者大会",
+      "date": "2019-03-31 07:59:59",
+      "cover": "http://cdn.chengpeiquan.com/img/2021/09/20210920173259.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ]
+    },
+    {
+      "id": "editorconfig",
+      "type": "article",
+      "shortDate": "2019-03-16",
+      "title": "项目代码风格统一神器 editorconfig的作用与配置说明",
+      "desc": "团队协作，或者有时候你从GitHub或者其他地方拷贝人家的组件插件下来，想修改，发现代码风格不一致，比如自己习惯2个空格的缩进，但别人是4个空格，或者直接用tab，这就emmm了不是…",
+      "keywords": "editorconfig,统一编辑器格式",
+      "date": "2019-03-16 07:36:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2019/03/1-2.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "vue-devserver-proxy",
+      "type": "article",
+      "shortDate": "2019-03-08",
+      "title": "基于Vue-CLI 3.0配置webpack的跨域限制代理功能devServer.proxy",
+      "desc": "接口跨域一直是个头疼的问题，之前的业务页面都基于一套限制比较少的接口在交互，所以大部分还是写完静态页面然后替换数据部分，直接打包到测试环境即可，所以一直不太在意本地调试的问题。",
+      "keywords": "vue跨域,webpack跨域",
+      "date": "2019-03-08 19:10:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2019/03/1-1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    }
+  ]
+}

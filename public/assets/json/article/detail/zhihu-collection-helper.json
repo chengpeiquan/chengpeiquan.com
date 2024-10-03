@@ -1,0 +1,20 @@
+{
+  "title": "知乎收藏夹助手：自动化将专栏的文章添加到收藏夹",
+  "desc": "知乎收藏夹助手，可将专栏的文章添加到收藏夹中（因为专栏的内容通常比较垂直，不会太杂），适用于收藏夹在创建初期需要大量内容填充的情况。",
+  "keywords": "知乎,知乎工具,爬虫",
+  "date": "2022-10-22 07:53:00",
+  "cover": "http://cdn.chengpeiquan.com/img/2022/10/20221021235753.jpg?x-oss-process=image/interlace,1",
+  "categories": [
+    "tech"
+  ],
+  "repo": "https://github.com/chengpeiquan/zhihu-collection-helper",
+  "id": "zhihu-collection-helper",
+  "type": "article",
+  "author": {
+    "name": "chengpeiquan",
+    "email": "chengpeiquan@chengpeiquan.com",
+    "link": "https://chengpeiquan.com"
+  },
+  "shortDate": "2022-10-22",
+  "content": "<p>[[toc]]</p>\n<p>知乎收藏夹助手，可将专栏的文章添加到收藏夹中（因为专栏的内容通常比较垂直，不会太杂），适用于收藏夹在创建初期需要大量内容填充的情况。</p>\n<p>参考收藏夹：<a href=\"https://www.zhihu.com/collection/839257512\">凶杀案·刑侦与法医</a></p>\n<h2>使用方法</h2>\n<p>这是一个 Node.js 项目，因此需要提前安装 <a href=\"https://nodejs.org/zh-cn/\">Node.js</a> 。</p>\n<pre><code class=\"language-bash\"># 克隆仓库到本地\ngit clone https://github.com/chengpeiquan/zhihu-collection-helper.git\n\n# 进入项目目录\ncd zhihu-collection-helper\n\n# 安装依赖（可使用 npm / yarn 等其他包管理器）\npnpm i\n\n# 运行开始命令\npnpm start\n</code></pre>\n<p>不过程序正确运行的前提是需要先准备好一个 <a href=\"#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6\">配置文件</a> 。</p>\n<h2>配置文件</h2>\n<p>基于 <a href=\"https://github.com/motdotla/dotenv\">dotenv</a> 管理配置文件，创建一个名为 <code>.env</code> 的文件保存到根目录（与 src 目录同级别）。</p>\n<p>注意所有的配置项的值都是字符串，也就是使用双引号括住。</p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align:center\">配置选项</th>\n<th style=\"text-align:center\">作用</th>\n<th style=\"text-align:center\">数据来源或设置说明</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align:center\">COLLECTION_ID</td>\n<td style=\"text-align:center\">要添加数据的收藏夹 ID</td>\n<td style=\"text-align:center\">收藏夹的 URL</td>\n</tr>\n<tr>\n<td style=\"text-align:center\">DATA_SOURCE_COLLECTION_ID</td>\n<td style=\"text-align:center\">要爬取的收藏夹 ID</td>\n<td style=\"text-align:center\">收藏夹的 URL</td>\n</tr>\n<tr>\n<td style=\"text-align:center\">START_PAGE_NUMBER</td>\n<td style=\"text-align:center\">起始的爬取页数</td>\n<td style=\"text-align:center\">如果中间</td>\n</tr>\n<tr>\n<td style=\"text-align:center\">LIMIT</td>\n<td style=\"text-align:center\">分页条数限制</td>\n<td style=\"text-align:center\">上限 <code>100</code></td>\n</tr>\n<tr>\n<td style=\"text-align:center\">X_AB_PB</td>\n<td style=\"text-align:center\">请求的鉴权参数</td>\n<td style=\"text-align:center\">知乎 AJAX 请求的 <code>Request Headers</code></td>\n</tr>\n<tr>\n<td style=\"text-align:center\">X_XSRFTOKEN</td>\n<td style=\"text-align:center\">请求的鉴权参数</td>\n<td style=\"text-align:center\">知乎 AJAX 请求的 <code>Request Headers</code></td>\n</tr>\n<tr>\n<td style=\"text-align:center\">X_ZSE_93</td>\n<td style=\"text-align:center\">请求的鉴权参数</td>\n<td style=\"text-align:center\">知乎 AJAX 请求的 <code>Request Headers</code></td>\n</tr>\n<tr>\n<td style=\"text-align:center\">X_ZSE_96</td>\n<td style=\"text-align:center\">请求的鉴权参数</td>\n<td style=\"text-align:center\">知乎 AJAX 请求的 <code>Request Headers</code></td>\n</tr>\n<tr>\n<td style=\"text-align:center\">X_ZSE_81</td>\n<td style=\"text-align:center\">请求的鉴权参数</td>\n<td style=\"text-align:center\">知乎 AJAX 请求的 <code>Request Headers</code></td>\n</tr>\n<tr>\n<td style=\"text-align:center\">COOKIE</td>\n<td style=\"text-align:center\">请求的鉴权参数</td>\n<td style=\"text-align:center\">知乎 AJAX 请求的 <code>Request Headers</code></td>\n</tr>\n</tbody>\n</table>\n<h2>其他说明</h2>\n<p>因为操作太快会导致行为限制（返回 <code>403 Forbidden</code> ），所以每次请求之前都通过 <a href=\"./src/utils.ts#L36-L43\">sleep</a> 方法进行一次随机秒数的睡眠，可在这里调整操作间隔。</p>\n<p>如果账号被限制了，等几个小时后再试就可以了。</p>\n"
+}
