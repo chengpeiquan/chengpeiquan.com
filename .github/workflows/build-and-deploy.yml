@@ -1,0 +1,22 @@
+name: build-and-deploy
+
+on:
+  push:
+  pull_request:
+    branches: [feat/v2]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          ref: feat/v2
+      - name: install deps
+        run: |
+          npm i -g pnpm
+          pnpm install
+      - name: build docker image
+        run: |
+          docker compose build
