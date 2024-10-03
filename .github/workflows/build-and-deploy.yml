@@ -3,7 +3,7 @@ name: build-and-deploy
 on:
   push:
   pull_request:
-    branches: [feat/v2]
+    branches: [main]
 
 jobs:
   build-and-deploy:
@@ -12,11 +12,33 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
         with:
-          ref: feat/v2
-      - name: install deps
+          ref: main
+      - name: install package manager
         run: |
           npm i -g pnpm
-          pnpm install
+      - name: docker login
+        run: |
+          echo ${{ secrets.DOCKER_PASSWORD }} | docker login ${{ secrets.DOCKER_REGISTRY }} --username=${{ secrets.DOCKER_USERNAME }} --password-stdin
       - name: build docker image
         run: |
-          docker compose build
+          docker build . --file Dockerfile --tag ${{ secrets.DOCKER_IMAGE }}
+      - name: publish docker image
+        run: |
+          docker push ${{ secrets.DOCKER_IMAGE }}
+      - name: docker logout
+        run: |
+          docker logout
+      - name: deploy to server
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          script: |
+            echo ${{ secrets.DOCKER_PASSWORD }} | docker login ${{ secrets.DOCKER_REGISTRY }} --username=${{ secrets.DOCKER_USERNAME }} --password-stdin
+            docker pull ${{ secrets.DOCKER_IMAGE }}
+            docker stop ${{ secrets.DOCKER_CONTAINER }} || true
+            docker rm ${{ secrets.DOCKER_CONTAINER }} || true
+            docker run -d --name ${{ secrets.DOCKER_CONTAINER }} -p ${{ secrets.DOCKER_PORT }}:${{ secrets.DOCKER_PORT }} ${{ secrets.DOCKER_IMAGE }}
+            docker image prune -f
+            docker logout
