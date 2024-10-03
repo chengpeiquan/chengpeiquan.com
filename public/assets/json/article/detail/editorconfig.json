@@ -1,0 +1,19 @@
+{
+  "title": "项目代码风格统一神器 editorconfig的作用与配置说明",
+  "desc": "团队协作，或者有时候你从GitHub或者其他地方拷贝人家的组件插件下来，想修改，发现代码风格不一致，比如自己习惯2个空格的缩进，但别人是4个空格，或者直接用tab，这就emmm了不是…",
+  "keywords": "editorconfig,统一编辑器格式",
+  "date": "2019-03-16 07:36:00",
+  "cover": "http://cdn.chengpeiquan.com/img/2019/03/1-2.jpg?x-oss-process=image/interlace,1",
+  "categories": [
+    "tech"
+  ],
+  "id": "editorconfig",
+  "type": "article",
+  "author": {
+    "name": "chengpeiquan",
+    "email": "chengpeiquan@chengpeiquan.com",
+    "link": "https://chengpeiquan.com"
+  },
+  "shortDate": "2019-03-16",
+  "content": "<p>团队协作，或者有时候你从 GitHub 或者其他地方拷贝人家的组件插件下来，想修改，发现代码风格不一致，比如自己习惯 2 个空格的缩进，但别人是 4 个空格，或者直接用 tab，这就 emmm 了不是…</p>\n<p>分享一个神器，只需要命名为 .editorconfig ，保存到自己的项目根目录下，即可让项目下所有文件都统一代码风格，非常棒！</p>\n<p><img src=\"http://cdn.chengpeiquan.com/img/2019/03/2-2.jpg?x-oss-process=image/interlace,1/resize,w_750\" alt=\"\"></p>\n<blockquote>\n<p>官网 <a href=\"https://editorconfig.org/\">https://editorconfig.org/</a></p>\n</blockquote>\n<h2>常用配置：</h2>\n<p>附上我常用的一个 config 文件：</p>\n<pre><code class=\"language-javascript\"># http://editorconfig.org\nroot = true\n\n[*]\ncharset = utf-8\nend_of_line = lf\nindent_size = 2\nindent_style = space\ninsert_final_newline = true\nmax_line_length = 80\ntrim_trailing_whitespace = true\n\n[*.md]\nmax_line_length = 0\ntrim_trailing_whitespace = false\n</code></pre>\n<p>配置基本都是语义化，一看就知道都什么意思，可根据自己的习惯调整！</p>\n<h2>更多配置：</h2>\n<p>当然也支持更多的配置，具体的配置说明如下：</p>\n<h3>一、常用属性配置</h3>\n<p><strong>1、root &lt;boolean&gt;</strong></p>\n<p>是否是顶级配置文件，设置为 true 的时候才会停止搜索.editorconfig 文件</p>\n<p><strong>2、charset &lt;&quot;latin&quot; | &quot;utf-8&quot; | &quot;utf-8-bom&quot; | &quot;utf-16be&quot; | &quot;utf-16le&quot;&gt;</strong></p>\n<p>编码格式</p>\n<p><strong>3、indent_style &lt;&quot;tab&quot; | &quot;space&quot;&gt;</strong></p>\n<p>缩进方式</p>\n<p><strong>4、indent_size &lt;number&gt;</strong></p>\n<p>缩进大小</p>\n<p><strong>5、end_of_line&lt;&quot;lf&quot; | &quot;cr&quot; | &quot;crlf&quot;&gt;</strong></p>\n<p>换行符类型</p>\n<p><strong>6、insert_final_newline &lt;boolean&gt;</strong></p>\n<p>是否让文件以空行结束</p>\n<p><strong>7、trim_trailing_whitespace &lt;boolean&gt;</strong></p>\n<p>是否删除行尾空格</p>\n<p><strong>8、max_line_length &lt;number&gt;</strong></p>\n<p>最大行宽。</p>\n<h3>二、常用文件名匹配</h3>\n<p><strong>1、*</strong></p>\n<p>匹配除/之外的任意字符</p>\n<p><strong>2、**</strong></p>\n<p>匹配任意字符串</p>\n<p><strong>3、?</strong></p>\n<p>匹配任意单个字符</p>\n<p><strong>4、[name]</strong></p>\n<p>匹配 name 字符</p>\n<p><strong>5、[!name]</strong></p>\n<p>不匹配 name 字符</p>\n<p><strong>6、[s1,s2,s3]</strong></p>\n<p>匹配给定的字符串</p>\n<p><strong>7、[num1..num2]</strong></p>\n<p>匹配 num1 到 mun2 直接的整数</p>\n<blockquote>\n<p>配置项说明转自简书 <a href=\"https://www.jianshu.com/p/00ac7bd5e74e\">https://www.jianshu.com/p/00ac7bd5e74e</a></p>\n</blockquote>\n<p>睡觉！</p>\n"
+}

@@ -1,0 +1,19 @@
+{
+  "title": "解决vscode保存vue文件时 压缩stylus代码为一行以及无法注释template的问题",
+  "desc": "目前除了美团之外，其他的外卖app（像饿了么啊、瑞幸啊、麦当劳肯德基啊）都没提供自动计算账单的功能，自己每次拉excel算的蛋疼，所以写了这个，无需纠结红包、抵扣券等乱七八糟的减免，会自动计算折扣比例来得到最终账单。",
+  "keywords": "stylus保存压缩,stylus错乱,stylus格式化",
+  "date": "2020-09-21 01:02:00",
+  "cover": "http://cdn.chengpeiquan.com/img/2020/09/vue-vscode-snippets.jpg?x-oss-process=image/interlace,1",
+  "categories": [
+    "tech"
+  ],
+  "id": "vue-vscode-snippets",
+  "type": "article",
+  "author": {
+    "name": "chengpeiquan",
+    "email": "chengpeiquan@chengpeiquan.com",
+    "link": "https://chengpeiquan.com"
+  },
+  "shortDate": "2020-09-21",
+  "content": "<p>[[toc]]</p>\n<p>这篇博客主要解决使用 vscode 在编辑 vue 文件时，遇到的两个困扰了一段时间的问题：</p>\n<p>1、如果在 vue 文件里使用了 stylus 预处理器，在保存的时候会被压缩为一行</p>\n<p>2、在 template 里按 ctrl+/的时候，会用 js 注释语法来注释 html，导致注释失败</p>\n<h2>解决 stylus 被压缩的问题</h2>\n<p>最近有好长一段时间都出现了一个诡异的情况，我保存 vue 文件的时候，stylus 写的好好的，就像下面这样：</p>\n<p><img src=\"http://cdn.chengpeiquan.com/img/2020/09/4.jpg?x-oss-process=image/interlace,1/resize,w_750\" alt=\"\"></p>\n<p>然后当我按下 Ctrl+S，老是变成这样一行……还能不能玩了？？</p>\n<p><img src=\"http://cdn.chengpeiquan.com/img/2020/09/3-1.jpg?x-oss-process=image/interlace,1/resize,w_750\" alt=\"\"></p>\n<p>然后 less/sass 都不会，唯独 stylus 出现了，我又比较喜欢 stylus，无需花括号，无需冒号，无需分号的简洁…</p>\n<p>于是各种重装 stylus 相关插件，然而并没有一丝丝改善，搜来搜去也没什么解决办法。</p>\n<p>然后我一度很想换回 sublime，换回了 2 天又觉得有点舍不得 vscode，于是又把 vscode 的插件一个个全部关掉再开启尝试……</p>\n<p>直到……我发现了这篇同病相怜的文章…</p>\n<blockquote>\n<p>解决 vscode 中保存后 html 自动格式化的问题<br>\n<a href=\"https://www.jianshu.com/p/01d916ab6811\">https://www.jianshu.com/p/01d916ab6811</a></p>\n</blockquote>\n<p>emmm，发现原来居然是因为 vue 3.0 的 <code>Vue3snippets</code> 插件引起的 = =</p>\n<p>然后我把设置里面的 format 关闭了，好了…</p>\n<p><img src=\"http://cdn.chengpeiquan.com/img/2020/09/2-1.jpg?x-oss-process=image/interlace,1/resize,w_750\" alt=\"\"></p>\n<p>终于告别噩梦…你知道我这段时间是怎么过来的吗？</p>\n<p>为了赶项目，然后不得不单独写一个 styl 文件，去 import 到 Vue 里，复杂项目这样玩起来好恶心 = = 总算解脱了！</p>\n<p>因为一开始针对 stylus 去搜问题，实在搜不到解决办法，记录一下，方便后面遇到一样情况的同学！！！！</p>\n<p>然后还没完，因为发现了这个 <code>Vue3snippets</code> 引起的问题，就顺便捣鼓一下，看看有没有别的替代拼，顺手解决了下面的这个问题。</p>\n<h2>解决 template 无法正常注释的问题</h2>\n<p>就是按 <code>ctrl+/</code> 会生成这样的注释：</p>\n<p><img src=\"http://cdn.chengpeiquan.com/img/2020/09/5.jpg?x-oss-process=image/interlace,1/resize,w_750\" alt=\"\"></p>\n<p>网上很多方法说把 vue 的默认关联方式改成 html（具体操作就不说了，搜出来几乎全是这个答案…</p>\n<p>为什么不想用这个 html 文件关联的方法呢，因为不支持写 stylus，所以还是特么要单独写一个 styl 文件再 import 进去…还是烦 - -</p>\n<p>然后今天在解决第一个问题的时候，因为发现是 snippets 插件引起的，于是重新找了一下替代品，发现有个插件还蛮好用的：</p>\n<blockquote>\n<p>vue-vscode-snippets<br>\n<a href=\"https://marketplace.visualstudio.com/items?itemName=sdras.vue-vscode-snippets\">https://marketplace.visualstudio.com/items?itemName=sdras.vue-vscode-snippets</a></p>\n</blockquote>\n<p><img src=\"http://cdn.chengpeiquan.com/img/2020/09/7.jpg?x-oss-process=image/interlace,1/resize,w_750\" alt=\"\"></p>\n<p>尝试安装了一下，顺手禁掉了之前的 <code>Vue3snippets</code>，注释的问题完美解决。</p>\n<p><img src=\"http://cdn.chengpeiquan.com/img/2020/09/6.jpg?x-oss-process=image/interlace,1/resize,w_750\" alt=\"\"></p>\n<p>当然，上面 stylus 被压缩的问题也完美解决，暂时先用这个了！</p>\n<p>希望不要有其他的坑哈哈哈哈哈。</p>\n"
+}

@@ -1,0 +1,154 @@
+{
+  "author": {
+    "name": "chengpeiquan",
+    "email": "chengpeiquan@chengpeiquan.com",
+    "link": "https://chengpeiquan.com"
+  },
+  "type": "article",
+  "total": 77,
+  "page": 1,
+  "lastPage": 8,
+  "category": "default",
+  "data": [
+    {
+      "id": "typescript-error-cannot-find-module-undici-types",
+      "type": "article",
+      "shortDate": "2024-04-07",
+      "title": "干净的 TypeScript 项目在编译时报错 Cannot find module 'undici-types' 的原因和解决",
+      "desc": "很久前配合 《前端工程化：基于 Vue.js 3.0 的设计与实践》 一书在 TypeScript 章节里讲解的内容，提供了一个很干净的 demo （见 hello-node ），除了必要的基础技术栈外，没有过多的第三方依赖，一直运行良好，直到这个假期收到了读者反馈，和我说在运行 npm run build 时出现类似下方的报错，无法正确编译。",
+      "keywords": "typescript error undici-types,cannot find module undici-types",
+      "date": "2024-04-07 05:55:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2024/04/202404062211878.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "macos-android-studio-emulator-hosts",
+      "type": "article",
+      "shortDate": "2024-02-11",
+      "title": "macOS 基于 Android Studio 修改模拟器 Hosts",
+      "desc": "用回 macOS 一段时间了，各种软件对 M 系列芯片基本上也都有支持的版本，除了安卓模拟器 - - 。之前在 Windows 上面常用的 MuMu 、雷电、夜神等模拟器，不是没有 Mac 版，就是虽然有 Mac 版，但不支持 M 系列芯片（ ARM 架构），所以抛弃一系列国产模拟器，回归 Android Studio 。",
+      "keywords": "mac, macOS, mac emulator, android emulator, android emulator hosts",
+      "date": "2024-02-11 05:03:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2024/02/202402102106942.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "new-mac-2024",
+      "type": "article",
+      "shortDate": "2024-01-15",
+      "title": "给猫儿子的新年礼物 它很喜欢！",
+      "desc": "哈哈哈哈哈上一次买 Mac 还是 2015 年，然后在 2019 年换了 Windows 台式机用到现在。最近跑了 5 年的台式机又感觉配置不太够用了，干脆再换回 Mac ，开心！",
+      "keywords": "mac, macOS",
+      "date": "2024-01-15 01:33:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2024/02/202402102245723.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ]
+    },
+    {
+      "id": "2023-year-end-summary",
+      "type": "article",
+      "shortDate": "2023-12-30",
+      "title": "年终总结：2023年的一些回顾和2024年的一些小规划",
+      "desc": "本来今年的总结第一句话想写 “2023 对我算是比较特殊的一年” ，结果看了一眼去年的回顾，去年也是这么写的… 那今年再强化一下，改成 “2023 对我是非常特殊的一年” 哈哈哈哈哈哈哈，确实非常特殊的一年，因为经历了很多之前没有经历过的事情。",
+      "keywords": "2023 year end summary",
+      "date": "2023-12-30 22:52:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2023/12/20231230212146.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ],
+      "cite": [
+        "2022-year-end-summary",
+        "2021-year-end-summary"
+      ]
+    },
+    {
+      "id": "my-custom-nas",
+      "type": "article",
+      "shortDate": "2023-06-11",
+      "title": "千元预算组装了个入门NAS设备 一文分享NAS的硬件基础知识",
+      "desc": "最近在一千元预算内搞了一台 NAS ，在这个过程也算蛮自定义的搭配，记录一下这个过程中的主要知识点和最终搭配结果。初接触 NAS 的时候最迷茫的应该就是它的概念和用途了，就算了解了它的作用，想采购一个合适的 NAS 设备又会涉及到很多硬件知识。既然选择自己配 NAS 做一个 DIY 玩家，肯定还是需要先熟悉一些前置的硬件知识，否则大可花几千块钱买成品 NAS 了，所以有一些前置知识点还是值得先简单了解一下。",
+      "keywords": "千元NAS,NAS,群晖,SDM,PVE",
+      "date": "2023-06-11 07:39:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2023/06/20230611223039.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "the-story-of-the-book-learning-vue3",
+      "type": "article",
+      "shortDate": "2023-05-07",
+      "title": "我写了一本书《前端工程化：基于 Vue.js 3.0 的设计与实践》 想分享一下它背后的故事",
+      "desc": "大家好，我是程沛权，经过差不多一年时间的打磨和优化，我的第一本技术书籍《前端工程化：基于 Vue.js 3.0 的设计与实践》出版上市啦！这是一本以 Vue.js 的 3.0 版本为核心技术栈，围绕 “前端工程化” 和 TypeScript 的知识点展开讲解的前端入门书籍。",
+      "keywords": "前端工程化：基于 Vue.js 3.0 的设计与实践,前端工程化,Vue3,Vue3 入门指南与实战案例",
+      "date": "2023-05-07 06:03:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2023/05/20230506220635.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ],
+      "repo": "https://github.com/chengpeiquan/learning-vue3"
+    },
+    {
+      "id": "git-selective-merge",
+      "type": "article",
+      "shortDate": "2023-02-03",
+      "title": "Git的选择性合并操作笔记：合并某个版本或某个提交",
+      "desc": "今天帮朋友解决了一个代码合并的问题，他有两个项目， B 项目最初是基于 A 项目作为架构底子，根据业务进行了不同需求的开发，沉淀了不少新功能，而 A 项目本身也在继续维护，可以简单的理解为， A 项目是通过类似 create-preset 这样的脚手架拉取下来的一个项目模板，而 B 项目是一个业务项目，所以 A 项目通常只提供一些公共功能的维护升级，而 B 项目更注重业务功能开发。",
+      "keywords": "github,github上传,github删除文件夹",
+      "date": "2023-02-03 00:56:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2023/02/20230202170739.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "2022-year-end-summary",
+      "type": "article",
+      "shortDate": "2023-01-01",
+      "title": "年终总结：2022年的一些回顾和2023年的一些小规划",
+      "desc": "2022 对我算是比较特殊的一年，虽然因为疫情原因彻底宅了一年，但也没有闲着，换了工作换了城市，回到了阔别两年的第二故乡广州，工作之外的学习和生活对个人的成长也有一些值得复盘的地方。",
+      "keywords": "2022 year end summary",
+      "date": "2023-01-01 05:24:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2023/01/20230101235604.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ],
+      "cite": [
+        "2021-year-end-summary"
+      ]
+    },
+    {
+      "id": "zhihu-collection-helper",
+      "type": "article",
+      "shortDate": "2022-10-22",
+      "title": "知乎收藏夹助手：自动化将专栏的文章添加到收藏夹",
+      "desc": "知乎收藏夹助手，可将专栏的文章添加到收藏夹中（因为专栏的内容通常比较垂直，不会太杂），适用于收藏夹在创建初期需要大量内容填充的情况。",
+      "keywords": "知乎,知乎工具,爬虫",
+      "date": "2022-10-22 07:53:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/10/20221021235753.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "repo": "https://github.com/chengpeiquan/zhihu-collection-helper"
+    },
+    {
+      "id": "vite-vue3-prerender",
+      "type": "article",
+      "shortDate": "2022-06-02",
+      "title": "用Vite更简单的解决Vue3项目的预渲染问题",
+      "desc": "之前 Webpack 项目经常会用到预渲染，现在团队都开始用 Vite 了，所以弄一个基于 Vite 的 Vue 3 预渲染 demo 可以参考。",
+      "keywords": "Vite,预渲染,Vite预渲染,Vue3预渲染",
+      "date": "2022-06-02 22:59:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2022/06/20220605213042.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "repo": "https://github.com/chengpeiquan/vite-vue3-prerender-demo"
+    }
+  ]
+}

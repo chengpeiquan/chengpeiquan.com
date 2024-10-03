@@ -1,0 +1,19 @@
+{
+  "title": "2022 年的第一天，把开源工作交给了 CI / CD（待完善）",
+  "desc": "新年的第一天，我把 GitHub 的全自动流水线搭起来了。",
+  "keywords": "github ci cd,github workflows",
+  "date": "2022-01-02 07:49:00",
+  "cover": "http://cdn.chengpeiquan.com/img/2022/01/20220103233657.jpg?x-oss-process=image/interlace,1",
+  "categories": [
+    "tech"
+  ],
+  "id": "github-ci-cd",
+  "type": "article",
+  "author": {
+    "name": "chengpeiquan",
+    "email": "chengpeiquan@chengpeiquan.com",
+    "link": "https://chengpeiquan.com"
+  },
+  "shortDate": "2022-01-02",
+  "content": "<p>[[toc]]</p>\n<p>接触 CI / CD 不是一天两天了，从最开始的在 GitHub Actions 到公司的 Jenkins ，2021 年也用的不少，确实感受到了自动化带来的很多便利，最基础的打包构建环节也已经全部交给了 CI 来处理。</p>\n<p>不过很长时间也就停留在打包构建环节，没了… 原因也比较简单，就是公司的前端业务主要还是页面为主，确实用不到太多 CI 环节的东西。</p>\n<p>其实自己留意开源项目也蛮长时间，发现很多东西可以做，比如说代码质量检查、自动发布版本、自动生成 CHANGLOG 等等，元旦假期刚好好友小毅 <a href=\"https://github.com/chawyehsu\">@chawyehsu</a> 也准备搞一下这块，俩人刚好一起琢磨了一下，把各自的流程都跑起来了。</p>\n<p>目前我是做了这两条流水线：</p>\n<h2>主流水线</h2>\n<pre><code class=\"language-bash\">在 develop 分支开发\n---→ Push 后自动发起 PR\n---→ Merge 到 main 分支后自动打包\n---→ 自动生成 CHANGELOG\n---→ 自动打 Tag 发布 Release\n</code></pre>\n<h2>分支流水线</h2>\n<p>根据当前仓库的类型，后续的流程会有点不一样：</p>\n<h3>Package</h3>\n<p>前端的包理所当然是要发布到 NPM 了，所以接下来会执行自动发包操作。</p>\n<blockquote>\n<p>TODO: 这里后面补充一下具体打 workflow 配置，暂时需要观察效果稳定性</p>\n</blockquote>\n<h3>Program</h3>\n<p>除了 NPM 包，还有一类项目是会打包成 <code>.exe</code> 或者 <code>.dmg</code> 程序，一般是 Electron 或者 PKG Node 项目。</p>\n<p>这里要执行的操作是把构建出来的文件，发布静态资产到 Release 上面去提供下载。</p>\n<p>可以戳 <a href=\"https://github.com/analyticsjs/git-commit-analytics/releases\">Releases - Git Commit Analytics</a> 查看效果。</p>\n<p><img src=\"http://cdn.chengpeiquan.com/img/2022/01/20220104161947.jpg?x-oss-process=image/interlace,1/resize,w_750\" alt=\"在 Release 可下载构建好的程序\"></p>\n<blockquote>\n<p>TODO: 这里后面补充一下具体打 workflow 配置，暂时需要观察效果稳定性</p>\n</blockquote>\n"
+}

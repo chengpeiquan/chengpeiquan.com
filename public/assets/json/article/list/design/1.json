@@ -1,0 +1,43 @@
+{
+  "author": {
+    "name": "chengpeiquan",
+    "email": "chengpeiquan@chengpeiquan.com",
+    "link": "https://chengpeiquan.com"
+  },
+  "type": "article",
+  "total": 2,
+  "page": 1,
+  "lastPage": 1,
+  "category": "design",
+  "data": [
+    {
+      "id": "requirement-design",
+      "type": "article",
+      "shortDate": "2021-05-05",
+      "title": "简单的六个步骤 让你写出技术爱看的需求文档",
+      "desc": "提需求”应该是每个同学在工作中最不可避免的三个字，有句很流行的话叫“人人都是产品经理”（源自一本产品书籍的书名），为什么这句话会流行起来？因为只要我们把这句话换个方式表达，本质上就是“人人都是需求方”，是不是瞬间感觉“对对对”！",
+      "keywords": "需求设计,需求文档,需求规范",
+      "date": "2021-05-05 08:01:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2023/01/20230107234550.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "design"
+      ],
+      "isHot": true
+    },
+    {
+      "id": "api-design",
+      "type": "article",
+      "shortDate": "2020-02-17",
+      "title": "接口设计：从前端开发的角度谈一谈接口规范",
+      "desc": "从前端的角度，以一个接口消费者的身份来谈一谈如何设计一套比较合理的接口，本文主要分为两部分：“接口的基本数据格式”和“接口的业务数据格式”。本文的目的是想减少前后端对接过程中产生的沟通问题，还有优化一些可以避免的错误，甚至于你可以不提供接口文档，前端也能快速上手你的接口。",
+      "keywords": "接口设计,接口格式,接口规范",
+      "date": "2020-02-17 09:01:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2020/02/1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech",
+        "design"
+      ],
+      "isHot": true
+    }
+  ]
+}

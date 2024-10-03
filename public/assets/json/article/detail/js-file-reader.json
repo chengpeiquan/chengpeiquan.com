@@ -1,0 +1,20 @@
+{
+  "title": "js-file-reader 一句代码把input的file转换为base64和blob格式",
+  "desc": "目前除了美团之外，其他的外卖app（像饿了么啊、瑞幸啊、麦当劳肯德基啊）都没提供自动计算账单的功能，自己每次拉excel算的蛋疼，所以写了这个，无需纠结红包、抵扣券等乱七八糟的减免，会自动计算折扣比例来得到最终账单。",
+  "keywords": "file reader,js file reader,web file reader,read file",
+  "date": "2020-09-28 08:22:00",
+  "cover": "http://cdn.chengpeiquan.com/img/2020/09/2-3.jpg?x-oss-process=image/interlace,1",
+  "categories": [
+    "tech"
+  ],
+  "repo": "https://github.com/chengpeiquan/js-file-reader",
+  "id": "js-file-reader",
+  "type": "article",
+  "author": {
+    "name": "chengpeiquan",
+    "email": "chengpeiquan@chengpeiquan.com",
+    "link": "https://chengpeiquan.com"
+  },
+  "shortDate": "2020-09-28",
+  "content": "<p>[[toc]]</p>\n<p>最近做后台比较多，而且经常要用到文件上传和预览，写的有点烦 - -，所以弄了这个小玩意…</p>\n<p>NpmJS 主页：<a href=\"https://www.npmjs.com/package/js-file-reader\" title=\"js-file-reader\">https://www.npmjs.com/package/js-file-reader</a></p>\n<p>GitHub 主页：<a href=\"https://github.com/chengpeiquan/js-file-reader\" title=\"js-file-reader\">https://github.com/chengpeiquan/js-file-reader</a></p>\n<h2>功能</h2>\n<p>通过 <code>input</code> 的 <code>file</code> 属性选择文件后，只需要一句代码，就可以通过这个小工具获取对应的 <code>base64</code> 和 <code>blob</code> 值。</p>\n<p>适合原生、虚拟 DOM 和各种框架的上传控件使用。</p>\n<h2>预览</h2>\n<p>demo 已集成了 <code>native</code>原生 DOM 、 <code>vue</code>虚拟 DOM，以及基于 Vue 生态的<code>vuetify</code> 、 <code>iview</code> 、 <code>element</code> 等 UI 框架的上传控件，可以按 <code>f12</code> 开启控制台查看文件选择后得到的转换结果（讲道理其他框架应该也都是可以的）。</p>\n<p>点击预览：<a href=\"https://chengpeiquan.github.io/js-file-reader/demo/\" title=\"js-file-reader demo\">js-file-reader demo</a></p>\n<p><img src=\"http://cdn.chengpeiquan.com/img/2020/09/2-2.jpg?x-oss-process=image/interlace,1/resize,w_750\" alt=\"\"></p>\n<h2>参数</h2>\n<h3>传入的参数：</h3>\n<table>\n<thead>\n<tr>\n<th style=\"text-align:center\">参数</th>\n<th style=\"text-align:center\">是否必填</th>\n<th style=\"text-align:center\">参数类型</th>\n<th>参数说明</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align:center\">fileList</td>\n<td style=\"text-align:center\">是</td>\n<td style=\"text-align:center\">object</td>\n<td>可以是一个文件对象，或者是对象数组（对应文件的单选和多选）</td>\n</tr>\n</tbody>\n</table>\n<h3>返回的参数：</h3>\n<table>\n<thead>\n<tr>\n<th style=\"text-align:center\">参数</th>\n<th style=\"text-align:center\">参数类型</th>\n<th>参数说明</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align:center\">result</td>\n<td style=\"text-align:center\">object array</td>\n<td>不管传入单个还是多个，最终都是返回一个对象数组</td>\n</tr>\n</tbody>\n</table>\n<p>其中每个 item 都包含 2 个字段：</p>\n<p><code>base64</code> 是 base64 编码格式的转换结果，可用于本地预览</p>\n<p><code>blob</code> 是二进制文件转换结果，可用于上传到服务端</p>\n<h2>安装</h2>\n<h3>通过 npm 安装</h3>\n<pre><code>npm install js-file-reader --save-dev\n</code></pre>\n<h3>通过 cdn 安装</h3>\n<pre><code class=\"language-html\">&lt;script src=&quot;http://cdn.jsdelivr.net/npm/js-file-reader/dist/js-file-reader.min.js&quot;&gt;&lt;/script&gt;\n</code></pre>\n<h2>使用</h2>\n<p>通过 npm 安装的项目，需要先在 <code>main.js</code> 里引入插件（通过 cdn 则无需该步骤）。</p>\n<pre><code class=\"language-js\">import readFile from 'js-file-reader'\n</code></pre>\n<p>安装插件后，通过 cdn 引入的可直接通过 api <code>readFile</code> 操作。</p>\n<p>如果是 npm 安装的，需要挂载到诸如 Vue 的原型上全局使用。</p>\n<pre><code class=\"language-js\">// main.js\nVue.prototype.$readFile = readFile\n</code></pre>\n<p>挂载后就可以通过 <code>this.$readFile</code> 来操作了。</p>\n<h2>方法</h2>\n<p>插件目前只有一个方法，就是 <code>readFile</code>。</p>\n<p>推荐使用 <code>async/await</code> 来获取转换结果：</p>\n<pre><code class=\"language-js\">async getFileInfo (e) {\n  const FILE_LIST = [...e.target.files];\n  const RESULT = await readFile(FILE_LIST);\n  console.log(RESULT);\n}\n</code></pre>\n<p>也可通过 <code>Promise</code> 来获取结果：</p>\n<pre><code class=\"language-js\">readFile(fileList).then(function (result) {\n  console.log(result)\n})\n</code></pre>\n"
+}

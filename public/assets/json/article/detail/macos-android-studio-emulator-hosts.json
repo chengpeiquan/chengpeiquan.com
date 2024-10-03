@@ -1,0 +1,19 @@
+{
+  "title": "macOS 基于 Android Studio 修改模拟器 Hosts",
+  "desc": "用回 macOS 一段时间了，各种软件对 M 系列芯片基本上也都有支持的版本，除了安卓模拟器 - - 。之前在 Windows 上面常用的 MuMu 、雷电、夜神等模拟器，不是没有 Mac 版，就是虽然有 Mac 版，但不支持 M 系列芯片（ ARM 架构），所以抛弃一系列国产模拟器，回归 Android Studio 。",
+  "keywords": "mac, macOS, mac emulator, android emulator, android emulator hosts",
+  "date": "2024-02-11 05:03:00",
+  "cover": "http://cdn.chengpeiquan.com/img/2024/02/202402102106942.jpg?x-oss-process=image/interlace,1",
+  "categories": [
+    "tech"
+  ],
+  "id": "macos-android-studio-emulator-hosts",
+  "type": "article",
+  "author": {
+    "name": "chengpeiquan",
+    "email": "chengpeiquan@chengpeiquan.com",
+    "link": "https://chengpeiquan.com"
+  },
+  "shortDate": "2024-02-11",
+  "content": "<p>[[toc]]</p>\n<p>用回 macOS 一段时间了，各种软件对 M 系列芯片基本上也都有支持的版本，除了安卓模拟器 - - 。之前在 Windows 上面常用的 MuMu 、雷电、夜神等模拟器，不是没有 Mac 版，就是虽然有 Mac 版，但不支持 M 系列芯片（ ARM 架构），所以抛弃一系列国产模拟器，回归 Android Studio 。</p>\n<h2>创建模拟器</h2>\n<p>安装和创建模拟器的过程不赘述了，切记要修改 Hosts 的话，需要模拟器支持 Root ，因此不能选择 Google Play 的 System Image ，否则只能以 Readonly 模式启动模拟器，无法 Root 。</p>\n<p><img src=\"http://cdn.chengpeiquan.com/img/2024/02/202402102127890.jpg?x-oss-process=image/interlace,1/resize,w_750\" alt=\"不要选择 Google Play\"></p>\n<p><img src=\"http://cdn.chengpeiquan.com/img/2024/02/202402102127906.jpg?x-oss-process=image/interlace,1/resize,w_750\" alt=\"选择这种普通的\"></p>\n<h2>启动可写权限的模拟器</h2>\n<p>需要通过命令行以 Writable 的模式启动，这个时候不需要开启 Android Studio 了（从 AS 启动的模拟器只有 Readonly 权限）。</p>\n<pre><code class=\"language-bash\"># 访问 Android Studio 的模拟器文件夹\ncd ~/Library/Android/sdk/emulator/\n\n# 查询所有的模拟器列表\n./emulator -list-avds\n\n# 添加可写权限进行启动（这里的 Pixel_7_Pro_API_33 是模拟器名称）\n./emulator -avd Pixel_7_Pro_API_33 -writable-system\n</code></pre>\n<p>此时模拟器就运行起来，命令行不要关闭，否则模拟器也会退出。</p>\n<h2>检查 ADB 启用状态</h2>\n<p>下一步操作需要通过 <code>adb</code> 命令来执行（关于 ADB 是什么，详细可以见 Android 的官方文档：<a href=\"https://developer.android.com/tools/adb?hl=zh-cn\">Android 调试桥 (adb)</a> ），但这里只是想确认它是否存在。</p>\n<p>所以直接看 StackOverflow 的操作即可：<a href=\"https://stackoverflow.com/questions/17901692/set-up-adb-on-mac-os-x\">Set up adb on Mac OS X</a> 。 因为安装 Android Studio 的时候就默认一起装了，所以直接看里面的 “Option 3 - If you already have Android Studio installed” 部分。</p>\n<p>注意：我是使用 <a href=\"https://github.com/ohmyzsh/ohmyzsh\">Oh My Zsh</a> 的 ZSH Shell ，所以配置文件和 StackOverflow 答案里不一样，记得留意自己用的是哪个 Shell 。</p>\n<pre><code class=\"language-bash\">echo 'export ANDROID_HOME=/Users/$USER/Library/Android/sdk' &gt;&gt; ~/.zshrc\necho 'export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools' &gt;&gt; ~/.zshrc\nsource ~/.zshrc\n</code></pre>\n<p><img src=\"http://cdn.chengpeiquan.com/img/2024/02/202402102146502.png?x-oss-process=image/interlace,1/resize,w_750\" alt=\"我的 .zshrc 配置\"></p>\n<p>设置后重启 Terminal ，通过 <code>adb version</code> 命令查看是否启用成功。</p>\n<pre><code class=\"language-bash\">adb version\n\nAndroid Debug Bridge version 1.0.41\nVersion 34.0.5-10900879\nInstalled as /Users/chengpeiquan/Library/Android/sdk/platform-tools/adb\nRunning on Darwin 23.1.0 (arm64)\n</code></pre>\n<h2>修改 Hosts</h2>\n<p>首先确认模拟器编号，通过命令行启动模拟器后，在设置界面可以看到这个 <code>5554</code> 端口号（可能是别的端口）。</p>\n<p><img src=\"http://cdn.chengpeiquan.com/img/2024/02/202402102220605.jpg?x-oss-process=image/interlace,1/resize,w_750\" alt=\"通过命令行启动模拟器\"></p>\n<p>或者是通过 Android Studio 启动模拟器，也可以看到端口号。</p>\n<p><img src=\"http://cdn.chengpeiquan.com/img/2024/02/202402102220607.png?x-oss-process=image/interlace,1/resize,w_750\" alt=\"通过 Android Studio 启动模拟器\"></p>\n<p>开始修改 Hosts 啦。</p>\n<pre><code class=\"language-bash\"># 通过 ADB 开启 Root 权限\nadb root\n\n# 挂载已启动的模拟器文件，这里记得对应模拟器的端口号\nadb -s emulator-5554 remount\n\n# 拉取模拟器的文件到桌面，方便修改\nadb pull /system/etc/hosts ~/Desktop/hosts\n</code></pre>\n<p>接下来就和之前在 Windows 上修改 Hosts 一样啦，改完后把文件 push 回去。</p>\n<pre><code class=\"language-bash\"># 改完后把 hosts 文件 push 回去\nadb push ~/Desktop/hosts /system/etc/hosts\n\n# 查看模拟器上的 hosts 文件内容，确认是否修改成功\nadb shell cat /etc/hosts\n</code></pre>\n"
+}

@@ -1,0 +1,151 @@
+{
+  "author": {
+    "name": "chengpeiquan",
+    "email": "chengpeiquan@chengpeiquan.com",
+    "link": "https://chengpeiquan.com"
+  },
+  "type": "article",
+  "total": 58,
+  "page": 3,
+  "lastPage": 6,
+  "category": "tech",
+  "data": [
+    {
+      "id": "vue-cnzz-analytics",
+      "type": "article",
+      "shortDate": "2021-01-09",
+      "title": "vue-cnzz-analytics 基于Vue SPA项目的友盟CNZZ统计插件（支持Vue 3.0）",
+      "desc": "一个专为SPA项目开发的友盟统计插件，支持Vue 3.0以及2.0版本同时使用，也可用于VuePress项目，支持在路由切换时，自动上报流量数据等功能。",
+      "keywords": "cnzz,vue cnzz,vue umeng,vue analytics,spa analytics,cnzz统计,umeng统计,友盟统计,vuepress统计,vuepress cnzz统计",
+      "date": "2021-01-09 06:37:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2020/08/1-3.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "repo": "https://github.com/analyticsjs/vue-cnzz-analytics"
+    },
+    {
+      "id": "vue-baidu-analytics",
+      "type": "article",
+      "shortDate": "2021-01-08",
+      "title": "vue-baidu-analytics 基于Vue SPA项目的百度统计插件（支持Vue 3.0）",
+      "desc": "一个专为SPA项目开发的百度统计插件，支持Vue 3.0以及2.0版本同时使用，也可用于VuePress项目，支持在路由切换时，自动上报流量数据等功能。",
+      "keywords": "vue-baidu-analytics,vue百度统计,vue流量上报,spa流量,spa百度统计,vue统计代码,spa统计代码,vuepress统计,vuepress百度统计",
+      "date": "2021-01-08 07:21:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2019/12/1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "repo": "https://github.com/analyticsjs/vue-baidu-analytics"
+    },
+    {
+      "id": "baidu-map-api-destroy",
+      "type": "article",
+      "shortDate": "2020-12-25",
+      "title": "百度地图API实例销毁方案 可用于Vue单页面项目",
+      "desc": "最近项目用到了百度地图的API，用倒是没啥毛病，就是发现用完之后留下来的垃圾太多 = = 项目是基于Vue做的，当时发现在需要百度地图的那个路由用完之后，切去其他页面，积累了很多DOM，并且再次进入会再次创建，在项目里体验越久，DOM树越累赘，并且由百度地图创建的定时器越攒越多。",
+      "keywords": "百度地图销毁,百度地图API销毁",
+      "date": "2020-12-25 00:00:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2020/12/baidu-map.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "group-buy-calculator",
+      "type": "article",
+      "shortDate": "2020-11-22",
+      "title": "外卖拼单计算器：自动帮你计算合伙点外卖应该支付多少钱",
+      "desc": "目前除了美团之外，其他的外卖app（像饿了么啊、瑞幸啊、麦当劳肯德基啊）都没提供自动计算账单的功能，自己每次拉excel算的蛋疼，所以写了这个，无需纠结红包、抵扣券等乱七八糟的减免，会自动计算折扣比例来得到最终账单。",
+      "keywords": "外卖计算器,拼单计算器",
+      "date": "2020-11-22 23:46:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2020/12/2-1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "repo": "https://github.com/chengpeiquan/group-buy-calculator"
+    },
+    {
+      "id": "vue-picture-cropper",
+      "type": "article",
+      "shortDate": "2020-11-16",
+      "title": "Vue 3.0图片裁切插件：vue-picture-cropper",
+      "desc": "开始玩Vue 3.0之后发现生态上要啥没啥，所以自己弄了一个，基于cropper.js，支持Vue 3.0的图片裁切工具组件，支持在Vue组件里按需引入，模板和实例也仅限在组件内使用，根据Vue 3.x的设计思想，官方也不推荐全局导入各类插件。",
+      "keywords": "vue picture cropper,vue 3.0 cropper,vue 3.0 图片裁切",
+      "date": "2020-11-16 08:12:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2020/12/1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "repo": "https://github.com/chengpeiquan/vue-picture-cropper"
+    },
+    {
+      "id": "vue3",
+      "type": "article",
+      "shortDate": "2020-10-26",
+      "title": "资料专题：Vue3.0学习教程与实战案例",
+      "desc": "自从海贼王更新后，就开始正式用 `Vue 3.0` + `typescript` 写业务了，在经过这段时间的尝试，发现从测试到正式版本变化还是很大，很多过往的博文已经对不上了，还是踩了不少坑，这个过程也打了不少笔记，整理起来，供需要的朋友避坑，也免得以后自己忘记了。",
+      "keywords": "vue 3.0,vue 3.x,vue 3.0 教程,学习 vue 3.0,vue 3.0 案例,vue 3.0 教学,vue 3.0 好用吗",
+      "date": "2020-10-26 06:30:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2020/10/vue3.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "isHot": true,
+      "repo": "https://github.com/chengpeiquan/learning-vue3"
+    },
+    {
+      "id": "js-file-reader",
+      "type": "article",
+      "shortDate": "2020-09-28",
+      "title": "js-file-reader 一句代码把input的file转换为base64和blob格式",
+      "desc": "目前除了美团之外，其他的外卖app（像饿了么啊、瑞幸啊、麦当劳肯德基啊）都没提供自动计算账单的功能，自己每次拉excel算的蛋疼，所以写了这个，无需纠结红包、抵扣券等乱七八糟的减免，会自动计算折扣比例来得到最终账单。",
+      "keywords": "file reader,js file reader,web file reader,read file",
+      "date": "2020-09-28 08:22:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2020/09/2-3.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "repo": "https://github.com/chengpeiquan/js-file-reader"
+    },
+    {
+      "id": "vue-vscode-snippets",
+      "type": "article",
+      "shortDate": "2020-09-21",
+      "title": "解决vscode保存vue文件时 压缩stylus代码为一行以及无法注释template的问题",
+      "desc": "目前除了美团之外，其他的外卖app（像饿了么啊、瑞幸啊、麦当劳肯德基啊）都没提供自动计算账单的功能，自己每次拉excel算的蛋疼，所以写了这个，无需纠结红包、抵扣券等乱七八糟的减免，会自动计算折扣比例来得到最终账单。",
+      "keywords": "stylus保存压缩,stylus错乱,stylus格式化",
+      "date": "2020-09-21 01:02:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2020/09/vue-vscode-snippets.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "getboundingclientrect",
+      "type": "article",
+      "shortDate": "2020-09-15",
+      "title": "使用getBoundingClientRect 针对scrollTop一直为0且documentElement无效的解决方案",
+      "desc": "今天在上线一个移动端需求的时候，QA妹子跟我反馈在她们一部iPhone X上面出现了一个滚动加载会同时触发下拉刷新的bug…我就 ？？？……一个在顶部一个在底部这也能扯上关系？然后再进一步测试，发现这个坑是出现在自家app的内置webview上，在浏览器和微信等环境都正常。",
+      "keywords": "scrollTop 0,scrollTop bug,getBoundingClientRect",
+      "date": "2020-09-15 09:41:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2020/09/3.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    },
+    {
+      "id": "rollupjs",
+      "type": "article",
+      "shortDate": "2020-08-10",
+      "title": "JSSDK开发思路 基于RollupJS的经验记录",
+      "desc": "虽然Rollup的推出时间应该是比Webpack早，但之前类库的工作都是公司其他前端部门负责维护，还真的没有去接触过它，直到最近自己要负责开发一个用于新业务线的JSBridge和JSLibrary，才对它有了一定的了解。",
+      "keywords": "rollup,rollupjs,rollup打包,rollup babel",
+      "date": "2020-08-10 07:42:00",
+      "cover": "http://cdn.chengpeiquan.com/img/2020/08/1.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ]
+    }
+  ]
+}
