@@ -1,12 +1,6 @@
 # chengpeiquan.com
 
-My personal website. Base on Vite 2.0 and Vue 3.0.
-
-You can see [Rewrite in vite](https://chengpeiquan.com/article/rewrite-in-vite.html) to learn more.
-
-## Architecture
-
-![Architecture](https://cdn.chengpeiquan.com/img/2021/01/20210222154414.jpg?x-oss-process=image/interlace,1)
+My personal website. Base on React 19 and Next.js 15.
 
 ## License
 
