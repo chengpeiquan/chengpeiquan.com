@@ -1,7 +1,7 @@
 'use server'
 
 import { extname, join } from 'node:path'
-import { fs } from '@bassist/node-utils'
+import { readdirSync } from 'node:fs'
 import { z } from 'zod'
 import { type Locale, locales } from '@/config/locale-config'
 import {
@@ -13,14 +13,13 @@ import {
   fileExtensions,
   isValidContentItem,
 } from '@/config/content-config'
-import { parse } from './parser'
+import { type ParseOptions, parse } from './parser'
 
 const contentRootPath = join(process.cwd(), 'src', contentRootFolder)
 
 const getMarkdownFiles = (dir: string) => {
   try {
-    return fs
-      .readdirSync(dir)
+    return readdirSync(dir)
       .filter((file) => fileExtensions.includes(extname(file)))
       .map((i) => join(dir, i))
   } catch (e) {
@@ -69,7 +68,7 @@ export const getContent = ({ folder, slug, locale }: GetContentOptions) => {
   return parse(filePath)
 }
 
-interface GetContentsOptions {
+interface GetContentsOptions extends ParseOptions {
   locale: Locale
   category?: string
   page: number
@@ -87,7 +86,7 @@ interface GetContentsResponse {
 
 export const getContents = async (
   folder: ContentFolder,
-  { locale, category, page = 1, pageSize }: GetContentsOptions,
+  { locale, category, page = 1, pageSize, ...parseOptions }: GetContentsOptions,
 ) => {
   const contentsResponseSchema = z.object({
     items: z.array(contentItemSchema).default([]),
@@ -104,7 +103,7 @@ export const getContents = async (
     const filePaths = getFilePaths(folder, locale)
     if (!filePaths.length) return defaultRes
 
-    const getIntro = (i: string) => parse(i, { ignoreDetails: true })
+    const getIntro = (i: string) => parse(i, parseOptions)
     const allContents = await Promise.all(filePaths.map(getIntro))
     const contents = allContents
       .filter(isValidContentItem)
