@@ -82,6 +82,7 @@ interface GetContentsResponse {
   total: number
   lastPage: number
   category?: string
+  isEmpty: boolean
 }
 
 export const getContents = async (
@@ -95,6 +96,7 @@ export const getContents = async (
     total: z.number().default(0),
     lastPage: z.number().default(1),
     category: z.string().optional(),
+    isEmpty: z.boolean().default(true),
   })
 
   const defaultRes = contentsResponseSchema.parse({})
@@ -126,6 +128,7 @@ export const getContents = async (
       total,
       lastPage,
       category,
+      isEmpty: items.length === 0,
     } satisfies GetContentsResponse
   } catch (e) {
     return defaultRes

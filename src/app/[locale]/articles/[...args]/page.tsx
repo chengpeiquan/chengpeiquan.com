@@ -15,6 +15,7 @@ import {
 } from '@/config/content-config'
 import { isMobileDevice } from '@/config/middleware-config'
 import { type ListPageProps, getList, getListMetadata } from '@/contents'
+import { Empty } from '@/components/layouts/empty'
 import { Pagination } from '@/components/layouts/pagination'
 import { CategoryLinks } from '@/components/layouts/category-links'
 import { PublishedBooks } from '@/components/sidebar/published-books'
@@ -80,7 +81,10 @@ export default async function ArticlesPage({ params }: ListPageProps) {
 
   const isMobile = isMobileDevice()
 
-  const { items, page, lastPage, category } = await getList(folder, params)
+  const { items, page, lastPage, category, isEmpty } = await getList(
+    folder,
+    params,
+  )
 
   return (
     <LayoutMain className="sm:flex-row justify-between gap-16">
@@ -92,15 +96,19 @@ export default async function ArticlesPage({ params }: ListPageProps) {
           categories={articleCategories}
         />
 
-        <ul className="flex flex-col gap-12 w-full mb-12">
-          {items.map((i) => (
-            <ArticleCard
-              key={i.metadata.title}
-              slug={i.slug}
-              metadata={i.metadata}
-            />
-          ))}
-        </ul>
+        {isEmpty ? (
+          <Empty locale={params.locale} />
+        ) : (
+          <ul className="flex flex-col gap-12 w-full mb-12">
+            {items.map((i) => (
+              <ArticleCard
+                key={i.metadata.title}
+                slug={i.slug}
+                metadata={i.metadata}
+              />
+            ))}
+          </ul>
+        )}
 
         <Pagination
           slug="articles"

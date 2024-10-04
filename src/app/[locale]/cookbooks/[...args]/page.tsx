@@ -12,6 +12,7 @@ import {
 } from '@/config/content-config'
 import { isMobileDevice } from '@/config/middleware-config'
 import { type ListPageProps, getList, getListMetadata } from '@/contents'
+import { Empty } from '@/components/layouts/empty'
 import { Pagination } from '@/components/layouts/pagination'
 import { CategoryLinks } from '@/components/layouts/category-links'
 import { TimeDisplay } from '@/components/shared/time-display'
@@ -74,7 +75,10 @@ export default async function CookbooksPage({ params }: CookbooksPageProps) {
 
   const isMobile = isMobileDevice()
 
-  const { items, page, lastPage, category } = await getList(folder, params)
+  const { items, page, lastPage, category, isEmpty } = await getList(
+    folder,
+    params,
+  )
 
   return (
     <LayoutMain className="gap-8">
@@ -88,15 +92,19 @@ export default async function CookbooksPage({ params }: CookbooksPageProps) {
         collapsibleTitle={categoryGroupTitleConfig.cookbooks[params.locale]}
       />
 
-      <ul className="grid md:grid-cols-5 grid-cols-1 col-auto row-auto gap-8 mb-4 md:mb-12">
-        {items.map((i) => (
-          <ArticleCard
-            key={i.metadata.title}
-            slug={i.slug}
-            metadata={i.metadata}
-          />
-        ))}
-      </ul>
+      {isEmpty ? (
+        <Empty locale={params.locale} />
+      ) : (
+        <ul className="grid md:grid-cols-5 grid-cols-1 col-auto row-auto gap-8 mb-4 md:mb-12">
+          {items.map((i) => (
+            <ArticleCard
+              key={i.metadata.title}
+              slug={i.slug}
+              metadata={i.metadata}
+            />
+          ))}
+        </ul>
+      )}
 
       <Pagination
         slug="cookbooks"
