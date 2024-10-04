@@ -63,6 +63,7 @@ const feedbackLink =
 
 const webAnalytics = {
   baidu: '8dca8e2532df48ea7f1b15c714588691',
+  google: 'G-QCV00FZWMR',
 } as const
 
 export const sideConfig = {
