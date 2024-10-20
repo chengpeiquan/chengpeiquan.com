@@ -371,6 +371,20 @@
     }
   },
   {
+    "slug": "attending-a-wedding-alone",
+    "metadata": {
+      "title": "一个人参加婚礼，周围都不认识是什么感受？",
+      "desc": "那天第一次参加户外婚礼，而且之前在接到邀请时已经得知全场只有新娘新娘是直接认识而且很熟悉的，出于社恐的本能我内心是打退堂鼓的，但出于友谊和对新娘的信任（相信她的安排），我觉得我必须去，然后那天就来了！",
+      "keywords": "一个人参加婚礼,一个人参加婚礼如何准备,一个人参加婚礼紧张吗",
+      "cover": "https://cdn.chengpeiquan.com/img/2024/10/202410210113934.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ],
+      "date": "2021/3/7 17:51:00",
+      "timestamp": 1615110660000
+    }
+  },
+  {
     "slug": "vue3-script-setup",
     "metadata": {
       "title": "聊一聊Vue3.0的script-setup 以及全新的props/emits专属API",
