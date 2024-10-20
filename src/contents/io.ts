@@ -2,13 +2,13 @@
 
 import { extname, join } from 'node:path'
 import { readdirSync } from 'node:fs'
-import { readFile } from 'node:fs/promises'
 import { z } from 'zod'
 import { type Locale, locales } from '@/config/locale-config'
 import {
   type ContentFolder,
   type ContentItem,
   type GetListResponse,
+  type ListFolder,
   type MetaCacheItem,
   contentFolders,
   contentItemSchema,
@@ -18,6 +18,7 @@ import {
   isValidContentItem,
 } from '@/config/content-config'
 import { type ParseOptions, parse } from './parser'
+import { metaCacheMap } from './meta-cache'
 
 const contentRootPath = join(process.cwd(), 'src', contentRootFolder)
 
@@ -34,17 +35,11 @@ export const getMetaCachePath = async (
 }
 
 export const getMetaCache = async (
-  folder: ContentFolder,
+  folder: ListFolder,
   locale: Locale,
 ): Promise<MetaCacheItem[]> => {
-  try {
-    const { filePath } = await getMetaCachePath(folder, locale)
-    const raw = await readFile(filePath, 'utf-8')
-    if (!raw) return []
-    return JSON.parse(raw)
-  } catch (e) {
-    return []
-  }
+  const cache = metaCacheMap.get(`${folder}_${locale}`)
+  return cache || []
 }
 
 const getMarkdownFiles = (dir: string) => {
