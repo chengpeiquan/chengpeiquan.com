@@ -6,12 +6,15 @@ import { type LocalePageParams } from '@/config/locale-config'
 import { sharedMetadata } from '@/config/site-config'
 import {
   type ContentFolder,
+  type GetListResponse,
   type ListFolder,
+  type MetaCacheItem,
   articleCategories,
   cookbookCategories,
+  getPagination,
   pageSizeConfig,
 } from '@/config/content-config'
-import { getContent, getContents } from './io'
+import { getContent, getMetaCache } from './io'
 import { getTranslations } from 'next-intl/server'
 
 interface ListPageParams extends LocalePageParams {
@@ -37,12 +40,21 @@ export const getList = cache(
   async (folder: ListFolder, params: ListPageParams) => {
     const { category, page } = analyzeListParams(params)
 
-    return getContents(folder, {
-      locale: params.locale,
-      category,
+    const allCache = await getMetaCache(folder, params.locale)
+    const pageSize = pageSizeConfig[folder]
+
+    const cache = allCache.filter((i) =>
+      category ? i.metadata.categories?.includes(category) : true,
+    )
+
+    const pagination = getPagination(cache, page, pageSize)
+
+    return {
+      ...pagination,
       page,
-      pageSize: pageSizeConfig[folder],
-    })
+      pageSize,
+      category,
+    } satisfies GetListResponse<MetaCacheItem>
   },
 )
 

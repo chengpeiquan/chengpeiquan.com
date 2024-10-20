@@ -2,20 +2,50 @@
 
 import { extname, join } from 'node:path'
 import { readdirSync } from 'node:fs'
+import { readFile } from 'node:fs/promises'
 import { z } from 'zod'
 import { type Locale, locales } from '@/config/locale-config'
 import {
   type ContentFolder,
   type ContentItem,
+  type GetListResponse,
+  type MetaCacheItem,
   contentFolders,
   contentItemSchema,
   contentRootFolder,
   fileExtensions,
+  getPagination,
   isValidContentItem,
 } from '@/config/content-config'
 import { type ParseOptions, parse } from './parser'
 
 const contentRootPath = join(process.cwd(), 'src', contentRootFolder)
+
+const metaCacheRootPath = join(contentRootPath, 'meta-cache')
+
+export const getMetaCachePath = async (
+  folder: ContentFolder,
+  locale: Locale,
+) => {
+  return {
+    rootPath: metaCacheRootPath,
+    filePath: join(metaCacheRootPath, `${folder}-${locale}.json`),
+  }
+}
+
+export const getMetaCache = async (
+  folder: ContentFolder,
+  locale: Locale,
+): Promise<MetaCacheItem[]> => {
+  try {
+    const { filePath } = await getMetaCachePath(folder, locale)
+    const raw = await readFile(filePath, 'utf-8')
+    if (!raw) return []
+    return JSON.parse(raw)
+  } catch (e) {
+    return []
+  }
+}
 
 const getMarkdownFiles = (dir: string) => {
   try {
@@ -75,16 +105,6 @@ interface GetContentsOptions extends ParseOptions {
   pageSize: number
 }
 
-interface GetContentsResponse {
-  items: ContentItem[]
-  page: number
-  pageSize: number
-  total: number
-  lastPage: number
-  category?: string
-  isEmpty: boolean
-}
-
 export const getContents = async (
   folder: ContentFolder,
   { locale, category, page = 1, pageSize, ...parseOptions }: GetContentsOptions,
@@ -115,21 +135,14 @@ export const getContents = async (
       )
       .sort((a, b) => b.metadata.timestamp - a.metadata.timestamp)
 
-    const start = 0 + pageSize * (page - 1)
-    const end = start + pageSize
-    const items = contents.slice(start, end)
-    const total = contents.length
-    const lastPage = Math.ceil(total / pageSize)
+    const pagination = getPagination(contents, page, pageSize)
 
     return {
-      items,
       page,
       pageSize,
-      total,
-      lastPage,
       category,
-      isEmpty: items.length === 0,
-    } satisfies GetContentsResponse
+      ...pagination,
+    } satisfies GetListResponse<ContentItem>
   } catch (e) {
     return defaultRes
   }
