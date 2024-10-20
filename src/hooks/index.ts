@@ -1,2 +1,2 @@
-export * from './breakpoint'
-export * from './client-locale'
+export * from './use-breakpoint'
+export * from './use-client-locale'
