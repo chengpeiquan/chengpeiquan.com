@@ -7,9 +7,6 @@ const withNextIntl = createNextIntl()
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'standalone',
-  experimental: {
-    ppr: 'incremental',
-  },
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
   images: {
     unoptimized: true,
