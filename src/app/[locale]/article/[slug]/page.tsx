@@ -7,7 +7,7 @@ import {
   type DetailsPageProps,
   getDetails,
   getDetailsMetadata,
-} from '@/contents'
+} from '@/engines/dispatcher'
 import { MarkupRenderer } from '@/components/markup/renderer'
 import { DesktopToc, MobileToc } from '@/components/markup/table-of-contents'
 import { PublishedBooks } from '@/components/sidebar/published-books'

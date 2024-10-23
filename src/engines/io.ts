@@ -8,8 +8,6 @@ import {
   type ContentFolder,
   type ContentItem,
   type GetListResponse,
-  type ListFolder,
-  type MetaCacheItem,
   contentFolders,
   contentItemSchema,
   contentRootFolder,
@@ -18,29 +16,8 @@ import {
   isValidContentItem,
 } from '@/config/content-config'
 import { type ParseOptions, parse } from './parser'
-import { metaCacheMap } from './meta-cache'
 
 const contentRootPath = join(process.cwd(), 'src', contentRootFolder)
-
-const metaCacheRootPath = join(contentRootPath, 'meta-cache')
-
-export const getMetaCachePath = async (
-  folder: ContentFolder,
-  locale: Locale,
-) => {
-  return {
-    rootPath: metaCacheRootPath,
-    filePath: join(metaCacheRootPath, `${folder}-${locale}.json`),
-  }
-}
-
-export const getMetaCache = async (
-  folder: ListFolder,
-  locale: Locale,
-): Promise<MetaCacheItem[]> => {
-  const cache = metaCacheMap.get(`${folder}_${locale}`)
-  return cache || []
-}
 
 const getMarkdownFiles = (dir: string) => {
   try {

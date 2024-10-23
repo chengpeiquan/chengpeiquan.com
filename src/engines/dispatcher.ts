@@ -2,20 +2,21 @@
 
 import { cache } from 'react'
 import { type Metadata } from 'next'
+import { getTranslations } from 'next-intl/server'
 import { type LocalePageParams } from '@/config/locale-config'
 import { sharedMetadata } from '@/config/site-config'
 import {
   type ContentFolder,
   type GetListResponse,
   type ListFolder,
-  type MetaCacheItem,
   articleCategories,
   cookbookCategories,
   getPagination,
   pageSizeConfig,
 } from '@/config/content-config'
-import { getContent, getMetaCache } from './io'
-import { getTranslations } from 'next-intl/server'
+import { type MetaCacheItem } from '@/config/cache-config'
+import { getMetaCache } from '@/cache/meta-cache'
+import { getContent } from './io'
 
 interface ListPageParams extends LocalePageParams {
   args: string[] // [page] | [slug, page]

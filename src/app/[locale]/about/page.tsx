@@ -6,7 +6,7 @@ import {
   type DetailsPageProps,
   getDetails,
   getDetailsMetadata,
-} from '@/contents'
+} from '@/engines/dispatcher'
 import { MarkupRenderer } from '@/components/markup/renderer'
 
 const folder: ContentFolder = 'about'

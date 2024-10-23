@@ -80,13 +80,11 @@ export type ContentMetadata = z.infer<typeof contentMetadataSchema>
 
 export type ContentItem = z.infer<typeof contentItemSchema>
 
-export type MetaCacheItem = Pick<ContentItem, 'slug' | 'metadata'>
-
 export const isValidContentItem = (v: unknown): v is ContentItem => !!v
 
 export type ListFolder = Exclude<ContentFolder, 'about'>
 
-export interface GetListResponse<T extends ContentItem | MetaCacheItem> {
+export interface GetListResponse<T> {
   items: T[]
   page: number
   pageSize: number
@@ -96,7 +94,7 @@ export interface GetListResponse<T extends ContentItem | MetaCacheItem> {
   isEmpty: boolean
 }
 
-export const getPagination = <T extends ContentItem | MetaCacheItem>(
+export const getPagination = <T>(
   contents: T[],
   page: number,
   pageSize: number,

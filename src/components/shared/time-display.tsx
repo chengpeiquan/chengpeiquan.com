@@ -7,7 +7,7 @@ interface TimeDisplayProps {
    *
    * @description
    *  The `date` return value from `parseDate` method,
-   *  in `@/contents/index.ts`
+   *  in `@/engines/parser/index.ts`
    *
    *
    */

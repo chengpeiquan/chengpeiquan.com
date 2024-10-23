@@ -4,9 +4,9 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "pnpm build:meta-cache && next dev -p 4832",
+    "dev": "pnpm build:cache && next dev -p 4832",
     "build": "run-s build:*",
-    "build:meta-cache": "tsx ./scripts/generate-meta-cache.ts",
+    "build:cache": "tsx ./scripts/generate-cache.ts",
     "build:app": "next build",
     "build:rss": "tsx ./scripts/generate-rss.ts",
     "build:copy-assets": "tsx ./scripts/copy-assets.ts",

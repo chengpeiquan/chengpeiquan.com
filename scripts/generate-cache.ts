@@ -1,9 +1,21 @@
+import { join } from 'node:path'
+import { writeFile } from 'node:fs/promises'
 import { fs } from '@bassist/node-utils'
-import { getMetaCachePath } from '@/contents/io'
 import { type ContentFolder } from '@/config/content-config'
 import { type Locale, locales } from '@/config/locale-config'
-import { writeFile } from 'node:fs/promises'
 import { getPosts } from './shared'
+import { cacheRootFolder, metaCacheRootFolder } from '@/config/cache-config'
+
+const cacheRootPath = join(process.cwd(), 'src', cacheRootFolder)
+
+const metaCacheRootPath = join(cacheRootPath, metaCacheRootFolder)
+
+const getMetaCachePath = async (folder: ContentFolder, locale: Locale) => {
+  return {
+    rootPath: metaCacheRootPath,
+    filePath: join(metaCacheRootPath, `${folder}-${locale}.json`),
+  }
+}
 
 const listFolders: Exclude<ContentFolder, 'about'>[] = ['article', 'cookbook']
 
