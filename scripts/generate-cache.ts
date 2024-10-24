@@ -1,45 +1,88 @@
 import { join } from 'node:path'
 import { writeFile } from 'node:fs/promises'
 import { fs } from '@bassist/node-utils'
-import { type ContentFolder } from '@/config/content-config'
+import { type ContentItem, type ListFolder } from '@/config/content-config'
 import { type Locale, locales } from '@/config/locale-config'
+import {
+  cacheRootFolder,
+  contentCacheRootFolder,
+  metaCacheRootFolder,
+} from '@/config/cache-config'
 import { getPosts } from './shared'
-import { cacheRootFolder, metaCacheRootFolder } from '@/config/cache-config'
+import { ContentProcessorMode } from '@/core/types'
 
 const cacheRootPath = join(process.cwd(), 'src', cacheRootFolder)
-
 const metaCacheRootPath = join(cacheRootPath, metaCacheRootFolder)
+const contentCacheRootPath = join(cacheRootPath, contentCacheRootFolder)
 
-const getMetaCachePath = async (folder: ContentFolder, locale: Locale) => {
-  return {
-    rootPath: metaCacheRootPath,
-    filePath: join(metaCacheRootPath, `${folder}-${locale}.json`),
+const listFolders: ListFolder[] = ['article', 'cookbook']
+
+interface GenerateOptions {
+  folder: ListFolder
+  locale: Locale
+}
+
+interface TaskOptions extends GenerateOptions {
+  items: ContentItem[]
+}
+
+class CacheTask {
+  constructor(private opts: TaskOptions) {}
+
+  public async run() {
+    await this.runMetaTask()
+    await this.runContentTask()
+  }
+
+  private async runMetaTask() {
+    const metaItems = this.opts.items.map(({ slug, metadata }) => ({
+      slug,
+      metadata,
+    }))
+
+    const data = JSON.stringify(metaItems, null, 2)
+    await this.writeCache(metaCacheRootPath, data)
+  }
+
+  private async runContentTask() {
+    const contentItems = this.opts.items.map(({ slug, html: content }) => ({
+      slug,
+      content,
+    }))
+
+    const data = JSON.stringify(contentItems, null, 2)
+    await this.writeCache(contentCacheRootPath, data)
+  }
+
+  private async writeCache(rootPath: string, data: string) {
+    const fileName = `${this.opts.folder}-${this.opts.locale}.json`
+    const filePath = join(rootPath, fileName)
+
+    const isExist = await fs.exists(rootPath)
+    if (!isExist) {
+      await fs.mkdirp(rootPath)
+    }
+
+    await writeFile(filePath, data)
   }
 }
 
-const listFolders: Exclude<ContentFolder, 'about'>[] = ['article', 'cookbook']
-
-const genCache = async (
-  folder: Exclude<ContentFolder, 'about'>,
-  locale: Locale,
-) => {
-  const { items } = await getPosts(folder, locale)
+const generateCache = async (opts: GenerateOptions) => {
+  const { items } = await getPosts(
+    opts.folder,
+    opts.locale,
+    ContentProcessorMode.TextOnly,
+  )
   if (!items.length) return
 
-  const metaItems = items.map(({ slug, metadata }) => ({ slug, metadata }))
-  const { rootPath, filePath } = await getMetaCachePath(folder, locale)
-
-  const isExist = await fs.exists(rootPath)
-  if (!isExist) {
-    await fs.mkdirp(rootPath)
-  }
-
-  await writeFile(filePath, JSON.stringify(metaItems, null, 2))
+  const options: TaskOptions = { ...opts, items }
+  const task = new CacheTask(options)
+  await task.run()
 }
 
 const run = async () => {
   listFolders.forEach((folder) => {
-    locales.forEach((locale) => genCache(folder, locale))
+    locales.forEach((locale) => generateCache({ folder, locale }))
   })
 }
 

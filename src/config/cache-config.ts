@@ -5,6 +5,14 @@ export const cacheRootFolder = 'cache'
 
 export const metaCacheRootFolder = 'meta-cache'
 
-export type MetaCacheMapKey = `${ListFolder}_${Locale}`
+export const contentCacheRootFolder = 'content-cache'
+
+export type CacheMapKey = `${ListFolder}_${Locale}`
 
 export type MetaCacheItem = Pick<ContentItem, 'slug' | 'metadata'>
+
+export type ContentCacheItem = Pick<ContentItem, 'slug'> & {
+  content: string
+}
+
+export type CacheType = 'meta' | 'content'

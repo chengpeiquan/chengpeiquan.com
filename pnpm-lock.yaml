@@ -126,6 +126,9 @@ importers:
       remark-stringify:
         specifier: ^11.0.0
         version: 11.0.0
+      remark-unlink:
+        specifier: ^5.0.0
+        version: 5.0.0
       remark-unwrap-images:
         specifier: ^4.0.1
         version: 4.0.1
@@ -2484,6 +2487,9 @@ packages:
   markdown-table@3.0.3:
     resolution: {integrity: sha512-Z1NL3Tb1M9wH4XESsCDEksWoKTdlUafKc4pt0GRwjUyXaCFZ+dc3g2erqB6zm3szA2IUSi7VnPI+o/9jnxh9hw==}
 
+  mdast-squeeze-paragraphs@6.0.0:
+    resolution: {integrity: sha512-6NDbJPTg0M0Ye+TlYwX1KJ1LFbp515P2immRJyJQhc9Na9cetHzSoHNYIQcXpANEAP1sm9yd/CTZU2uHqR5A+w==}
+
   mdast-util-find-and-replace@3.0.1:
     resolution: {integrity: sha512-SG21kZHGC3XRTSUhtofZkBzZTJNM5ecCi0SK2IMKmSXR8vO3peL+kb1O0z7Zl83jKtutG4k5Wv/W7V3/YHvzPA==}
 
@@ -3104,6 +3110,9 @@ packages:
 
   remark-stringify@11.0.0:
     resolution: {integrity: sha512-1OSmLd3awB/t8qdoEOMazZkNsfVTeY4fTsgzcQFdXNq8ToTN4ZGwrMnlda4K6smTFKD+GRV6O48i6Z4iKgPPpw==}
+
+  remark-unlink@5.0.0:
+    resolution: {integrity: sha512-8NFrI3SecxhOLb734tKaxcU//lNDABabz1I26MGjdlpkUg1I+Fr7lyqL9ckxaCB4kErXD10mScPD7yhCXX4Pfw==}
 
   remark-unwrap-images@4.0.1:
     resolution: {integrity: sha512-J9HibCHx0/X7ovgqaFe0otizCHpbb1s6Jh3IeiD5ibQm2Oz/OhCDXSKMEW5T54iBw5CxuqRL6BrYp+jLLdqBOw==}
@@ -6218,6 +6227,11 @@ snapshots:
 
   markdown-table@3.0.3: {}
 
+  mdast-squeeze-paragraphs@6.0.0:
+    dependencies:
+      '@types/mdast': 4.0.4
+      unist-util-visit: 5.0.0
+
   mdast-util-find-and-replace@3.0.1:
     dependencies:
       '@types/mdast': 4.0.4
@@ -7122,6 +7136,12 @@ snapshots:
       '@types/mdast': 4.0.4
       mdast-util-to-markdown: 2.1.0
       unified: 11.0.5
+
+  remark-unlink@5.0.0:
+    dependencies:
+      '@types/mdast': 4.0.4
+      mdast-squeeze-paragraphs: 6.0.0
+      unist-util-visit: 5.0.0
 
   remark-unwrap-images@4.0.1:
     dependencies:

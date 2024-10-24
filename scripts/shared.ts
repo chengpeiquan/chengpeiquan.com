@@ -4,6 +4,7 @@ import { mkdir } from 'node:fs/promises'
 import { type ContentFolder } from '@/config/content-config'
 import { type Locale } from '@/config/locale-config'
 import { getContents } from '@/core/io'
+import { ContentProcessorMode } from '@/core/types'
 
 const cwd = process.cwd()
 
@@ -22,12 +23,13 @@ export const checkTargetDirExists = async (dir = publicDirs.target) => {
 export const getPosts = async (
   folder: ContentFolder,
   locale: Locale = 'zh',
+  mode: ContentProcessorMode = ContentProcessorMode.HtmlOnly,
 ) => {
   return getContents(folder, {
     locale,
     page: 1,
     pageSize: 1000,
     ignoreDetails: false,
-    simplify: true,
+    mode,
   })
 }

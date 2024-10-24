@@ -3,6 +3,7 @@
 import React from 'react'
 import matter from 'gray-matter'
 import remarkParse from 'remark-parse'
+import remarkUnlink from 'remark-unlink'
 import remarkUnwrapImages from 'remark-unwrap-images'
 import remarkGfm from 'remark-gfm'
 import remarkStringify from 'remark-stringify'
@@ -26,6 +27,7 @@ import {
 } from '@/config/content-config'
 import { a, img } from './components'
 import { Fragment, jsx as _jsx, jsxs as _jsxs } from 'react/jsx-runtime'
+import { ContentProcessorMode } from '@/core/types'
 
 const isValidHeading = (v: unknown): v is HeadingItem => isObject(v) && !!v.id
 
@@ -50,12 +52,16 @@ const rehypeReactOptions = {
   development: false,
 } satisfies RehypeReactOptions
 
-/**
- * @param simplify - When generating RSS feeds or JSON files,
- *  it will parse them in a simplified mode, and plugins such as
- *  code highlighting or JSX transformation will not be enabled.
- */
-const createProcessor = (simplify = false) => {
+const createProcessor = (
+  mode: ContentProcessorMode = ContentProcessorMode.FamilyBucket,
+) => {
+  const isMetaOnly = mode === ContentProcessorMode.MetaOnly
+  const isTextOnly = mode === ContentProcessorMode.TextOnly
+  const isHtmlOnly = mode === ContentProcessorMode.HtmlOnly
+  // const isFamilyBucket = mode === ContentProcessorMode.FamilyBucket
+
+  if (isMetaOnly) return null
+
   // Processing Markdown
   const remarkPlugins: PluggableList = [
     [remarkParse],
@@ -64,12 +70,17 @@ const createProcessor = (simplify = false) => {
     [remarkStringify],
   ]
 
+  if (isTextOnly) {
+    remarkPlugins.push([remarkUnlink])
+  }
+
   // Transforming Markdown to HTML
-  const remarkRehypePlugins: PluggableList = [[remarkRehype]]
+  const remarkRehypePlugins: PluggableList = isTextOnly ? [] : [[remarkRehype]]
 
   // Processing HTML
   const rehypePlugins: PluggableList = (() => {
-    if (simplify) return [[rehypeStringify]]
+    if (isTextOnly) return []
+    if (isHtmlOnly) return [[rehypeStringify]]
 
     return [
       [rehypeSlug, { prefix: '' }],
@@ -102,9 +113,8 @@ const createProcessor = (simplify = false) => {
   // `const mdastTree = processor.parse(file)`
   // `const hastTree = await processor.run(mdastTree, file)`
   // `const jsxElement = toJsxRuntime(hastTree, {...options})`
-  const reactPlugins: PluggableList = simplify
-    ? []
-    : [[rehypeReact, rehypeReactOptions]]
+  const reactPlugins: PluggableList =
+    isTextOnly || isHtmlOnly ? [] : [[rehypeReact, rehypeReactOptions]]
 
   const processor = unified()
     .use(remarkPlugins)
@@ -123,14 +133,21 @@ type ParseMarkdownRes = Pick<ContentItem, 'headings' | 'html' | 'jsxElement'>
  *
  * @param markdown - Extract from `gray-matter`
  *
- * @param simplify - See `createProcessor`
+ * @param mode - See `createProcessor`
  */
 const parseMarkdown = async (
   markdown: string,
-  simplify?: boolean,
+  mode?: ContentProcessorMode,
 ): Promise<ParseMarkdownRes> => {
+  const fallbackRes: ParseMarkdownRes = {
+    headings: [],
+    html: '',
+    jsxElement: null,
+  }
+
   try {
-    const processor = createProcessor(simplify)
+    const processor = createProcessor(mode)
+    if (!processor) return { ...fallbackRes }
 
     // Instead of this usage
     // `import { read } from 'to-vfile'`
@@ -150,12 +167,7 @@ const parseMarkdown = async (
     }
   } catch (e) {
     console.error('[Parse error] ', e)
-
-    return {
-      headings: [],
-      html: '',
-      jsxElement: null,
-    }
+    return { ...fallbackRes }
   }
 }
 
@@ -206,12 +218,12 @@ export interface ParseOptions {
   /**
    * See `createProcessor`
    */
-  simplify?: boolean
+  mode?: ContentProcessorMode
 }
 
 export const parse = async (
   filePath: string,
-  { ignoreDetails = false, simplify = false }: ParseOptions = {},
+  { ignoreDetails = false, mode }: ParseOptions = {},
 ): Promise<ContentItem | null> => {
   try {
     const raw = (await readFile(filePath, 'utf-8')) || ''
@@ -237,10 +249,7 @@ export const parse = async (
       } satisfies ContentItem
     }
 
-    const { headings, html, jsxElement } = await parseMarkdown(
-      markdown,
-      simplify,
-    )
+    const { headings, html, jsxElement } = await parseMarkdown(markdown, mode)
 
     return {
       slug,
