@@ -3,7 +3,7 @@ import { existsSync } from 'node:fs'
 import { mkdir } from 'node:fs/promises'
 import { type ContentFolder } from '@/config/content-config'
 import { type Locale } from '@/config/locale-config'
-import { getContents } from '@/engines/io'
+import { getContents } from '@/core/io'
 
 const cwd = process.cwd()
 

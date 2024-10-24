@@ -7,7 +7,7 @@ import {
   type DetailsPageProps,
   getDetails,
   getDetailsMetadata,
-} from '@/engines/dispatcher'
+} from '@/core/dispatcher'
 import { MarkupRenderer } from '@/components/markup/renderer'
 import { DesktopToc, MobileToc } from '@/components/markup/table-of-contents'
 import { FriendlyLinks } from '@/components/sidebar/friendly-links'
