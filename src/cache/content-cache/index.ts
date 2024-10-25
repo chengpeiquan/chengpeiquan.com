@@ -1,5 +1,3 @@
-'use server'
-
 import { type ListFolder } from '@/config/content-config'
 import { type Locale } from '@/config/locale-config'
 import { type CacheMapKey, type ContentCacheItem } from '@/config/cache-config'
@@ -13,10 +11,10 @@ const contentCacheMap = new Map<CacheMapKey, ContentCacheItem[]>([
   ['cookbook_zh', cookbook_zh as ContentCacheItem[]],
 ])
 
-export const getContentCache = async (
+export const getContentCache = (
   folder: ListFolder,
   locale: Locale,
-): Promise<ContentCacheItem[]> => {
+): ContentCacheItem[] => {
   const cache = contentCacheMap.get(`${folder}_${locale}`)
   return cache || []
 }

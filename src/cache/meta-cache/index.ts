@@ -1,5 +1,3 @@
-'use server'
-
 import { type ListFolder } from '@/config/content-config'
 import { type Locale } from '@/config/locale-config'
 import { type CacheMapKey, type MetaCacheItem } from '@/config/cache-config'
@@ -13,10 +11,10 @@ const metaCacheMap = new Map<CacheMapKey, MetaCacheItem[]>([
   ['cookbook_zh', cookbook_zh as MetaCacheItem[]],
 ])
 
-export const getMetaCache = async (
+export const getMetaCache = (
   folder: ListFolder,
   locale: Locale,
-): Promise<MetaCacheItem[]> => {
+): MetaCacheItem[] => {
   const cache = metaCacheMap.get(`${folder}_${locale}`)
   return cache || []
 }
