@@ -3,10 +3,10 @@ import { writeFile } from 'node:fs/promises'
 import { type Author, Feed, type Item as FeedItem } from 'feed'
 import { checkTargetDirExists, getPosts, publicDirs } from './shared'
 import { sideConfig } from '@/config/site-config'
-import { type ContentFolder } from '@/config/content-config'
+import { ContentFolder } from '@/config/content-config'
 import message from '@/i18n/messages/zh.json'
 
-const folder: ContentFolder = 'article'
+const folder = ContentFolder.Article
 
 const author: Author = {
   name: message.siteConfig.name,

@@ -1,7 +1,11 @@
 import { join } from 'node:path'
 import { writeFile } from 'node:fs/promises'
 import { fs } from '@bassist/node-utils'
-import { type ContentItem, type ListFolder } from '@/config/content-config'
+import {
+  type ContentItem,
+  type ListFolder,
+  listFolders,
+} from '@/config/content-config'
 import { type Locale, locales } from '@/config/locale-config'
 import {
   cacheRootFolder,
@@ -14,8 +18,6 @@ import { ContentProcessorMode } from '@/core/types'
 const cacheRootPath = join(process.cwd(), 'src', cacheRootFolder)
 const metaCacheRootPath = join(cacheRootPath, metaCacheRootFolder)
 const contentCacheRootPath = join(cacheRootPath, contentCacheRootFolder)
-
-const listFolders: ListFolder[] = ['article', 'cookbook']
 
 interface GenerateOptions {
   folder: ListFolder

@@ -1,6 +1,7 @@
 import { type Metadata } from 'next'
 import { type SocialLinkProps } from 'blackwork'
 import { type Locale } from './locale-config'
+import { ContentFolder } from './content-config'
 import { isUndefined } from '@bassist/utils'
 import {
   AboutIcon,
@@ -36,7 +37,12 @@ const author: Readonly<Metadata['authors']> = {
 
 const email = 'chengpeiquan@chengpeiquan.com'
 
-const navSlugs = ['home', 'article', 'cookbook', 'about'] as const
+const navSlugs = [
+  'home',
+  ContentFolder.Article,
+  ContentFolder.Cookbook,
+  ContentFolder.About,
+] as const
 
 export type NavSlug = (typeof sideConfig.navSlugs)[number]
 

@@ -5,8 +5,8 @@ import { Heading, LayoutMain } from 'blackwork'
 import { type LocalePageParams } from '@/config/locale-config'
 import {
   type ContentDetailsLink,
+  ContentFolder,
   type ContentMetadata,
-  type ListFolder,
   categoryGroupTitleConfig,
   cookbookCategories,
 } from '@/config/content-config'
@@ -18,7 +18,7 @@ import { CategoryLinks } from '@/components/layouts/category-links'
 import { TimeDisplay } from '@/components/shared/time-display'
 import { Link } from '@/navigation'
 
-const folder: ListFolder = 'cookbook'
+const folder = ContentFolder.Cookbook
 
 export const generateMetadata = async ({ params }: ListPageProps) =>
   getListMetadata(folder, params)
@@ -28,7 +28,7 @@ const ArticleCard: React.FC<{
   metadata: ContentMetadata
 }> = ({ slug, metadata }) => {
   const { title, cover, date } = metadata
-  const link = `/cookbook/${slug}` satisfies ContentDetailsLink
+  const link = `/${ContentFolder.Cookbook}/${slug}` satisfies ContentDetailsLink
 
   return (
     <li className="flex flex-col gap-2 w-full">

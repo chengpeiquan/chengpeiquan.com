@@ -5,6 +5,14 @@ import { useTranslations } from 'next-intl'
 import { Button, cn } from 'blackwork'
 import { isUndefined } from '@bassist/utils'
 import { type NavSlug, navIconMap, sideConfig } from '@/config/site-config'
+import {
+  isActiveListFolder,
+  isActivePageFolder,
+  isListFolder,
+  isPageFolder,
+  listFolderMapping,
+  pageFolderMapping,
+} from '@/config/content-config'
 import { Link, usePathname } from '@/navigation'
 import { useBreakpoint } from '@/hooks'
 
@@ -28,25 +36,15 @@ const NavigationLink: React.FC<NavigationLinkProps> = ({
 
   // `pathname` always do not begin with a locale
   const active = useMemo(() => {
-    switch (slug) {
-      case 'article': {
-        return (
-          pathname.startsWith('/articles/') || pathname.startsWith('/article/')
-        )
-      }
-      case 'cookbook': {
-        return (
-          pathname.startsWith('/cookbooks/') ||
-          pathname.startsWith('/cookbook/')
-        )
-      }
-      case 'about': {
-        return pathname === '/about'
-      }
-      default: {
-        return pathname === '/'
-      }
+    if (isListFolder(slug)) {
+      return isActiveListFolder(pathname, slug)
     }
+
+    if (isPageFolder(slug)) {
+      return isActivePageFolder(pathname, slug)
+    }
+
+    return pathname === '/'
   }, [pathname, slug])
 
   const cls = cn(
@@ -55,20 +53,15 @@ const NavigationLink: React.FC<NavigationLinkProps> = ({
   )
 
   const href = useMemo(() => {
-    switch (slug) {
-      case 'article': {
-        return '/articles/1'
-      }
-      case 'cookbook': {
-        return '/cookbooks/1'
-      }
-      case 'about': {
-        return '/about'
-      }
-      default: {
-        return '/'
-      }
+    if (isListFolder(slug)) {
+      return `/${listFolderMapping[slug]}/1`
     }
+
+    if (isPageFolder(slug)) {
+      return `/${pageFolderMapping[slug]}`
+    }
+
+    return '/'
   }, [slug])
 
   const content = useMemo(() => {

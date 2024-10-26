@@ -2,7 +2,7 @@ import React from 'react'
 import { notFound } from 'next/navigation'
 import { HolyGrailAside, HolyGrailContent, LayoutMain } from 'blackwork'
 import { isMobileDevice } from '@/config/middleware-config'
-import { type ContentFolder } from '@/config/content-config'
+import { ContentFolder } from '@/config/content-config'
 import {
   type DetailsPageProps,
   getDetails,
@@ -16,7 +16,7 @@ import {
   CookbookQrCode,
 } from '@/components/sidebar/cookbook-widgets'
 
-const folder: ContentFolder = 'cookbook'
+const folder = ContentFolder.Cookbook
 
 export const generateMetadata = async ({ params }: DetailsPageProps) =>
   getDetailsMetadata(folder, params)

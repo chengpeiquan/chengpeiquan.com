@@ -6,7 +6,7 @@ import { getTranslations } from 'next-intl/server'
 import { type LocalePageParams } from '@/config/locale-config'
 import { sharedMetadata } from '@/config/site-config'
 import {
-  type ContentFolder,
+  ContentFolder,
   type GetListResponse,
   type ListFolder,
   articleCategories,
@@ -68,7 +68,7 @@ export const getListMetadata = cache(
 
     const { category, page } = analyzeListParams(params)
 
-    const isCookbook = folder === 'cookbook'
+    const isCookbook = folder === ContentFolder.Cookbook
     const cateConfig = isCookbook ? cookbookCategories : articleCategories
     const cateItem = cateConfig.find((i) => i.slug === category)
 

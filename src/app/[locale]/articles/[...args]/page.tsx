@@ -9,8 +9,8 @@ import {
 } from 'blackwork'
 import {
   type ContentDetailsLink,
+  ContentFolder,
   type ContentMetadata,
-  type ListFolder,
   articleCategories,
 } from '@/config/content-config'
 import { isMobileDevice } from '@/config/middleware-config'
@@ -24,7 +24,7 @@ import { FriendlyLinks } from '@/components/sidebar/friendly-links'
 import { TimeDisplay } from '@/components/shared/time-display'
 import { Link } from '@/navigation'
 
-const folder: ListFolder = 'article'
+const folder = ContentFolder.Article
 
 export const generateMetadata = async ({ params }: ListPageProps) =>
   getListMetadata(folder, params)
@@ -34,7 +34,7 @@ const ArticleCard: React.FC<{
   metadata: ContentMetadata
 }> = ({ slug, metadata }) => {
   const { title, desc, cover, date } = metadata
-  const link = `/article/${slug}` satisfies ContentDetailsLink
+  const link = `/${ContentFolder.Article}/${slug}` satisfies ContentDetailsLink
 
   return (
     <li className="flex flex-col gap-4 w-full">

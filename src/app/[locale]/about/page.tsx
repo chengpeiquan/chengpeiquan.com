@@ -1,7 +1,7 @@
 import React from 'react'
 import { notFound } from 'next/navigation'
 import { LayoutMain } from 'blackwork'
-import { type ContentFolder } from '@/config/content-config'
+import { ContentFolder } from '@/config/content-config'
 import {
   type DetailsPageProps,
   getDetails,
@@ -9,7 +9,7 @@ import {
 } from '@/core/dispatcher'
 import { MarkupRenderer } from '@/components/markup/renderer'
 
-const folder: ContentFolder = 'about'
+const folder = ContentFolder.About
 const slug = folder
 
 export const generateMetadata = async ({ params }: DetailsPageProps) =>

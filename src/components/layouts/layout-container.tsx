@@ -16,6 +16,7 @@ import { NavigationLinks } from '@/components/layouts/navigation-links'
 import { LanguageToggle } from '@/components/layouts/language-toggle'
 import { ThemeToggle } from '@/components/layouts/theme-toggle'
 import { NavigationDrawer } from '@/components/layouts/navigation-drawer'
+import { SearchBox } from '@/components/layouts/search-box'
 
 type LayoutContainerProps = React.PropsWithChildren & LocalePageParams
 
@@ -38,11 +39,7 @@ export const LayoutContainer = async ({
   const socialLinks = getLocaleSocialLinks(locale).map((i) => {
     const label = t(`socialLink.${i.type}`)
     const ariaLabel = ta('newTab', { label })
-    return {
-      ...i,
-      label,
-      ariaLabel,
-    }
+    return { ...i, label, ariaLabel }
   })
 
   return (
@@ -70,9 +67,13 @@ export const LayoutContainer = async ({
         </div>
 
         {!isMobile && (
-          <div className="flex flex-1 items-center justify-end h-full box-border pr-1 overflow-hidden">
-            <NavigationLinks />
-          </div>
+          <>
+            <SearchBox />
+
+            <div className="flex flex-1 items-center justify-end h-full box-border pr-1 overflow-hidden">
+              <NavigationLinks />
+            </div>
+          </>
         )}
       </LayoutHeader>
 

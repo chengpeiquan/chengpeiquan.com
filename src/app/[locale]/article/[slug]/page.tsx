@@ -2,7 +2,7 @@ import React from 'react'
 import { notFound } from 'next/navigation'
 import { HolyGrailAside, HolyGrailContent, LayoutMain } from 'blackwork'
 import { isMobileDevice } from '@/config/middleware-config'
-import { type ContentFolder } from '@/config/content-config'
+import { ContentFolder } from '@/config/content-config'
 import {
   type DetailsPageProps,
   getDetails,
@@ -14,7 +14,7 @@ import { PublishedBooks } from '@/components/sidebar/published-books'
 import { CatHuffing } from '@/components/sidebar/cat-huffing'
 import { FriendlyLinks } from '@/components/sidebar/friendly-links'
 
-const folder: ContentFolder = 'article'
+const folder = ContentFolder.Article
 
 export const generateMetadata = async ({ params }: DetailsPageProps) =>
   getDetailsMetadata(folder, params)
