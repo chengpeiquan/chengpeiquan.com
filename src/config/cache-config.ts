@@ -14,6 +14,13 @@ export const contentCacheRootFolder = 'content-cache'
 
 export type CacheMapKey = `${ListFolder}_${Locale}`
 
+export const getCacheMapKey = (
+  folder: ListFolder,
+  locale: Locale,
+): CacheMapKey => {
+  return `${folder}_${locale}`
+}
+
 export type MetaCacheItem = Pick<ContentItem, 'slug' | 'metadata'>
 
 export interface ContentCacheItem
