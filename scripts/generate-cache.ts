@@ -8,6 +8,8 @@ import {
 } from '@/config/content-config'
 import { type Locale, locales } from '@/config/locale-config'
 import {
+  type ContentCacheItem,
+  type MetaCacheItem,
   cacheRootFolder,
   contentCacheRootFolder,
   metaCacheRootFolder,
@@ -37,20 +39,21 @@ class CacheTask {
   }
 
   private async runMetaTask() {
-    const metaItems = this.opts.items.map(({ slug, metadata }) => ({
-      slug,
-      metadata,
-    }))
+    const metaItems = this.opts.items.map<MetaCacheItem>(
+      ({ slug, metadata }) => ({ slug, metadata }),
+    )
 
     const data = JSON.stringify(metaItems, null, 2)
     await this.writeCache(metaCacheRootPath, data)
   }
 
   private async runContentTask() {
-    const contentItems = this.opts.items.map(({ slug, html: content }) => ({
-      slug,
-      content,
-    }))
+    const contentItems = this.opts.items.map<ContentCacheItem>(
+      ({ slug, metadata, html: content }) => {
+        const { title, desc, cover } = metadata
+        return { slug, title, desc, cover, content }
+      },
+    )
 
     const data = JSON.stringify(contentItems, null, 2)
     await this.writeCache(contentCacheRootPath, data)
