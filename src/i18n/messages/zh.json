@@ -40,6 +40,14 @@
       "rss": "RSS"
     }
   },
+  "searchConfig": {
+    "label": "搜索{target}...",
+    "shortLabel": "搜索...",
+    "placeholder": "请输入关键词搜索{target}...",
+    "noRecent": "暂无搜索记录",
+    "noResult": "搜不到结果",
+    "resultCount": "找到 <count></count> 个 <keyword></keyword> 的相关结果"
+  },
   "action": {
     "toggle": "点击切换到",
     "sameTab": "在当前标签访问{label}",

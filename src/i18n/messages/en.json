@@ -40,6 +40,14 @@
       "rss": "RSS"
     }
   },
+  "searchConfig": {
+    "label": "Search {target}...",
+    "shortLabel": "Search...",
+    "placeholder": "Type a keyword to search {target}...",
+    "noRecent": "No recent searches",
+    "noResult": "No results found",
+    "resultCount": "<count></count> results for <keyword></keyword>"
+  },
   "action": {
     "toggle": "Click to switch to ",
     "sameTab": "Visit {label} in the same tab",
