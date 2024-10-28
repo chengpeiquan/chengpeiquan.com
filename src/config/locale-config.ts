@@ -10,7 +10,7 @@ export type Locale = Locales[number]
 
 export const defaultLocale: Locale = 'zh'
 
-export const localePrefix: LocalePrefix<Locales> = 'as-needed'
+export const localePrefix: LocalePrefix<Locales, 'as-needed'> = 'as-needed'
 
 export const pathnames: Pathnames<typeof locales> = {
   '/': '/',
