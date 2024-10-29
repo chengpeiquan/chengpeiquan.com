@@ -6,7 +6,6 @@ import {
 } from '@/config/cache-config'
 import { type Locale } from '@/config/locale-config'
 import { type ListFolder } from '@/config/content-config'
-import { getContentCache } from '@/cache/content-cache'
 
 interface SearchDocumentItem extends Omit<ContentCacheItem, 'slug'> {
   id: FlexSearch.Id
@@ -49,7 +48,16 @@ export const getSearchEngine = async (folder: ListFolder, locale: Locale) => {
   const engine = searchEngineMap.get(key)
   if (engine) return engine
 
-  const data = getContentCache(...args)
+  // const data = await getContentCache(...args)
+  const res = await fetch('https://chengpeiquan.com/api/search', {
+    method: 'POST',
+    body: JSON.stringify({
+      folder: 'article',
+      locale: 'zh',
+    }),
+  })
+  // @ts-ignore
+  const data = res.data
   const instance = await initializeEngine(data)
   searchEngineMap.set(key, instance)
 
