@@ -1,13 +1,18 @@
 import { getContentCache } from '@/cache/content-cache'
+import { type ListFolder } from '@/config/content-config'
+import { type Locale } from '@/config/locale-config'
 
-export async function POST(req: Request) {
+export async function GET(req: Request) {
   try {
-    const body = await req.json()
+    const url = new URL(req.url)
+    const params = new URLSearchParams(url.search)
+
     console.log('-----')
-    console.log(body)
+    console.log(params)
     console.log('-----')
 
-    const { folder, locale } = body
+    const folder = params.get('folder') as ListFolder
+    const locale = params.get('locale') as Locale
 
     const data = await getContentCache(folder, locale)
     console.log('-----')

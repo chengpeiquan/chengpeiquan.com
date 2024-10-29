@@ -49,13 +49,16 @@ export const getSearchEngine = async (folder: ListFolder, locale: Locale) => {
   if (engine) return engine
 
   // const data = await getContentCache(...args)
-  const res = await fetch('https://chengpeiquan.com/api/search', {
-    method: 'POST',
-    body: JSON.stringify({
-      folder: 'article',
-      locale: 'zh',
-    }),
-  })
+  // const res = await fetch('https://chengpeiquan.com/api/search', {
+  //   method: 'POST',
+  //   body: JSON.stringify({
+  //     folder: 'article',
+  //     locale: 'zh',
+  //   }),
+  // })
+  const res = await fetch(
+    'https://chengpeiquan.com/api/search?folder=article&locale=zh',
+  )
   // @ts-ignore
   const data = res.data
   const instance = await initializeEngine(data)
