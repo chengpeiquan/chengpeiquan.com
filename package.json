@@ -10,6 +10,7 @@
     "build:app": "next build",
     "build:rss": "tsx ./scripts/generate-rss.ts",
     "build:copy-assets": "tsx ./scripts/copy-assets.ts",
+    "preview": "docker-compose build && docker-compose up -d",
     "start": "next start",
     "lint": "eslint .",
     "format": "prettier --write .",
