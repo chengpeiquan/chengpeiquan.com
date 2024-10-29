@@ -4,7 +4,6 @@ import React from 'react'
 import matter from 'gray-matter'
 import remarkParse from 'remark-parse'
 import remarkUnlink from 'remark-unlink'
-import remarkUnwrapImages from 'remark-unwrap-images'
 import remarkGfm from 'remark-gfm'
 import remarkStringify from 'remark-stringify'
 import remarkRehype from 'remark-rehype'
@@ -15,6 +14,7 @@ import rehypeShiki from '@shikijs/rehype'
 import rehypeExternalLink from 'rehype-external-links'
 import rehypeSanitize from 'rehype-sanitize'
 import rehypeStringify from 'rehype-stringify'
+import rehypeUnwrapImages from 'rehype-unwrap-images'
 import rehypeReact, { type Options as RehypeReactOptions } from 'rehype-react'
 import { type PluggableList, unified } from 'unified'
 import { readFile } from 'node:fs/promises'
@@ -65,7 +65,6 @@ const createProcessor = (
   // Processing Markdown
   const remarkPlugins: PluggableList = [
     [remarkParse],
-    [remarkUnwrapImages],
     [remarkGfm],
     [remarkStringify],
   ]
@@ -87,6 +86,7 @@ const createProcessor = (
       [rehypeAutolinkHeadings],
       [rehypeExtractToc],
       [rehypeExternalLink],
+      [rehypeUnwrapImages],
       [
         rehypeSanitize,
         {
