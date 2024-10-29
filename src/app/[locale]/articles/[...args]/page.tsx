@@ -14,7 +14,8 @@ import {
   articleCategories,
 } from '@/config/content-config'
 import { isMobileDevice } from '@/config/middleware-config'
-import { type ListPageProps, getList, getListMetadata } from '@/core/dispatcher'
+import { type ListPageProps } from '@/config/locale-config'
+import { getList, getListMetadata } from '@/core/dispatcher'
 import { Empty } from '@/components/layouts/empty'
 import { Pagination } from '@/components/layouts/pagination'
 import { CategoryLinks } from '@/components/layouts/category-links'
@@ -26,8 +27,12 @@ import { Link } from '@/navigation'
 
 const folder = ContentFolder.Article
 
-export const generateMetadata = async ({ params }: ListPageProps) =>
-  getListMetadata(folder, params)
+export const generateMetadata = async ({
+  params: promiseParams,
+}: ListPageProps) => {
+  const params = await promiseParams
+  return getListMetadata(folder, params)
+}
 
 const ArticleCard: React.FC<{
   slug: string
@@ -74,12 +79,16 @@ const ArticleCard: React.FC<{
   )
 }
 
-export default async function ArticlesPage({ params }: ListPageProps) {
+export default async function ArticlesPage({
+  params: promiseParams,
+}: ListPageProps) {
+  const params = await promiseParams
+
   if (params.args.length > 2) {
     notFound()
   }
 
-  const isMobile = isMobileDevice()
+  const isMobile = await isMobileDevice()
 
   const { items, page, lastPage, category, isEmpty } = await getList(
     folder,

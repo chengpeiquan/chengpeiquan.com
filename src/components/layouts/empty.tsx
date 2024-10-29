@@ -7,7 +7,7 @@ import { isMobileDevice } from '@/config/middleware-config'
 import { cn } from '@/utils'
 
 export const Empty = async ({ locale }: LocalePageParams) => {
-  const isMobile = isMobileDevice()
+  const isMobile = await isMobileDevice()
 
   const t = await getTranslations({
     locale,

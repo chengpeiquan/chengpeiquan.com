@@ -3,7 +3,10 @@
 import { cache } from 'react'
 import { type Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
-import { type LocalePageParams } from '@/config/locale-config'
+import {
+  type DetailsPageParams,
+  type ListPageParams,
+} from '@/config/locale-config'
 import { sharedMetadata } from '@/config/site-config'
 import {
   ContentFolder,
@@ -17,14 +20,6 @@ import {
 import { type MetaCacheItem } from '@/config/cache-config'
 import { getMetaCache } from '@/cache/meta-cache'
 import { getContent } from './io'
-
-interface ListPageParams extends LocalePageParams {
-  args: string[] // [page] | [slug, page]
-}
-
-export interface ListPageProps {
-  params: ListPageParams
-}
 
 const analyzeListParams = cache((params: ListPageParams) => {
   const isCategory = params.args.length === 2
@@ -83,14 +78,6 @@ export const getListMetadata = cache(
     }
   },
 )
-
-interface DetailsPageParams extends LocalePageParams {
-  slug: string
-}
-
-export interface DetailsPageProps {
-  params: DetailsPageParams
-}
 
 export const getDetails = cache(
   async (folder: ContentFolder, params: DetailsPageParams) =>

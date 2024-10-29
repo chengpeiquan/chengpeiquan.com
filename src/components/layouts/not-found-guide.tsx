@@ -15,7 +15,7 @@ export const NotFoundGuide = async () => {
     namespace: 'errorConfig.notFound',
   })
 
-  const isMobile = isMobileDevice()
+  const isMobile = await isMobileDevice()
 
   const avatarCls = cn(
     'flex flex-shrink-0',

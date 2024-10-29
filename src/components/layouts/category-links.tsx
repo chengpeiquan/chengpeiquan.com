@@ -55,15 +55,15 @@ interface CategoryLinksProps {
   collapsibleTitle?: string
 }
 
-const LinksContent: React.FC<CategoryLinksProps> = ({
+const LinksContent = async ({
   locale,
   group,
   category,
   categories,
   collapsible = false,
   collapsibleTitle = '',
-}) => {
-  const isMobile = isMobileDevice()
+}: CategoryLinksProps) => {
+  const isMobile = await isMobileDevice()
 
   const links = [allCategory, ...categories].map<CategoryItem>((i) => {
     const href = isUndefined(i.slug)

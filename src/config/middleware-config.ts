@@ -8,7 +8,7 @@ export const defaultHeaderValue = {
   device: 'unknown',
 } as const
 
-export const isMobileDevice = () => {
-  const device = headers().get(headerFields.device)
+export const isMobileDevice = async () => {
+  const device = (await headers()).get(headerFields.device)
   return device === 'mobile'
 }

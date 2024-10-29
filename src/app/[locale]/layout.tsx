@@ -7,12 +7,14 @@ import { type LocalePageParams } from '@/config/locale-config'
 import { LayoutContainer } from '@/components/layouts/layout-container'
 
 interface LocaleLayoutProps extends React.PropsWithChildren {
-  params: LocalePageParams
+  params: Promise<LocalePageParams>
 }
 
 export const generateMetadata = async ({
-  params,
+  params: promiseParams,
 }: Pick<LocaleLayoutProps, 'params'>) => {
+  const params = await promiseParams
+
   const t = await getTranslations({
     locale: params.locale,
     namespace: 'siteConfig',
@@ -29,9 +31,10 @@ export const generateMetadata = async ({
 }
 
 export default async function LocaleLayout({
-  params,
+  params: promiseParams,
   children,
 }: Readonly<LocaleLayoutProps>) {
+  const params = await promiseParams
   const { locale } = params
   const messages = await getMessages()
 

@@ -82,7 +82,7 @@ export const MarkupRenderer = async ({
   jsxElement,
   locale,
 }: MarkupRendererProps) => {
-  const isMobile = isMobileDevice()
+  const isMobile = await isMobileDevice()
 
   const t = await getTranslations({
     locale,

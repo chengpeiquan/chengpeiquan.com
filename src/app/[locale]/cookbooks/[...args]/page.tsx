@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { Heading, LayoutMain } from 'blackwork'
-import { type LocalePageParams } from '@/config/locale-config'
+import { type ListPageProps } from '@/config/locale-config'
 import {
   type ContentDetailsLink,
   ContentFolder,
@@ -11,7 +11,7 @@ import {
   cookbookCategories,
 } from '@/config/content-config'
 import { isMobileDevice } from '@/config/middleware-config'
-import { type ListPageProps, getList, getListMetadata } from '@/core/dispatcher'
+import { getList, getListMetadata } from '@/core/dispatcher'
 import { Empty } from '@/components/layouts/empty'
 import { Pagination } from '@/components/layouts/pagination'
 import { CategoryLinks } from '@/components/layouts/category-links'
@@ -20,8 +20,12 @@ import { Link } from '@/navigation'
 
 const folder = ContentFolder.Cookbook
 
-export const generateMetadata = async ({ params }: ListPageProps) =>
-  getListMetadata(folder, params)
+export const generateMetadata = async ({
+  params: promiseParams,
+}: ListPageProps) => {
+  const params = await promiseParams
+  return getListMetadata(folder, params)
+}
 
 const ArticleCard: React.FC<{
   slug: string
@@ -60,20 +64,16 @@ const ArticleCard: React.FC<{
   )
 }
 
-interface CookbooksPageParams extends LocalePageParams {
-  args: string[] // [page] | [slug, page]
-}
+export default async function CookbooksPage({
+  params: promiseParams,
+}: ListPageProps) {
+  const params = await promiseParams
 
-interface CookbooksPageProps {
-  params: CookbooksPageParams
-}
-
-export default async function CookbooksPage({ params }: CookbooksPageProps) {
   if (params.args.length > 2) {
     notFound()
   }
 
-  const isMobile = isMobileDevice()
+  const isMobile = await isMobileDevice()
 
   const { items, page, lastPage, category, isEmpty } = await getList(
     folder,

@@ -24,7 +24,7 @@ export const LayoutContainer = async ({
   locale,
   children,
 }: LayoutContainerProps) => {
-  const isMobile = isMobileDevice()
+  const isMobile = await isMobileDevice()
 
   const t = await getTranslations({
     locale,

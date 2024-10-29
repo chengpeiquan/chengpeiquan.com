@@ -52,7 +52,11 @@ interface GetContentOptions {
   locale: Locale
 }
 
-export const getContent = ({ folder, slug, locale }: GetContentOptions) => {
+export const getContent = async ({
+  folder,
+  slug,
+  locale,
+}: GetContentOptions) => {
   const filePaths = getFilePaths(folder, locale)
   if (!filePaths.length) return null
 
