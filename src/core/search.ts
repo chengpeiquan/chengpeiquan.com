@@ -49,7 +49,7 @@ export const getSearchEngine = async (folder: ListFolder, locale: Locale) => {
   const engine = searchEngineMap.get(key)
   if (engine) return engine
 
-  const data = getContentCache(...args)
+  const data = await getContentCache(...args)
   const instance = await initializeEngine(data)
   searchEngineMap.set(key, instance)
 
