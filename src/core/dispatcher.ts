@@ -36,7 +36,7 @@ export const getList = cache(
   async (folder: ListFolder, params: ListPageParams) => {
     const { category, page } = analyzeListParams(params)
 
-    const allCache = getMetaCache(folder, params.locale)
+    const allCache = await getMetaCache(folder, params.locale)
     const pageSize = pageSizeConfig[folder]
 
     const cache = allCache.filter((i) =>
