@@ -14,7 +14,7 @@ import {
   generatePages,
 } from 'blackwork'
 import { Link } from '@/navigation'
-import { type PropsWithDevice } from '@/types'
+import { type PropsWithDevice } from '@/config/route-config'
 
 interface PaginationProps extends PropsWithDevice {
   slug: string

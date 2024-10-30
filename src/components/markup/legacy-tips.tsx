@@ -1,7 +1,8 @@
 import React, { cache } from 'react'
 import { getTranslations } from 'next-intl/server'
 import { Paragraph } from 'blackwork'
-import { type Locale, type LocalePageParams } from '@/config/locale-config'
+import { type Locale } from '@/config/locale-config'
+import { type LocalePageParams } from '@/config/route-config'
 import {
   type ContentMetadata,
   legacyThresholdDays,

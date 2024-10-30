@@ -10,7 +10,7 @@ import {
   ScrollToTop,
 } from 'blackwork'
 import { isMobileDevice } from '@/config/middleware-config'
-import { type LocalePageParams } from '@/config/locale-config'
+import { type LocalePageParams } from '@/config/route-config'
 import { getLocaleSocialLinks, sideConfig } from '@/config/site-config'
 import { NavigationLinks } from '@/components/layouts/navigation-links'
 import { LanguageToggle } from '@/components/layouts/language-toggle'

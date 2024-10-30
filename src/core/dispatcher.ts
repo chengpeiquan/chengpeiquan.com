@@ -6,7 +6,7 @@ import { getTranslations } from 'next-intl/server'
 import {
   type DetailsPageParams,
   type ListPageParams,
-} from '@/config/locale-config'
+} from '@/config/route-config'
 import { sharedMetadata } from '@/config/site-config'
 import {
   ContentFolder,

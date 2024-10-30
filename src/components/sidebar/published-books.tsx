@@ -2,8 +2,8 @@ import React from 'react'
 import Image from 'next/image'
 import { Button } from 'blackwork'
 import { Link } from '@/navigation'
+import { type linkItem } from '@/config/route-config'
 import { SidebarBlock } from '../shared/sidebar-block'
-import { type linkItem } from '@/types'
 
 const links: readonly linkItem[] = [
   {

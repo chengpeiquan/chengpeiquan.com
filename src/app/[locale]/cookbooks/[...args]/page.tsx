@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { Heading, LayoutMain } from 'blackwork'
-import { type ListPageProps } from '@/config/locale-config'
+import { type ListPageProps } from '@/config/route-config'
 import {
   type ContentDetailsLink,
   ContentFolder,

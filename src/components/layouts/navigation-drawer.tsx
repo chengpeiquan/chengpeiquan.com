@@ -15,12 +15,12 @@ import {
   SocialLinks,
 } from 'blackwork'
 import { getLocaleSocialLinks } from '@/config/site-config'
+import { type PropsWithDevice } from '@/config/route-config'
 import { MenuIcon } from '../shared/icons'
 import { NavigationLinks } from '@/components/layouts/navigation-links'
 import { SearchBox } from '@/components/layouts/search-box'
 import { useBreakpoint, useClientLocale } from '@/hooks'
 import { cn } from '@/utils'
-import { type PropsWithDevice } from '@/types'
 import { usePathname } from '@/navigation'
 
 export const NavigationDrawer: React.FC<PropsWithDevice> = ({ isMobile }) => {

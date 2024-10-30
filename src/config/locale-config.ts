@@ -20,26 +20,6 @@ export const pathnames: Pathnames<typeof locales> = {
   // },
 }
 
-export interface LocalePageParams {
-  locale: Locale
-}
-
-export interface DetailsPageParams extends LocalePageParams {
-  slug: string
-}
-
-export interface DetailsPageProps {
-  params: Promise<DetailsPageParams>
-}
-
-export interface ListPageParams extends LocalePageParams {
-  args: string[] // [page] | [slug, page]
-}
-
-export interface ListPageProps {
-  params: Promise<ListPageParams>
-}
-
 export const localeLabelMapping: Readonly<
   Record<Locale, Record<Locale, string>>
 > = {

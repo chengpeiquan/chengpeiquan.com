@@ -2,7 +2,7 @@ import React from 'react'
 import { notFound } from 'next/navigation'
 import { LayoutMain } from 'blackwork'
 import { ContentFolder } from '@/config/content-config'
-import { type DetailsPageProps } from '@/config/locale-config'
+import { type DetailsPageProps } from '@/config/route-config'
 import { getDetails, getDetailsMetadata } from '@/core/dispatcher'
 import { MarkupRenderer } from '@/components/markup/renderer'
 

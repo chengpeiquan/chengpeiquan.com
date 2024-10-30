@@ -14,7 +14,7 @@ import {
   articleCategories,
 } from '@/config/content-config'
 import { isMobileDevice } from '@/config/middleware-config'
-import { type ListPageProps } from '@/config/locale-config'
+import { type ListPageProps } from '@/config/route-config'
 import { getList, getListMetadata } from '@/core/dispatcher'
 import { Empty } from '@/components/layouts/empty'
 import { Pagination } from '@/components/layouts/pagination'

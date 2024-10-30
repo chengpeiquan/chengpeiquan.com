@@ -14,6 +14,7 @@ import {
   useQuickSearchState,
 } from 'blackwork'
 import { useTranslations } from 'next-intl'
+import { type PropsWithDevice } from '@/config/route-config'
 import { type ContentCacheItem } from '@/config/cache-config'
 import { type ContentDetailsLink, ContentFolder } from '@/config/content-config'
 import {
@@ -23,7 +24,6 @@ import {
   useSearch,
 } from '@/hooks'
 import { Link, usePathname } from '@/navigation'
-import { type PropsWithDevice } from '@/types'
 import { cn } from '@/utils'
 
 interface SearchResultCardProps extends PropsWithDevice {

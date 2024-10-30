@@ -3,11 +3,13 @@ import { getTranslations } from 'next-intl/server'
 import { Heading, Paragraph } from 'blackwork'
 import { isString } from '@bassist/utils'
 import { type ContentItem, type ContentMetadata } from '@/config/content-config'
-import { type LocalePageParams } from '@/config/locale-config'
+import {
+  type LocalePageParams,
+  type PropsWithDevice,
+} from '@/config/route-config'
 import { isMobileDevice } from '@/config/middleware-config'
 import { Link } from '@/navigation'
 import { MiniGithubIcon } from '../shared/icons'
-import { type PropsWithDevice } from '@/types'
 import { LegacyTips } from './legacy-tips'
 
 interface StarOnGitHubProps extends LocalePageParams {

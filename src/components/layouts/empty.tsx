@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 import { Paragraph } from 'blackwork'
-import { type LocalePageParams } from '@/config/locale-config'
+import { type LocalePageParams } from '@/config/route-config'
 import { isMobileDevice } from '@/config/middleware-config'
 import { cn } from '@/utils'
 
