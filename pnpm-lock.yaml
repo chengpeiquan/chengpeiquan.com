@@ -63,6 +63,9 @@ importers:
       '@tailwindcss/typography':
         specifier: ^0.5.15
         version: 0.5.15(tailwindcss@3.4.14)
+      '@types/mdast':
+        specifier: ^4.0.4
+        version: 4.0.4
       '@types/node':
         specifier: ^20.17.3
         version: 20.17.3
@@ -96,6 +99,9 @@ importers:
       lint-staged:
         specifier: ^15.2.10
         version: 15.2.10
+      mdast-squeeze-paragraphs:
+        specifier: ^6.0.0
+        version: 6.0.0
       npm-run-all2:
         specifier: ^6.2.6
         version: 6.2.6
@@ -135,9 +141,6 @@ importers:
       remark-stringify:
         specifier: ^11.0.0
         version: 11.0.0
-      remark-unlink:
-        specifier: ^5.0.0
-        version: 5.0.0
       tailwind-merge:
         specifier: ^2.5.4
         version: 2.5.4
@@ -156,6 +159,9 @@ importers:
       unified:
         specifier: ^11.0.5
         version: 11.0.5
+      unist-util-visit:
+        specifier: ^5.0.0
+        version: 5.0.0
       unplugin-auto-import:
         specifier: ^0.18.3
         version: 0.18.3(webpack-sources@3.2.3)
@@ -3135,9 +3141,6 @@ packages:
 
   remark-stringify@11.0.0:
     resolution: {integrity: sha512-1OSmLd3awB/t8qdoEOMazZkNsfVTeY4fTsgzcQFdXNq8ToTN4ZGwrMnlda4K6smTFKD+GRV6O48i6Z4iKgPPpw==}
-
-  remark-unlink@5.0.0:
-    resolution: {integrity: sha512-8NFrI3SecxhOLb734tKaxcU//lNDABabz1I26MGjdlpkUg1I+Fr7lyqL9ckxaCB4kErXD10mScPD7yhCXX4Pfw==}
 
   resolve-from@4.0.0:
     resolution: {integrity: sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==}
@@ -7158,12 +7161,6 @@ snapshots:
       '@types/mdast': 4.0.4
       mdast-util-to-markdown: 2.1.0
       unified: 11.0.5
-
-  remark-unlink@5.0.0:
-    dependencies:
-      '@types/mdast': 4.0.4
-      mdast-squeeze-paragraphs: 6.0.0
-      unist-util-visit: 5.0.0
 
   resolve-from@4.0.0: {}
 

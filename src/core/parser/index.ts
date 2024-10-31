@@ -3,7 +3,6 @@
 import React from 'react'
 import matter from 'gray-matter'
 import remarkParse from 'remark-parse'
-import remarkUnlink from 'remark-unlink'
 import remarkGfm from 'remark-gfm'
 import remarkStringify from 'remark-stringify'
 import remarkRehype from 'remark-rehype'
@@ -16,6 +15,7 @@ import rehypeSanitize from 'rehype-sanitize'
 import rehypeStringify from 'rehype-stringify'
 import rehypeUnwrapImages from 'rehype-unwrap-images'
 import rehypeReact, { type Options as RehypeReactOptions } from 'rehype-react'
+import { remarkUntag } from './plugins/remark-untag'
 import { type PluggableList, unified } from 'unified'
 import { readFile } from 'node:fs/promises'
 import { isArray, isObject } from '@bassist/utils'
@@ -70,7 +70,7 @@ const createProcessor = (
   ]
 
   if (isTextOnly) {
-    remarkPlugins.push([remarkUnlink])
+    remarkPlugins.push([remarkUntag])
   }
 
   // Transforming Markdown to HTML
