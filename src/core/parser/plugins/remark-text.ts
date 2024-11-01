@@ -16,13 +16,15 @@ import { isNumber, isString } from '@bassist/utils'
 export const remarkText = () => {
   return (tree: Root) => {
     visit(tree, (node, index, parent) => {
-      const whitelist =
-        node.type === 'text' ||
-        node.type === 'heading' ||
-        node.type === 'paragraph' ||
-        node.type === 'strong'
+      const blacklist =
+        node.type === 'link' ||
+        node.type === 'linkReference' ||
+        node.type === 'image' ||
+        node.type === 'imageReference' ||
+        node.type === 'definition' ||
+        node.type === 'code'
 
-      if (parent && isNumber(index) && whitelist) {
+      if (parent && isNumber(index) && blacklist) {
         const replacement: PhrasingContent[] =
           'children' in node
             ? node.children
