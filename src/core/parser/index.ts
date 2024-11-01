@@ -15,7 +15,7 @@ import rehypeSanitize from 'rehype-sanitize'
 import rehypeStringify from 'rehype-stringify'
 import rehypeUnwrapImages from 'rehype-unwrap-images'
 import rehypeReact, { type Options as RehypeReactOptions } from 'rehype-react'
-import { remarkUntag } from './plugins/remark-untag'
+import { remarkText } from './plugins/remark-text'
 import { type PluggableList, unified } from 'unified'
 import { readFile } from 'node:fs/promises'
 import { isArray, isObject } from '@bassist/utils'
@@ -70,7 +70,7 @@ const createProcessor = (
   ]
 
   if (isTextOnly) {
-    remarkPlugins.push([remarkUntag])
+    remarkPlugins.push([remarkText])
   }
 
   // Transforming Markdown to HTML

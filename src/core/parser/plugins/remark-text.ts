@@ -13,29 +13,16 @@ import { isNumber, isString } from '@bassist/utils'
  * @returns
  *   Transform.
  */
-export const remarkUntag = () => {
+export const remarkText = () => {
   return (tree: Root) => {
     visit(tree, (node, index, parent) => {
-      const ignore =
-        node.type === 'link' ||
-        node.type === 'linkReference' ||
-        node.type === 'image' ||
-        node.type === 'imageReference' ||
-        node.type === 'definition' ||
-        node.type === 'code' ||
-        node.type === 'html' ||
-        node.type === 'yaml'
+      const whitelist =
+        node.type === 'text' ||
+        node.type === 'heading' ||
+        node.type === 'paragraph' ||
+        node.type === 'strong'
 
-      // const ignore = !(
-      //   node.type === 'text' ||
-      //   node.type === 'heading' ||
-      //   node.type === 'paragraph' ||
-      //   node.type === 'strong'
-      // )
-
-      if (parent && isNumber(index) && ignore) {
-        console.log(node)
-
+      if (parent && isNumber(index) && whitelist) {
         const replacement: PhrasingContent[] =
           'children' in node
             ? node.children
