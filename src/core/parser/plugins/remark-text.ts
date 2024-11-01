@@ -1,15 +1,11 @@
 import { squeezeParagraphs } from 'mdast-squeeze-paragraphs'
 import { visit } from 'unist-util-visit'
-import {
-  type PhrasingContent,
-  type Root,
-  type TableCell,
-  type TableRow,
-} from 'mdast'
+import { type PhrasingContent, type Root, type RootContent } from 'mdast'
 import { isNumber, isString } from '@bassist/utils'
 
 /**
- * Remove all links, images, references and so on.
+ * Keep only the most basic text content
+ * as a data source for simple searches
  *
  * @description Base on `remark-unlink` plugin
  *
@@ -21,19 +17,14 @@ import { isNumber, isString } from '@bassist/utils'
 export const remarkText = () => {
   return (tree: Root) => {
     visit(tree, (node, index, parent) => {
-      const blacklist =
-        node.type === 'link' ||
-        node.type === 'linkReference' ||
-        node.type === 'image' ||
-        node.type === 'imageReference' ||
-        node.type === 'definition' ||
-        node.type === 'code' ||
-        node.type === 'table' ||
-        node.type === 'tableCell' ||
-        node.type === 'tableRow'
+      const whitelist =
+        node.type === 'text' ||
+        node.type === 'heading' ||
+        node.type === 'paragraph' ||
+        node.type === 'strong'
 
-      if (parent && isNumber(index) && blacklist) {
-        const replacement: (PhrasingContent | TableRow | TableCell)[] =
+      if (parent && isNumber(index) && !whitelist) {
+        const replacement: (PhrasingContent | RootContent)[] =
           'children' in node
             ? node.children
             : 'alt' in node && isString(node.alt)
