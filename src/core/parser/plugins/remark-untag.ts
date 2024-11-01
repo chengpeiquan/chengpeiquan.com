@@ -16,15 +16,33 @@ import { isNumber, isString } from '@bassist/utils'
 export const remarkUntag = () => {
   return (tree: Root) => {
     visit(tree, (node, index, parent) => {
-      const ignore =
-        node.type === 'link' ||
-        node.type === 'linkReference' ||
-        node.type === 'image' ||
-        node.type === 'imageReference' ||
-        node.type === 'definition' ||
-        node.type === 'code'
+      // const ignore =
+      //   node.type === 'link' ||
+      //   node.type === 'linkReference' ||
+      //   node.type === 'image' ||
+      //   node.type === 'imageReference' ||
+      //   node.type === 'definition' ||
+      //   node.type === 'code'
+
+      // if (
+      //   !ignore &&
+      //   !(
+      //     node.type === 'text' ||
+      //     node.type === 'paragraph' ||
+      //     node.type === 'heading'
+      //   )
+      // ) {
+      //   console.log(node.type)
+      // }
+
+      const ignore = !(
+        node.type === 'text' ||
+        node.type === 'heading' ||
+        node.type === 'paragraph'
+      )
 
       if (parent && isNumber(index) && ignore) {
+        // @ts-expect-error
         const replacement: PhrasingContent[] =
           'children' in node
             ? node.children
