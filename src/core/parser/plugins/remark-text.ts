@@ -1,6 +1,11 @@
 import { squeezeParagraphs } from 'mdast-squeeze-paragraphs'
 import { visit } from 'unist-util-visit'
-import { type PhrasingContent, type Root } from 'mdast'
+import {
+  type PhrasingContent,
+  type Root,
+  type TableCell,
+  type TableRow,
+} from 'mdast'
 import { isNumber, isString } from '@bassist/utils'
 
 /**
@@ -22,10 +27,13 @@ export const remarkText = () => {
         node.type === 'image' ||
         node.type === 'imageReference' ||
         node.type === 'definition' ||
-        node.type === 'code'
+        node.type === 'code' ||
+        node.type === 'table' ||
+        node.type === 'tableCell' ||
+        node.type === 'tableRow'
 
       if (parent && isNumber(index) && blacklist) {
-        const replacement: PhrasingContent[] =
+        const replacement: (PhrasingContent | TableRow | TableCell)[] =
           'children' in node
             ? node.children
             : 'alt' in node && isString(node.alt)
