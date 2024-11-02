@@ -49,8 +49,9 @@ class CacheTask {
 
   private async runContentTask() {
     const contentItems = this.opts.items.map<ContentCacheItem>(
-      ({ slug, metadata, html: content }) => {
+      ({ slug, metadata, html }) => {
         const { title, desc, cover } = metadata
+        const content = html.replace(/\n|"/g, '')
         return { slug, title, desc, cover, content }
       },
     )
