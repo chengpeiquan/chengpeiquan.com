@@ -33,7 +33,7 @@ export const FriendlyLinks: React.FC = () => {
       <div className="w-full space-x-3 space-y-2">
         {links.map((i, idx) => {
           return (
-            <>
+            <React.Fragment key={i.href}>
               {idx > 0 && (
                 <Separator
                   orientation="vertical"
@@ -42,7 +42,6 @@ export const FriendlyLinks: React.FC = () => {
               )}
 
               <Link
-                key={i.href}
                 href={i.href}
                 target="_blank"
                 rel="nofollow noopener noreferrer"
@@ -50,7 +49,7 @@ export const FriendlyLinks: React.FC = () => {
               >
                 {i.title}
               </Link>
-            </>
+            </React.Fragment>
           )
         })}
       </div>

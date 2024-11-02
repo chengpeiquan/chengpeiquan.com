@@ -129,7 +129,7 @@ export const NavigationLinks: React.FC<NavigationLinksProps> = ({
   )
 
   return (
-    <nav className={cls}>
+    <nav className={cls} suppressHydrationWarning>
       {sideConfig.navSlugs.map((i) => (
         <NavigationLink key={i} slug={i} {...rest} />
       ))}
