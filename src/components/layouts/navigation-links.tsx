@@ -4,7 +4,7 @@ import React from 'react'
 import { useTranslations } from 'next-intl'
 import { Button, cn } from 'blackwork'
 import { isUndefined } from '@bassist/utils'
-import { type NavSlug, navIconMap, sideConfig } from '@/config/site-config'
+import { type NavSlug, navIconMap, siteConfig } from '@/config/site-config'
 import {
   isActiveListFolder,
   isActivePageFolder,
@@ -130,7 +130,7 @@ export const NavigationLinks: React.FC<NavigationLinksProps> = ({
 
   return (
     <nav className={cls} suppressHydrationWarning>
-      {sideConfig.navSlugs.map((i) => (
+      {siteConfig.navSlugs.map((i) => (
         <NavigationLink key={i} slug={i} {...rest} />
       ))}
     </nav>

@@ -4,11 +4,11 @@ import React from 'react'
 import ReactGA from 'react-ga4'
 import { isBrowser } from '@bassist/utils'
 import { createBaiduAnalytics } from '@web-analytics/core'
-import { sideConfig } from '@/config/site-config'
+import { siteConfig } from '@/config/site-config'
 import { usePathname } from '@/navigation'
 
 const baiduAnalytics = createBaiduAnalytics({
-  websiteId: sideConfig.webAnalytics.baidu,
+  websiteId: siteConfig.webAnalytics.baidu,
   debug: false,
 })
 
@@ -17,7 +17,7 @@ export const WebAnalytics: React.FC = () => {
 
   useEffect(() => {
     if (!isBrowser) return
-    ReactGA.initialize(sideConfig.webAnalytics.google)
+    ReactGA.initialize(siteConfig.webAnalytics.google)
   }, [])
 
   const track = useCallback(() => {

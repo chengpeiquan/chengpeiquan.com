@@ -11,7 +11,7 @@ import {
 } from 'blackwork'
 import { isMobileDevice } from '@/config/middleware-config'
 import { type LocalePageParams } from '@/config/route-config'
-import { getLocaleSocialLinks, sideConfig } from '@/config/site-config'
+import { getLocaleSocialLinks, siteConfig } from '@/config/site-config'
 import { NavigationLinks } from '@/components/layouts/navigation-links'
 import { LanguageToggle } from '@/components/layouts/language-toggle'
 import { ThemeToggle } from '@/components/layouts/theme-toggle'
@@ -57,8 +57,8 @@ export const LayoutContainer = async ({
 
           <Avatar className="w-7 h-7">
             <AvatarImage
-              src={sideConfig.avatar.small}
-              alt={sideConfig.author.name}
+              src={siteConfig.avatar.small}
+              alt={siteConfig.author.name}
             />
             <AvatarFallback>CPQ</AvatarFallback>
           </Avatar>

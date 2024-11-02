@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { getLocale, getTranslations } from 'next-intl/server'
 import { Button, Heading, LayoutMain, Paragraph } from 'blackwork'
 import { Link } from '@/navigation'
-import { sideConfig } from '@/config/site-config'
+import { siteConfig } from '@/config/site-config'
 import { cn } from '@/utils'
 import { isMobileDevice } from '@/config/middleware-config'
 
@@ -51,7 +51,7 @@ export const NotFoundGuide = async () => {
               {t.rich('feedback', {
                 issue: () => (
                   <Link
-                    href={sideConfig.feedbackLink}
+                    href={siteConfig.feedbackLink}
                     target="_blank"
                     rel="nofollow noopener noreferrer"
                     className="transition-colors text-foreground underline"

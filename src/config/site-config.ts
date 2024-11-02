@@ -11,7 +11,9 @@ import {
   type IconProps,
 } from '@/components/shared/icons'
 
-const cdnRoot = 'https://cdn.chengpeiquan.com'
+const domain = 'chengpeiquan.com'
+
+const cdnRoot = `https://cdn.${domain}`
 
 const cdnImageParams = 'x-oss-process=image/interlace,1'
 
@@ -32,10 +34,10 @@ Object.entries(AvatarSize).forEach(([k, v]) => {
 
 const author: Readonly<Metadata['authors']> = {
   name: 'chengpeiquan',
-  url: 'https://chengpeiquan.com',
+  url: `https://${domain}`,
 }
 
-const email = 'chengpeiquan@chengpeiquan.com'
+const email = `chengpeiquan@${domain}`
 
 const navSlugs = [
   'home',
@@ -44,7 +46,7 @@ const navSlugs = [
   ContentFolder.About,
 ] as const
 
-export type NavSlug = (typeof sideConfig.navSlugs)[number]
+export type NavSlug = (typeof siteConfig.navSlugs)[number]
 
 export const navIconMap: Record<NavSlug, React.FC<IconProps>> = {
   home: HomeIcon,
@@ -61,18 +63,18 @@ const socialLinks: ExtraSocialLinkProps[] = [
   { type: 'github', link: 'https://github.com/chengpeiquan' },
   { type: 'zhihu', link: 'https://zhihu.com/people/basss', locale: 'zh' },
   { type: 'x', link: 'https://x.com/chengpeiquan', locale: 'en' },
-  { type: 'rss', link: 'https://chengpeiquan.com/feed.xml' },
+  { type: 'rss', link: `https://${domain}/feed.xml` },
 ]
 
-const feedbackLink =
-  'https://github.com/chengpeiquan/chengpeiquan.com/issues/new'
+const feedbackLink = `https://github.com/chengpeiquan/chengpeiquan.com/issues/new`
 
 const webAnalytics = {
   baidu: '8dca8e2532df48ea7f1b15c714588691',
   google: 'G-QCV00FZWMR',
 } as const
 
-export const sideConfig = {
+export const siteConfig = {
+  domain,
   email,
   author,
   avatar,
@@ -83,12 +85,12 @@ export const sideConfig = {
 } as const
 
 export const getLocaleSocialLinks = (locale: Locale) => {
-  return sideConfig.socialLinks.filter(
+  return siteConfig.socialLinks.filter(
     (i) => isUndefined(i.locale) || i.locale === locale,
   )
 }
 
 export const sharedMetadata: Metadata = {
-  creator: sideConfig.author.name,
-  authors: sideConfig.author,
+  creator: siteConfig.author.name,
+  authors: siteConfig.author,
 }

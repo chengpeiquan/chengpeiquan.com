@@ -2,7 +2,7 @@ import { resolve } from 'node:path'
 import { writeFile } from 'node:fs/promises'
 import { type Author, Feed, type Item as FeedItem } from 'feed'
 import { checkTargetDirExists, getPosts, publicDirs } from './shared'
-import { sideConfig } from '@/config/site-config'
+import { siteConfig } from '@/config/site-config'
 import { ContentFolder } from '@/config/content-config'
 import message from '@/i18n/messages/zh.json'
 
@@ -10,8 +10,8 @@ const folder = ContentFolder.Article
 
 const author: Author = {
   name: message.siteConfig.name,
-  email: sideConfig.email,
-  link: sideConfig.author.url as string,
+  email: siteConfig.email,
+  link: siteConfig.author.url as string,
 }
 
 const run = async () => {
