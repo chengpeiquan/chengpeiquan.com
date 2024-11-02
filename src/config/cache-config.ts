@@ -10,8 +10,6 @@ export const cacheRootFolder = 'cache'
 
 export const metaCacheRootFolder = 'meta-cache'
 
-export const contentCacheRootFolder = 'content-cache'
-
 export type CacheMapKey = `${ListFolder}-${Locale}`
 
 export const getCacheMapKey = (
@@ -23,14 +21,12 @@ export const getCacheMapKey = (
 
 export type MetaCacheItem = Pick<ContentItem, 'slug' | 'metadata'>
 
-export interface ContentCacheItem
-  extends Pick<ContentItem, 'slug'>,
-    Pick<ContentMetadata, 'title' | 'cover' | 'desc'> {
-  content: string
-}
+export type CacheType = 'meta'
 
-export const isContentCacheItem = (v: unknown): v is ContentCacheItem => {
+// The data sources for local searches all come from meta cache
+export type SearchCacheItem = Pick<MetaCacheItem, 'slug'> &
+  Pick<ContentMetadata, 'title' | 'cover' | 'desc'>
+
+export const isSearchCacheItem = (v: unknown): v is SearchCacheItem => {
   return isObject(v) && !!v.slug
 }
-
-export type CacheType = 'meta' | 'content'

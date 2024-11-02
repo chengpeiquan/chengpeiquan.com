@@ -8,10 +8,8 @@ import {
 } from '@/config/content-config'
 import { type Locale, locales } from '@/config/locale-config'
 import {
-  type ContentCacheItem,
   type MetaCacheItem,
   cacheRootFolder,
-  contentCacheRootFolder,
   metaCacheRootFolder,
 } from '@/config/cache-config'
 import { getPosts } from './shared'
@@ -19,7 +17,6 @@ import { ContentProcessorMode } from '@/core/types'
 
 const cacheRootPath = join(process.cwd(), 'src', cacheRootFolder)
 const metaCacheRootPath = join(cacheRootPath, metaCacheRootFolder)
-const contentCacheRootPath = join(cacheRootPath, contentCacheRootFolder)
 
 interface GenerateOptions {
   folder: ListFolder
@@ -35,7 +32,6 @@ class CacheTask {
 
   public async run() {
     await this.runMetaTask()
-    await this.runContentTask()
   }
 
   private async runMetaTask() {
@@ -45,19 +41,6 @@ class CacheTask {
 
     const data = JSON.stringify(metaItems, null, 2)
     await this.writeCache(metaCacheRootPath, data)
-  }
-
-  private async runContentTask() {
-    const contentItems = this.opts.items.map<ContentCacheItem>(
-      ({ slug, metadata, html }) => {
-        const { title, desc, cover } = metadata
-        const content = html.replace(/\n|"/g, '')
-        return { slug, title, desc, cover, content }
-      },
-    )
-
-    const data = JSON.stringify(contentItems, null, 2)
-    await this.writeCache(contentCacheRootPath, data)
   }
 
   private async writeCache(rootPath: string, data: string) {

@@ -39,7 +39,6 @@
     "@shikijs/rehype": "^1.22.2",
     "@stefanprobst/rehype-extract-toc": "^2.2.0",
     "@tailwindcss/typography": "^0.5.15",
-    "@types/mdast": "^4.0.4",
     "@types/node": "^20.17.3",
     "@types/react": "npm:types-react@rc",
     "@types/react-dom": "npm:types-react-dom@rc",
@@ -51,7 +50,6 @@
     "husky": "^9.1.6",
     "image-size": "^1.1.1",
     "lint-staged": "^15.2.10",
-    "mdast-squeeze-paragraphs": "^6.0.0",
     "npm-run-all2": "^6.2.6",
     "postcss": "^8.4.47",
     "rehype-autolink-headings": "^7.1.0",
@@ -71,7 +69,6 @@
     "tsx": "^4.19.2",
     "typescript": "^5.6.3",
     "unified": "^11.0.5",
-    "unist-util-visit": "^5.0.0",
     "unplugin-auto-import": "^0.18.3"
   },
   "overrides": {

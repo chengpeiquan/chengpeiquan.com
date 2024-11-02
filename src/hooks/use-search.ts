@@ -1,9 +1,6 @@
 import { type UseKeywordEvent, useKeyword } from 'blackwork'
 import { isArray, isObject } from '@bassist/utils'
-import {
-  type ContentCacheItem,
-  isContentCacheItem,
-} from '@/config/cache-config'
+import { type SearchCacheItem, isSearchCacheItem } from '@/config/cache-config'
 import { useClientLocale } from './use-client-locale'
 import { useClientLocation } from './use-client-location'
 import { type SearchEngine, getSearchEngine } from '@/core/search'
@@ -20,7 +17,7 @@ export const useSearch = ({ enabled }: UseSearchOptions) => {
   const { searchFolder } = useClientLocation()
 
   const [engine, setEngine] = useState<SearchEngine>()
-  const [result, setResult] = useState<ContentCacheItem[]>([])
+  const [result, setResult] = useState<SearchCacheItem[]>([])
 
   useEffect(() => {
     if (enabled) {
@@ -57,7 +54,7 @@ export const useSearch = ({ enabled }: UseSearchOptions) => {
             slug: id as unknown as string,
             ...(isObject(doc) ? doc : {}),
           }))
-          .filter(isContentCacheItem)
+          .filter(isSearchCacheItem)
       : []
 
     setResult(() => searched)

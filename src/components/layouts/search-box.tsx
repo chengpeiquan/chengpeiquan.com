@@ -15,7 +15,7 @@ import {
 } from 'blackwork'
 import { useTranslations } from 'next-intl'
 import { type PropsWithDevice } from '@/config/route-config'
-import { type ContentCacheItem } from '@/config/cache-config'
+import { type SearchCacheItem } from '@/config/cache-config'
 import { type ContentDetailsLink, ContentFolder } from '@/config/content-config'
 import {
   type UseSearchResponse,
@@ -27,7 +27,7 @@ import { Link, usePathname } from '@/navigation'
 import { cn } from '@/utils'
 
 interface SearchResultCardProps extends PropsWithDevice {
-  item: ContentCacheItem
+  item: SearchCacheItem
 }
 
 const SearchResultCard: React.FC<SearchResultCardProps> = ({

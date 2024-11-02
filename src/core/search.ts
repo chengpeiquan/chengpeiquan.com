@@ -1,24 +1,25 @@
 import FlexSearch from 'flexsearch'
 import {
   type CacheMapKey,
-  type ContentCacheItem,
+  type MetaCacheItem,
+  type SearchCacheItem,
   getCacheMapKey,
 } from '@/config/cache-config'
 import { type Locale } from '@/config/locale-config'
 import { type ListFolder } from '@/config/content-config'
-import { getContentCache } from '@/cache/content-cache'
+import { getMetaCache } from '@/cache/meta-cache'
 
-interface SearchDocumentItem extends Omit<ContentCacheItem, 'slug'> {
+interface SearchDocumentItem extends Omit<SearchCacheItem, 'slug'> {
   id: FlexSearch.Id
 }
 
-const initializeEngine = async (data: ContentCacheItem[]) => {
+const initializeEngine = async (data: MetaCacheItem[]) => {
   const engine = new FlexSearch.Document<SearchDocumentItem, string[]>({
     cache: 100,
     tokenize: 'full',
     document: {
       id: 'id',
-      index: 'content',
+      index: 'title',
       store: ['title', 'cover', 'desc'],
     },
     context: {
@@ -29,9 +30,10 @@ const initializeEngine = async (data: ContentCacheItem[]) => {
   })
 
   await Promise.all(
-    data.map(({ slug, ...rest }) =>
-      engine.addAsync(slug, { id: slug, ...rest }),
-    ),
+    data.map(({ slug, metadata }) => {
+      const { title, desc, cover } = metadata
+      return engine.addAsync(slug, { id: slug, title, desc, cover })
+    }),
   )
 
   return engine
@@ -49,9 +51,7 @@ export const getSearchEngine = async (folder: ListFolder, locale: Locale) => {
   const engine = searchEngineMap.get(key)
   if (engine) return engine
 
-  const data = await getContentCache(...args)
-  // const res = await fetch(`/search-data/${key}.json`)
-  // const data = await res.json()
+  const data = await getMetaCache(...args)
   const instance = await initializeEngine(data)
   searchEngineMap.set(key, instance)
 

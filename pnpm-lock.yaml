@@ -63,9 +63,6 @@ importers:
       '@tailwindcss/typography':
         specifier: ^0.5.15
         version: 0.5.15(tailwindcss@3.4.14)
-      '@types/mdast':
-        specifier: ^4.0.4
-        version: 4.0.4
       '@types/node':
         specifier: ^20.17.3
         version: 20.17.3
@@ -99,9 +96,6 @@ importers:
       lint-staged:
         specifier: ^15.2.10
         version: 15.2.10
-      mdast-squeeze-paragraphs:
-        specifier: ^6.0.0
-        version: 6.0.0
       npm-run-all2:
         specifier: ^6.2.6
         version: 6.2.6
@@ -159,9 +153,6 @@ importers:
       unified:
         specifier: ^11.0.5
         version: 11.0.5
-      unist-util-visit:
-        specifier: ^5.0.0
-        version: 5.0.0
       unplugin-auto-import:
         specifier: ^0.18.3
         version: 0.18.3(webpack-sources@3.2.3)
@@ -2522,9 +2513,6 @@ packages:
 
   markdown-table@3.0.3:
     resolution: {integrity: sha512-Z1NL3Tb1M9wH4XESsCDEksWoKTdlUafKc4pt0GRwjUyXaCFZ+dc3g2erqB6zm3szA2IUSi7VnPI+o/9jnxh9hw==}
-
-  mdast-squeeze-paragraphs@6.0.0:
-    resolution: {integrity: sha512-6NDbJPTg0M0Ye+TlYwX1KJ1LFbp515P2immRJyJQhc9Na9cetHzSoHNYIQcXpANEAP1sm9yd/CTZU2uHqR5A+w==}
 
   mdast-util-find-and-replace@3.0.1:
     resolution: {integrity: sha512-SG21kZHGC3XRTSUhtofZkBzZTJNM5ecCi0SK2IMKmSXR8vO3peL+kb1O0z7Zl83jKtutG4k5Wv/W7V3/YHvzPA==}
@@ -6254,11 +6242,6 @@ snapshots:
       '@jridgewell/sourcemap-codec': 1.5.0
 
   markdown-table@3.0.3: {}
-
-  mdast-squeeze-paragraphs@6.0.0:
-    dependencies:
-      '@types/mdast': 4.0.4
-      unist-util-visit: 5.0.0
 
   mdast-util-find-and-replace@3.0.1:
     dependencies:
