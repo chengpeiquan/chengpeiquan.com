@@ -44,9 +44,12 @@
     "label": "搜索{target}...",
     "shortLabel": "搜索...",
     "placeholder": "请输入关键词搜索{target}...",
+    "recent": "最近搜索",
+    "cleanup": "清除记录",
     "noRecent": "暂无搜索记录",
     "noResult": "搜不到结果",
-    "resultCount": "找到 <count></count> 个 <keyword></keyword> 的相关结果"
+    "resultCount": "找到 <count></count> 个 <keyword></keyword> 的相关结果",
+    "removeButtonLabel": "移除该记录"
   },
   "action": {
     "toggle": "点击切换到",

@@ -4,6 +4,7 @@ import { type SearchCacheItem, isSearchCacheItem } from '@/config/cache-config'
 import { useClientLocale } from './use-client-locale'
 import { useClientLocation } from './use-client-location'
 import { type SearchEngine, getSearchEngine } from '@/core/search'
+import { useRecentSearchData } from './use-recent-search-data'
 
 export interface UseSearchOptions {
   // The search engine is initialized only when the search box is opened,
@@ -15,6 +16,7 @@ export const useSearch = ({ enabled }: UseSearchOptions) => {
   const { keyword, onKeywordUpdate: onSearch } = useKeyword()
   const { locale } = useClientLocale()
   const { searchFolder } = useClientLocation()
+  const { recent, ...restRecent } = useRecentSearchData()
 
   const [engine, setEngine] = useState<SearchEngine>()
   const [result, setResult] = useState<SearchCacheItem[]>([])
@@ -65,10 +67,6 @@ export const useSearch = ({ enabled }: UseSearchOptions) => {
     [keyword, result.length],
   )
 
-  const recent = useMemo(() => {
-    return []
-  }, [])
-
   const noRecent = useMemo(
     () => !keyword && !recent.length,
     [keyword, recent.length],
@@ -79,6 +77,7 @@ export const useSearch = ({ enabled }: UseSearchOptions) => {
     result,
     noResult,
     recent,
+    ...restRecent,
     noRecent,
     onSearch,
   }

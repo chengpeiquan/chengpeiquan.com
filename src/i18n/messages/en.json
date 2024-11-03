@@ -44,9 +44,12 @@
     "label": "Search {target}...",
     "shortLabel": "Search...",
     "placeholder": "Type a keyword to search {target}...",
+    "recent": "Recent",
+    "cleanup": "Clear History",
     "noRecent": "No recent searches",
     "noResult": "No results found",
-    "resultCount": "<count></count> results for <keyword></keyword>"
+    "resultCount": "<count></count> results for <keyword></keyword>",
+    "removeButtonLabel": "Remove this record"
   },
   "action": {
     "toggle": "Click to switch to ",

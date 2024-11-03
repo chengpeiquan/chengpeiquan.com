@@ -2,7 +2,9 @@
 
 import React from 'react'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import {
+  Button,
   Heading,
   Paragraph,
   QuickSearchDialog,
@@ -13,29 +15,37 @@ import {
   QuickSearchTrigger,
   useQuickSearchState,
 } from 'blackwork'
-import { useTranslations } from 'next-intl'
+import { Close } from 'blackwork/icons'
 import { type PropsWithDevice } from '@/config/route-config'
 import { type SearchCacheItem } from '@/config/cache-config'
 import { type ContentDetailsLink, ContentFolder } from '@/config/content-config'
 import {
+  RecentSearchDataProvider,
   type UseSearchResponse,
   useClientLocale,
   useClientLocation,
   useSearch,
 } from '@/hooks'
-import { Link, usePathname } from '@/navigation'
+import { Link } from '@/navigation'
 import { cn } from '@/utils'
 
 interface SearchResultCardProps extends PropsWithDevice {
+  isRecent: boolean
   item: SearchCacheItem
+  onAdd: () => void
+  onRemove: () => void
 }
 
 const SearchResultCard: React.FC<SearchResultCardProps> = ({
   isMobile,
+  isRecent,
   item,
+  onAdd,
+  onRemove,
 }) => {
   const { slug, cover, title, desc } = item
 
+  const t = useTranslations('searchConfig')
   const { isCookbook } = useClientLocation()
 
   const link = useMemo(() => {
@@ -45,27 +55,42 @@ const SearchResultCard: React.FC<SearchResultCardProps> = ({
 
   return (
     <QuickSearchItem className="rounded-lg">
-      <Link href={link} className="flex flex-row gap-3 w-full">
-        {!isMobile && cover && (
-          <div className="relative flex flex-shrink-0 w-[88px] aspect-[500/400] rounded-lg overflow-hidden">
-            <Image
-              src={cover}
-              alt={title}
-              fill
-              sizes="(max-width: 480px) 100%, 160px"
-              style={{ objectFit: 'cover' }}
-            />
+      <div className="flex gap-2 w-full">
+        <Link href={link} className="flex gap-3 w-full" onClick={onAdd}>
+          {!isMobile && cover && (
+            <div className="relative flex flex-shrink-0 w-[88px] aspect-[500/400] rounded-lg overflow-hidden">
+              <Image
+                src={cover}
+                alt={title}
+                fill
+                sizes="(max-width: 480px) 100%, 160px"
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
+          )}
+
+          <div className="flex flex-col flex-1 justify-center gap-2 overflow-hidden">
+            <Heading level={4} className="text-base line-clamp-1 break-all">
+              {title}
+            </Heading>
+
+            <p className="text-xs text-gray-400 line-clamp-2">{desc}</p>
+          </div>
+        </Link>
+
+        {isRecent && (
+          <div className="flex shrink-0 items-center justify-center">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={onRemove}
+              aria-label={t('removeButtonLabel')}
+            >
+              <Close className="w-4 h-4" />
+            </Button>
           </div>
         )}
-
-        <div className="flex flex-col flex-1 justify-center gap-2 overflow-hidden">
-          <Heading level={4} className="text-base line-clamp-1 break-all">
-            {title}
-          </Heading>
-
-          <p className="text-xs text-gray-400 line-clamp-2">{desc}</p>
-        </div>
-      </Link>
+      </div>
     </QuickSearchItem>
   )
 }
@@ -75,14 +100,51 @@ const Highlight: React.FC<React.PropsWithChildren> = ({ children }) => (
 )
 
 const SearchResult: React.FC<
-  Omit<UseSearchResponse, 'onSearch'> & PropsWithDevice
-> = ({ keyword, result, noResult, recent, noRecent, isMobile }) => {
+  Omit<UseSearchResponse, 'onSearch'> &
+    PropsWithDevice & {
+      onClose: () => void
+    }
+> = ({
+  keyword,
+  result,
+  noResult,
+  recent,
+  addRecent,
+  removeRecent,
+  clearRecent,
+  noRecent,
+  isMobile,
+  onClose,
+}) => {
   const t = useTranslations('searchConfig')
 
+  const isRecent = useMemo(() => !keyword, [keyword])
+
   const data = useMemo(
-    () => (!keyword ? recent : result),
-    [keyword, recent, result],
+    () => (isRecent ? recent : result),
+    [isRecent, recent, result],
   )
+
+  const title = useMemo(() => {
+    if (isRecent) {
+      return (
+        <div className="flex items-center justify-between">
+          <span>{t('recent')}</span>
+          <span
+            className="cursor-pointer hover:text-foreground"
+            onClick={clearRecent}
+          >
+            {t('cleanup')}
+          </span>
+        </div>
+      )
+    }
+
+    return t.rich('resultCount', {
+      count: () => <Highlight>{data.length}</Highlight>,
+      keyword: () => <Highlight>{keyword}</Highlight>,
+    })
+  }, [clearRecent, data.length, isRecent, keyword, t])
 
   if (noRecent || noResult) {
     return (
@@ -95,21 +157,27 @@ const SearchResult: React.FC<
   return (
     <>
       <Paragraph className="text-sm text-muted-foreground break-all px-3 my-3">
-        {t.rich('resultCount', {
-          count: () => <Highlight>{data.length}</Highlight>,
-          keyword: () => <Highlight>{keyword}</Highlight>,
-        })}
+        {title}
       </Paragraph>
 
       {data.map((i) => (
-        <SearchResultCard key={i.slug} isMobile={isMobile} item={i} />
+        <SearchResultCard
+          key={i.slug}
+          isMobile={isMobile}
+          isRecent={isRecent}
+          item={i}
+          onAdd={() => {
+            addRecent(i)
+            onClose()
+          }}
+          onRemove={() => removeRecent(i)}
+        />
       ))}
     </>
   )
 }
 
-export const SearchBox: React.FC<PropsWithDevice> = ({ isMobile }) => {
-  const pathname = usePathname()
+export const SearchBoxRoot: React.FC<PropsWithDevice> = ({ isMobile }) => {
   const t = useTranslations('searchConfig')
   const { isChinese } = useClientLocale()
   const { isCookbook } = useClientLocation()
@@ -125,11 +193,6 @@ export const SearchBox: React.FC<PropsWithDevice> = ({ isMobile }) => {
   const { open, setOpen } = useQuickSearchState()
   const { onSearch, ...rest } = useSearch({ enabled: open })
 
-  useEffect(() => {
-    setOpen(false)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [pathname])
-
   return (
     <>
       <QuickSearchTrigger
@@ -143,7 +206,10 @@ export const SearchBox: React.FC<PropsWithDevice> = ({ isMobile }) => {
         onOpenChange={setOpen}
         ariaLabel={label}
         contentProps={{
-          className: cn({ 'w-3/4 rounded-xl': isMobile }),
+          className: cn({
+            'w-[750px] max-w-full': !isMobile,
+            'w-3/4 rounded-xl': isMobile,
+          }),
         }}
       >
         <QuickSearchInput
@@ -152,10 +218,22 @@ export const SearchBox: React.FC<PropsWithDevice> = ({ isMobile }) => {
           onChange={onSearch}
         />
 
-        <QuickSearchList>
-          <SearchResult isMobile={isMobile} {...rest} />
+        <QuickSearchList className="h-[600px]">
+          <SearchResult
+            isMobile={isMobile}
+            onClose={() => setOpen(false)}
+            {...rest}
+          />
         </QuickSearchList>
       </QuickSearchDialog>
     </>
   )
 }
+
+export const SearchBox = memo((props: PropsWithDevice) => {
+  return (
+    <RecentSearchDataProvider>
+      <SearchBoxRoot {...props} />
+    </RecentSearchDataProvider>
+  )
+})
