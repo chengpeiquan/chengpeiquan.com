@@ -2,22 +2,24 @@
 
 import React from 'react'
 import matter from 'gray-matter'
-import remarkParse from 'remark-parse'
+import remarkDirective from 'remark-directive'
 import remarkGfm from 'remark-gfm'
-import remarkStringify from 'remark-stringify'
+import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
-import rehypeSlug from 'rehype-slug'
+import remarkStringify from 'remark-stringify'
+import remarkVideo from './plugins/remark-video'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
-import rehypeExtractToc from '@stefanprobst/rehype-extract-toc'
-import rehypeShiki from '@shikijs/rehype'
 import rehypeExternalLink from 'rehype-external-links'
-import rehypeSanitize from 'rehype-sanitize'
+import rehypeExtractToc from '@stefanprobst/rehype-extract-toc'
+import rehypeReact, { type Options as RehypeReactOptions } from 'rehype-react'
+import rehypeSanitize, { defaultSchema } from 'rehype-sanitize'
+import rehypeShiki from '@shikijs/rehype'
+import rehypeSlug from 'rehype-slug'
 import rehypeStringify from 'rehype-stringify'
 import rehypeUnwrapImages from 'rehype-unwrap-images'
-import rehypeReact, { type Options as RehypeReactOptions } from 'rehype-react'
 import { type PluggableList, unified } from 'unified'
 import { readFile } from 'node:fs/promises'
-import { isArray, isObject } from '@bassist/utils'
+import { isArray, isObject, toArray } from '@bassist/utils'
 import {
   type ContentItem,
   type ContentMetadata,
@@ -65,6 +67,8 @@ const createProcessor = (
   const remarkPlugins: PluggableList = [
     [remarkParse],
     [remarkGfm],
+    [remarkDirective],
+    [remarkVideo],
     [remarkStringify],
   ]
 
@@ -87,6 +91,13 @@ const createProcessor = (
         {
           // No need `user-content-` prefix
           clobberPrefix: '',
+          // https://github.com/syntax-tree/hast-util-sanitize#tagnames
+          tagNames: [...toArray(defaultSchema.tagNames), 'video'],
+          // https://github.com/syntax-tree/hast-util-sanitize#attributes
+          attributes: {
+            ...(defaultSchema.attributes || {}),
+            video: ['src', 'poster', 'controls', 'preload', 'className'],
+          },
         },
       ],
       [
