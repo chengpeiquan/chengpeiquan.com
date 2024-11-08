@@ -124,11 +124,11 @@ Btw，那天晚上的菜好好吃！！！！！
 
 现在它长大了，还是喜欢抱着我的手睡觉！
 
-<VideoPlayer
-  url="http://cdn.chengpeiquan.com/video/my-cat-is-sleeping-holding-my-hand.mp4"
-  poster="https://cdn.chengpeiquan.com/img/2024/10/202410210133313.jpg?x-oss-process=image/interlace,1"
-  title="猫抱着我的手睡觉"
-/>
+:::video
+http://cdn.chengpeiquan.com/video/my-cat-is-sleeping-holding-my-hand.mp4
+https://cdn.chengpeiquan.com/img/2024/10/202410210133313.jpg?x-oss-process=image/interlace,1
+猫抱着我的手睡觉
+:::
 
 ## 最后完全放松
 

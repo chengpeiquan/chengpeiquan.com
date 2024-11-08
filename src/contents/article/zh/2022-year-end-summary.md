@@ -18,11 +18,11 @@ cite:
 
 回广州后也终于不用再苟在城中村里了，在依山傍水的山景房里，三只猫也迎来了久违的阳光，每天睡到自然醒，醒了有东西吃有玩具玩，还不用出门工作，过的比我还幸福。
 
-<VideoPlayer
-  url="https://cdn.chengpeiquan.com/video/my-cats-in-mountain-view-room.mp4"
-  poster="https://cdn.chengpeiquan.com/img/2022/12/20221231235941.jpg?x-oss-process=image/interlace,1"
-  title="山景房里的三只猫"
-/>
+:::video
+https://cdn.chengpeiquan.com/video/my-cats-in-mountain-view-room.mp4
+https://cdn.chengpeiquan.com/img/2022/12/20221231235941.jpg?x-oss-process=image/interlace,1
+山景房里的三只猫
+:::
 
 我从五月底回来后就一直很忙，因为广州这边也是刚成立的新公司，太多事情要忙，加上业余时间也有其他事情， [菜谱](https://chengpeiquan.com/cookbook) 也慢慢停更了，不过偶尔还是有在做饭，新的一年看看调整下生活节奏重新运营起来。
 
