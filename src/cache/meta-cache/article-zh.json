@@ -1,5 +1,20 @@
 [
   {
+    "slug": "use-remark-directive-to-provide-markdown-video-syntax-parsing-for-unifiedjs",
+    "metadata": {
+      "title": "使用 remark-directive 为 Unifiedjs 提供 Markdown 视频语法的解析",
+      "desc": "最近对博客进行了一次技术栈迁移， Markdown Parser 的整个工作流程都是自己管理的，包括不同结果的输出，例如：提供给 RSS 订阅用的 HTML ，提供给列表和搜索用的 Metadata ，以及提供给详情页作为 React 组件渲染内容用的 JSX ，这些过程并不算复杂，事实上进展确实是很顺利，但是在我以为即将大功告成之际，突然发现渲染出来的内容少了一个东西：我的视频呢？",
+      "keywords": "markdown video,unifiedjs video,remarkjs video,rehypejs video",
+      "cover": "https://cdn.chengpeiquan.com/img/2024/11/202411100141298.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "maybeLegacy": true,
+      "date": "2024/11/10 01:34:05",
+      "timestamp": 1731173645000
+    }
+  },
+  {
     "slug": "typescript-error-cannot-find-module-undici-types",
     "metadata": {
       "title": "干净的 TypeScript 项目在编译时报错 Cannot find module 'undici-types' 的原因和解决",
