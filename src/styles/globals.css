@@ -17,6 +17,7 @@ html.dark .shiki span {
 /* Content styles */
 .prose {
   max-width: 100% !important;
+  text-align: justify;
 }
 
 .prose h2,
@@ -50,4 +51,30 @@ html.dark .shiki span {
   font-size: 300%;
   font-weight: 700;
   line-height: 1;
+}
+
+.prose :where(p):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.prose
+  :where(blockquote p:first-of-type):not(
+    :where([class~='not-prose'], [class~='not-prose'] *)
+  )::before,
+.prose
+  :where(blockquote p:last-of-type):not(
+    :where([class~='not-prose'], [class~='not-prose'] *)
+  )::after {
+  display: none;
+}
+
+.prose :where(ul):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.prose :where(pre):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
