@@ -7,6 +7,35 @@ import { Buffer } from 'node:buffer'
 import { ExternalLink } from 'blackwork'
 import { Link } from '@/navigation'
 
+interface FigureProps extends React.PropsWithChildren {
+  title?: string
+}
+
+const Figure: React.FC<FigureProps> = ({ title, children }) => {
+  return (
+    <figure className="relative inline-block w-full max-w-screen-lg text-center mx-auto">
+      {children}
+
+      {title && (
+        <figcaption className="z-10 mt-4 text-sm italic text-gray-400 dark:text-gray-500">
+          {title}
+        </figcaption>
+      )}
+    </figure>
+  )
+}
+
+export const a = async ({
+  href,
+  children,
+}: React.AnchorHTMLAttributes<HTMLAnchorElement>) => {
+  const isExternal = href?.startsWith('http')
+  const Comp = isExternal ? ExternalLink : Link
+
+  if (!href) return children
+  return <Comp href={href}>{children}</Comp>
+}
+
 const getImageSize = async (imgUrl: string) => {
   try {
     const res = await fetch(imgUrl)
@@ -24,7 +53,7 @@ export const img = async ({
 
   if (!src || !size) return null
   return (
-    <figure className="relative inline-block w-full max-w-screen-lg text-center mx-auto">
+    <Figure title={alt}>
       <Image
         className="mx-auto rounded-lg"
         src={src}
@@ -36,23 +65,15 @@ export const img = async ({
         priority
         style={{ objectFit: 'cover' }}
       />
-
-      {alt && (
-        <figcaption className="z-10 mt-4 text-sm italic text-gray-400 dark:text-gray-500">
-          {alt}
-        </figcaption>
-      )}
-    </figure>
+    </Figure>
   )
 }
 
-export const a = async ({
-  href,
-  children,
-}: React.AnchorHTMLAttributes<HTMLAnchorElement>) => {
-  const isExternal = href?.startsWith('http')
-  const Comp = isExternal ? ExternalLink : Link
-
-  if (!href) return children
-  return <Comp href={href}>{children}</Comp>
-}
+export const video = async ({
+  title,
+  ...rest
+}: React.VideoHTMLAttributes<HTMLVideoElement>) => (
+  <Figure title={title}>
+    <video title={title} {...rest} />
+  </Figure>
+)

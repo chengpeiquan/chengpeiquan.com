@@ -26,7 +26,7 @@ import {
   type HeadingItem,
   fileExtensions,
 } from '@/config/content-config'
-import { a, img } from './components'
+import { a, img, video } from './components'
 import { Fragment, jsx as _jsx, jsxs as _jsxs } from 'react/jsx-runtime'
 import { ContentProcessorMode } from '@/core/types'
 
@@ -35,6 +35,7 @@ const isValidHeading = (v: unknown): v is HeadingItem => isObject(v) && !!v.id
 const components = {
   a,
   img,
+  video,
 } as unknown as RehypeReactOptions['components']
 
 // The type is still wrong, but they works fine.
