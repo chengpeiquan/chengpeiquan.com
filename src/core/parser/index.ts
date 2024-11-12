@@ -19,7 +19,7 @@ import rehypeStringify from 'rehype-stringify'
 import rehypeUnwrapImages from 'rehype-unwrap-images'
 import { type PluggableList, unified } from 'unified'
 import { readFile } from 'node:fs/promises'
-import { isArray, isObject, toArray } from '@bassist/utils'
+import { isObject, toArray } from '@bassist/utils'
 import {
   type ContentItem,
   type ContentMetadata,
@@ -163,8 +163,8 @@ const parseMarkdown = async (
     const html = String(file)
     const jsxElement = React.isValidElement(file?.result) ? file.result : null
 
-    const rawHeadings = isArray(file?.data?.toc) ? file.data.toc : []
-    const headings = rawHeadings.filter((i) => isValidHeading(i))
+    const rawHeadings = toArray(file?.data?.toc)
+    const headings = rawHeadings.filter(isValidHeading)
 
     return {
       headings,
