@@ -444,7 +444,7 @@ const rehypePlugins: PluggableList = [
 
 ### 最终结果
 
-这就是这段 Markdown 指令渲染出来的效果。
+这就是这段 Markdown 指令渲染出来的效果（当然，不包括下面的标题展示，那是我另外包裹了一层 `figure` 标签，详见 [parser/components](https://github.com/chengpeiquan/chengpeiquan.com/blob/main/src/core/parser/components.tsx) ，在转换为 JSX 的时候处理的）。
 
 ```md
 :::video
