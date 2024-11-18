@@ -27,7 +27,7 @@ export const generateMetadata = async ({
   return getListMetadata(folder, params)
 }
 
-const ArticleCard: React.FC<{
+const CookbookCard: React.FC<{
   slug: string
   metadata: ContentMetadata
 }> = ({ slug, metadata }) => {
@@ -97,7 +97,7 @@ export default async function CookbooksPage({
       ) : (
         <ul className="grid md:grid-cols-5 grid-cols-1 col-auto row-auto gap-8 mb-4 md:mb-12">
           {items.map((i) => (
-            <ArticleCard
+            <CookbookCard
               key={i.metadata.title}
               slug={i.slug}
               metadata={i.metadata}
