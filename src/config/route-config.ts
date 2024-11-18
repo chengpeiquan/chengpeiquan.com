@@ -4,10 +4,16 @@ export interface LocalePageParams {
   locale: Locale
 }
 
+// Details with fixed slug
+export interface SinglePageProps {
+  params: Promise<LocalePageParams>
+}
+
 export interface DetailsPageParams extends LocalePageParams {
   slug: string
 }
 
+// Details with dynamic slug
 export interface DetailsPageProps {
   params: Promise<DetailsPageParams>
 }
