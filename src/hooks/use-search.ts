@@ -1,4 +1,4 @@
-import { type UseKeywordEvent, useKeyword } from 'blackwork'
+import { useKeyword } from 'blackwork'
 import { isArray, isObject } from '@bassist/utils'
 import { type SearchCacheItem, isSearchCacheItem } from '@/config/cache-config'
 import { useClientLocale } from './use-client-locale'
@@ -13,7 +13,7 @@ export interface UseSearchOptions {
 }
 
 export const useSearch = ({ enabled }: UseSearchOptions) => {
-  const { keyword, onKeywordUpdate: onSearch } = useKeyword()
+  const { keyword, setKeyword, onKeywordUpdate: onSearch } = useKeyword()
   const { locale } = useClientLocale()
   const { searchFolder } = useClientLocation()
   const { recent, ...restRecent } = useRecentSearchData()
@@ -28,15 +28,9 @@ export const useSearch = ({ enabled }: UseSearchOptions) => {
 
     return () => {
       setEngine(undefined)
-
-      // TODO: The next version of blackwork will export keyword settings directly
-      onSearch({
-        target: {
-          value: '',
-        },
-      } as UseKeywordEvent)
+      setKeyword('')
     }
-  }, [enabled, locale, onSearch, searchFolder])
+  }, [enabled, locale, searchFolder, setKeyword])
 
   useEffect(() => {
     if (!keyword || !engine) {
