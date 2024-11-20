@@ -14,9 +14,9 @@ import {
   Separator,
   SocialLinks,
 } from 'blackwork'
+import { Menu as MenuIcon } from 'blackwork/icons'
 import { getLocaleSocialLinks } from '@/config/site-config'
 import { type PropsWithDevice } from '@/config/route-config'
-import { MenuIcon } from '../shared/icons'
 import { NavigationLinks } from '@/components/layouts/navigation-links'
 import { SearchBox } from '@/components/layouts/search-box'
 import { useBreakpoint, useClientLocale } from '@/hooks'

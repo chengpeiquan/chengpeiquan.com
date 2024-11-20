@@ -4,12 +4,13 @@ import { type Locale } from './locale-config'
 import { ContentFolder } from './content-config'
 import { isUndefined } from '@bassist/utils'
 import {
-  AboutIcon,
-  ArticleIcon,
-  FoodIcon,
-  HomeIcon,
+  About as AboutIcon,
+  Article as ArticleIcon,
+  Food as FoodIcon,
+  Home as HomeIcon,
   type IconProps,
-} from '@/components/shared/icons'
+  Toolbox as ToolboxIcon,
+} from 'blackwork/icons'
 
 const domain = 'chengpeiquan.com'
 
@@ -41,6 +42,7 @@ const email = `chengpeiquan@${domain}`
 
 const navSlugs = [
   'home',
+  'projects',
   ContentFolder.Article,
   ContentFolder.Cookbook,
   ContentFolder.About,
@@ -50,10 +52,13 @@ export type NavSlug = (typeof siteConfig.navSlugs)[number]
 
 export const navIconMap: Record<NavSlug, React.FC<IconProps>> = {
   home: HomeIcon,
+  projects: ToolboxIcon,
   article: ArticleIcon,
   cookbook: FoodIcon,
   about: AboutIcon,
 }
+
+export const isHome = (slug: NavSlug): slug is 'home' => slug === 'home'
 
 interface ExtraSocialLinkProps extends SocialLinkProps {
   locale?: Locale

@@ -13,6 +13,7 @@ import {
   ScrollArea,
   Separator,
 } from 'blackwork'
+import { Toc as TocIcon } from 'blackwork/icons'
 import { isBrowser } from '@bassist/utils'
 import { cn } from '@/utils'
 import {
@@ -20,7 +21,6 @@ import {
   type HeadingItem,
   headingDepths,
 } from '@/config/content-config'
-import { TocIcon } from '@/components/shared/icons'
 
 /**
  * Flatten headings to reduce HTML tag nesting

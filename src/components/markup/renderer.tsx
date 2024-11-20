@@ -1,6 +1,7 @@
 import React from 'react'
 import { getTranslations } from 'next-intl/server'
 import { Heading, Paragraph } from 'blackwork'
+import { MiniGitHub } from 'blackwork/icons'
 import { isString } from '@bassist/utils'
 import { type ContentItem, type ContentMetadata } from '@/config/content-config'
 import {
@@ -9,7 +10,6 @@ import {
 } from '@/config/route-config'
 import { isMobileDevice } from '@/config/middleware-config'
 import { Link } from '@/navigation'
-import { MiniGithubIcon } from '../shared/icons'
 import { LegacyTips } from './legacy-tips'
 
 interface StarOnGitHubProps extends LocalePageParams {
@@ -35,7 +35,7 @@ const StarOnGitHub = async ({ locale, repo }: StarOnGitHubProps) => {
       target="_blank"
       rel="nofollow noopener noreferrer"
     >
-      <MiniGithubIcon />
+      <MiniGitHub />
       <span className="ml-1">{label}</span>
     </Link>
   )
