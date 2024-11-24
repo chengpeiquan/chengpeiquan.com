@@ -4,7 +4,12 @@ import React from 'react'
 import { useTranslations } from 'next-intl'
 import { Button, cn } from 'blackwork'
 import { isUndefined } from '@bassist/utils'
-import { type NavSlug, navIconMap, siteConfig } from '@/config/site-config'
+import {
+  type NavSlug,
+  isHome,
+  navIconMap,
+  siteConfig,
+} from '@/config/site-config'
 import {
   isActiveListFolder,
   isActivePageFolder,
@@ -44,7 +49,11 @@ const NavigationLink: React.FC<NavigationLinkProps> = ({
       return isActivePageFolder(pathname, slug)
     }
 
-    return pathname === '/'
+    if (isHome(slug)) {
+      return pathname === '/'
+    }
+
+    return pathname === `/${slug}`
   }, [pathname, slug])
 
   const cls = cn(
@@ -61,7 +70,7 @@ const NavigationLink: React.FC<NavigationLinkProps> = ({
       return `/${pageFolderMapping[slug]}`
     }
 
-    return '/'
+    return isHome(slug) ? '/' : `/${slug}`
   }, [slug])
 
   const content = useMemo(() => {

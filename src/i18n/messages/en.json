@@ -29,6 +29,7 @@
     "emptyTips": "There is currently no content with this page.",
     "nav": {
       "home": "Home",
+      "projects": "Projects",
       "article": "Article",
       "cookbook": "Cookbook",
       "about": "About"
@@ -50,6 +51,14 @@
     "noResult": "No results found",
     "resultCount": "<count></count> results for <keyword></keyword>",
     "removeButtonLabel": "Remove this record"
+  },
+  "projectConfig": {
+    "title": "Open Source Projects",
+    "description": "Projects that I created or maintaining",
+    "button": {
+      "homepage": "Project Homepage",
+      "repo": "Code repository"
+    }
   },
   "action": {
     "toggle": "Click to switch to ",

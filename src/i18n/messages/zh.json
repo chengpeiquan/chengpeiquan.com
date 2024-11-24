@@ -29,6 +29,7 @@
     "emptyTips": "_(:з)∠)_ 当前暂无内容…",
     "nav": {
       "home": "首页",
+      "projects": "项目",
       "article": "文章",
       "cookbook": "菜谱",
       "about": "关于"
@@ -50,6 +51,14 @@
     "noResult": "搜不到结果",
     "resultCount": "找到 <count></count> 个 <keyword></keyword> 的相关结果",
     "removeButtonLabel": "移除该记录"
+  },
+  "projectConfig": {
+    "title": "开源项目",
+    "description": "由我创建或维护的项目",
+    "button": {
+      "homepage": "项目主页",
+      "repo": "代码仓库"
+    }
   },
   "action": {
     "toggle": "点击切换到",
