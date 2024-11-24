@@ -2,7 +2,7 @@ import React, { cache } from 'react'
 import { getTranslations } from 'next-intl/server'
 import { Paragraph } from 'blackwork'
 import { type Locale } from '@/config/locale-config'
-import { type LocalePageParams } from '@/config/route-config'
+import { type PropsWithLocale } from '@/config/route-config'
 import {
   type ContentMetadata,
   legacyThresholdDays,
@@ -66,7 +66,7 @@ const calculateDays = cache((timestamp: number, locale: Locale) => {
   }
 })
 
-type LegacyTipsProps = LocalePageParams & Pick<ContentMetadata, 'timestamp'>
+type LegacyTipsProps = PropsWithLocale & Pick<ContentMetadata, 'timestamp'>
 
 export const LegacyTips = async ({ locale, timestamp }: LegacyTipsProps) => {
   const t = await getTranslations({

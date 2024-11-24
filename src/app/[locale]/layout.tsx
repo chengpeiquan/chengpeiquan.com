@@ -3,11 +3,11 @@ import { type Metadata } from 'next'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, getTranslations } from 'next-intl/server'
 import { sharedMetadata } from '@/config/site-config'
-import { type LocalePageParams } from '@/config/route-config'
+import { type PropsWithLocale } from '@/config/route-config'
 import { LayoutContainer } from '@/components/layouts/layout-container'
 
 interface LocaleLayoutProps extends React.PropsWithChildren {
-  params: Promise<LocalePageParams>
+  params: Promise<PropsWithLocale>
 }
 
 export const generateMetadata = async ({

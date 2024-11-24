@@ -1,15 +1,15 @@
 import { type Locale } from './locale-config'
 
-export interface LocalePageParams {
+export interface PropsWithLocale {
   locale: Locale
 }
 
 // Details with fixed slug
 export interface SinglePageProps {
-  params: Promise<LocalePageParams>
+  params: Promise<PropsWithLocale>
 }
 
-export interface DetailsPageParams extends LocalePageParams {
+export interface DetailsPageParams extends PropsWithLocale {
   slug: string
 }
 
@@ -18,7 +18,7 @@ export interface DetailsPageProps {
   params: Promise<DetailsPageParams>
 }
 
-export interface ListPageParams extends LocalePageParams {
+export interface ListPageParams extends PropsWithLocale {
   args: string[] // [page] | [slug, page]
 }
 

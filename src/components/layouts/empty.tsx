@@ -2,11 +2,11 @@ import React from 'react'
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 import { Paragraph } from 'blackwork'
-import { type LocalePageParams } from '@/config/route-config'
+import { type PropsWithLocale } from '@/config/route-config'
 import { isMobileDevice } from '@/config/middleware-config'
 import { cn } from '@/utils'
 
-export const Empty = async ({ locale }: LocalePageParams) => {
+export const Empty = async ({ locale }: PropsWithLocale) => {
   const isMobile = await isMobileDevice()
 
   const t = await getTranslations({

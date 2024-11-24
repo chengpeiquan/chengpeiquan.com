@@ -11,7 +11,7 @@ import {
 } from 'blackwork'
 import { Github, Home } from 'blackwork/icons'
 import { isArray } from '@bassist/utils'
-import { type LocalePageParams } from '@/config/route-config'
+import { type PropsWithLocale } from '@/config/route-config'
 import {
   type ProjectConfigItem,
   ProjectTag,
@@ -21,7 +21,7 @@ import {
 import { cn } from '@/utils'
 import { LinkIconButton } from '@/components/shared/link-icon-button'
 
-type TagsProps = LocalePageParams & Required<Pick<ProjectConfigItem, 'tags'>>
+type TagsProps = PropsWithLocale & Required<Pick<ProjectConfigItem, 'tags'>>
 
 const Tags: React.FC<TagsProps> = ({ locale, tags }) => {
   const mapping = projectTagNameMapping[locale]
@@ -46,7 +46,7 @@ const Tags: React.FC<TagsProps> = ({ locale, tags }) => {
   )
 }
 
-interface ProjectCardProps extends LocalePageParams {
+interface ProjectCardProps extends PropsWithLocale {
   item: ProjectConfigItem
 }
 

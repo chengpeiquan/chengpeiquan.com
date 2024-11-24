@@ -1,10 +1,10 @@
 import React from 'react'
 import { ExtraTag, type ProjectTag, projects } from '@/config/project-config'
-import { type LocalePageParams } from '@/config/route-config'
+import { type PropsWithLocale } from '@/config/route-config'
 import { FilterBar } from './filter-bar'
 import { ProjectCard } from './project-card'
 
-interface ProjectListProps extends LocalePageParams {
+interface ProjectListProps extends PropsWithLocale {
   tag: ProjectTag | ExtraTag
 }
 

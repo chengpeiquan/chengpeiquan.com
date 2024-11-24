@@ -5,14 +5,14 @@ import { MiniGitHub } from 'blackwork/icons'
 import { isString } from '@bassist/utils'
 import { type ContentItem, type ContentMetadata } from '@/config/content-config'
 import {
-  type LocalePageParams,
   type PropsWithDevice,
+  type PropsWithLocale,
 } from '@/config/route-config'
 import { isMobileDevice } from '@/config/middleware-config'
 import { Link } from '@/navigation'
 import { LegacyTips } from './legacy-tips'
 
-interface StarOnGitHubProps extends LocalePageParams {
+interface StarOnGitHubProps extends PropsWithLocale {
   repo: ContentMetadata['repo']
 }
 
@@ -73,7 +73,7 @@ const AuthorData = async ({
 }
 
 interface MarkupRendererProps
-  extends LocalePageParams,
+  extends PropsWithLocale,
     Pick<ContentItem, 'metadata' | 'jsxElement'> {
   toc?: React.ReactNode
 }

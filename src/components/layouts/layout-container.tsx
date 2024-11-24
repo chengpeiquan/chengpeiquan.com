@@ -10,7 +10,7 @@ import {
   ScrollToTop,
 } from 'blackwork'
 import { isMobileDevice } from '@/config/middleware-config'
-import { type LocalePageParams } from '@/config/route-config'
+import { type PropsWithLocale } from '@/config/route-config'
 import { getLocaleSocialLinks, siteConfig } from '@/config/site-config'
 import { NavigationLinks } from '@/components/layouts/navigation-links'
 import { LanguageToggle } from '@/components/layouts/language-toggle'
@@ -18,7 +18,7 @@ import { ThemeToggle } from '@/components/layouts/theme-toggle'
 import { NavigationDrawer } from '@/components/layouts/navigation-drawer'
 import { SearchBox } from '@/components/layouts/search-box'
 
-type LayoutContainerProps = React.PropsWithChildren & LocalePageParams
+type LayoutContainerProps = React.PropsWithChildren & PropsWithLocale
 
 export const LayoutContainer = async ({
   locale,

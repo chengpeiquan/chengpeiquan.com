@@ -8,12 +8,12 @@ import {
   isExtraTag,
   projectTagNameMapping,
 } from '@/config/project-config'
-import { type LocalePageParams } from '@/config/route-config'
+import { type PropsWithLocale } from '@/config/route-config'
 import { Link } from '@/navigation'
 
 const tagList = [ExtraTag.All, ...(Object.values(ProjectTag) as ProjectTag[])]
 
-interface FilterBarProps extends LocalePageParams {
+interface FilterBarProps extends PropsWithLocale {
   tag: ExtraTag | ProjectTag
 }
 
