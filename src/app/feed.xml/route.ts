@@ -31,7 +31,7 @@ export async function GET() {
   const articles = await getContents(folder, {
     locale: 'zh',
     page: 1,
-    pageSize: 50,
+    pageSize: 20,
     ignoreDetails: false,
     mode: ContentProcessorMode.HtmlOnly,
   })
