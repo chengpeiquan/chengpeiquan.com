@@ -2,7 +2,7 @@ import React from 'react'
 import { type Metadata } from 'next'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, getTranslations } from 'next-intl/server'
-import { sharedMetadata } from '@/config/site-config'
+import { sharedMetadata, siteConfig } from '@/config/site-config'
 import { type PropsWithLocale } from '@/config/route-config'
 import { LayoutContainer } from '@/components/layouts/layout-container'
 
@@ -26,6 +26,17 @@ export const generateMetadata = async ({
       default: t('title'),
     },
     description: t('description'),
+    alternates: {
+      canonical: siteConfig.author.url,
+      types: {
+        'application/rss+xml': [
+          {
+            url: 'feed.xml',
+            title: 'RSS',
+          },
+        ],
+      },
+    },
     ...sharedMetadata,
   } satisfies Metadata
 }
