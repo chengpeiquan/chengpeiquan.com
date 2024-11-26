@@ -1,5 +1,19 @@
 [
   {
+    "slug": "nginx-incomplete-chunked-encoding-error",
+    "metadata": {
+      "title": "记录一次 ERR_INCOMPLETE_CHUNKED_ENCODING 的问题排查",
+      "desc": "最近博客改版也顺便改了部署方式，页面访问也检查了重定向配置等等，看起来似乎没什么问题，但还是收到了一个反馈 RSS 订阅源报错的情况，反馈在 RSS 聚合软件里提示订阅报错了，反馈在 RSS 聚合软件里提示订阅报错了，我自己也尝试了确实不行，奇了怪了！",
+      "keywords": "ERR_INCOMPLETE_CHUNKED_ENCODING,Nginx配置size,Nginx ERR_INCOMPLETE_CHUNKED_ENCODING,RSS订阅失败",
+      "cover": "https://cdn.chengpeiquan.com/img/2024/11/202411260003399.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "date": "2024/11/25 23:58:02",
+      "timestamp": 1732550282000
+    }
+  },
+  {
     "slug": "use-remark-directive-to-provide-markdown-video-syntax-parsing-for-unifiedjs",
     "metadata": {
       "title": "使用 remark-directive 为 Unifiedjs 提供 Markdown 视频语法的解析",
