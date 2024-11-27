@@ -7,6 +7,7 @@ import {
   extraTagNameMapping,
   isExtraTag,
   projectTagNameMapping,
+  projectTotalMap,
 } from '@/config/project-config'
 import { type PropsWithLocale } from '@/config/route-config'
 import { Link } from '@/navigation'
@@ -27,7 +28,7 @@ export const FilterBar = async ({ locale, tag }: FilterBarProps) => {
   const baseMapping = projectTagNameMapping[locale]
 
   return (
-    <div className="flex flex-wrap items-center gap-1">
+    <div className="flex flex-wrap items-center gap-2">
       {tagList.map((i) => {
         const isExtra = isExtraTag(i)
         const label = isExtra ? extraMapping[i] : baseMapping[i]
@@ -49,7 +50,7 @@ export const FilterBar = async ({ locale, tag }: FilterBarProps) => {
               href={href}
               title={ariaLabel}
             >
-              {label}
+              {label} ({projectTotalMap[i]})
             </Link>
           </Toggle>
         )

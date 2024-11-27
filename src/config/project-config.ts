@@ -74,7 +74,7 @@ export interface ProjectConfigItem {
   repo: string
   directory?: string
   homepage?: string
-  tags?: ProjectTag[]
+  tags: ProjectTag[]
   metadata: Record<Locale, ProjectMetadata>
 }
 
@@ -509,3 +509,14 @@ export const projects: ProjectConfigItem[] = [
     },
   },
 ]
+
+export const projectTotalMap = projects.reduce(
+  (acc, i) => {
+    i.tags.forEach((j) => {
+      if (!acc[j]) acc[j] = 0
+      return (acc[j] += 1)
+    })
+    return acc
+  },
+  { [ExtraTag.All]: projects.length } as Record<ExtraTag | ProjectTag, number>,
+)

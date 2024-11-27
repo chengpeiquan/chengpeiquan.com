@@ -10,7 +10,6 @@ import {
   Paragraph,
 } from 'blackwork'
 import { Github, Home } from 'blackwork/icons'
-import { isArray } from '@bassist/utils'
 import { type PropsWithLocale } from '@/config/route-config'
 import {
   type ProjectConfigItem,
@@ -21,7 +20,7 @@ import {
 import { cn } from '@/utils'
 import { LinkIconButton } from '@/components/shared/link-icon-button'
 
-type TagsProps = PropsWithLocale & Required<Pick<ProjectConfigItem, 'tags'>>
+type TagsProps = PropsWithLocale & Pick<ProjectConfigItem, 'tags'>
 
 const Tags: React.FC<TagsProps> = ({ locale, tags }) => {
   const mapping = projectTagNameMapping[locale]
@@ -87,7 +86,7 @@ export const ProjectCard = async ({ locale, item }: ProjectCardProps) => {
       </CardContent>
 
       <CardFooter className="flex justify-end gap-2">
-        {isArray(tags) && <Tags locale={locale} tags={tags} />}
+        <Tags locale={locale} tags={tags} />
 
         <LinkIconButton
           ariaLabel={ta('newTab', {

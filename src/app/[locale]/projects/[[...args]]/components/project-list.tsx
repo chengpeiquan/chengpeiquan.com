@@ -13,7 +13,7 @@ export const ProjectList: React.FC<ProjectListProps> = ({ locale, tag }) => {
     if (tag === ExtraTag.All) return projects
 
     return projects.filter((i) => {
-      return i.tags?.some((j) => j === tag)
+      return i.tags.some((j) => j === tag)
     })
   })()
 
