@@ -93,7 +93,7 @@ export const MarkupRenderer = async ({
 
   return (
     <article className="flex flex-col flex-1 overflow-hidden prose prose-neutral dark:prose-invert">
-      <Heading level={1} className="mb-0 text-2xl sm:text-3xl">
+      <Heading level={1} className="mb-0 text-2xl sm:text-3xl break-all">
         {metadata.title}
       </Heading>
 
