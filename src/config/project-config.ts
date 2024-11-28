@@ -1,4 +1,10 @@
 import { type Locale } from './locale-config'
+import { siteConfig } from './site-config'
+
+export const githubConfig = {
+  website: 'https://github.com',
+  api: 'https://api.github.com',
+}
 
 // Applies only to filter bars
 export enum ExtraTag {
@@ -69,26 +75,49 @@ export interface ProjectMetadata {
   homepage?: string
 }
 
+export const defaultOwner = siteConfig.author.name!
+
 export interface ProjectConfigItem {
+  /**
+   * The project name
+   */
   name: string
-  repo: string
+
+  /**
+   * @default defaultOwner
+   */
+  owner?: string
+
+  /**
+   * GitHub repository name
+   *
+   * @default name
+   */
+  repo?: string
+
+  /**
+   * The directory in a monorepo
+   */
   directory?: string
+
   homepage?: string
   tags: ProjectTag[]
   metadata: Record<Locale, ProjectMetadata>
 }
 
-export const getRepoUrl = (
-  repo: ProjectConfigItem['repo'],
-  directory?: ProjectConfigItem['directory'],
-) => {
-  return directory ? `${repo}/tree/main/packages/${directory}` : repo
+export const getRepoUrl = ({
+  owner = defaultOwner,
+  repo,
+  name,
+  directory,
+}: ProjectConfigItem) => {
+  const repoUrl = `${githubConfig.website}/${owner}/${repo || name}`
+  return directory ? `${repoUrl}/tree/main/packages/${directory}` : repoUrl
 }
 
 export const projects: ProjectConfigItem[] = [
   {
     name: 'learning-vue3',
-    repo: 'https://github.com/chengpeiquan/learning-vue3',
     tags: [ProjectTag.Tutorial],
     homepage: 'https://vue3.chengpeiquan.com',
     metadata: {
@@ -104,7 +133,8 @@ export const projects: ProjectConfigItem[] = [
   },
   {
     name: '@re-dev/react-truncate',
-    repo: 'https://github.com/remanufacturing/react-truncate',
+    owner: 'remanufacturing',
+    repo: 'react-truncate',
     homepage: 'https://truncate.js.org',
     tags: [ProjectTag.UI],
     metadata: {
@@ -121,7 +151,7 @@ export const projects: ProjectConfigItem[] = [
   },
   {
     name: '@bassist/utils',
-    repo: 'https://github.com/chengpeiquan/bassist',
+    repo: 'bassist',
     directory: 'utils',
     homepage: 'https://www.jsdocs.io/package/@bassist/utils',
     tags: [ProjectTag.Toolkit],
@@ -138,7 +168,6 @@ export const projects: ProjectConfigItem[] = [
   },
   {
     name: 'vite-plugin-banner',
-    repo: 'https://github.com/chengpeiquan/vite-plugin-banner',
     tags: [ProjectTag.Bundling],
     metadata: {
       en: {
@@ -152,7 +181,6 @@ export const projects: ProjectConfigItem[] = [
   },
   {
     name: 'vue-picture-cropper',
-    repo: 'https://github.com/chengpeiquan/vue-picture-cropper',
     homepage: 'https://cropper.chengpeiquan.com',
     tags: [ProjectTag.UI],
     metadata: {
@@ -168,7 +196,7 @@ export const projects: ProjectConfigItem[] = [
   },
   {
     name: 'create-preset',
-    repo: 'https://github.com/awesome-starter/create-preset',
+    owner: 'awesome-starter',
     homepage: 'https://preset.js.org',
     tags: [ProjectTag.Scaffold],
     metadata: {
@@ -183,7 +211,7 @@ export const projects: ProjectConfigItem[] = [
   },
   {
     name: 'git-commit-analytics',
-    repo: 'https://github.com/analyticsjs/git-commit-analytics',
+    owner: 'analyticsjs',
     tags: [ProjectTag.Program],
     metadata: {
       en: {
@@ -198,7 +226,6 @@ export const projects: ProjectConfigItem[] = [
   },
   {
     name: 'blackwork',
-    repo: 'https://github.com/chengpeiquan/blackwork',
     tags: [ProjectTag.UI],
     metadata: {
       en: {
@@ -213,7 +240,8 @@ export const projects: ProjectConfigItem[] = [
   },
   {
     name: '@web-analytics/core',
-    repo: 'https://github.com/analyticsjs/web-analytics',
+    owner: 'analyticsjs',
+    repo: 'web-analytics',
     directory: 'core',
     homepage: 'https://analytics.js.org/core/',
     tags: [ProjectTag.Toolkit],
@@ -229,7 +257,8 @@ export const projects: ProjectConfigItem[] = [
   },
   {
     name: '@web-analytics/vue',
-    repo: 'https://github.com/analyticsjs/web-analytics',
+    owner: 'analyticsjs',
+    repo: 'web-analytics',
     directory: 'vue',
     homepage: 'https://analytics.js.org/vue/',
     tags: [ProjectTag.Toolkit],
@@ -246,7 +275,7 @@ export const projects: ProjectConfigItem[] = [
   },
   {
     name: 'vue3-ts-vite-starter',
-    repo: 'https://github.com/awesome-starter/vue3-ts-vite-starter',
+    owner: 'awesome-starter',
     tags: [ProjectTag.Template],
     metadata: {
       en: {
@@ -260,7 +289,6 @@ export const projects: ProjectConfigItem[] = [
   },
   {
     name: 'chengpeiquan.com',
-    repo: 'https://github.com/chengpeiquan/chengpeiquan.com',
     homepage: 'https://chengpeiquan.com',
     tags: [ProjectTag.Template],
     metadata: {
@@ -276,7 +304,7 @@ export const projects: ProjectConfigItem[] = [
   },
   {
     name: 'cert-patroller',
-    repo: 'https://github.com/node-service/cert-patroller',
+    owner: 'node-service',
     tags: [ProjectTag.Server],
     metadata: {
       en: {
@@ -291,7 +319,7 @@ export const projects: ProjectConfigItem[] = [
   },
   {
     name: 'language-code',
-    repo: 'https://github.com/ISO-639/language-code',
+    owner: 'ISO-639',
     homepage: 'https://lang.js.org',
     tags: [ProjectTag.Toolkit],
     metadata: {
@@ -307,7 +335,6 @@ export const projects: ProjectConfigItem[] = [
   },
   {
     name: 'react-forage',
-    repo: 'https://github.com/chengpeiquan/react-forage',
     homepage: 'https://forage.cpq.dev',
     tags: [ProjectTag.Toolkit],
     metadata: {
@@ -321,7 +348,6 @@ export const projects: ProjectConfigItem[] = [
   },
   {
     name: 'zhihu-collection-helper',
-    repo: 'https://github.com/chengpeiquan/zhihu-collection-helper',
     tags: [ProjectTag.Program],
     metadata: {
       en: {
@@ -336,7 +362,6 @@ export const projects: ProjectConfigItem[] = [
   },
   {
     name: 'group-buy-calculator',
-    repo: 'https://github.com/chengpeiquan/group-buy-calculator',
     tags: [ProjectTag.OnlineTool],
     homepage: 'https://chengpeiquan.github.io/group-buy-calculator/',
     metadata: {
@@ -352,7 +377,6 @@ export const projects: ProjectConfigItem[] = [
   },
   {
     name: 'refresh-token',
-    repo: 'https://github.com/chengpeiquan/refresh-token',
     tags: [ProjectTag.Tutorial],
     metadata: {
       en: {
@@ -367,7 +391,7 @@ export const projects: ProjectConfigItem[] = [
   },
   {
     name: '@bassist/node-utils',
-    repo: 'https://github.com/chengpeiquan/bassist',
+    repo: 'bassist',
     directory: 'node-utils',
     tags: [ProjectTag.Toolkit],
     metadata: {
@@ -381,7 +405,7 @@ export const projects: ProjectConfigItem[] = [
   },
   {
     name: '@bassist/commit',
-    repo: 'https://github.com/chengpeiquan/bassist',
+    repo: 'bassist',
     directory: 'commit',
     tags: [ProjectTag.Toolkit],
     metadata: {
@@ -395,7 +419,7 @@ export const projects: ProjectConfigItem[] = [
   },
   {
     name: '@bassist/changelog',
-    repo: 'https://github.com/chengpeiquan/bassist',
+    repo: 'bassist',
     directory: 'changelog',
     tags: [ProjectTag.Toolkit],
     metadata: {
@@ -409,7 +433,7 @@ export const projects: ProjectConfigItem[] = [
   },
   {
     name: '@bassist/release',
-    repo: 'https://github.com/chengpeiquan/bassist',
+    repo: 'bassist',
     directory: 'release',
     tags: [ProjectTag.Toolkit],
     metadata: {
@@ -423,7 +447,7 @@ export const projects: ProjectConfigItem[] = [
   },
   {
     name: '@bassist/progress',
-    repo: 'https://github.com/chengpeiquan/bassist',
+    repo: 'bassist',
     directory: 'progress',
     tags: [ProjectTag.UI],
     metadata: {
@@ -437,7 +461,7 @@ export const projects: ProjectConfigItem[] = [
   },
   {
     name: '@bassist/eslint',
-    repo: 'https://github.com/chengpeiquan/bassist',
+    repo: 'bassist',
     directory: 'eslint',
     tags: [ProjectTag.Configuration],
     metadata: {
@@ -451,7 +475,7 @@ export const projects: ProjectConfigItem[] = [
   },
   {
     name: '@bassist/tsconfig',
-    repo: 'https://github.com/chengpeiquan/bassist',
+    repo: 'bassist',
     directory: 'tsconfig',
     tags: [ProjectTag.Configuration],
     metadata: {
@@ -466,7 +490,7 @@ export const projects: ProjectConfigItem[] = [
   },
   {
     name: '@bassist/uno',
-    repo: 'https://github.com/chengpeiquan/bassist',
+    repo: 'bassist',
     directory: 'uno',
     tags: [ProjectTag.Configuration],
     metadata: {
@@ -480,7 +504,7 @@ export const projects: ProjectConfigItem[] = [
   },
   {
     name: 'vue-baidu-analytics',
-    repo: 'https://github.com/analyticsjs/vue-baidu-analytics',
+    owner: 'analyticsjs',
     tags: [ProjectTag.EOL],
     metadata: {
       en: {
@@ -495,7 +519,7 @@ export const projects: ProjectConfigItem[] = [
   },
   {
     name: 'vue-cnzz-analytics',
-    repo: 'https://github.com/analyticsjs/vue-cnzz-analytics',
+    owner: 'analyticsjs',
     tags: [ProjectTag.EOL],
     metadata: {
       en: {

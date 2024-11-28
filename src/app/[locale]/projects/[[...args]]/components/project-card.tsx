@@ -7,6 +7,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
+  ExternalLink,
   Paragraph,
 } from 'blackwork'
 import { Github, Home } from 'blackwork/icons'
@@ -50,18 +51,10 @@ interface ProjectCardProps extends PropsWithLocale {
 }
 
 export const ProjectCard = async ({ locale, item }: ProjectCardProps) => {
-  const {
-    name,
-    metadata,
-    repo,
-    directory,
-    homepage: fallbackHomepage,
-    tags,
-  } = item
-
+  const { name, metadata, homepage: fallbackHomepage, tags } = item
   const { description, homepage: localHomepage } = metadata[locale]
-
   const homepage = localHomepage || fallbackHomepage
+  const repoUrl = getRepoUrl(item)
 
   const t = await getTranslations({
     locale,
@@ -76,7 +69,9 @@ export const ProjectCard = async ({ locale, item }: ProjectCardProps) => {
   return (
     <Card className="flex flex-col w-full">
       <CardHeader>
-        <CardTitle>{name}</CardTitle>
+        <CardTitle>
+          <ExternalLink href={homepage || repoUrl}>{name}</ExternalLink>
+        </CardTitle>
       </CardHeader>
 
       <CardContent className="flex flex-col flex-1 gap-2 overflow-hidden">
@@ -92,7 +87,7 @@ export const ProjectCard = async ({ locale, item }: ProjectCardProps) => {
           ariaLabel={ta('newTab', {
             label: ` ${name} ${t('button.homepage')}`,
           })}
-          href={getRepoUrl(repo, directory)}
+          href={repoUrl}
           title={t('button.repo')}
           icon={Github}
         />
