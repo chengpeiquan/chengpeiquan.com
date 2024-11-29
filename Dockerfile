@@ -41,9 +41,9 @@ WORKDIR /app
 ENV NODE_ENV=production
 # Uncomment the following line in case you want to disable telemetry during runtime.
 # ENV NEXT_TELEMETRY_DISABLED=1
-ENV HELLO=${HELLO}
-ENV WORLD=${WORLD}
-ENV HELLO_WORLD=${HELLO_WORLD}
+ENV HELLO=${NEXT_PUBLIC_HELLO}
+ENV WORLD=${NEXT_PUBLIC_WORLD}
+ENV HELLO_WORLD=${NEXT_PUBLIC_HELLO_WORLD}
 
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs

@@ -22,9 +22,9 @@ jobs:
       - name: build docker image
         run: |
           docker build . \
-            --build-arg HELLO=hello \
-            --build-arg WORLD=world \
-            --build-arg HELLO_WORLD=${{ secrets.HELLO_WORLD }} \
+            --build-arg NEXT_PUBLIC_HELLO=hello \
+            --build-arg NEXT_PUBLIC_WORLD=world \
+            --build-arg NEXT_PUBLIC_HELLO_WORLD=${{ secrets.HELLO_WORLD }} \
             --file Dockerfile \
             --tag ${{ secrets.DOCKER_IMAGE }}
       - name: publish docker image
