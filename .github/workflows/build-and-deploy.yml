@@ -25,6 +25,7 @@ jobs:
             --build-arg NEXT_PUBLIC_HELLO=hello \
             --build-arg NEXT_PUBLIC_WORLD=world \
             --build-arg NEXT_PUBLIC_HELLO_WORLD=${{ secrets.HELLO_WORLD }} \
+            --build-arg HELLO_WORLD=${{ secrets.HELLO_WORLD }} \
             --file Dockerfile \
             --tag ${{ secrets.DOCKER_IMAGE }}
       - name: publish docker image
