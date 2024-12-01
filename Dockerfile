@@ -26,9 +26,16 @@ COPY . .
 # Learn more here: https://nextjs.org/telemetry
 # Uncomment the following line in case you want to disable telemetry during the build.
 # ENV NEXT_TELEMETRY_DISABLED=1
-RUN echo "NEXT_PUBLIC_HELLO='${NEXT_PUBLIC_HELLO}'" >> .env && \
-  echo "NEXT_PUBLIC_WORLD='${NEXT_PUBLIC_WORLD}'" >> .env && \
-  echo "NEXT_PUBLIC_HELLO_WORLD='${NEXT_PUBLIC_HELLO_WORLD}'" >> .env
+
+# Define environment variables
+ARG NEXT_PUBLIC_HELLO='hello'
+ARG NEXT_PUBLIC_WORLD='world'
+ARG NEXT_PUBLIC_HELLO_WORLD='hello_world'
+
+# Write the environment variables to the .env file
+RUN echo "NEXT_PUBLIC_HELLO=${NEXT_PUBLIC_HELLO}" >> .env && \
+  echo "NEXT_PUBLIC_WORLD=${NEXT_PUBLIC_WORLD}" >> .env && \
+  echo "NEXT_PUBLIC_HELLO_WORLD=${NEXT_PUBLIC_HELLO_WORLD}" >> .env
 
 RUN \
   if [ -f yarn.lock ]; then yarn run build; \
