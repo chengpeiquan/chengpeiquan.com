@@ -28,14 +28,15 @@ COPY . .
 # ENV NEXT_TELEMETRY_DISABLED=1
 
 # Define environment variables
-ARG NEXT_PUBLIC_HELLO='hello'
-ARG NEXT_PUBLIC_WORLD='world'
-ARG NEXT_PUBLIC_HELLO_WORLD='hello_world'
+# ARG NEXT_PUBLIC_HELLO='hello'
+# ARG NEXT_PUBLIC_WORLD='world'
+# ARG NEXT_PUBLIC_HELLO_WORLD='hello_world'
 
 # Write the environment variables to the .env file
 RUN echo "NEXT_PUBLIC_HELLO=${NEXT_PUBLIC_HELLO}" >> .env && \
   echo "NEXT_PUBLIC_WORLD=${NEXT_PUBLIC_WORLD}" >> .env && \
-  echo "NEXT_PUBLIC_HELLO_WORLD=${NEXT_PUBLIC_HELLO_WORLD}" >> .env
+  echo "NEXT_PUBLIC_HELLO_WORLD=${NEXT_PUBLIC_HELLO_WORLD}" >> .env \
+  echo "HELLO_WORLD=${NEXT_PUBLIC_HELLO_WORLD}" >> .env
 
 RUN \
   if [ -f yarn.lock ]; then yarn run build; \
