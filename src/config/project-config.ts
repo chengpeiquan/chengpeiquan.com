@@ -3,7 +3,6 @@ import { siteConfig } from './site-config'
 
 export const githubConfig = {
   website: 'https://github.com',
-  api: 'https://api.github.com',
 }
 
 // Applies only to filter bars
@@ -80,8 +79,10 @@ export const defaultOwner = siteConfig.author.name!
 export interface ProjectConfigItem {
   /**
    * The project name
+   *
+   * @default repo
    */
-  name: string
+  name?: string
 
   /**
    * @default defaultOwner
@@ -90,15 +91,20 @@ export interface ProjectConfigItem {
 
   /**
    * GitHub repository name
-   *
-   * @default name
    */
-  repo?: string
+  repo: string
 
   /**
    * The directory in a monorepo
    */
   directory?: string
+
+  /**
+   * Is this project an npm package
+   *
+   * @default false
+   */
+  npm?: boolean
 
   homepage?: string
   tags: ProjectTag[]
@@ -115,9 +121,13 @@ export const getRepoUrl = ({
   return directory ? `${repoUrl}/tree/main/packages/${directory}` : repoUrl
 }
 
-export const projects: ProjectConfigItem[] = [
+export const getNpmUrl = ({ name }: ProjectConfigItem) => {
+  return `https://www.npmjs.com/package/${name}`
+}
+
+const baseProjects: ProjectConfigItem[] = [
   {
-    name: 'learning-vue3',
+    repo: 'learning-vue3',
     tags: [ProjectTag.Tutorial],
     homepage: 'https://vue3.chengpeiquan.com',
     metadata: {
@@ -136,6 +146,7 @@ export const projects: ProjectConfigItem[] = [
     owner: 'remanufacturing',
     repo: 'react-truncate',
     homepage: 'https://truncate.js.org',
+    npm: true,
     tags: [ProjectTag.UI],
     metadata: {
       en: {
@@ -154,6 +165,7 @@ export const projects: ProjectConfigItem[] = [
     repo: 'bassist',
     directory: 'utils',
     homepage: 'https://www.jsdocs.io/package/@bassist/utils',
+    npm: true,
     tags: [ProjectTag.Toolkit],
     metadata: {
       en: {
@@ -167,8 +179,9 @@ export const projects: ProjectConfigItem[] = [
     },
   },
   {
-    name: 'vite-plugin-banner',
+    repo: 'vite-plugin-banner',
     tags: [ProjectTag.Bundling],
+    npm: true,
     metadata: {
       en: {
         description:
@@ -180,8 +193,9 @@ export const projects: ProjectConfigItem[] = [
     },
   },
   {
-    name: 'vue-picture-cropper',
+    repo: 'vue-picture-cropper',
     homepage: 'https://cropper.chengpeiquan.com',
+    npm: true,
     tags: [ProjectTag.UI],
     metadata: {
       en: {
@@ -195,9 +209,10 @@ export const projects: ProjectConfigItem[] = [
     },
   },
   {
-    name: 'create-preset',
+    repo: 'create-preset',
     owner: 'awesome-starter',
     homepage: 'https://preset.js.org',
+    npm: true,
     tags: [ProjectTag.Scaffold],
     metadata: {
       en: {
@@ -210,7 +225,7 @@ export const projects: ProjectConfigItem[] = [
     },
   },
   {
-    name: 'git-commit-analytics',
+    repo: 'git-commit-analytics',
     owner: 'analyticsjs',
     tags: [ProjectTag.Program],
     metadata: {
@@ -225,8 +240,9 @@ export const projects: ProjectConfigItem[] = [
     },
   },
   {
-    name: 'blackwork',
+    repo: 'blackwork',
     tags: [ProjectTag.UI],
+    npm: true,
     metadata: {
       en: {
         description:
@@ -244,6 +260,7 @@ export const projects: ProjectConfigItem[] = [
     repo: 'web-analytics',
     directory: 'core',
     homepage: 'https://analytics.js.org/core/',
+    npm: true,
     tags: [ProjectTag.Toolkit],
     metadata: {
       en: {
@@ -261,6 +278,7 @@ export const projects: ProjectConfigItem[] = [
     repo: 'web-analytics',
     directory: 'vue',
     homepage: 'https://analytics.js.org/vue/',
+    npm: true,
     tags: [ProjectTag.Toolkit],
     metadata: {
       en: {
@@ -274,7 +292,7 @@ export const projects: ProjectConfigItem[] = [
     },
   },
   {
-    name: 'vue3-ts-vite-starter',
+    repo: 'vue3-ts-vite-starter',
     owner: 'awesome-starter',
     tags: [ProjectTag.Template],
     metadata: {
@@ -288,7 +306,7 @@ export const projects: ProjectConfigItem[] = [
     },
   },
   {
-    name: 'chengpeiquan.com',
+    repo: 'chengpeiquan.com',
     homepage: 'https://chengpeiquan.com',
     tags: [ProjectTag.Template],
     metadata: {
@@ -303,7 +321,7 @@ export const projects: ProjectConfigItem[] = [
     },
   },
   {
-    name: 'cert-patroller',
+    repo: 'cert-patroller',
     owner: 'node-service',
     tags: [ProjectTag.Server],
     metadata: {
@@ -318,24 +336,45 @@ export const projects: ProjectConfigItem[] = [
     },
   },
   {
-    name: 'language-code',
+    name: '@iso-639/data',
     owner: 'ISO-639',
+    repo: 'language-code',
+    directory: 'data',
     homepage: 'https://lang.js.org',
+    npm: true,
     tags: [ProjectTag.Toolkit],
     metadata: {
       en: {
         description:
-          'ISO 639 Language Mapping. Contains code lists for ISO 639-1 and ISO 639-2 as well as multi-language support.',
+          'Contains code lists for ISO 639-1 and ISO 639-2 as well as multi-language support.',
       },
       zh: {
-        description:
-          'ISO 639 语言映射。包含 ISO 639-1 和 ISO 639-2 的代码列表以及多语言支持。',
+        description: '包含 ISO 639-1 和 ISO 639-2 的代码列表以及多语言支持。',
       },
     },
   },
   {
-    name: 'react-forage',
+    name: '@iso-639/mapping',
+    owner: 'ISO-639',
+    repo: 'language-code',
+    directory: 'mapping',
+    homepage: 'https://lang.js.org',
+    npm: true,
+    tags: [ProjectTag.Toolkit],
+    metadata: {
+      en: {
+        description:
+          'ISO 639 language code mapping toolkit, which can easily help you manage language data.',
+      },
+      zh: {
+        description: 'ISO 639 语言代码映射工具包，可以轻松帮助您管理语言数据。',
+      },
+    },
+  },
+  {
+    repo: 'react-forage',
     homepage: 'https://forage.cpq.dev',
+    npm: true,
     tags: [ProjectTag.Toolkit],
     metadata: {
       en: {
@@ -347,7 +386,7 @@ export const projects: ProjectConfigItem[] = [
     },
   },
   {
-    name: 'zhihu-collection-helper',
+    repo: 'zhihu-collection-helper',
     tags: [ProjectTag.Program],
     metadata: {
       en: {
@@ -361,7 +400,7 @@ export const projects: ProjectConfigItem[] = [
     },
   },
   {
-    name: 'group-buy-calculator',
+    repo: 'group-buy-calculator',
     tags: [ProjectTag.OnlineTool],
     homepage: 'https://chengpeiquan.github.io/group-buy-calculator/',
     metadata: {
@@ -376,7 +415,7 @@ export const projects: ProjectConfigItem[] = [
     },
   },
   {
-    name: 'refresh-token',
+    repo: 'refresh-token',
     tags: [ProjectTag.Tutorial],
     metadata: {
       en: {
@@ -393,6 +432,7 @@ export const projects: ProjectConfigItem[] = [
     name: '@bassist/node-utils',
     repo: 'bassist',
     directory: 'node-utils',
+    npm: true,
     tags: [ProjectTag.Toolkit],
     metadata: {
       en: {
@@ -407,6 +447,7 @@ export const projects: ProjectConfigItem[] = [
     name: '@bassist/commit',
     repo: 'bassist',
     directory: 'commit',
+    npm: true,
     tags: [ProjectTag.Toolkit],
     metadata: {
       en: {
@@ -421,6 +462,7 @@ export const projects: ProjectConfigItem[] = [
     name: '@bassist/changelog',
     repo: 'bassist',
     directory: 'changelog',
+    npm: true,
     tags: [ProjectTag.Toolkit],
     metadata: {
       en: {
@@ -435,6 +477,7 @@ export const projects: ProjectConfigItem[] = [
     name: '@bassist/release',
     repo: 'bassist',
     directory: 'release',
+    npm: true,
     tags: [ProjectTag.Toolkit],
     metadata: {
       en: {
@@ -449,6 +492,7 @@ export const projects: ProjectConfigItem[] = [
     name: '@bassist/progress',
     repo: 'bassist',
     directory: 'progress',
+    npm: true,
     tags: [ProjectTag.UI],
     metadata: {
       en: {
@@ -463,6 +507,7 @@ export const projects: ProjectConfigItem[] = [
     name: '@bassist/eslint',
     repo: 'bassist',
     directory: 'eslint',
+    npm: true,
     tags: [ProjectTag.Configuration],
     metadata: {
       en: {
@@ -477,6 +522,7 @@ export const projects: ProjectConfigItem[] = [
     name: '@bassist/tsconfig',
     repo: 'bassist',
     directory: 'tsconfig',
+    npm: true,
     tags: [ProjectTag.Configuration],
     metadata: {
       en: {
@@ -492,6 +538,7 @@ export const projects: ProjectConfigItem[] = [
     name: '@bassist/uno',
     repo: 'bassist',
     directory: 'uno',
+    npm: true,
     tags: [ProjectTag.Configuration],
     metadata: {
       en: {
@@ -503,8 +550,9 @@ export const projects: ProjectConfigItem[] = [
     },
   },
   {
-    name: 'vue-baidu-analytics',
+    repo: 'vue-baidu-analytics',
     owner: 'analyticsjs',
+    npm: true,
     tags: [ProjectTag.EOL],
     metadata: {
       en: {
@@ -518,8 +566,9 @@ export const projects: ProjectConfigItem[] = [
     },
   },
   {
-    name: 'vue-cnzz-analytics',
+    repo: 'vue-cnzz-analytics',
     owner: 'analyticsjs',
+    npm: true,
     tags: [ProjectTag.EOL],
     metadata: {
       en: {
@@ -534,7 +583,13 @@ export const projects: ProjectConfigItem[] = [
   },
 ]
 
-export const projectTotalMap = projects.reduce(
+// With all fields
+export const allProjects = baseProjects.map<ProjectConfigItem>((i) => {
+  const { owner = defaultOwner, repo, name = repo, ...rest } = i
+  return { ...rest, owner, repo, name }
+})
+
+export const projectTotalMap = allProjects.reduce(
   (acc, i) => {
     i.tags.forEach((j) => {
       if (!acc[j]) acc[j] = 0
@@ -542,5 +597,8 @@ export const projectTotalMap = projects.reduce(
     })
     return acc
   },
-  { [ExtraTag.All]: projects.length } as Record<ExtraTag | ProjectTag, number>,
+  { [ExtraTag.All]: allProjects.length } as Record<
+    ExtraTag | ProjectTag,
+    number
+  >,
 )
