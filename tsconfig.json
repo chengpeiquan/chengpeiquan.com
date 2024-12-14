@@ -2,6 +2,8 @@
   "extends": "@bassist/tsconfig/base.json",
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "noEmit": true,
     "jsx": "preserve",
     "incremental": true,
