@@ -2,13 +2,20 @@ import React from 'react'
 import { isArray } from '@bassist/utils'
 import { ExtraTag, type ProjectTag, allProjects } from '@/config/project-config'
 import { type PropsWithLocale } from '@/config/route-config'
-import { type GitHubRepoDataItem } from '@/fetcher'
+import { type GitHubRepoDataItem, type NpmDownloadDataItem } from '@/fetcher'
 import { FilterBar } from './filter-bar'
-import { ProjectCard, type ProjectCardItem } from './project-card'
+import {
+  type ProjectAnalysisData,
+  ProjectCard,
+  type ProjectCardItem,
+} from './project-card'
 
 interface ProjectListProps extends PropsWithLocale {
   tag: ProjectTag | ExtraTag
-  data: GitHubRepoDataItem[] | undefined
+  data: {
+    gh: GitHubRepoDataItem[] | undefined
+    npm: NpmDownloadDataItem[] | undefined
+  }
 }
 
 export const ProjectList: React.FC<ProjectListProps> = ({
@@ -26,13 +33,24 @@ export const ProjectList: React.FC<ProjectListProps> = ({
 
   const items = projects
     .map<ProjectCardItem>((i) => {
-      const target = isArray(data)
-        ? data.find((j) => j.repo === i.repo && j.owner === i.owner)
+      const gh = isArray(data.gh)
+        ? data.gh.find((j) => j.repo === i.repo && j.owner === i.owner)
         : undefined
+
+      const npm =
+        isArray(data.npm) && i.npm
+          ? data.npm.find((j) => j.packageName === i.name)
+          : undefined
+
+      const picked: ProjectAnalysisData = {
+        stars: gh?.stars ?? 0,
+        forks: gh?.forks ?? 0,
+        downloads: npm?.downloads ?? 0,
+      }
 
       return {
         ...i,
-        data: target,
+        data: picked,
       }
     })
     .sort((a, b) => (b.data?.stars ?? 0) - (a.data?.stars ?? 0))

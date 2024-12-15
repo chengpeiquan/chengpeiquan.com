@@ -58,6 +58,16 @@
     "button": {
       "homepage": "Project Homepage",
       "repo": "Code repository"
+    },
+    "dataDescription": {
+      "title": "About Data statistics",
+      "list": {
+        "0": "\"Stars\" and \"Forks\" are data from each GitHub repository queried from api.github.com.",
+        "1": "\"Downloads\" refers to the number of downloads of each npm package queried from api.npmjs.org, including: users installing from the command line, being downloaded as a dependency of other packages, downloading from CI/CD servers, and downloading from mirrors. <more>Click here to learn more</more>.",
+        "2": "The data overview only counts the total data of unique repositories and unique packages (multiple projects in the same Monorepo are not counted repeatedly), and card data is presented by the repositories and packages to which they belong.",
+        "3": "The data is updated once a day, and only historical data is recorded incrementally."
+      },
+      "okText": "OK, I got it!"
     }
   },
   "action": {

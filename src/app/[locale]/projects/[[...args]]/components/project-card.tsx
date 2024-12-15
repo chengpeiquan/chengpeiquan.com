@@ -8,7 +8,10 @@ import {
   CardHeader,
   CardTitle,
   ExternalLink,
-  Paragraph,
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
 } from 'blackwork'
 import {
   Download,
@@ -28,16 +31,26 @@ import {
   projectTagNameMapping,
 } from '@/config/project-config'
 import { cn } from '@/utils'
-import { type GitHubRepoDataItem } from '@/fetcher'
+import { type GitHubRepoDataItem, type NpmDownloadDataItem } from '@/fetcher'
 import { LinkIconButton } from '@/components/shared/link-icon-button'
 
-const getNumberDisplay = (value: number) => {
+// e.g. `1000` -> `1,000`
+const withCommasNumber = (val: string | number) => {
+  return (
+    String(val)
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ',') || '0'
+  )
+}
+
+// e.g. `1000` -> `1k`
+const withUnitNumber = (value: number) => {
   if (value >= 1_000_000) {
-    return `${(value / 1_000_000).toFixed(1)}M`
+    return `${(value / 1_000_000).toFixed(2)}M`
   }
 
   if (value >= 1_000) {
-    return `${(value / 1_000).toFixed(1)}k`
+    return `${(value / 1_000).toFixed(2)}k`
   }
 
   return value.toString()
@@ -56,8 +69,6 @@ const DataRender: React.FC<DataRenderProps> = ({
   className,
   iconClassName,
 }) => {
-  const num = getNumberDisplay(value)
-
   if (value <= 0) return null
   return (
     <div
@@ -67,12 +78,24 @@ const DataRender: React.FC<DataRenderProps> = ({
       )}
     >
       <Icon className={cn('size-4', iconClassName)} />
-      <span title={num}>{num}</span>
+
+      <TooltipProvider>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <span>{withUnitNumber(value)}</span>
+          </TooltipTrigger>
+
+          <TooltipContent>{withCommasNumber(value)}</TooltipContent>
+        </Tooltip>
+      </TooltipProvider>
     </div>
   )
 }
 
-// Record<keyof GitHubRepoDataItem, Icon>
+export type ProjectAnalysisData = Pick<GitHubRepoDataItem, 'stars' | 'forks'> &
+  Pick<NpmDownloadDataItem, 'downloads'>
+
+// Record<keyof ProjectAnalysisData, Icon>
 export const dataRenderConfig = {
   stars: Star,
   forks: Fork,
@@ -80,10 +103,11 @@ export const dataRenderConfig = {
 } as const
 
 interface DataAnalysisProps {
-  data: Partial<GitHubRepoDataItem> | undefined
+  data: ProjectAnalysisData | undefined
   className?: string
   iconClassName?: string
   valueClassName?: string
+  extraRender?: React.ReactNode
 }
 
 export const DataAnalysis: React.FC<DataAnalysisProps> = ({
@@ -91,12 +115,13 @@ export const DataAnalysis: React.FC<DataAnalysisProps> = ({
   className,
   iconClassName,
   valueClassName,
+  extraRender,
 }) => {
   if (!data) return null
   return (
     <div
       className={cn(
-        'flex flex-1 gap-3 items-center overflow-hidden',
+        'flex flex-1 gap-6 items-center overflow-hidden',
         className,
       )}
     >
@@ -112,6 +137,8 @@ export const DataAnalysis: React.FC<DataAnalysisProps> = ({
           />
         )
       })}
+
+      {extraRender}
     </div>
   )
 }
@@ -142,7 +169,7 @@ const Tags: React.FC<TagsProps> = ({ locale, tags }) => {
 }
 
 export type ProjectCardItem = ProjectConfigItem & {
-  data: GitHubRepoDataItem | undefined
+  data: ProjectAnalysisData | undefined
 }
 
 interface ProjectCardProps extends PropsWithLocale {
@@ -170,56 +197,63 @@ export const ProjectCard = async ({ locale, item }: ProjectCardProps) => {
     <Card className="flex flex-col w-full">
       <CardHeader className="gap-2">
         <CardTitle className="truncate">
-          <ExternalLink href={homepage || repoUrl}>{name}</ExternalLink>
-        </CardTitle>
-
-        <CardDescription>
-          <Paragraph
-            className={cn(
-              'text-muted-foreground text-sm',
-              locale === 'zh'
-                ? 'line-clamp-3 h-[60px]'
-                : 'line-clamp-5 h-[100px]',
-            )}
+          <ExternalLink
+            className="leading-[1.2] hover:underline"
+            href={homepage || repoUrl}
           >
-            {description}
-          </Paragraph>
-        </CardDescription>
-      </CardHeader>
-
-      <CardFooter className="flex justify-end gap-3 py-3">
-        <Tags locale={locale} tags={tags} />
+            {name}
+          </ExternalLink>
+        </CardTitle>
 
         <DataAnalysis data={data} />
 
-        {npm && (
+        <CardDescription
+          className={cn(
+            'text-muted-foreground text-sm',
+            locale === 'zh'
+              ? 'line-clamp-3 h-[60px]'
+              : 'line-clamp-5 h-[100px]',
+          )}
+        >
+          {description}
+        </CardDescription>
+      </CardHeader>
+
+      <CardFooter className="flex justify-between gap-3 py-3">
+        <Tags locale={locale} tags={tags} />
+
+        <div className="flex items-center gap-3">
+          {npm && (
+            <LinkIconButton
+              ariaLabel={ta('newTab', {
+                label: ` ${name} ${t('button.homepage')}`,
+              })}
+              href={npmUrl}
+              title={t('button.repo')}
+              icon={Npm}
+            />
+          )}
+
           <LinkIconButton
             ariaLabel={ta('newTab', {
               label: ` ${name} ${t('button.homepage')}`,
             })}
-            href={npmUrl}
+            href={repoUrl}
             title={t('button.repo')}
-            icon={Npm}
+            icon={Github}
           />
-        )}
 
-        <LinkIconButton
-          ariaLabel={ta('newTab', {
-            label: ` ${name} ${t('button.homepage')}`,
-          })}
-          href={repoUrl}
-          title={t('button.repo')}
-          icon={Github}
-        />
-
-        {homepage && (
-          <LinkIconButton
-            ariaLabel={ta('newTab', { label: ` ${name} ${t('button.repo')}` })}
-            href={homepage}
-            title={t('button.homepage')}
-            icon={Home}
-          />
-        )}
+          {homepage && (
+            <LinkIconButton
+              ariaLabel={ta('newTab', {
+                label: ` ${name} ${t('button.repo')}`,
+              })}
+              href={homepage}
+              title={t('button.homepage')}
+              icon={Home}
+            />
+          )}
+        </div>
       </CardFooter>
     </Card>
   )

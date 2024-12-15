@@ -58,6 +58,16 @@
     "button": {
       "homepage": "项目主页",
       "repo": "代码仓库"
+    },
+    "dataDescription": {
+      "title": "数据统计说明",
+      "list": {
+        "0": "「Star」和「Fork」是从 api.github.com 查询每个 GitHub 仓库的数据。",
+        "1": "「下载量」是从 api.npmjs.org 查询每个 npm 包的下载量，包括了：用户从命令行 install 、作为其他包的依赖一起被下载、来自 CI/CD 服务器下载、来自镜像下载，<more>点击了解更多</more> 。",
+        "2": "数据总览仅统计唯一仓库和唯一包的数据总和（多个项目处于同一 Monorepo 时不重复统计），卡片数据则由其所属仓库和包呈现。",
+        "3": "数据每天更新一次，仅递增记录历史数据。"
+      },
+      "okText": "我知道了"
     }
   },
   "action": {

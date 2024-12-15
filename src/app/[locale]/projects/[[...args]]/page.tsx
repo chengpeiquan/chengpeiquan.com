@@ -2,11 +2,16 @@ import React from 'react'
 import { getTranslations } from 'next-intl/server'
 import { Heading, LayoutMain, Paragraph } from 'blackwork'
 import { isArray, toArray } from '@bassist/utils'
-import { apis } from '@/fetcher'
+import {
+  type GitHubRepoDataItem,
+  type NpmDownloadDataItem,
+  apis,
+} from '@/fetcher'
 import { type ListPageProps } from '@/config/route-config'
 import { ExtraTag, type ProjectTag } from '@/config/project-config'
 import { ProjectList } from './components/project-list'
 import { DataAnalysis } from './components/project-card'
+import { DataDescription } from './components/data-description'
 
 export const generateMetadata = async ({
   params: promiseParams,
@@ -35,13 +40,16 @@ export default async function ProjectsPage({
     namespace: 'projectConfig',
   })
 
-  const data = await apis.gh.repos()
+  const ghData = await apis.gh.repos()
+  const npmData = await apis.npm.packages()
 
-  const sum = toArray(data).reduce(
+  const sum = [...toArray(ghData), ...toArray(npmData)].reduce(
     (acc, i) => {
-      acc.stars += i.stars ?? 0
-      acc.forks += i.forks ?? 0
-      acc.downloads += i.downloads ?? 0
+      const gh = i as GitHubRepoDataItem
+      const npm = i as NpmDownloadDataItem
+      acc.stars += gh.stars ?? 0
+      acc.forks += gh.forks ?? 0
+      acc.downloads += npm.downloads ?? 0
       return acc
     },
     { stars: 0, forks: 0, downloads: 0 },
@@ -60,11 +68,16 @@ export default async function ProjectsPage({
           data={sum}
           className="mt-6"
           valueClassName="text-base"
-          iconClassName="size-4"
+          iconClassName="size-5"
+          extraRender={<DataDescription locale={locale} />}
         />
       </div>
 
-      <ProjectList locale={locale} tag={tag} data={data} />
+      <ProjectList
+        locale={locale}
+        tag={tag}
+        data={{ gh: ghData, npm: npmData }}
+      />
     </LayoutMain>
   )
 }
