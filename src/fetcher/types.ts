@@ -10,5 +10,12 @@ export interface GitHubRepoDataItem {
   repo: string
   stars: number
   forks: number
+  fetchedAt: string
+}
+
+export interface NpmDownloadDataItem {
+  id: number
+  packageName: string
   downloads: number
+  fetchedAt: string
 }
