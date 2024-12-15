@@ -22,7 +22,7 @@
   "dependencies": {
     "@bassist/utils": "^0.16.0",
     "@web-analytics/core": "^0.1.5",
-    "blackwork": "^0.5.0",
+    "blackwork": "^0.6.0",
     "chengpeiquan.com": "link:",
     "flexsearch": "^0.7.43",
     "next": "^15.1.0",
