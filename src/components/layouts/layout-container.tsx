@@ -45,7 +45,7 @@ export const LayoutContainer = async ({
   return (
     <>
       <LayoutHeader
-        wrapperClassName="gap-12"
+        wrapperClassName="gap-12 md:gap-8"
         contentClassName="gap-6"
         socialLinksVisible={!isMobile}
         socialLinks={socialLinks}

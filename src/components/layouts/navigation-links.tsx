@@ -121,17 +121,17 @@ export const NavigationLinks: React.FC<NavigationLinksProps> = ({
   className,
   ...rest
 }) => {
-  const { isMd } = useBreakpoint()
+  const { isLg } = useBreakpoint()
 
   const visible = useMemo(() => {
     if (!isUndefined(forceVisible)) return forceVisible
-    return isMd
-  }, [forceVisible, isMd])
+    return isLg
+  }, [forceVisible, isLg])
 
   const cls = cn(
     'flex-row gap-4 text-lg font-medium md:items-center md:gap-5 md:text-sm lg:gap-6',
     {
-      'hidden md:flex': !visible,
+      'hidden lg:flex': !visible,
       flex: visible,
     },
     className,

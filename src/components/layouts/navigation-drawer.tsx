@@ -38,7 +38,7 @@ export const NavigationDrawer: React.FC<PropsWithDevice> = ({ isMobile }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname])
 
-  const btnCls = cn('inline-flex', { 'md:hidden': !isMobile })
+  const btnCls = cn('inline-flex', { 'lg:hidden': !isMobile })
   const contentCls = cn(
     'w-3/4 min-w-[300px] h-full rounded-none',
     isMobile ? 'max-w-sm' : 'max-w-[300px]',
