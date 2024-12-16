@@ -54,7 +54,7 @@ const ArticleCard: React.FC<{
 
       <div className="flex flex-col md:flex-row gap-4">
         {cover && (
-          <Link href={link}>
+          <Link href={link} variant="image">
             <div className="relative flex flex-shrink-0 w-full xs:w-[160px] aspect-[500/400] rounded-lg overflow-hidden">
               <Image
                 src={cover}

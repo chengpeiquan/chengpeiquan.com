@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import { getLocale, getTranslations } from 'next-intl/server'
 import { Button, Heading, LayoutMain, Paragraph } from 'blackwork'
-import { Link } from '@/navigation'
+import { ExternalLink, Link } from '@/navigation'
 import { siteConfig } from '@/config/site-config'
 import { cn } from '@/utils'
 import { isMobileDevice } from '@/config/middleware-config'
@@ -50,14 +50,9 @@ export const NotFoundGuide = async () => {
             <Paragraph>
               {t.rich('feedback', {
                 issue: () => (
-                  <Link
-                    href={siteConfig.feedbackLink}
-                    target="_blank"
-                    rel="nofollow noopener noreferrer"
-                    className="transition-colors text-foreground underline"
-                  >
+                  <ExternalLink href={siteConfig.feedbackLink} underline>
                     issue
-                  </Link>
+                  </ExternalLink>
                 ),
               })}
             </Paragraph>

@@ -37,7 +37,7 @@ const CookbookCard: React.FC<{
   return (
     <li className="flex flex-col gap-2 w-full">
       {cover && (
-        <Link href={link}>
+        <Link href={link} variant="image">
           <div className="relative flex flex-shrink-0 w-full aspect-[500/400] rounded-lg overflow-hidden">
             <Image
               src={cover}

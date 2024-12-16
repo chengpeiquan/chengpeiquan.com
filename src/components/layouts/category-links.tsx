@@ -32,11 +32,17 @@ const Links: React.FC<{
       {links.map((i) => {
         const cls = cn(
           'scroll-m-20 tracking-tight',
-          i.active ? 'text-xl font-semibold' : 'text-base',
+          i.active ? 'text-xl' : 'text-base',
         )
 
         return (
-          <Link key={i.href} href={i.href} className={cls}>
+          <Link
+            key={i.href}
+            href={i.href}
+            className={cls}
+            variant={i.active ? 'default' : 'secondary'}
+            strong={i.active}
+          >
             {i.label[locale]}
           </Link>
         )

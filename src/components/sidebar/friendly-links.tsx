@@ -1,6 +1,6 @@
 import React from 'react'
 import { Separator } from 'blackwork'
-import { Link } from '@/navigation'
+import { ExternalLink } from '@/navigation'
 import { SidebarBlock } from '../shared/sidebar-block'
 import { friendlyLinks } from '@/config/external-config'
 
@@ -18,14 +18,13 @@ export const FriendlyLinks: React.FC = () => {
                 />
               )}
 
-              <Link
+              <ExternalLink
                 href={i.href}
-                target="_blank"
-                rel="nofollow noopener noreferrer"
                 className="text-sm"
+                variant="secondary"
               >
                 {i.title}
-              </Link>
+              </ExternalLink>
             </React.Fragment>
           )
         })}

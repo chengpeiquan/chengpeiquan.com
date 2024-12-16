@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { Link } from '@/navigation'
+import { ExternalLink } from '@/navigation'
 import { SidebarBlock } from '../shared/sidebar-block'
 
 const qrCodeTitle = '菜谱专栏 · 小程序版本'
@@ -26,10 +26,9 @@ const onlineTitle = '在线互动'
 export const CookbookOnline: React.FC = () => {
   return (
     <SidebarBlock title={onlineTitle}>
-      <Link
+      <ExternalLink
+        variant="image"
         href="https://www.xiaohongshu.com/user/profile/5c6cf700000000001003f7f6"
-        target="_blank"
-        rel="nofollow noopener noreferrer"
       >
         <div className="relative w-full aspect-[500/797] rounded-lg overflow-hidden">
           <Image
@@ -40,7 +39,7 @@ export const CookbookOnline: React.FC = () => {
             style={{ objectFit: 'cover' }}
           />
         </div>
-      </Link>
+      </ExternalLink>
     </SidebarBlock>
   )
 }

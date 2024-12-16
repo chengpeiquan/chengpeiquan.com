@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { Button } from 'blackwork'
-import { Link } from '@/navigation'
+import { ExternalLink, Link } from '@/navigation'
 import { type linkItem } from '@/config/route-config'
 import { SidebarBlock } from '../shared/sidebar-block'
 
@@ -25,6 +25,7 @@ export const PublishedBooks: React.FC = () => {
         <Link
           href="/article/the-story-of-the-book-learning-vue3"
           target="_blank"
+          variant="image"
         >
           <div className="relative w-full aspect-[500/740] rounded-lg overflow-hidden">
             <Image
@@ -41,9 +42,7 @@ export const PublishedBooks: React.FC = () => {
           {links.map((i) => {
             return (
               <Button key={i.href} variant="link">
-                <Link href={i.href} target="_blank">
-                  {i.title}购买
-                </Link>
+                <ExternalLink href={i.href}>{i.title}购买</ExternalLink>
               </Button>
             )
           })}

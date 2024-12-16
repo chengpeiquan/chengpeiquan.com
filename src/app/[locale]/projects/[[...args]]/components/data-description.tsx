@@ -10,13 +10,13 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
   Button,
-  ExternalLink,
   Separator,
 } from 'blackwork'
 import { Help } from 'blackwork/icons'
 import { cn } from '@/utils'
 import { isMobileDevice } from '@/config/middleware-config'
 import { type PropsWithLocale } from '@/config/route-config'
+import { ExternalLink } from '@/navigation'
 
 export const DataDescription = async ({ locale }: PropsWithLocale) => {
   const isMobile = await isMobileDevice()
@@ -52,7 +52,8 @@ export const DataDescription = async ({ locale }: PropsWithLocale) => {
                       return t.rich('list.1', {
                         more: (chunks) => (
                           <ExternalLink
-                            className="underline"
+                            variant="secondary"
+                            underline
                             href="https://blog.npmjs.org/post/92574016600/numeric-precision-matters-how-npm-download-counts-work.html"
                           >
                             {chunks}

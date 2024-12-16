@@ -9,7 +9,7 @@ import {
   type PropsWithLocale,
 } from '@/config/route-config'
 import { isMobileDevice } from '@/config/middleware-config'
-import { Link } from '@/navigation'
+import { ExternalLink } from '@/navigation'
 import { LegacyTips } from './legacy-tips'
 
 interface StarOnGitHubProps extends PropsWithLocale {
@@ -27,17 +27,17 @@ const StarOnGitHub = async ({ locale, repo }: StarOnGitHubProps) => {
 
   if (!isString(repo)) return null
   return (
-    <Link
+    <ExternalLink
       title={title}
       aria-label={title}
       href={repo!}
-      className="flex items-center text-sm no-underline font-normal transition-colors hover:text-foreground text-gray-400 dark:text-gray-500"
-      target="_blank"
-      rel="nofollow noopener noreferrer"
+      className="flex items-center text-sm"
+      variant="secondary"
+      underline={false}
     >
       <MiniGitHub />
       <span className="ml-1">{label}</span>
-    </Link>
+    </ExternalLink>
   )
 }
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { Link } from '@/navigation'
+import { ExternalLink } from '@/navigation'
 import { SidebarBlock } from '../shared/sidebar-block'
 
 const title = '在线吸猫'
@@ -8,10 +8,9 @@ const title = '在线吸猫'
 export const CatHuffing: React.FC = () => {
   return (
     <SidebarBlock title={title}>
-      <Link
+      <ExternalLink
+        variant="image"
         href="https://www.douyin.com/user/MS4wLjABAAAAlqB3LfiKgR6zx48L4rLWzhwE1A9j6QcjzW7V0J0VR74"
-        target="_blank"
-        rel="noopener noreferrer"
       >
         <div className="relative w-full aspect-[500/509] rounded-lg overflow-hidden">
           <Image
@@ -22,7 +21,7 @@ export const CatHuffing: React.FC = () => {
             style={{ objectFit: 'cover' }}
           />
         </div>
-      </Link>
+      </ExternalLink>
     </SidebarBlock>
   )
 }

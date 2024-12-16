@@ -7,7 +7,6 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-  ExternalLink,
   Tooltip,
   TooltipContent,
   TooltipProvider,
@@ -33,6 +32,7 @@ import {
 import { cn } from '@/utils'
 import { type GitHubRepoDataItem, type NpmDownloadDataItem } from '@/fetcher'
 import { LinkIconButton } from '@/components/shared/link-icon-button'
+import { ExternalLink } from '@/navigation'
 
 // e.g. `1000` -> `1,000`
 const withCommasNumber = (val: string | number) => {
@@ -197,10 +197,7 @@ export const ProjectCard = async ({ locale, item }: ProjectCardProps) => {
     <Card className="flex flex-col w-full">
       <CardHeader className="gap-2">
         <CardTitle className="truncate">
-          <ExternalLink
-            className="leading-[1.2] hover:underline"
-            href={homepage || repoUrl}
-          >
+          <ExternalLink className="leading-[1.2]" href={homepage || repoUrl}>
             {name}
           </ExternalLink>
         </CardTitle>

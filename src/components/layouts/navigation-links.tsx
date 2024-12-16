@@ -56,11 +56,6 @@ const NavigationLink: React.FC<NavigationLinkProps> = ({
     return pathname === `/${slug}`
   }, [pathname, slug])
 
-  const cls = cn(
-    'text-base transition-colors hover:text-foreground',
-    active ? 'text-foreground' : 'text-muted-foreground',
-  )
-
   const href = useMemo(() => {
     if (isListFolder(slug)) {
       return `/${listFolderMapping[slug]}/1`
@@ -78,12 +73,19 @@ const NavigationLink: React.FC<NavigationLinkProps> = ({
     const icon = asButton ? <IconComp className="w-4 h-4 mr-2" /> : null
 
     return (
-      <Link href={href} className={cls} title={label} aria-label={ariaLabel}>
+      <Link
+        href={href}
+        className="text-base"
+        title={label}
+        aria-label={ariaLabel}
+        variant={active ? (asButton ? 'inherit' : 'default') : 'secondary'}
+        strong={active}
+      >
         {icon}
         {label}
       </Link>
     )
-  }, [ariaLabel, asButton, cls, href, label, slug])
+  }, [active, ariaLabel, asButton, href, label, slug])
 
   if (asButton) {
     return (
@@ -129,7 +131,7 @@ export const NavigationLinks: React.FC<NavigationLinksProps> = ({
   }, [forceVisible, isLg])
 
   const cls = cn(
-    'flex-row gap-4 text-lg font-medium md:items-center md:gap-5 md:text-sm lg:gap-6',
+    'flex-row gap-4 text-lg md:items-center md:gap-5 md:text-sm lg:gap-6',
     {
       'hidden lg:flex': !visible,
       flex: visible,

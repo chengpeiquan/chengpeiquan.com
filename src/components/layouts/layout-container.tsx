@@ -4,7 +4,6 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-  ExternalLink,
   LayoutFooter,
   LayoutHeader,
   ScrollToTop,
@@ -17,6 +16,7 @@ import { LanguageToggle } from '@/components/layouts/language-toggle'
 import { ThemeToggle } from '@/components/layouts/theme-toggle'
 import { NavigationDrawer } from '@/components/layouts/navigation-drawer'
 import { SearchBox } from '@/components/layouts/search-box'
+import { ExternalLink } from '@/navigation'
 
 type LayoutContainerProps = React.PropsWithChildren & PropsWithLocale
 
@@ -89,10 +89,7 @@ export const LayoutContainer = async ({
           © 2014-{new Date().getFullYear()} {t('name')}
         </span>
 
-        <ExternalLink
-          href="https://beian.miit.gov.cn/"
-          className="transition-colors hover:text-foreground text-muted-foreground"
-        >
+        <ExternalLink href="https://beian.miit.gov.cn/" variant="secondary">
           {t('icp')}
         </ExternalLink>
       </LayoutFooter>

@@ -9,9 +9,11 @@ import {
 } from '@/fetcher'
 import { type ListPageProps } from '@/config/route-config'
 import { ExtraTag, type ProjectTag } from '@/config/project-config'
+import { isMobileDevice } from '@/config/middleware-config'
 import { ProjectList } from './components/project-list'
 import { DataAnalysis } from './components/project-card'
 import { DataDescription } from './components/data-description'
+import { cn } from '@/utils'
 
 export const generateMetadata = async ({
   params: promiseParams,
@@ -55,10 +57,18 @@ export default async function ProjectsPage({
     { stars: 0, forks: 0, downloads: 0 },
   )
 
+  const isMobile = await isMobileDevice()
+
   return (
     <LayoutMain className="gap-12">
       <div className="flex flex-col items-center w-full">
-        <Heading className="text-6xl">{t('title')}</Heading>
+        <Heading
+          className={cn('text-6xl text-center', {
+            'my-8': isMobile,
+          })}
+        >
+          {t('title')}
+        </Heading>
 
         <Paragraph className="text-xl text-muted-foreground">
           {t('description')}
