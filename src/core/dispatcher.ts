@@ -91,15 +91,26 @@ export const getDetailsMetadata = cache(
   ): Promise<Metadata> => {
     const res = await getDetails(folder, params)
     if (!res) return {}
-    const { title, keywords, desc: description } = res.metadata
+    const { title, keywords, desc: description, cover } = res.metadata
     return {
       ...sharedMetadata,
       title,
       keywords,
       description,
-      // openGraph: {
-      //   images: ['/some-specific-page-image.jpg', ...previousImages],
-      // },
+      openGraph: {
+        title,
+        description,
+        images: [
+          {
+            url: cover,
+            width: 500,
+            height: 400,
+            alt: title,
+          },
+        ],
+        locale: params.locale,
+        type: 'website',
+      },
     }
   },
 )
