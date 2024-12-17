@@ -43,14 +43,9 @@ const ArticleCard: React.FC<{
 
   return (
     <li className="flex flex-col gap-4 w-full">
-      <Link href={link}>
-        <Heading
-          level={3}
-          className="text-lg md:text-2xl line-clamp-2 break-all"
-        >
-          {title}
-        </Heading>
-      </Link>
+      <Heading level={3} className="text-lg md:text-2xl line-clamp-2 break-all">
+        <Link href={link}>{title}</Link>
+      </Heading>
 
       <div className="flex flex-col md:flex-row gap-4">
         {cover && (

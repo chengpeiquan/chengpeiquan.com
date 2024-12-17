@@ -21,7 +21,7 @@ const {
   useRouter,
 } = createNavigation({ locales, pathnames, localePrefix, defaultLocale })
 
-const linkVariants = cva('font-medium transition-colors transition-opacity', {
+const linkVariants = cva('transition-colors transition-opacity', {
   variants: {
     variant: {
       inherit: '',

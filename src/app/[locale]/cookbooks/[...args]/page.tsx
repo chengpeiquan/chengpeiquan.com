@@ -50,14 +50,12 @@ const CookbookCard: React.FC<{
         </Link>
       )}
 
-      <Link href={link}>
-        <Heading
-          level={3}
-          className="text-base font-normal line-clamp-2 break-all"
-        >
-          {title}
-        </Heading>
-      </Link>
+      <Heading
+        level={3}
+        className="text-base font-normal line-clamp-2 break-all"
+      >
+        <Link href={link}>{title}</Link>
+      </Heading>
 
       <TimeDisplay value={date} />
     </li>
