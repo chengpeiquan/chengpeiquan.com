@@ -10,6 +10,7 @@ import {
 } from 'blackwork'
 import { isMobileDevice } from '@/config/middleware-config'
 import { type PropsWithLocale } from '@/config/route-config'
+import { BottomRightButtonStyle } from '@/config/style-config'
 import { getLocaleSocialLinks, siteConfig } from '@/config/site-config'
 import { NavigationLinks } from '@/components/layouts/navigation-links'
 import { LanguageToggle } from '@/components/layouts/language-toggle'
@@ -80,7 +81,7 @@ export const LayoutContainer = async ({
       {children}
 
       <ScrollToTop
-        className={isMobile ? 'right-5 bottom-5' : ''}
+        style={new BottomRightButtonStyle(0, isMobile).style}
         variant={isMobile ? 'outline' : 'ghost'}
       />
 
