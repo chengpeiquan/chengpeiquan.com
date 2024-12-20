@@ -21,6 +21,7 @@ import {
   type HeadingItem,
   headingDepths,
 } from '@/config/content-config'
+import { getBrbStyle } from '@/config/style-config'
 
 /**
  * Flatten headings to reduce HTML tag nesting
@@ -180,7 +181,9 @@ export const DesktopToc: React.FC<TableOfContentsProps> = (props) => {
   )
 }
 
-export const MobileToc: React.FC<TableOfContentsProps> = (props) => {
+export const MobileToc: React.FC<
+  TableOfContentsProps & { isMobile: boolean }
+> = ({ isMobile, ...props }) => {
   const t = useTranslations('basicConfig')
   const { items, tocProps } = useTableOfContents(props)
 
@@ -192,6 +195,7 @@ export const MobileToc: React.FC<TableOfContentsProps> = (props) => {
           variant="outline"
           size="icon"
           className="fixed right-5 bottom-20 w-10 h-10 select-none z-10"
+          style={getBrbStyle(1, isMobile)}
         >
           <TocIcon className="w-5 h-5" />
         </Button>

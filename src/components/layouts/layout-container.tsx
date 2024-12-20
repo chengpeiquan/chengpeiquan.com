@@ -10,7 +10,7 @@ import {
 } from 'blackwork'
 import { isMobileDevice } from '@/config/middleware-config'
 import { type PropsWithLocale } from '@/config/route-config'
-import { BottomRightButtonStyle } from '@/config/style-config'
+import { getBrbStyle, getBrbVariant } from '@/config/style-config'
 import { getLocaleSocialLinks, siteConfig } from '@/config/site-config'
 import { NavigationLinks } from '@/components/layouts/navigation-links'
 import { LanguageToggle } from '@/components/layouts/language-toggle'
@@ -81,8 +81,8 @@ export const LayoutContainer = async ({
       {children}
 
       <ScrollToTop
-        style={new BottomRightButtonStyle(0, isMobile).style}
-        variant={isMobile ? 'outline' : 'ghost'}
+        variant={getBrbVariant(isMobile)}
+        style={getBrbStyle(0, isMobile)}
       />
 
       <LayoutFooter className="gap-4 sm:gap-12 flex-col sm:flex-row">
