@@ -59,6 +59,17 @@ export const isActiveListFolder = (pathname: string, folder: ListFolder) => {
 // With item's slug
 export type ContentDetailsLink = `/${ContentFolder}/${string}`
 
+// If background music is configured,
+// the music player will be enabled on the article content page
+const bgmSchema = z.object({
+  src: z.string(),
+  title: z.string(),
+  albumCover: z.string(),
+  musician: z.string().optional(),
+})
+
+export type BgmConfig = z.infer<typeof bgmSchema>
+
 // Define the Zod schema for `ContentMetadata`
 const contentMetadataSchema = z.object({
   // Shared
@@ -79,7 +90,11 @@ const contentMetadataSchema = z.object({
   duration: z.number().optional(),
   price: z.number().optional(),
   xiaohongshuId: z.string().optional(),
+
+  bgm: bgmSchema.optional(),
 })
+
+export type ContentMetadata = z.infer<typeof contentMetadataSchema>
 
 // Mapping to `h2` / `h3` and so on
 export const headingDepths = [2, 3, 4, 5, 6] as const
@@ -119,9 +134,8 @@ export const contentItemSchema = z.object({
   headings: z.array(headingSchema),
   jsxElement: jsxElementSchema,
   html: z.string(),
+  bgm: bgmSchema.optional(),
 })
-
-export type ContentMetadata = z.infer<typeof contentMetadataSchema>
 
 export type ContentItem = z.infer<typeof contentItemSchema>
 

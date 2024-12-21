@@ -2,7 +2,7 @@ import React from 'react'
 import { getTranslations } from 'next-intl/server'
 import { Heading, Paragraph } from 'blackwork'
 import { MiniGitHub } from 'blackwork/icons'
-import { isString } from '@bassist/utils'
+import { isObject, isString } from '@bassist/utils'
 import { type ContentItem, type ContentMetadata } from '@/config/content-config'
 import {
   type PropsWithDevice,
@@ -10,6 +10,7 @@ import {
 } from '@/config/route-config'
 import { isMobileDevice } from '@/config/middleware-config'
 import { ExternalLink } from '@/navigation'
+import { MusicPlayer } from '@/components/music-player'
 import { LegacyTips } from './legacy-tips'
 
 interface StarOnGitHubProps extends PropsWithLocale {
@@ -112,6 +113,10 @@ export const MarkupRenderer = async ({
       {toc}
 
       {jsxElement}
+
+      {isObject(metadata.bgm) && (
+        <MusicPlayer isMobile={isMobile} {...metadata.bgm} />
+      )}
     </article>
   )
 }
