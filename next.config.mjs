@@ -27,12 +27,16 @@ const nextConfig = {
     return config
   },
   async redirects() {
+    const neteaseDocSources = ['/topic/netease/:slug*', '/article/my-netease']
+
     return [
-      {
-        source: '/topic/netease/:slug*',
-        destination: '/article/my-five-years-working-at-netease',
-        permanent: true,
-      },
+      ...neteaseDocSources.map((source) => {
+        return {
+          source,
+          destination: '/article/my-five-years-working-at-netease',
+          permanent: true,
+        }
+      }),
     ]
   },
 }
