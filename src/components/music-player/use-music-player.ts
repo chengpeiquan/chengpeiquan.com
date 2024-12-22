@@ -46,6 +46,9 @@ export const useMusicPlayer = () => {
   useEffect(() => {
     if (!isBrowser) return
 
+    const el = document.querySelector('main') || document
+    if (!el) return
+
     const run = () => {
       if (!playing && !hasUserInteracted.current) {
         hasUserInteracted.current = true
@@ -53,12 +56,12 @@ export const useMusicPlayer = () => {
       }
     }
 
-    document.addEventListener('touchstart', run)
-    document.addEventListener('click', run)
+    el.addEventListener('touchstart', run)
+    el.addEventListener('click', run)
 
     return () => {
-      document.removeEventListener('touchstart', run)
-      document.removeEventListener('click', run)
+      el.removeEventListener('touchstart', run)
+      el.removeEventListener('click', run)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
