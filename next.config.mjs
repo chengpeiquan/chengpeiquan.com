@@ -26,6 +26,15 @@ const nextConfig = {
     )
     return config
   },
+  async redirects() {
+    return [
+      {
+        source: '/topic/netease/:slug*',
+        destination: '/article/my-five-years-working-at-netease',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 export default withNextIntl(nextConfig)
