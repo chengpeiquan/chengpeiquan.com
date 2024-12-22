@@ -61,7 +61,9 @@ export const LayoutContainer = async ({
               src={siteConfig.avatar.small}
               alt={siteConfig.author.name}
             />
-            <AvatarFallback>CPQ</AvatarFallback>
+            <AvatarFallback>
+              {t('name').slice(0, 1).toUpperCase()}
+            </AvatarFallback>
           </Avatar>
 
           <h2 className="text-foreground text-lg">{t('name')}</h2>

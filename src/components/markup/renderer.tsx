@@ -1,6 +1,6 @@
 import React from 'react'
 import { getTranslations } from 'next-intl/server'
-import { Heading, Paragraph } from 'blackwork'
+import { Avatar, AvatarFallback, AvatarImage, Heading } from 'blackwork'
 import { MiniGitHub } from 'blackwork/icons'
 import { isObject, isString } from '@bassist/utils'
 import { type ContentItem, type ContentMetadata } from '@/config/content-config'
@@ -9,6 +9,7 @@ import {
   type PropsWithLocale,
 } from '@/config/route-config'
 import { isMobileDevice } from '@/config/middleware-config'
+import { siteConfig } from '@/config/site-config'
 import { ExternalLink } from '@/navigation'
 import { MusicPlayer } from '@/components/music-player'
 import { LegacyTips } from './legacy-tips'
@@ -57,16 +58,25 @@ const AuthorData = async ({
   const starVisible = !isMobile && repo?.startsWith('http')
 
   return (
-    <div className="flex items-center justify-between w-full my-4">
-      <Paragraph className="text-sm text-gray-400 dark:text-gray-500 m-0">
-        <span aria-label={author}>{author}</span>
+    <div className="flex items-center justify-between w-full my-6 not-prose">
+      <div className="flex gap-2 items-center">
+        <Avatar className="w-10 h-10">
+          <AvatarImage src={siteConfig.avatar.small} alt={author} />
+          <AvatarFallback>{author.slice(0, 1).toUpperCase()}</AvatarFallback>
+        </Avatar>
 
-        {!!date && (
-          <span className="ml-6" aria-label={date}>
-            {date}
+        <div className="flex flex-col text-muted-foreground">
+          <span aria-label={author} className="text-sm">
+            {author}
           </span>
-        )}
-      </Paragraph>
+
+          {!!date && (
+            <span aria-label={date} className="text-xs">
+              {date}
+            </span>
+          )}
+        </div>
+      </div>
 
       {starVisible && <StarOnGitHub locale={locale} repo={repo} />}
     </div>
