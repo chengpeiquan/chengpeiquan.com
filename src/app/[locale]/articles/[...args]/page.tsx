@@ -47,7 +47,7 @@ const ArticleCard: React.FC<{
         <Link href={link}>{title}</Link>
       </Heading>
 
-      <div className="flex flex-col md:flex-row gap-4">
+      <div className="flex flex-col xs:flex-row gap-4">
         {cover && (
           <Link href={link} variant="image">
             <div className="relative flex flex-shrink-0 w-full xs:w-[160px] aspect-[500/400] rounded-lg overflow-hidden">
@@ -63,11 +63,11 @@ const ArticleCard: React.FC<{
         )}
 
         <div className="flex flex-col justify-between">
-          <p className="md:h-auto h-0 text-sm md:text-base text-gray-400 md:mb-4 mb-0 md:line-clamp-3 line-clamp-2">
+          <p className="xs:h-auto h-0 text-sm xs:text-base text-gray-400 xs:mb-4 mb-0 xs:line-clamp-3 line-clamp-2">
             {desc}
           </p>
 
-          <TimeDisplay value={date} className="md:text-sm" />
+          <TimeDisplay value={date} className="xs:text-sm" />
         </div>
       </div>
     </li>
