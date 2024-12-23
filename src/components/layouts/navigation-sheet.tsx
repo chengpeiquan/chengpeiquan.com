@@ -26,7 +26,7 @@ import { usePathname } from '@/navigation'
 export const NavigationSheet: React.FC<PropsWithDevice> = ({ isMobile }) => {
   const pathname = usePathname()
   const t = useTranslations('basicConfig.navigation')
-  const { isMd } = useBreakpoint()
+  const { isLg } = useBreakpoint()
   const { locale } = useClientLocale()
 
   const socialLinks = useMemo(() => getLocaleSocialLinks(locale), [locale])
@@ -52,7 +52,7 @@ export const NavigationSheet: React.FC<PropsWithDevice> = ({ isMobile }) => {
         </Button>
       </SheetTrigger>
 
-      {!isMd && (
+      {!isLg && (
         <SheetContent
           side="left"
           className={contentCls}
