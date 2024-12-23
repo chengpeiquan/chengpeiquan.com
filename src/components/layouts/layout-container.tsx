@@ -15,7 +15,7 @@ import { getLocaleSocialLinks, siteConfig } from '@/config/site-config'
 import { NavigationLinks } from '@/components/layouts/navigation-links'
 import { LanguageToggle } from '@/components/layouts/language-toggle'
 import { ThemeToggle } from '@/components/layouts/theme-toggle'
-import { NavigationDrawer } from '@/components/layouts/navigation-drawer'
+import { NavigationSheet } from '@/components/layouts/navigation-sheet'
 import { SearchBox } from '@/components/layouts/search-box'
 import { ExternalLink } from '@/navigation'
 
@@ -54,7 +54,7 @@ export const LayoutContainer = async ({
         themeToggle={<ThemeToggle />}
       >
         <div className="flex flex-shrink-0 items-center gap-3">
-          <NavigationDrawer isMobile={isMobile} />
+          <NavigationSheet isMobile={isMobile} />
 
           <Avatar className="w-7 h-7">
             <AvatarImage

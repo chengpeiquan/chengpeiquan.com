@@ -14,6 +14,10 @@ html.dark .shiki span {
   text-decoration: var(--shiki-dark-text-decoration) !important;
 }
 
+html body[data-scroll-locked] {
+  overflow: unset !important;
+}
+
 /* Content styles */
 .prose {
   max-width: 100% !important;
