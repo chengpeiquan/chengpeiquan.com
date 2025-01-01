@@ -189,19 +189,14 @@ export const MobileToc: React.FC<
 
   if (!items.length) return null
   return (
-    <Dialog modal={false}>
+    <Dialog>
       <DialogTrigger asChild>
-        <Button
-          variant="outline"
-          size="icon"
-          className="fixed right-5 bottom-20 w-10 h-10 select-none z-10"
-          style={getBrbStyle(1, isMobile)}
-        >
+        <Button variant="outline" size="icon" style={getBrbStyle(1, isMobile)}>
           <TocIcon className="w-5 h-5" />
         </Button>
       </DialogTrigger>
 
-      <DialogContent className="w-3/4 rounded-xl">
+      <DialogContent className="w-[90vw] rounded-lg">
         <DialogHeader>
           <DialogTitle>{t('outline.title')}</DialogTitle>
         </DialogHeader>

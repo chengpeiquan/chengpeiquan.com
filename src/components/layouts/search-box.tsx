@@ -208,7 +208,7 @@ export const SearchBoxRoot: React.FC<PropsWithDevice> = ({ isMobile }) => {
         contentProps={{
           className: cn({
             'w-[750px] max-w-full': !isMobile,
-            'w-3/4 rounded-xl': isMobile,
+            'w-[90vw] rounded-lg': isMobile,
           }),
         }}
       >
