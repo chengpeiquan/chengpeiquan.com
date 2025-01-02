@@ -66,8 +66,9 @@ export default async function CookbooksPage({
   params: promiseParams,
 }: ListPageProps) {
   const params = await promiseParams
+  const { locale, args } = params
 
-  if (params.args.length > 2) {
+  if (args.length > 2) {
     notFound()
   }
 
@@ -82,16 +83,16 @@ export default async function CookbooksPage({
     <LayoutMain className="gap-8">
       <CategoryLinks
         className="gap-6 mb-0"
-        locale={params.locale}
+        locale={locale}
         group="cookbooks"
         category={category}
         categories={cookbookCategories}
         collapsible
-        collapsibleTitle={categoryGroupTitleConfig.cookbooks[params.locale]}
+        collapsibleTitle={categoryGroupTitleConfig.cookbooks[locale]}
       />
 
       {isEmpty ? (
-        <Empty locale={params.locale} />
+        <Empty locale={locale} />
       ) : (
         <ul className="grid md:grid-cols-5 grid-cols-1 col-auto row-auto gap-8 mb-4 md:mb-12">
           {items.map((i) => (

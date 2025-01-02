@@ -1,5 +1,5 @@
 import React from 'react'
-import { HolyGrailAside, HolyGrailContent, LayoutMain } from 'blackwork'
+import { HolyGrailContent, LayoutMain } from 'blackwork'
 import { isMobileDevice } from '@/config/middleware-config'
 import { type Locale } from '@/config/locale-config'
 import { type ContentItem } from '@/config/content-config'
@@ -38,7 +38,7 @@ export const DetailsMain = async ({
         />
       </HolyGrailContent>
 
-      {aside && <HolyGrailAside>{aside}</HolyGrailAside>}
+      {aside}
     </LayoutMain>
   )
 }

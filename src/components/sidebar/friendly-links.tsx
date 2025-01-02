@@ -1,12 +1,15 @@
 import React from 'react'
 import { Separator } from 'blackwork'
 import { ExternalLink } from '@/navigation'
-import { SidebarBlock } from '../shared/sidebar-block'
 import { friendlyLinks } from '@/config/external-config'
+import {
+  type PropsWithControllable,
+  SidebarBlock,
+} from '../shared/sidebar-block'
 
-export const FriendlyLinks: React.FC = () => {
+export const FriendlyLinks: React.FC<PropsWithControllable> = (props) => {
   return (
-    <SidebarBlock title="友情链接">
+    <SidebarBlock title="友情链接" {...props}>
       <div className="w-full space-x-3 space-y-2">
         {friendlyLinks.map((i, idx) => {
           return (

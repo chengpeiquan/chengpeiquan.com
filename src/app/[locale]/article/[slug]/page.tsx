@@ -3,10 +3,8 @@ import { notFound } from 'next/navigation'
 import { ContentFolder } from '@/config/content-config'
 import { type DetailsPageProps } from '@/config/route-config'
 import { getDetails, getDetailsMetadata } from '@/core/dispatcher'
-import { PublishedBooks } from '@/components/sidebar/published-books'
-import { CatHuffing } from '@/components/sidebar/cat-huffing'
-import { FriendlyLinks } from '@/components/sidebar/friendly-links'
 import { DetailsMain } from '@/components/layouts/details-main'
+import { ArticleSidebar } from '@/components/sidebar'
 
 const folder = ContentFolder.Article
 
@@ -33,13 +31,7 @@ export default async function ArticlePage({
       metadata={res.metadata}
       headings={res.headings}
       jsxElement={res.jsxElement}
-      aside={
-        <>
-          <PublishedBooks />
-          <CatHuffing />
-          <FriendlyLinks />
-        </>
-      }
+      aside={<ArticleSidebar />}
     />
   )
 }

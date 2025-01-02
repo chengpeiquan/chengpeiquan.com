@@ -4,6 +4,7 @@ import React from 'react'
 import { useTranslations } from 'next-intl'
 import {
   Button,
+  ScrollArea,
   Separator,
   Sheet,
   SheetClose,
@@ -19,9 +20,44 @@ import { getLocaleSocialLinks } from '@/config/site-config'
 import { type PropsWithDevice } from '@/config/route-config'
 import { NavigationLinks } from '@/components/layouts/navigation-links'
 import { SearchBox } from '@/components/layouts/search-box'
-import { useBreakpoint, useClientLocale } from '@/hooks'
+import { PublishedBooks } from '@/components/sidebar/published-books'
+import { CatHuffing } from '@/components/sidebar/cat-huffing'
+import { FriendlyLinks } from '@/components/sidebar/friendly-links'
+import {
+  CookbookOnline,
+  CookbookQrCode,
+} from '@/components/sidebar/cookbook-widgets'
+import { useBreakpoint, useClientLocale, useClientLocation } from '@/hooks'
 import { cn } from '@/utils'
 import { usePathname } from '@/navigation'
+
+const Recommend: React.FC = () => {
+  const { isChinese } = useClientLocale()
+  const { isCookbook } = useClientLocation()
+
+  const blocks = useMemo(() => {
+    const items = isCookbook
+      ? [CookbookQrCode, CookbookOnline]
+      : [PublishedBooks, CatHuffing]
+
+    items.push(FriendlyLinks)
+
+    return items
+  }, [isCookbook])
+
+  if (!isChinese) return null
+  return (
+    <>
+      <Separator className="my-4" />
+
+      <div className="flex flex-col gap-6 w-full">
+        {blocks.map((Comp, idx) => (
+          <Comp key={idx} titleClassName="text-sm" separatorVisible={false} />
+        ))}
+      </div>
+    </>
+  )
+}
 
 export const NavigationSheet: React.FC<PropsWithDevice> = ({ isMobile }) => {
   const pathname = usePathname()
@@ -70,7 +106,15 @@ export const NavigationSheet: React.FC<PropsWithDevice> = ({ isMobile }) => {
 
               <Separator className="my-4" />
 
-              <NavigationLinks visible asButton className="grid grid-cols-2" />
+              <ScrollArea className="pr-3 -mr-3">
+                <NavigationLinks
+                  visible
+                  asButton
+                  className="grid grid-cols-2"
+                />
+
+                <Recommend />
+              </ScrollArea>
 
               <Separator className="my-4" />
 

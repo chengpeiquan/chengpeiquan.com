@@ -1,13 +1,16 @@
 import React from 'react'
 import Image from 'next/image'
 import { ExternalLink } from '@/navigation'
-import { SidebarBlock } from '../shared/sidebar-block'
+import {
+  type PropsWithControllable,
+  SidebarBlock,
+} from '../shared/sidebar-block'
 
 const qrCodeTitle = '菜谱专栏 · 小程序版本'
 
-export const CookbookQrCode: React.FC = () => {
+export const CookbookQrCode: React.FC<PropsWithControllable> = (props) => {
   return (
-    <SidebarBlock title={qrCodeTitle}>
+    <SidebarBlock title={qrCodeTitle} {...props}>
       <div className="relative w-full aspect-[500/235] rounded-lg overflow-hidden">
         <Image
           src="https://cdn.chengpeiquan.com/img/2022/02/20220221111852.jpg?x-oss-process=image/interlace,1"
@@ -23,9 +26,9 @@ export const CookbookQrCode: React.FC = () => {
 
 const onlineTitle = '在线互动'
 
-export const CookbookOnline: React.FC = () => {
+export const CookbookOnline: React.FC<PropsWithControllable> = (props) => {
   return (
-    <SidebarBlock title={onlineTitle}>
+    <SidebarBlock title={onlineTitle} {...props}>
       <ExternalLink
         variant="image"
         href="https://www.xiaohongshu.com/user/profile/5c6cf700000000001003f7f6"

@@ -3,7 +3,10 @@ import Image from 'next/image'
 import { Button } from 'blackwork'
 import { ExternalLink, Link } from '@/navigation'
 import { type linkItem } from '@/config/route-config'
-import { SidebarBlock } from '../shared/sidebar-block'
+import {
+  type PropsWithControllable,
+  SidebarBlock,
+} from '@/components/shared/sidebar-block'
 
 const links: readonly linkItem[] = [
   {
@@ -18,18 +21,19 @@ const links: readonly linkItem[] = [
 
 const title = '我出版的书'
 
-export const PublishedBooks: React.FC = () => {
+export const PublishedBooks: React.FC<PropsWithControllable> = (props) => {
   return (
-    <SidebarBlock title={title}>
+    <SidebarBlock title={title} {...props}>
       <div className="flex flex-col w-full">
         <Link
           href="/article/the-story-of-the-book-learning-vue3"
           target="_blank"
           variant="image"
         >
-          <div className="relative w-full aspect-[500/740] rounded-lg overflow-hidden">
+          <div className="relative w-full aspect-[1920/1080] rounded-lg overflow-hidden">
             <Image
-              src="https://cdn.chengpeiquan.com/img/2023/05/20230508232214.jpg?x-oss-process=image/interlace,1"
+              // src="https://cdn.chengpeiquan.com/img/2023/05/20230508232214.jpg?x-oss-process=image/interlace,1"
+              src="https://cdn.chengpeiquan.com/img/2025/01/202501012317610.jpg?x-oss-process=image/interlace,1"
               alt={title}
               fill
               sizes="(max-width: 1024px) 256px, (max-width: 1280px) 320px, 384px"

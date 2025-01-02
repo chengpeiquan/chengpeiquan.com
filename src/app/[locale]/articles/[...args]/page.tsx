@@ -1,12 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
-import {
-  Heading,
-  HolyGrailAside,
-  HolyGrailContent,
-  LayoutMain,
-} from 'blackwork'
+import { Heading, HolyGrailContent, LayoutMain } from 'blackwork'
 import {
   type ContentDetailsLink,
   ContentFolder,
@@ -19,10 +14,8 @@ import { getList, getListMetadata } from '@/core/dispatcher'
 import { Empty } from '@/components/layouts/empty'
 import { Pagination } from '@/components/layouts/pagination'
 import { CategoryLinks } from '@/components/layouts/category-links'
-import { PublishedBooks } from '@/components/sidebar/published-books'
-import { CatHuffing } from '@/components/sidebar/cat-huffing'
-import { FriendlyLinks } from '@/components/sidebar/friendly-links'
 import { TimeDisplay } from '@/components/shared/time-display'
+import { ArticleSidebar } from '@/components/sidebar'
 import { Link } from '@/navigation'
 
 const folder = ContentFolder.Article
@@ -78,8 +71,9 @@ export default async function ArticlesPage({
   params: promiseParams,
 }: ListPageProps) {
   const params = await promiseParams
+  const { locale, args } = params
 
-  if (params.args.length > 2) {
+  if (args.length > 2) {
     notFound()
   }
 
@@ -94,14 +88,14 @@ export default async function ArticlesPage({
     <LayoutMain className="sm:flex-row justify-between gap-16">
       <HolyGrailContent>
         <CategoryLinks
-          locale={params.locale}
+          locale={locale}
           group="articles"
           category={category}
           categories={articleCategories}
         />
 
         {isEmpty ? (
-          <Empty locale={params.locale} />
+          <Empty locale={locale} />
         ) : (
           <ul className="flex flex-col gap-12 w-full mb-12">
             {items.map((i) => (
@@ -123,11 +117,7 @@ export default async function ArticlesPage({
         />
       </HolyGrailContent>
 
-      <HolyGrailAside>
-        <PublishedBooks />
-        <CatHuffing />
-        <FriendlyLinks />
-      </HolyGrailAside>
+      <ArticleSidebar />
     </LayoutMain>
   )
 }

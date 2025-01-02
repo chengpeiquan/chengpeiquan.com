@@ -11,7 +11,7 @@ repo: https://github.com/chengpeiquan/learning-vue3
 
 大家好，我是程沛权，经过差不多一年时间的打磨和优化，我的第一本技术书籍《前端工程化：基于 Vue.js 3.0 的设计与实践》出版上市啦！
 
-![前端工程化：基于 Vue.js 3.0 的设计与实践](https://cdn.chengpeiquan.com/img/2023/05/20230504234507.png?x-oss-process=image/interlace,1)
+![前端工程化：基于 Vue.js 3.0 的设计与实践](https://cdn.chengpeiquan.com/img/2025/01/202501012318823.jpg?x-oss-process=image/interlace,1)
 
 这是一本以 Vue.js 的 3.0 版本为核心技术栈，围绕 “前端工程化” 和 TypeScript 的知识点展开讲解的前端入门书籍，主要面向以下读者人群：
 

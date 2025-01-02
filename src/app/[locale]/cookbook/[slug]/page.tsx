@@ -3,12 +3,8 @@ import { notFound } from 'next/navigation'
 import { ContentFolder } from '@/config/content-config'
 import { type DetailsPageProps } from '@/config/route-config'
 import { getDetails, getDetailsMetadata } from '@/core/dispatcher'
-import { FriendlyLinks } from '@/components/sidebar/friendly-links'
-import {
-  CookbookOnline,
-  CookbookQrCode,
-} from '@/components/sidebar/cookbook-widgets'
 import { DetailsMain } from '@/components/layouts/details-main'
+import { CookbookSidebar } from '@/components/sidebar'
 
 const folder = ContentFolder.Cookbook
 
@@ -35,13 +31,7 @@ export default async function ArticlePage({
       metadata={res.metadata}
       headings={res.headings}
       jsxElement={res.jsxElement}
-      aside={
-        <>
-          <CookbookQrCode />
-          <CookbookOnline />
-          <FriendlyLinks />
-        </>
-      }
+      aside={<CookbookSidebar />}
     />
   )
 }
