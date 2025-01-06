@@ -93,9 +93,9 @@
   {
     "slug": "my-custom-nas",
     "metadata": {
-      "title": "千元预算组装了个入门NAS设备 一文分享NAS的硬件基础知识",
+      "title": "千元预算组装入门 NAS 设备 分享 NAS 的硬件基础知识",
       "desc": "最近在一千元预算内搞了一台 NAS ，在这个过程也算蛮自定义的搭配，记录一下这个过程中的主要知识点和最终搭配结果。初接触 NAS 的时候最迷茫的应该就是它的概念和用途了，就算了解了它的作用，想采购一个合适的 NAS 设备又会涉及到很多硬件知识。既然选择自己配 NAS 做一个 DIY 玩家，肯定还是需要先熟悉一些前置的硬件知识，否则大可花几千块钱买成品 NAS 了，所以有一些前置知识点还是值得先简单了解一下。",
-      "keywords": "千元NAS,NAS,群晖,SDM,PVE",
+      "keywords": "千元NAS,NAS,入门NAS,NAS系统,飞牛私有云,fnOS,飞牛NAS,飞牛系统,迷你主机NAS,飞牛影视,飞牛相册,",
       "cover": "https://cdn.chengpeiquan.com/img/2023/06/20230611223039.jpg?x-oss-process=image/interlace,1",
       "categories": [
         "tech"
