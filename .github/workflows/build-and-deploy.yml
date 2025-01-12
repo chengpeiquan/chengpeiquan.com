@@ -45,6 +45,6 @@ jobs:
             docker pull ${{ secrets.DOCKER_IMAGE }}
             docker stop ${{ secrets.DOCKER_CONTAINER }} || true
             docker rm ${{ secrets.DOCKER_CONTAINER }} || true
-            docker run -d --name ${{ secrets.DOCKER_CONTAINER }} -p ${{ secrets.DOCKER_PORT }}:${{ secrets.DOCKER_PORT }} ${{ secrets.DOCKER_IMAGE }}
+            docker run --restart=always -d --name ${{ secrets.DOCKER_CONTAINER }} -p ${{ secrets.DOCKER_PORT }}:${{ secrets.DOCKER_PORT }} ${{ secrets.DOCKER_IMAGE }}
             docker image prune -f
             docker logout
