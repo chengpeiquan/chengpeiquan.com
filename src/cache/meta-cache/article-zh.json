@@ -1,5 +1,31 @@
 [
   {
+    "slug": "true-colors-a-decade",
+    "metadata": {
+      "title": "本色十年",
+      "desc": "本来这篇文章的标题按惯例应该是《年终总结：2024 年的一些回顾和 2025 年的一些小规划》 ，但 2024 年刚好也是我开始独立博客的第十年，想顺便回顾一下十年时间自己经历和变化，所以换了这个不起眼的标题哈哈哈。",
+      "keywords": "年终总结,2024年终总结,飞牛私有云,fnOS,本色十年,独立博客,英雄本色,A Better Tomorrow,当年情,Beyond,黄家驹",
+      "cover": "https://cdn.chengpeiquan.com/img/2025/01/202501280323776.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ],
+      "bgm": {
+        "src": "http://cdn.chengpeiquan.com/bgm/hai-kuo-tian-kong.m4a",
+        "title": "海阔天空",
+        "musician": "Beyond",
+        "albumCover": "https://cdn.chengpeiquan.com/img/2025/01/202501262231220.jpg?x-oss-process=image/interlace,1"
+      },
+      "cite": [
+        "2024-year-end-summary",
+        "2023-year-end-summary",
+        "2022-year-end-summary",
+        "2021-year-end-summary"
+      ],
+      "date": "2025/1/28 02:45:58",
+      "timestamp": 1738003558000
+    }
+  },
+  {
     "slug": "nginx-incomplete-chunked-encoding-error",
     "metadata": {
       "title": "记录一次 ERR_INCOMPLETE_CHUNKED_ENCODING 的问题排查",
@@ -75,7 +101,7 @@
   {
     "slug": "2023-year-end-summary",
     "metadata": {
-      "title": "年终总结：2023年的一些回顾和2024年的一些小规划",
+      "title": "年终总结：2023 年的一些回顾和 2024 年的一些小规划",
       "desc": "本来今年的总结第一句话想写 “2023 对我算是比较特殊的一年” ，结果看了一眼去年的回顾，去年也是这么写的… 那今年再强化一下，改成 “2023 对我是非常特殊的一年” 哈哈哈哈哈哈哈，确实非常特殊的一年，因为经历了很多之前没有经历过的事情。",
       "keywords": "2023 year end summary",
       "cover": "https://cdn.chengpeiquan.com/img/2023/12/20231230212146.jpg?x-oss-process=image/interlace,1",
@@ -83,6 +109,8 @@
         "prose"
       ],
       "cite": [
+        "2024-year-end-summary",
+        "2023-year-end-summary",
         "2022-year-end-summary",
         "2021-year-end-summary"
       ],
@@ -138,7 +166,7 @@
   {
     "slug": "2022-year-end-summary",
     "metadata": {
-      "title": "年终总结：2022年的一些回顾和2023年的一些小规划",
+      "title": "年终总结：2022 年的一些回顾和 2023 年的一些小规划",
       "desc": "2022 对我算是比较特殊的一年，虽然因为疫情原因彻底宅了一年，但也没有闲着，换了工作换了城市，回到了阔别两年的第二故乡广州，工作之外的学习和生活对个人的成长也有一些值得复盘的地方。",
       "keywords": "2022 year end summary",
       "cover": "https://cdn.chengpeiquan.com/img/2023/01/20230101235604.jpg?x-oss-process=image/interlace,1",
@@ -146,6 +174,9 @@
         "prose"
       ],
       "cite": [
+        "2024-year-end-summary",
+        "2023-year-end-summary",
+        "2022-year-end-summary",
         "2021-year-end-summary"
       ],
       "date": "2022/12/31 21:24:00",
@@ -309,7 +340,7 @@
   {
     "slug": "2021-year-end-summary",
     "metadata": {
-      "title": "年终总结：2021年的一些回顾和2022年的一些小规划",
+      "title": "年终总结：2021 年的一些回顾和 2022 年的一些小规划",
       "desc": "可真快啊又是一年年底了，虽然这一年博客没发几篇文章，不过整体的活跃情况其实是提升了，个人的变化也还是蛮大的，今年记忆比较深刻的事情有几件，让我梳理回顾一下。",
       "keywords": "2021 year end summary",
       "cover": "https://cdn.chengpeiquan.com/img/2022/01/20220103234636.jpg?x-oss-process=image/interlace,1",
@@ -317,7 +348,10 @@
         "prose"
       ],
       "cite": [
-        "2022-year-end-summary"
+        "2024-year-end-summary",
+        "2023-year-end-summary",
+        "2022-year-end-summary",
+        "2021-year-end-summary"
       ],
       "date": "2021/12/31 15:45:00",
       "timestamp": 1640936700000
@@ -629,7 +663,7 @@
       ],
       "repo": "https://github.com/chengpeiquan/my-netease",
       "bgm": {
-        "src": "https://cdn.chengpeiquan.com/mp3/jing-zi-zhong.mp3",
+        "src": "https://cdn.chengpeiquan.com/bgm/jing-zi-zhong.mp3",
         "title": "镜子中",
         "musician": "扭曲机器",
         "albumCover": "https://cdn.chengpeiquan.com/img/2024/11/202412220202175.png?x-oss-process=image/interlace,1"

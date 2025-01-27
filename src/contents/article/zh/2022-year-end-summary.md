@@ -1,5 +1,5 @@
 ---
-title: 年终总结：2022年的一些回顾和2023年的一些小规划
+title: 年终总结：2022 年的一些回顾和 2023 年的一些小规划
 desc: 2022 对我算是比较特殊的一年，虽然因为疫情原因彻底宅了一年，但也没有闲着，换了工作换了城市，回到了阔别两年的第二故乡广州，工作之外的学习和生活对个人的成长也有一些值得复盘的地方。
 keywords: 2022 year end summary
 date: 2022-12-31 21:24:00
@@ -7,6 +7,9 @@ cover: https://cdn.chengpeiquan.com/img/2023/01/20230101235604.jpg?x-oss-process
 categories:
   - prose
 cite:
+  - 2024-year-end-summary
+  - 2023-year-end-summary
+  - 2022-year-end-summary
   - 2021-year-end-summary
 ---
 

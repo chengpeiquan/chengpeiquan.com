@@ -8,7 +8,7 @@ categories:
   - prose
 repo: https://github.com/chengpeiquan/my-netease
 bgm:
-  src: https://cdn.chengpeiquan.com/mp3/jing-zi-zhong.mp3
+  src: https://cdn.chengpeiquan.com/bgm/jing-zi-zhong.mp3
   title: '镜子中'
   musician: '扭曲机器'
   albumCover: https://cdn.chengpeiquan.com/img/2024/11/202412220202175.png?x-oss-process=image/interlace,1

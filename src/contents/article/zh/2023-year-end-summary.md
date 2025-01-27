@@ -1,5 +1,5 @@
 ---
-title: 年终总结：2023年的一些回顾和2024年的一些小规划
+title: 年终总结：2023 年的一些回顾和 2024 年的一些小规划
 desc: 本来今年的总结第一句话想写 “2023 对我算是比较特殊的一年” ，结果看了一眼去年的回顾，去年也是这么写的… 那今年再强化一下，改成 “2023 对我是非常特殊的一年” 哈哈哈哈哈哈哈，确实非常特殊的一年，因为经历了很多之前没有经历过的事情。
 keywords: 2023 year end summary
 date: 2023-12-30 14:52:00
@@ -7,6 +7,8 @@ cover: https://cdn.chengpeiquan.com/img/2023/12/20231230212146.jpg?x-oss-process
 categories:
   - prose
 cite:
+  - 2024-year-end-summary
+  - 2023-year-end-summary
   - 2022-year-end-summary
   - 2021-year-end-summary
 ---
