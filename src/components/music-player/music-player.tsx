@@ -204,7 +204,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({
     progress,
   } = useMusicPlayer()
 
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(!isMobile)
 
   const animationStyle: React.CSSProperties = useMemo(
     () => ({
