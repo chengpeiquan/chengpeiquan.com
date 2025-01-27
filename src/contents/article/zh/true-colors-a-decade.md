@@ -7,7 +7,7 @@ cover: https://cdn.chengpeiquan.com/img/2025/01/202501280323776.jpg?x-oss-proces
 categories:
   - prose
 bgm:
-  src: http://cdn.chengpeiquan.com/bgm/hai-kuo-tian-kong.m4a
+  src: https://cdn.chengpeiquan.com/bgm/hai-kuo-tian-kong.m4a
   title: '海阔天空'
   musician: 'Beyond'
   albumCover: https://cdn.chengpeiquan.com/img/2025/01/202501262231220.jpg?x-oss-process=image/interlace,1
@@ -143,7 +143,7 @@ cite:
 就像《Beyond日记之莫欺少年穷》的这个片段（右下角可以先暂停 BGM 再看）。
 
 :::video
-http://cdn.chengpeiquan.com/video/live/beyond/beyond-s-diary-ending-part.mp4
+https://cdn.chengpeiquan.com/video/live/beyond/beyond-s-diary-ending-part.mp4
 https://cdn.chengpeiquan.com/img/2025/01/202501272053285.jpg?x-oss-process=image/interlace,1
 《Beyond日记之莫欺少年穷》
 :::
@@ -151,7 +151,7 @@ https://cdn.chengpeiquan.com/img/2025/01/202501272053285.jpg?x-oss-process=image
 还有之前某天在凌晨三点多的时候，想起小时候看过的一个香港广告《生有限 活无限》，凭着记忆里的画面关键词搜了出来，竟然是 2000 年拍的，可以说是最喜欢的一个广告片，整整 24 年都没有忘记里面的画面和文案。
 
 :::video
-http://cdn.chengpeiquan.com/video/live/beyond/life-is-limited-but-life-is-unlimited.mp4
+https://cdn.chengpeiquan.com/video/live/beyond/life-is-limited-but-life-is-unlimited.mp4
 https://cdn.chengpeiquan.com/img/2025/01/202501280256303.jpg?x-oss-process=image/interlace,1
 《生有限 活无限》
 :::
