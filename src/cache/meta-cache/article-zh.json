@@ -1,5 +1,19 @@
 [
   {
+    "slug": "better-sqlite3-error-could-not-locate-the-bindings-file",
+    "metadata": {
+      "title": "解决 better-sqlite3 连接 SQLite 时报错 Could not locate the bindings file",
+      "desc": "有一个 Nest 服务是用 Docker 部署的，因为连了 SQLite ，迁移服务器后出现了一点问题，问题倒不是出在 SQLite 上，而是 TypeORM 基于 better-sqlite3 操作 SQLite ，这个库少了一个编译好的 Node.js 模块，导致在 Docker 里运行的时候，会报错。",
+      "keywords": "Docker SQLite,Docker better-sqlite3,SQLite Could not locate the bindings file",
+      "cover": "https://cdn.chengpeiquan.com/img/2025/02/202502160042456.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "date": "2025/2/16 00:42:33",
+      "timestamp": 1739637753000
+    }
+  },
+  {
     "slug": "true-colors-a-decade",
     "metadata": {
       "title": "本色十年",

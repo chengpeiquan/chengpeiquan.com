@@ -23,6 +23,7 @@
     "Pluggable",
     "POPO",
     "Porkbun",
+    "prebuild",
     "Rehype",
     "rehypejs",
     "Remarkjs",
