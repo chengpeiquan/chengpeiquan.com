@@ -1,10 +1,10 @@
-import React from 'react'
 import { HolyGrailContent, LayoutMain } from 'blackwork'
-import { isMobileDevice } from '@/config/middleware-config'
-import { type Locale } from '@/config/locale-config'
+import React from 'react'
 import { type ContentItem } from '@/config/content-config'
-import { DesktopToc, MobileToc } from '../markup/table-of-contents'
+import { type Locale } from '@/config/locale-config'
+import { isMobileDevice } from '@/config/middleware-config'
 import { MarkupRenderer } from '../markup/renderer'
+import { DesktopToc, MobileToc } from '../markup/table-of-contents'
 
 interface DetailsMainProps
   extends Pick<ContentItem, 'metadata' | 'headings' | 'jsxElement'> {
@@ -22,7 +22,7 @@ export const DetailsMain = async ({
   const isMobile = await isMobileDevice()
 
   return (
-    <LayoutMain className="sm:flex-row justify-between gap-16">
+    <LayoutMain className="justify-between gap-16 sm:flex-row">
       {!isMobile && <DesktopToc headings={headings} />}
 
       <HolyGrailContent>

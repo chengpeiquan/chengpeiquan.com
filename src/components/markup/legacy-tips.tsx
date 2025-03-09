@@ -1,12 +1,12 @@
-import React, { cache } from 'react'
-import { getTranslations } from 'next-intl/server'
 import { Paragraph } from 'blackwork'
-import { type Locale } from '@/config/locale-config'
-import { type PropsWithLocale } from '@/config/route-config'
+import { getTranslations } from 'next-intl/server'
+import React, { cache } from 'react'
 import {
   type ContentMetadata,
   legacyThresholdDays,
 } from '@/config/content-config'
+import { type Locale } from '@/config/locale-config'
+import { type PropsWithLocale } from '@/config/route-config'
 import { cn } from '@/utils'
 
 const calculateDays = cache((timestamp: number, locale: Locale) => {
@@ -78,8 +78,8 @@ export const LegacyTips = async ({ locale, timestamp }: LegacyTipsProps) => {
   const visible = diffDays > legacyThresholdDays
 
   const cls = cn(
-    'text-center w-full box-border p-3',
-    'bg-gray-50 dark:bg-white dark:bg-opacity-5 rounded-lg text-gray-600 dark:text-gray-300 text-sm',
+    'box-border w-full p-3 text-center',
+    'rounded-lg bg-gray-50 text-sm text-gray-600 dark:bg-white/5 dark:text-gray-300',
   )
 
   if (!visible) return null

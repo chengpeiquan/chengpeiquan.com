@@ -1,11 +1,11 @@
-import React from 'react'
-import { getLocale } from 'next-intl/server'
 import { HolyGrailAside } from 'blackwork'
+import { getLocale } from 'next-intl/server'
+import React from 'react'
 import { type Locale } from '@/config/locale-config'
-import { PublishedBooks } from './published-books'
 import { CatHuffing } from './cat-huffing'
-import { FriendlyLinks } from './friendly-links'
 import { CookbookOnline, CookbookQrCode } from './cookbook-widgets'
+import { FriendlyLinks } from './friendly-links'
+import { PublishedBooks } from './published-books'
 
 const Provider = async ({ children }: React.PropsWithChildren) => {
   const locale = (await getLocale()) as Locale

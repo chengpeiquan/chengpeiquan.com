@@ -1,6 +1,5 @@
 'use client'
 
-import React from 'react'
 import {
   Button,
   CollapsibleClosed,
@@ -10,8 +9,9 @@ import {
   CollapsibleTrigger,
   Heading,
 } from 'blackwork'
-import { cn } from '@/utils'
+import React from 'react'
 import { useClientLocale } from '@/hooks'
+import { cn } from '@/utils'
 
 interface CollapsibleProps extends React.PropsWithChildren {
   title: string
@@ -51,7 +51,7 @@ export const Collapsible: React.FC<CollapsibleProps> = ({
 
         <CollapsibleTrigger asChild>
           <Button variant="ghost" size="sm" className="w-9 p-0">
-            <CollapsibleIcon className="h-4 w-4" />
+            <CollapsibleIcon className="size-4" />
             <span className="sr-only">{tips}</span>
           </Button>
         </CollapsibleTrigger>

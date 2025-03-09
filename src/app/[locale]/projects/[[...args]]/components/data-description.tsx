@@ -1,5 +1,3 @@
-import React from 'react'
-import { getTranslations } from 'next-intl/server'
 import {
   AlertDialog,
   AlertDialogCancel,
@@ -13,10 +11,12 @@ import {
   Separator,
 } from 'blackwork'
 import { Help } from 'blackwork/icons'
-import { cn } from '@/utils'
+import { getTranslations } from 'next-intl/server'
+import React from 'react'
 import { isMobileDevice } from '@/config/middleware-config'
 import { type PropsWithLocale } from '@/config/route-config'
 import { ExternalLink } from '@/navigation'
+import { cn } from '@/utils'
 
 export const DataDescription = async ({ locale }: PropsWithLocale) => {
   const isMobile = await isMobileDevice()
@@ -30,7 +30,7 @@ export const DataDescription = async ({ locale }: PropsWithLocale) => {
     <AlertDialog>
       <AlertDialogTrigger asChild>
         <Button variant="ghost" size="icon">
-          <Help className="size-5 text-muted-foreground cursor-pointer" />
+          <Help className="text-muted-foreground size-5 cursor-pointer" />
         </Button>
       </AlertDialogTrigger>
 
@@ -43,7 +43,7 @@ export const DataDescription = async ({ locale }: PropsWithLocale) => {
           <Separator />
 
           <AlertDialogDescription>
-            <ol className="flex flex-col gap-2 ml-4 list-decimal [&>li]:break-all">
+            <ol className="ml-4 flex list-decimal flex-col gap-2 [&>li]:break-all">
               {Array(4)
                 .fill('')
                 .map((_, idx) => {

@@ -1,7 +1,7 @@
-import createMiddleware from 'next-intl/middleware'
 import { type NextRequest, userAgent } from 'next/server'
-import { routing } from '@/i18n/routing'
+import createMiddleware from 'next-intl/middleware'
 import { defaultHeaderValue, headerFields } from '@/config/middleware-config'
+import { routing } from '@/i18n/routing'
 
 export default async function middleware(request: NextRequest) {
   const { device } = userAgent(request)

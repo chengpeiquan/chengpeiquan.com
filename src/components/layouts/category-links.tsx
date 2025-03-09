@@ -1,14 +1,14 @@
-import React from 'react'
 import { isUndefined } from '@bassist/utils'
 import { Separator } from 'blackwork'
-import { Link } from '@/navigation'
-import { type Locale } from '@/config/locale-config'
-import { isMobileDevice } from '@/config/middleware-config'
+import React from 'react'
 import {
   type CategoryConfigItem,
   type CategoryGroup,
   allCategory,
 } from '@/config/content-config'
+import { type Locale } from '@/config/locale-config'
+import { isMobileDevice } from '@/config/middleware-config'
+import { Link } from '@/navigation'
 import { cn } from '@/utils'
 import { Collapsible } from '../shared/collapsible'
 
@@ -23,7 +23,7 @@ const Links: React.FC<{
   locale: Locale
 }> = ({ className, links, locale }) => {
   const navCls = cn(
-    'flex flex-wrap items-end gap-x-6 gap-y-2 w-full min-h-7',
+    'flex min-h-7 w-full flex-wrap items-end gap-x-6 gap-y-2',
     className,
   )
 
@@ -96,7 +96,7 @@ const LinksContent = async ({
 }
 
 export const CategoryLinks: React.FC<CategoryLinksProps> = (props) => {
-  const cls = cn('flex flex-col gap-4 w-full mb-4', props.className)
+  const cls = cn('mb-4 flex w-full flex-col gap-4', props.className)
 
   if (!props.categories.length) return null
   return (

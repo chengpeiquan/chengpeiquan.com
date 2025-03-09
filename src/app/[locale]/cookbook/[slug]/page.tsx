@@ -1,10 +1,10 @@
-import React from 'react'
 import { notFound } from 'next/navigation'
+import React from 'react'
+import { DetailsMain } from '@/components/layouts/details-main'
+import { CookbookSidebar } from '@/components/sidebar'
 import { ContentFolder } from '@/config/content-config'
 import { type DetailsPageProps } from '@/config/route-config'
 import { getDetails, getDetailsMetadata } from '@/core/dispatcher'
-import { DetailsMain } from '@/components/layouts/details-main'
-import { CookbookSidebar } from '@/components/sidebar'
 
 const folder = ContentFolder.Cookbook
 

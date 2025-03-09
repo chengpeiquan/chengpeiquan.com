@@ -5,11 +5,8 @@ interface TimeDisplayProps {
   /**
    * Time obtained from content metadata
    *
-   * @description
-   *  The `date` return value from `parseDate` method,
-   *  in `@/core/parser/index.ts`
-   *
-   *
+   * The `date` return value from `parseDate` method, in
+   * `@/core/parser/index.ts`
    */
   value: string
 
@@ -17,8 +14,8 @@ interface TimeDisplayProps {
    * Whether to display only the date
    *
    * @example
-   *  1. If `true`: `2024/2/14`
-   *  1. If `false`: `2024/2/14 22:56:00`
+   *   1. If `true`: `2024/2/14`
+   *   1. If `false`: `2024/2/14 22:56:00`
    *
    * @default true
    */

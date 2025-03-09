@@ -1,5 +1,5 @@
-import React from 'react'
 import { getLocale } from 'next-intl/server'
+import React from 'react'
 import { LayoutContainer } from '@/components/layouts/layout-container'
 import { NotFoundGuide } from '@/components/layouts/not-found-guide'
 import { type Locale } from '@/config/locale-config'

@@ -1,9 +1,8 @@
 'use server'
 
-import { extname, join } from 'node:path'
 import { readdirSync } from 'node:fs'
+import { extname, join } from 'node:path'
 import { z } from 'zod'
-import { type Locale, locales } from '@/config/locale-config'
 import {
   type ContentFolder,
   type ContentItem,
@@ -15,6 +14,7 @@ import {
   getPagination,
   isValidContentItem,
 } from '@/config/content-config'
+import { type Locale, locales } from '@/config/locale-config'
 import { type ParseOptions, parse } from './parser'
 
 const contentRootPath = join(process.cwd(), 'src', contentRootFolder)
@@ -24,7 +24,7 @@ const getMarkdownFiles = (dir: string) => {
     return readdirSync(dir)
       .filter((file) => fileExtensions.includes(extname(file)))
       .map((i) => join(dir, i))
-  } catch (e) {
+  } catch {
     return []
   }
 }
@@ -119,7 +119,7 @@ export const getContents = async (
       category,
       ...pagination,
     } satisfies GetListResponse<ContentItem>
-  } catch (e) {
+  } catch {
     return defaultRes
   }
 }

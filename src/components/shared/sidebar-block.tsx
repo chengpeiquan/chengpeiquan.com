@@ -1,5 +1,5 @@
-import React from 'react'
 import { Heading, Separator } from 'blackwork'
+import React from 'react'
 
 export interface PropsWithControllable {
   titleClassName?: string
@@ -18,7 +18,7 @@ export const SidebarBlock: React.FC<SidebarBlockProps> = ({
   children,
 }) => {
   return (
-    <section className="flex flex-col w-full gap-4">
+    <section className="flex w-full flex-col gap-4">
       {title && (
         <>
           <Heading level={4} className={titleClassName}>

@@ -1,6 +1,6 @@
 import { FetchClient } from './client'
-import { toJSON } from './utils'
 import { type GitHubRepoDataItem, type NpmDownloadDataItem } from './types'
+import { toJSON } from './utils'
 
 class GitHubApiClient {
   constructor(private fetcher: FetchClient) {}

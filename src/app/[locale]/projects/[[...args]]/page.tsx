@@ -1,19 +1,19 @@
-import React from 'react'
-import { getTranslations } from 'next-intl/server'
-import { Heading, LayoutMain, Paragraph } from 'blackwork'
 import { isArray, toArray } from '@bassist/utils'
+import { Heading, LayoutMain, Paragraph } from 'blackwork'
+import { getTranslations } from 'next-intl/server'
+import React from 'react'
+import { isMobileDevice } from '@/config/middleware-config'
+import { ExtraTag, type ProjectTag } from '@/config/project-config'
+import { type ListPageProps } from '@/config/route-config'
 import {
   type GitHubRepoDataItem,
   type NpmDownloadDataItem,
   apis,
 } from '@/fetcher'
-import { type ListPageProps } from '@/config/route-config'
-import { ExtraTag, type ProjectTag } from '@/config/project-config'
-import { isMobileDevice } from '@/config/middleware-config'
-import { ProjectList } from './components/project-list'
-import { DataAnalysis } from './components/project-card'
-import { DataDescription } from './components/data-description'
 import { cn } from '@/utils'
+import { DataDescription } from './components/data-description'
+import { DataAnalysis } from './components/project-card'
+import { ProjectList } from './components/project-list'
 
 export const generateMetadata = async ({
   params: promiseParams,
@@ -61,16 +61,16 @@ export default async function ProjectsPage({
 
   return (
     <LayoutMain className="gap-12">
-      <div className="flex flex-col items-center w-full">
+      <div className="flex w-full flex-col items-center">
         <Heading
-          className={cn('text-6xl text-center', {
+          className={cn('text-center text-6xl', {
             'my-8': isMobile,
           })}
         >
           {t('title')}
         </Heading>
 
-        <Paragraph className="text-xl text-muted-foreground">
+        <Paragraph className="text-muted-foreground text-xl">
           {t('description')}
         </Paragraph>
 

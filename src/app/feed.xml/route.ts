@@ -1,9 +1,9 @@
-import message from '@/i18n/messages/zh.json'
 import { type Author, Feed, type Item as FeedItem } from 'feed'
-import { siteConfig } from '@/config/site-config'
 import { ContentFolder } from '@/config/content-config'
+import { siteConfig } from '@/config/site-config'
 import { getContents } from '@/core/io'
 import { ContentProcessorMode } from '@/core/types'
+import message from '@/i18n/messages/zh.json'
 
 const folder = ContentFolder.Article
 

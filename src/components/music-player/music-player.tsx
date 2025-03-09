@@ -1,4 +1,3 @@
-import React from 'react'
 import {
   Avatar,
   AvatarFallback,
@@ -7,9 +6,10 @@ import {
   Progress,
 } from 'blackwork'
 import { CD, Paused, Play } from 'blackwork/icons'
-import { cn } from '@/utils'
-import { getBrbStyle, getBrbVariant } from '@/config/style-config'
+import React from 'react'
 import { type BgmConfig } from '@/config/content-config'
+import { getBrbStyle, getBrbVariant } from '@/config/style-config'
+import { cn } from '@/utils'
 import { timeDisplay, useMusicPlayer } from './use-music-player'
 
 interface MusicPlayerProps
@@ -44,14 +44,14 @@ const MusicDisc: React.FC<MusicDiscProps> = ({
   return (
     <div
       className={cn(
-        'relative flex shrink-0 rounded-full overflow-hidden',
-        isMobile ? 'w-[90px] h-[90px]' : 'w-[66px] h-[66px]',
+        'relative flex shrink-0 overflow-hidden rounded-full',
+        isMobile ? 'size-[90px]' : 'size-[66px]',
       )}
     >
       <Avatar
         className={cn(
-          'w-full h-full',
-          'border border-solid border-input p-3 box-border',
+          'size-full',
+          'border-input box-border border border-solid p-3',
           { 'animate-spin': playing },
         )}
         style={{
@@ -63,18 +63,18 @@ const MusicDisc: React.FC<MusicDiscProps> = ({
         }}
       >
         <AvatarImage
-          className="border border-solid border-input box-border rounded-full overflow-hidden"
+          className="border-input box-border overflow-hidden rounded-full border border-solid"
           src={albumCover}
           alt={fullName}
         />
         <AvatarFallback>{fullName}</AvatarFallback>
       </Avatar>
 
-      <div className="absolute left-0 top-0 flex items-center justify-center w-full h-full z-10">
+      <div className="absolute left-0 top-0 z-10 flex size-full items-center justify-center">
         <Button
           variant="ghost"
           size="icon"
-          className="w-full h-full !bg-transparent"
+          className="size-full !bg-transparent"
           onClick={togglePlay}
         >
           <ButtonIcon className={cn(isMobile ? 'size-10' : 'size-6')} />
@@ -94,12 +94,12 @@ const Musician: React.FC<
         'items-center': !isMobile,
       })}
     >
-      <span className="text-foreground text-base font-medium line-clamp-2">
+      <span className="text-foreground line-clamp-2 text-base font-medium">
         {title}
       </span>
 
       {musician && (
-        <span className="text-muted-foreground text-xs truncate">
+        <span className="text-muted-foreground truncate text-xs">
           {musician}
         </span>
       )}
@@ -110,16 +110,14 @@ const Musician: React.FC<
 const GuideArrow: React.FC = () => {
   return (
     <div
-      className="absolute top-[12px] -right-[8px] w-0 h-0
-       border-t-[8px] border-t-transparent
-       border-b-[8px] border-b-transparent
-       border-l-[8px] border-l-input"
+      className="border-l-input absolute right-[-8px] top-[12px] size-0
+       border-y-8 border-l-8
+       border-y-transparent"
     >
       <div
-        className="absolute top-[-6px] left-[-8px] w-0 h-0
-         border-t-[6px] border-t-transparent
-         border-b-[6px] border-b-transparent
-         border-l-[6px] border-l-background"
+        className="border-l-background absolute left-[-8px] top-[-6px] size-0
+         border-y-[6px] border-l-[6px]
+         border-y-transparent"
       ></div>
     </div>
   )
@@ -139,13 +137,13 @@ const DesktopPlayerLayout: React.FC<PlayerLayoutProps> = ({
   timeRender,
 }) => {
   return (
-    <div className="flex gap-3 w-full h-full">
+    <div className="flex size-full gap-3">
       {discRender}
 
-      <div className="flex flex-col gap-2 justify-center flex-1 overflow-hidden">
+      <div className="flex flex-1 flex-col justify-center gap-2 overflow-hidden">
         {musicianRender}
 
-        <div className="flex shrink-0 items-center gap-3 w-full">
+        <div className="flex w-full shrink-0 items-center gap-3">
           {progressRender}
           {timeRender}
         </div>
@@ -161,13 +159,13 @@ const MobilePlayerLayout: React.FC<PlayerLayoutProps> = ({
   timeRender,
 }) => {
   return (
-    <div className="flex flex-col gap-3 w-full h-full">
-      <div className="flex gap-3 flex-1 overflow-hidden">
+    <div className="flex size-full flex-col gap-3">
+      <div className="flex flex-1 gap-3 overflow-hidden">
         {discRender}
         {musicianRender}
       </div>
 
-      <div className="flex shrink-0 items-center gap-3 w-full">
+      <div className="flex w-full shrink-0 items-center gap-3">
         {progressRender}
         {timeRender}
       </div>
@@ -248,7 +246,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({
       <Progress
         value={progress}
         max={100}
-        className="flex flex-1 overflow-hidden h-1"
+        className="flex h-1 flex-1 overflow-hidden"
       />
     ),
     [progress],
@@ -257,7 +255,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({
   const timeRender = useMemo(
     () => (
       <span
-        className={cn('flex shrink-0 text-muted-foreground text-xs', {
+        className={cn('text-muted-foreground flex shrink-0 text-xs', {
           invisible: loading,
           'w-[80px] justify-end': !isMobile,
         })}
@@ -291,8 +289,8 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({
         className={cn(
           'fixed right-[72px]',
           'not-prose bg-background',
-          'flex items-center justify-between gap-6 box-border p-3',
-          'border border-solid border-input rounded-md',
+          'box-border flex items-center justify-between gap-6 p-3',
+          'border-input rounded-md border border-solid',
           visible ? 'flex' : 'hidden',
           {
             'right-[72px] bottom-[20px] left-[20px] h-[144px]': isMobile,

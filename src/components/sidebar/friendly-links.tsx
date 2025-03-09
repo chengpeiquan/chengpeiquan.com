@@ -1,7 +1,7 @@
-import React from 'react'
 import { Separator } from 'blackwork'
-import { ExternalLink } from '@/navigation'
+import React from 'react'
 import { friendlyLinks } from '@/config/external-config'
+import { ExternalLink } from '@/navigation'
 import {
   type PropsWithControllable,
   SidebarBlock,
@@ -17,7 +17,7 @@ export const FriendlyLinks: React.FC<PropsWithControllable> = (props) => {
               {idx > 0 && (
                 <Separator
                   orientation="vertical"
-                  className="inline-block align-middle h-4 !my-0"
+                  className="!my-0 inline-block h-4 align-middle"
                 />
               )}
 

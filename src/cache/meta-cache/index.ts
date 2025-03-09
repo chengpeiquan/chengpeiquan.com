@@ -1,6 +1,6 @@
+import { type MetaCacheItem, getCacheMapKey } from '@/config/cache-config'
 import { type ListFolder } from '@/config/content-config'
 import { type Locale } from '@/config/locale-config'
-import { type MetaCacheItem, getCacheMapKey } from '@/config/cache-config'
 
 export const getMetaCache = async (
   folder: ListFolder,

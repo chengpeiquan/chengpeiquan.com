@@ -1,8 +1,5 @@
-import { type Metadata } from 'next'
-import { type SocialLinkProps } from 'blackwork'
-import { type Locale } from './locale-config'
-import { ContentFolder } from './content-config'
 import { isUndefined } from '@bassist/utils'
+import { type SocialLinkProps } from 'blackwork'
 import {
   About as AboutIcon,
   Article as ArticleIcon,
@@ -11,6 +8,9 @@ import {
   type IconProps,
   Toolbox as ToolboxIcon,
 } from 'blackwork/icons'
+import { type Metadata } from 'next'
+import { ContentFolder } from './content-config'
+import { type Locale } from './locale-config'
 
 const domain = 'chengpeiquan.com'
 

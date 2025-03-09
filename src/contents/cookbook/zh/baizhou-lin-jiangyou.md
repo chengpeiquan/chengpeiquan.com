@@ -33,5 +33,3 @@ xiaohongshuId: 62f517520000000012027571
 就可以吃了！潮汕的小孩应该都吃过！
 
 ![好好吃！](https://cdn.chengpeiquan.com/img/2022/08/20220814004637.jpg?x-oss-process=image/interlace,1)
-
-

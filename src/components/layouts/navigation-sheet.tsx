@@ -1,7 +1,5 @@
 'use client'
 
-import React from 'react'
-import { useTranslations } from 'next-intl'
 import {
   Button,
   ScrollArea,
@@ -16,20 +14,22 @@ import {
   SocialLinks,
 } from 'blackwork'
 import { Menu as MenuIcon } from 'blackwork/icons'
-import { getLocaleSocialLinks } from '@/config/site-config'
-import { type PropsWithDevice } from '@/config/route-config'
+import { useTranslations } from 'next-intl'
+import React from 'react'
 import { NavigationLinks } from '@/components/layouts/navigation-links'
 import { SearchBox } from '@/components/layouts/search-box'
-import { PublishedBooks } from '@/components/sidebar/published-books'
 import { CatHuffing } from '@/components/sidebar/cat-huffing'
-import { FriendlyLinks } from '@/components/sidebar/friendly-links'
 import {
   CookbookOnline,
   CookbookQrCode,
 } from '@/components/sidebar/cookbook-widgets'
+import { FriendlyLinks } from '@/components/sidebar/friendly-links'
+import { PublishedBooks } from '@/components/sidebar/published-books'
+import { type PropsWithDevice } from '@/config/route-config'
+import { getLocaleSocialLinks } from '@/config/site-config'
 import { useBreakpoint, useClientLocale, useClientLocation } from '@/hooks'
-import { cn } from '@/utils'
 import { usePathname } from '@/navigation'
+import { cn } from '@/utils'
 
 const Recommend: React.FC = () => {
   const { isChinese } = useClientLocale()
@@ -50,7 +50,7 @@ const Recommend: React.FC = () => {
     <>
       <Separator className="my-4" />
 
-      <div className="flex flex-col gap-6 w-full">
+      <div className="flex w-full flex-col gap-6">
         {blocks.map((Comp, idx) => (
           <Comp key={idx} titleClassName="text-sm" separatorVisible={false} />
         ))}
@@ -71,12 +71,11 @@ export const NavigationSheet: React.FC<PropsWithDevice> = ({ isMobile }) => {
 
   useEffect(() => {
     setOpen(false)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname])
 
   const btnCls = cn('inline-flex', { 'lg:hidden': !isMobile })
   const contentCls = cn(
-    'flex flex-col w-3/4 min-w-[300px] h-full rounded-none p-0',
+    'flex h-full w-3/4 min-w-[300px] flex-col rounded-none p-0',
     isMobile ? 'max-w-sm' : 'max-w-[300px]',
   )
 
@@ -84,7 +83,7 @@ export const NavigationSheet: React.FC<PropsWithDevice> = ({ isMobile }) => {
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
         <Button variant="outline" size="icon" className={btnCls}>
-          <MenuIcon className="w-5 h-5" />
+          <MenuIcon className="size-5" />
         </Button>
       </SheetTrigger>
 
@@ -101,12 +100,12 @@ export const NavigationSheet: React.FC<PropsWithDevice> = ({ isMobile }) => {
 
             <Separator className="m-0" />
 
-            <div className="flex flex-col flex-1 overflow-hidden p-4 pb-0">
+            <div className="flex flex-1 flex-col overflow-hidden p-4 pb-0">
               <SearchBox isMobile={isMobile} />
 
               <Separator className="my-4" />
 
-              <ScrollArea className="pr-3 -mr-3">
+              <ScrollArea className="-mr-3 pr-3">
                 <NavigationLinks
                   visible
                   asButton

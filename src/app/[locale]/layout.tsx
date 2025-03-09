@@ -1,10 +1,10 @@
-import React from 'react'
 import { type Metadata } from 'next'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, getTranslations } from 'next-intl/server'
-import { sharedMetadata, siteConfig } from '@/config/site-config'
-import { type PropsWithLocale } from '@/config/route-config'
+import React from 'react'
 import { LayoutContainer } from '@/components/layouts/layout-container'
+import { type PropsWithLocale } from '@/config/route-config'
+import { sharedMetadata, siteConfig } from '@/config/site-config'
 
 interface LocaleLayoutProps extends React.PropsWithChildren {
   params: Promise<PropsWithLocale>

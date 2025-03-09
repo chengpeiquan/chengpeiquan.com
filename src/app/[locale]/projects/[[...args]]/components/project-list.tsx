@@ -1,5 +1,5 @@
-import React from 'react'
 import { isArray } from '@bassist/utils'
+import React from 'react'
 import { ExtraTag, type ProjectTag, allProjects } from '@/config/project-config'
 import { type PropsWithLocale } from '@/config/route-config'
 import { type GitHubRepoDataItem, type NpmDownloadDataItem } from '@/fetcher'
@@ -56,10 +56,10 @@ export const ProjectList: React.FC<ProjectListProps> = ({
     .sort((a, b) => (b.data?.stars ?? 0) - (a.data?.stars ?? 0))
 
   return (
-    <div className="flex flex-col gap-6 w-full">
+    <div className="flex w-full flex-col gap-6">
       <FilterBar locale={locale} tag={tag} />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
         {items.map((i) => (
           <ProjectCard key={i.repo + i.name} locale={locale} item={i} />
         ))}

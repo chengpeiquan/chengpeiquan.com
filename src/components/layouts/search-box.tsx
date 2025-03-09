@@ -1,8 +1,5 @@
 'use client'
 
-import React from 'react'
-import Image from 'next/image'
-import { useTranslations } from 'next-intl'
 import {
   Button,
   Heading,
@@ -16,9 +13,12 @@ import {
   useQuickSearchState,
 } from 'blackwork'
 import { Close } from 'blackwork/icons'
-import { type PropsWithDevice } from '@/config/route-config'
+import Image from 'next/image'
+import { useTranslations } from 'next-intl'
+import React from 'react'
 import { type SearchCacheItem } from '@/config/cache-config'
 import { type ContentDetailsLink, ContentFolder } from '@/config/content-config'
+import { type PropsWithDevice } from '@/config/route-config'
 import {
   RecentSearchDataProvider,
   type UseSearchResponse,
@@ -55,10 +55,10 @@ const SearchResultCard: React.FC<SearchResultCardProps> = ({
 
   return (
     <QuickSearchItem className="rounded-lg">
-      <div className="flex gap-2 w-full">
-        <Link href={link} className="flex gap-3 w-full" onClick={onAdd}>
+      <div className="flex w-full gap-2">
+        <Link href={link} className="flex w-full gap-3" onClick={onAdd}>
           {!isMobile && cover && (
-            <div className="relative flex flex-shrink-0 w-[88px] aspect-[500/400] rounded-lg overflow-hidden">
+            <div className="relative flex aspect-[500/400] w-[88px] shrink-0 overflow-hidden rounded-lg">
               <Image
                 src={cover}
                 alt={title}
@@ -69,12 +69,12 @@ const SearchResultCard: React.FC<SearchResultCardProps> = ({
             </div>
           )}
 
-          <div className="flex flex-col flex-1 justify-center gap-2 overflow-hidden">
-            <Heading level={4} className="text-base line-clamp-1 break-all">
+          <div className="flex flex-1 flex-col justify-center gap-2 overflow-hidden">
+            <Heading level={4} className="line-clamp-1 break-all text-base">
               {title}
             </Heading>
 
-            <p className="text-xs text-gray-400 line-clamp-2">{desc}</p>
+            <p className="line-clamp-2 text-xs text-gray-400">{desc}</p>
           </div>
         </Link>
 
@@ -86,7 +86,7 @@ const SearchResultCard: React.FC<SearchResultCardProps> = ({
               onClick={onRemove}
               aria-label={t('removeButtonLabel')}
             >
-              <Close className="w-4 h-4" />
+              <Close className="size-4" />
             </Button>
           </div>
         )}
@@ -131,7 +131,7 @@ const SearchResult: React.FC<
         <div className="flex items-center justify-between">
           <span>{t('recent')}</span>
           <span
-            className="cursor-pointer hover:text-foreground"
+            className="hover:text-foreground cursor-pointer"
             onClick={clearRecent}
           >
             {t('cleanup')}
@@ -156,7 +156,7 @@ const SearchResult: React.FC<
 
   return (
     <>
-      <Paragraph className="text-sm text-muted-foreground break-all px-3 my-3">
+      <Paragraph className="text-muted-foreground my-3 break-all px-3 text-sm">
         {title}
       </Paragraph>
 

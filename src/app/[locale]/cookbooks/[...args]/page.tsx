@@ -1,8 +1,11 @@
-import React from 'react'
+import { Heading, LayoutMain } from 'blackwork'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
-import { Heading, LayoutMain } from 'blackwork'
-import { type ListPageProps } from '@/config/route-config'
+import React from 'react'
+import { CategoryLinks } from '@/components/layouts/category-links'
+import { Empty } from '@/components/layouts/empty'
+import { Pagination } from '@/components/layouts/pagination'
+import { TimeDisplay } from '@/components/shared/time-display'
 import {
   type ContentDetailsLink,
   ContentFolder,
@@ -11,11 +14,8 @@ import {
   cookbookCategories,
 } from '@/config/content-config'
 import { isMobileDevice } from '@/config/middleware-config'
+import { type ListPageProps } from '@/config/route-config'
 import { getList, getListMetadata } from '@/core/dispatcher'
-import { Empty } from '@/components/layouts/empty'
-import { Pagination } from '@/components/layouts/pagination'
-import { CategoryLinks } from '@/components/layouts/category-links'
-import { TimeDisplay } from '@/components/shared/time-display'
 import { Link } from '@/navigation'
 
 const folder = ContentFolder.Cookbook
@@ -35,10 +35,10 @@ const CookbookCard: React.FC<{
   const link = `/${ContentFolder.Cookbook}/${slug}` satisfies ContentDetailsLink
 
   return (
-    <li className="flex flex-col gap-2 w-full">
+    <li className="flex w-full flex-col gap-2">
       {cover && (
         <Link href={link} variant="image">
-          <div className="relative flex flex-shrink-0 w-full aspect-[500/400] rounded-lg overflow-hidden">
+          <div className="relative flex aspect-[500/400] w-full shrink-0 overflow-hidden rounded-lg">
             <Image
               src={cover}
               alt={title}
@@ -52,7 +52,7 @@ const CookbookCard: React.FC<{
 
       <Heading
         level={3}
-        className="text-base font-normal line-clamp-2 break-all"
+        className="line-clamp-2 break-all text-base font-normal"
       >
         <Link href={link}>{title}</Link>
       </Heading>
@@ -82,7 +82,7 @@ export default async function CookbooksPage({
   return (
     <LayoutMain className="gap-8">
       <CategoryLinks
-        className="gap-6 mb-0"
+        className="mb-0 gap-6"
         locale={locale}
         group="cookbooks"
         category={category}
@@ -94,7 +94,7 @@ export default async function CookbooksPage({
       {isEmpty ? (
         <Empty locale={locale} />
       ) : (
-        <ul className="grid md:grid-cols-5 grid-cols-1 col-auto row-auto gap-8 mb-4 md:mb-12">
+        <ul className="col-auto row-auto mb-4 grid grid-cols-1 gap-8 md:mb-12 md:grid-cols-5">
           {items.map((i) => (
             <CookbookCard
               key={i.metadata.title}

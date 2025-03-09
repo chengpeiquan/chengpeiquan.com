@@ -1,5 +1,3 @@
-import React from 'react'
-import { getTranslations } from 'next-intl/server'
 import {
   Avatar,
   AvatarFallback,
@@ -8,15 +6,17 @@ import {
   LayoutHeader,
   ScrollToTop,
 } from 'blackwork'
-import { isMobileDevice } from '@/config/middleware-config'
-import { type PropsWithLocale } from '@/config/route-config'
-import { getBrbStyle, getBrbVariant } from '@/config/style-config'
-import { getLocaleSocialLinks, siteConfig } from '@/config/site-config'
-import { NavigationLinks } from '@/components/layouts/navigation-links'
+import { getTranslations } from 'next-intl/server'
+import React from 'react'
 import { LanguageToggle } from '@/components/layouts/language-toggle'
-import { ThemeToggle } from '@/components/layouts/theme-toggle'
+import { NavigationLinks } from '@/components/layouts/navigation-links'
 import { NavigationSheet } from '@/components/layouts/navigation-sheet'
 import { SearchBox } from '@/components/layouts/search-box'
+import { ThemeToggle } from '@/components/layouts/theme-toggle'
+import { isMobileDevice } from '@/config/middleware-config'
+import { type PropsWithLocale } from '@/config/route-config'
+import { getLocaleSocialLinks, siteConfig } from '@/config/site-config'
+import { getBrbStyle, getBrbVariant } from '@/config/style-config'
 import { ExternalLink } from '@/navigation'
 
 type LayoutContainerProps = React.PropsWithChildren & PropsWithLocale
@@ -53,10 +53,10 @@ export const LayoutContainer = async ({
         languageToggle={<LanguageToggle />}
         themeToggle={<ThemeToggle />}
       >
-        <div className="flex flex-shrink-0 items-center gap-3">
+        <div className="flex shrink-0 items-center gap-3">
           <NavigationSheet isMobile={isMobile} />
 
-          <Avatar className="w-7 h-7">
+          <Avatar className="size-7">
             <AvatarImage
               src={siteConfig.avatar.small}
               alt={siteConfig.author.name}
@@ -73,7 +73,7 @@ export const LayoutContainer = async ({
           <>
             <SearchBox />
 
-            <div className="flex flex-1 items-center justify-end h-full box-border pr-1 overflow-hidden">
+            <div className="box-border flex h-full flex-1 items-center justify-end overflow-hidden pr-1">
               <NavigationLinks />
             </div>
           </>
@@ -87,7 +87,7 @@ export const LayoutContainer = async ({
         style={getBrbStyle(0, isMobile)}
       />
 
-      <LayoutFooter className="gap-4 sm:gap-12 flex-col sm:flex-row">
+      <LayoutFooter className="flex-col gap-4 sm:flex-row sm:gap-12">
         <span className="text-muted-foreground">
           © 2014-{new Date().getFullYear()} {t('name')}
         </span>

@@ -1,6 +1,6 @@
-import React from 'react'
 import { Button, ExternalLink, type ExternalLinkProps } from 'blackwork'
 import { type IconProps } from 'blackwork/icons'
+import React from 'react'
 
 export interface LinkIconButtonProps
   extends Pick<ExternalLinkProps, 'href' | 'title'> {
@@ -22,7 +22,7 @@ export const LinkIconButton: React.FC<LinkIconButtonProps> = ({
       aria-label={ariaLabel}
     >
       <ExternalLink
-        className="flex items-center justify-center w-full h-full"
+        className="flex size-full items-center justify-center"
         href={href}
         title={title}
       >

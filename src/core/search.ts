@@ -1,13 +1,13 @@
 import FlexSearch from 'flexsearch'
+import { getMetaCache } from '@/cache/meta-cache'
 import {
   type CacheMapKey,
   type MetaCacheItem,
   type SearchCacheItem,
   getCacheMapKey,
 } from '@/config/cache-config'
-import { type Locale } from '@/config/locale-config'
 import { type ListFolder } from '@/config/content-config'
-import { getMetaCache } from '@/cache/meta-cache'
+import { type Locale } from '@/config/locale-config'
 
 interface SearchDocumentItem extends Omit<SearchCacheItem, 'slug'> {
   id: FlexSearch.Id

@@ -1,5 +1,3 @@
-import React from 'react'
-import { getTranslations } from 'next-intl/server'
 import {
   Badge,
   Card,
@@ -21,7 +19,9 @@ import {
   Npm,
   Star,
 } from 'blackwork/icons'
-import { type PropsWithLocale } from '@/config/route-config'
+import { getTranslations } from 'next-intl/server'
+import React from 'react'
+import { LinkIconButton } from '@/components/shared/link-icon-button'
 import {
   type ProjectConfigItem,
   ProjectTag,
@@ -29,10 +29,10 @@ import {
   getRepoUrl,
   projectTagNameMapping,
 } from '@/config/project-config'
-import { cn } from '@/utils'
+import { type PropsWithLocale } from '@/config/route-config'
 import { type GitHubRepoDataItem, type NpmDownloadDataItem } from '@/fetcher'
-import { LinkIconButton } from '@/components/shared/link-icon-button'
 import { ExternalLink } from '@/navigation'
+import { cn } from '@/utils'
 
 // e.g. `1000` -> `1,000`
 const withCommasNumber = (val: string | number) => {
@@ -73,7 +73,7 @@ const DataRender: React.FC<DataRenderProps> = ({
   return (
     <div
       className={cn(
-        'flex items-center gap-1 shrink-0 text-muted-foreground text-sm',
+        'text-muted-foreground flex shrink-0 items-center gap-1 text-sm',
         className,
       )}
     >
@@ -121,7 +121,7 @@ export const DataAnalysis: React.FC<DataAnalysisProps> = ({
   return (
     <div
       className={cn(
-        'flex flex-1 gap-6 items-center overflow-hidden',
+        'flex flex-1 items-center gap-6 overflow-hidden',
         className,
       )}
     >
@@ -194,7 +194,7 @@ export const ProjectCard = async ({ locale, item }: ProjectCardProps) => {
   })
 
   return (
-    <Card className="flex flex-col w-full">
+    <Card className="flex w-full flex-col">
       <CardHeader className="gap-2">
         <CardTitle className="truncate">
           <ExternalLink className="leading-[1.2]" href={homepage || repoUrl}>

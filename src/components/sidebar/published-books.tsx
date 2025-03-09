@@ -1,12 +1,12 @@
-import React from 'react'
-import Image from 'next/image'
 import { Button } from 'blackwork'
-import { ExternalLink, Link } from '@/navigation'
-import { type linkItem } from '@/config/route-config'
+import Image from 'next/image'
+import React from 'react'
 import {
   type PropsWithControllable,
   SidebarBlock,
 } from '@/components/shared/sidebar-block'
+import { type linkItem } from '@/config/route-config'
+import { ExternalLink, Link } from '@/navigation'
 
 const links: readonly linkItem[] = [
   {
@@ -24,13 +24,13 @@ const title = '我出版的书'
 export const PublishedBooks: React.FC<PropsWithControllable> = (props) => {
   return (
     <SidebarBlock title={title} {...props}>
-      <div className="flex flex-col w-full">
+      <div className="flex w-full flex-col">
         <Link
           href="/article/the-story-of-the-book-learning-vue3"
           target="_blank"
           variant="image"
         >
-          <div className="relative w-full aspect-[1920/1080] rounded-lg overflow-hidden">
+          <div className="relative aspect-[1920/1080] w-full overflow-hidden rounded-lg">
             <Image
               // src="https://cdn.chengpeiquan.com/img/2023/05/20230508232214.jpg?x-oss-process=image/interlace,1"
               src="https://cdn.chengpeiquan.com/img/2025/01/202501012317610.jpg?x-oss-process=image/interlace,1"
@@ -42,7 +42,7 @@ export const PublishedBooks: React.FC<PropsWithControllable> = (props) => {
           </div>
         </Link>
 
-        <div className="flex items-center justify-center w-full">
+        <div className="flex w-full items-center justify-center">
           {links.map((i) => {
             return (
               <Button key={i.href} variant="link">
