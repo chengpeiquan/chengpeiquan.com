@@ -1,5 +1,5 @@
-import type React from 'react'
 import { type ButtonProps } from 'blackwork'
+import type React from 'react'
 
 // The units are all pixels
 const styleConfig = {

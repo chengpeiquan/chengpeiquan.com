@@ -1,7 +1,6 @@
 'use client'
 
-import React from 'react'
-import { useTranslations } from 'next-intl'
+import { isBrowser } from '@bassist/utils'
 import {
   Button,
   Dialog,
@@ -14,18 +13,17 @@ import {
   Separator,
 } from 'blackwork'
 import { Toc as TocIcon } from 'blackwork/icons'
-import { isBrowser } from '@bassist/utils'
-import { cn } from '@/utils'
+import { useTranslations } from 'next-intl'
+import React from 'react'
 import {
   type HeadingDepth,
   type HeadingItem,
   headingDepths,
 } from '@/config/content-config'
 import { getBrbStyle } from '@/config/style-config'
+import { cn } from '@/utils'
 
-/**
- * Flatten headings to reduce HTML tag nesting
- */
+/** Flatten headings to reduce HTML tag nesting */
 const flattenHeadings = (
   headings: HeadingItem[],
 ): Omit<HeadingItem, 'children'>[] => {
@@ -85,12 +83,12 @@ const Toc: React.FC<TocProps> = ({ items, activeId, setActiveId }) => {
             5: 'pl-12',
             6: 'pl-16',
           }[depth],
-          'inline-block w-full break-words text-sm no-underline break-all',
-          'transition-color',
+          'inline-block w-full break-all text-sm no-underline',
+          'transition-all',
           'contrast-more:text-zinc-900 contrast-more:underline contrast-more:dark:text-zinc-50',
           isActive
-            ? 'font-semibold text-primary-600 subpixel-antialiased contrast-more:!text-primary-600'
-            : 'text-zinc-500 dark:text-zinc-700 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-300',
+            ? 'font-semibold subpixel-antialiased'
+            : 'text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-300',
         )
 
         return (
@@ -171,9 +169,9 @@ export const DesktopToc: React.FC<TableOfContentsProps> = (props) => {
           {t('outline.title')}
         </p>
 
-        <Separator className="mt-4 mb-2" />
+        <Separator className="mb-2 mt-4" />
 
-        <ScrollArea className="h-[calc(100%-50px)] pr-4 -mr-4">
+        <ScrollArea className="-mr-4 h-[calc(100%-50px)] pr-4">
           <Toc {...tocProps} />
         </ScrollArea>
       </div>
@@ -192,7 +190,7 @@ export const MobileToc: React.FC<
     <Dialog>
       <DialogTrigger asChild>
         <Button variant="outline" size="icon" style={getBrbStyle(1, isMobile)}>
-          <TocIcon className="w-5 h-5" />
+          <TocIcon className="size-5" />
         </Button>
       </DialogTrigger>
 
@@ -201,7 +199,7 @@ export const MobileToc: React.FC<
           <DialogTitle>{t('outline.title')}</DialogTitle>
         </DialogHeader>
 
-        <ScrollArea className="max-h-[60vh] pr-4 -mr-4">
+        <ScrollArea className="-mr-4 max-h-[60vh] pr-4">
           <Toc {...tocProps} />
         </ScrollArea>
       </DialogContent>

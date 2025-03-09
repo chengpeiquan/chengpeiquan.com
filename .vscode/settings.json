@@ -42,5 +42,11 @@
     "zhihu",
     "zhong"
   ],
-  "eslint.useFlatConfig": true
+  "editor.formatOnSave": true,
+  "eslint.useFlatConfig": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always",
+    "source.fixAll.prettier": "always"
+  },
+  "eslint.validate": ["typescript", "typescriptreact"]
 }

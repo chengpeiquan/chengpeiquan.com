@@ -1,10 +1,10 @@
-import React from 'react'
-import { type VariantProps, cva } from 'class-variance-authority'
-import { createNavigation } from 'next-intl/navigation'
 import {
   ExternalLink as BaseExternalLink,
   type ExternalLinkProps,
 } from 'blackwork'
+import { type VariantProps, cva } from 'class-variance-authority'
+import { createNavigation } from 'next-intl/navigation'
+import React from 'react'
 import {
   defaultLocale,
   localePrefix,

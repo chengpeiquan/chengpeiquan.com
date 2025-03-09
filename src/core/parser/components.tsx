@@ -1,10 +1,10 @@
 'use server'
 
-import React from 'react'
-import Image from 'next/image'
-import sizeOf from 'image-size'
 import { Buffer } from 'node:buffer'
 import { ExternalLink } from 'blackwork'
+import sizeOf from 'image-size'
+import Image from 'next/image'
+import React from 'react'
 import { Link } from '@/navigation'
 
 interface FigureProps extends React.PropsWithChildren {
@@ -13,7 +13,7 @@ interface FigureProps extends React.PropsWithChildren {
 
 const Figure: React.FC<FigureProps> = ({ title, children }) => {
   return (
-    <figure className="relative inline-block w-full max-w-screen-lg text-center mx-auto">
+    <figure className="relative mx-auto inline-block w-full max-w-screen-lg text-center">
       {children}
 
       {title && (
@@ -42,7 +42,7 @@ const getImageSize = async (imgUrl: string) => {
     const arrayBuffer = await res.arrayBuffer()
     const buffer = Buffer.from(arrayBuffer)
     return sizeOf(buffer)
-  } catch (e) {}
+  } catch {}
 }
 
 export const img = async ({

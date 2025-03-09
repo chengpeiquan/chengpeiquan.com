@@ -1,6 +1,6 @@
+import { isArray, isObject, isString } from '@bassist/utils'
 import { type Root } from 'mdast'
 import { visit } from 'unist-util-visit'
-import { isArray, isObject, isString } from '@bassist/utils'
 
 // For the `src` and `poster` attributes
 interface LinkNode {
@@ -40,14 +40,13 @@ interface HyperScriptData {
  * With container directive
  *
  * @example
- *
- * ```md
- * :::video
- * src
- * poster
- * title
- * :::
- * ```
+ *   ;```md
+ *   :::video
+ *   src
+ *   poster
+ *   title
+ *   :::
+ *   ```
  */
 const isVideoNode = (i: unknown): i is VideoDirectiveNode => {
   if (!isObject(i)) return false
@@ -71,43 +70,38 @@ const isTextNode = (i: unknown): i is TextNode => {
 const isValidChildNode = (i: unknown) => isLinkNode(i) || isTextNode(i)
 
 /**
+ * I have customized a compilation process in Markdown Parser, so not all HTML
+ * codes are allowed to be rendered.
  *
- * @description
+ * When Markdown is being converted to AST, many HTML tags will be discarded,
+ * and the same is true for Video.
  *
- * I have customized a compilation process in Markdown Parser,
- * so not all HTML codes are allowed to be rendered.
+ * In order to uniformly implement custom rendering content, this plugin
+ * implements the ability of `video` directive.
  *
- * When Markdown is being converted to AST,
- * many HTML tags will be discarded, and the same is true for Video.
- *
- * In order to uniformly implement custom rendering content,
- * this plugin implements the ability of `video` directive.
- *
- * One more important thing, since rehype-sanitize is enabled,
- * remember to configure the options to allow
- * rendering of video tags and attributes.
+ * One more important thing, since rehype-sanitize is enabled, remember to
+ * configure the options to allow rendering of video tags and attributes.
  *
  * @example
+ *   Enter the following into the markdown file:
  *
- * Enter the following into the markdown file:
+ *   ```md
+ *   :::video
+ *   https://example.com/video-src.mp4
+ *   https://example.com/video-poster.jpg
+ *   A video title
+ *   :::
+ *   ```
  *
- * ```md
- * :::video
- * https://example.com/video-src.mp4
- * https://example.com/video-poster.jpg
- * A video title
- * :::
- * ```
+ *   Compile and output a Video tag:
  *
- * Compile and output a Video tag:
- *
- * ```html
- * <video
- *  src="https://example.com/video-src.mp4"
- *  poster="https://example.com/video-poster.jpg"
- *  title="Hello World"
- * />
- * ```
+ *   ```html
+ *   <video
+ *   src="https://example.com/video-src.mp4"
+ *   poster="https://example.com/video-poster.jpg"
+ *   title="Hello World"
+ *   />
+ *   ```
  *
  * @returns Transformer
  */

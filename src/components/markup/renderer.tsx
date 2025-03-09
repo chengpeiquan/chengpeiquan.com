@@ -1,17 +1,17 @@
-import React from 'react'
-import { getTranslations } from 'next-intl/server'
+import { isObject, isString } from '@bassist/utils'
 import { Avatar, AvatarFallback, AvatarImage, Heading } from 'blackwork'
 import { MiniGitHub } from 'blackwork/icons'
-import { isObject, isString } from '@bassist/utils'
+import { getTranslations } from 'next-intl/server'
+import React from 'react'
+import { MusicPlayer } from '@/components/music-player'
 import { type ContentItem, type ContentMetadata } from '@/config/content-config'
+import { isMobileDevice } from '@/config/middleware-config'
 import {
   type PropsWithDevice,
   type PropsWithLocale,
 } from '@/config/route-config'
-import { isMobileDevice } from '@/config/middleware-config'
 import { siteConfig } from '@/config/site-config'
 import { ExternalLink } from '@/navigation'
-import { MusicPlayer } from '@/components/music-player'
 import { LegacyTips } from './legacy-tips'
 
 interface StarOnGitHubProps extends PropsWithLocale {
@@ -58,14 +58,14 @@ const AuthorData = async ({
   const starVisible = !isMobile && repo?.startsWith('http')
 
   return (
-    <div className="flex items-center justify-between w-full my-6 not-prose">
-      <div className="flex gap-2 items-center">
-        <Avatar className="w-10 h-10">
+    <div className="not-prose my-6 flex w-full items-center justify-between">
+      <div className="flex items-center gap-2">
+        <Avatar className="size-10">
           <AvatarImage src={siteConfig.avatar.small} alt={author} />
           <AvatarFallback>{author.slice(0, 1).toUpperCase()}</AvatarFallback>
         </Avatar>
 
-        <div className="flex flex-col text-muted-foreground">
+        <div className="text-muted-foreground flex flex-col">
           <span aria-label={author} className="text-sm">
             {author}
           </span>
@@ -103,8 +103,8 @@ export const MarkupRenderer = async ({
   })
 
   return (
-    <article className="flex flex-col flex-1 overflow-hidden prose prose-neutral dark:prose-invert">
-      <Heading level={1} className="mb-0 text-2xl sm:text-3xl break-all">
+    <article className="prose prose-neutral dark:prose-invert flex flex-1 flex-col overflow-hidden">
+      <Heading level={1} className="mb-0 break-all text-2xl sm:text-3xl">
         {metadata.title}
       </Heading>
 

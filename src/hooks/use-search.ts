@@ -1,9 +1,9 @@
-import { useKeyword } from 'blackwork'
 import { isArray, isObject } from '@bassist/utils'
+import { useKeyword } from 'blackwork'
 import { type SearchCacheItem, isSearchCacheItem } from '@/config/cache-config'
+import { type SearchEngine, getSearchEngine } from '@/core/search'
 import { useClientLocale } from './use-client-locale'
 import { useClientLocation } from './use-client-location'
-import { type SearchEngine, getSearchEngine } from '@/core/search'
 import { useRecentSearchData } from './use-recent-search-data'
 
 export interface UseSearchOptions {

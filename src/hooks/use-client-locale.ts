@@ -1,5 +1,5 @@
-import { useMemo } from 'react'
 import { useLocale } from 'next-intl'
+import { useMemo } from 'react'
 import { type Locale } from '@/config/locale-config'
 
 export const useClientLocale = () => {

@@ -1,13 +1,13 @@
 'use client'
 
-import React, { useMemo } from 'react'
-import { useTranslations } from 'next-intl'
 import {
   type Theme,
   type ThemeToggleOption,
   ThemeToggle as ThemeToggler,
   useTheme,
 } from 'blackwork'
+import { useTranslations } from 'next-intl'
+import React, { useMemo } from 'react'
 import { themeLabelMapping } from '@/config/locale-config'
 import { useClientLocale } from '@/hooks'
 

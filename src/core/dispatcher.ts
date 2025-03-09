@@ -1,13 +1,10 @@
 'use server'
 
-import { cache } from 'react'
 import { type Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
-import {
-  type DetailsPageParams,
-  type ListPageParams,
-} from '@/config/route-config'
-import { sharedMetadata } from '@/config/site-config'
+import { cache } from 'react'
+import { getMetaCache } from '@/cache/meta-cache'
+import { type MetaCacheItem } from '@/config/cache-config'
 import {
   ContentFolder,
   type GetListResponse,
@@ -17,8 +14,11 @@ import {
   getPagination,
   pageSizeConfig,
 } from '@/config/content-config'
-import { type MetaCacheItem } from '@/config/cache-config'
-import { getMetaCache } from '@/cache/meta-cache'
+import {
+  type DetailsPageParams,
+  type ListPageParams,
+} from '@/config/route-config'
+import { sharedMetadata } from '@/config/site-config'
 import { getContent } from './io'
 
 const analyzeListParams = cache((params: ListPageParams) => {

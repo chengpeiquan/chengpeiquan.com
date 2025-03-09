@@ -1,9 +1,9 @@
 'use client'
 
-import React from 'react'
-import ReactGA from 'react-ga4'
 import { isBrowser } from '@bassist/utils'
 import { createBaiduAnalytics } from '@web-analytics/core'
+import React from 'react'
+import ReactGA from 'react-ga4'
 import { siteConfig } from '@/config/site-config'
 import { usePathname } from '@/navigation'
 

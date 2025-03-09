@@ -1,6 +1,6 @@
-import React from 'react'
-import { getTranslations } from 'next-intl/server'
 import { Toggle } from 'blackwork'
+import { getTranslations } from 'next-intl/server'
+import React from 'react'
 import {
   ExtraTag,
   ProjectTag,
@@ -43,10 +43,10 @@ export const FilterBar = async ({ locale, tag }: FilterBarProps) => {
             size="sm"
             aria-label={ariaLabel}
             pressed={pressed}
-            className="px-0 shrink-0"
+            className="shrink-0 px-0"
           >
             <Link
-              className="flex items-center justify-center w-full h-full px-2.5"
+              className="flex size-full items-center justify-center px-2.5"
               href={href}
               title={ariaLabel}
             >

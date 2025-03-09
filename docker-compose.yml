@@ -6,5 +6,5 @@ services:
     image: chengpeiquan.com:latest
     container_name: chengpeiquan.com
     ports:
-      - "4936:4936"
+      - '4936:4936'
     restart: always

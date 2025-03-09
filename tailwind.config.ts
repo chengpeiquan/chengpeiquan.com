@@ -1,6 +1,6 @@
-import { type Config } from 'tailwindcss'
-import { theme } from 'blackwork/tailwind-config'
 import typography from '@tailwindcss/typography'
+import { theme } from 'blackwork/tailwind-config'
+import { type Config } from 'tailwindcss'
 import animate from 'tailwindcss-animate'
 
 export default {

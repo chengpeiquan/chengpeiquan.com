@@ -84,19 +84,13 @@ export interface ProjectConfigItem {
    */
   name?: string
 
-  /**
-   * @default defaultOwner
-   */
+  /** @default defaultOwner */
   owner?: string
 
-  /**
-   * GitHub repository name
-   */
+  /** GitHub repository name */
   repo: string
 
-  /**
-   * The directory in a monorepo
-   */
+  /** The directory in a monorepo */
   directory?: string
 
   /**

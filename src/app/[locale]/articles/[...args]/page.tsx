@@ -1,7 +1,12 @@
-import React from 'react'
+import { Heading, HolyGrailContent, LayoutMain } from 'blackwork'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
-import { Heading, HolyGrailContent, LayoutMain } from 'blackwork'
+import React from 'react'
+import { CategoryLinks } from '@/components/layouts/category-links'
+import { Empty } from '@/components/layouts/empty'
+import { Pagination } from '@/components/layouts/pagination'
+import { TimeDisplay } from '@/components/shared/time-display'
+import { ArticleSidebar } from '@/components/sidebar'
 import {
   type ContentDetailsLink,
   ContentFolder,
@@ -11,11 +16,6 @@ import {
 import { isMobileDevice } from '@/config/middleware-config'
 import { type ListPageProps } from '@/config/route-config'
 import { getList, getListMetadata } from '@/core/dispatcher'
-import { Empty } from '@/components/layouts/empty'
-import { Pagination } from '@/components/layouts/pagination'
-import { CategoryLinks } from '@/components/layouts/category-links'
-import { TimeDisplay } from '@/components/shared/time-display'
-import { ArticleSidebar } from '@/components/sidebar'
 import { Link } from '@/navigation'
 
 const folder = ContentFolder.Article
@@ -35,15 +35,15 @@ const ArticleCard: React.FC<{
   const link = `/${ContentFolder.Article}/${slug}` satisfies ContentDetailsLink
 
   return (
-    <li className="flex flex-col gap-4 w-full">
-      <Heading level={3} className="text-lg md:text-2xl line-clamp-2 break-all">
+    <li className="flex w-full flex-col gap-4">
+      <Heading level={3} className="line-clamp-2 break-all text-lg md:text-2xl">
         <Link href={link}>{title}</Link>
       </Heading>
 
-      <div className="flex flex-col xs:flex-row gap-4">
+      <div className="xs:flex-row flex flex-col gap-4">
         {cover && (
           <Link href={link} variant="image">
-            <div className="relative flex flex-shrink-0 w-full xs:w-[160px] aspect-[500/400] rounded-lg overflow-hidden">
+            <div className="xs:w-[160px] relative flex aspect-[500/400] w-full shrink-0 overflow-hidden rounded-lg">
               <Image
                 src={cover}
                 alt={title}
@@ -56,7 +56,7 @@ const ArticleCard: React.FC<{
         )}
 
         <div className="flex flex-col justify-between">
-          <p className="xs:h-auto h-0 text-sm xs:text-base text-gray-400 xs:mb-4 mb-0 xs:line-clamp-3 line-clamp-2">
+          <p className="xs:h-auto xs:text-base xs:mb-4 xs:line-clamp-3 mb-0 line-clamp-2 h-0 text-sm text-gray-400">
             {desc}
           </p>
 
@@ -85,7 +85,7 @@ export default async function ArticlesPage({
   )
 
   return (
-    <LayoutMain className="sm:flex-row justify-between gap-16">
+    <LayoutMain className="justify-between gap-16 sm:flex-row">
       <HolyGrailContent>
         <CategoryLinks
           locale={locale}
@@ -97,7 +97,7 @@ export default async function ArticlesPage({
         {isEmpty ? (
           <Empty locale={locale} />
         ) : (
-          <ul className="flex flex-col gap-12 w-full mb-12">
+          <ul className="mb-12 flex w-full flex-col gap-12">
             {items.map((i) => (
               <ArticleCard
                 key={i.metadata.title}

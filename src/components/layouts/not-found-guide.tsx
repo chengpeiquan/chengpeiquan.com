@@ -1,11 +1,11 @@
-import React from 'react'
+import { Button, Heading, LayoutMain, Paragraph } from 'blackwork'
 import Image from 'next/image'
 import { getLocale, getTranslations } from 'next-intl/server'
-import { Button, Heading, LayoutMain, Paragraph } from 'blackwork'
-import { ExternalLink, Link } from '@/navigation'
-import { siteConfig } from '@/config/site-config'
-import { cn } from '@/utils'
+import React from 'react'
 import { isMobileDevice } from '@/config/middleware-config'
+import { siteConfig } from '@/config/site-config'
+import { ExternalLink, Link } from '@/navigation'
+import { cn } from '@/utils'
 
 export const NotFoundGuide = async () => {
   const locale = await getLocale()
@@ -18,19 +18,18 @@ export const NotFoundGuide = async () => {
   const isMobile = await isMobileDevice()
 
   const avatarCls = cn(
-    'flex flex-shrink-0',
-    'relative rounded-full overflow-hidden',
+    'flex shrink-0',
+    'relative overflow-hidden rounded-full',
     'border-4 border-solid border-black dark:border-white',
-    'rounded-tl-[93%] rounded-tr-[90%] rounded-bl-[78%] rounded-br-[85%]',
-    'hover:rounded-tl-[43%] hover:rounded-tr-[70%] hover:rounded-bl-[98%] hover:rounded-br-[95%]',
-    'hover:rotate',
+    'rounded-bl-[78%] rounded-br-[85%] rounded-tl-[93%] rounded-tr-[90%]',
+    'hover:rounded-bl-[98%] hover:rounded-br-[95%] hover:rounded-tl-[43%] hover:rounded-tr-[70%]',
     'transition-all duration-500',
-    isMobile ? 'w-48 h-48' : 'w-60 h-60',
+    isMobile ? 'size-48' : 'size-60',
   )
 
   return (
     <LayoutMain className="justify-center">
-      <div className="flex flex-col md:flex-row md:items-center gap-10 max-w-3xl mx-auto">
+      <div className="mx-auto flex max-w-3xl flex-col gap-10 md:flex-row md:items-center">
         <div className={avatarCls}>
           <Image
             src="https://cdn.chengpeiquan.com/img/2024/07/202410011418360.jpg?x-oss-process=image/interlace,1"
@@ -41,10 +40,10 @@ export const NotFoundGuide = async () => {
           />
         </div>
 
-        <div className="flex flex-col justify-center flex-1 gap-6 overflow-hidden">
+        <div className="flex flex-1 flex-col justify-center gap-6 overflow-hidden">
           <Heading level={1}>{t('title')}</Heading>
 
-          <div className="flex flex-col text-muted-foreground">
+          <div className="text-muted-foreground flex flex-col">
             <Paragraph>{t('description')}</Paragraph>
 
             <Paragraph>

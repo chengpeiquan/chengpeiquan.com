@@ -1,10 +1,10 @@
-import React from 'react'
-import { notFound } from 'next/navigation'
 import { LayoutMain } from 'blackwork'
+import { notFound } from 'next/navigation'
+import React from 'react'
+import { MarkupRenderer } from '@/components/markup/renderer'
 import { ContentFolder } from '@/config/content-config'
 import { type SinglePageProps } from '@/config/route-config'
 import { getDetails, getDetailsMetadata } from '@/core/dispatcher'
-import { MarkupRenderer } from '@/components/markup/renderer'
 
 const folder = ContentFolder.About
 const slug = folder

@@ -1,34 +1,34 @@
 'use server'
 
-import React from 'react'
+import { readFile } from 'node:fs/promises'
+import { isObject, toArray } from '@bassist/utils'
+import rehypeShiki from '@shikijs/rehype'
+import rehypeExtractToc from '@stefanprobst/rehype-extract-toc'
 import matter from 'gray-matter'
+import React from 'react'
+import { Fragment, jsx as _jsx, jsxs as _jsxs } from 'react/jsx-runtime'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import rehypeExternalLink from 'rehype-external-links'
+import rehypeReact, { type Options as RehypeReactOptions } from 'rehype-react'
+import rehypeSanitize, { defaultSchema } from 'rehype-sanitize'
+import rehypeSlug from 'rehype-slug'
+import rehypeStringify from 'rehype-stringify'
+import rehypeUnwrapImages from 'rehype-unwrap-images'
 import remarkDirective from 'remark-directive'
 import remarkGfm from 'remark-gfm'
 import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 import remarkStringify from 'remark-stringify'
-import remarkVideo from './plugins/remark-video'
-import rehypeAutolinkHeadings from 'rehype-autolink-headings'
-import rehypeExternalLink from 'rehype-external-links'
-import rehypeExtractToc from '@stefanprobst/rehype-extract-toc'
-import rehypeReact, { type Options as RehypeReactOptions } from 'rehype-react'
-import rehypeSanitize, { defaultSchema } from 'rehype-sanitize'
-import rehypeShiki from '@shikijs/rehype'
-import rehypeSlug from 'rehype-slug'
-import rehypeStringify from 'rehype-stringify'
-import rehypeUnwrapImages from 'rehype-unwrap-images'
 import { type PluggableList, unified } from 'unified'
-import { readFile } from 'node:fs/promises'
-import { isObject, toArray } from '@bassist/utils'
 import {
   type ContentItem,
   type ContentMetadata,
   type HeadingItem,
   fileExtensions,
 } from '@/config/content-config'
-import { a, img, video } from './components'
-import { Fragment, jsx as _jsx, jsxs as _jsxs } from 'react/jsx-runtime'
 import { ContentProcessorMode } from '@/core/types'
+import { a, img, video } from './components'
+import remarkVideo from './plugins/remark-video'
 
 const isValidHeading = (v: unknown): v is HeadingItem => isObject(v) && !!v.id
 
@@ -135,11 +135,9 @@ const createProcessor = (
 type ParseMarkdownRes = Pick<ContentItem, 'headings' | 'html' | 'jsxElement'>
 
 /**
- * Transforming Markdown to HTML,
- * and add slugs / anchors, and extract headings
+ * Transforming Markdown to HTML, and add slugs / anchors, and extract headings
  *
  * @param markdown - Extract from `gray-matter`
- *
  * @param mode - See `createProcessor`
  */
 const parseMarkdown = async (
@@ -179,13 +177,13 @@ const parseMarkdown = async (
 }
 
 /**
- * In fact, the original date in markdown file is CST time,
- * e.g. `2019/09/15 01:35:00`
+ * In fact, the original date in markdown file is CST time, e.g. `2019/09/15
+ * 01:35:00`
  *
  * Btw: Here, CST refers to China Standard Time UT+8:00
  *
- * But the `matter` method will return a UTC time,
- * e.g. `2019/09/15T01:35:00.000Z`
+ * But the `matter` method will return a UTC time, e.g.
+ * `2019/09/15T01:35:00.000Z`
  *
  * @param utcDate - The `date` from `matter(markdown)`
  */
@@ -217,14 +215,12 @@ const parseSlug = (filePath: string) => {
 
 export interface ParseOptions {
   /**
-   * When only using the introductory data for a list,
-   * ignore the parsing of the detailed information.
+   * When only using the introductory data for a list, ignore the parsing of the
+   * detailed information.
    */
   ignoreDetails?: boolean
 
-  /**
-   * See `createProcessor`
-   */
+  /** See `createProcessor` */
   mode?: ContentProcessorMode
 }
 
@@ -265,7 +261,7 @@ export const parse = async (
       jsxElement,
       metadata,
     } satisfies ContentItem
-  } catch (e) {
+  } catch {
     return null
   }
 }

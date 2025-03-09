@@ -1,15 +1,9 @@
 'use client'
 
-import React from 'react'
-import { useTranslations } from 'next-intl'
-import { Button, cn } from 'blackwork'
 import { isUndefined } from '@bassist/utils'
-import {
-  type NavSlug,
-  isHome,
-  navIconMap,
-  siteConfig,
-} from '@/config/site-config'
+import { Button, cn } from 'blackwork'
+import { useTranslations } from 'next-intl'
+import React from 'react'
 import {
   isActiveListFolder,
   isActivePageFolder,
@@ -18,8 +12,14 @@ import {
   listFolderMapping,
   pageFolderMapping,
 } from '@/config/content-config'
-import { Link, usePathname } from '@/navigation'
+import {
+  type NavSlug,
+  isHome,
+  navIconMap,
+  siteConfig,
+} from '@/config/site-config'
 import { useBreakpoint } from '@/hooks'
+import { Link, usePathname } from '@/navigation'
 
 interface NavigationLinkProps {
   asButton?: boolean
@@ -70,7 +70,7 @@ const NavigationLink: React.FC<NavigationLinkProps> = ({
 
   const content = useMemo(() => {
     const IconComp = navIconMap[slug]
-    const icon = asButton ? <IconComp className="w-4 h-4 mr-2" /> : null
+    const icon = asButton ? <IconComp className="mr-2 size-4" /> : null
 
     return (
       <Link
@@ -107,9 +107,8 @@ interface NavigationLinksProps
   extends Pick<NavigationLinkProps, 'asButton' | 'onClick'> {
   /**
    * This option can limit whether to keep the resident display component
-   * (controlled by `hidden` Class Name). If it is `undefined`,
-   * the breakpoint is determined by the component as
-   * the rendering condition.
+   * (controlled by `hidden` Class Name). If it is `undefined`, the breakpoint
+   * is determined by the component as the rendering condition.
    *
    * @default undefined
    */

@@ -1,13 +1,13 @@
+import { isArray, toArray } from '@bassist/utils'
 import React from 'react'
 import { LocalForageProvider, useLocalForageState } from 'react-forage'
-import { isArray, toArray } from '@bassist/utils'
 import {
   type SearchCacheItem,
   searchStorageConfig as config,
   getSearchStorageKey,
 } from '@/config/cache-config'
-import { useClientLocation } from './use-client-location'
 import { useClientLocale } from './use-client-locale'
+import { useClientLocation } from './use-client-location'
 
 export const RecentSearchDataProvider: React.FC<React.PropsWithChildren> = ({
   children,

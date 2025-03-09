@@ -1,6 +1,5 @@
 'use client'
 
-import React from 'react'
 import {
   type GeneratedPageItem,
   GeneratedPageType,
@@ -13,8 +12,9 @@ import {
   Pagination as PaginationRoot,
   generatePages,
 } from 'blackwork'
-import { Link } from '@/navigation'
+import React from 'react'
 import { type PropsWithDevice } from '@/config/route-config'
+import { Link } from '@/navigation'
 
 interface PaginationProps extends PropsWithDevice {
   slug: string

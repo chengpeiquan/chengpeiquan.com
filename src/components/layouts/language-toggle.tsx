@@ -1,15 +1,15 @@
 'use client'
 
-import React, { useCallback, useMemo } from 'react'
-import { useTranslations } from 'next-intl'
-import { useParams } from 'next/navigation'
 import {
   type LanguageToggleOption,
   LanguageToggle as LanguageToggler,
 } from 'blackwork'
+import { useParams } from 'next/navigation'
+import { useTranslations } from 'next-intl'
+import React, { useCallback, useMemo } from 'react'
 import { type Locale, localeLabelMapping } from '@/config/locale-config'
-import { usePathname, useRouter } from '@/navigation'
 import { useClientLocale } from '@/hooks'
+import { usePathname, useRouter } from '@/navigation'
 
 export const LanguageToggle: React.FC = () => {
   const router = useRouter()
