@@ -25,6 +25,7 @@ import { LinkIconButton } from '@/components/shared/link-icon-button'
 import {
   type ProjectConfigItem,
   ProjectTag,
+  allProjects,
   getNpmUrl,
   getRepoUrl,
   projectTagNameMapping,
@@ -119,12 +120,7 @@ export const DataAnalysis: React.FC<DataAnalysisProps> = ({
 }) => {
   if (!data) return null
   return (
-    <div
-      className={cn(
-        'flex flex-1 items-center gap-6 overflow-hidden',
-        className,
-      )}
-    >
+    <div className={cn('flex items-center gap-6', className)}>
       {Object.keys(dataRenderConfig).map((key) => {
         const k = key as keyof typeof dataRenderConfig
         return (
@@ -177,7 +173,15 @@ interface ProjectCardProps extends PropsWithLocale {
 }
 
 export const ProjectCard = async ({ locale, item }: ProjectCardProps) => {
-  const { name, metadata, homepage: fallbackHomepage, tags, npm, data } = item
+  const {
+    name,
+    metadata,
+    homepage: fallbackHomepage,
+    tags,
+    alternative,
+    npm,
+    data,
+  } = item
   const { description, homepage: localHomepage } = metadata[locale]
   const homepage = localHomepage || fallbackHomepage
   const repoUrl = getRepoUrl(item)
@@ -192,6 +196,24 @@ export const ProjectCard = async ({ locale, item }: ProjectCardProps) => {
     locale,
     namespace: 'action',
   })
+
+  const descriptionDisplay = (() => {
+    const alternativeProject = tags.some((i) => i === ProjectTag.EOL)
+      ? allProjects.find((i) => i.name === alternative)
+      : undefined
+
+    if (alternativeProject) {
+      return t.rich('alternative', {
+        name: () => (
+          <ExternalLink href={getRepoUrl(alternativeProject)}>
+            {alternativeProject.name}
+          </ExternalLink>
+        ),
+      })
+    }
+
+    return description
+  })()
 
   return (
     <Card className="flex w-full flex-col">
@@ -212,11 +234,11 @@ export const ProjectCard = async ({ locale, item }: ProjectCardProps) => {
               : 'line-clamp-5 h-[100px]',
           )}
         >
-          {description}
+          {descriptionDisplay}
         </CardDescription>
       </CardHeader>
 
-      <CardFooter className="flex justify-between gap-3 py-3">
+      <CardFooter className="flex items-center justify-between gap-3 p-6 py-3">
         <Tags locale={locale} tags={tags} />
 
         <div className="flex items-center gap-3">

@@ -68,7 +68,8 @@
         "3": "The data is updated once a day, and only historical data is recorded incrementally."
       },
       "okText": "OK, I got it!"
-    }
+    },
+    "alternative": "Replaced by <name></name> ."
   },
   "action": {
     "toggle": "Click to switch to ",

@@ -100,6 +100,9 @@ export interface ProjectConfigItem {
    */
   npm?: boolean
 
+  /** If marked EOL, an alternative is shown */
+  alternative?: string
+
   homepage?: string
   tags: ProjectTag[]
   metadata: Record<Locale, ProjectMetadata>
@@ -498,17 +501,33 @@ const baseProjects: ProjectConfigItem[] = [
     },
   },
   {
-    name: '@bassist/eslint',
+    name: '@bassist/eslint-config',
     repo: 'bassist',
-    directory: 'eslint',
+    directory: 'eslint-config',
     npm: true,
     tags: [ProjectTag.Configuration],
     metadata: {
       en: {
-        description: 'Flat ESLint config for ESLint.',
+        description: 'A modern flat ESLint configuration for ESLint.',
       },
       zh: {
-        description: 'ESLint 的扁平化配置。',
+        description: 'ESLint 的现代扁平配置。',
+      },
+    },
+  },
+  {
+    name: '@bassist/eslint',
+    repo: 'bassist',
+    directory: 'eslint',
+    npm: true,
+    tags: [ProjectTag.EOL],
+    alternative: '@bassist/eslint-config',
+    metadata: {
+      en: {
+        description: 'Flat ESLint config for ESLint V8.',
+      },
+      zh: {
+        description: 'ESLint V8 的扁平化配置。',
       },
     },
   },
@@ -548,6 +567,7 @@ const baseProjects: ProjectConfigItem[] = [
     owner: 'analyticsjs',
     npm: true,
     tags: [ProjectTag.EOL],
+    alternative: '@web-analytics/vue',
     metadata: {
       en: {
         description:
@@ -564,6 +584,7 @@ const baseProjects: ProjectConfigItem[] = [
     owner: 'analyticsjs',
     npm: true,
     tags: [ProjectTag.EOL],
+    alternative: '@web-analytics/vue',
     metadata: {
       en: {
         description:
