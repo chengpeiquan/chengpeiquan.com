@@ -4,16 +4,10 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-overrides:
-  '@bassist/monorepo': link:../../pkg/bassist
-
 importers:
 
   .:
     dependencies:
-      '@bassist/monorepo':
-        specifier: link:../../pkg/bassist
-        version: link:../../pkg/bassist
       '@bassist/utils':
         specifier: ^0.16.0
         version: 0.16.0
