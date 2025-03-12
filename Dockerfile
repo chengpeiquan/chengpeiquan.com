@@ -35,7 +35,9 @@ RUN echo "NEXT_PUBLIC_HELLO=${NEXT_PUBLIC_HELLO}" >> .env && \
   echo "NEXT_PUBLIC_HELLO_WORLD=${NEXT_PUBLIC_HELLO_WORLD}" >> .env && \
   echo "HELLO_WORLD=${HELLO_WORLD}" >> .env
 
-RUN pnpm run build;
+RUN npm i -g pnpm && \
+  pnpm --version && \
+  pnpm run build;
 
 # Production image, copy all the files and run next
 FROM base AS runner
