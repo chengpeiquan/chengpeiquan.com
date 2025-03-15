@@ -6,11 +6,10 @@ import { cache } from 'react'
 import { getMetaCache } from '@/cache/meta-cache'
 import { type MetaCacheItem } from '@/config/cache-config'
 import {
-  ContentFolder,
+  type ContentFolder,
   type GetListResponse,
   type ListFolder,
-  articleCategories,
-  cookbookCategories,
+  categoryMapping,
   getPagination,
   pageSizeConfig,
 } from '@/config/content-config'
@@ -62,10 +61,7 @@ export const getListMetadata = cache(
     })
 
     const { category, page } = analyzeListParams(params)
-
-    const isCookbook = folder === ContentFolder.Cookbook
-    const cateConfig = isCookbook ? cookbookCategories : articleCategories
-    const cateItem = cateConfig.find((i) => i.slug === category)
+    const cateItem = category ? categoryMapping[category] : undefined
 
     const prefix = t(`prefix.${folder}`)
     const cateName = cateItem ? cateItem.label[params.locale] : ''

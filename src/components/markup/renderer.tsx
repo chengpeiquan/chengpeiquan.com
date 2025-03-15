@@ -1,17 +1,21 @@
-import { isObject, isString } from '@bassist/utils'
-import { Avatar, AvatarFallback, AvatarImage, Heading } from 'blackwork'
+import { isObject, isString, toArray } from '@bassist/utils'
+import { Avatar, AvatarFallback, AvatarImage, Badge, Heading } from 'blackwork'
 import { MiniGitHub } from 'blackwork/icons'
 import { getTranslations } from 'next-intl/server'
 import React from 'react'
 import { MusicPlayer } from '@/components/music-player'
-import { type ContentItem, type ContentMetadata } from '@/config/content-config'
+import {
+  type ContentItem,
+  type ContentMetadata,
+  categoryMapping,
+} from '@/config/content-config'
 import { isMobileDevice } from '@/config/middleware-config'
 import {
   type PropsWithDevice,
   type PropsWithLocale,
 } from '@/config/route-config'
 import { siteConfig } from '@/config/site-config'
-import { ExternalLink } from '@/navigation'
+import { ExternalLink, Link } from '@/navigation'
 import { LegacyTips } from './legacy-tips'
 
 interface StarOnGitHubProps extends PropsWithLocale {
@@ -102,11 +106,31 @@ export const MarkupRenderer = async ({
     namespace: 'siteConfig',
   })
 
+  const categories = toArray(
+    metadata.categories?.map((slug) => categoryMapping[slug]),
+  ).filter(Boolean)
+
   return (
     <article className="prose prose-neutral dark:prose-invert flex flex-1 flex-col overflow-hidden">
       <Heading level={1} className="mb-0 break-all text-2xl sm:text-3xl">
         {metadata.title}
       </Heading>
+
+      {categories.length > 0 && (
+        <div className="my-4 flex flex-wrap gap-2">
+          {categories.map((i) => (
+            <Badge variant="outline" key={i.slug}>
+              <Link
+                className="no-underline"
+                href={`/${i.group}/${i.slug}/1`}
+                variant="secondary"
+              >
+                {i.label[locale]}
+              </Link>
+            </Badge>
+          ))}
+        </div>
+      )}
 
       <AuthorData
         locale={locale}
