@@ -45,6 +45,7 @@ export default defineFlatConfig([
     name: getConfigName('override'),
     rules: {
       'require-await': 'off',
+      '@typescript-eslint/no-extraneous-class': 'off',
     },
   },
   {

@@ -5,12 +5,12 @@ import {
   type ContentMetadata,
   legacyThresholdDays,
 } from '@/config/content-config'
-import { type Locale } from '@/config/locale-config'
+import { type Locale, LocaleIs } from '@/config/locale-config'
 import { type PropsWithLocale } from '@/config/route-config'
 import { cn } from '@/utils'
 
 const calculateDays = cache((timestamp: number, locale: Locale) => {
-  const isChinese = locale === 'zh'
+  const isChinese = LocaleIs.isZH(locale)
 
   const targetDate = new Date(timestamp)
   const currentDate = new Date()
