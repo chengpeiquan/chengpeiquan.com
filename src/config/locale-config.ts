@@ -7,6 +7,17 @@ export type Locales = typeof locales
 
 export type Locale = Locales[number]
 
+// Naming convention inspired by `react-is` 😎
+export class LocaleIs {
+  static isZH(locale: unknown) {
+    return locale === 'zh'
+  }
+
+  static isEN(locale: unknown) {
+    return locale === 'en'
+  }
+}
+
 export const defaultLocale: Locale = 'zh'
 
 export const localePrefix: LocalePrefix<Locales, 'as-needed'> = 'as-needed'

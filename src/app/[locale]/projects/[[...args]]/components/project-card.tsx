@@ -22,6 +22,7 @@ import {
 import { getTranslations } from 'next-intl/server'
 import React from 'react'
 import { LinkIconButton } from '@/components/shared/link-icon-button'
+import { LocaleIs } from '@/config/locale-config'
 import {
   type ProjectConfigItem,
   ProjectTag,
@@ -229,7 +230,7 @@ export const ProjectCard = async ({ locale, item }: ProjectCardProps) => {
         <CardDescription
           className={cn(
             'text-muted-foreground text-sm',
-            locale === 'zh'
+            LocaleIs.isZH(locale)
               ? 'line-clamp-3 h-[60px]'
               : 'line-clamp-5 h-[100px]',
           )}
