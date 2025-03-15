@@ -1,5 +1,20 @@
 [
   {
+    "slug": "a-modern-flat-eslint-configuration-for-eslint",
+    "metadata": {
+      "title": "适用于 ESLint V9 的现代化扁平化配置",
+      "desc": "ESLint v9.0.0 是 ESLint 的一个主要版本，它有几个重大变化，其中最大的变化是其配置文件和插件生态系统的使用。对于新项目，我提供了一个 ESLint Config 包，其中内置了一些我个人常用的 ESLint 配置。",
+      "keywords": "eslint,eslint config,eslint flat config",
+      "cover": "https://cdn.chengpeiquan.com/img/2025/02/202503151404984.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "open-source"
+      ],
+      "repo": "https://github.com/chengpeiquan/bassist",
+      "date": "2025/3/14 00:35:02",
+      "timestamp": 1741883702000
+    }
+  },
+  {
     "slug": "better-sqlite3-error-could-not-locate-the-bindings-file",
     "metadata": {
       "title": "解决 better-sqlite3 连接 SQLite 时报错 Could not locate the bindings file",

@@ -1,5 +1,20 @@
 [
   {
+    "slug": "a-modern-flat-eslint-configuration-for-eslint",
+    "metadata": {
+      "title": "A modern flat ESLint configuration for ESLint V9",
+      "desc": "ESLint v9.0.0 is a major release of ESLint, it has several breaking changes, the biggest of which is the use of its configuration files and plugin ecosystem. For new projects, I provide an ESLint Config package with some of my personal commonly used ESLint configurations built in.",
+      "keywords": "eslint,eslint config,eslint flat config",
+      "cover": "https://cdn.chengpeiquan.com/img/2025/02/202503151404984.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "open-source"
+      ],
+      "repo": "https://github.com/chengpeiquan/bassist",
+      "date": "2025/3/14 00:35:02",
+      "timestamp": 1741883702000
+    }
+  },
+  {
     "slug": "git-commit-analytics",
     "metadata": {
       "title": "git-commit-analytics",
