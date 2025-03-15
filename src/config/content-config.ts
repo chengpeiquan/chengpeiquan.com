@@ -232,6 +232,13 @@ export const articleCategories: CategoryConfigItem[] = [
     },
   },
   {
+    slug: 'open-source',
+    label: {
+      zh: '开源',
+      en: 'Open Source',
+    },
+  },
+  {
     slug: 'design',
     label: {
       zh: '设计',
@@ -323,6 +330,25 @@ export const cookbookCategories: CategoryConfigItem[] = [
 ]
 
 export type CategoryGroup = 'articles' | 'cookbooks'
+
+export interface CategoryConfigItemWithGroup extends CategoryConfigItem {
+  group: CategoryGroup
+}
+
+const withGroup = (arr: CategoryConfigItem[], group: CategoryGroup) => {
+  return arr.map<CategoryConfigItemWithGroup>((i) => ({ ...i, group }))
+}
+
+export const categoryMapping = [
+  ...withGroup(articleCategories, 'articles'),
+  ...withGroup(cookbookCategories, 'cookbooks'),
+].reduce(
+  (acc, category) => {
+    acc[category.slug] = category
+    return acc
+  },
+  {} as Record<string, CategoryConfigItemWithGroup>,
+)
 
 // If there are many categories in the list,
 // It will be presented in a collapsed form on the mobile,
