@@ -1,12 +1,25 @@
+import { githubConfig } from '@/config/project-config'
 import { FetchClient } from './client'
 import { type GitHubRepoDataItem, type NpmDownloadDataItem } from './types'
-import { toJSON } from './utils'
+import { toDecodedMarkdown, toJSON } from './utils'
 
 class GitHubApiClient {
+  private ghFetcher = new FetchClient(githubConfig.api)
+
   constructor(private fetcher: FetchClient) {}
 
   async repos() {
     return toJSON<GitHubRepoDataItem[]>(this.fetcher.get('/gh/repos'))
+  }
+
+  async fetchMarkdown(owner: string, repo: string, path: string) {
+    return toDecodedMarkdown(
+      this.ghFetcher.get(`/repos/${owner}/${repo}/contents/${path}`, {
+        headers: {
+          Accept: 'application/vnd.github.v3+json',
+        },
+      }),
+    )
   }
 }
 

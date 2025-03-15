@@ -70,6 +70,31 @@ const bgmSchema = z.object({
 
 export type BgmConfig = z.infer<typeof bgmSchema>
 
+// Remote content from GitHub (e.g. Markdown, HTML, etc.)
+// Reference `apis.gh.fetchMarkdown`
+const githubContentSchema = z.object({
+  type: z.literal('github'),
+  owner: z.string().optional(),
+  repo: z.string(),
+  path: z.string(),
+})
+
+export type GitHubContentConfig = z.infer<typeof githubContentSchema>
+
+// Combine different platforms into a discriminated union
+const remoteContentSchema = z.discriminatedUnion('type', [
+  githubContentSchema,
+  // Placeholder: If there are more platforms in the future
+])
+
+export type RemoteContentConfig = z.infer<typeof remoteContentSchema>
+
+export const isValidRemoteContentConfig = (
+  v: unknown,
+): v is RemoteContentConfig => {
+  return remoteContentSchema.safeParse(v).success
+}
+
 // Define the Zod schema for `ContentMetadata`
 const contentMetadataSchema = z.object({
   // Shared
@@ -80,18 +105,18 @@ const contentMetadataSchema = z.object({
   timestamp: z.number(), // The timestamp of `date`
   cover: z.string(), // Size: 500x400
   categories: z.array(z.string()).optional(),
-  repo: z.string().optional(),
   isDraft: z.boolean().optional(),
+  bgm: bgmSchema.optional(),
 
   // For article
   maybeLegacy: z.boolean().optional(), // Content may be outdated
+  repo: z.string().optional(),
+  remote: remoteContentSchema.optional(),
 
   // For cookbook
   duration: z.number().optional(),
   price: z.number().optional(),
   xiaohongshuId: z.string().optional(),
-
-  bgm: bgmSchema.optional(),
 })
 
 export type ContentMetadata = z.infer<typeof contentMetadataSchema>
