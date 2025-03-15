@@ -24,9 +24,13 @@ import {
   type ContentItem,
   type ContentMetadata,
   type HeadingItem,
+  type RemoteContentConfig,
   fileExtensions,
+  isValidRemoteContentConfig,
 } from '@/config/content-config'
+import { defaultOwner } from '@/config/project-config'
 import { ContentProcessorMode } from '@/core/types'
+import { apis } from '@/fetcher'
 import { a, img, video } from './components'
 import remarkVideo from './plugins/remark-video'
 
@@ -176,6 +180,29 @@ const parseMarkdown = async (
   }
 }
 
+const fetchRemoteMarkdown = async (remote: RemoteContentConfig) => {
+  if (!isValidRemoteContentConfig(remote)) return ''
+
+  try {
+    switch (remote.type) {
+      case 'github': {
+        const res = await apis.gh.fetchMarkdown(
+          remote.owner || defaultOwner,
+          remote.repo,
+          remote.path,
+        )
+        return res
+      }
+
+      default: {
+        return ''
+      }
+    }
+  } catch {
+    return ''
+  }
+}
+
 /**
  * In fact, the original date in markdown file is CST time, e.g. `2019/09/15
  * 01:35:00`
@@ -230,9 +257,9 @@ export const parse = async (
 ): Promise<ContentItem | null> => {
   try {
     const raw = (await readFile(filePath, 'utf-8')) || ''
-    const { content: markdown = '', data = {} } = matter(raw)
+    const { content: localMarkdown = '', data = {} } = matter(raw)
 
-    const { date: utcDate, ...rest } = data
+    const { date: utcDate, remote, ...rest } = data
     const { date, timestamp } = parseDate(utcDate)
     const slug = parseSlug(filePath)
 
@@ -251,6 +278,16 @@ export const parse = async (
         metadata,
       } satisfies ContentItem
     }
+
+    const isRemoteEnabled = isValidRemoteContentConfig(remote)
+
+    const remoteMarkdown = isRemoteEnabled
+      ? await fetchRemoteMarkdown(remote)
+      : ''
+
+    const markdown = isRemoteEnabled
+      ? localMarkdown + remoteMarkdown
+      : localMarkdown
 
     const { headings, html, jsxElement } = await parseMarkdown(markdown, mode)
 
