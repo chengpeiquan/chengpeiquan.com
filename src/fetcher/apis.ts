@@ -1,4 +1,3 @@
-import { isServer } from '@bassist/utils'
 import { githubConfig } from '@/config/project-config'
 import { FetchClient } from './client'
 import { type GitHubRepoDataItem, type NpmDownloadDataItem } from './types'
@@ -11,11 +10,7 @@ class GitHubApiClient {
     Accept: 'application/vnd.github.v3+json',
   }
 
-  constructor(private fetcher: FetchClient) {
-    if (isServer) {
-      console.log(process.env)
-    }
-  }
+  constructor(private fetcher: FetchClient) {}
 
   async repos() {
     return toJSON<GitHubRepoDataItem[]>(this.fetcher.get('/gh/repos'))
