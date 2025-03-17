@@ -28,12 +28,14 @@ ARG NEXT_PUBLIC_HELLO
 ARG NEXT_PUBLIC_WORLD
 ARG NEXT_PUBLIC_HELLO_WORLD
 ARG HELLO_WORLD
+ARG GITHUB_ACCESS_TOKEN
 
 # Write the environment variables to the .env file
 RUN echo "NEXT_PUBLIC_HELLO=${NEXT_PUBLIC_HELLO}" >> .env && \
   echo "NEXT_PUBLIC_WORLD=${NEXT_PUBLIC_WORLD}" >> .env && \
   echo "NEXT_PUBLIC_HELLO_WORLD=${NEXT_PUBLIC_HELLO_WORLD}" >> .env && \
-  echo "HELLO_WORLD=${HELLO_WORLD}" >> .env
+  echo "HELLO_WORLD=${HELLO_WORLD}" >> .env && \
+  echo "GITHUB_ACCESS_TOKEN=${GITHUB_ACCESS_TOKEN}" >> .env
 
 RUN npm i -g pnpm && \
   pnpm --version && \
