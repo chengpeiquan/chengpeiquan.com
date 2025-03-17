@@ -5,6 +5,10 @@ import { toDecodedMarkdown, toJSON } from './utils'
 
 class GitHubApiClient {
   private ghFetcher = new FetchClient(githubConfig.api)
+  private ghAuthHeader = {
+    Authorization: `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`,
+    Accept: 'application/vnd.github.v3+json',
+  }
 
   constructor(private fetcher: FetchClient) {}
 
@@ -15,9 +19,7 @@ class GitHubApiClient {
   async fetchMarkdown(owner: string, repo: string, path: string) {
     return toDecodedMarkdown(
       this.ghFetcher.get(`/repos/${owner}/${repo}/contents/${path}`, {
-        headers: {
-          Accept: 'application/vnd.github.v3+json',
-        },
+        headers: this.ghAuthHeader,
       }),
     )
   }
