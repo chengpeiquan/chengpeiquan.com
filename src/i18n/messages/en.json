@@ -52,6 +52,17 @@
     "resultCount": "<count></count> results for <keyword></keyword>",
     "removeButtonLabel": "Remove this record"
   },
+  "homeConfig": {
+    "hero": {
+      "imageTitle": "My first tattoo, my bass.",
+      "slogan": "True Colors: A Decade"
+    },
+    "latestArticles": {
+      "title": "Latest Articles",
+      "description": "My technical insights and life insights",
+      "viewMore": "View all articles"
+    }
+  },
   "projectConfig": {
     "title": "Open Source Projects",
     "description": "Projects that I created or maintaining",

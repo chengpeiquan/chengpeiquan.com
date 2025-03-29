@@ -52,6 +52,17 @@
     "resultCount": "找到 <count></count> 个 <keyword></keyword> 的相关结果",
     "removeButtonLabel": "移除该记录"
   },
+  "homeConfig": {
+    "hero": {
+      "imageTitle": "我的第一个文身，是我的贝斯。",
+      "slogan": "冲出他朝崎岖道上 哪怕会退倒"
+    },
+    "latestArticles": {
+      "title": "最新文章",
+      "description": "我的技术见解和生活感悟",
+      "viewMore": "浏览所有文章"
+    }
+  },
   "projectConfig": {
     "title": "开源项目",
     "description": "由我创建或维护的项目",
