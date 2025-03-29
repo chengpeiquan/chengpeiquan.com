@@ -46,6 +46,7 @@ export const LayoutContainer = async ({
   return (
     <>
       <LayoutHeader
+        className="dark:shadow-[inset_0_-1px_0_0_#222]"
         wrapperClassName="gap-12 md:gap-8"
         contentClassName="gap-6"
         socialLinksVisible={!isMobile}
@@ -87,7 +88,7 @@ export const LayoutContainer = async ({
         style={getBrbStyle(0, isMobile)}
       />
 
-      <LayoutFooter className="flex-col gap-4 sm:flex-row sm:gap-12">
+      <LayoutFooter className="h-28 flex-col gap-2 sm:flex-row sm:gap-12 md:h-32">
         <span className="text-muted-foreground">
           © 2014-{new Date().getFullYear()} {t('name')}
         </span>
