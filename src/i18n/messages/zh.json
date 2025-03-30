@@ -58,9 +58,13 @@
       "slogan": "冲出他朝崎岖道上 哪怕会退倒"
     },
     "latestArticles": {
-      "title": "博客文章",
-      "description": "技术分析、产品设计、生活随笔",
-      "viewMore": "浏览所有文章"
+      "title": "最新文章",
+      "description": "技术分析、产品设计、生活随笔"
+    },
+    "latestCookbooks": {
+      "title": "原创菜谱",
+      "description": "潮州佬日常下厨的家常菜",
+      "viewMore": "查看全部菜谱"
     }
   },
   "projectConfig": {
