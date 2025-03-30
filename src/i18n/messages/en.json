@@ -59,8 +59,12 @@
     },
     "latestArticles": {
       "title": "Latest Articles",
-      "description": "My technical insights and life insights",
-      "viewMore": "View all articles"
+      "description": "Tech Insights, Product Design & Life Musings"
+    },
+    "latestCookbooks": {
+      "title": "Latest Cookbooks",
+      "description": "A Teochew Man’s Joy of Home Cooking",
+      "viewMore": "View all cookbooks"
     }
   },
   "projectConfig": {
