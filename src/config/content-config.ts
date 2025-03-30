@@ -350,6 +350,13 @@ export const categoryMapping = [
   {} as Record<string, CategoryConfigItemWithGroup>,
 )
 
+// Some long English words can be converted into
+// more concise expressions in scenarios such as button text.
+export const shortNameMapping: Record<CategoryConfigItem['slug'], string> = {
+  tech: 'Tech',
+  'open-source': 'OSS', // Open Source Software
+}
+
 // If there are many categories in the list,
 // It will be presented in a collapsed form on the mobile,
 // Here is the title of the collapsed panel

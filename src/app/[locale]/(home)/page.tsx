@@ -3,6 +3,7 @@ import React from 'react'
 import { isMobileDevice } from '@/config/middleware-config'
 import { type ListPageProps } from '@/config/route-config'
 import { Hero } from './components/hero'
+import { LatestArticles } from './components/latest-articles'
 import { MobileLanding } from './components/mobile-landing'
 
 export default async function LocalePage({
@@ -20,6 +21,7 @@ export default async function LocalePage({
   return (
     <LayoutMain fullscreen>
       <Hero />
+      <LatestArticles locale={locale} isMobile={isMobile} />
     </LayoutMain>
   )
 }
