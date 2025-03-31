@@ -2,17 +2,14 @@ import { isArray, toArray } from '@bassist/utils'
 import { Heading, LayoutMain, Paragraph } from 'blackwork'
 import { getTranslations } from 'next-intl/server'
 import React from 'react'
+import { DataAnalysis } from '@/components/project/data-analysis'
+import { fetchProjectDatabase } from '@/components/project/shared'
 import { isMobileDevice } from '@/config/middleware-config'
 import { ExtraTag, type ProjectTag } from '@/config/project-config'
 import { type ListPageProps } from '@/config/route-config'
-import {
-  type GitHubRepoDataItem,
-  type NpmDownloadDataItem,
-  apis,
-} from '@/fetcher'
+import { type GitHubRepoDataItem, type NpmDownloadDataItem } from '@/fetcher'
 import { cn } from '@/utils'
 import { DataDescription } from './components/data-description'
-import { DataAnalysis } from './components/project-card'
 import { ProjectList } from './components/project-list'
 
 export const generateMetadata = async ({
@@ -42,10 +39,9 @@ export default async function ProjectsPage({
     namespace: 'projectConfig',
   })
 
-  const ghData = await apis.gh.repos()
-  const npmData = await apis.npm.packages()
+  const data = await fetchProjectDatabase()
 
-  const sum = [...toArray(ghData), ...toArray(npmData)].reduce(
+  const sum = [...toArray(data.gh), ...toArray(data.npm)].reduce(
     (acc, i) => {
       const gh = i as GitHubRepoDataItem
       const npm = i as NpmDownloadDataItem
@@ -83,11 +79,7 @@ export default async function ProjectsPage({
         />
       </div>
 
-      <ProjectList
-        locale={locale}
-        tag={tag}
-        data={{ gh: ghData, npm: npmData }}
-      />
+      <ProjectList locale={locale} tag={tag} data={data} />
     </LayoutMain>
   )
 }
