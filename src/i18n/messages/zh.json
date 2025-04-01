@@ -84,7 +84,8 @@
       },
       "okText": "我知道了"
     },
-    "alternative": "请使用 <name></name> 代替。"
+    "alternative": "请使用 <name></name> 代替。",
+    "viewAll": "查看全部"
   },
   "action": {
     "toggle": "点击切换到",

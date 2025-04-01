@@ -84,7 +84,8 @@
       },
       "okText": "OK, I got it!"
     },
-    "alternative": "Replaced by <name></name> ."
+    "alternative": "Replaced by <name></name> .",
+    "viewAll": "View all"
   },
   "action": {
     "toggle": "Click to switch to ",

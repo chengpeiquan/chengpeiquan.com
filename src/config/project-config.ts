@@ -553,7 +553,7 @@ const baseProjects: ProjectConfigItem[] = [
     repo: 'bassist',
     directory: 'uno',
     npm: true,
-    tags: [ProjectTag.Configuration],
+    tags: [ProjectTag.EOL],
     metadata: {
       en: {
         description: 'Custom configuration for UnoCSS.',
