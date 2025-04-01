@@ -7,6 +7,7 @@ import { Hero } from './components/hero'
 import { LatestArticles } from './components/latest-articles'
 import { LatestCookbooks } from './components/latest-cookbooks'
 import { MobileLanding } from './components/mobile-landing'
+import { OpenSourceProjects } from './components/open-source-projects'
 
 export default async function LocalePage({
   params: promiseParams,
@@ -20,14 +21,14 @@ export default async function LocalePage({
     return <MobileLanding locale={locale} />
   }
 
+  const sharedProps = { locale, isMobile }
+
   return (
     <LayoutMain fullscreen>
       <Hero />
-      <LatestArticles locale={locale} isMobile={isMobile} />
-
-      {LocaleIs.isZH(locale) && (
-        <LatestCookbooks locale={locale} isMobile={isMobile} />
-      )}
+      <LatestArticles {...sharedProps} />
+      <OpenSourceProjects {...sharedProps} />
+      {LocaleIs.isZH(locale) && <LatestCookbooks {...sharedProps} />}
     </LayoutMain>
   )
 }

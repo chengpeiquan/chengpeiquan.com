@@ -1,4 +1,4 @@
-import { isArray } from '@bassist/utils'
+import { isArray, shuffle } from '@bassist/utils'
 import { type ProjectConfigItem } from '@/config/project-config'
 import {
   type GitHubRepoDataItem,
@@ -25,28 +25,33 @@ export type ProjectAnalysisData = Pick<GitHubRepoDataItem, 'stars' | 'forks'> &
 export const enrichProjectsWithStats = (
   projects: ProjectConfigItem[],
   data: ProjectDatabase,
-) => {
-  return projects
-    .map<ProjectCardItem>((i) => {
-      const gh = isArray(data.gh)
-        ? data.gh.find((j) => j.repo === i.repo && j.owner === i.owner)
+  sortBy: 'stars' | 'random' = 'stars',
+): ProjectCardItem[] => {
+  const items = projects.map<ProjectCardItem>((i) => {
+    const gh = isArray(data.gh)
+      ? data.gh.find((j) => j.repo === i.repo && j.owner === i.owner)
+      : undefined
+
+    const npm =
+      isArray(data.npm) && i.npm
+        ? data.npm.find((j) => j.packageName === i.name)
         : undefined
 
-      const npm =
-        isArray(data.npm) && i.npm
-          ? data.npm.find((j) => j.packageName === i.name)
-          : undefined
+    const picked: ProjectAnalysisData = {
+      stars: gh?.stars ?? 0,
+      forks: gh?.forks ?? 0,
+      downloads: npm?.downloads ?? 0,
+    }
 
-      const picked: ProjectAnalysisData = {
-        stars: gh?.stars ?? 0,
-        forks: gh?.forks ?? 0,
-        downloads: npm?.downloads ?? 0,
-      }
+    return {
+      ...i,
+      data: picked,
+    }
+  })
 
-      return {
-        ...i,
-        data: picked,
-      }
-    })
-    .sort((a, b) => (b.data?.stars ?? 0) - (a.data?.stars ?? 0))
+  if (sortBy === 'random') {
+    return shuffle(items)
+  }
+
+  return items.sort((a, b) => (b.data?.stars ?? 0) - (a.data?.stars ?? 0))
 }
