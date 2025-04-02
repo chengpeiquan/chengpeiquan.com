@@ -101,15 +101,12 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
   )
 }
 
-type LatestArticlesProps = PropsWithLocale & PropsWithDevice
+type ArticlesProps = PropsWithLocale & PropsWithDevice
 
-export const LatestArticles = async ({
-  locale,
-  isMobile,
-}: LatestArticlesProps) => {
+export const Articles = async ({ locale, isMobile }: ArticlesProps) => {
   const t = await getTranslations({
     locale,
-    namespace: 'homeConfig.latestArticles',
+    namespace: 'homeConfig.articles',
   })
 
   const { items } = await getList(ContentFolder.Article, {

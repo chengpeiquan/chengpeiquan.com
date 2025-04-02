@@ -3,11 +3,11 @@ import React from 'react'
 import { LocaleIs } from '@/config/locale-config'
 import { isMobileDevice } from '@/config/middleware-config'
 import { type ListPageProps } from '@/config/route-config'
+import { Articles } from './components/articles'
+import { Cookbooks } from './components/cookbooks'
 import { Hero } from './components/hero'
-import { LatestArticles } from './components/latest-articles'
-import { LatestCookbooks } from './components/latest-cookbooks'
 import { MobileLanding } from './components/mobile-landing'
-import { OpenSourceProjects } from './components/open-source-projects'
+import { Projects } from './components/projects'
 
 export default async function LocalePage({
   params: promiseParams,
@@ -26,9 +26,9 @@ export default async function LocalePage({
   return (
     <LayoutMain fullscreen>
       <Hero />
-      <LatestArticles {...sharedProps} />
-      <OpenSourceProjects {...sharedProps} />
-      {LocaleIs.isZH(locale) && <LatestCookbooks {...sharedProps} />}
+      <Articles {...sharedProps} />
+      <Projects {...sharedProps} />
+      {LocaleIs.isZH(locale) && <Cookbooks {...sharedProps} />}
     </LayoutMain>
   )
 }

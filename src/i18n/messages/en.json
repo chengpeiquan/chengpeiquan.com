@@ -57,11 +57,11 @@
       "imageTitle": "My first tattoo, my bass.",
       "slogan": "True Colors: A Decade"
     },
-    "latestArticles": {
+    "articles": {
       "title": "Latest Articles",
       "description": "Tech Insights, Product Design & Life Musings"
     },
-    "latestCookbooks": {
+    "cookbooks": {
       "title": "Latest Cookbooks",
       "description": "A Teochew Man’s Joy of Home Cooking",
       "viewMore": "View all cookbooks"

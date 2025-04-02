@@ -19,11 +19,9 @@ import {
 import { Link } from '@/navigation'
 import { SectionContainer, SectionTitle } from './shared-widgets'
 
-type OpenSourceProjectsProps = PropsWithLocale & PropsWithDevice
+type ProjectsProps = PropsWithLocale & PropsWithDevice
 
-export const OpenSourceProjects = async ({
-  locale,
-}: OpenSourceProjectsProps) => {
+export const Projects = async ({ locale }: ProjectsProps) => {
   const t = await getTranslations({
     locale,
     namespace: 'projectConfig',
