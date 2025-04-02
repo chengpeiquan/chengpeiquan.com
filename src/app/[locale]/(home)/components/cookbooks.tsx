@@ -98,12 +98,12 @@ const getRandomCookbooks = async (locale: Locale) => {
   return shuffle(allCookbooks).slice(0, count.cookbooks)
 }
 
-type LatestCookbooksProps = PropsWithLocale & PropsWithDevice
+type CookbooksProps = PropsWithLocale & PropsWithDevice
 
-export const LatestCookbooks = async ({ locale }: LatestCookbooksProps) => {
+export const Cookbooks = async ({ locale }: CookbooksProps) => {
   const t = await getTranslations({
     locale,
-    namespace: 'homeConfig.latestCookbooks',
+    namespace: 'homeConfig.cookbooks',
   })
 
   const cookbooks = await getRandomCookbooks(locale)
