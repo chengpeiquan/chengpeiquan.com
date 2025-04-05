@@ -60,6 +60,7 @@ export const Books = async ({ locale, isMobile }: BooksProps) => {
           <BookIntroduce
             purchaseLinks={book.purchaseLinks}
             locale={locale}
+            isMobile={isMobile}
             introSlug={book.introSlug}
           />
 

@@ -36,8 +36,8 @@ export const PublishedBooks: React.FC<PropsWithControllable> = (props) => {
         <div className="flex w-full items-center justify-center">
           {links.map((i) => {
             return (
-              <Button key={i.href} variant="link">
-                <ExternalLink href={i.href}>{i.title}购买</ExternalLink>
+              <Button key={i.href} variant="link" size="sm">
+                <ExternalLink href={i.href}>{i.title}</ExternalLink>
               </Button>
             )
           })}

@@ -100,7 +100,7 @@ export const NavigationSheet: React.FC<PropsWithDevice> = ({ isMobile }) => {
 
             <Separator className="m-0" />
 
-            <div className="flex flex-1 flex-col overflow-hidden p-4 pb-0">
+            <div className="box-border flex flex-1 flex-col overflow-hidden p-4 pb-0">
               <SearchBox isMobile={isMobile} />
 
               <Separator className="my-4" />
@@ -109,7 +109,7 @@ export const NavigationSheet: React.FC<PropsWithDevice> = ({ isMobile }) => {
                 <NavigationLinks
                   visible
                   asButton
-                  className="grid grid-cols-2"
+                  className="grid w-full grid-cols-2"
                 />
 
                 <Recommend />
