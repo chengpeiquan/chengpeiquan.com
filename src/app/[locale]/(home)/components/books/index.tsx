@@ -28,7 +28,7 @@ export const Books = async ({ locale }: BooksProps) => {
     <SectionContainer>
       <SectionTitle title={t('title')} description={t('description')} />
 
-      <Card className="mx-auto flex flex-col gap-6 p-6 md:flex-row">
+      <Card className="mx-auto flex max-w-screen-lg flex-col gap-6 p-6 md:flex-row">
         <div className="relative flex aspect-[500/740] w-full shrink-0 md:w-[280px] lg:w-[340px]">
           <Image
             src={book.cover}

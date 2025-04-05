@@ -3,6 +3,7 @@ import React from 'react'
 import { LocaleIs } from '@/config/locale-config'
 import { isMobileDevice } from '@/config/middleware-config'
 import { type ListPageProps } from '@/config/route-config'
+import { AboutMe } from './components/about-me'
 import { Articles } from './components/articles'
 import { Books } from './components/books'
 import { Cookbooks } from './components/cookbooks'
@@ -28,6 +29,7 @@ export default async function LocalePage({
   return (
     <LayoutMain fullscreen>
       <Hero />
+      <AboutMe {...sharedProps} />
       {isZH && <Books {...sharedProps} />}
       <Articles {...sharedProps} />
       <Projects {...sharedProps} />
