@@ -15,8 +15,12 @@ import { getTranslations } from 'next-intl/server'
 import React from 'react'
 import { type BookPurchaseInfo } from '@/config/book-config'
 import { ContentFolder } from '@/config/content-config'
-import { type PropsWithLocale } from '@/config/route-config'
+import {
+  type PropsWithDevice,
+  type PropsWithLocale,
+} from '@/config/route-config'
 import { getDetails } from '@/core/dispatcher'
+import { cn } from '@/utils'
 import { PurchaseLinks } from './purchase-links'
 
 const ExpandButton: React.FC<{ label: string }> = ({ label }) => {
@@ -37,12 +41,14 @@ type BookIntroduceProps = Pick<
   BookPurchaseInfo,
   'purchaseLinks' | 'introSlug'
 > &
-  PropsWithLocale
+  PropsWithLocale &
+  PropsWithDevice
 
 export const BookIntroduce = async ({
   locale,
   purchaseLinks,
   introSlug,
+  isMobile,
 }: BookIntroduceProps) => {
   const res = await getDetails(ContentFolder.Fragment, {
     slug: introSlug,
@@ -61,20 +67,25 @@ export const BookIntroduce = async ({
   return (
     <div className="text-foreground mb-4 w-full">
       <Dialog>
-        <ShowMore
-          lines={3}
-          separator=""
-          more={<ExpandButton label={t('expandButton')} />}
-          className="line-clamp-3 text-base"
-        >
-          {content}
-        </ShowMore>
+        {/* Prevent the content from being fully rendered when the page is refreshed */}
+        <div className="h-[75px] w-full overflow-hidden">
+          <ShowMore
+            lines={3}
+            separator=""
+            more={<ExpandButton label={t('expandButton')} />}
+            className="text-base"
+          >
+            {content}
+          </ShowMore>
+        </div>
 
-        <DialogContent className="max-w-2xl">
+        <DialogContent
+          className={cn('rounded-lg', isMobile ? 'max-w-[90vw]' : 'max-w-2xl')}
+        >
           <DialogHeader>
             <DialogTitle>{t('title')}</DialogTitle>
             <DialogDescription className="!mt-6">
-              <ScrollArea className="-mr-4 max-h-[500px] pr-4">
+              <ScrollArea className="-mr-4 h-[500px] pr-4">
                 <div className="prose prose-neutral dark:prose-invert text-foreground dark:text-foreground text-sm">
                   {content}
                 </div>
