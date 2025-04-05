@@ -1,0 +1,51 @@
+import Image from 'next/image'
+import { getTranslations } from 'next-intl/server'
+import React from 'react'
+import { ContentFolder } from '@/config/content-config'
+import { type PropsWithLocale } from '@/config/route-config'
+import { getDetails } from '@/core/dispatcher'
+import { cn } from '@/utils'
+import { SectionContainer, SectionTitle } from './shared-widgets'
+
+type AboutMeProps = PropsWithLocale
+
+export const AboutMe = async ({ locale }: AboutMeProps) => {
+  const t = await getTranslations({
+    locale,
+    namespace: 'homeConfig.aboutMe',
+  })
+
+  const res = await getDetails(ContentFolder.Fragment, {
+    slug: 'about-me',
+    locale,
+  })
+
+  if (!res) return null
+
+  const content = res.jsxElement
+
+  return (
+    <SectionContainer>
+      <SectionTitle title={t('title')} description={t('description')} />
+
+      <div className="mx-auto grid max-w-screen-lg grid-cols-1 items-center gap-8 lg:grid-cols-2">
+        <div className="relative mx-auto flex aspect-square w-80 max-w-full overflow-hidden rounded-full sm:w-[400px]">
+          <Image
+            src="https://cdn.chengpeiquan.com/img/2025/04/202504060001104.jpg?x-oss-process=image/interlace,1"
+            alt={t('avatarAlt')}
+            fill
+          />
+        </div>
+
+        <div
+          className={cn(
+            'prose prose-neutral dark:prose-invert !text-left text-lg',
+            '[&_a]:text-muted-foreground [&_a]:text-base [&_a]:no-underline',
+          )}
+        >
+          {content}
+        </div>
+      </div>
+    </SectionContainer>
+  )
+}
