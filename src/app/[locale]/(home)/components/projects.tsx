@@ -17,11 +17,12 @@ import {
   type PropsWithLocale,
 } from '@/config/route-config'
 import { Link } from '@/navigation'
+import { cn } from '@/utils'
 import { SectionContainer, SectionTitle } from './shared-widgets'
 
 type ProjectsProps = PropsWithLocale & PropsWithDevice
 
-export const Projects = async ({ locale }: ProjectsProps) => {
+export const Projects = async ({ locale, isMobile }: ProjectsProps) => {
   const t = await getTranslations({
     locale,
     namespace: 'projectConfig',
@@ -29,9 +30,11 @@ export const Projects = async ({ locale }: ProjectsProps) => {
 
   const data = await fetchProjectDatabase()
 
+  const count = isMobile ? 3 : 11
+
   const items = enrichProjectsWithStats(allProjects, data, 'random')
     .filter((i) => !i.tags.includes(ProjectTag.EOL))
-    .slice(0, 11)
+    .slice(0, count)
 
   const tagList = shuffle(Object.values(ProjectTag))
     .filter((i) => i !== ProjectTag.EOL)
@@ -41,15 +44,29 @@ export const Projects = async ({ locale }: ProjectsProps) => {
     <SectionContainer>
       <SectionTitle title={t('title')} description={t('description')} />
 
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:gap-6 xl:gap-8">
+      <div
+        className={cn(
+          'grid gap-4 md:grid-cols-3 lg:gap-6 xl:gap-8',
+          isMobile ? 'grid-cols-1' : 'grid-cols-2',
+        )}
+      >
         {items.map((i) => (
           <ProjectCard key={i.repo + i.name} locale={locale} item={i} />
         ))}
 
-        <Card className="group flex flex-col items-center justify-center">
+        <Card
+          className={cn('group flex flex-col items-center justify-center', {
+            'py-6': isMobile,
+          })}
+        >
           <Link
             href="/projects"
-            className="group-hover:bg-accent/50 flex size-full flex-col items-center justify-center gap-6"
+            className={cn(
+              'flex size-full flex-col items-center justify-center gap-6',
+              {
+                'group-hover:bg-accent/50': !isMobile,
+              },
+            )}
           >
             <div className="grid grid-cols-2 gap-3">
               {tagList.map((i) => (

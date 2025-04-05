@@ -6,15 +6,18 @@ import { getTranslations } from 'next-intl/server'
 import React from 'react'
 import { learningVue3 } from '@/config/book-config'
 import { LocaleIs } from '@/config/locale-config'
-import { type PropsWithLocale } from '@/config/route-config'
+import {
+  type PropsWithDevice,
+  type PropsWithLocale,
+} from '@/config/route-config'
 import { SectionContainer, SectionTitle } from '../shared-widgets'
 import { AuthorRecommendation } from './author-recommendation'
 import { BookIntroduce } from './introduce'
 import { PurchaseLinks } from './purchase-links'
 
-type BooksProps = PropsWithLocale
+type BooksProps = PropsWithLocale & PropsWithDevice
 
-export const Books = async ({ locale }: BooksProps) => {
+export const Books = async ({ locale, isMobile }: BooksProps) => {
   if (LocaleIs.isEN(locale)) return null
 
   const t = await getTranslations({
@@ -70,6 +73,7 @@ export const Books = async ({ locale }: BooksProps) => {
             labelClassName="h-10 items-center"
             purchaseLinks={book.purchaseLinks}
             locale={locale}
+            buttonSize={isMobile ? 'sm' : 'default'}
           />
         </div>
       </Card>

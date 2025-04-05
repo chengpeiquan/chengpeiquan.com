@@ -8,7 +8,6 @@ import { Articles } from './components/articles'
 import { Books } from './components/books'
 import { Cookbooks } from './components/cookbooks'
 import { Hero } from './components/hero'
-import { MobileLanding } from './components/mobile-landing'
 import { Projects } from './components/projects'
 
 export default async function LocalePage({
@@ -19,15 +18,11 @@ export default async function LocalePage({
 
   const isMobile = await isMobileDevice()
 
-  if (isMobile) {
-    return <MobileLanding locale={locale} />
-  }
-
   const sharedProps = { locale, isMobile }
   const isZH = LocaleIs.isZH(locale)
 
   return (
-    <LayoutMain fullscreen>
+    <LayoutMain fullscreen className="overflow-x-hidden">
       <Hero />
       <AboutMe {...sharedProps} />
       {isZH && <Books {...sharedProps} />}

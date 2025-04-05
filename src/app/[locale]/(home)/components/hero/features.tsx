@@ -92,7 +92,7 @@ export const Features: React.FC = () => {
   const t = useTranslations('homeConfig.hero')
 
   return (
-    <div className="absolute left-[30%] top-1/2 z-[2] flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-6">
+    <div className="absolute left-[45%] top-1/2 z-[2] flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-6 sm:left-[30%]">
       <motion.div variants={container} initial="hidden" animate="show">
         {features.map((feature) => (
           <motion.p
@@ -133,7 +133,7 @@ export const Features: React.FC = () => {
       >
         <Link
           href="/article/true-colors-a-decade"
-          className="inline-flex items-center gap-2 text-lg font-light tracking-wider"
+          className="inline-flex items-center gap-2 text-base font-light tracking-wider sm:text-lg"
           variant="secondary"
         >
           {t('slogan')}

@@ -57,6 +57,11 @@
       "imageTitle": "我的第一个文身，是我的贝斯。",
       "slogan": "冲出他朝崎岖道上 哪怕会退倒"
     },
+    "aboutMe": {
+      "title": "关于我",
+      "description": "一个外表不像工程师的工程师",
+      "avatarAlt": "我留长发的照片"
+    },
     "books": {
       "title": "我出版的书",
       "description": "面向前端新人工程师的工程化指南",
