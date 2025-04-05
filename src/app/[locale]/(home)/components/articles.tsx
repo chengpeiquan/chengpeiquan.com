@@ -18,7 +18,9 @@ import { Link } from '@/navigation'
 import { cn } from '@/utils'
 import { SectionContainer, SectionTitle } from './shared-widgets'
 
-const ButtonGroup: React.FC<PropsWithLocale> = ({ locale }) => {
+type ButtonGroupProps = PropsWithLocale & PropsWithDevice
+
+const ButtonGroup: React.FC<ButtonGroupProps> = ({ locale, isMobile }) => {
   const items = articleCategories.slice(0, 4) // Limit to 4 items
 
   return (
@@ -36,7 +38,12 @@ const ButtonGroup: React.FC<PropsWithLocale> = ({ locale }) => {
           <Button key={i.slug} variant="outline" className="size-full p-0">
             <Link
               href={`/articles/${i.slug}/1`}
-              className="box-border flex size-full items-center justify-center overflow-hidden p-2 text-lg sm:text-lg lg:text-xl xl:text-2xl"
+              className={cn(
+                'box-border flex size-full items-center justify-center overflow-hidden p-2',
+                isMobile
+                  ? 'text-sm'
+                  : 'text-lg sm:text-lg lg:text-xl xl:text-2xl',
+              )}
             >
               <span className="whitespace-break-spaces break-all">{label}</span>
             </Link>
@@ -115,8 +122,9 @@ export const Articles = async ({ locale, isMobile }: ArticlesProps) => {
   })
 
   const count = isMobile ? 3 : 4
-  const [latestArticle, ...restArticles] = items.slice(0, count)
-  const articleList = isMobile ? items : restArticles
+  const limitedItems = items.slice(0, count)
+  const [latestArticle, ...restArticles] = limitedItems
+  const articleList = isMobile ? limitedItems : restArticles
 
   const gapCls = cn('gap-4 lg:gap-6 xl:gap-8')
 
@@ -125,9 +133,17 @@ export const Articles = async ({ locale, isMobile }: ArticlesProps) => {
       <SectionTitle title={t('title')} description={t('description')} />
 
       <div className={cn('grid grid-cols-1 md:grid-cols-6', gapCls)}>
-        <ArticleCard item={latestArticle} latest className="col-span-3" />
+        {!isMobile && (
+          <ArticleCard item={latestArticle} latest className="col-span-3" />
+        )}
 
-        <div className={cn('col-span-3 grid grid-cols-2 gap-8', gapCls)}>
+        <div
+          className={cn(
+            'col-span-3 grid gap-8',
+            isMobile ? 'grid-cols-1' : 'grid-cols-2',
+            gapCls,
+          )}
+        >
           {articleList.map((article) => (
             <ArticleCard
               key={article.slug}
@@ -136,7 +152,7 @@ export const Articles = async ({ locale, isMobile }: ArticlesProps) => {
             />
           ))}
 
-          <ButtonGroup locale={locale} />
+          <ButtonGroup locale={locale} isMobile={isMobile} />
         </div>
       </div>
     </SectionContainer>

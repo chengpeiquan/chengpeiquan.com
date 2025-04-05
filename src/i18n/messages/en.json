@@ -57,6 +57,11 @@
       "imageTitle": "My first tattoo, my bass.",
       "slogan": "True Colors: A Decade"
     },
+    "aboutMe": {
+      "title": "About Me",
+      "description": "An engineer who doesn’t look like one",
+      "avatarAlt": "Photos of me with long hair"
+    },
     "books": {
       "title": "My published books",
       "description": "A guide to engineering for front-end new engineers",
