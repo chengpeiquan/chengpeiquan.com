@@ -4,7 +4,12 @@ import { cn } from '@/utils'
 const rootCls = cn(
   'pointer-events-none absolute z-[2] size-full overflow-visible',
 )
-const svgCls = cn('size-full origin-center scale-150 opacity-15')
+const svgCls = cn(
+  'size-full origin-center scale-150 opacity-15',
+  'will-change-transform',
+  '[backface-visibility:hidden]',
+  '[transform:translateZ(0)]',
+)
 
 export const LeftPattern: React.FC = () => {
   return (
@@ -15,20 +20,9 @@ export const LeftPattern: React.FC = () => {
         fill="none"
         viewBox="-200 -200 1400 1400"
       >
-        <defs>
-          <filter id="glow-left">
-            <feGaussianBlur stdDeviation="2" result="blur" />
-            <feMerge>
-              <feMergeNode in="blur" />
-              <feMergeNode in="SourceGraphic" />
-            </feMerge>
-          </filter>
-        </defs>
-
         <g
           stroke="currentColor"
           strokeWidth="0.8"
-          filter="url(#glow-left)"
           className="mix-blend-soft-light [transform-origin:center]"
         >
           {/* Dense rings on the left */}
@@ -79,20 +73,9 @@ export const RightPattern: React.FC = () => {
         fill="none"
         viewBox="-200 -200 1400 1400"
       >
-        <defs>
-          <filter id="glow-right">
-            <feGaussianBlur stdDeviation="2" result="blur" />
-            <feMerge>
-              <feMergeNode in="blur" />
-              <feMergeNode in="SourceGraphic" />
-            </feMerge>
-          </filter>
-        </defs>
-
         <g
           stroke="currentColor"
           strokeWidth="0.8"
-          filter="url(#glow-right)"
           className="mix-blend-soft-light [transform-origin:center]"
         >
           {/* Sparse rings on the right */}
