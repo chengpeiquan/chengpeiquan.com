@@ -5,19 +5,10 @@ import {
   type PropsWithControllable,
   SidebarBlock,
 } from '@/components/shared/sidebar-block'
-import { type linkItem } from '@/config/route-config'
+import { learningVue3 } from '@/config/book-config'
 import { ExternalLink, Link } from '@/navigation'
 
-const links: readonly linkItem[] = [
-  {
-    title: '京东商城',
-    href: 'https://union-click.jd.com/jdc?e=jdext-1638352360249409536-0-1&p=JF8BARkJK1olXwQBUVpdAE8SAF8IGVMRXgICV24ZVxNJXF9RXh5UHw0cSgYYXBcIWDoXSQVJQwYAXFpeDEsUHDZNRwYlX1JEIQg5XCt0ZAlqUiVNX0FQACsWTkcbM28BG1kdXAcCU11tCEoWA2sNGFgTXDYyVFttWiXPtdnQvuoJiayNgdbKOEonA2gBGVkdXwEHVFdeAXsXC2s4zfWBiI69je743uG51uK4ztK-ibiEZG5tC3tMVjtBXkcVWgQLVlpeCkwWAGoAHlodWQQFSF9BCHsXAm4KE1gWWgQGOltdCUoVAGoBElh7XwcDVltdDksXAV8IK1glA2gDB1heWkweVgFVQgkdX00BHTBdDUgXAW4OHF8lXwcDVlxtOA',
-  },
-  {
-    title: '天猫商城',
-    href: 'https://s.click.taobao.com/t?e=m%3D2%26s%3D7eZPjJt7QJNw4vFB6t2Z2ueEDrYVVa64yK8Cckff7TVRAdhuF14FMXonIcf4DInoMMgx22UI05ZRvxcz%2FoTyBGNojKDSmWQhTIZbYI9jayp8PNk4B98QhUVUjoeWqzb%2B5mzd0fxoCIaFpjofm3hpRhwogYNSK3IrQPZdAhulFAULZMqoQW%2BfuB6GmlJyRiVTGSs8kMDMeyhHJZaVw28y8Wrk5fXXieVy6a%2F%2FENJP36wMyM3sDoIE3myjwLjQ1DptJJn7FkCnT%2F5j0n6UXAgF3v2%2BtTfElYb8RFDRgzhUg%2BSjJnAf507Uv%2BiK7LcQp3KospWd4zfY8zqcEdwGxwkp5JaYzSMEwlxThakdowOjbI2OmjxjH%2BEyQGTWRvaaxnzAXJHdUWjDlfMDnfwHPQnOXiGFCzYOOqAQ&unid=1X3aISuD7B60&union_lens=lensId:TAPI@1683471818@2103de44_0d37_187f6bd6062_8bdf@01',
-  },
-]
+const links = learningVue3.zh.purchaseLinks
 
 const title = '我出版的书'
 

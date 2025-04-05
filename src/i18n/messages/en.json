@@ -57,12 +57,23 @@
       "imageTitle": "My first tattoo, my bass.",
       "slogan": "True Colors: A Decade"
     },
+    "books": {
+      "title": "My published books",
+      "description": "A guide to engineering for front-end new engineers",
+      "author": "Author: ",
+      "publisher": "Publisher: ",
+      "purchase": "Purchase: ",
+      "dialog": {
+        "title": "Book Introduction",
+        "expandButton": "Full Introduction"
+      }
+    },
     "articles": {
-      "title": "Latest Articles",
+      "title": "Recent Blog",
       "description": "Tech Insights, Product Design & Life Musings"
     },
     "cookbooks": {
-      "title": "Latest Cookbooks",
+      "title": "Cooking at Home",
       "description": "A Teochew Man’s Joy of Home Cooking",
       "viewMore": "View all cookbooks"
     }

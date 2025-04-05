@@ -57,12 +57,23 @@
       "imageTitle": "我的第一个文身，是我的贝斯。",
       "slogan": "冲出他朝崎岖道上 哪怕会退倒"
     },
+    "books": {
+      "title": "我出版的书",
+      "description": "面向前端新人工程师的工程化指南",
+      "author": "作者：",
+      "publisher": "出版社：",
+      "purchase": "前往购买：",
+      "dialog": {
+        "title": "书籍介绍",
+        "expandButton": "完整介绍"
+      }
+    },
     "articles": {
-      "title": "最新文章",
+      "title": "近期博客",
       "description": "技术分析、产品设计、生活随笔"
     },
     "cookbooks": {
-      "title": "原创菜谱",
+      "title": "自己做饭",
       "description": "潮州佬日常下厨的家常菜",
       "viewMore": "查看全部菜谱"
     }

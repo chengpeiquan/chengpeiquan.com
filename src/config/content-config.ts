@@ -12,6 +12,7 @@ export enum ContentFolder {
   About = 'about',
   Article = 'article',
   Cookbook = 'cookbook',
+  Fragment = 'fragment',
 }
 
 export const contentFolders = Object.values(ContentFolder)

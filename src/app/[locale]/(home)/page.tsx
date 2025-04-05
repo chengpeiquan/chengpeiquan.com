@@ -4,6 +4,7 @@ import { LocaleIs } from '@/config/locale-config'
 import { isMobileDevice } from '@/config/middleware-config'
 import { type ListPageProps } from '@/config/route-config'
 import { Articles } from './components/articles'
+import { Books } from './components/books'
 import { Cookbooks } from './components/cookbooks'
 import { Hero } from './components/hero'
 import { MobileLanding } from './components/mobile-landing'
@@ -22,13 +23,15 @@ export default async function LocalePage({
   }
 
   const sharedProps = { locale, isMobile }
+  const isZH = LocaleIs.isZH(locale)
 
   return (
     <LayoutMain fullscreen>
       <Hero />
+      {isZH && <Books {...sharedProps} />}
       <Articles {...sharedProps} />
       <Projects {...sharedProps} />
-      {LocaleIs.isZH(locale) && <Cookbooks {...sharedProps} />}
+      {isZH && <Cookbooks {...sharedProps} />}
     </LayoutMain>
   )
 }
