@@ -23,7 +23,7 @@ export default async function LocalePage({
 
   return (
     <LayoutMain fullscreen className="overflow-x-hidden">
-      <Hero />
+      <Hero {...sharedProps} />
       <AboutMe {...sharedProps} />
       {isZH && <Books {...sharedProps} />}
       <Articles {...sharedProps} />
