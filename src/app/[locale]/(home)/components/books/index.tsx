@@ -12,7 +12,7 @@ import {
 } from '@/config/route-config'
 import { SectionContainer, SectionTitle } from '../shared-widgets'
 import { AuthorRecommendation } from './author-recommendation'
-import { BookIntroduce } from './introduce'
+import { BookIntroduction } from './introduction'
 import { PurchaseLinks } from './purchase-links'
 
 type BooksProps = PropsWithLocale & PropsWithDevice
@@ -57,7 +57,7 @@ export const Books = async ({ locale, isMobile }: BooksProps) => {
             </span>
           </div>
 
-          <BookIntroduce
+          <BookIntroduction
             purchaseLinks={book.purchaseLinks}
             locale={locale}
             isMobile={isMobile}

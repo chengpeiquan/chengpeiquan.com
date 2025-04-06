@@ -37,19 +37,19 @@ const ExpandButton: React.FC<{ label: string }> = ({ label }) => {
   )
 }
 
-type BookIntroduceProps = Pick<
+type BookIntroductionProps = Pick<
   BookPurchaseInfo,
   'purchaseLinks' | 'introSlug'
 > &
   PropsWithLocale &
   PropsWithDevice
 
-export const BookIntroduce = async ({
+export const BookIntroduction = async ({
   locale,
   purchaseLinks,
   introSlug,
   isMobile,
-}: BookIntroduceProps) => {
+}: BookIntroductionProps) => {
   const res = await getDetails(ContentFolder.Fragment, {
     slug: introSlug,
     locale,
