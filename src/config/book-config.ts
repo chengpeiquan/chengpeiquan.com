@@ -22,7 +22,7 @@ export const learningVue3: Record<'zh', BookPurchaseInfo> = {
     cover:
       'https://cdn.chengpeiquan.com/img/2023/05/20230508232214.jpg?x-oss-process=image/interlace,1',
     articleSlug: 'the-story-of-the-book-learning-vue3',
-    introSlug: 'published-book-introduce',
+    introSlug: 'published-book-introduction',
     authorRecommendationSlug: 'published-book-author-recommendation',
     purchaseLinks: [
       {
