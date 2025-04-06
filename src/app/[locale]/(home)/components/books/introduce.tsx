@@ -85,7 +85,7 @@ export const BookIntroduce = async ({
           <DialogHeader>
             <DialogTitle>{t('title')}</DialogTitle>
             <DialogDescription className="!mt-6">
-              <ScrollArea className="-mr-4 h-[500px] pr-4">
+              <ScrollArea className="-mr-4 h-[450px] pr-4">
                 <div className="prose prose-neutral dark:prose-invert text-foreground dark:text-foreground text-sm">
                   {content}
                 </div>
