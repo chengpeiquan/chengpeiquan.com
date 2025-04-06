@@ -82,7 +82,7 @@ const getCls = (feature: Feature) => {
   return cn(
     'cursor-default font-bold !leading-[1.2]',
     'text-6xl md:text-7xl lg:text-8xl',
-    'bg-gradient-to-r bg-clip-text text-transparent',
+    'bg-gradient-to-r bg-clip-text text-transparent [-webkit-background-clip:text]',
     feature.gradient,
     feature.offset,
   )
