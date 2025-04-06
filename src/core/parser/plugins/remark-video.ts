@@ -133,7 +133,7 @@ const remarkVideo = () => {
         poster,
         title,
         controls: true,
-        preload: 'auto',
+        preload: 'metadata',
         className: 'w-full aspect-video rounded-lg',
       }
     })
