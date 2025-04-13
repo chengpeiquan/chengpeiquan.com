@@ -146,7 +146,7 @@ const headingSchema: z.ZodType<HeadingItem> = z.lazy(() =>
 // To avoid using `dangerouslySetInnerHTML` property,
 // and better utilize the capabilities of React components,
 // Markdown will be compiled into JSX and rendered into React components.
-const jsxElementSchema = z.union([
+export const jsxElementSchema = z.union([
   z.any().refine((value) => React.isValidElement(value), {
     message: 'Expected a React element',
   }),

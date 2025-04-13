@@ -9,6 +9,7 @@ import {
   Toolbox as ToolboxIcon,
 } from 'blackwork/icons'
 import { type Metadata } from 'next'
+import { TattooIcon } from '@/components/shared/icons'
 import { ContentFolder } from './content-config'
 import { type Locale } from './locale-config'
 
@@ -45,6 +46,7 @@ const navSlugs = [
   'projects',
   ContentFolder.Article,
   ContentFolder.Cookbook,
+  'tattoos',
   ContentFolder.About,
 ] as const
 
@@ -55,6 +57,7 @@ export const navIconMap: Record<NavSlug, React.FC<IconProps>> = {
   projects: ToolboxIcon,
   article: ArticleIcon,
   cookbook: FoodIcon,
+  tattoos: TattooIcon,
   about: AboutIcon,
 }
 
