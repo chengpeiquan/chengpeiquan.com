@@ -12,5 +12,5 @@ After making the decision to leave, life actually became more free and joyful. W
 
 > Related blog posts:
 >
-> - [Let the Sound of Rock Echo Through the Night](/en/article/my-five-years-working-at-netease)
-> - [True Colors: A Decade](/en/article/true-colors-a-decade)
+> - [Let the Sound of Rock Echo Through the Night](/article/my-five-years-working-at-netease)
+> - [True Colors: A Decade](/article/true-colors-a-decade)
