@@ -13,6 +13,7 @@ import {
   getPagination,
   pageSizeConfig,
 } from '@/config/content-config'
+import { defaultLocale } from '@/config/locale-config'
 import {
   type DetailsPageParams,
   type ListPageParams,
@@ -76,8 +77,26 @@ export const getListMetadata = cache(
 )
 
 export const getDetails = cache(
-  async (folder: ContentFolder, params: DetailsPageParams) =>
-    getContent({ folder, ...params }),
+  async (folder: ContentFolder, params: DetailsPageParams) => {
+    // Try to get the requested language content first
+    const content = await getContent({ folder, ...params })
+    if (content) return content
+
+    // If not found and the current language is not the default,
+    // try to get the default language content
+    if (params.locale !== defaultLocale) {
+      const fallbackContent = await getContent({
+        folder,
+        slug: params.slug,
+        locale: defaultLocale,
+      })
+      return fallbackContent
+    }
+
+    // If there is no default language, return null,
+    // then the page needs to respond with a 404 status code
+    return null
+  },
 )
 
 export const getDetailsMetadata = cache(
@@ -85,9 +104,17 @@ export const getDetailsMetadata = cache(
     folder: ContentFolder,
     params: DetailsPageParams,
   ): Promise<Metadata> => {
+    // Get the content (the fallback mechanism will be automatically applied)
     const res = await getDetails(folder, params)
     if (!res) return {}
+
     const { title, keywords, desc: description, cover } = res.metadata
+
+    // If the content is falling back to the default language,
+    // we should keep the language setting requested by the user
+    // This ensures that the language tag of the page is correct
+    const locale = params.locale
+
     return {
       ...sharedMetadata,
       title,
@@ -104,7 +131,7 @@ export const getDetailsMetadata = cache(
             alt: title,
           },
         ],
-        locale: params.locale,
+        locale,
         type: 'website',
       },
     }
