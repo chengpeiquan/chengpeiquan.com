@@ -1,22 +1,22 @@
-import { join } from 'node:path'
 import { writeFile } from 'node:fs/promises'
+import { join } from 'node:path'
 import { fs } from '@bassist/node-utils'
+import {
+  CacheFolder,
+  type MetaCacheItem,
+  cacheRootFolder,
+} from '@/config/cache-config'
 import {
   type ContentItem,
   type ListFolder,
   listFolders,
 } from '@/config/content-config'
 import { type Locale, locales } from '@/config/locale-config'
-import {
-  type MetaCacheItem,
-  cacheRootFolder,
-  metaCacheRootFolder,
-} from '@/config/cache-config'
-import { getPosts } from './shared'
 import { ContentProcessorMode } from '@/core/types'
+import { getPosts } from './shared'
 
 const cacheRootPath = join(process.cwd(), 'src', cacheRootFolder)
-const metaCacheRootPath = join(cacheRootPath, metaCacheRootFolder)
+const metaCacheRootPath = join(cacheRootPath, CacheFolder.MetaCache)
 
 interface GenerateOptions {
   folder: ListFolder
@@ -75,6 +75,4 @@ const run = async () => {
   })
 }
 
-run().catch((e) => {
-  console.log(e)
-})
+run().catch(console.error)
