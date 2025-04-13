@@ -6,9 +6,11 @@
   "scripts": {
     "dev": "run-s dev:*",
     "dev:cache": "pnpm build:cache",
+    "dev:thumb-hash": "pnpm build:thumb-hash",
     "dev:app": "next dev -p 4832",
     "build": "run-s build:*",
     "build:cache": "tsx ./scripts/generate-cache.ts",
+    "build:thumb-hash": "tsx ./scripts/generate-thumb-hash.ts",
     "build:app": "next build",
     "build:copy-assets": "tsx ./scripts/copy-assets.ts",
     "preview": "docker-compose build && docker-compose up -d",
@@ -33,6 +35,7 @@
     "react-dom": "^19.1.0",
     "react-forage": "^0.2.2",
     "react-ga4": "^2.1.0",
+    "thumbhash": "^0.1.1",
     "zod": "^3.24.2"
   },
   "devDependencies": {
@@ -71,6 +74,7 @@
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.2",
     "remark-stringify": "^11.0.0",
+    "sharp": "^0.34.1",
     "tailwind-merge": "^2.6.0",
     "tailwindcss": "^3.4.17",
     "tailwindcss-animate": "^1.0.7",
