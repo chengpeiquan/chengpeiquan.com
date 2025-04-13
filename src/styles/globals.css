@@ -21,7 +21,6 @@ html body[data-scroll-locked] {
 /* Content styles */
 .prose {
   max-width: 100% !important;
-  text-align: justify;
 }
 
 .prose h2,
