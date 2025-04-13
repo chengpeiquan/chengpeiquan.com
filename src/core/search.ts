@@ -1,10 +1,10 @@
 import FlexSearch from 'flexsearch'
 import { getMetaCache } from '@/cache/meta-cache'
 import {
-  type CacheMapKey,
   type MetaCacheItem,
+  type MetaCacheMapKey,
   type SearchCacheItem,
-  getCacheMapKey,
+  getMetaCacheMapKey,
 } from '@/config/cache-config'
 import { type ListFolder } from '@/config/content-config'
 import { type Locale } from '@/config/locale-config'
@@ -41,11 +41,11 @@ const initializeEngine = async (data: MetaCacheItem[]) => {
 
 export type SearchEngine = Awaited<ReturnType<typeof initializeEngine>>
 
-const searchEngineMap = new Map<CacheMapKey, SearchEngine>()
+const searchEngineMap = new Map<MetaCacheMapKey, SearchEngine>()
 
 export const getSearchEngine = async (folder: ListFolder, locale: Locale) => {
   const args: [ListFolder, Locale] = [folder, locale]
-  const key = getCacheMapKey(...args)
+  const key = getMetaCacheMapKey(...args)
 
   // Create engines on demand and only need to be initialized once
   const engine = searchEngineMap.get(key)

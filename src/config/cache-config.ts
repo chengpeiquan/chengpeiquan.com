@@ -9,20 +9,20 @@ import { siteConfig } from './site-config'
 
 export const cacheRootFolder = 'cache'
 
-export const metaCacheRootFolder = 'meta-cache'
+export enum CacheFolder {
+  MetaCache = 'meta-cache', // Markdown metadata
+}
 
-export type CacheMapKey = `${ListFolder}-${Locale}`
+export type MetaCacheMapKey = `${ListFolder}-${Locale}`
 
-export const getCacheMapKey = (
+export const getMetaCacheMapKey = (
   folder: ListFolder,
   locale: Locale,
-): CacheMapKey => {
+): MetaCacheMapKey => {
   return `${folder}-${locale}`
 }
 
 export type MetaCacheItem = Pick<ContentItem, 'slug' | 'metadata'>
-
-export type CacheType = 'meta'
 
 // The data sources for local searches all come from meta cache
 export type SearchCacheItem = Pick<MetaCacheItem, 'slug'> &
@@ -34,7 +34,7 @@ export const isSearchCacheItem = (v: unknown): v is SearchCacheItem => {
 
 // Distinguish different search record tables
 export const getSearchStorageKey = (folder: ListFolder, locale: Locale) => {
-  return `recent-${getCacheMapKey(folder, locale)}`
+  return `recent-${getMetaCacheMapKey(folder, locale)}`
 }
 
 export const searchStorageConfig = {
