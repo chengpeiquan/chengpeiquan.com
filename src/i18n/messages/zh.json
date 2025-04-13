@@ -30,8 +30,9 @@
     "nav": {
       "home": "首页",
       "projects": "项目",
-      "article": "文章",
+      "article": "博客",
       "cookbook": "菜谱",
+      "tattoos": "文身",
       "about": "关于"
     },
     "socialLink": {
@@ -102,6 +103,11 @@
     },
     "alternative": "请使用 <name></name> 代替。",
     "viewAll": "查看全部"
+  },
+  "tattooConfig": {
+    "title": "Blackwork Tattoos",
+    "description": "我的文身和它们背后的故事",
+    "imageAlt": "文身故事"
   },
   "action": {
     "toggle": "点击切换到",

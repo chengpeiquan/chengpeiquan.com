@@ -30,8 +30,9 @@
     "nav": {
       "home": "Home",
       "projects": "Projects",
-      "article": "Article",
+      "article": "Blog",
       "cookbook": "Cookbook",
+      "tattoos": "Tattoos",
       "about": "About"
     },
     "socialLink": {
@@ -102,6 +103,11 @@
     },
     "alternative": "Replaced by <name></name> .",
     "viewAll": "View all"
+  },
+  "tattooConfig": {
+    "title": "Blackwork Tattoos",
+    "description": "My tattoos and the stories behind them",
+    "imageAlt": "Tattoo stories"
   },
   "action": {
     "toggle": "Click to switch to ",
