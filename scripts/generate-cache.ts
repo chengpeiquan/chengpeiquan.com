@@ -31,10 +31,6 @@ class CacheTask {
   constructor(private opts: TaskOptions) {}
 
   public async run() {
-    await this.runMetaTask()
-  }
-
-  private async runMetaTask() {
     const metaItems = this.opts.items.map<MetaCacheItem>(
       ({ slug, metadata }) => ({ slug, metadata }),
     )
