@@ -150,3 +150,28 @@ export const tattooStories: TattooStory[] = [
 ]
 
 export const tattooImages = tattooStories.flatMap((story) => story.images)
+
+export const tattooArtistSchema = z.object({
+  name: z.string(),
+  xiaohongshu: z.string(),
+  xiaohongshuLink: z.string(),
+  avatar: z.string(),
+  avatarThumbHash: z.string(),
+  job: z.string(),
+  introduction: z.string(),
+})
+
+export type TattooArtist = z.infer<typeof tattooArtistSchema>
+
+export const tattooArtist: TattooArtist = {
+  name: 'Johnny',
+  xiaohongshu: 'Sweetlemos',
+  xiaohongshuLink:
+    'https://www.xiaohongshu.com/user/profile/5fec33ba0000000001004184',
+  avatar:
+    'https://cdn.chengpeiquan.com/img/2025/04/202504150108032.jpg?x-oss-process=image/interlace,1',
+  avatarThumbHash: 'IQgOBwD5uXZjepiWeeZnh3h4h393Cc8H',
+  job: '纹身师 / 自由艺术家',
+  introduction:
+    '介绍一下我合作了十年的纹身师，擅长 Blackwork 风格，小红书主页可了解更多原创作品。',
+}
