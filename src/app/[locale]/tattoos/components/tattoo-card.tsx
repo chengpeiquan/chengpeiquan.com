@@ -42,15 +42,15 @@ export const TattooCard = async ({
 
   return (
     <Card className="overflow-hidden">
-      <CardHeader>
-        <div className="flex flex-col justify-between gap-2 sm:flex-row sm:items-center">
-          <CardTitle className="flex flex-col sm:flex-row sm:items-end">
-            <i className="text-primary mr-6 font-mono text-4xl font-bold">
+      <CardHeader className="p-4 sm:p-6">
+        <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-center">
+          <CardTitle className="flex flex-col gap-3 sm:flex-row sm:items-end sm:gap-0">
+            <i className="text-primary mr-6 font-mono text-2xl font-bold sm:text-4xl">
               Vol.
-              <i className="text-7xl">{index + 1}</i>
+              <i className="text-4xl sm:text-7xl">{index + 1}</i>
             </i>
 
-            {title && <span className="text-4xl sm:mb-1">{title}</span>}
+            {title && <span className="text-3xl sm:mb-1">{title}</span>}
           </CardTitle>
 
           <time className="text-muted-foreground font-mono text-sm">
@@ -65,7 +65,7 @@ export const TattooCard = async ({
         )}
       </CardHeader>
 
-      <CardContent className="grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
+      <CardContent className="grid grid-cols-1 gap-4 p-4 pt-0 sm:grid-cols-2 sm:p-6 lg:grid-cols-3">
         {story.images.map((image, i) => {
           const thumbHashKey = getThumbHashCacheMapKey(image)
           const thumbHash = thumbHashMapping[thumbHashKey]

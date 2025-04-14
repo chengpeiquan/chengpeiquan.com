@@ -11,7 +11,7 @@ import { cn } from '@/utils'
 import { TattooCard } from './tattoo-card'
 
 const TimelineStroke: React.FC = () => (
-  <div className="absolute left-4 top-0 h-full w-[2px]">
+  <div className="absolute left-2.5 top-0 h-full w-[2px] sm:left-4">
     {/* Top line segment: Gradient disappears */}
     <div className="to-border h-10 w-full bg-gradient-to-b from-transparent" />
 
@@ -24,8 +24,8 @@ const TimelineStroke: React.FC = () => (
 )
 
 const TimelineDot: React.FC = () => (
-  <div className="bg-background absolute left-[-50px] flex size-9 items-center justify-center rounded-full border-2">
-    <div className="bg-primary size-3 rounded-full" />
+  <div className="bg-background absolute left-[-42px] flex size-6 items-center justify-center rounded-full border-2 sm:left-[-50px] sm:size-9">
+    <div className="bg-primary size-2 rounded-full sm:size-3" />
   </div>
 )
 
@@ -43,7 +43,7 @@ export const Timeline = async ({
       <TimelineStroke />
 
       {tattooStories.map((story, index) => (
-        <div key={story.date} className="relative ml-12">
+        <div key={story.date} className="relative ml-10 sm:ml-12">
           <TimelineDot />
 
           <TattooCard

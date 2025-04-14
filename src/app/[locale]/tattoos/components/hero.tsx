@@ -33,7 +33,7 @@ export const Hero = async ({
     <div
       className={cn(
         'relative w-full overflow-hidden',
-        isMobile ? 'h-[40vh]' : 'h-[70vh]',
+        isMobile ? 'h-[60vh]' : 'h-[70vh]',
       )}
     >
       {/* Gradient Mask */}
