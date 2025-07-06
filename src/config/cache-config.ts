@@ -15,7 +15,9 @@ export enum CacheFolder {
   ThumbHash = 'thumb-hash', // Image placeholder
 }
 
-/** Meta cache related */
+/**
+ * Meta cache related
+ */
 
 export type MetaCacheMapKey = `${ListFolder}-${Locale}`
 
@@ -47,7 +49,9 @@ export const searchStorageConfig = {
   limit: 50, // Maximum number of cached records
 }
 
-/** Thumb hash related */
+/**
+ * Thumb hash related
+ */
 
 // Supported file name of the thumb hash cache
 export type ThumbHashFileName = 'tattoo'

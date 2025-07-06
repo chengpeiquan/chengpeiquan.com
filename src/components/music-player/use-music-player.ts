@@ -15,7 +15,9 @@ export const useMusicPlayer = () => {
 
   const [loading, setLoading] = useState(true)
 
-  /** Control */
+  /**
+   * Control
+   */
 
   const [playing, setPlaying] = useState(false)
   const hasUserInteracted = useRef(false)
@@ -64,7 +66,9 @@ export const useMusicPlayer = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  /** Duration */
+  /**
+   * Duration
+   */
 
   const [duration, setDuration] = useState(0)
 

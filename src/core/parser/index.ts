@@ -247,7 +247,9 @@ export interface ParseOptions {
    */
   ignoreDetails?: boolean
 
-  /** See `createProcessor` */
+  /**
+   * See `createProcessor`
+   */
   mode?: ContentProcessorMode
 }
 

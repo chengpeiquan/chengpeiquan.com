@@ -1,6 +1,6 @@
 import { writeFile } from 'node:fs/promises'
 import { join } from 'node:path'
-import { fs } from '@bassist/node-utils'
+import { fse } from '@bassist/node-utils'
 import sharp from 'sharp'
 import { rgbaToThumbHash } from 'thumbhash'
 import {
@@ -77,12 +77,7 @@ class CacheTask {
   private async writeCache(rootPath: string, data: string) {
     const fileName = `${this.opts.fileName}.json`
     const filePath = join(rootPath, fileName)
-
-    const isExist = await fs.exists(rootPath)
-    if (!isExist) {
-      await fs.mkdirp(rootPath)
-    }
-
+    await fse.ensureDir(rootPath)
     await writeFile(filePath, data)
   }
 }
