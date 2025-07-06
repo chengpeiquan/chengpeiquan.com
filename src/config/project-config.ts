@@ -454,7 +454,7 @@ const baseProjects: ProjectConfigItem[] = [
     repo: 'bassist',
     directory: 'commit',
     npm: true,
-    tags: [ProjectTag.Toolkit],
+    tags: [ProjectTag.EOL],
     metadata: {
       en: {
         description: 'Simple Commit Lint.',
@@ -568,6 +568,22 @@ const baseProjects: ProjectConfigItem[] = [
       },
       zh: {
         description: 'UnoCSS 的自定义配置。',
+      },
+    },
+  },
+  {
+    name: '@bassist/build-config',
+    repo: 'bassist',
+    directory: 'build-config',
+    npm: true,
+    tags: [ProjectTag.Configuration],
+    metadata: {
+      en: {
+        description:
+          'Opinionated collection of common build tool configurations.',
+      },
+      zh: {
+        description: '一些常用的构建工具配置。',
       },
     },
   },
