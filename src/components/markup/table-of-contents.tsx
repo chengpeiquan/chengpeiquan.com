@@ -23,7 +23,9 @@ import {
 import { getBrbStyle } from '@/config/style-config'
 import { cn } from '@/utils'
 
-/** Flatten headings to reduce HTML tag nesting */
+/**
+ * Flatten headings to reduce HTML tag nesting
+ */
 const flattenHeadings = (
   headings: HeadingItem[],
 ): Omit<HeadingItem, 'children'>[] => {

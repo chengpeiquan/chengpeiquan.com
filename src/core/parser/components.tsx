@@ -1,6 +1,7 @@
 'use server'
 
 import { Buffer } from 'node:buffer'
+import { isString } from '@bassist/utils'
 import { ExternalLink } from 'blackwork'
 import sizeOf from 'image-size'
 import Image from 'next/image'
@@ -49,6 +50,8 @@ export const img = async ({
   src = '',
   alt = '',
 }: React.ImgHTMLAttributes<HTMLImageElement>) => {
+  if (!isString(src)) return null
+
   const size = await getImageSize(src)
 
   if (!src || !size) return null
