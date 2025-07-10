@@ -61,8 +61,6 @@ export const navIconMap: Record<NavSlug, React.FC<IconProps>> = {
   about: AboutIcon,
 }
 
-export const isHome = (slug: NavSlug): slug is 'home' => slug === 'home'
-
 interface ExtraSocialLinkProps extends SocialLinkProps {
   locale?: Locale
 }

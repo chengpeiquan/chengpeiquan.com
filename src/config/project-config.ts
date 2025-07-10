@@ -4,7 +4,7 @@ import { siteConfig } from './site-config'
 export const githubConfig = {
   website: 'https://github.com',
   api: 'https://api.github.com',
-}
+} as const
 
 // Applies only to filter bars
 export enum ExtraTag {

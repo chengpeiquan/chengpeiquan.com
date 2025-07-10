@@ -4,20 +4,9 @@ import { isUndefined } from '@bassist/utils'
 import { Button, cn } from 'blackwork'
 import { useTranslations } from 'next-intl'
 import React from 'react'
-import {
-  isActiveListFolder,
-  isActivePageFolder,
-  isListFolder,
-  isPageFolder,
-  listFolderMapping,
-  pageFolderMapping,
-} from '@/config/content-config'
-import {
-  type NavSlug,
-  isHome,
-  navIconMap,
-  siteConfig,
-} from '@/config/site-config'
+import { listFolderMapping, pageFolderMapping } from '@/config/content-config'
+import { CheckRoute } from '@/config/route-config'
+import { type NavSlug, navIconMap, siteConfig } from '@/config/site-config'
 import { useBreakpoint } from '@/hooks'
 import { Link, usePathname } from '@/navigation'
 
@@ -41,31 +30,35 @@ const NavigationLink: React.FC<NavigationLinkProps> = ({
 
   // `pathname` always do not begin with a locale
   const active = useMemo(() => {
-    if (isListFolder(slug)) {
-      return isActiveListFolder(pathname, slug)
+    if (CheckRoute.isListRoute(slug)) {
+      return CheckRoute.isActiveList(pathname, slug)
     }
 
-    if (isPageFolder(slug)) {
-      return isActivePageFolder(pathname, slug)
+    if (CheckRoute.isPageRoute(slug)) {
+      return CheckRoute.isActivePage(pathname, slug)
     }
 
-    if (isHome(slug)) {
-      return pathname === '/'
+    if (CheckRoute.isHomeRoute(slug)) {
+      return CheckRoute.isActiveHome(pathname)
     }
 
-    return pathname === `/${slug}`
+    if (CheckRoute.isProjectRoute(slug)) {
+      return CheckRoute.isActiveProjects(pathname)
+    }
+
+    return CheckRoute.isActiveSinglePage(pathname, slug)
   }, [pathname, slug])
 
   const href = useMemo(() => {
-    if (isListFolder(slug)) {
+    if (CheckRoute.isListRoute(slug)) {
       return `/${listFolderMapping[slug]}/1`
     }
 
-    if (isPageFolder(slug)) {
+    if (CheckRoute.isPageRoute(slug)) {
       return `/${pageFolderMapping[slug]}`
     }
 
-    return isHome(slug) ? '/' : `/${slug}`
+    return CheckRoute.isHomeRoute(slug) ? '/' : `/${slug}`
   }, [slug])
 
   const content = useMemo(() => {

@@ -27,14 +27,6 @@ export type PageFolder = keyof typeof pageFolderMapping
 
 export const pageFolders = Object.keys(pageFolderMapping) as PageFolder[]
 
-export const isPageFolder = (slug: unknown): slug is PageFolder => {
-  return pageFolders.includes(slug as PageFolder)
-}
-
-export const isActivePageFolder = (pathname: string, folder: PageFolder) => {
-  return pathname === `/${folder}`
-}
-
 // There is a lot of content in the folder,
 // It will be distributed in the form of list page and detail page
 export const listFolderMapping = {
@@ -45,17 +37,6 @@ export const listFolderMapping = {
 export type ListFolder = keyof typeof listFolderMapping
 
 export const listFolders = Object.keys(listFolderMapping) as ListFolder[]
-
-export const isListFolder = (slug: unknown): slug is ListFolder => {
-  return listFolders.includes(slug as ListFolder)
-}
-
-export const isActiveListFolder = (pathname: string, folder: ListFolder) => {
-  return (
-    pathname.startsWith(`/${listFolderMapping[folder]}/`) ||
-    pathname.startsWith(`/${folder}/`)
-  )
-}
 
 // With item's slug
 export type ContentDetailsLink = `/${ContentFolder}/${string}`

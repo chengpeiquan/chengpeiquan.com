@@ -1,15 +1,12 @@
-import {
-  ContentFolder,
-  type ListFolder,
-  isActiveListFolder,
-} from '@/config/content-config'
+import { ContentFolder, type ListFolder } from '@/config/content-config'
+import { CheckRoute } from '@/config/route-config'
 import { usePathname } from '@/navigation'
 
 export const useClientLocation = () => {
   const pathname = usePathname()
 
   const isCookbook = useMemo(
-    () => isActiveListFolder(pathname, ContentFolder.Cookbook),
+    () => CheckRoute.isActiveList(pathname, ContentFolder.Cookbook),
     [pathname],
   )
 
