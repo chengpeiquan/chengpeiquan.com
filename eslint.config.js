@@ -1,3 +1,4 @@
+// @ts-check
 import {
   createGetConfigNameFactory,
   defineFlatConfig,
@@ -15,9 +16,10 @@ export default defineFlatConfig([
   ...imports,
   ...javascript,
   ...jsx,
+  ...next,
   ...react,
   ...typescript,
-  ...next,
+
   {
     name: getConfigName('navigation'),
     rules: {
@@ -41,6 +43,7 @@ export default defineFlatConfig([
       ],
     },
   },
+
   {
     name: getConfigName('override'),
     rules: {
@@ -48,6 +51,7 @@ export default defineFlatConfig([
       '@typescript-eslint/no-extraneous-class': 'off',
     },
   },
+
   {
     name: getConfigName('tailwindcss'),
     rules: {
@@ -92,6 +96,7 @@ export default defineFlatConfig([
       ],
     },
   },
+
   {
     name: getConfigName('ignore'),
     ignores: ['**/contents/**.md', '**/types/**/*.d.ts'],

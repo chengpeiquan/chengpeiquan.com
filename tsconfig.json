@@ -22,6 +22,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "scripts/**/*.ts",
-    "eslint.config.ts"
+    "eslint.config.js"
   ]
 }

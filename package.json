@@ -28,7 +28,7 @@
     "@web-analytics/core": "^0.1.5",
     "blackwork": "^0.7.1",
     "flexsearch": "^0.7.43",
-    "framer-motion": "^12.23.0",
+    "framer-motion": "^12.23.3",
     "next": "^15.3.5",
     "next-intl": "^3.26.5",
     "react": "^19.1.0",
@@ -36,7 +36,7 @@
     "react-forage": "^0.2.2",
     "react-ga4": "^2.1.0",
     "thumbhash": "^0.1.1",
-    "zod": "^3.25.74"
+    "zod": "^4.0.2"
   },
   "devDependencies": {
     "@bassist/eslint-config": "^0.2.0",
@@ -48,7 +48,7 @@
     "@stefanprobst/rehype-extract-toc": "^2.2.1",
     "@tailwindcss/typography": "^0.5.16",
     "@types/mdast": "^4.0.4",
-    "@types/node": "^24.0.10",
+    "@types/node": "^24.0.12",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "class-variance-authority": "^0.7.1",
@@ -58,7 +58,6 @@
     "gray-matter": "^4.0.3",
     "husky": "^9.1.7",
     "image-size": "^1.2.1",
-    "jiti": "^2.4.2",
     "lint-staged": "^16.1.2",
     "npm-run-all2": "^6.2.6",
     "postcss": "^8.5.6",
@@ -75,7 +74,7 @@
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.2",
     "remark-stringify": "^11.0.0",
-    "sharp": "^0.34.2",
+    "sharp": "^0.34.3",
     "tailwind-merge": "^2.6.0",
     "tailwindcss": "^3.4.17",
     "tailwindcss-animate": "^1.0.7",
