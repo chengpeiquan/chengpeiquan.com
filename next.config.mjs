@@ -4,7 +4,9 @@ import autoImport from 'unplugin-auto-import/webpack'
 
 const withNextIntl = createNextIntl()
 
-/** @type {import('next').NextConfig} */
+/**
+ * @type {import('next').NextConfig}
+ */
 const nextConfig = {
   output: 'standalone',
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
