@@ -59,13 +59,13 @@ export const TattooCard = async ({
         </div>
 
         {introduction && (
-          <div className="prose prose-neutral dark:prose-invert text-muted-foreground text-base">
+          <div className="prose prose-neutral dark:prose-invert prose-p:last:mb-0 text-muted-foreground text-base">
             {introduction}
           </div>
         )}
       </CardHeader>
 
-      <CardContent className="grid grid-cols-1 gap-4 p-4 pt-0 sm:grid-cols-2 sm:p-6 lg:grid-cols-3">
+      <CardContent className="grid grid-cols-1 gap-4 px-4 pb-4 pt-0 sm:grid-cols-2 sm:px-6 sm:pb-6 lg:grid-cols-3">
         {story.images.map((image, i) => {
           const thumbHashKey = getThumbHashCacheMapKey(image)
           const thumbHash = thumbHashMapping[thumbHashKey]

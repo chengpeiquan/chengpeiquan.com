@@ -147,6 +147,22 @@ export const tattooStories: TattooStory[] = [
       'https://cdn.chengpeiquan.com/img/2025/04/202504090138302.JPG?x-oss-process=image/interlace,1',
     ],
   },
+  {
+    date: '2025-06-20',
+    metadata: {
+      zh: {
+        title: '同根',
+      },
+      en: {
+        title: 'Root',
+      },
+    },
+    images: [
+      'https://cdn.chengpeiquan.com/img/2025/07/202507142355860.jpg?x-oss-process=image/interlace,1',
+      'https://cdn.chengpeiquan.com/img/2025/07/202507142341869.jpg?x-oss-process=image/interlace,1',
+      'https://cdn.chengpeiquan.com/img/2025/07/202507160057018.jpg?x-oss-process=image/interlace,1',
+    ],
+  },
 ]
 
 export const tattooImages = tattooStories.flatMap((story) => story.images)
