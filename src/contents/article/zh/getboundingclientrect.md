@@ -9,7 +9,7 @@ categories:
 maybeLegacy: true
 ---
 
-今天在上线一个移动端需求的时候，QA 妹子跟我反馈在她们一部 iPhone X 上面出现了一个滚动加载会同时触发下拉刷新的 bug…
+今天在上线一个移动端需求的时候，QA 妹子跟我反馈在她们一部 iPhone X 上面出现了一个滚动加载会同时触发下拉刷新的 bug……
 
 我就 ？？？……一个在顶部一个在底部这也能扯上关系？
 
@@ -17,7 +17,7 @@ maybeLegacy: true
 
 ## debug 过程
 
-幸亏这 2 个功能都是自己手写的，没引入其他插件，所以定位原因还是比较容易，因为两个功能都涉及到一个关键的数据就是 `scrollTop`，于是引入 vConsole，打印不断变化的 scrollTop 到控制台，结果，其他设备都能正常获取到 scrollTop，唯独这部机子一直是 0…
+幸亏这 2 个功能都是自己手写的，没引入其他插件，所以定位原因还是比较容易，因为两个功能都涉及到一个关键的数据就是 `scrollTop`，于是引入 vConsole，打印不断变化的 scrollTop 到控制台，结果，其他设备都能正常获取到 scrollTop，唯独这部机子一直是 0……
 
 查阅自己对 scrollTop 的定义，也是比较主流的一个方案了，原来的代码：
 
@@ -25,7 +25,7 @@ maybeLegacy: true
 const SCROLL_TOP = document.documentElement.scrollTop || document.body.scrollTop
 ```
 
-是不是很诡异？然而搜索来搜索去就没遇到一样的情况，针对 scrollTop 一直为 0 的，全是千篇一律的这个解决方案…想打死这些只会复制粘贴的人……
+是不是很诡异？然而搜索来搜索去就没遇到一样的情况，针对 scrollTop 一直为 0 的，全是千篇一律的这个解决方案……想打死这些只会复制粘贴的人……
 
 所幸天无绝人之路，突然想起我去年写过一篇 JS 做返回顶部按钮的博文，里面用到了一个 api `getBoundingClientRect`
 
@@ -73,4 +73,4 @@ const SCROLL_TOP =
 
 也就是在最后面增加了 `-(document.querySelector('.container').getBoundingClientRect().top)`，具体的元素根据实际的业务需求来，可以是 body 也可以是其他元素。
 
-这个方案真的特别美好，其他的业务代码完全不需要修改，QA 妹子测试通过，我俩都可以准时下班回家！！！（各回各家…
+这个方案真的特别美好，其他的业务代码完全不需要修改，QA 妹子测试通过，我俩都可以准时下班回家！！！（各回各家……

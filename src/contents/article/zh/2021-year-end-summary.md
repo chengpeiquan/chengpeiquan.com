@@ -17,7 +17,7 @@ cite:
 
 ## 开源社区
 
-其实我入坑的比较晚（其实是很晚…）， 2020 年底才算开始活跃给开源做贡献，然后 2021 年算是开始放飞自我，真正的活动了起来，哈哈哈哈先记录一下活跃度吧，今年的打卡日期还是铺的比较满的，毕竟今年基本上宅了一年，除了回家的那几天，基本上都是在电脑前呆着（截图生成自 [GitHub Contributions](https://github-contributions.vercel.app/) ）。
+其实我入坑的比较晚（其实是很晚……）， 2020 年底才算开始活跃给开源做贡献，然后 2021 年算是开始放飞自我，真正的活动了起来，哈哈哈哈先记录一下活跃度吧，今年的打卡日期还是铺的比较满的，毕竟今年基本上宅了一年，除了回家的那几天，基本上都是在电脑前呆着（截图生成自 [GitHub Contributions](https://github-contributions.vercel.app/) ）。
 
 ![这两年在 GitHub 的活跃情况](https://cdn.chengpeiquan.com/img/2022/01/20220104005113.jpg?x-oss-process=image/interlace,1)
 
@@ -25,7 +25,7 @@ cite:
 
 写了一本 [Learning Vue3](https://github.com/chengpeiquan/learning-vue3) ，原本只是我的一些零散笔记，后来太多了，就打算写一些系列博文，结果发现又好像太多了，算了，弄本书吧，于是就有了这本面向 Vue 3.0 入门开发者的电子书。这也是我第一个持续 “维护” 了一年多的项目（哈哈哈更新内容也算维护工作吧），在冬至这天，刚好收获了第 100 个 Star ，也是我第一个达到 100 Star 的个人项目（现在已经超过了耶）。
 
-春节的时候重构了我的博客，并做了一次详细的记录 [重构于Vite](https://chengpeiquan.com/article/rewrite-in-vite.html)，当时纯粹就是那么顺手一发知乎，还只发了一半懒得全部搬运，然后被尤大发现了，给了我一个大大的赞！用了这么久的 Vue ，写的东西被 Vue 作者点赞，太开心了！（当然那个时候他肯定是以 Vite 作者的身份去点赞的哈哈哈）
+春节的时候重构了我的博客，并做了一次详细的记录 [重构于 Vite](https://chengpeiquan.com/article/rewrite-in-vite.html)，当时纯粹就是那么顺手一发知乎，还只发了一半懒得全部搬运，然后被尤大发现了，给了我一个大大的赞！用了这么久的 Vue ，写的东西被 Vue 作者点赞，太开心了！（当然那个时候他肯定是以 Vite 作者的身份去点赞的哈哈哈）
 
 ![尤雨溪给我点赞啦](https://cdn.chengpeiquan.com/img/2022/01/20220104113148.jpg?x-oss-process=image/interlace,1)
 
@@ -33,11 +33,11 @@ cite:
 
 ![使用量最多的那一天截图](https://cdn.chengpeiquan.com/img/2022/01/20220104115518.jpg?x-oss-process=image/interlace,1)
 
-三月份在 Vue 3.2 正式上线前夕，翻译整理了一份定稿文章 [Vue3.0最新动态：script-setup定稿 部分实验性API将弃用](https://chengpeiquan.com/article/vue3-script-setup-finalization.html) ，在知乎得到了挺多的互动，今年最热闹的一篇博文了，尤大还参与到了里面的一些讨论，太惊喜了！
+三月份在 Vue 3.2 正式上线前夕，翻译整理了一份定稿文章 [Vue3.0 最新动态：script-setup 定稿 部分实验性 API 将弃用](https://chengpeiquan.com/article/vue3-script-setup-finalization.html) ，在知乎得到了挺多的互动，今年最热闹的一篇博文了，尤大还参与到了里面的一些讨论，太惊喜了！
 
 ![尤雨溪在文章下讨论](https://cdn.chengpeiquan.com/img/2022/01/20220104113454.jpg?x-oss-process=image/interlace,1)
 
-之后几个月公司事情太多，慢慢有点淡化开源的投入，不过也还是有参与吧，像一些技术在查文档的时候，发现缺少中文翻译，所以干完活就顺手帮人家翻译了一下，比如 [HTMLInputElement.webkitdirectory - MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLInputElement/webkitdirectory)，所以也断断续续的贡献了一些翻译文档，我的这些知名组织的贡献就是这么来的…
+之后几个月公司事情太多，慢慢有点淡化开源的投入，不过也还是有参与吧，像一些技术在查文档的时候，发现缺少中文翻译，所以干完活就顺手帮人家翻译了一下，比如 [HTMLInputElement.webkitdirectory - MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLInputElement/webkitdirectory)，所以也断断续续的贡献了一些翻译文档，我的这些知名组织的贡献就是这么来的……
 
 ![我参与的 Organizations](https://cdn.chengpeiquan.com/img/2022/01/20220104115744.jpg?x-oss-process=image/interlace,1)
 
@@ -61,7 +61,7 @@ cite:
 
 英语这块落实的比较好了， 2020 年的时候在师妹的影响下其实是坚持背完了整整一本书的单词，词汇量相比 2019 年是增加了不少，不过在表达方面还是很弱。2020 年通过开源文档的英文写作，以及参与到翻译工作中，让自己的写作能力提升很快，这部分的落实还是很满意的。
 
-不过目前的短板还是比较大问题，就是很多细节，比如说语法，谓语啥的用的还不是很好，其实当年的成绩也没那么差啊，真的是太多年没用，完全还给老师了…练起来练起来！今年除了中文博客部分，其他能用英语的就都用起来吧，希望再过一年之后，会变得更好！
+不过目前的短板还是比较大问题，就是很多细节，比如说语法，谓语啥的用的还不是很好，其实当年的成绩也没那么差啊，真的是太多年没用，完全还给老师了……练起来练起来！今年除了中文博客部分，其他能用英语的就都用起来吧，希望再过一年之后，会变得更好！
 
 ![新一年的规划](https://cdn.chengpeiquan.com/img/2022/01/20220104143643.jpg?x-oss-process=image/interlace,1)
 

@@ -291,4 +291,4 @@ withDefaults(
 
 传送门：[\<script setup\> Finalization](https://github.com/vuejs/rfcs/pull/227#issuecomment-870105222)
 
-好隐蔽的说，而且原来的 RFC 仓库的文档也删除了，换了新的文档也是找了好久才翻到新的，本文先根据尤大的通告做一波简单的说明，后续将会详细更新到 [Vue3.0学习教程与实战案例](https://vue3.chengpeiquan.com/) 里。
+好隐蔽的说，而且原来的 RFC 仓库的文档也删除了，换了新的文档也是找了好久才翻到新的，本文先根据尤大的通告做一波简单的说明，后续将会详细更新到 [Vue3.0 学习教程与实战案例](https://vue3.chengpeiquan.com/) 里。

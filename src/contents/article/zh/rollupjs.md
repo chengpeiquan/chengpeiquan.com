@@ -61,7 +61,7 @@ npm install --save-dev rollup @rollup/plugin-node-resolve @rollup/plugin-babel @
 | :-------------------------------------- | :------------------------------------------------ | :------------------------------------------------------------------------------------------------------- |
 | rollup                                  | Rollup 的核心包                                   |
 | @rollup/plugin-node-resolve             | Rollup 插件包，帮助 Rollup 识别 node_modules 的包 |
-| @rollup/plugin-babel                    | Rollup 插件包，自动化解决 babel 的转换问题        | 你可以更爽的写 ES6 以上的新语法…                                                                         |
+| @rollup/plugin-babel                    | Rollup 插件包，自动化解决 babel 的转换问题        | 你可以更爽的写 ES6 以上的新语法……                                                                        |
 | @rollup/plugin-commonjs                 | Rollup 插件包，可将 CommonJS 模块转换为 ES6       | 大部分 npm 包都是 CommonJS，比如常用的 axios/qs 库，如果你项目里用到了他们，不引入这个插件的话会构建失败 |
 | @rollup/plugin-json                     | Rollup 插件包，可将.json 文件转换为 ES6 模块      | 比如：作为类库当然要涉及到版本更新，版本号肯定不能各种地方都手写，这种情况下就可以从 package.json 读取   |
 | @rollup/plugin-alias                    | Rollup 插件包，配置路径别名                       | alias 的作用大家都懂，开发环境必备                                                                       |

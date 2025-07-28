@@ -18,7 +18,7 @@ The photos below are the three of them.
 
 ![Luna, Lion, Didi.](https://cdn.chengpeiquan.com/img/2021/02/20210218211229.jpg?x-oss-process=image/interlace,1)
 
-After introducing my cat, it's my turn. You can call me "BASS" or "BASSSSSSS…", because I'm a Bassist when I free.
+After introducing my cat, it's my turn. You can call me "BASS" or "BASSSSSSS……", because I'm a Bassist when I free.
 
 I enjoy Rock'N Roll, Nu-Metal, Hardcore, funk and so on. In my favorite music, the common denominator is to have charming riff, double Bass Drum Pedal, the most important point is that the bassline must be prominent.
 

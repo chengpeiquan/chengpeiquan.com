@@ -13,7 +13,7 @@ categories:
 
 ![最近一周的常用语言](https://cdn.chengpeiquan.com/img/2022/01/20220121232856.png)
 
-我是没想到我一周能敲差不多 25 个小时的 Markdown … 几乎一天有 5 个小时在码字，天了噜…
+我是没想到我一周能敲差不多 25 个小时的 Markdown …… 几乎一天有 5 个小时在码字，天了噜……
 
 ## 都干了些啥
 
@@ -93,7 +93,7 @@ Btw: PPT 我用的是 [slidev](https://cn.sli.dev/) ，一个基于 Vite 和 Vue
 
 3. 决定重写没问题，但是最重要的一点就是，保证如期上线！
 
-话说这里安利一下我的开源书 [Vue3.0学习教程与实战案例](https://vue3.chengpeiquan.com/) ，虽然 Vue 3.0 的新官网快出来了，变化很大，不过在出来之前还是可以看看，这次我们组的同学都是一边干活一边看我这本书，很容易就上手 Vue 3 了。
+话说这里安利一下我的开源书 [Vue3.0 学习教程与实战案例](https://vue3.chengpeiquan.com/) ，虽然 Vue 3.0 的新官网快出来了，变化很大，不过在出来之前还是可以看看，这次我们组的同学都是一边干活一边看我这本书，很容易就上手 Vue 3 了。
 
 ![如何保证也要提前想好](https://cdn.chengpeiquan.com/img/2022/01/20220122004939.jpg?x-oss-process=image/interlace,1)
 

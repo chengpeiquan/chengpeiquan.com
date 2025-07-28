@@ -21,7 +21,7 @@ xiaohongshuId: 6262c770000000002103f4ed
 
 ## 主要食材
 
-1、内酯豆腐一盒，白嫖的免费菜哈哈哈哈，0元
+1、内酯豆腐一盒，白嫖的免费菜哈哈哈哈，0 元
 
 ![白嫖的快乐](https://cdn.chengpeiquan.com/img/2022/04/20220422234911.jpg?x-oss-process=image/interlace,1)
 

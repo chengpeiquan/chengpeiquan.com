@@ -80,7 +80,7 @@ xiaohongshuId: 622f44f10000000001029a50
 
 ![煮到沸腾](https://cdn.chengpeiquan.com/img/2022/02/20220314214948.jpg?x-oss-process=image/interlace,1)
 
-这个步骤很快就好，其实时间主要是用来煮面了哈哈哈…
+这个步骤很快就好，其实时间主要是用来煮面了哈哈哈……
 
 最后把肉酱淋在面条上面，拌匀就可以开吃！
 

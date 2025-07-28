@@ -10,7 +10,7 @@ repo: https://github.com/chengpeiquan/learning-vue3
 maybeLegacy: true
 ---
 
-> 2021-07-05：由于版本更新，本文部分内容已有过期，最新的相关内容请阅读：[Vue3.0最新动态：script-setup定稿 部分实验性API将弃用](https://chengpeiquan.com/article/vue3-script-setup-finalization.html)
+> 2021-07-05：由于版本更新，本文部分内容已有过期，最新的相关内容请阅读：[Vue3.0 最新动态：script-setup 定稿 部分实验性 API 将弃用](https://chengpeiquan.com/article/vue3-script-setup-finalization.html)
 
 ---
 
@@ -173,7 +173,7 @@ props 就是在这种情况下用于父组件向子组件传递数据，而 emit
 
 回来说这两个 API ，顾名思义， defineProps 一看就知道是用来定义 props 的，而 defineEmit 则是用来定义 emits 的，那么它俩跟上面提到的 props / emits 有什么区别？
 
-在你的项目 `node_modules\@vue\runtime-core\dist\runtime-core.d.ts` 里，有一段针对该 API 的注释（不要问我怎么找到这里的，我只能跟你说我用的 VSCode …）：
+在你的项目 `node_modules\@vue\runtime-core\dist\runtime-core.d.ts` 里，有一段针对该 API 的注释（不要问我怎么找到这里的，我只能跟你说我用的 VSCode ……）：
 
 ```ts
 /**

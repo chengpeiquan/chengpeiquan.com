@@ -111,7 +111,6 @@ Error: Could not locate the bindings file. Tried:
 better-sqlite3 这行 install 命令的意思是：
 
 1. prebuild-install：
-
    - 这个命令会首先检查是否有已经构建好的二进制文件（预编译的二进制文件）。 它是由 [prebuild-install](https://github.com/prebuild/prebuild-install) 这个工具提供的，用来自动下载已编译好的二进制文件，避免在安装时重新编译原生模块，这个步骤是为了加速安装过程，并且能够在大多数情况下避免编译原生代码，尤其是针对不同平台的预编译文件。
    - prebuild-install 会检查与当前 Node.js 版本和操作系统匹配的预编译包，如果找到了，则直接使用。
 

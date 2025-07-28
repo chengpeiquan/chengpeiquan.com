@@ -25,7 +25,7 @@ maybeLegacy: true
 
 ![](https://cdn.chengpeiquan.com/img/2020/09/3-1.jpg?x-oss-process=image/interlace,1)
 
-然后 less/sass 都不会，唯独 stylus 出现了，我又比较喜欢 stylus，无需花括号，无需冒号，无需分号的简洁…
+然后 less/sass 都不会，唯独 stylus 出现了，我又比较喜欢 stylus，无需花括号，无需冒号，无需分号的简洁……
 
 于是各种重装 stylus 相关插件，然而并没有一丝丝改善，搜来搜去也没什么解决办法。
 
@@ -38,11 +38,11 @@ maybeLegacy: true
 
 emmm，发现原来居然是因为 vue 3.0 的 `Vue3snippets` 插件引起的 = =
 
-然后我把设置里面的 format 关闭了，好了…
+然后我把设置里面的 format 关闭了，好了……
 
 ![](https://cdn.chengpeiquan.com/img/2020/09/2-1.jpg?x-oss-process=image/interlace,1)
 
-终于告别噩梦…你知道我这段时间是怎么过来的吗？
+终于告别噩梦……你知道我这段时间是怎么过来的吗？
 
 为了赶项目，然后不得不单独写一个 styl 文件，去 import 到 Vue 里，复杂项目这样玩起来好恶心 = = 总算解脱了！
 
@@ -56,9 +56,9 @@ emmm，发现原来居然是因为 vue 3.0 的 `Vue3snippets` 插件引起的 = 
 
 ![](https://cdn.chengpeiquan.com/img/2020/09/5.jpg?x-oss-process=image/interlace,1)
 
-网上很多方法说把 vue 的默认关联方式改成 html（具体操作就不说了，搜出来几乎全是这个答案…
+网上很多方法说把 vue 的默认关联方式改成 html（具体操作就不说了，搜出来几乎全是这个答案……
 
-为什么不想用这个 html 文件关联的方法呢，因为不支持写 stylus，所以还是特么要单独写一个 styl 文件再 import 进去…还是烦 - -
+为什么不想用这个 html 文件关联的方法呢，因为不支持写 stylus，所以还是特么要单独写一个 styl 文件再 import 进去……还是烦 - -
 
 然后今天在解决第一个问题的时候，因为发现是 snippets 插件引起的，于是重新找了一下替代品，发现有个插件还蛮好用的：
 

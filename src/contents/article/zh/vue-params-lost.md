@@ -11,13 +11,13 @@ maybeLegacy: true
 
 使用带 params 的路由的时候，如果 params 不正确，路由就不会渲染，导致页面出现空白，本来想跟 query 一样，指定其中一个 query 为默认值，没想到并不能如己所愿，不过最终问题还是解决了，采用了一个路由的 api 来判断当前路由是否存在，顺带解决了其他非正常路由的指向问题。
 
-## 定位问题：
+## 定位问题
 
 带有 params 的路由，比如一些文章页、用户个人页等等，输入 ./article/123 这样是可以正常进入文章 ID 为 123 的详情页，但是如果只有 ./article ，这样页面就会变成空白。
 
 ![](https://cdn.chengpeiquan.com/img/2019/02/1.jpg?x-oss-process=image/interlace,1)
 
-## 解决思路：
+## 解决思路
 
 1、使用了  $route.matched 来判断to的路由对象是否存在，$route.matched 返回的是一个数组，如果数组为空，则表示接下来要去的非我们配置好的路由页面。
 
@@ -27,7 +27,7 @@ maybeLegacy: true
 
 > https://router.vuejs.org/zh/api/#路由对象属性
 
-## 相关代码：
+## 相关代码
 
 放到 main.js 里即可。
 

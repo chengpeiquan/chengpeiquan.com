@@ -25,7 +25,7 @@ Truffle 是一个开发智能合约的工具，也可以用来做 DAPP ，这两
 
 > 智能合约 —— 可以简单理解为脚本，用来处理各种业务逻辑
 
-> DAPP —— 包含完整的智能合约 + 用户UI交互界面，载体可以是 Android APP/ iOS APP/ WEB APP ，只要主要逻辑和数据在区块链上就可以
+> DAPP —— 包含完整的智能合约 + 用户 UI 交互界面，载体可以是 Android APP/ iOS APP/ WEB APP ，只要主要逻辑和数据在区块链上就可以
 
 至于怎么把数据和界面连接起来，后面了解了再补充，先记录一下前期的一些学习体验问题。
 
@@ -33,14 +33,14 @@ Truffle 是一个开发智能合约的工具，也可以用来做 DAPP ，这两
 
 ## 安装问题
 
-需要全局安装，但理论上第一次安装会得到好几屏幕的报错信息…
+需要全局安装，但理论上第一次安装会得到好几屏幕的报错信息……
 
 ```bash
 # 全局安装 Truffle
 yarn global add truffle
 ```
 
-因为在 Node 基础上还需要 Python 和 C++ 编译器…
+因为在 Node 基础上还需要 Python 和 C++ 编译器……
 
 不过其实我之前都有装过，看了报错都是 gyp 相关的，更新了 gyp 就可以了。
 
@@ -136,7 +136,7 @@ module.exports = {
 
 ## 解决单元测试异常
 
-在实际体验中发现，如果你在刚刚的 [使用 GUI 调试](#使用-gui-调试) 环节直接配置了 networks 之后，会发现无法再执行 `truffle test` 了（当然，执行 `truffle develop` 是没问题的，因为它等价于使用 Ganache）…
+在实际体验中发现，如果你在刚刚的 [使用 GUI 调试](#使用-gui-调试) 环节直接配置了 networks 之后，会发现无法再执行 `truffle test` 了（当然，执行 `truffle develop` 是没问题的，因为它等价于使用 Ganache）……
 
 控制台会出现如下报错：
 
@@ -192,7 +192,7 @@ Using network 'test'.
 Using network 'development'.
 ```
 
-为什么会出现这个情况？官方文档也没有说明，得去看一下仓库相关的代码了，看看有没有门路…
+为什么会出现这个情况？官方文档也没有说明，得去看一下仓库相关的代码了，看看有没有门路……
 
 按照一般的大型开源项目的习惯，在 GitHub 仓库里找到了 commands 相关的文件，其中 test 命令是位于 [truffle/packages/core/lib/commands/test/index.js](https://github.com/trufflesuite/truffle/blob/develop/packages/core/lib/commands/test/index.js#L141-L215) ，这里可以看到测试命令的运行规则是：
 
@@ -321,6 +321,6 @@ Source "truffle/Assert.sol" not found: File import callback not supported
 
 因为出现的问题只存在于 VS Code ，所以可以确认是语法插件的问题，后面在插件仓库的 Issue [#193](https://github.com/juanfranblanco/vscode-solidity/issues/193) 找到了原因。
 
-不过好像当前无法解决，所以目前只能是人肉忽视，强迫症也没办法…
+不过好像当前无法解决，所以目前只能是人肉忽视，强迫症也没办法……
 
 功能不影响测试和编译，不是大问题。

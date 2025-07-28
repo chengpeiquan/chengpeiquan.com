@@ -41,7 +41,7 @@ xiaohongshuId: 624bfb9c000000000102fdb0
 
 ![再盖上一层青瓜丝](https://cdn.chengpeiquan.com/img/2022/04/20220405215419.jpg?x-oss-process=image/interlace,1)
 
-然后折一折，叠一叠…
+然后折一折，叠一叠……
 
 ![折一折](https://cdn.chengpeiquan.com/img/2022/04/20220405215420.jpg?x-oss-process=image/interlace,1)
 

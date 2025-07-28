@@ -12,7 +12,7 @@ maybeLegacy: true
 
 一个基于 cropper.js ，支持 Vue 3.0 的图片裁切工具组件（目前仅支持 Vue 3.x ）。
 
-对 Vue 3.0 还不熟悉的同学，可以查阅我之前总结的文档 [《Vue3.0学习教程与实战案例》](https://vue3.chengpeiquan.com/)
+对 Vue 3.0 还不熟悉的同学，可以查阅我之前总结的文档 [《Vue3.0 学习教程与实战案例》](https://vue3.chengpeiquan.com/)
 
 GitHub： [https://github.com/chengpeiquan/vue-picture-cropper](https://github.com/chengpeiquan/vue-picture-cropper)
 
@@ -28,7 +28,7 @@ NPM： [https://www.npmjs.com/package/vue-picture-cropper](https://www.npmjs.com
 
 ## 安装
 
-```
+```plain
 npm install --save-dev vue-picture-cropper
 ```
 
@@ -50,10 +50,10 @@ import VuePictureCropper, { cropper } from 'vue-picture-cropper/dist/esm'
 
 导入的模块说明：
 
-| 模块名称          | 作用                                                  |
-| :---------------- | :---------------------------------------------------- |
-| VuePictureCropper | 组件的模板，用于挂载和渲染，可自定义命名              |
-| cropper           | 工具实例，可用于操作相关的api，必须用花括号导入该名称 |
+| 模块名称          | 作用                                                   |
+| :---------------- | :----------------------------------------------------- |
+| VuePictureCropper | 组件的模板，用于挂载和渲染，可自定义命名               |
+| cropper           | 工具实例，可用于操作相关的 api，必须用花括号导入该名称 |
 
 对 Vue 3.x 还不熟悉的同学，请看下方的用法示范。
 
@@ -94,7 +94,7 @@ import VuePictureCropper, { cropper } from 'vue-picture-cropper/dist/esm'
 </script>
 ```
 
-上面是设定了一个裁剪区域，对于文件的选择/传入，以及裁切结果，请通过 `<input type="file" >` 或 `button` 绑定实例的api来获取。
+上面是设定了一个裁剪区域，对于文件的选择/传入，以及裁切结果，请通过 `<input type="file" >` 或 `button` 绑定实例的 api 来获取。
 
 可参考 DEMO 里面的用法：
 
@@ -106,13 +106,13 @@ import VuePictureCropper, { cropper } from 'vue-picture-cropper/dist/esm'
 
 简单的说明如下，可参考上方的用法示范自行调整。
 
-| props      | 类型     | 作用                                                                                                       | 备注                                                              |
-| :--------- | :------- | :--------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------- |
-| boxStyle   | object   | 定义裁剪区域的样式，也就是包裹cropper的父级元素样式                                                        |
-| img        | string   | 要用来裁切的图片地址                                                                                       |
-| options    | object   | 一些cropper的设定参数，完整可参考 [options - cropperjs](https://github.com/fengyuanchen/cropperjs#options) |
-| events     | function | 一些cropper的回调函数，完整可参考 [events - cropperjs](https://github.com/fengyuanchen/cropperjs#events)   |
-| presetMode | object   | 预设模式，可以开箱即用的预设效果                                                                           | `0.4.0` 版本才开始支持，详见下方的 [预设模式](#预设模式) 部分文档 |
+| props      | 类型     | 作用                                                                                                         | 备注                                                              |
+| :--------- | :------- | :----------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------- |
+| boxStyle   | object   | 定义裁剪区域的样式，也就是包裹 cropper 的父级元素样式                                                        |
+| img        | string   | 要用来裁切的图片地址                                                                                         |
+| options    | object   | 一些 cropper 的设定参数，完整可参考 [options - cropperjs](https://github.com/fengyuanchen/cropperjs#options) |
+| events     | function | 一些 cropper 的回调函数，完整可参考 [events - cropperjs](https://github.com/fengyuanchen/cropperjs#events)   |
+| presetMode | object   | 预设模式，可以开箱即用的预设效果                                                                             | `0.4.0` 版本才开始支持，详见下方的 [预设模式](#预设模式) 部分文档 |
 
 btw: 远程图片会涉及到跨域问题，要服务端进行配合调整，请尽量使用本地图片来避免一些奇怪的问题出现。
 
@@ -128,13 +128,13 @@ btw: 远程图片会涉及到跨域问题，要服务端进行配合调整，请
 
 可通过 `cropper` 实例来调取插件的各种 API （也就是在 import 的时候花括号里的那个实例）。
 
-| 方法名     | 功能说明                                   | 用法示范                             | 备注                         |
-| :--------- | :----------------------------------------- | :----------------------------------- | :--------------------------- |
-| getDataURL | 获取裁切后的base64结果，可用于本地预览展示 | const dataURL = cropper.getDataURL() |
-| getBlob    | 获取裁切后的 blob 结果，可用于传给服务端   | const blob = cropper.getBlob()       |
-| getFile    | 获取裁切后的 file 结果，可用于传给服务端   | const file = cropper.getFile()       | `0.2.0` 版本开始才支持该方法 |
-| clear      | 清除裁切框                                 | cropper.clear()                      |
-| reset      | 重置默认的裁切区域                         | cropper.reset()                      |
+| 方法名     | 功能说明                                     | 用法示范                             | 备注                         |
+| :--------- | :------------------------------------------- | :----------------------------------- | :--------------------------- |
+| getDataURL | 获取裁切后的 base64 结果，可用于本地预览展示 | const dataURL = cropper.getDataURL() |
+| getBlob    | 获取裁切后的 blob 结果，可用于传给服务端     | const blob = cropper.getBlob()       |
+| getFile    | 获取裁切后的 file 结果，可用于传给服务端     | const file = cropper.getFile()       | `0.2.0` 版本开始才支持该方法 |
+| clear      | 清除裁切框                                   | cropper.clear()                      |
+| reset      | 重置默认的裁切区域                           | cropper.reset()                      |
 
 **需要注意的是**
 
@@ -146,18 +146,18 @@ btw: 远程图片会涉及到跨域问题，要服务端进行配合调整，请
 
 其中均可传入选项来控制获取到的结果变化：
 
-| 属性                  | 类型    | 说明                                                | 默认值                        |
-| :-------------------- | :------ | :-------------------------------------------------- | :---------------------------- |
-| width                 | number  | 设置裁切结果的宽度                                  | 原图所截区域的大小            |
-| height                | number  | 设置裁切结果的高度                                  | 原图所截区域的大小            |
-| minWidth              | number  | 设置裁切结果的最小宽度                              | 0                             |
-| minHeight             | number  | 设置裁切结果的最小高度                              | 0                             |
-| maxWidth              | number  | 设置裁切结果的最大宽度                              | 无上限                        |
-| maxHeight             | number  | 设置裁切结果的最大高度                              | 无上限                        |
-| fillColor             | string  | 设置裁剪结果的背景色，比如你想改变png透明区域的颜色 | transparent                   |
-| imageSmoothingEnabled | boolean | 是否让裁剪后的图片显得平滑                          | true                          |
-| imageSmoothingQuality | string  | 图片平滑质量，可选low、medium、high                 | low                           |
-| fileName              | string  | 文件名，目前只有 `getFile` 会用到该参数，可不传     | cropped-当前时间戳.原文件后缀 |
+| 属性                  | 类型    | 说明                                                  | 默认值                        |
+| :-------------------- | :------ | :---------------------------------------------------- | :---------------------------- |
+| width                 | number  | 设置裁切结果的宽度                                    | 原图所截区域的大小            |
+| height                | number  | 设置裁切结果的高度                                    | 原图所截区域的大小            |
+| minWidth              | number  | 设置裁切结果的最小宽度                                | 0                             |
+| minHeight             | number  | 设置裁切结果的最小高度                                | 0                             |
+| maxWidth              | number  | 设置裁切结果的最大宽度                                | 无上限                        |
+| maxHeight             | number  | 设置裁切结果的最大高度                                | 无上限                        |
+| fillColor             | string  | 设置裁剪结果的背景色，比如你想改变 png 透明区域的颜色 | transparent                   |
+| imageSmoothingEnabled | boolean | 是否让裁剪后的图片显得平滑                            | true                          |
+| imageSmoothingQuality | string  | 图片平滑质量，可选 low、medium、high                  | low                           |
+| fileName              | string  | 文件名，目前只有 `getFile` 会用到该参数，可不传       | cropped-当前时间戳.原文件后缀 |
 
 用法示范：
 
@@ -199,10 +199,10 @@ cropper.getFile().then((file) => {
 | 属性   | 类型   | 说明                                   |
 | :----- | :----- | :------------------------------------- |
 | mode   | string | fixedSize=固定尺寸模式，round=圆形模式 |
-| width  | number | 裁切区的宽度，需要大于0                |
-| height | number | 裁切区的高度，需要大于0                |
+| width  | number | 裁切区的宽度，需要大于 0               |
+| height | number | 裁切区的高度，需要大于 0               |
 
-### 注意事项：
+### 注意事项
 
 - `presetMode` 只提供了一些简化的配置，比如你要获取圆形头像，就无需自己去处理很多额外的东西，但是一些该传入的 `options` ，还是需要在 `options` 指定，请留意对应的示范代码
 
@@ -259,7 +259,7 @@ DEMO 源码：[fixedSize.vue - vue-picture-cropper-demo](https://github.com/chen
 
 它也是固定裁切区域的大小，并且获得和裁切区域一样大的裁切结果（这种情况下你可以禁止用户修改裁切区域大小）。
 
-这个情况下，裁切结果固定是 `png` 图片（否则似乎没有什么裁圆形的意义…）。
+这个情况下，裁切结果固定是 `png` 图片（否则似乎没有什么裁圆形的意义……）。
 
 在线 DEMO ：[round - vue-picture-cropper-demo](https://chengpeiquan.github.io/vue-picture-cropper-demo/#/round)
 

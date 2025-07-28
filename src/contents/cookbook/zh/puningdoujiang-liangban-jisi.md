@@ -55,11 +55,11 @@ xiaohongshuId: 6256e644000000002103dfe2
 
 ## 凉拌过程
 
-要拌东西最好在大碗里比较方便，加入一勺豆酱…
+要拌东西最好在大碗里比较方便，加入一勺豆酱……
 
 ![加入豆酱](https://cdn.chengpeiquan.com/img/2022/04/20220413234550.jpg?x-oss-process=image/interlace,1)
 
-倒入香菜，撒入白芝麻，香油…
+倒入香菜，撒入白芝麻，香油……
 
 ![加入香菜、芝麻、香油](https://cdn.chengpeiquan.com/img/2022/04/20220413234551.jpg?x-oss-process=image/interlace,1)
 

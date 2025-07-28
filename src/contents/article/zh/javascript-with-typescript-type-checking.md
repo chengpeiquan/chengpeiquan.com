@@ -11,7 +11,7 @@ maybeLegacy: true
 
 现在前端没有几个不写 TypeScript 了吧，但是有时候还是不得不写 JS ，比如我最近写脚手架的时候，代码是直接跑在 Node Runtime 里，没有编译环节，所以用的依然还是 JavaScript 。
 
-然而，发现离开了类型限制之后，感觉要写很多注释才能保证一个项目的完整性，就很烦…
+然而，发现离开了类型限制之后，感觉要写很多注释才能保证一个项目的完整性，就很烦……
 
 于是，翻了一下 TypeScript 官网，找到了一篇文章： [JS Projects Utilizing TypeScript](https://www.typescriptlang.org/docs/handbook/intro-to-js-ts.html)
 
@@ -121,9 +121,7 @@ const greet = (name) => `Hello, ${name}!`
 /**
  * 打个招呼
  *
- * @param { { action: string; name: string } } option 选项
- *  action: 行为
- *  name: 对方的名字
+ * @param {{ action: string; name: string }} option 选项 action: 行为 name: 对方的名字
  * @returns {string} 欢迎语句
  */
 const greet = ({ action, name }) => `${action}, ${name}!`
@@ -155,7 +153,7 @@ export interface Foo {
 /**
  * 获取 Foo 列表
  *
- * @typedef { import('../types').Foo } Foo
+ * @typedef {import('../types').Foo} Foo
  * @returns {Foo[]} 一个 Foo 类型的数组
  */
 const getFooList = () => {

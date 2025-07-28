@@ -5,6 +5,7 @@ import {
   imports,
   javascript,
   jsx,
+  markdown,
   next,
   react,
   typescript,
@@ -16,6 +17,7 @@ export default defineFlatConfig([
   ...imports,
   ...javascript,
   ...jsx,
+  ...markdown,
   ...next,
   ...react,
   ...typescript,
@@ -99,6 +101,6 @@ export default defineFlatConfig([
 
   {
     name: getConfigName('ignore'),
-    ignores: ['**/contents/**.md', '**/types/**/*.d.ts'],
+    ignores: ['**/types/**/*.d.ts'],
   },
 ])

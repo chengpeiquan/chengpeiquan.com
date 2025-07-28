@@ -11,7 +11,7 @@ maybeLegacy: true
 
 虽然 axios 说可以兼容 IE9，但实际上在项目开发过程中，IE9 报错，而且目前的情况是 responseType 为"json"时才会报这个异常。
 
-## 定位问题：
+## 定位问题
 
 因为 IE9 下，指定 json 格式的请求，response 只返回 responseText，而其他浏览器都可以正常返回 data
 
@@ -37,7 +37,7 @@ this.$ajax({
   })
 ```
 
-## 解决方案：
+## 解决方案
 
 解决方案也很简单，判断接口返回的数据是否正常，如果请求 json 格式返回的 data 为空，则将响应数据指向 responseText。
 

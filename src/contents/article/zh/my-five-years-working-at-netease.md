@@ -88,11 +88,11 @@ bgm:
 
 2016 年 1 月，国际惯例，年会表演 - - 。初来乍到也没什么特别计划，于是跟着凑人数上去演了个情景剧，于是第一次接触到了假发……
 
-Emmmm... 你们看，你们看，现在的我的头发，又是在这个时候受影响…
+Emmmm... 你们看，你们看，现在的我的头发，又是在这个时候受影响……
 
 ![第一次看到自己长头发的样子](https://cdn.chengpeiquan.com/my-netease/img/page2/1.jpg)
 
-那次年会最后没中奖（现在回想起来五年来居然一次也没中过…），不过那一次有个摆摊环节很好玩，组长苏苏知道我会烘焙，让我去负责我们组的摊位，卖！蛋！挞！
+那次年会最后没中奖（现在回想起来五年来居然一次也没中过……），不过那一次有个摆摊环节很好玩，组长苏苏知道我会烘焙，让我去负责我们组的摊位，卖！蛋！挞！
 
 然后那天烤了 60 个蛋挞在现场卖光了，哈哈哈哈哈（对了，现在不就是提倡摆摊吗，我居然有摆摊经验耶妈耶！）
 
@@ -140,7 +140,7 @@ Emmmm... 你们看，你们看，现在的我的头发，又是在这个时候�
 
 ![第一次跑到香港看演出](https://cdn.chengpeiquan.com/my-netease/img/page2/10.jpg)
 
-此时距离 2005 年 Beyond 解散，已经过去 10 年了，阿 Paul 第一次唱《谁伴我闯荡》 ，那一次超长的尾奏，弹了足足 1 分 30 秒，真的重复的让人想哭…
+此时距离 2005 年 Beyond 解散，已经过去 10 年了，阿 Paul 第一次唱《谁伴我闯荡》 ，那一次超长的尾奏，弹了足足 1 分 30 秒，真的重复的让人想哭……
 
 ![记忆里阿 Paul 第一次在个人演出里唱《谁伴我闯荡》](https://cdn.chengpeiquan.com/my-netease/img/page2/11.jpg)
 
@@ -212,7 +212,7 @@ https://cdn.chengpeiquan.com/img/2024/11/202412221718092.jpg?x-oss-process=image
 
 ![黑妹那个时候好小，捧在手心](https://cdn.chengpeiquan.com/my-netease/img/page2/26.jpg)
 
-8 月，过了一个很撑的生日，那天从早餐直落宵夜，给自己做了一天吃的…
+8 月，过了一个很撑的生日，那天从早餐直落宵夜，给自己做了一天吃的……
 
 ![巧克力松饼](https://cdn.chengpeiquan.com/my-netease/img/page2/27.jpg)
 
@@ -264,7 +264,7 @@ After ：
 
 ![Darkglass B7K Ultra](https://cdn.chengpeiquan.com/my-netease/img/page3/2.jpg)
 
-随后，第一场演出，然后确定了乐队名字 “胸口碎大石” … （丢，真的用了 2 年多这个名字）
+随后，第一场演出，然后确定了乐队名字 “胸口碎大石” …… （丢，真的用了 2 年多这个名字）
 
 ![玩嗨了都喜欢踩音箱哈哈哈哈](https://cdn.chengpeiquan.com/my-netease/img/page3/3.jpg)
 
@@ -272,7 +272,7 @@ After ：
 
 ![闪闪发光](https://cdn.chengpeiquan.com/my-netease/img/page3/4.jpg)
 
-3 月，带黑妹去绝育，这一块剃毛的正方形区域，好好笑哈哈哈哈哈哈…
+3 月，带黑妹去绝育，这一块剃毛的正方形区域，好好笑哈哈哈哈哈哈……
 
 ![哈哈哈哈哈哈哈哈哈哆啦A梦的百宝袋入口](https://cdn.chengpeiquan.com/my-netease/img/page3/5.jpg)
 
@@ -320,7 +320,7 @@ After ：
 
 ![好喜欢好喜欢](https://cdn.chengpeiquan.com/my-netease/img/page3/19.jpg)
 
-当然也没忘记我的小黑，终于买到当时特别难买的粉色背带，继续骚出天际…
+当然也没忘记我的小黑，终于买到当时特别难买的粉色背带，继续骚出天际……
 
 ![DiMarzio 的粉色背带](https://cdn.chengpeiquan.com/my-netease/img/page3/20.jpg)
 
@@ -364,7 +364,7 @@ After ：
 
 ![黄贯中 x 叶世荣，对我来说已经是很完美的 Beyond 阵容了](https://cdn.chengpeiquan.com/my-netease/img/page3/32.jpg)
 
-12月，加了第四个图，一个留声机，音乐相关哈哈哈，寓意是脑海想象着的音乐、曲子，最终都有能力通过自己的形式表达出来。
+12 月，加了第四个图，一个留声机，音乐相关哈哈哈，寓意是脑海想象着的音乐、曲子，最终都有能力通过自己的形式表达出来。
 
 ![满脑子都是音乐](https://cdn.chengpeiquan.com/my-netease/img/page3/33.jpg)
 
@@ -434,7 +434,7 @@ After ：
 
 ![人生中第一张正装照](https://cdn.chengpeiquan.com/my-netease/img/page4/14.jpg)
 
-9月，第一次烫头发，长发甩头，首选郁乐队刘老师的同款蓬松，哈哈哈哈哈那天发微博还被刘老师赞了！
+9 月，第一次烫头发，长发甩头，首选郁乐队刘老师的同款蓬松，哈哈哈哈哈那天发微博还被刘老师赞了！
 
 ![郁乐队的刘斌老师](https://cdn.chengpeiquan.com/my-netease/img/page4/15.jpg)
 
@@ -562,7 +562,7 @@ After ：
 
 民乐金属真的太好听了！！！再次疯狂安利！！！
 
-12 月，抢到了乐夏的演出票，可惜新年碰上疫情没有如期举行，还不知道会延期到什么时候…
+12 月，抢到了乐夏的演出票，可惜新年碰上疫情没有如期举行，还不知道会延期到什么时候……
 
 ![乐队的夏天 Live 门票](https://cdn.chengpeiquan.com/my-netease/img/page5/26.jpg)
 

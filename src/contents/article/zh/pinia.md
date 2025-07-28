@@ -25,8 +25,8 @@ Vue 官方推出的全局状态管理工具目前有 Vuex 和 Pinia ，两者的
 
 ![Pinia Logo](https://cdn.chengpeiquan.com/img/2022/04/20220405012555.png?x-oss-process=image/interlace,1)
 
-Pinia 支持 Vue 3 和 Vue 2 ，对 TypeScript 也有很完好的支持，延续了 [Vue3入门指南与实战案例](https://vue3.chengpeiquan.com/) 的宗旨，在这里只介绍基于 Vue 3 和 TypeScript 的用法。
+Pinia 支持 Vue 3 和 Vue 2 ，对 TypeScript 也有很完好的支持，延续了 [Vue3 入门指南与实战案例](https://vue3.chengpeiquan.com/) 的宗旨，在这里只介绍基于 Vue 3 和 TypeScript 的用法。
 
 ## 欢迎 Star
 
-教程属于 [Vue3入门指南与实战案例](https://vue3.chengpeiquan.com/) 的一部分，如果觉得对你有帮助，[欢迎到仓库给个 Star 鼓励](https://github.com/chengpeiquan/learning-vue3)。
+教程属于 [Vue3 入门指南与实战案例](https://vue3.chengpeiquan.com/) 的一部分，如果觉得对你有帮助，[欢迎到仓库给个 Star 鼓励](https://github.com/chengpeiquan/learning-vue3)。

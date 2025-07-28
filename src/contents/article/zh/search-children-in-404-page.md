@@ -55,7 +55,8 @@ maybeLegacy: true
 ```js
 /**
  * 获取要查找的人物数据
- * @description 需要先从列表拿到人物详情页的链接，再去详情页爬取具体的数据回来
+ *
+ * 需要先从列表拿到人物详情页的链接，再去详情页爬取具体的数据回来
  */
 const getSearchChildrenData = async () => {
   let result = []
@@ -92,7 +93,8 @@ const getSearchChildrenData = async () => {
 ```js
 /**
  * 获取要查找的人物信息列表
- * @description 这里是最终要作为接口数据返回的列表
+ *
+ * 这里是最终要作为接口数据返回的列表
  */
 const getResultList = async (domList) => {
   const RESULT_LIST = []
@@ -114,7 +116,8 @@ const getResultList = async (domList) => {
 ```js
 /**
  * 获取人物的详细信息
- * @description 缺失的信息统一处理为不详再返回
+ *
+ * 缺失的信息统一处理为不详再返回
  */
 const getInfo = async (url) => {
   // 要返回的基本信息格式
