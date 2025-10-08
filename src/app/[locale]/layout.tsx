@@ -3,11 +3,15 @@ import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, getTranslations } from 'next-intl/server'
 import React from 'react'
 import { LayoutContainer } from '@/components/layouts/layout-container'
-import { type PropsWithLocale } from '@/config/route-config'
+import { type Locale } from '@/config/locale-config'
 import { sharedMetadata, siteConfig } from '@/config/site-config'
 
 interface LocaleLayoutProps extends React.PropsWithChildren {
-  params: Promise<PropsWithLocale>
+  params: Promise<{
+    // Using `PropsWithLocale` will result in an error during the build phase.
+    // So here can only use string to trick Nextjs 15's checks.
+    locale: string
+  }>
 }
 
 export const generateMetadata = async ({
@@ -46,7 +50,7 @@ export default async function LocaleLayout({
   children,
 }: Readonly<LocaleLayoutProps>) {
   const params = await promiseParams
-  const { locale } = params
+  const locale = params.locale as Locale
   const messages = await getMessages()
 
   return (
