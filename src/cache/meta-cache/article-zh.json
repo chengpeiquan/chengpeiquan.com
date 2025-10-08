@@ -1,5 +1,19 @@
 [
   {
+    "slug": "free-note-sync-via-fnnas-and-obsidian",
+    "metadata": {
+      "title": "Obsidian x 飞牛 NAS：打造免费的跨平台笔记同步与备份方案",
+      "desc": "从 2019.08.01 重新开始写日记，到今天居然坚持了 6 年了，一开始是记录在一款云笔记 App 上，直到四个月前陆陆续续把数据迁移到自己家里的 NAS ，把数据爬回来才发现居然接近 8 GB …… 一直觉得好像都是文字为主，没想到也配了不少图片，重新看的时候生活还挺丰富多彩的哈哈哈！",
+      "keywords": "NAS,飞牛NAS,fnOS,Obsidian,Note sync,Note backup,Obsidian sync,Obsidian backup,Obsidian WebDAV",
+      "cover": "https://cdn.chengpeiquan.com/img/2025/07/202507130003907.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "date": "2025/10/8 23:42:03",
+      "timestamp": 1759938123000
+    }
+  },
+  {
     "slug": "a-modern-flat-eslint-configuration-for-eslint",
     "metadata": {
       "title": "适用于 ESLint V9 的现代化扁平化配置",

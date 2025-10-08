@@ -1,5 +1,19 @@
 [
   {
+    "slug": "free-note-sync-via-fnnas-and-obsidian",
+    "metadata": {
+      "title": "Obsidian x Feiniu NAS: Building a Free Cross-Platform Note Sync & Backup Solution",
+      "desc": "I restarted journaling on August 1st, 2019, and have now kept it up for 6 years! Initially, I used a cloud note app, but four months ago I gradually migrated all the data to my home NAS. When I scraped the data back, I was surprised to find it was nearly 8 GB... I always thought it was mostly text, but turns out I included quite a few images. Looking back through it all, my life has been pretty colorful, haha!",
+      "keywords": "NAS,fnOS,Obsidian,Note sync,Note backup,Obsidian sync,Obsidian backup,Obsidian WebDAV",
+      "cover": "https://cdn.chengpeiquan.com/img/2025/07/202507130003907.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "date": "2025/10/8 23:42:03",
+      "timestamp": 1759938123000
+    }
+  },
+  {
     "slug": "a-modern-flat-eslint-configuration-for-eslint",
     "metadata": {
       "title": "A modern flat ESLint configuration for ESLint V9",
