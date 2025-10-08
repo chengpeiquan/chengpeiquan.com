@@ -1,5 +1,4 @@
 import { RootLayout as BaseRootLayout } from 'blackwork'
-import { Inter } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getMessages } from 'next-intl/server'
 import React from 'react'
@@ -7,8 +6,6 @@ import { WebAnalytics } from '@/components/layouts/web-analytics'
 import { type Locale } from '@/config/locale-config'
 import 'blackwork/ui-globals.css'
 import '@/styles/globals.css'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default async function RootLayout({
   children,
@@ -34,7 +31,7 @@ export default async function RootLayout({
    *    https://github.com/vercel/next.js/issues/58055
    */
   return (
-    <BaseRootLayout lang={locale} className={inter.className}>
+    <BaseRootLayout lang={locale}>
       <NextIntlClientProvider locale={locale} messages={messages}>
         {children}
 
