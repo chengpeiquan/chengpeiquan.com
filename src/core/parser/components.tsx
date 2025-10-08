@@ -14,7 +14,7 @@ interface FigureProps extends React.PropsWithChildren {
 
 const Figure: React.FC<FigureProps> = ({ title, children }) => {
   return (
-    <figure className="relative mx-auto inline-block w-full max-w-screen-lg text-center">
+    <figure className="3xl:max-w-screen-lg relative mx-auto inline-block w-full max-w-screen-sm text-center md:max-w-screen-md">
       {children}
 
       {title && (

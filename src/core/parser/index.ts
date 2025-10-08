@@ -300,7 +300,12 @@ export const parse = async (
       jsxElement,
       metadata,
     } satisfies ContentItem
-  } catch {
+  } catch (error) {
+    console.error('[Parse error] ', {
+      filePath,
+      error,
+    })
+
     return null
   }
 }
