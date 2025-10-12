@@ -61,6 +61,10 @@ In the future, if I need to record other types of content, I might choose Logseq
 
 ## Current Solution
 
+Next, let me talk about the specific architecture and configuration I have currently determined.
+
+### Multi-terminal synchronization architecture
+
 After comparing the options, my note setup architecture is very simple:
 
 - NAS serves as the data storage center, providing sync via its built-in WebDAV service
@@ -75,6 +79,8 @@ For the sync solution, with NAS available, WebDAV was the obvious choice:
 - ✅ Theoretically unlimited storage with no subscription costs (hard drive cost is included in NAS purchase)
 - ✅ Obsidian has plugin support for WebDAV
 
+### Comparison of other solutions
+
 However, Obsidian also supports other sync solutions. Here's a comparison of the options I researched for reference:
 
 |     Solution      | Pros                                                        | Cons                                                                                                                                   |
@@ -84,6 +90,24 @@ However, Obsidian also supports other sync solutions. Here's a comparison of the
 | **Cloud Storage** | Mainstream services, stable, basic free tier                | Free tier is slow with small capacity, subscription needed for better experience, still has capacity and file size limits              |
 |   **Git Sync**    | Free, powerful version control, fast text diff              | Complex configuration, not suitable for non-technical users; only friendly for plain text, not ideal for notes with many images/videos |
 | **WebDAV (NAS)**  | Free service, built-in out-of-the-box, ultra-fast LAN speed | Requires NAS device (one-time hardware investment)                                                                                     |
+
+### Feiniu Sync Client
+
+Here's another special sync solution worth mentioning: Feiniu Sync, which supports both Windows and macOS platforms.
+
+The advantages of Feiniu Sync include:
+
+- ✅ Maintained by the official Feiniu team, deeply integrated with Feiniu NAS
+- ✅ Relatively simple configuration, more user-friendly for non-technical users
+- ✅ Optimized for Feiniu NAS, potentially better sync performance
+
+You can download the [Feiniu Sync Client](https://www.fnnas.com/download?key=fn-sync-client&utm=chengpeiquan.com) from the official website.
+
+![Feiniu Sync Client Login Interface](https://cdn.chengpeiquan.com/img/2025/10/202510130102237.jpg?x-oss-process=image/interlace,1)
+
+However, Feiniu Sync currently only has PC versions, with no mobile support yet. For my use case requiring iPhone journaling, the WebDAV solution paired with the Obsidian app is more suitable.
+
+But if your primary use case is desktop file syncing (not limited to Obsidian), or you prefer a simpler configuration process, Feiniu Sync is also a viable option worth considering.
 
 ## User Experience
 

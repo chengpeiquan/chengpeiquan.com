@@ -7,7 +7,7 @@ export const friendlyLinks: readonly linkItem[] = [
   },
   {
     href: 'https://www.fnnas.com',
-    title: '飞牛私有云 fnOS',
+    title: '飞牛 fnOS',
   },
   {
     href: 'https://chawyehsu.com',
