@@ -1,9 +1,7 @@
 'use server'
 
-import { Buffer } from 'node:buffer'
 import { isString } from '@bassist/utils'
 import { ExternalLink } from 'blackwork'
-import sizeOf from 'image-size'
 import Image from 'next/image'
 import React from 'react'
 import { Link } from '@/navigation'
@@ -37,24 +35,13 @@ export const a = async ({
   return <Comp href={href}>{children}</Comp>
 }
 
-const getImageSize = async (imgUrl: string) => {
-  try {
-    const res = await fetch(imgUrl)
-    const arrayBuffer = await res.arrayBuffer()
-    const buffer = Buffer.from(arrayBuffer)
-    return sizeOf(buffer)
-  } catch {}
-}
-
 export const img = async ({
   src = '',
   alt = '',
 }: React.ImgHTMLAttributes<HTMLImageElement>) => {
   if (!isString(src)) return null
+  if (!src) return null
 
-  const size = await getImageSize(src)
-
-  if (!src || !size) return null
   return (
     <Figure title={alt}>
       <Image
@@ -62,11 +49,11 @@ export const img = async ({
         src={src}
         alt={alt}
         fill={false}
-        width={size.width}
-        height={size.height}
+        width={0}
+        height={0}
         sizes="100%"
+        style={{ width: '100%', height: 'auto' }}
         priority
-        style={{ objectFit: 'cover' }}
       />
     </Figure>
   )
