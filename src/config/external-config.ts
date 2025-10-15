@@ -6,7 +6,7 @@ export const friendlyLinks: readonly linkItem[] = [
     title: 'Vue3 入门指南与实战案例',
   },
   {
-    href: 'https://www.fnnas.com',
+    href: 'https://www.fnnas.com?utm_source=chengpeiquan.com',
     title: '飞牛 fnOS',
   },
   {

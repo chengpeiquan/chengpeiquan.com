@@ -101,7 +101,7 @@ categories:
 - ✅ 配置相对简单，对非技术用户更友好
 - ✅ 针对飞牛 NAS 优化，同步性能可能更好
 
-可以在官网下载 [飞牛同步客户端](https://www.fnnas.com/download?key=fn-sync-client&utm=chengpeiquan.com) 。
+可以在官网下载 [飞牛同步客户端](https://www.fnnas.com/download?key=fn-sync-client&utm_source=chengpeiquan.com) 。
 
 ![飞牛同步客户端登录界面](https://cdn.chengpeiquan.com/img/2025/10/202510130102237.jpg?x-oss-process=image/interlace,1)
 

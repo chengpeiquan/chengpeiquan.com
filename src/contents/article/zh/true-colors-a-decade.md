@@ -38,7 +38,7 @@ cite:
 
 十年后，2024 年，这个文案还在他博客上挂着，挂了整整十年。
 
-再看看我在 2023 年刚入职现在这家公司的时候（[飞牛 fnOS](https://www.fnnas.com)），在公司同学录里的自我介绍：
+再看看我在 2023 年刚入职现在这家公司的时候（[飞牛 fnOS](https://www.fnnas.com?utm_source=chengpeiquan.com)），在公司同学录里的自我介绍：
 
 > 纹了一条花臂，钟爱 Blackwork Tattoo 风格，第一个文身是我的琴；
 >
@@ -168,7 +168,7 @@ https://cdn.chengpeiquan.com/img/2025/01/202501280256303.jpg?x-oss-process=image
 
 ## 主力项目
 
-其他的事情今年没什么时间搞，主力还是在开发公司的 [飞牛 fnOS](https://www.fnnas.com) 的 Web 生态，可能很多朋友在公测期间就已经用上了，我家里的 NAS 也是装着我们的系统，用自己开发的作品影响着自己的生活！
+其他的事情今年没什么时间搞，主力还是在开发公司的 [飞牛 fnOS](https://www.fnnas.com?utm_source=chengpeiquan.com) 的 Web 生态，可能很多朋友在公测期间就已经用上了，我家里的 NAS 也是装着我们的系统，用自己开发的作品影响着自己的生活！
 
 如果不了解 NAS ，也可以看我之前写的《 [千元预算组装入门 NAS 设备 分享 NAS 的硬件基础知识](https://chengpeiquan.com/article/my-custom-nas) 》 一文。
 

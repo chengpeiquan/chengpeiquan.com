@@ -11,7 +11,7 @@ maybeLegacy: true
 
 最近在一千元预算内搞了一台 NAS ，在这个过程也算蛮自定义的搭配，记录一下这个过程中的主要知识点和最终搭配结果。
 
-先补一个 2025 的更新，回想当时把闲置的猫航空箱用来装 NAS 真是明智，在 24 年国庆的时候又搞了个五盘位的硬盘柜，还是很能装！目前的搭配是：小主机 + 外接硬盘柜 搭配 [飞牛私有云 fnOS](https://www.fnnas.com) NAS 系统，主要搞下影视和相册，个人体验非常好！
+先补一个 2025 的更新，回想当时把闲置的猫航空箱用来装 NAS 真是明智，在 24 年国庆的时候又搞了个五盘位的硬盘柜，还是很能装！目前的搭配是：小主机 + 外接硬盘柜 搭配 [飞牛私有云 fnOS](https://www.fnnas.com?utm_source=chengpeiquan.com) NAS 系统，主要搞下影视和相册，个人体验非常好！
 
 ![目前最新的搭配，小主机 + 外接硬盘柜](https://cdn.chengpeiquan.com/img/2025/01/202501070003368.jpg?x-oss-process=image/interlace,1)
 
@@ -19,7 +19,7 @@ maybeLegacy: true
 
 ![飞牛影视](https://cdn.chengpeiquan.com/img/2025/01/202501070018283.jpg?x-oss-process=image/interlace,1)
 
-目前自组 NAS 来说，免费并且简单上手、日程使用稳定等角度来说，飞牛的 NAS 系统是很不错的，可以在 [飞牛官网下载](https://www.fnnas.com/download) ，自己用 USB 烧个引导盘就能装，或者用 PVE 虚拟机跑也没问题。
+目前自组 NAS 来说，免费并且简单上手、日程使用稳定等角度来说，飞牛的 NAS 系统是很不错的，可以在 [飞牛官网下载](https://www.fnnas.com/download?utm_source=chengpeiquan.com) ，自己用 USB 烧个引导盘就能装，或者用 PVE 虚拟机跑也没问题。
 
 ## 最终组装方案
 
@@ -73,7 +73,7 @@ NAS 全称是 Network Attached Storage ，网络附属存储，关于它的概�
 
 因为 NAS 设备充当的是一个服务器的作用，所以在装好系统之后就不需要鼠标键盘和显示器了（系统安装过程中还是需要的，临时拔一下自己其他主机的鼠键和显示器过来用就行）， NAS 系统启动后在局域网内有一个固定的 IP ，使用其他设备（例如台式机、笔记本）去访问这个局域网 IP 即可访问到 NAS 操作系统的桌面界面，这个界面都是以 Web 的形式实现的。
 
-以下是我现在在用的 [飞牛 fnOS](https://www.fnnas.com) 系统界面。
+以下是我现在在用的 [飞牛 fnOS](https://www.fnnas.com?utm_source=chengpeiquan.com) 系统界面。
 
 ![我在 MacBook 访问局域网 IP 即可进入 NAS 操作系统界面](https://cdn.chengpeiquan.com/img/2025/01/202501062320568.jpg?x-oss-process=image/interlace,1)
 

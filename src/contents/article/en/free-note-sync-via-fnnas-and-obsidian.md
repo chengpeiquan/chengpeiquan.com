@@ -101,7 +101,7 @@ The advantages of Feiniu Sync include:
 - ✅ Relatively simple configuration, more user-friendly for non-technical users
 - ✅ Optimized for Feiniu NAS, potentially better sync performance
 
-You can download the [Feiniu Sync Client](https://www.fnnas.com/download?key=fn-sync-client&utm=chengpeiquan.com) from the official website.
+You can download the [Feiniu Sync Client](https://www.fnnas.com/download?key=fn-sync-client&utm_source=chengpeiquan.com) from the official website.
 
 ![Feiniu Sync Client Login Interface](https://cdn.chengpeiquan.com/img/2025/10/202510130102237.jpg?x-oss-process=image/interlace,1)
 
