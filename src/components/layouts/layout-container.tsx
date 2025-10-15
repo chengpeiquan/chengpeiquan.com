@@ -17,7 +17,7 @@ import { isMobileDevice } from '@/config/middleware-config'
 import { type PropsWithLocale } from '@/config/route-config'
 import { getLocaleSocialLinks, siteConfig } from '@/config/site-config'
 import { getBrbStyle, getBrbVariant } from '@/config/style-config'
-import { ExternalLink } from '@/navigation'
+import { ExternalLink, Link } from '@/navigation'
 
 type LayoutContainerProps = React.PropsWithChildren & PropsWithLocale
 
@@ -57,17 +57,21 @@ export const LayoutContainer = async ({
         <div className="flex shrink-0 items-center gap-3">
           <NavigationSheet isMobile={isMobile} />
 
-          <Avatar className="size-7">
-            <AvatarImage
-              src={siteConfig.avatar.small}
-              alt={siteConfig.author.name}
-            />
-            <AvatarFallback>
-              {t('name').slice(0, 1).toUpperCase()}
-            </AvatarFallback>
-          </Avatar>
+          <Link href="/">
+            <Avatar className="size-7">
+              <AvatarImage
+                src={siteConfig.avatar.small}
+                alt={siteConfig.author.name}
+              />
+              <AvatarFallback>
+                {t('name').slice(0, 1).toUpperCase()}
+              </AvatarFallback>
+            </Avatar>
+          </Link>
 
-          <h2 className="text-foreground text-lg">{t('name')}</h2>
+          <Link href="/">
+            <h2 className="text-foreground text-lg">{t('name')}</h2>
+          </Link>
         </div>
 
         {!isMobile && (
