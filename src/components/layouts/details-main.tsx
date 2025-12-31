@@ -6,8 +6,10 @@ import { isMobileDevice } from '@/config/middleware-config'
 import { MarkupRenderer } from '../markup/renderer'
 import { DesktopToc, MobileToc } from '../markup/table-of-contents'
 
-interface DetailsMainProps
-  extends Pick<ContentItem, 'metadata' | 'headings' | 'jsxElement'> {
+interface DetailsMainProps extends Pick<
+  ContentItem,
+  'metadata' | 'headings' | 'jsxElement'
+> {
   locale: Locale
   aside?: React.ReactNode
 }

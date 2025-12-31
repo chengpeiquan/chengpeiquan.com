@@ -13,18 +13,18 @@ import { cn } from '@/utils'
 import { timeDisplay, useMusicPlayer } from './use-music-player'
 
 interface MusicPlayerProps
-  extends Omit<React.AudioHTMLAttributes<HTMLAudioElement>, 'src' | 'title'>,
+  extends
+    Omit<React.AudioHTMLAttributes<HTMLAudioElement>, 'src' | 'title'>,
     BgmConfig {
   isMobile: boolean
 }
 
-interface MusicDiscProps
-  extends Required<
-    Pick<
-      MusicPlayerProps,
-      'title' | 'musician' | 'albumCover' | 'style' | 'isMobile'
-    >
-  > {
+interface MusicDiscProps extends Required<
+  Pick<
+    MusicPlayerProps,
+    'title' | 'musician' | 'albumCover' | 'style' | 'isMobile'
+  >
+> {
   playing: boolean
   togglePlay: () => void
 }

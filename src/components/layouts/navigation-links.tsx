@@ -96,8 +96,10 @@ const NavigationLink: React.FC<NavigationLinkProps> = ({
   return content
 }
 
-interface NavigationLinksProps
-  extends Pick<NavigationLinkProps, 'asButton' | 'onClick'> {
+interface NavigationLinksProps extends Pick<
+  NavigationLinkProps,
+  'asButton' | 'onClick'
+> {
   /**
    * This option can limit whether to keep the resident display component
    * (controlled by `hidden` Class Name). If it is `undefined`, the breakpoint

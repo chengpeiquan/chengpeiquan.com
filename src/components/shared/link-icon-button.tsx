@@ -2,8 +2,10 @@ import { Button, ExternalLink, type ExternalLinkProps } from 'blackwork'
 import { type IconProps } from 'blackwork/icons'
 import React from 'react'
 
-export interface LinkIconButtonProps
-  extends Pick<ExternalLinkProps, 'href' | 'title'> {
+export interface LinkIconButtonProps extends Pick<
+  ExternalLinkProps,
+  'href' | 'title'
+> {
   ariaLabel: string
   icon: React.FC<IconProps>
 }

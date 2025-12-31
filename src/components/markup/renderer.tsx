@@ -88,8 +88,7 @@ const AuthorData = async ({
 }
 
 interface MarkupRendererProps
-  extends PropsWithLocale,
-    Pick<ContentItem, 'metadata' | 'jsxElement'> {
+  extends PropsWithLocale, Pick<ContentItem, 'metadata' | 'jsxElement'> {
   toc?: React.ReactNode
 }
 

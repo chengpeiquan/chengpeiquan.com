@@ -17,9 +17,7 @@ import { type TattooStory, tattooIntroSlugPrefix } from '@/config/tattoo-config'
 import { getDetails } from '@/core/dispatcher'
 
 interface TattooCardProps
-  extends PropsWithLocale,
-    PropsWithDevice,
-    PropsWithThumbHashMapping {
+  extends PropsWithLocale, PropsWithDevice, PropsWithThumbHashMapping {
   index: number
   story: TattooStory
 }

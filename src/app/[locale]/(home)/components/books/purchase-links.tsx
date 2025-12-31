@@ -7,8 +7,7 @@ import { ExternalLink } from '@/navigation'
 import { cn } from '@/utils'
 
 interface PurchaseLinksProps
-  extends Pick<BookPurchaseInfo, 'purchaseLinks'>,
-    PropsWithLocale {
+  extends Pick<BookPurchaseInfo, 'purchaseLinks'>, PropsWithLocale {
   className?: string
   labelClassName?: string
   buttonGroupClassName?: string
