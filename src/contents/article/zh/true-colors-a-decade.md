@@ -12,10 +12,11 @@ bgm:
   musician: 'Beyond'
   albumCover: https://cdn.chengpeiquan.com/img/2025/01/202501262231220.jpg?x-oss-process=image/interlace,1
 cite:
+  - 2025-year-end-summary
+  - true-colors-a-decade
   - 2024-year-end-summary
   - 2023-year-end-summary
   - 2022-year-end-summary
-  - 2021-year-end-summary
 ---
 
 本来这篇文章的标题按惯例应该是《年终总结：2024 年的一些回顾和 2025 年的一些小规划》 ，但 2024 年刚好也是我开始独立博客的第十年，想顺便回顾一下十年时间自己经历和变化，所以换了这个不起眼的标题哈哈哈。

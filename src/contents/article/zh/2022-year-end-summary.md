@@ -7,10 +7,11 @@ cover: https://cdn.chengpeiquan.com/img/2023/01/20230101235604.jpg?x-oss-process
 categories:
   - prose
 cite:
+  - 2025-year-end-summary
+  - true-colors-a-decade
   - 2024-year-end-summary
   - 2023-year-end-summary
   - 2022-year-end-summary
-  - 2021-year-end-summary
 ---
 
 2022 对我算是比较特殊的一年，虽然因为疫情原因彻底宅了一年，但也没有闲着，换了工作换了城市，回到了阔别两年的第二故乡广州，工作之外的学习和生活对个人的成长也有一些值得复盘的地方。

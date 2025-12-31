@@ -1,5 +1,26 @@
 [
   {
+    "slug": "2025-year-end-summary",
+    "metadata": {
+      "title": "年终总结：2025 年的一些回顾和 2026 年的一些小规划",
+      "desc": "回顾 2025：AI 编程转型、工作项目 Release、新文身《同根》、博客重设计；展望 2026：希望在专业领域深入钻研，减少时间浪费，沉淀更多经验。",
+      "keywords": "2025 year end summary",
+      "cover": "https://cdn.chengpeiquan.com/img/2026/01/202601010332359.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ],
+      "cite": [
+        "2025-year-end-summary",
+        "true-colors-a-decade",
+        "2024-year-end-summary",
+        "2023-year-end-summary",
+        "2022-year-end-summary"
+      ],
+      "date": "2025/12/31 23:31:00",
+      "timestamp": 1767195060000
+    }
+  },
+  {
     "slug": "free-note-sync-via-fnnas-and-obsidian",
     "metadata": {
       "title": "Obsidian x 飞牛 NAS：打造免费的跨平台笔记同步与备份方案",
@@ -59,10 +80,11 @@
         "albumCover": "https://cdn.chengpeiquan.com/img/2025/01/202501262231220.jpg?x-oss-process=image/interlace,1"
       },
       "cite": [
+        "2025-year-end-summary",
+        "true-colors-a-decade",
         "2024-year-end-summary",
         "2023-year-end-summary",
-        "2022-year-end-summary",
-        "2021-year-end-summary"
+        "2022-year-end-summary"
       ],
       "date": "2025/1/28 02:45:58",
       "timestamp": 1738003558000
@@ -152,10 +174,11 @@
         "prose"
       ],
       "cite": [
+        "2025-year-end-summary",
+        "true-colors-a-decade",
         "2024-year-end-summary",
         "2023-year-end-summary",
-        "2022-year-end-summary",
-        "2021-year-end-summary"
+        "2022-year-end-summary"
       ],
       "date": "2023/12/30 14:52:00",
       "timestamp": 1703919120000
@@ -217,10 +240,11 @@
         "prose"
       ],
       "cite": [
+        "2025-year-end-summary",
+        "true-colors-a-decade",
         "2024-year-end-summary",
         "2023-year-end-summary",
-        "2022-year-end-summary",
-        "2021-year-end-summary"
+        "2022-year-end-summary"
       ],
       "date": "2022/12/31 21:24:00",
       "timestamp": 1672493040000
@@ -391,10 +415,11 @@
         "prose"
       ],
       "cite": [
+        "2025-year-end-summary",
+        "true-colors-a-decade",
         "2024-year-end-summary",
         "2023-year-end-summary",
-        "2022-year-end-summary",
-        "2021-year-end-summary"
+        "2022-year-end-summary"
       ],
       "date": "2021/12/31 15:45:00",
       "timestamp": 1640936700000

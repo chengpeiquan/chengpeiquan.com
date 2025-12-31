@@ -7,10 +7,11 @@ cover: https://cdn.chengpeiquan.com/img/2023/12/20231230212146.jpg?x-oss-process
 categories:
   - prose
 cite:
+  - 2025-year-end-summary
+  - true-colors-a-decade
   - 2024-year-end-summary
   - 2023-year-end-summary
   - 2022-year-end-summary
-  - 2021-year-end-summary
 ---
 
 ![我家三只超级乖的猫](https://cdn.chengpeiquan.com/img/2023/12/20231230212147.jpg?x-oss-process=image/interlace,1)
