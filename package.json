@@ -36,7 +36,7 @@
     "react-forage": "^0.2.2",
     "react-ga4": "^2.1.0",
     "thumbhash": "^0.1.1",
-    "zod": "^4.1.13"
+    "zod": "^4.3.2"
   },
   "devDependencies": {
     "@bassist/eslint-config": "^0.3.0",
@@ -48,7 +48,7 @@
     "@stefanprobst/rehype-extract-toc": "^2.2.1",
     "@tailwindcss/typography": "^0.5.19",
     "@types/mdast": "^4.0.4",
-    "@types/node": "^25.0.2",
+    "@types/node": "^25.0.3",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "class-variance-authority": "^0.7.1",
