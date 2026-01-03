@@ -11,7 +11,7 @@
     "build": "run-s build:*",
     "build:cache": "tsx ./scripts/generate-cache.ts",
     "build:thumb-hash": "tsx ./scripts/generate-thumb-hash.ts",
-    "build:app": "next build",
+    "build:app": "next build --webpack",
     "build:copy-assets": "tsx ./scripts/copy-assets.ts",
     "preview": "docker-compose build && docker-compose up -d",
     "start": "next start",
