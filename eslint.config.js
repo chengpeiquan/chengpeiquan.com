@@ -51,6 +51,7 @@ export default defineFlatConfig([
     rules: {
       'require-await': 'off',
       '@typescript-eslint/no-extraneous-class': 'off',
+      'react/react-in-jsx-scope': 'off',
     },
   },
 

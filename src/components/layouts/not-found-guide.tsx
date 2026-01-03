@@ -1,7 +1,6 @@
 import { Button, Heading, LayoutMain, Paragraph } from 'blackwork'
 import Image from 'next/image'
 import { getLocale, getTranslations } from 'next-intl/server'
-import React from 'react'
 import { isMobileDevice } from '@/config/middleware-config'
 import { siteConfig } from '@/config/site-config'
 import { ExternalLink, Link } from '@/navigation'

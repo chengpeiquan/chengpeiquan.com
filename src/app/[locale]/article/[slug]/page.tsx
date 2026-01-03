@@ -1,5 +1,4 @@
 import { notFound } from 'next/navigation'
-import React from 'react'
 import { DetailsMain } from '@/components/layouts/details-main'
 import { ArticleSidebar } from '@/components/sidebar'
 import { ContentFolder } from '@/config/content-config'

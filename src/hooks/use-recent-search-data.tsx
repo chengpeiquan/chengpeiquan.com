@@ -1,5 +1,5 @@
 import { isArray, toArray } from '@bassist/utils'
-import React from 'react'
+import React, { useMemo } from 'react'
 import { LocalForageProvider, useLocalForageState } from 'react-forage'
 import {
   type SearchCacheItem,

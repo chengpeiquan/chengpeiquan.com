@@ -1,7 +1,6 @@
 import { Paragraph } from 'blackwork'
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
-import React from 'react'
 import { isMobileDevice } from '@/config/middleware-config'
 import { type PropsWithLocale } from '@/config/route-config'
 import { cn } from '@/utils'

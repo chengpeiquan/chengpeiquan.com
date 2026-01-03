@@ -3,7 +3,7 @@
 import { isUndefined } from '@bassist/utils'
 import { Button, cn } from 'blackwork'
 import { useTranslations } from 'next-intl'
-import React from 'react'
+import React, { useMemo } from 'react'
 import { listFolderMapping, pageFolderMapping } from '@/config/content-config'
 import { CheckRoute } from '@/config/route-config'
 import { type NavSlug, navIconMap, siteConfig } from '@/config/site-config'

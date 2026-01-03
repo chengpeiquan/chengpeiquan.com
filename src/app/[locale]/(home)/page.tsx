@@ -1,5 +1,4 @@
 import { LayoutMain } from 'blackwork'
-import React from 'react'
 import { LocaleIs } from '@/config/locale-config'
 import { isMobileDevice } from '@/config/middleware-config'
 import { type ListPageProps } from '@/config/route-config'

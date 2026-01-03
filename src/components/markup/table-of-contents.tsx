@@ -14,7 +14,7 @@ import {
 } from 'blackwork'
 import { Toc as TocIcon } from 'blackwork/icons'
 import { useTranslations } from 'next-intl'
-import React from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import {
   type HeadingDepth,
   type HeadingItem,

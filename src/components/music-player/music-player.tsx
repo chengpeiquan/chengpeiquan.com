@@ -6,7 +6,7 @@ import {
   Progress,
 } from 'blackwork'
 import { CD, Paused, Play } from 'blackwork/icons'
-import React from 'react'
+import React, { memo, useMemo, useState } from 'react'
 import { type BgmConfig } from '@/config/content-config'
 import { getBrbStyle, getBrbVariant } from '@/config/style-config'
 import { cn } from '@/utils'
@@ -331,4 +331,10 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({
   )
 }
 
-export default memo((props: MusicPlayerProps) => <MusicPlayer {...props} />)
+const MemoizedMusicPlayer = memo((props: MusicPlayerProps) => (
+  <MusicPlayer {...props} />
+))
+
+MemoizedMusicPlayer.displayName = 'MusicPlayer'
+
+export default MemoizedMusicPlayer

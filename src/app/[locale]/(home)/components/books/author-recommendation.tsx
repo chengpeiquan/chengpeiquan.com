@@ -1,4 +1,3 @@
-import React from 'react'
 import { type BookPurchaseInfo } from '@/config/book-config'
 import { ContentFolder } from '@/config/content-config'
 import { type PropsWithLocale } from '@/config/route-config'

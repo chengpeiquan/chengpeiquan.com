@@ -2,7 +2,7 @@
 
 import { isBrowser } from '@bassist/utils'
 import { createBaiduAnalytics } from '@web-analytics/core'
-import React from 'react'
+import { useCallback, useEffect } from 'react'
 import ReactGA from 'react-ga4'
 import { siteConfig } from '@/config/site-config'
 import { usePathname } from '@/navigation'
@@ -26,12 +26,6 @@ export const WebAnalytics: React.FC = () => {
     baiduAnalytics.trackPageview({
       pageUrl: pathname,
     })
-
-    // ReactGA.send({
-    //   hitType: 'pageview',
-    //   page: pathname,
-    //   title: document.title,
-    // })
   }, [pathname])
 
   useEffect(() => {

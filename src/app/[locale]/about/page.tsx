@@ -1,6 +1,5 @@
 import { LayoutMain } from 'blackwork'
 import { notFound } from 'next/navigation'
-import React from 'react'
 import { MarkupRenderer } from '@/components/markup/renderer'
 import { ContentFolder } from '@/config/content-config'
 import { type SinglePageProps } from '@/config/route-config'

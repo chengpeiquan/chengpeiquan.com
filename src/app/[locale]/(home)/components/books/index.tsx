@@ -3,7 +3,6 @@
 import { Card, Heading } from 'blackwork'
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
-import React from 'react'
 import { learningVue3 } from '@/config/book-config'
 import { LocaleIs } from '@/config/locale-config'
 import {

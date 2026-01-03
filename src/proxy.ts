@@ -3,7 +3,7 @@ import createMiddleware from 'next-intl/middleware'
 import { defaultHeaderValue, headerFields } from '@/config/middleware-config'
 import { routing } from '@/i18n/routing'
 
-export default async function middleware(request: NextRequest) {
+export default async function proxy(request: NextRequest) {
   // Strip all search parameters from the URL to prevent reflected XSS attacks.
   // This helps avoid scenarios where malicious query strings
   // are rendered directly in SSR pages, leading to potential security vulnerabilities.

@@ -2,7 +2,6 @@ import { shuffle } from '@bassist/utils'
 import { Heading, LayoutMain, Paragraph } from 'blackwork'
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
-import React from 'react'
 import {
   type PropsWithThumbHashMapping,
   decodeThumbHash,

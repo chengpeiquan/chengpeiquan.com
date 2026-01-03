@@ -1,6 +1,5 @@
 import { LayoutMain } from 'blackwork'
 import { getTranslations } from 'next-intl/server'
-import React from 'react'
 import { getThumbHashMapping } from '@/cache/thumb-hash'
 import { LocaleIs } from '@/config/locale-config'
 import { isMobileDevice } from '@/config/middleware-config'

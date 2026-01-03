@@ -2,7 +2,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from 'blackwork'
 import Image from 'next/image'
-import React from 'react'
 import {
   type PropsWithThumbHashMapping,
   decodeThumbHash,

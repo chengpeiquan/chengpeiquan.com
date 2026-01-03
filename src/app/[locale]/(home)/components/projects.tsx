@@ -1,7 +1,6 @@
 import { shuffle } from '@bassist/utils'
 import { Badge, Card } from 'blackwork'
 import { getTranslations } from 'next-intl/server'
-import React from 'react'
 import { ProjectCard } from '@/components/project/project-card'
 import {
   enrichProjectsWithStats,

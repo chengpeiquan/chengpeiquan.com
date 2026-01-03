@@ -15,7 +15,7 @@ import {
 } from 'blackwork'
 import { Menu as MenuIcon } from 'blackwork/icons'
 import { useTranslations } from 'next-intl'
-import React from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { NavigationLinks } from '@/components/layouts/navigation-links'
 import { SearchBox } from '@/components/layouts/search-box'
 import { CatHuffing } from '@/components/sidebar/cat-huffing'

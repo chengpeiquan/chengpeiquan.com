@@ -1,5 +1,6 @@
 import { isArray, isObject } from '@bassist/utils'
 import { useKeyword } from 'blackwork'
+import { useEffect, useMemo, useState } from 'react'
 import { type SearchCacheItem, isSearchCacheItem } from '@/config/cache-config'
 import { type SearchEngine, getSearchEngine } from '@/core/search'
 import { useClientLocale } from './use-client-locale'

@@ -2,7 +2,7 @@
 
 import NextError from 'next/error'
 import { useTranslations } from 'next-intl'
-import React from 'react'
+import { useEffect } from 'react'
 
 interface ErrorProps {
   error: Error & { digest?: string }

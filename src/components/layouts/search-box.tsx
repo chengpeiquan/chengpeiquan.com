@@ -15,7 +15,7 @@ import {
 import { Close } from 'blackwork/icons'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
-import React from 'react'
+import React, { memo, useMemo } from 'react'
 import { type SearchCacheItem } from '@/config/cache-config'
 import { type ContentDetailsLink, ContentFolder } from '@/config/content-config'
 import { type PropsWithDevice } from '@/config/route-config'
@@ -237,3 +237,5 @@ export const SearchBox = memo((props: PropsWithDevice) => {
     </RecentSearchDataProvider>
   )
 })
+
+SearchBox.displayName = 'SearchBox' as const

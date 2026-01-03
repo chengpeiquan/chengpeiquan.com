@@ -1,6 +1,5 @@
 import { Button, type ButtonProps } from 'blackwork'
 import { getTranslations } from 'next-intl/server'
-import React from 'react'
 import { type BookPurchaseInfo } from '@/config/book-config'
 import { type PropsWithLocale } from '@/config/route-config'
 import { ExternalLink } from '@/navigation'

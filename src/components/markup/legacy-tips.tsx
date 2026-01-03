@@ -1,6 +1,6 @@
 import { Paragraph } from 'blackwork'
 import { getTranslations } from 'next-intl/server'
-import React, { cache } from 'react'
+import { cache } from 'react'
 import {
   type ContentMetadata,
   legacyThresholdDays,

@@ -1,6 +1,5 @@
 import { Toggle } from 'blackwork'
 import { getTranslations } from 'next-intl/server'
-import React from 'react'
 import {
   ExtraTag,
   ProjectTag,

@@ -12,7 +12,7 @@ import {
   Pagination as PaginationRoot,
   generatePages,
 } from 'blackwork'
-import React from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { type PropsWithDevice } from '@/config/route-config'
 import { Link } from '@/navigation'
 

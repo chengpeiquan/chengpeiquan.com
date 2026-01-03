@@ -1,7 +1,6 @@
 import { isArray, toArray } from '@bassist/utils'
 import { Heading, LayoutMain, Paragraph } from 'blackwork'
 import { getTranslations } from 'next-intl/server'
-import React from 'react'
 import { DataAnalysis } from '@/components/project/data-analysis'
 import { fetchProjectDatabase } from '@/components/project/shared'
 import { isMobileDevice } from '@/config/middleware-config'

@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
-import React from 'react'
 import { ContentFolder } from '@/config/content-config'
 import {
   type PropsWithDevice,

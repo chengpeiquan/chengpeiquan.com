@@ -12,7 +12,6 @@ import {
 } from 'blackwork'
 import { Help } from 'blackwork/icons'
 import { getTranslations } from 'next-intl/server'
-import React from 'react'
 import { isMobileDevice } from '@/config/middleware-config'
 import { type PropsWithLocale } from '@/config/route-config'
 import { ExternalLink } from '@/navigation'
