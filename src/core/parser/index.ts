@@ -184,6 +184,41 @@ const parseMarkdown = async (
   }
 }
 
+/**
+ * Unicode Object Replacement Character (U+FFFC), often from copy-paste.
+ */
+const OBJECT_REPLACEMENT_CHAR = '\uFFFC'
+
+/**
+ * Process remote markdown: strip frontmatter, strip leading H1, strip U+FFFC
+ * placeholders, then apply optional replacements (e.g. relative → absolute
+ * URLs). Keeps all cleanup and substitution in one place.
+ */
+const processRemoteMarkdown = (
+  markdown: string,
+  remote: RemoteContentConfig,
+): string => {
+  try {
+    const { content } = matter(markdown)
+    let text = content
+      .trimStart()
+      .replace(/^#\s+[^\n]+\n?/, '') // Remove leading ATX H1 (e.g. "# MyHeading {#my-heading}")
+      .trimStart()
+      .replaceAll(OBJECT_REPLACEMENT_CHAR, '')
+
+    if (remote.replacements?.length) {
+      for (const { from, to } of remote.replacements) {
+        text = text.replaceAll(from, to)
+      }
+    }
+
+    return text
+  } catch (error) {
+    console.error('[Process remote markdown error] ', error)
+    return markdown
+  }
+}
+
 const fetchRemoteMarkdown = async (remote: RemoteContentConfig) => {
   if (!isValidRemoteContentConfig(remote)) return ''
 
@@ -287,9 +322,11 @@ export const parse = async (
 
     const isRemoteEnabled = isValidRemoteContentConfig(remote)
 
-    const remoteMarkdown = isRemoteEnabled
-      ? await fetchRemoteMarkdown(remote)
-      : ''
+    const remoteMarkdown = await (async () => {
+      if (!isRemoteEnabled) return ''
+      const raw = await fetchRemoteMarkdown(remote)
+      return processRemoteMarkdown(raw, remote)
+    })()
 
     const markdown = isRemoteEnabled
       ? localMarkdown + remoteMarkdown

@@ -52,6 +52,14 @@ const bgmSchema = z.object({
 
 export type BgmConfig = z.infer<typeof bgmSchema>
 
+/**
+ * String replacement rules for remote markdown (e.g. rewrite relative URLs)
+ */
+const remoteReplacementSchema = z.object({
+  from: z.string(),
+  to: z.string(),
+})
+
 // Remote content from GitHub (e.g. Markdown, HTML, etc.)
 // Reference `apis.gh.fetchMarkdown`
 const githubContentSchema = z.object({
@@ -59,6 +67,7 @@ const githubContentSchema = z.object({
   owner: z.string().optional(),
   repo: z.string(),
   path: z.string(),
+  replacements: z.array(remoteReplacementSchema).optional(),
 })
 
 export type GitHubContentConfig = z.infer<typeof githubContentSchema>
