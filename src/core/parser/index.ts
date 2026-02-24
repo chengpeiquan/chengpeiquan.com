@@ -32,6 +32,7 @@ import { defaultOwner } from '@/config/project-config'
 import { ContentProcessorMode } from '@/core/types'
 import { apis } from '@/fetcher'
 import { a, img, video } from './components'
+import remarkHeadingId from './plugins/remark-heading-id'
 import remarkVideo from './plugins/remark-video'
 
 const isValidHeading = (v: unknown): v is HeadingItem => isObject(v) && !!v.id
@@ -71,6 +72,7 @@ const createProcessor = (
   // Processing Markdown
   const remarkPlugins: PluggableList = [
     [remarkParse],
+    [remarkHeadingId],
     [remarkGfm],
     [remarkDirective],
     [remarkVideo],
@@ -156,7 +158,9 @@ const parseMarkdown = async (
 
   try {
     const processor = createProcessor(mode)
-    if (!processor) return { ...fallbackRes }
+    if (!processor) {
+      return { ...fallbackRes }
+    }
 
     // Instead of this usage
     // `import { read } from 'to-vfile'`
