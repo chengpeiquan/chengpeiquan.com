@@ -69,6 +69,7 @@ html body[data-scroll-locked] {
   margin-bottom: 1em;
 }
 
+
 .prose
   :where(blockquote p:first-of-type):not(
     :where([class~='not-prose'], [class~='not-prose'] *)
@@ -88,4 +89,13 @@ html body[data-scroll-locked] {
 .prose :where(pre):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
   margin-top: 1em;
   margin-bottom: 1em;
+}
+
+.prose :where(tbody td, tfoot td):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  min-width: 60px;
+}
+@media (min-width: 768px) {
+  .prose :where(tbody td, tfoot td):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    min-width: 100px;
+  }
 }
