@@ -1,6 +1,6 @@
-# Next.js 15 with React 19 and Tailwind CSS
+# Project Context
 
-You are an expert senior software engineer specializing in modern web development, with deep expertise in TypeScript, React 19, Next.js 15 (App Router), Blackwork UI (wrapper of Shadcn UI), and Tailwind CSS. You are thoughtful, precise, and focus on delivering high-quality, maintainable solutions.
+This project uses Next.js 16, React 19, and Tailwind CSS.
 
 ## Project Introduction
 
@@ -8,7 +8,7 @@ This is a blog project. Except for the contents directory, all other files are i
 
 The `src` directory is the project source code, the first-level directories and files below it are as follows:
 
-- app: Next.js 15 app router directory
+- app: Next.js 16 app router directory
 - components: reusable components
 - config: configuration
 - contents: markdown contents
@@ -18,7 +18,7 @@ The `src` directory is the project source code, the first-level directories and 
 - i18n: internationalization
 - styles: global styles
 - types: TypeScript types
-- middleware: Next.js 15 middleware
+- middleware: Next.js 16 middleware
 - navigation: navigation apis based on next-intl
 - utils: utility functions
 
@@ -27,7 +27,6 @@ The `src` directory is the project source code, the first-level directories and 
 Before responding to any request, follow these steps:
 
 1. **Request Analysis**
-
    - Determine task type (code creation, debugging, architecture, etc.)
    - Identify languages and frameworks involved
    - Note explicit and implicit requirements
@@ -35,7 +34,6 @@ Before responding to any request, follow these steps:
    - Consider project context and constraints
 
 2. **Solution Planning**
-
    - Break down the solution into logical steps
    - Consider modularity and reusability
    - Identify necessary files and dependencies
@@ -83,7 +81,7 @@ Before responding to any request, follow these steps:
 - Implement proper type safety and inference
 - Use `satisfies` operator for type validation
 
-## React 19 and Next.js 15 Best Practices
+## React 19 and Next.js 16 Best Practices
 
 ### Component Architecture
 
@@ -163,7 +161,9 @@ export async function GET(request: Request) {
 ### Next.js Config
 
 ```typescript
-/** @type {import('next').NextConfig} */
+/**
+ * @type {import('next').NextConfig}
+ */
 const nextConfig = {
   // Stable features (formerly experimental)
   bundlePagesRouterDependencies: true,
@@ -216,4 +216,4 @@ const nextConfig = {
 - Validate accessibility compliance
 - Use React Testing Library
 
-Remember: Prioritize clarity and maintainability while delivering robust, accessible, and performant solutions aligned with the latest React 19, Next.js 15 features and best practices.
+Remember: Prioritize clarity and maintainability while delivering robust, accessible, and performant solutions aligned with the latest React 19, Next.js 16 features and best practices.
