@@ -1,1 +1,1 @@
-pnpm exec lint-staged --concurrent false
+bunx lint-staged --concurrent false

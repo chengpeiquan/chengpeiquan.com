@@ -1,21 +1,22 @@
 {
-  "extends": "@bassist/tsconfig/base.json",
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
+    "experimentalDecorators": true,
     "incremental": true,
+    "jsx": "react-jsx",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "noEmit": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "plugins": [
       {
         "name": "next"
       }
     ],
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "types": ["bun", "node"]
   },
+  "extends": "@bassist/tsconfig/base.json",
   "include": [
     "next-env.d.ts",
     "**/*.ts",
