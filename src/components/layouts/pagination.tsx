@@ -57,6 +57,7 @@ const PaginationButton: React.FC<PaginationButtonProps> = ({
         return <PaginationNext as={Link} disabled={disabled} href={href} />
       }
 
+      case GeneratedPageType.Page:
       default: {
         return (
           <PaginationLink as={Link} href={href} isActive={currentPage === page}>
@@ -77,7 +78,7 @@ export const Pagination: React.FC<PaginationProps> = (props) => {
     if (props?.isMobile) {
       setDelta(1)
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // oxlint-disable-next-line eslint-plugin-react-hooks/exhaustive-deps
   }, [])
 
   const pages = useMemo(() => {

@@ -79,7 +79,7 @@ export const Projects = async ({ locale, isMobile }: ProjectsProps) => {
               ))}
             </div>
 
-            <span className="text-muted-foreground text-base font-medium">
+            <span className="text-base font-medium text-muted-foreground">
               {t('viewAll')}
             </span>
           </Link>

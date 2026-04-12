@@ -1,5 +1,4 @@
 'use client' // Error boundaries must be Client Components
-
 import NextError from 'next/error'
 import { useTranslations } from 'next-intl'
 import { useEffect } from 'react'
@@ -13,7 +12,6 @@ export default function ServerError({ error }: ErrorProps) {
   const t = useTranslations('errorConfig.error')
 
   useEffect(() => {
-    // eslint-disable-next-line no-console
     console.log(error)
   }, [error])
 

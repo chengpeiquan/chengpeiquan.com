@@ -1,3 +1,4 @@
+import { isString } from '@bassist/utils'
 import { type ApiBaseResponse } from './types'
 
 export const toJSON = async <T>(promise: Promise<Response>) => {
@@ -7,6 +8,7 @@ export const toJSON = async <T>(promise: Promise<Response>) => {
     return result.data
   } catch (error) {
     console.error(error)
+    return undefined
   }
 }
 
@@ -33,9 +35,11 @@ const cleanupMarkdown = (markdown: string) => {
 
 const decodeEmoji = (text: string) => {
   try {
-    const decoder = new TextDecoder('utf-8')
-    const encoded = new Uint8Array([...text].map((char) => char.charCodeAt(0)))
-    return decoder.decode(encoded)
+    const bytes = new Uint8Array(text.length)
+    for (let i = 0; i < text.length; i++) {
+      bytes[i] = text.charCodeAt(i) & 0xff
+    }
+    return new TextDecoder('utf-8').decode(bytes)
   } catch {
     return text
   }
@@ -46,8 +50,9 @@ export const toDecodedMarkdown = async (promise: Promise<Response>) => {
     const response = await promise
     const result = await response.json()
 
-    if (result?.content) {
-      const markdown = atob(result.content)
+    const content = result?.content
+    if (content && isString(content)) {
+      const markdown = atob(content)
       const cleanedMarkdown = cleanupMarkdown(markdown)
       return decodeEmoji(cleanedMarkdown)
     }

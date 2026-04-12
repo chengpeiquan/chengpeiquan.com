@@ -35,7 +35,7 @@ export const Empty = async ({ locale }: PropsWithLocale) => {
         />
       </div>
 
-      <Paragraph className="text-muted-foreground text-base">
+      <Paragraph className="text-base text-muted-foreground">
         {t('title')}
       </Paragraph>
     </div>

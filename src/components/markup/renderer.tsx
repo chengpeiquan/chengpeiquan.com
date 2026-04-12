@@ -36,7 +36,7 @@ const StarOnGitHub = async ({ locale, repo }: StarOnGitHubProps) => {
     <ExternalLink
       title={title}
       aria-label={title}
-      href={repo!}
+      href={repo}
       className="flex items-center text-sm"
       variant="secondary"
       underline={false}
@@ -69,7 +69,7 @@ const AuthorData = async ({
           <AvatarFallback>{author.slice(0, 1).toUpperCase()}</AvatarFallback>
         </Avatar>
 
-        <div className="text-muted-foreground flex flex-col">
+        <div className="flex flex-col text-muted-foreground">
           <span aria-label={author} className="text-sm">
             {author}
           </span>
@@ -110,7 +110,7 @@ export const MarkupRenderer = async ({
   ).filter(Boolean)
 
   return (
-    <article className="prose prose-neutral dark:prose-invert flex flex-1 flex-col overflow-hidden">
+    <article className="prose prose-neutral flex flex-1 flex-col overflow-hidden dark:prose-invert">
       <Heading level={1} className="mb-0 break-all text-2xl sm:text-3xl">
         {metadata.title}
       </Heading>

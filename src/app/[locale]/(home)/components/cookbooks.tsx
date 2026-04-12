@@ -93,8 +93,9 @@ const count = {
   categories: 8,
 } as const
 
-const getRandomCookbooks = async (locale: Locale) => {
+const getRandomCookbooks = async (locale: Locale): Promise<MetaCacheItem[]> => {
   const allCookbooks = await getMetaCache(ContentFolder.Cookbook, locale)
+  // oxlint-disable-next-line typescript/no-unsafe-return
   return shuffle(allCookbooks).slice(0, count.cookbooks)
 }
 

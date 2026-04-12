@@ -1,6 +1,6 @@
 'use client'
 
-import { isBrowser } from '@bassist/utils'
+import { isBrowser, noop } from '@bassist/utils'
 import {
   Button,
   Dialog,
@@ -94,7 +94,13 @@ const Toc: React.FC<TocProps> = ({ items, activeId, setActiveId }) => {
         )
 
         return (
-          <li key={id} onClick={() => setActiveId(id)} className={itemCls}>
+          <li
+            key={id}
+            onClick={() => {
+              setActiveId(id)
+            }}
+            className={itemCls}
+          >
             <a className={anchorCls} href={`#${id}`}>
               {title}
             </a>
@@ -133,13 +139,16 @@ const useTableOfContents = ({
   }
 
   useEffect(() => {
-    if (!isBrowser) return
+    if (!isBrowser) {
+      return noop
+    }
+
     document.addEventListener('scroll', handleScroll)
 
     return () => {
       document.removeEventListener('scroll', handleScroll)
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // oxlint-disable-next-line eslint-plugin-react-hooks/exhaustive-deps
   }, [])
 
   const tocProps = useMemo(

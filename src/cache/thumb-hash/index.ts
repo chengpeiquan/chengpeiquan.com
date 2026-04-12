@@ -4,7 +4,7 @@ export const getThumbHashMapping = async (
   fileName: ThumbHashFileName,
 ): Promise<ThumbHashMapping> => {
   try {
-    return (await import(`./${fileName}.json`)).default || {}
+    return (await import(`./${fileName}.json`)).default ?? {}
   } catch (e) {
     console.error('[getThumbHashMapping]', e)
     return {}

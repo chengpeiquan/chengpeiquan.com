@@ -20,10 +20,10 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({
         className,
       )}
     >
-      <h2 className="text-foreground text-4xl font-bold sm:text-5xl lg:text-6xl xl:text-7xl">
+      <h2 className="text-4xl font-bold text-foreground sm:text-5xl lg:text-6xl xl:text-7xl">
         {title}
       </h2>
-      <p className="text-muted-foreground ml-[2.5em] text-base sm:text-xl md:text-2xl">
+      <p className="ml-[2.5em] text-base text-muted-foreground sm:text-xl md:text-2xl">
         {description}
       </p>
     </div>

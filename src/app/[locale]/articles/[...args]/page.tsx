@@ -45,10 +45,10 @@ const ArticleCard: React.FC<{
         </Heading>
       </Link>
 
-      <div className="xs:flex-row flex flex-col gap-4">
+      <div className="flex flex-col gap-4 xs:flex-row">
         {cover && (
           <Link href={link} variant="image">
-            <div className="xs:w-[160px] relative flex aspect-[500/400] w-full shrink-0 overflow-hidden rounded-lg md:w-[240px]">
+            <div className="relative flex aspect-[500/400] w-full shrink-0 overflow-hidden rounded-lg xs:w-[160px] md:w-[240px]">
               <Image
                 src={cover}
                 alt={title}
@@ -61,7 +61,7 @@ const ArticleCard: React.FC<{
         )}
 
         <div className="flex flex-col justify-between">
-          <p className="xs:h-auto xs:text-base xs:mb-4 xs:line-clamp-3 mb-0 line-clamp-2 h-0 text-sm text-gray-400">
+          <p className="mb-0 line-clamp-2 h-0 text-sm text-gray-400 xs:mb-4 xs:line-clamp-3 xs:h-auto xs:text-base">
             {desc}
           </p>
 

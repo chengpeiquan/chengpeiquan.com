@@ -56,7 +56,9 @@ export const useRecentSearchData = () => {
     set((prev) => getRestItems(i, prev))
   }
 
-  const clearRecent = () => set(undefined)
+  const clearRecent = () => {
+    set(undefined)
+  }
 
   const recent = useMemo(() => toArray(val), [val])
 

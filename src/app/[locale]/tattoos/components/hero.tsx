@@ -26,7 +26,7 @@ export const Hero = async ({
     namespace: 'tattooConfig',
   })
 
-  const images = shuffle(tattooImages).slice(0, 20)
+  const images: string[] = shuffle(tattooImages).slice(0, 20)
 
   return (
     <div
@@ -36,7 +36,7 @@ export const Hero = async ({
       )}
     >
       {/* Gradient Mask */}
-      <div className="from-background/30 via-background/80 to-background absolute inset-0 z-[1] bg-gradient-to-b"></div>
+      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-background/30 via-background/80 to-background"></div>
 
       {/* Image Gallery  */}
       <div className="grid size-full grid-cols-4 gap-2 lg:grid-cols-5">
@@ -60,7 +60,7 @@ export const Hero = async ({
                 blurDataURL={blurDataURL}
               />
 
-              <div className="bg-background/20 absolute inset-0"></div>
+              <div className="absolute inset-0 bg-background/20"></div>
             </div>
           )
         })}
@@ -69,10 +69,10 @@ export const Hero = async ({
       {/* Hero Content */}
       <div className="absolute inset-x-0 bottom-0 z-[2] px-4 py-12">
         <LayoutMain>
-          <Heading className="text-foreground text-balance text-center font-mono text-4xl font-bold md:text-5xl lg:text-6xl">
+          <Heading className="text-balance text-center font-mono text-4xl font-bold text-foreground md:text-5xl lg:text-6xl">
             {t('title')}
           </Heading>
-          <Paragraph className="text-muted-foreground mt-4 text-balance text-center font-mono text-base md:text-lg lg:text-xl">
+          <Paragraph className="mt-4 text-balance text-center font-mono text-base text-muted-foreground md:text-lg lg:text-xl">
             {t('description')}
           </Paragraph>
         </LayoutMain>

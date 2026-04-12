@@ -18,7 +18,7 @@ interface TextNode {
 }
 
 interface VideoDirectiveNodeChildren {
-  children: (TextNode | LinkNode | unknown)[]
+  children: (TextNode | LinkNode)[]
 }
 
 interface VideoDirectiveNode {
@@ -126,7 +126,7 @@ const remarkVideo = () => {
       const poster = posterNode.url
       const title = titleNode.value
 
-      const data = (node.data || (node.data = {})) as HyperScriptData
+      const data = (node.data ?? (node.data = {})) as HyperScriptData
       data.hName = 'video'
       data.hProperties = {
         src,

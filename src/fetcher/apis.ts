@@ -1,3 +1,4 @@
+import process from 'node:process'
 import { githubConfig } from '@/config/project-config'
 import { FetchClient } from './client'
 import { type GitHubRepoDataItem, type NpmDownloadDataItem } from './types'

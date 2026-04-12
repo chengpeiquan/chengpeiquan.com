@@ -29,7 +29,7 @@ export const DataDescription = async ({ locale }: PropsWithLocale) => {
     <AlertDialog>
       <AlertDialogTrigger asChild>
         <Button variant="ghost" size="icon">
-          <Help className="text-muted-foreground size-5 cursor-pointer" />
+          <Help className="size-5 cursor-pointer text-muted-foreground" />
         </Button>
       </AlertDialogTrigger>
 

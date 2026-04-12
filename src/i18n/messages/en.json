@@ -1,131 +1,131 @@
 {
+  "action": {
+    "newTab": "Visit {label} in a new tab",
+    "sameTab": "Visit {label} in the same tab",
+    "toggle": "Click to switch to "
+  },
   "basicConfig": {
     "lang": "en",
+    "legacy": "This article was last updated {timeLabel}, and some content may be legacy. Please use it for reference only.",
     "navigation": {
-      "title": "Navigation",
-      "close": "Close"
-    },
-    "pagination": {
-      "prefix": {
-        "article": "Article list",
-        "cookbook": "Cookbook list"
-      },
-      "pageNumber": "Page {page}"
+      "close": "Close",
+      "title": "Navigation"
     },
     "outline": {
       "title": "On this page"
     },
-    "legacy": "This article was last updated {timeLabel}, and some content may be legacy. Please use it for reference only.",
+    "pagination": {
+      "pageNumber": "Page {page}",
+      "prefix": {
+        "article": "Article list",
+        "cookbook": "Cookbook list"
+      }
+    },
     "starOnGitHub": {
       "label": "Star on GitHub",
       "title": "Star this repository"
     }
   },
-  "siteConfig": {
-    "name": "Paul Ching",
-    "title": "Paul Ching - Raised three cats",
-    "description": "A man with full tattoo on arm, raised three cats.",
-    "icp": "Guangdong ICP No. 200111269-1",
-    "emptyTips": "There is currently no content with this page.",
-    "nav": {
-      "home": "Home",
-      "projects": "Projects",
-      "article": "Blog",
-      "cookbook": "Cookbook",
-      "tattoos": "Tattoos",
-      "about": "About"
+  "errorConfig": {
+    "empty": {
+      "title": "There is no content here, don't read it."
     },
-    "socialLink": {
-      "github": "GitHub",
-      "zhihu": "Zhi Hu",
-      "x": "X",
-      "rss": "RSS"
+    "error": {
+      "title": "Something went wrong"
+    },
+    "notFound": {
+      "description": "This is a picture I took when I was giving Luna a bath in 2017. It was the first time she had a bath in her cat life. Her curious and frightened expression was just like you who have come to the 404 page now.",
+      "feedback": "If your previously favorite link has been removed，Please create an <issue></issue> so I can fix it.",
+      "goBackLabel": "Go back Home",
+      "title": "Page not found"
     }
   },
-  "searchConfig": {
-    "label": "Search {target}...",
-    "shortLabel": "Search...",
-    "placeholder": "Type a keyword to search {target}...",
-    "recent": "Recent",
-    "cleanup": "Clear History",
-    "noRecent": "No recent searches",
-    "noResult": "No results found",
-    "resultCount": "<count></count> results for <keyword></keyword>",
-    "removeButtonLabel": "Remove this record"
-  },
   "homeConfig": {
+    "aboutMe": {
+      "avatarAlt": "Photos of me with long hair",
+      "description": "An engineer who doesn’t look like one",
+      "title": "About Me"
+    },
+    "articles": {
+      "description": "Tech Insights, Product Design & Life Musings",
+      "title": "Recent Blog"
+    },
+    "books": {
+      "author": "Author: ",
+      "description": "A guide to engineering for front-end new engineers",
+      "dialog": {
+        "expandButton": "Full Introduction",
+        "title": "Book Introduction"
+      },
+      "publisher": "Publisher: ",
+      "purchase": "Purchase: ",
+      "title": "My published books"
+    },
+    "cookbooks": {
+      "description": "A Teochew Man’s Joy of Home Cooking",
+      "title": "Cooking at Home",
+      "viewMore": "View all cookbooks"
+    },
     "hero": {
       "imageTitle": "My first tattoo, my bass.",
       "slogan": "True Colors: A Decade"
-    },
-    "aboutMe": {
-      "title": "About Me",
-      "description": "An engineer who doesn’t look like one",
-      "avatarAlt": "Photos of me with long hair"
-    },
-    "books": {
-      "title": "My published books",
-      "description": "A guide to engineering for front-end new engineers",
-      "author": "Author: ",
-      "publisher": "Publisher: ",
-      "purchase": "Purchase: ",
-      "dialog": {
-        "title": "Book Introduction",
-        "expandButton": "Full Introduction"
-      }
-    },
-    "articles": {
-      "title": "Recent Blog",
-      "description": "Tech Insights, Product Design & Life Musings"
-    },
-    "cookbooks": {
-      "title": "Cooking at Home",
-      "description": "A Teochew Man’s Joy of Home Cooking",
-      "viewMore": "View all cookbooks"
     }
   },
   "projectConfig": {
-    "title": "Open Source Projects",
-    "description": "Projects that I created or maintaining",
+    "alternative": "Replaced by <name></name> .",
     "button": {
       "homepage": "Project Homepage",
       "repo": "Code repository"
     },
     "dataDescription": {
-      "title": "About Data statistics",
       "list": {
         "0": "\"Stars\" and \"Forks\" are data from each GitHub repository queried from api.github.com.",
         "1": "\"Downloads\" refers to the number of downloads of each npm package queried from api.npmjs.org, including: users installing from the command line, being downloaded as a dependency of other packages, downloading from CI/CD servers, and downloading from mirrors. <more>Click here to learn more</more>.",
         "2": "The data overview only counts the total data of unique repositories and unique packages (multiple projects in the same Monorepo are not counted repeatedly), and card data is presented by the repositories and packages to which they belong.",
         "3": "The data is updated once a day, and only historical data is recorded incrementally."
       },
-      "okText": "OK, I got it!"
+      "okText": "OK, I got it!",
+      "title": "About Data statistics"
     },
-    "alternative": "Replaced by <name></name> .",
+    "description": "Projects that I created or maintaining",
+    "title": "Open Source Projects",
     "viewAll": "View all"
   },
+  "searchConfig": {
+    "cleanup": "Clear History",
+    "label": "Search {target}...",
+    "noRecent": "No recent searches",
+    "noResult": "No results found",
+    "placeholder": "Type a keyword to search {target}...",
+    "recent": "Recent",
+    "removeButtonLabel": "Remove this record",
+    "resultCount": "<count></count> results for <keyword></keyword>",
+    "shortLabel": "Search..."
+  },
+  "siteConfig": {
+    "description": "A man with full tattoo on arm, raised three cats.",
+    "emptyTips": "There is currently no content with this page.",
+    "icp": "Guangdong ICP No. 200111269-1",
+    "name": "Paul Ching",
+    "nav": {
+      "about": "About",
+      "article": "Blog",
+      "cookbook": "Cookbook",
+      "home": "Home",
+      "projects": "Projects",
+      "tattoos": "Tattoos"
+    },
+    "socialLink": {
+      "github": "GitHub",
+      "rss": "RSS",
+      "x": "X",
+      "zhihu": "Zhi Hu"
+    },
+    "title": "Paul Ching - Raised three cats"
+  },
   "tattooConfig": {
-    "title": "Blackwork Tattoos",
     "description": "My tattoos and the stories behind them",
-    "imageAlt": "Tattoo stories"
-  },
-  "action": {
-    "toggle": "Click to switch to ",
-    "sameTab": "Visit {label} in the same tab",
-    "newTab": "Visit {label} in a new tab"
-  },
-  "errorConfig": {
-    "error": {
-      "title": "Something went wrong"
-    },
-    "notFound": {
-      "title": "Page not found",
-      "description": "This is a picture I took when I was giving Luna a bath in 2017. It was the first time she had a bath in her cat life. Her curious and frightened expression was just like you who have come to the 404 page now.",
-      "feedback": "If your previously favorite link has been removed，Please create an <issue></issue> so I can fix it.",
-      "goBackLabel": "Go back Home"
-    },
-    "empty": {
-      "title": "There is no content here, don't read it."
-    }
+    "imageAlt": "Tattoo stories",
+    "title": "Blackwork Tattoos"
   }
 }

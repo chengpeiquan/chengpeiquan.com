@@ -96,7 +96,7 @@ const SearchResultCard: React.FC<SearchResultCardProps> = ({
 }
 
 const Highlight: React.FC<React.PropsWithChildren> = ({ children }) => (
-  <span className="text-foreground font-bold">{children}</span>
+  <span className="font-bold text-foreground">{children}</span>
 )
 
 const SearchResult: React.FC<
@@ -131,7 +131,7 @@ const SearchResult: React.FC<
         <div className="flex items-center justify-between">
           <span>{t('recent')}</span>
           <span
-            className="hover:text-foreground cursor-pointer"
+            className="cursor-pointer hover:text-foreground"
             onClick={clearRecent}
           >
             {t('cleanup')}
@@ -156,7 +156,7 @@ const SearchResult: React.FC<
 
   return (
     <>
-      <Paragraph className="text-muted-foreground my-3 break-all px-3 text-sm">
+      <Paragraph className="my-3 break-all px-3 text-sm text-muted-foreground">
         {title}
       </Paragraph>
 
@@ -170,7 +170,9 @@ const SearchResult: React.FC<
             addRecent(i)
             onClose()
           }}
-          onRemove={() => removeRecent(i)}
+          onRemove={() => {
+            removeRecent(i)
+          }}
         />
       ))}
     </>
@@ -198,7 +200,9 @@ export const SearchBoxRoot: React.FC<PropsWithDevice> = ({ isMobile }) => {
       <QuickSearchTrigger
         label={label}
         shortLabel={t('shortLabel')}
-        onClick={() => setOpen(true)}
+        onClick={() => {
+          setOpen(true)
+        }}
       />
 
       <QuickSearchDialog
@@ -221,7 +225,9 @@ export const SearchBoxRoot: React.FC<PropsWithDevice> = ({ isMobile }) => {
         <QuickSearchList className="h-[600px]">
           <SearchResult
             isMobile={isMobile}
-            onClose={() => setOpen(false)}
+            onClose={() => {
+              setOpen(false)
+            }}
             {...rest}
           />
         </QuickSearchList>

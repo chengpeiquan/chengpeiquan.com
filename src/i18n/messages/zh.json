@@ -1,131 +1,131 @@
 {
+  "action": {
+    "newTab": "新标签访问{label}",
+    "sameTab": "在当前标签访问{label}",
+    "toggle": "点击切换到"
+  },
   "basicConfig": {
     "lang": "zh",
+    "legacy": "本文最后更新于 {timeLabel}，部分内容可能不适合当前所有情况，仅供参考。",
     "navigation": {
-      "title": "导航",
-      "close": "关闭"
-    },
-    "pagination": {
-      "prefix": {
-        "article": "文章列表",
-        "cookbook": "菜谱列表"
-      },
-      "pageNumber": "第 {page} 页"
+      "close": "关闭",
+      "title": "导航"
     },
     "outline": {
       "title": "文章目录"
     },
-    "legacy": "本文最后更新于 {timeLabel}，部分内容可能不适合当前所有情况，仅供参考。",
+    "pagination": {
+      "pageNumber": "第 {page} 页",
+      "prefix": {
+        "article": "文章列表",
+        "cookbook": "菜谱列表"
+      }
+    },
     "starOnGitHub": {
       "label": "Star on GitHub",
       "title": "给仓库一个 Star"
     }
   },
-  "siteConfig": {
-    "name": "程沛权",
-    "title": "程沛权 - 养了三只猫",
-    "description": "一个养了三只猫的花臂男。",
-    "icp": "粤ICP备20011269号-1",
-    "emptyTips": "_(:з)∠)_ 当前暂无内容…",
-    "nav": {
-      "home": "首页",
-      "projects": "项目",
-      "article": "博客",
-      "cookbook": "菜谱",
-      "tattoos": "文身",
-      "about": "关于"
+  "errorConfig": {
+    "empty": {
+      "title": "这里没有内容，不要看了"
     },
-    "socialLink": {
-      "github": "GitHub",
-      "zhihu": "知乎",
-      "x": "X",
-      "rss": "RSS"
+    "error": {
+      "title": "服务开小差了"
+    },
+    "notFound": {
+      "description": "这是 2017 年我给黑妹洗澡时拍下的照片，那是她的猫生中第一次洗澡，又好奇又惊慌的表情，像极了此刻来到 404 页面的你。",
+      "feedback": "如果你以前收藏的链接被移除了，请提 <issue></issue> 联系我。",
+      "goBackLabel": "返回首页",
+      "title": "页面不存在"
     }
   },
-  "searchConfig": {
-    "label": "搜索{target}...",
-    "shortLabel": "搜索...",
-    "placeholder": "请输入关键词搜索{target}...",
-    "recent": "最近搜索",
-    "cleanup": "清除记录",
-    "noRecent": "暂无搜索记录",
-    "noResult": "搜不到结果",
-    "resultCount": "找到 <count></count> 个 <keyword></keyword> 的相关结果",
-    "removeButtonLabel": "移除该记录"
-  },
   "homeConfig": {
+    "aboutMe": {
+      "avatarAlt": "我留长发的照片",
+      "description": "一个外表不像工程师的工程师",
+      "title": "关于我"
+    },
+    "articles": {
+      "description": "技术分析、产品设计、生活随笔",
+      "title": "近期博客"
+    },
+    "books": {
+      "author": "作者：",
+      "description": "面向前端新人工程师的工程化指南",
+      "dialog": {
+        "expandButton": "完整介绍",
+        "title": "书籍介绍"
+      },
+      "publisher": "出版社：",
+      "purchase": "前往购买：",
+      "title": "我出版的书"
+    },
+    "cookbooks": {
+      "description": "潮州佬日常下厨的家常菜",
+      "title": "自己做饭",
+      "viewMore": "查看全部菜谱"
+    },
     "hero": {
       "imageTitle": "我的第一个文身，是我的贝斯。",
       "slogan": "冲出他朝崎岖道上 哪怕会退倒"
-    },
-    "aboutMe": {
-      "title": "关于我",
-      "description": "一个外表不像工程师的工程师",
-      "avatarAlt": "我留长发的照片"
-    },
-    "books": {
-      "title": "我出版的书",
-      "description": "面向前端新人工程师的工程化指南",
-      "author": "作者：",
-      "publisher": "出版社：",
-      "purchase": "前往购买：",
-      "dialog": {
-        "title": "书籍介绍",
-        "expandButton": "完整介绍"
-      }
-    },
-    "articles": {
-      "title": "近期博客",
-      "description": "技术分析、产品设计、生活随笔"
-    },
-    "cookbooks": {
-      "title": "自己做饭",
-      "description": "潮州佬日常下厨的家常菜",
-      "viewMore": "查看全部菜谱"
     }
   },
   "projectConfig": {
-    "title": "开源项目",
-    "description": "由我创建或维护的项目",
+    "alternative": "请使用 <name></name> 代替。",
     "button": {
       "homepage": "项目主页",
       "repo": "代码仓库"
     },
     "dataDescription": {
-      "title": "数据统计说明",
       "list": {
         "0": "「Star」和「Fork」是从 api.github.com 查询每个 GitHub 仓库的数据。",
         "1": "「下载量」是从 api.npmjs.org 查询每个 npm 包的下载量，包括了：用户从命令行 install 、作为其他包的依赖一起被下载、来自 CI/CD 服务器下载、来自镜像下载，<more>点击了解更多</more> 。",
         "2": "数据总览仅统计唯一仓库和唯一包的数据总和（多个项目处于同一 Monorepo 时不重复统计），卡片数据则由其所属仓库和包呈现。",
         "3": "数据每天更新一次，仅递增记录历史数据。"
       },
-      "okText": "我知道了"
+      "okText": "我知道了",
+      "title": "数据统计说明"
     },
-    "alternative": "请使用 <name></name> 代替。",
+    "description": "由我创建或维护的项目",
+    "title": "开源项目",
     "viewAll": "查看全部"
   },
+  "searchConfig": {
+    "cleanup": "清除记录",
+    "label": "搜索{target}...",
+    "noRecent": "暂无搜索记录",
+    "noResult": "搜不到结果",
+    "placeholder": "请输入关键词搜索{target}...",
+    "recent": "最近搜索",
+    "removeButtonLabel": "移除该记录",
+    "resultCount": "找到 <count></count> 个 <keyword></keyword> 的相关结果",
+    "shortLabel": "搜索..."
+  },
+  "siteConfig": {
+    "description": "一个养了三只猫的花臂男。",
+    "emptyTips": "_(:з)∠)_ 当前暂无内容…",
+    "icp": "粤ICP备20011269号-1",
+    "name": "程沛权",
+    "nav": {
+      "about": "关于",
+      "article": "博客",
+      "cookbook": "菜谱",
+      "home": "首页",
+      "projects": "项目",
+      "tattoos": "文身"
+    },
+    "socialLink": {
+      "github": "GitHub",
+      "rss": "RSS",
+      "x": "X",
+      "zhihu": "知乎"
+    },
+    "title": "程沛权 - 养了三只猫"
+  },
   "tattooConfig": {
-    "title": "Blackwork Tattoos",
     "description": "我的文身和它们背后的故事",
-    "imageAlt": "文身故事"
-  },
-  "action": {
-    "toggle": "点击切换到",
-    "sameTab": "在当前标签访问{label}",
-    "newTab": "新标签访问{label}"
-  },
-  "errorConfig": {
-    "error": {
-      "title": "服务开小差了"
-    },
-    "notFound": {
-      "title": "页面不存在",
-      "description": "这是 2017 年我给黑妹洗澡时拍下的照片，那是她的猫生中第一次洗澡，又好奇又惊慌的表情，像极了此刻来到 404 页面的你。",
-      "feedback": "如果你以前收藏的链接被移除了，请提 <issue></issue> 联系我。",
-      "goBackLabel": "返回首页"
-    },
-    "empty": {
-      "title": "这里没有内容，不要看了"
-    }
+    "imageAlt": "文身故事",
+    "title": "Blackwork Tattoos"
   }
 }

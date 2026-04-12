@@ -30,8 +30,8 @@ export const WebAnalytics: React.FC = () => {
 
   useEffect(() => {
     track()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // oxlint-disable-next-line eslint-plugin-react-hooks/exhaustive-deps
   }, [pathname])
 
-  return <></>
+  return null
 }

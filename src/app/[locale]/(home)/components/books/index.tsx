@@ -45,7 +45,7 @@ export const Books = async ({ locale, isMobile }: BooksProps) => {
             {book.title}
           </Heading>
 
-          <div className="text-muted-foreground flex items-center gap-4 text-sm">
+          <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <span>
               {t('author')}
               {book.author}

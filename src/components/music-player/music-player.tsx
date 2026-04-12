@@ -51,7 +51,7 @@ const MusicDisc: React.FC<MusicDiscProps> = ({
       <Avatar
         className={cn(
           'size-full',
-          'border-input box-border border border-solid p-3',
+          'box-border border border-solid border-input p-3',
           { 'animate-spin': playing },
         )}
         style={{
@@ -63,7 +63,7 @@ const MusicDisc: React.FC<MusicDiscProps> = ({
         }}
       >
         <AvatarImage
-          className="border-input box-border overflow-hidden rounded-full border border-solid"
+          className="box-border overflow-hidden rounded-full border border-solid border-input"
           src={albumCover}
           alt={fullName}
         />
@@ -94,12 +94,12 @@ const Musician: React.FC<
         'items-center': !isMobile,
       })}
     >
-      <span className="text-foreground line-clamp-2 text-base font-medium">
+      <span className="line-clamp-2 text-base font-medium text-foreground">
         {title}
       </span>
 
-      {musician && (
-        <span className="text-muted-foreground truncate text-xs">
+      {Boolean(musician) && (
+        <span className="truncate text-xs text-muted-foreground">
           {musician}
         </span>
       )}
@@ -110,14 +110,14 @@ const Musician: React.FC<
 const GuideArrow: React.FC = () => {
   return (
     <div
-      className="border-l-input absolute right-[-8px] top-[12px] size-0
-       border-y-8 border-l-8
-       border-y-transparent"
+      className="absolute right-[-8px] top-[12px] size-0 border-y-8
+       border-l-8 border-y-transparent
+       border-l-input"
     >
       <div
-        className="border-l-background absolute left-[-8px] top-[-6px] size-0
-         border-y-[6px] border-l-[6px]
-         border-y-transparent"
+        className="absolute left-[-8px] top-[-6px] size-0 border-y-[6px]
+         border-l-[6px] border-y-transparent
+         border-l-background"
       ></div>
     </div>
   )
@@ -255,7 +255,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({
   const timeRender = useMemo(
     () => (
       <span
-        className={cn('text-muted-foreground flex shrink-0 text-xs', {
+        className={cn('flex shrink-0 text-xs text-muted-foreground', {
           invisible: loading,
           'w-[80px] justify-end': !isMobile,
         })}
@@ -277,7 +277,9 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({
         size="icon"
         variant={!isMobile && visible ? 'outline' : getBrbVariant(isMobile)}
         style={brbStyle}
-        onClick={() => setVisible((v) => !v)}
+        onClick={() => {
+          setVisible((v) => !v)
+        }}
       >
         <CD
           className={cn('size-5', { 'animate-spin': playing })}
@@ -290,7 +292,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({
           'fixed right-[72px]',
           'not-prose bg-background',
           'box-border flex items-center justify-between gap-6 p-3',
-          'border-input rounded-md border border-solid',
+          'rounded-md border border-solid border-input',
           visible ? 'flex' : 'hidden',
           {
             'right-[72px] bottom-[20px] left-[20px] h-[144px]': isMobile,
@@ -308,8 +310,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({
           preload={preload}
           controls={controls}
           onLoadedMetadata={(e) => {
-            const target = e.target as HTMLAudioElement
-            setDuration(+target.duration)
+            setDuration(e.currentTarget.duration)
             setLoading(false)
           }}
           onTimeUpdate={() => {
