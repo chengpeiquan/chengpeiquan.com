@@ -86,7 +86,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
           <Heading
             level={4}
             className={cn(
-              'group-hover:text-foreground line-clamp-2 break-all font-medium tracking-tight transition-colors',
+              'line-clamp-2 break-all font-medium tracking-tight transition-colors group-hover:text-foreground',
               latest ? 'text-3xl' : 'text-base',
             )}
           >

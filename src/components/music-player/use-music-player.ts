@@ -1,4 +1,4 @@
-import { isBrowser } from '@bassist/utils'
+import { isBrowser, noop } from '@bassist/utils'
 import { useEffect, useMemo, useRef, useState } from 'react'
 
 export const timeDisplay = (duration: number) => {
@@ -23,7 +23,9 @@ export const useMusicPlayer = () => {
   const [playing, setPlaying] = useState(false)
   const hasUserInteracted = useRef(false)
 
-  const togglePlay = () => setPlaying((v) => !v)
+  const togglePlay = () => {
+    setPlaying((v) => !v)
+  }
 
   useEffect(() => {
     const audio = audioRef.current
@@ -35,7 +37,11 @@ export const useMusicPlayer = () => {
     audio?.play().catch((e) => {
       console.error('[Cache audio play]', e)
 
-      if (e.name === 'NotAllowedError' && hasUserInteracted.current) {
+      if (
+        e instanceof Error &&
+        e.name === 'NotAllowedError' &&
+        hasUserInteracted.current
+      ) {
         hasUserInteracted.current = false
       }
 
@@ -45,10 +51,11 @@ export const useMusicPlayer = () => {
 
   // Auto play
   useEffect(() => {
-    if (!isBrowser) return
+    if (!isBrowser) {
+      return noop
+    }
 
-    const el = document.querySelector('main') || document
-    if (!el) return
+    const el = document.querySelector('main') ?? document
 
     const run = () => {
       if (!playing && !hasUserInteracted.current) {
@@ -64,7 +71,7 @@ export const useMusicPlayer = () => {
       el.removeEventListener('touchstart', run)
       el.removeEventListener('click', run)
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // oxlint-disable-next-line eslint-plugin-react-hooks/exhaustive-deps
   }, [])
 
   /**

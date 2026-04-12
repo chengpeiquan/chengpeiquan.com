@@ -3,7 +3,12 @@ import { ContentFolder, type ListFolder } from '@/config/content-config'
 import { CheckRoute } from '@/config/route-config'
 import { usePathname } from '@/navigation'
 
-export const useClientLocation = () => {
+export interface ClientLocation {
+  isCookbook: boolean
+  searchFolder: ListFolder
+}
+
+export const useClientLocation = (): ClientLocation => {
   const pathname = usePathname()
 
   const isCookbook = useMemo(
@@ -11,17 +16,13 @@ export const useClientLocation = () => {
     [pathname],
   )
 
-  const searchFolder = useMemo(
+  const searchFolder = useMemo<ListFolder>(
     () => (isCookbook ? ContentFolder.Cookbook : ContentFolder.Article),
     [isCookbook],
   )
 
   return {
     isCookbook,
-
-    // No matter how to declare the type,
-    // it will always be considered a `ContentFolder`,
-    // so must assert here.
-    searchFolder: searchFolder as ListFolder,
+    searchFolder,
   }
 }

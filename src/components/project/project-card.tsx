@@ -69,7 +69,7 @@ export const ProjectCard = async ({ locale, item }: ProjectCardProps) => {
     data,
   } = item
   const { description, homepage: localHomepage } = metadata[locale]
-  const homepage = localHomepage || fallbackHomepage
+  const homepage = localHomepage ?? fallbackHomepage
   const repoUrl = getRepoUrl(item)
   const npmUrl = getNpmUrl(item)
 
@@ -105,7 +105,7 @@ export const ProjectCard = async ({ locale, item }: ProjectCardProps) => {
     <Card className="flex w-full flex-col">
       <CardHeader className="gap-2">
         <CardTitle className="truncate">
-          <ExternalLink className="leading-[1.2]" href={homepage || repoUrl}>
+          <ExternalLink className="leading-[1.2]" href={homepage ?? repoUrl}>
             {name}
           </ExternalLink>
         </CardTitle>
@@ -114,7 +114,7 @@ export const ProjectCard = async ({ locale, item }: ProjectCardProps) => {
 
         <CardDescription
           className={cn(
-            'text-muted-foreground text-sm',
+            'text-sm text-muted-foreground',
             LocaleIs.isZH(locale)
               ? 'line-clamp-3 h-[60px]'
               : 'line-clamp-5 h-[100px]',

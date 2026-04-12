@@ -24,7 +24,7 @@ export default async function proxy(request: NextRequest) {
 
   response.headers.set(
     headerFields.device,
-    device.type || defaultHeaderValue.device,
+    device.type ?? defaultHeaderValue.device,
   )
 
   return response

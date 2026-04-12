@@ -8,7 +8,7 @@ export const getMetaCache = async (
 ): Promise<MetaCacheItem[]> => {
   try {
     const key = getMetaCacheMapKey(folder, locale)
-    return (await import(`./${key}.json`)).default || []
+    return (await import(`./${key}.json`)).default ?? []
   } catch (e) {
     console.error('[getMetaCache]', e)
     return []

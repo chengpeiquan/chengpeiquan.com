@@ -2,6 +2,7 @@
 
 import { readdirSync } from 'node:fs'
 import { extname, join } from 'node:path'
+import process from 'node:process'
 import { z } from 'zod'
 import {
   type ContentFolder,
@@ -43,7 +44,7 @@ const getFileMap = (folder: ContentFolder) => {
 const getFilePaths = (folder: ContentFolder, locale: Locale) => {
   if (!contentFolders.includes(folder)) return []
   if (!locales.includes(locale)) return []
-  return getFileMap(folder).get(locale) || []
+  return getFileMap(folder).get(locale) ?? []
 }
 
 interface GetContentOptions {

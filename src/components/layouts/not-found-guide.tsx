@@ -42,7 +42,7 @@ export const NotFoundGuide = async () => {
         <div className="flex flex-1 flex-col justify-center gap-6 overflow-hidden">
           <Heading level={1}>{t('title')}</Heading>
 
-          <div className="text-muted-foreground flex flex-col">
+          <div className="flex flex-col text-muted-foreground">
             <Paragraph>{t('description')}</Paragraph>
 
             <Paragraph>

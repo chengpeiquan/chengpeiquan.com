@@ -33,16 +33,15 @@ const isEmpty = (value: any) => {
   return true
 }
 
-const extractText = (children: any) => {
+const extractText = (children: any): string => {
   return children
     .map((child: any) => {
       if (!isEmpty(child?.value)) {
         return child?.value
       } else if (child?.children && child?.children?.length > 0) {
         return extractText(child?.children)
-      } else {
-        return ''
       }
+      return ''
     })
     .join(' ')
 }
@@ -56,8 +55,8 @@ const getDefaultId = (children: PhrasingContent[]) => {
 }
 
 const setNodeId = (node: Heading, id: string) => {
-  if (!node.data) node.data = {}
-  if (!node.data.hProperties) node.data.hProperties = {}
+  node.data ??= {}
+  node.data.hProperties ??= {}
   // @ts-expect-error
   node.data.id = node.data.hProperties.id = id
 }

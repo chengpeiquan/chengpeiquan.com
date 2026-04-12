@@ -28,7 +28,7 @@ const ExpandButton: React.FC<{ label: string }> = ({ label }) => {
     <DialogTrigger asChild>
       <span className="inline-flex items-center gap-6 text-base">
         <span>…</span>
-        <span className="hover:text-foreground inline-flex cursor-pointer items-center">
+        <span className="inline-flex cursor-pointer items-center hover:text-foreground">
           <span>{label}</span>
           <ChevronsDown className="size-4" />
         </span>
@@ -65,7 +65,7 @@ export const BookIntroduction = async ({
   const content = res.jsxElement
 
   return (
-    <div className="text-foreground mb-4 w-full">
+    <div className="mb-4 w-full text-foreground">
       <Dialog>
         {/* Prevent the content from being fully rendered when the page is refreshed */}
         <div className="h-[75px] w-full overflow-hidden">
@@ -86,7 +86,7 @@ export const BookIntroduction = async ({
             <DialogTitle>{t('title')}</DialogTitle>
             <DialogDescription className="!mt-6">
               <ScrollArea className="-mr-4 h-[450px] pr-4">
-                <div className="prose prose-neutral dark:prose-invert text-foreground dark:text-foreground text-sm">
+                <div className="prose prose-neutral text-sm text-foreground dark:prose-invert dark:text-foreground">
                   {content}
                 </div>
 

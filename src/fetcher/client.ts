@@ -1,16 +1,28 @@
+import { isString } from '@bassist/utils'
+
+type WithBaseUrl = { baseUrl: string }
+
+type DecoratedFetchMethod = (
+  this: WithBaseUrl,
+  endpoint: string,
+  ...rest: unknown[]
+) => Promise<Response>
+
 // A decorator that adds the base URL to each request
 const addBaseUrl = (
   _target: unknown,
   _propertyKey: string,
   descriptor: PropertyDescriptor,
 ) => {
-  const originalMethod = descriptor.value
+  const originalMethod = descriptor.value as DecoratedFetchMethod
 
-  descriptor.value = async function (...args: unknown[]) {
+  descriptor.value = async function (this: WithBaseUrl, ...args: unknown[]) {
     const endpoint = args[0]
-    // @ts-expect-error Unimportant type warnings
-    args[0] = new URL(endpoint, this.baseUrl).toString()
-    return originalMethod.apply(this, args)
+    if (!isString(endpoint)) {
+      throw new TypeError('Expected first argument to be a string endpoint')
+    }
+    const resolved = new URL(endpoint, this.baseUrl).toString()
+    return originalMethod.call(this, resolved, ...args.slice(1))
   }
 }
 
@@ -68,10 +80,12 @@ export class FetchClient {
     options: RequestOptions,
   ): Promise<any> {
     const url = this.buildUrl(endpoint, options.queryParams)
-    const headers = new Headers({
-      'Content-Type': 'application/json',
-      ...options.headers,
-    })
+    const headers = new Headers({ 'Content-Type': 'application/json' })
+    if (options.headers !== undefined) {
+      new Headers(options.headers).forEach((value, key) => {
+        headers.set(key, value)
+      })
+    }
     const requestOptions: RequestInit = { ...options, headers }
 
     const response = await fetch(url, requestOptions)

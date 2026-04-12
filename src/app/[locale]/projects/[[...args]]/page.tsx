@@ -65,7 +65,7 @@ export default async function ProjectsPage({
           {t('title')}
         </Heading>
 
-        <Paragraph className="text-muted-foreground text-xl">
+        <Paragraph className="text-xl text-muted-foreground">
           {t('description')}
         </Paragraph>
 

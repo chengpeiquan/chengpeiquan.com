@@ -86,9 +86,14 @@ export const getThumbHashCacheMapKey = (imageUrl: string) => {
  * @param hash - The ThumbHash to decode
  * @returns The data URL of the ThumbHash
  */
+const base64ToUint8Array = (value: string) => {
+  const binary = atob(value)
+  return Uint8Array.from(binary, (char) => char.charCodeAt(0))
+}
+
 export const decodeThumbHash = (thumbHash: string) => {
   if (!thumbHash) return ''
-  const hash = Buffer.from(thumbHash, 'base64')
+  const hash = base64ToUint8Array(thumbHash)
   const dataURL = thumbHashToDataURL(hash)
   return dataURL
 }

@@ -20,7 +20,7 @@ export const ScrollIndicator: React.FC = () => {
         delay: 2.5,
       }}
     >
-      <ChevronsDown className="text-muted-foreground size-8" />
+      <ChevronsDown className="size-8 text-muted-foreground" />
     </motion.div>
   )
 }

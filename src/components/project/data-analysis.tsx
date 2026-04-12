@@ -11,11 +11,7 @@ import { type ProjectAnalysisData } from './shared'
 
 // e.g. `1000` -> `1,000`
 const withCommasNumber = (val: string | number) => {
-  return (
-    String(val)
-      .toString()
-      .replace(/\B(?=(\d{3})+(?!\d))/g, ',') || '0'
-  )
+  return String(val).replace(/\B(?=(\d{3})+(?!\d))/g, ',') || '0'
 }
 
 // e.g. `1000` -> `1k`
@@ -48,7 +44,7 @@ const DataRender: React.FC<DataRenderProps> = ({
   return (
     <div
       className={cn(
-        'text-muted-foreground flex shrink-0 items-center gap-1 text-sm',
+        'flex shrink-0 items-center gap-1 text-sm text-muted-foreground',
         className,
       )}
     >
@@ -74,6 +70,12 @@ export const dataRenderConfig = {
   downloads: Download,
 } as const
 
+const dataRenderOrder = [
+  'stars',
+  'forks',
+  'downloads',
+] as const satisfies readonly (keyof typeof dataRenderConfig)[]
+
 interface DataAnalysisProps {
   data: ProjectAnalysisData | undefined
   className?: string
@@ -92,18 +94,15 @@ export const DataAnalysis: React.FC<DataAnalysisProps> = ({
   if (!data) return null
   return (
     <div className={cn('flex items-center gap-6', className)}>
-      {Object.keys(dataRenderConfig).map((key) => {
-        const k = key as keyof typeof dataRenderConfig
-        return (
-          <DataRender
-            key={key}
-            icon={dataRenderConfig[k]}
-            value={data[k]}
-            className={valueClassName}
-            iconClassName={iconClassName}
-          />
-        )
-      })}
+      {dataRenderOrder.map((key) => (
+        <DataRender
+          key={key}
+          icon={dataRenderConfig[key]}
+          value={data[key]}
+          className={valueClassName}
+          iconClassName={iconClassName}
+        />
+      ))}
 
       {extraRender}
     </div>

@@ -41,9 +41,9 @@ export const AboutMe = async ({ locale, isMobile }: AboutMeProps) => {
 
         <div
           className={cn(
-            'prose prose-neutral dark:prose-invert !text-left',
+            'prose prose-neutral !text-left dark:prose-invert',
             isMobile ? 'text-base' : 'text-lg',
-            '[&_a]:text-muted-foreground [&_a]:text-base [&_a]:no-underline',
+            '[&_a]:text-base [&_a]:text-muted-foreground [&_a]:no-underline',
           )}
         >
           {content}

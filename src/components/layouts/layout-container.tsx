@@ -70,7 +70,7 @@ export const LayoutContainer = async ({
           </Link>
 
           <Link href="/">
-            <h2 className="text-foreground text-lg">{t('name')}</h2>
+            <h2 className="text-lg text-foreground">{t('name')}</h2>
           </Link>
         </div>
 

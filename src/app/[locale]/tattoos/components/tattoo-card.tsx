@@ -42,7 +42,7 @@ export const TattooCard = async ({
       <CardHeader className="p-4 sm:p-6">
         <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-center">
           <CardTitle className="flex flex-col gap-3 sm:flex-row sm:items-end sm:gap-0">
-            <i className="text-primary mr-6 font-mono text-2xl font-bold sm:text-4xl">
+            <i className="mr-6 font-mono text-2xl font-bold text-primary sm:text-4xl">
               Vol.
               <i className="text-4xl sm:text-7xl">{index + 1}</i>
             </i>
@@ -50,13 +50,13 @@ export const TattooCard = async ({
             {title && <span className="text-3xl sm:mb-1">{title}</span>}
           </CardTitle>
 
-          <time className="text-muted-foreground font-mono text-sm">
+          <time className="font-mono text-sm text-muted-foreground">
             {story.date}
           </time>
         </div>
 
         {introduction && (
-          <div className="prose prose-neutral dark:prose-invert prose-p:last:mb-0 text-muted-foreground text-base">
+          <div className="prose prose-neutral text-base text-muted-foreground dark:prose-invert prose-p:last:mb-0">
             {introduction}
           </div>
         )}

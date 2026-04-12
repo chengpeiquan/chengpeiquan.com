@@ -24,7 +24,7 @@ export const useSearch = ({ enabled }: UseSearchOptions) => {
 
   useEffect(() => {
     if (enabled) {
-      getSearchEngine(searchFolder, locale).then(setEngine)
+      getSearchEngine(searchFolder, locale).then(setEngine).catch(console.error)
     }
 
     return () => {
