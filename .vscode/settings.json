@@ -3,8 +3,10 @@
     "analyticsjs",
     "bento",
     "blackwork",
+    "bunx",
     "clsx",
     "cnzz",
+    "commitlint",
     "Darkglass",
     "Discuz",
     "flexsearch",
@@ -17,6 +19,8 @@
     "mdast",
     "netease",
     "npmjs",
+    "oxfmt",
+    "Oxlint",
     "Pageview",
     "Peiquan",
     "Pinia",
@@ -36,6 +40,7 @@
     "taze",
     "Teochew",
     "thumbhash",
+    "tsgolint",
     "Unifiedjs",
     "unoptimized",
     "vfile",
@@ -44,28 +49,32 @@
     "zhihu",
     "zhong"
   ],
-  "explorer.fileNesting.enabled": true,
-  "explorer.fileNesting.patterns": {
-    ".env": ".env.*",
-    "tsconfig.json": "tsconfig.*.json, env.d.ts",
-    "vite.config.*": "jsconfig*, vitest.config.*, cypress.config.*, playwright.config.*",
-    "package.json": "package-lock.json, pnpm*, .yarnrc*, yarn*, .eslint*, eslint*, .oxlint*, oxlint*, .prettier*, prettier*, .editorconfig, postcss.config*, tailwind.config.ts, tailwind.whitelist.js, turbo.json, commitlint.config.js, next.config*",
-    "Dockerfile": "Dockerfile, docker-compose*, .dockerignore"
-  },
-  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "always",
+    "source.fixAll.oxc": "always",
     "source.fixAll.prettier": "always"
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "eslint.useFlatConfig": true,
+  "editor.formatOnSave": true,
   "eslint.format.enable": true,
+  "eslint.useFlatConfig": true,
   "eslint.validate": [
     "javascript",
     "javascriptreact",
     "typescript",
-    "typescriptreact"
+    "typescriptreact",
+    "json",
+    "jsonc"
   ],
-  "prettier.configPath": "./.prettierrc.js",
-  "i18n-ally.localesPaths": ["src/i18n", "src/i18n/messages"]
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    ".env": ".env.*",
+    "Dockerfile": "Dockerfile, docker-compose*, .dockerignore",
+    "package.json": "bun.lock*, .eslint*, eslint*, .oxlint*, oxlint*, oxfmt*, oxfmt*, .prettier*, .editorconfig, postcss.config*, tailwind.config.ts, tailwind.whitelist.js, commitlint.config.js, next.config*, tsconfig.json, .gitignore, .swcrc, LICENSE, AGENTS.md, CLAUDE.md",
+    "tsconfig.json": "tsconfig.*.json, env.d.ts",
+    "vite.config.*": "jsconfig*, vitest.config.*, cypress.config.*, playwright.config.*"
+  },
+  "i18n-ally.localesPaths": ["src/i18n", "src/i18n/messages"],
+  "oxc.typeAware": true,
+  "prettier.configPath": "./.prettierrc.js"
 }

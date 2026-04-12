@@ -1,26 +1,20 @@
 // @ts-check
-import {
-  createGetConfigNameFactory,
-  defineFlatConfig,
-  imports,
-  javascript,
-  jsx,
-  markdown,
-  next,
-  react,
-  typescript,
-} from '@bassist/eslint-config'
+
+import { createGetConfigNameFactory } from '@bassist/eslint-config'
+import { defineEslintConfig, eslintPresets } from '@bassist/oxc-integration'
+import tailwindWhitelist from './tailwind.whitelist.js'
 
 const getConfigName = createGetConfigNameFactory('chengpeiquan.com')
 
-export default defineFlatConfig([
-  ...imports,
-  ...javascript,
-  ...jsx,
-  ...markdown,
-  ...next,
-  ...react,
-  ...typescript,
+export default defineEslintConfig(
+  eslintPresets.node(),
+  eslintPresets.vitest(),
+  eslintPresets.imports(),
+  eslintPresets.jsonc(),
+  eslintPresets.tailwindcss({
+    whitelist: tailwindWhitelist,
+    config: 'tailwind.config.ts',
+  }),
 
   {
     name: getConfigName('navigation'),
@@ -47,61 +41,16 @@ export default defineFlatConfig([
   },
 
   {
-    name: getConfigName('override'),
-    rules: {
-      'require-await': 'off',
-      '@typescript-eslint/no-extraneous-class': 'off',
-      'react/react-in-jsx-scope': 'off',
-    },
-  },
-
-  {
-    name: getConfigName('tailwindcss'),
-    rules: {
-      'tailwindcss/no-custom-classname': [
-        'warn',
-        {
-          whitelist: [
-            'dark',
-            'text-primary',
-            'text-foreground',
-            '!text-foreground',
-            'text-muted-foreground',
-            '!text-muted-foreground',
-            'from-background',
-            'via-background/80',
-            'via-primary/80',
-            'bg-background',
-            'bg-background/20',
-            'bg-primary',
-            'bg-primary/50',
-            'bg-accent/50',
-            'bg-border',
-            'border-primary/20',
-            'border-l-background',
-            'border-input',
-            'border-l-input',
-            'from-foreground',
-            'from-background/80',
-            'from-background/30',
-            'from-primary',
-            'from-accent',
-            'to-background',
-            'to-background/20',
-            'to-foreground/60',
-            'to-foreground/70',
-            'to-primary/50',
-            'to-accent/50',
-            'to-border',
-            'ring-background',
-          ],
-        },
-      ],
-    },
-  },
-
-  {
     name: getConfigName('ignore'),
-    ignores: ['**/types/**/*.d.ts'],
+    ignores: [
+      '**/dist/**',
+      '**/public/**/*.json',
+      '**/cache/**/*.json',
+      '**/.next/**',
+      '**/.build/**',
+      '**/CHANGELOG.md',
+      '**/types/**/*.d.ts',
+      'docs/plans/**',
+    ],
   },
-])
+)

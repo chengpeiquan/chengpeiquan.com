@@ -1,6 +1,7 @@
+import { Buffer } from 'node:buffer'
 import { writeFile } from 'node:fs/promises'
 import { join } from 'node:path'
-import { fse } from '@bassist/node-utils'
+import process from 'node:process'
 import sharp from 'sharp'
 import { rgbaToThumbHash } from 'thumbhash'
 import {
@@ -10,6 +11,7 @@ import {
   getThumbHashCacheMapKey,
 } from '@/config/cache-config'
 import { tattooImages } from '@/config/tattoo-config'
+import { fse } from './shared'
 
 const cacheRootPath = join(process.cwd(), 'src', cacheRootFolder)
 const thumbHashCacheRootPath = join(cacheRootPath, CacheFolder.ThumbHash)
