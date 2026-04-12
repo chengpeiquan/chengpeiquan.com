@@ -1,6 +1,6 @@
 import { writeFile } from 'node:fs/promises'
 import { join } from 'node:path'
-import { fse } from '@bassist/node-utils'
+import process from 'node:process'
 import {
   CacheFolder,
   type MetaCacheItem,
@@ -13,7 +13,8 @@ import {
 } from '@/config/content-config'
 import { type Locale, locales } from '@/config/locale-config'
 import { ContentProcessorMode } from '@/core/types'
-import { getPosts } from './shared'
+import { fse, getPosts } from './shared'
+import { runTasks } from './task-runner'
 
 const cacheRootPath = join(process.cwd(), 'src', cacheRootFolder)
 const metaCacheRootPath = join(cacheRootPath, CacheFolder.MetaCache)
@@ -60,10 +61,14 @@ const generateCache = async (opts: GenerateOptions) => {
   await task.run()
 }
 
-const run = async () => {
-  listFolders.forEach((folder) => {
-    locales.forEach((locale) => generateCache({ folder, locale }))
-  })
+export const run = async () => {
+  const tasks = listFolders.flatMap((folder) =>
+    locales.map((locale) => () => generateCache({ folder, locale })),
+  )
+
+  await runTasks(tasks)
 }
 
-run().catch(console.error)
+if (import.meta.main) {
+  run().catch(console.error)
+}
