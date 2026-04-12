@@ -1,7 +1,7 @@
 'use server'
 
 import { readFile } from 'node:fs/promises'
-import { isObject, toArray } from '@bassist/utils'
+import { isDate, isObject, isString, toArray } from '@bassist/utils'
 import rehypeShiki from '@shikijs/rehype'
 import rehypeExtractToc from '@stefanprobst/rehype-extract-toc'
 import matter from 'gray-matter'
@@ -102,7 +102,7 @@ const createProcessor = (
           tagNames: [...toArray(defaultSchema.tagNames), 'video'],
           // https://github.com/syntax-tree/hast-util-sanitize#attributes
           attributes: {
-            ...(defaultSchema.attributes || {}),
+            ...(defaultSchema.attributes ?? {}),
             video: ['src', 'poster', 'controls', 'preload', 'className'],
           },
         },
@@ -226,7 +226,7 @@ const fetchRemoteMarkdown = async (remote: RemoteContentConfig) => {
     switch (remote.type) {
       case 'github': {
         const res = await apis.gh.fetchMarkdown(
-          remote.owner || defaultOwner,
+          remote.owner ?? defaultOwner,
           remote.repo,
           remote.path,
         )
@@ -253,12 +253,21 @@ const fetchRemoteMarkdown = async (remote: RemoteContentConfig) => {
  *
  * @param utcDate - The `date` from `matter(markdown)`
  */
-const parseDate = (utcDate: string) => {
+const parseDate = (utcDate: unknown) => {
   if (!utcDate) {
     return { date: '', timestamp: 0 }
   }
 
-  const cstDate = new Date(utcDate)
+  const normalizedDate = isDate(utcDate) || isString(utcDate) ? utcDate : ''
+  if (!normalizedDate) {
+    return { date: '', timestamp: 0 }
+  }
+
+  const cstDate = new Date(normalizedDate)
+  if (Number.isNaN(cstDate.getTime())) {
+    return { date: '', timestamp: 0 }
+  }
+
   cstDate.setHours(cstDate.getHours() - 8)
 
   const date = cstDate.toLocaleString('zh-CN', {
