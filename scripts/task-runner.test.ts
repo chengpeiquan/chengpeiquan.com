@@ -1,4 +1,4 @@
-import { expect, test } from 'bun:test'
+import { expect, test } from 'vitest'
 import { runTask, runTasks } from './task-runner'
 
 interface Deferred<T> {

@@ -29,6 +29,7 @@ export const PublishedBooks: React.FC<PropsWithControllable> = (props) => {
               fill
               sizes="(max-width: 1024px) 256px, (max-width: 1280px) 320px, 384px"
               style={{ objectFit: 'cover' }}
+              loading="eager"
             />
           </div>
         </Link>

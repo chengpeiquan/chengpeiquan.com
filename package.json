@@ -2,29 +2,31 @@
   "name": "chengpeiquan.com",
   "version": "2.0.0",
   "type": "module",
-  "packageManager": "bun@1.3.11",
+  "packageManager": "pnpm@10.15.1",
   "private": true,
   "scripts": {
     "dev": "run-s dev:*",
-    "dev:cache": "bun run build:cache",
-    "dev:thumb-hash": "bun run build:thumb-hash",
-    "dev:app": "bun --bun next dev -p 4832",
+    "dev:cache": "pnpm run build:cache",
+    "dev:thumb-hash": "pnpm run build:thumb-hash",
+    "dev:app": "next dev -p 4832",
     "build": "run-s build:*",
-    "build:cache": "bun ./scripts/generate-cache.ts",
-    "build:thumb-hash": "bun ./scripts/generate-thumb-hash.ts",
-    "build:app": "bun --bun next build --webpack",
-    "build:copy-assets": "bun ./scripts/copy-assets.ts",
+    "build:cache": "tsx ./scripts/generate-cache.ts",
+    "build:thumb-hash": "tsx ./scripts/generate-thumb-hash.ts",
+    "build:app": "next build --webpack",
+    "build:copy-assets": "tsx ./scripts/copy-assets.ts",
     "preview": "docker-compose build && docker-compose up -d",
-    "start": "bun --bun next start",
+    "start": "next start",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "lint": "run-s lint:*",
     "lint:oxlint": "oxlint .",
-    "lint:eslint": "bunx --bun eslint .",
+    "lint:eslint": "pnpm exec eslint .",
     "format": "oxfmt .",
     "format:check": "oxfmt . --check",
     "format:prettier": "prettier --write .",
     "backup": "git add . && git commit -m \"chore: backup\" && git push",
-    "deps:check": "bunx taze major",
-    "deps:up": "bunx taze -w -i",
+    "deps:check": "pnpm exec taze major",
+    "deps:up": "pnpm exec taze -w -i",
     "prepare": "husky"
   },
   "dependencies": {
@@ -53,7 +55,6 @@
     "@shikijs/rehype": "^4.0.2",
     "@stefanprobst/rehype-extract-toc": "^3.0.0",
     "@tailwindcss/typography": "^0.5.19",
-    "@types/bun": "^1.3.12",
     "@types/mdast": "^4.0.4",
     "@types/node": "^25.5.2",
     "@types/react": "^19.2.14",
@@ -91,13 +92,14 @@
     "tsx": "^4.21.0",
     "typescript": "^6.0.2",
     "unified": "^11.0.5",
-    "unist-util-visit": "^5.1.0"
+    "unist-util-visit": "^5.1.0",
+    "vitest": "^4.0.7"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "oxfmt --write",
       "oxlint --fix",
-      "bunx --bun eslint --fix"
+      "pnpm exec eslint --fix"
     ],
     "*.md": [
       "prettier --write"
