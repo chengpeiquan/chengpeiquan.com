@@ -1,5 +1,20 @@
 [
   {
+    "slug": "an-oxc-first-workflow-package-for-oxlint-and-oxfmt",
+    "metadata": {
+      "title": "适用于 Oxlint 与 Oxfmt 的 Oxc 优先工作流",
+      "desc": "很早之前就对 Oxc 这个项目一直保持关注，看到前段时间开始进入 1.x 版本，一直想弄一套配置，这几天终于有时间搞一下。不过目前阶段 OXLint 还是无法完整替代 ESLint ，只能是以 OXLint 为主， ESLint 为辅，所以我搞了一个配置包还没有正式定名为 oxc-config ，暂时只称之为 integration ，一个集成方案。",
+      "keywords": "oxc,oxlint,oxfmt,eslint,bassist",
+      "cover": "https://cdn.chengpeiquan.com/img/2026/04/202604071351894.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "open-source"
+      ],
+      "repo": "https://github.com/chengpeiquan/bassist",
+      "date": "2026/4/14 01:30:00",
+      "timestamp": 1776101400000
+    }
+  },
+  {
     "slug": "vue-picture-cropper-v1-desgin-philosophy",
     "metadata": {
       "title": "Vue Picture Cropper 发布 1.x 版本 讲一讲背后的设计理念",

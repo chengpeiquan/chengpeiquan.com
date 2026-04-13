@@ -1,5 +1,20 @@
 [
   {
+    "slug": "an-oxc-first-workflow-package-for-oxlint-and-oxfmt",
+    "metadata": {
+      "title": "An Oxc-first workflow package for Oxlint and Oxfmt",
+      "desc": "I have been following the Oxc project for quite a while. After seeing it enter the 1.x line some time ago, I had wanted to put together a configuration for it, and over the past few days I finally found time to work on it. At the current stage, however, Oxlint still cannot fully replace ESLint, so for now I simply call this package Integration rather than oxc-config.",
+      "keywords": "oxc,oxlint,oxfmt,eslint,bassist",
+      "cover": "https://cdn.chengpeiquan.com/img/2026/04/202604071351894.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "open-source"
+      ],
+      "repo": "https://github.com/chengpeiquan/bassist",
+      "date": "2026/4/14 01:30:00",
+      "timestamp": 1776101400000
+    }
+  },
+  {
     "slug": "vue-picture-cropper-v1-desgin-philosophy",
     "metadata": {
       "title": "Vue Picture Cropper 1.x Released: The Design Philosophy Behind It",
