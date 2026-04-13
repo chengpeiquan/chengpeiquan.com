@@ -1,4 +1,8 @@
-FROM oven/bun:1.3.11-alpine AS base
+FROM node:20-alpine AS base
+
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+RUN corepack enable
 
 # Install dependencies only when needed
 FROM base AS deps
@@ -7,9 +11,9 @@ RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
 # Install dependencies based on the preferred package manager
-COPY package.json bun.lock ./
-RUN bun --version && \
-  bun install --frozen-lockfile
+COPY package.json pnpm-lock.yaml ./
+RUN pnpm --version && \
+  pnpm install --frozen-lockfile
 
 # Rebuild the source code only when needed
 FROM base AS builder
@@ -36,7 +40,7 @@ RUN echo "NEXT_PUBLIC_HELLO=${NEXT_PUBLIC_HELLO}" >> .env && \
   echo "HELLO_WORLD=${HELLO_WORLD}" >> .env && \
   echo "GITHUB_ACCESS_TOKEN=${GITHUB_ACCESS_TOKEN}" >> .env
 
-RUN bun run build
+RUN pnpm run build
 
 # Production image, copy all the files and run next
 FROM base AS runner
@@ -69,4 +73,4 @@ ENV PORT=4936
 # server.js is created by next build from the standalone output
 # https://nextjs.org/docs/pages/api-reference/next-config-js/output
 ENV HOSTNAME="0.0.0.0"
-CMD ["bun", "server.js"]
+CMD ["node", "server.js"]

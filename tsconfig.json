@@ -14,7 +14,7 @@
         "name": "next"
       }
     ],
-    "types": ["bun", "node"]
+    "types": ["node"]
   },
   "extends": "@bassist/tsconfig/base.json",
   "include": [
