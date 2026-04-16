@@ -25,7 +25,7 @@ interface TimeDisplayProps {
 }
 
 export const TimeDisplay: React.FC<TimeDisplayProps> = ({
-  value = '',
+  value,
   dateOnly = true,
   className,
 }) => {

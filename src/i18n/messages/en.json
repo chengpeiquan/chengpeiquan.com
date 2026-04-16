@@ -7,6 +7,10 @@
   "basicConfig": {
     "lang": "en",
     "legacy": "This article was last updated {timeLabel}, and some content may be legacy. Please use it for reference only.",
+    "codeBlock": {
+      "copy": "Copy",
+      "copied": "Copied"
+    },
     "navigation": {
       "close": "Close",
       "title": "Navigation"
