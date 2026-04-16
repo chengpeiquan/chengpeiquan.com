@@ -30,5 +30,8 @@ export default defineOxlintConfig(oxlintPresets.react(), {
     'typescript/no-unsafe-return': 'off',
     'typescript/no-unsafe-member-access': 'off',
     'typescript/no-unsafe-call': 'off',
+    'typescript/prefer-readonly-parameter-types': 'off',
+    'typescript/no-misused-promises': 'off',
+    'typescript/strict-void-return': 'off',
   },
 })

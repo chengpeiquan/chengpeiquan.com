@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest'
-import { runTask, runTasks } from './task-runner'
+import { runTask, runTasks } from '../../scripts/task-runner'
 
 interface Deferred<T> {
   promise: Promise<T>

@@ -84,7 +84,7 @@ interface GetContentsOptions extends ParseOptions {
 
 export const getContents = async (
   folder: ContentFolder,
-  { locale, category, page = 1, pageSize, ...parseOptions }: GetContentsOptions,
+  { locale, category, page, pageSize, ...parseOptions }: GetContentsOptions,
 ) => {
   const contentsResponseSchema = z.object({
     items: z.array(contentItemSchema).default([]),

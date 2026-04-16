@@ -5,6 +5,7 @@ import { isDate, isObject, isString, toArray } from '@bassist/utils'
 import rehypeShiki from '@shikijs/rehype'
 import rehypeExtractToc from '@stefanprobst/rehype-extract-toc'
 import matter from 'gray-matter'
+import { type Element, type Root } from 'hast'
 import React from 'react'
 import { Fragment, jsx as _jsx, jsxs as _jsxs } from 'react/jsx-runtime'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
@@ -20,6 +21,7 @@ import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 import remarkStringify from 'remark-stringify'
 import { type PluggableList, unified } from 'unified'
+import { visit } from 'unist-util-visit'
 import {
   type ContentItem,
   type ContentMetadata,
@@ -31,15 +33,49 @@ import {
 import { defaultOwner } from '@/config/project-config'
 import { ContentProcessorMode } from '@/core/types'
 import { apis } from '@/fetcher'
-import { a, img, video } from './components'
+import { a, img, pre, video } from './components'
 import remarkHeadingId from './plugins/remark-heading-id'
 import remarkVideo from './plugins/remark-video'
 
 const isValidHeading = (v: unknown): v is HeadingItem => isObject(v) && !!v.id
 
+const CODE_BLOCK_TITLE_PATTERN = /(?:^|\s)title=(?:"([^"]+)"|'([^']+)')/
+const CODE_BLOCK_THEMES = {
+  light: 'one-light',
+  dark: 'dark-plus',
+} as const
+
+const getCodeBlockTitle = (meta?: string) => {
+  if (!meta) return ''
+
+  const match = meta.match(CODE_BLOCK_TITLE_PATTERN)
+  return match?.[1] ?? match?.[2] ?? ''
+}
+
+const rehypeCodeBlockTitle = () => {
+  return (tree: Root) => {
+    visit(tree, 'element', (node: Element) => {
+      if (node.tagName !== 'pre') return
+
+      const [head] = node.children
+      if (head?.type !== 'element' || head.tagName !== 'code') return
+
+      const meta = head.data?.meta ?? head.properties?.metastring?.toString()
+      const title = getCodeBlockTitle(meta)
+      if (!title) return
+
+      node.properties = {
+        ...(node.properties ?? {}),
+        'data-title': title,
+      }
+    })
+  }
+}
+
 const components = {
   a,
   img,
+  pre,
   video,
 } as unknown as RehypeReactOptions['components']
 
@@ -85,7 +121,7 @@ const createProcessor = (
   // Processing HTML
   const rehypePlugins: PluggableList = (() => {
     if (isTextOnly) return []
-    if (isHtmlOnly) return [[rehypeStringify]]
+    if (isHtmlOnly) return [[rehypeCodeBlockTitle], [rehypeStringify]]
 
     return [
       [rehypeSlug, { prefix: '' }],
@@ -111,10 +147,16 @@ const createProcessor = (
         rehypeShiki,
         {
           // https://shiki.style/themes
-          themes: {
-            light: 'one-light',
-            dark: 'dracula-soft',
+          addLanguageClass: true,
+          parseMetaString(meta: string) {
+            const title = getCodeBlockTitle(meta)
+            if (!title) return {}
+
+            return {
+              'data-title': title,
+            }
           },
+          themes: CODE_BLOCK_THEMES,
         },
       ],
       [rehypeStringify],
@@ -307,7 +349,7 @@ export const parse = async (
 ): Promise<ContentItem | null> => {
   try {
     const raw = (await readFile(filePath, 'utf-8')) || ''
-    const { content: localMarkdown = '', data = {} } = matter(raw)
+    const { content: localMarkdown, data } = matter(raw)
 
     const { date: utcDate, remote, ...rest } = data
     const { date, timestamp } = parseDate(utcDate)
