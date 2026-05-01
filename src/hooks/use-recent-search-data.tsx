@@ -33,6 +33,18 @@ const getRestItems = (
   return isArray(prev) ? prev.filter((j) => j.slug !== i.slug) : []
 }
 
+const toRecentSearchItem = ({
+  slug,
+  title,
+  cover,
+  desc,
+}: SearchCacheItem): SearchCacheItem => ({
+  slug,
+  title,
+  cover,
+  desc,
+})
+
 export const useRecentSearchData = () => {
   const { locale } = useClientLocale()
   const { searchFolder } = useClientLocation()
@@ -47,7 +59,7 @@ export const useRecentSearchData = () => {
   const addRecent = (i: SearchCacheItem) => {
     set((prev) => {
       const rest = getRestItems(i, prev)
-      const next = [i, ...rest]
+      const next = [toRecentSearchItem(i), ...rest]
       return next.slice(0, config.limit)
     })
   }
