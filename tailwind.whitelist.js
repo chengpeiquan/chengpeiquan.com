@@ -1,5 +1,6 @@
 export default [
   'dark',
+  'not-prose',
   'text-primary',
   'text-foreground',
   '!text-foreground',
