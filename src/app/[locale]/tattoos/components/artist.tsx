@@ -8,15 +8,31 @@ import { ExternalLink } from '@/navigation'
 export const Artist: React.FC = () => {
   return (
     <div className="mx-auto w-full max-w-md">
-      <p className="mb-8 text-center text-base leading-relaxed text-muted-foreground">
+      <p className="mb-8 text-center text-base/relaxed text-muted-foreground">
         {tattooArtist.introduction}
       </p>
 
-      <Card className="relative mx-auto max-w-xs overflow-hidden rounded-2xl bg-gradient-to-b from-background/80 to-background p-12 sm:max-w-sm">
-        <div className="absolute left-0 top-0 h-40 w-full bg-gradient-to-b from-zinc-800/50 to-background/20"></div>
+      <Card
+        className="
+          relative mx-auto max-w-xs overflow-hidden rounded-2xl bg-linear-to-b
+          from-background/80 to-background p-12
+          sm:max-w-sm
+        "
+      >
+        <div
+          className="
+            absolute top-0 left-0 h-40 w-full bg-linear-to-b from-zinc-800/50
+            to-background/20
+          "
+        ></div>
 
         <div className="flex flex-col items-center justify-center gap-6">
-          <div className="relative size-36 overflow-hidden rounded-full ring-4 ring-background ring-offset-2">
+          <div
+            className="
+              relative size-36 overflow-hidden rounded-full ring-4
+              ring-background ring-offset-2
+            "
+          >
             <Image
               src={tattooArtist.avatar}
               alt={tattooArtist.name}
@@ -37,7 +53,7 @@ export const Artist: React.FC = () => {
           <Button className="rounded-full px-8" variant="default">
             <ExternalLink
               href={tattooArtist.xiaohongshuLink}
-              className="!text-inherit"
+              className="text-inherit!"
             >
               小红书主页
             </ExternalLink>

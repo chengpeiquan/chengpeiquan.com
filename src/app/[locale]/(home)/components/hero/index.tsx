@@ -7,7 +7,12 @@ import { ScrollIndicator } from './scroll-indicator'
 
 export const Hero: React.FC<PropsWithDevice> = ({ isMobile }) => {
   return (
-    <div className="dark relative flex min-h-[95vh] w-full items-center justify-center bg-[#050505]">
+    <div
+      className="
+        dark relative flex min-h-[95vh] w-full items-center justify-center
+        bg-[#050505]
+      "
+    >
       {!isMobile && (
         <>
           <LeftPattern />

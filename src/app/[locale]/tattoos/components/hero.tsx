@@ -36,10 +36,20 @@ export const Hero = async ({
       )}
     >
       {/* Gradient Mask */}
-      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-background/30 via-background/80 to-background"></div>
+      <div
+        className="
+          absolute inset-0 z-1 bg-linear-to-b from-background/30
+          via-background/80 to-background
+        "
+      ></div>
 
       {/* Image Gallery  */}
-      <div className="grid size-full grid-cols-4 gap-2 lg:grid-cols-5">
+      <div
+        className="
+          grid size-full grid-cols-4 gap-2
+          lg:grid-cols-5
+        "
+      >
         {images.map((image) => {
           const thumbHashKey = getThumbHashCacheMapKey(image)
           const thumbHash = thumbHashMapping[thumbHashKey]
@@ -55,7 +65,10 @@ export const Hero = async ({
                 alt={t('imageAlt')}
                 layout="fill"
                 objectFit="cover"
-                className="transition-transform duration-700 group-hover:scale-110"
+                className="
+                  transition-transform duration-700
+                  group-hover:scale-110
+                "
                 placeholder="blur"
                 blurDataURL={blurDataURL}
               />
@@ -67,12 +80,26 @@ export const Hero = async ({
       </div>
 
       {/* Hero Content */}
-      <div className="absolute inset-x-0 bottom-0 z-[2] px-4 py-12">
+      <div className="absolute inset-x-0 bottom-0 z-2 px-4 py-12">
         <LayoutMain>
-          <Heading className="text-balance text-center font-mono text-4xl font-bold text-foreground md:text-5xl lg:text-6xl">
+          <Heading
+            className="
+              text-center font-mono text-4xl font-bold text-balance
+              text-foreground
+              md:text-5xl
+              lg:text-6xl
+            "
+          >
             {t('title')}
           </Heading>
-          <Paragraph className="mt-4 text-balance text-center font-mono text-base text-muted-foreground md:text-lg lg:text-xl">
+          <Paragraph
+            className="
+              mt-4 text-center font-mono text-base text-balance
+              text-muted-foreground
+              md:text-lg
+              lg:text-xl
+            "
+          >
             {t('description')}
           </Paragraph>
         </LayoutMain>

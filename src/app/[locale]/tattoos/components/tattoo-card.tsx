@@ -39,15 +39,51 @@ export const TattooCard = async ({
 
   return (
     <Card className="overflow-hidden">
-      <CardHeader className="p-4 sm:p-6">
-        <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-center">
-          <CardTitle className="flex flex-col gap-3 sm:flex-row sm:items-end sm:gap-0">
-            <i className="mr-6 font-mono text-2xl font-bold text-primary sm:text-4xl">
+      <CardHeader
+        className="
+          p-4
+          sm:p-6
+        "
+      >
+        <div
+          className="
+            flex flex-col justify-between gap-3
+            sm:flex-row sm:items-center
+          "
+        >
+          <CardTitle
+            className="
+              flex flex-col gap-3
+              sm:flex-row sm:items-end sm:gap-0
+            "
+          >
+            <i
+              className="
+                mr-6 font-mono text-2xl font-bold text-primary
+                sm:text-4xl
+              "
+            >
               Vol.
-              <i className="text-4xl sm:text-7xl">{index + 1}</i>
+              <i
+                className="
+                  text-4xl
+                  sm:text-7xl
+                "
+              >
+                {index + 1}
+              </i>
             </i>
 
-            {title && <span className="text-3xl sm:mb-1">{title}</span>}
+            {title && (
+              <span
+                className="
+                  text-3xl
+                  sm:mb-1
+                "
+              >
+                {title}
+              </span>
+            )}
           </CardTitle>
 
           <time className="font-mono text-sm text-muted-foreground">
@@ -56,13 +92,25 @@ export const TattooCard = async ({
         </div>
 
         {introduction && (
-          <div className="prose prose-neutral text-base text-muted-foreground dark:prose-invert prose-p:last:mb-0">
+          <div
+            className="
+              prose text-base text-muted-foreground prose-neutral
+              dark:prose-invert
+              prose-p:last:mb-0
+            "
+          >
             {introduction}
           </div>
         )}
       </CardHeader>
 
-      <CardContent className="grid grid-cols-1 gap-4 px-4 pb-4 pt-0 sm:grid-cols-2 sm:px-6 sm:pb-6 lg:grid-cols-3">
+      <CardContent
+        className="
+          grid grid-cols-1 gap-4 px-4 pt-0 pb-4
+          sm:grid-cols-2 sm:px-6 sm:pb-6
+          lg:grid-cols-3
+        "
+      >
         {story.images.map((image, i) => {
           const thumbHashKey = getThumbHashCacheMapKey(image)
           const thumbHash = thumbHashMapping[thumbHashKey]
@@ -71,13 +119,18 @@ export const TattooCard = async ({
           return (
             <div
               key={i}
-              className="group relative aspect-square overflow-hidden rounded-lg"
+              className="
+                group relative aspect-square overflow-hidden rounded-lg
+              "
             >
               <Image
                 src={image}
                 alt={`${title || ''} - ${i + 1}`}
                 fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                className="
+                  object-cover transition-transform duration-500
+                  group-hover:scale-105
+                "
                 sizes="(max-width: 768px) 33vw, 300px"
                 placeholder="blur"
                 blurDataURL={blurDataURL}

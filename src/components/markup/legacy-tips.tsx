@@ -79,7 +79,10 @@ export const LegacyTips = async ({ locale, timestamp }: LegacyTipsProps) => {
 
   const cls = cn(
     'box-border w-full p-3 text-center',
-    'rounded-lg bg-gray-50 text-sm text-gray-600 dark:bg-white/5 dark:text-gray-300',
+    `
+      rounded-lg bg-gray-50 text-sm text-gray-600
+      dark:bg-white/5 dark:text-gray-300
+    `,
   )
 
   if (!visible) return null

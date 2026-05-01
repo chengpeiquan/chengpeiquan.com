@@ -30,8 +30,19 @@ export const Books = async ({ locale, isMobile }: BooksProps) => {
     <SectionContainer>
       <SectionTitle title={t('title')} description={t('description')} />
 
-      <Card className="mx-auto flex max-w-screen-lg flex-col gap-6 p-6 md:flex-row">
-        <div className="relative flex aspect-[500/740] w-full shrink-0 md:w-[280px] lg:w-[340px]">
+      <Card
+        className="
+          mx-auto flex max-w-5xl flex-col gap-6 p-6
+          md:flex-row
+        "
+      >
+        <div
+          className="
+            relative flex aspect-500/740 w-full shrink-0
+            md:w-[280px]
+            lg:w-[340px]
+          "
+        >
           <Image
             src={book.cover}
             alt={book.title}
@@ -69,7 +80,11 @@ export const Books = async ({ locale, isMobile }: BooksProps) => {
           />
 
           <PurchaseLinks
-            className="flex flex-1 flex-col items-start justify-end gap-3 overflow-hidden text-sm sm:flex-row sm:items-end"
+            className="
+              flex flex-1 flex-col items-start justify-end gap-3 overflow-hidden
+              text-sm
+              sm:flex-row sm:items-end
+            "
             labelClassName="h-10 items-center"
             purchaseLinks={book.purchaseLinks}
             locale={locale}

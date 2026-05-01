@@ -17,6 +17,7 @@ import { isMobileDevice } from '@/config/middleware-config'
 import { type ListPageProps } from '@/config/route-config'
 import { getList, getListMetadata } from '@/core/dispatcher'
 import { Link } from '@/navigation'
+import { cn } from '@/utils'
 
 const folder = ContentFolder.Article
 
@@ -39,27 +40,33 @@ const ArticleCard: React.FC<{
       <Link href={link} className="inline-block w-fit">
         <Heading
           level={3}
-          className="
+          className={cn(`
             line-clamp-2 text-lg break-all
             md:text-2xl
-          "
+          `)}
         >
           {title}
         </Heading>
       </Link>
 
-      <div className="
-        flex flex-col gap-4
-        xs:flex-row
-      ">
+      <div
+        className="
+          flex flex-col gap-4
+          xs:flex-row
+        "
+      >
         {cover && (
           <Link href={link} variant="image">
-            <div className="
-              relative flex aspect-500/400 w-full shrink-0 overflow-hidden
-              rounded-lg
-              xs:w-[160px]
-              md:w-[240px]
-            ">
+            <div
+              className={cn(
+                `
+                  relative flex aspect-500/400 w-full shrink-0 overflow-hidden
+                  rounded-lg
+                  xs:w-[160px]
+                  md:w-[240px]
+                `,
+              )}
+            >
               <Image
                 src={cover}
                 alt={title}
@@ -72,10 +79,14 @@ const ArticleCard: React.FC<{
         )}
 
         <div className="flex flex-col justify-between">
-          <p className="
-            mb-0 line-clamp-2 h-0 text-sm text-muted-foreground
-            xs:mb-4 xs:line-clamp-3 xs:h-auto xs:text-base
-          ">
+          <p
+            className={cn(
+              `
+                mb-0 line-clamp-2 h-0 text-sm text-muted-foreground
+                xs:mb-4 xs:line-clamp-3 xs:h-auto xs:text-base
+              `,
+            )}
+          >
             {desc}
           </p>
 
@@ -104,10 +115,12 @@ export default async function ArticlesPage({
   )
 
   return (
-    <LayoutMain className="
-      justify-between gap-16
-      sm:flex-row
-    ">
+    <LayoutMain
+      className="
+        justify-between gap-16
+        sm:flex-row
+      "
+    >
       <HolyGrailContent>
         <CategoryLinks
           locale={locale}

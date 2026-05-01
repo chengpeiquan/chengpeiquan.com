@@ -39,13 +39,21 @@ const ButtonGroup: React.FC<ButtonGroupProps> = ({ locale, isMobile }) => {
             <Link
               href={`/articles/${i.slug}/1`}
               className={cn(
-                'box-border flex size-full items-center justify-center overflow-hidden p-2',
+                `
+                  box-border flex size-full items-center justify-center
+                  overflow-hidden p-2
+                `,
                 isMobile
                   ? 'text-sm'
-                  : 'text-lg sm:text-lg lg:text-xl xl:text-2xl',
+                  : `
+                    text-lg
+                    sm:text-lg
+                    lg:text-xl
+                    xl:text-2xl
+                  `,
               )}
             >
-              <span className="whitespace-break-spaces break-all">{label}</span>
+              <span className="break-all whitespace-break-spaces">{label}</span>
             </Link>
           </Button>
         )
@@ -71,22 +79,34 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
 
   return (
     <Card key={slug} className={cn(className, 'group overflow-hidden')}>
-      <Link href={href} className="relative block aspect-[5/4] overflow-hidden">
+      <Link href={href} className="relative block aspect-5/4 overflow-hidden">
         <Image
           src={metadata.cover}
           alt={metadata.title}
           fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className="
+            object-cover transition-transform duration-500
+            group-hover:scale-105
+          "
           sizes="(min-width: 1280px) 400px, (min-width: 768px) 50vw, 100vw"
         />
       </Link>
 
-      <CardFooter className="flex w-full flex-col items-start gap-4 p-4 lg:p-6">
+      <CardFooter
+        className="
+          flex w-full flex-col items-start gap-4 p-4
+          lg:p-6
+        "
+      >
         <Link href={href}>
           <Heading
             level={4}
             className={cn(
-              'line-clamp-2 break-all font-medium tracking-tight transition-colors group-hover:text-foreground',
+              `
+                line-clamp-2 font-medium tracking-tight break-all
+                transition-colors
+                group-hover:text-foreground
+              `,
               latest ? 'text-3xl' : 'text-base',
             )}
           >
@@ -126,13 +146,25 @@ export const Articles = async ({ locale, isMobile }: ArticlesProps) => {
   const [latestArticle, ...restArticles] = limitedItems
   const articleList = isMobile ? limitedItems : restArticles
 
-  const gapCls = cn('gap-4 lg:gap-6 xl:gap-8')
+  const gapCls = cn(`
+    gap-4
+    lg:gap-6
+    xl:gap-8
+  `)
 
   return (
     <SectionContainer>
       <SectionTitle title={t('title')} description={t('description')} />
 
-      <div className={cn('grid grid-cols-1 md:grid-cols-6', gapCls)}>
+      <div
+        className={cn(
+          `
+            grid grid-cols-1
+            md:grid-cols-6
+          `,
+          gapCls,
+        )}
+      >
         {!isMobile && (
           <ArticleCard item={latestArticle} latest className="col-span-3" />
         )}

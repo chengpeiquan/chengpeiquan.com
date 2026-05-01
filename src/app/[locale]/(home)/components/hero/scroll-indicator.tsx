@@ -7,7 +7,7 @@ import React from 'react'
 export const ScrollIndicator: React.FC = () => {
   return (
     <motion.div
-      className="absolute bottom-16 left-1/2 z-[1] -translate-x-1/2"
+      className="absolute bottom-16 left-1/2 z-1 -translate-x-1/2"
       initial={{ opacity: 0 }}
       animate={{
         opacity: [0, 0.4, 0],

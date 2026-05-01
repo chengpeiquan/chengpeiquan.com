@@ -38,7 +38,12 @@ const CookbookCard: React.FC<{
     <li className="flex w-full flex-col gap-2">
       {cover && (
         <Link href={link} variant="image">
-          <div className="relative flex aspect-[500/400] w-full shrink-0 overflow-hidden rounded-lg">
+          <div
+            className="
+              relative flex aspect-500/400 w-full shrink-0 overflow-hidden
+              rounded-lg
+            "
+          >
             <Image
               src={cover}
               alt={title}
@@ -52,7 +57,7 @@ const CookbookCard: React.FC<{
 
       <Heading
         level={3}
-        className="line-clamp-2 break-all text-base font-normal"
+        className="line-clamp-2 text-base font-normal break-all"
       >
         <Link href={link}>{title}</Link>
       </Heading>
@@ -94,7 +99,12 @@ export default async function CookbooksPage({
       {isEmpty ? (
         <Empty locale={locale} />
       ) : (
-        <ul className="col-auto row-auto mb-4 grid grid-cols-1 gap-8 md:mb-12 md:grid-cols-5">
+        <ul
+          className="
+            col-auto row-auto mb-4 grid grid-cols-1 gap-8
+            md:mb-12 md:grid-cols-5
+          "
+        >
           {items.map((i) => (
             <CookbookCard
               key={i.metadata.title}

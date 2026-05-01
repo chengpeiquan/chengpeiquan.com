@@ -42,7 +42,12 @@ export const DataDescription = async ({ locale }: PropsWithLocale) => {
           <Separator />
 
           <AlertDialogDescription>
-            <ol className="ml-4 flex list-decimal flex-col gap-2 [&>li]:break-all">
+            <ol
+              className="
+                ml-4 flex list-decimal flex-col gap-2
+                [&>li]:break-all
+              "
+            >
               {Array(4)
                 .fill('')
                 .map((_, idx) => {

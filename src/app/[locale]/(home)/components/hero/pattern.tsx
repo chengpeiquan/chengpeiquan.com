@@ -2,18 +2,18 @@ import React from 'react'
 import { cn } from '@/utils'
 
 const rootCls = cn(
-  'pointer-events-none absolute z-[2] size-full overflow-visible',
+  'pointer-events-none absolute z-2 size-full overflow-visible',
 )
 const svgCls = cn(
   'size-full origin-center scale-150 opacity-15',
   'will-change-transform',
-  '[backface-visibility:hidden]',
-  '[transform:translateZ(0)]',
+  'backface-hidden',
+  'transform-[translateZ(0)]',
 )
 
 export const LeftPattern: React.FC = () => {
   return (
-    <div className={cn(rootCls, 'left-0 top-0 translate-x-[-20%]')}>
+    <div className={cn(rootCls, 'top-0 left-0 translate-x-[-20%]')}>
       <svg
         className={svgCls}
         xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +23,7 @@ export const LeftPattern: React.FC = () => {
         <g
           stroke="currentColor"
           strokeWidth="0.8"
-          className="mix-blend-soft-light [transform-origin:center]"
+          className="origin-center mix-blend-soft-light"
         >
           {/* Dense rings on the left */}
           <circle
@@ -66,7 +66,7 @@ export const LeftPattern: React.FC = () => {
 
 export const RightPattern: React.FC = () => {
   return (
-    <div className={cn(rootCls, 'right-0 top-1/4 translate-x-[40%]')}>
+    <div className={cn(rootCls, 'top-1/4 right-0 translate-x-[40%]')}>
       <svg
         className={svgCls}
         xmlns="http://www.w3.org/2000/svg"
@@ -76,7 +76,7 @@ export const RightPattern: React.FC = () => {
         <g
           stroke="currentColor"
           strokeWidth="0.8"
-          className="mix-blend-soft-light [transform-origin:center]"
+          className="origin-center mix-blend-soft-light"
         >
           {/* Sparse rings on the right */}
           <circle

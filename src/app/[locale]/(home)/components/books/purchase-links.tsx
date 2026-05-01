@@ -46,7 +46,9 @@ export const PurchaseLinks = async ({
             <ExternalLink
               key={link.title}
               href={link.href}
-              className="inline-flex size-full items-center justify-center !text-inherit"
+              className="
+                inline-flex size-full items-center justify-center text-inherit!
+              "
             >
               {link.title}
             </ExternalLink>

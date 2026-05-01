@@ -10,14 +10,14 @@ import {
 export const FriendlyLinks: React.FC<PropsWithControllable> = (props) => {
   return (
     <SidebarBlock title="友情链接" {...props}>
-      <div className="w-full space-x-3 space-y-2">
+      <div className="w-full space-y-2 space-x-3">
         {friendlyLinks.map((i, idx) => {
           return (
             <React.Fragment key={i.href}>
               {idx > 0 && (
                 <Separator
                   orientation="vertical"
-                  className="!my-0 inline-block h-4 align-middle"
+                  className="my-0! inline-block h-4 align-middle"
                 />
               )}
 

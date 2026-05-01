@@ -78,7 +78,12 @@ export const LayoutContainer = async ({
           <>
             <SearchBox />
 
-            <div className="box-border flex h-full flex-1 items-center justify-end overflow-hidden pr-1">
+            <div
+              className="
+                box-border flex h-full flex-1 items-center justify-end
+                overflow-hidden pr-1
+              "
+            >
               <NavigationLinks />
             </div>
           </>
@@ -92,7 +97,13 @@ export const LayoutContainer = async ({
         style={getBrbStyle(0, isMobile)}
       />
 
-      <LayoutFooter className="h-28 flex-col gap-2 sm:flex-row sm:gap-12 md:h-32">
+      <LayoutFooter
+        className="
+          h-28 flex-col gap-2
+          sm:flex-row sm:gap-12
+          md:h-32
+        "
+      >
         <span className="text-muted-foreground">
           © 2014-{new Date().getFullYear()} {t('name')}
         </span>
