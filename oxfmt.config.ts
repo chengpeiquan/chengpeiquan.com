@@ -3,6 +3,6 @@ import { defineConfig } from 'oxfmt'
 
 export default defineConfig(
   getOxfmtConfig({
-    ignorePatterns: ['**/*.md'],
+    ignorePatterns: ['**/*.md', '**/public/pagefind/**'],
   }),
 )

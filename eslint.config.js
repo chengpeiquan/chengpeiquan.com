@@ -60,6 +60,7 @@ export default defineEslintConfig(
     ignores: [
       '**/dist/**',
       '**/public/**/*.json',
+      '**/public/pagefind/**',
       '**/cache/**/*.json',
       '**/.next/**',
       '**/.build/**',

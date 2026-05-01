@@ -13,6 +13,7 @@ export default defineOxlintConfig(oxlintPresets.react(), {
     '**/dist/**',
     '**/.next/**',
     '**/.build/**',
+    '**/public/pagefind/**',
     '**/CHANGELOG.md',
     '**/types/**/*.d.ts',
     'docs/plans/**',
