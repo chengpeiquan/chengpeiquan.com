@@ -1,3 +1,13 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+@plugin 'tailwindcss-animate';
+@import 'blackwork/tailwind.css';
+@import '@blackwork/docs/tailwind.css';
+@import '@blackwork/machine/tailwind.css';
+@source '../app';
+@source '../components';
+@source '../navigation.tsx';
+
 html {
   font-family:
     PingFang SC,
