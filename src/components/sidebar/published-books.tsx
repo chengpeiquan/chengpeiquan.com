@@ -21,7 +21,11 @@ export const PublishedBooks: React.FC<PropsWithControllable> = (props) => {
           target="_blank"
           variant="image"
         >
-          <div className="relative aspect-[1920/1080] w-full overflow-hidden rounded-lg">
+          <div
+            className="
+              relative aspect-1920/1080 w-full overflow-hidden rounded-lg
+            "
+          >
             <Image
               // src="https://cdn.chengpeiquan.com/img/2023/05/20230508232214.jpg?x-oss-process=image/interlace,1"
               src="https://cdn.chengpeiquan.com/img/2025/01/202501012317610.jpg?x-oss-process=image/interlace,1"

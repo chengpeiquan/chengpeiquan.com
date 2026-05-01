@@ -23,7 +23,12 @@ export const AuthorRecommendation = async ({
   const content = res.jsxElement
 
   return (
-    <div className="prose prose-neutral text-base dark:prose-invert">
+    <div
+      className="
+        prose text-base prose-neutral
+        dark:prose-invert
+      "
+    >
       {content}
     </div>
   )

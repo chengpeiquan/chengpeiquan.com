@@ -125,7 +125,11 @@ export const NavigationLinks: React.FC<NavigationLinksProps> = ({
   }, [forceVisible, isLg])
 
   const cls = cn(
-    'flex-row gap-4 text-lg md:items-center md:gap-5 md:text-sm lg:gap-6',
+    `
+      flex-row gap-4 text-lg
+      md:items-center md:gap-5 md:text-sm
+      lg:gap-6
+    `,
     {
       'hidden lg:flex': !visible,
       flex: visible,

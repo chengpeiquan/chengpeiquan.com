@@ -25,7 +25,14 @@ interface ButtonGroupProps extends PropsWithLocale {
 
 const ButtonGroup: React.FC<ButtonGroupProps> = ({ locale, items }) => {
   return (
-    <div className="col-span-1 box-border hidden grid-cols-2 gap-2 p-4 md:grid md:gap-4 xl:gap-4 xl:p-6 2xl:p-8">
+    <div
+      className="
+        col-span-1 box-border hidden grid-cols-2 gap-2 p-4
+        md:grid md:gap-4
+        xl:gap-4 xl:p-6
+        2xl:p-8
+      "
+    >
       {items.map((i) => {
         const label = (() => {
           const defaultLabel = i.label[locale]
@@ -39,16 +46,30 @@ const ButtonGroup: React.FC<ButtonGroupProps> = ({ locale, items }) => {
           <Button key={i.slug} variant="outline" className="size-full p-0">
             <Link
               href={`/cookbooks/${i.slug}/1`}
-              className="box-border flex size-full flex-col items-center justify-center gap-1 overflow-hidden p-2"
+              className="
+                box-border flex size-full flex-col items-center justify-center
+                gap-1 overflow-hidden p-2
+              "
             >
               <Image
                 src={i.icon!}
                 alt={label}
                 width={32}
                 height={32}
-                className="size-6 rounded-lg md:size-8 lg:size-6"
+                className="
+                  size-6 rounded-lg
+                  md:size-8
+                  lg:size-6
+                "
               />
-              <span className="whitespace-break-spaces break-all text-xs md:text-base lg:text-sm 2xl:text-base">
+              <span
+                className="
+                  text-xs break-all whitespace-break-spaces
+                  md:text-base
+                  lg:text-sm
+                  2xl:text-base
+                "
+              >
                 {label}
               </span>
             </Link>
@@ -64,13 +85,16 @@ const CookbookCard: React.FC<{ item: MetaCacheItem }> = ({ item }) => {
     <Card className="group overflow-hidden rounded-none">
       <Link
         href={`/cookbook/${item.slug}`}
-        className="relative block aspect-[5/4]"
+        className="relative block aspect-5/4"
       >
         <Image
           src={item.metadata.cover}
           alt={item.metadata.title}
           fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className="
+            object-cover transition-transform duration-500
+            group-hover:scale-105
+          "
           sizes="(min-width: 1280px) 400px, (min-width: 768px) 50vw, 100vw"
         />
       </Link>
@@ -117,14 +141,21 @@ export const Cookbooks = async ({ locale }: CookbooksProps) => {
   const bottomCategories = categories.slice(count.categories / 2)
 
   return (
-    <SectionContainer fullscreen className="!pb-0">
+    <SectionContainer fullscreen className="pb-0!">
       <SectionTitle
         title={t('title')}
         description={t('description')}
         className="container"
       />
 
-      <div className="grid grid-cols-2 gap-0 md:grid-cols-3 lg:grid-cols-5 2xl:grid-cols-6">
+      <div
+        className="
+          grid grid-cols-2 gap-0
+          md:grid-cols-3
+          lg:grid-cols-5
+          2xl:grid-cols-6
+        "
+      >
         <CookbookGroup items={topCookbooks} />
         <ButtonGroup locale={locale} items={topCategories} />
         <CookbookGroup items={middleCookbooks} />
@@ -132,7 +163,12 @@ export const Cookbooks = async ({ locale }: CookbooksProps) => {
         <CookbookGroup items={bottomCookbooks} />
       </div>
 
-      <div className="mt-12 flex w-full justify-center md:hidden">
+      <div
+        className="
+          mt-12 flex w-full justify-center
+          md:hidden
+        "
+      >
         <Button variant="outline" size="lg">
           <Link href={`/cookbooks/1`}>{t('viewMore')}</Link>
         </Button>

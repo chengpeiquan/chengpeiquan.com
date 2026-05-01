@@ -25,28 +25,30 @@ const linkVariants = cva('transition-colors', {
   variants: {
     variant: {
       inherit: '',
-      default:
+      default: cn(
         `
           text-neutral-700
           hover:text-neutral-950
           dark:text-neutral-200
           dark:hover:text-foreground
         `,
-      primary:
+      ),
+      primary: cn(
         `
           text-pink-500
           hover:text-pink-600
           dark:text-pink-300
           dark:hover:text-pink-200
         `,
-      secondary: `
+      ),
+      secondary: cn(`
         text-muted-foreground
         hover:text-foreground
-      `,
-      image: `
+      `),
+      image: cn(`
         hover:opacity-90
         dark:hover:opacity-85
-      `,
+      `),
     },
     strong: {
       true: 'font-medium',

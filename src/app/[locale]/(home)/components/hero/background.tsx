@@ -5,10 +5,20 @@ export const Background: React.FC = () => {
   return (
     <div className="absolute inset-0 overflow-hidden">
       {/* A mask that starts to fade from the bottom */}
-      <div className="absolute inset-0 z-[1] bg-gradient-to-t from-background via-background/80 via-15% to-transparent" />
+      <div
+        className="
+          absolute inset-0 z-1 bg-linear-to-t from-background via-background/80
+          via-15% to-transparent
+        "
+      />
 
       {/* Key visual image */}
-      <div className="pointer-events-none absolute left-[65%] top-1/2 aspect-square h-full -translate-x-1/2 -translate-y-1/2">
+      <div
+        className="
+          pointer-events-none absolute top-1/2 left-[65%] aspect-square h-full
+          -translate-1/2
+        "
+      >
         <Image
           src="https://cdn.chengpeiquan.com/img/2025/03/202503242351919.jpg?x-oss-process=image/interlace,1"
           alt=""
@@ -19,7 +29,7 @@ export const Background: React.FC = () => {
             objectFit: 'contain',
             filter: 'brightness(1.1) contrast(1.05)',
           }}
-          className="rotate-2 scale-[1.45]"
+          className="scale-[1.45] rotate-2"
         />
       </div>
     </div>

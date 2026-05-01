@@ -80,9 +80,16 @@ const item: Variants = {
 
 const getCls = (feature: Feature) => {
   return cn(
-    'cursor-default font-bold !leading-[1.2]',
-    'text-6xl md:text-7xl lg:text-8xl',
-    'bg-gradient-to-r bg-clip-text text-transparent [-webkit-background-clip:text]',
+    'cursor-default leading-[1.2]! font-bold',
+    `
+      text-6xl
+      md:text-7xl
+      lg:text-8xl
+    `,
+    `
+      bg-linear-to-r bg-clip-text text-transparent
+      [-webkit-background-clip:text]
+    `,
     feature.gradient,
     feature.offset,
   )
@@ -92,7 +99,13 @@ export const Features: React.FC = () => {
   const t = useTranslations('homeConfig.hero')
 
   return (
-    <div className="absolute left-[45%] top-1/2 z-[2] flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-6 sm:left-[30%]">
+    <div
+      className="
+        absolute top-1/2 left-[45%] z-2 flex -translate-1/2 flex-col
+        items-center gap-6
+        sm:left-[30%]
+      "
+    >
       <motion.div variants={container} initial="hidden" animate="show">
         {features.map((feature) => (
           <motion.p
@@ -133,11 +146,19 @@ export const Features: React.FC = () => {
       >
         <Link
           href="/article/true-colors-a-decade"
-          className="inline-flex items-center gap-2 text-base font-light tracking-wider sm:text-lg"
+          className="
+            inline-flex items-center gap-2 text-base font-light tracking-wider
+            sm:text-lg
+          "
           variant="secondary"
         >
           {t('slogan')}
-          <ChevronRight className="size-6 transition-transform group-hover:translate-x-1" />
+          <ChevronRight
+            className="
+              size-6 transition-transform
+              group-hover:translate-x-1
+            "
+          />
         </Link>
       </motion.p>
     </div>

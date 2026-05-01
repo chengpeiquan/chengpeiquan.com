@@ -63,18 +63,25 @@ const MusicDisc: React.FC<MusicDiscProps> = ({
         }}
       >
         <AvatarImage
-          className="box-border overflow-hidden rounded-full border border-solid border-input"
+          className="
+            box-border overflow-hidden rounded-full border border-solid
+            border-input
+          "
           src={albumCover}
           alt={fullName}
         />
         <AvatarFallback>{fullName}</AvatarFallback>
       </Avatar>
 
-      <div className="absolute left-0 top-0 z-10 flex size-full items-center justify-center">
+      <div
+        className="
+          absolute top-0 left-0 z-10 flex size-full items-center justify-center
+        "
+      >
         <Button
           variant="ghost"
           size="icon"
-          className="size-full !bg-transparent"
+          className="size-full bg-transparent!"
           onClick={togglePlay}
         >
           <ButtonIcon className={cn(isMobile ? 'size-10' : 'size-6')} />
@@ -90,7 +97,7 @@ const Musician: React.FC<
   return (
     <div
       className={cn('flex gap-2 overflow-hidden', {
-        'flex-1 justify-center flex-col': isMobile,
+        'flex-1 flex-col justify-center': isMobile,
         'items-center': !isMobile,
       })}
     >
@@ -110,14 +117,16 @@ const Musician: React.FC<
 const GuideArrow: React.FC = () => {
   return (
     <div
-      className="absolute right-[-8px] top-[12px] size-0 border-y-8
-       border-l-8 border-y-transparent
-       border-l-input"
+      className="
+        absolute top-[12px] right-[-8px] size-0 border-y-8 border-l-8
+        border-y-transparent border-l-input
+      "
     >
       <div
-        className="absolute left-[-8px] top-[-6px] size-0 border-y-[6px]
-         border-l-[6px] border-y-transparent
-         border-l-background"
+        className="
+          absolute top-[-6px] left-[-8px] size-0 border-y-[6px] border-l-[6px]
+          border-y-transparent border-l-background
+        "
       ></div>
     </div>
   )
@@ -296,7 +305,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({
           visible ? 'flex' : 'hidden',
           {
             'right-[72px] bottom-[20px] left-[20px] h-[144px]': isMobile,
-            'right-[64px] bottom-[12px] w-[300px] h-[92px]': !isMobile,
+            'right-[64px] bottom-[12px] h-[92px] w-[300px]': !isMobile,
           },
         )}
         style={{ zIndex: brbStyle.zIndex }}

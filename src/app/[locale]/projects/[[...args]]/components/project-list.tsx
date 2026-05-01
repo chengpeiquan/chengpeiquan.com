@@ -33,7 +33,14 @@ export const ProjectList: React.FC<ProjectListProps> = ({
     <div className="flex w-full flex-col gap-6">
       <FilterBar locale={locale} tag={tag} />
 
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+      <div
+        className="
+          grid grid-cols-1 gap-6
+          md:grid-cols-2
+          xl:grid-cols-3
+          2xl:grid-cols-4
+        "
+      >
         {items.map((i) => (
           <ProjectCard key={i.repo + i.name} locale={locale} item={i} />
         ))}

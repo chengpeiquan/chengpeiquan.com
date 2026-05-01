@@ -41,7 +41,7 @@ export default async function TattoosPage({
     <div className="relative w-full">
       <Hero {...sharedProps} />
 
-      <LayoutMain className="gap-12 !pt-0">
+      <LayoutMain className="gap-12 pt-0!">
         <Timeline {...sharedProps} />
         {LocaleIs.isZH(locale) && <Artist />}
       </LayoutMain>

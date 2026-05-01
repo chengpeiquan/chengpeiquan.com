@@ -16,9 +16,15 @@ export const Empty = async ({ locale }: PropsWithLocale) => {
   const avatarCls = cn(
     'flex shrink-0',
     'relative overflow-hidden rounded-full',
-    'border-4 border-solid border-black dark:border-white',
-    'rounded-bl-[78%] rounded-br-[85%] rounded-tl-[43%] rounded-tr-[93%]',
-    'hover:rounded-bl-[98%] hover:rounded-br-[95%] hover:rounded-tl-[93%] hover:rounded-tr-[33%]',
+    `
+      border-4 border-solid border-black
+      dark:border-white
+    `,
+    'rounded-tl-[43%] rounded-tr-[93%] rounded-br-[85%] rounded-bl-[78%]',
+    `
+      hover:rounded-tl-[93%] hover:rounded-tr-[33%] hover:rounded-br-[95%]
+      hover:rounded-bl-[98%]
+    `,
     'transition-all duration-500',
     isMobile ? 'size-48' : 'size-60',
   )

@@ -30,8 +30,19 @@ export const AboutMe = async ({ locale, isMobile }: AboutMeProps) => {
     <SectionContainer>
       <SectionTitle title={t('title')} description={t('description')} />
 
-      <div className="mx-auto grid max-w-screen-lg grid-cols-1 items-center gap-8 lg:grid-cols-2">
-        <div className="relative mx-auto flex aspect-square w-80 max-w-full overflow-hidden rounded-full sm:w-[400px]">
+      <div
+        className="
+          mx-auto grid max-w-5xl grid-cols-1 items-center gap-8
+          lg:grid-cols-2
+        "
+      >
+        <div
+          className="
+            relative mx-auto flex aspect-square w-80 max-w-full overflow-hidden
+            rounded-full
+            sm:w-[400px]
+          "
+        >
           <Image
             src="https://cdn.chengpeiquan.com/img/2025/04/202504060001104.jpg?x-oss-process=image/interlace,1"
             alt={t('avatarAlt')}
@@ -41,7 +52,10 @@ export const AboutMe = async ({ locale, isMobile }: AboutMeProps) => {
 
         <div
           className={cn(
-            'prose prose-neutral !text-left dark:prose-invert',
+            `
+              prose text-left! prose-neutral
+              dark:prose-invert
+            `,
             isMobile ? 'text-base' : 'text-lg',
             '[&_a]:text-base [&_a]:text-muted-foreground [&_a]:no-underline',
           )}

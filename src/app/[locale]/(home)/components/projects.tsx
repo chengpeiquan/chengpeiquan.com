@@ -45,7 +45,12 @@ export const Projects = async ({ locale, isMobile }: ProjectsProps) => {
 
       <div
         className={cn(
-          'grid gap-4 md:grid-cols-3 lg:gap-6 xl:gap-8',
+          `
+            grid gap-4
+            md:grid-cols-3
+            lg:gap-6
+            xl:gap-8
+          `,
           isMobile ? 'grid-cols-1' : 'grid-cols-2',
         )}
       >

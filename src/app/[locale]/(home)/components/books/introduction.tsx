@@ -28,7 +28,12 @@ const ExpandButton: React.FC<{ label: string }> = ({ label }) => {
     <DialogTrigger asChild>
       <span className="inline-flex items-center gap-6 text-base">
         <span>…</span>
-        <span className="inline-flex cursor-pointer items-center hover:text-foreground">
+        <span
+          className="
+            inline-flex cursor-pointer items-center
+            hover:text-foreground
+          "
+        >
           <span>{label}</span>
           <ChevronsDown className="size-4" />
         </span>
@@ -84,9 +89,14 @@ export const BookIntroduction = async ({
         >
           <DialogHeader>
             <DialogTitle>{t('title')}</DialogTitle>
-            <DialogDescription className="!mt-6">
+            <DialogDescription className="mt-6!">
               <ScrollArea className="-mr-4 h-[450px] pr-4">
-                <div className="prose prose-neutral text-sm text-foreground dark:prose-invert dark:text-foreground">
+                <div
+                  className="
+                    prose text-sm text-foreground prose-neutral
+                    dark:text-foreground dark:prose-invert
+                  "
+                >
                   {content}
                 </div>
 
