@@ -16,6 +16,7 @@ import {
 } from '@/config/route-config'
 import { siteConfig } from '@/config/site-config'
 import { ExternalLink, Link } from '@/navigation'
+import { cn } from '@/utils'
 import { LegacyTips } from './legacy-tips'
 
 interface StarOnGitHubProps extends PropsWithLocale {
@@ -65,10 +66,10 @@ const AuthorData = async ({
 
   return (
     <div
-      className={[
+      className={cn(
         'not-prose flex w-full items-center justify-between',
         className,
-      ].join(' ')}
+      )}
     >
       <div className="flex items-center gap-2">
         <Avatar className="size-10">
@@ -165,15 +166,22 @@ export const MarkupRenderer = async ({
   ).filter(Boolean)
 
   return (
-    <article className="
-      prose flex flex-1 flex-col overflow-hidden prose-neutral
-      dark:prose-invert
-    ">
+    <article
+      className={cn(
+        'prose flex flex-1 flex-col overflow-hidden prose-neutral',
+        'dark:prose-invert',
+        'prose-p:text-foreground/80',
+        'prose-li:text-foreground/80',
+      )}
+    >
       <header>
-        <Heading level={1} className="
-          mb-0 text-2xl break-all
-          sm:text-3xl
-        ">
+        <Heading
+          level={1}
+          className={cn(`
+            mb-0 text-2xl break-all
+            sm:text-3xl
+          `)}
+        >
           {metadata.title}
         </Heading>
 

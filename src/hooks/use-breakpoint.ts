@@ -1,6 +1,6 @@
 import { useMediaQuery } from 'blackwork'
 
-// Breakpoint value is referenced from tailwind configuration
+// Breakpoint values are mirrored from the Tailwind theme in globals.css.
 export const useBreakpoint = () => {
   const is2Xs = useMediaQuery('(min-width: 320px)')
   const isXs = useMediaQuery('(min-width: 480px)')
