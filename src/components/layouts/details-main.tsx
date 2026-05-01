@@ -1,10 +1,14 @@
-import { HolyGrailContent, LayoutMain } from 'blackwork'
+import { isObject } from '@bassist/utils'
+import { DefaultContentLayout } from '@blackwork/docs/theme'
+import { getTranslations } from 'next-intl/server'
 import React from 'react'
+import { MusicPlayer } from '@/components/music-player'
 import { type ContentItem } from '@/config/content-config'
 import { type Locale } from '@/config/locale-config'
 import { isMobileDevice } from '@/config/middleware-config'
-import { MarkupRenderer } from '../markup/renderer'
+import { DetailsHeaderMeta } from '../markup/renderer'
 import { DesktopToc, MobileToc } from '../markup/table-of-contents'
+import { toDocsTocHeadings } from '../markup/toc-utils'
 
 interface DetailsMainProps extends Pick<
   ContentItem,
@@ -19,28 +23,31 @@ export const DetailsMain = async ({
   metadata,
   headings,
   jsxElement,
-  aside,
 }: DetailsMainProps) => {
   const isMobile = await isMobileDevice()
+  const t = await getTranslations({
+    locale,
+    namespace: 'basicConfig',
+  })
+  const tocTitle = t('outline.title')
+  const contentTocVisible = toDocsTocHeadings(headings).length >= 2
 
   return (
-    <LayoutMain className="justify-between gap-16 sm:flex-row">
-      {!isMobile && <DesktopToc headings={headings} />}
+    <>
+      {!isMobile && <DesktopToc headings={headings} title={tocTitle} />}
+      {isMobile && <MobileToc headings={headings} title={tocTitle} />}
 
-      <HolyGrailContent>
-        <MarkupRenderer
-          locale={locale}
-          metadata={metadata}
-          toc={
-            isMobile ? (
-              <MobileToc headings={headings} isMobile={isMobile} />
-            ) : null
-          }
-          jsxElement={jsxElement}
-        />
-      </HolyGrailContent>
+      <DefaultContentLayout
+        contentTocVisible={contentTocVisible}
+        headerMeta={<DetailsHeaderMeta locale={locale} metadata={metadata} />}
+        title={metadata.title}
+      >
+        {jsxElement}
+      </DefaultContentLayout>
 
-      {aside}
-    </LayoutMain>
+      {isObject(metadata.bgm) && (
+        <MusicPlayer isMobile={isMobile} {...metadata.bgm} />
+      )}
+    </>
   )
 }

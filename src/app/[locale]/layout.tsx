@@ -3,6 +3,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, getTranslations } from 'next-intl/server'
 import React from 'react'
 import { LayoutContainer } from '@/components/layouts/layout-container'
+import { RouteScrollReset } from '@/components/layouts/route-scroll-reset'
 import { type Locale } from '@/config/locale-config'
 import { sharedMetadata, siteConfig } from '@/config/site-config'
 
@@ -55,6 +56,7 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
+      <RouteScrollReset />
       <LayoutContainer locale={locale}>{children}</LayoutContainer>
     </NextIntlClientProvider>
   )
