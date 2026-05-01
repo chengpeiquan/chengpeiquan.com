@@ -21,16 +21,32 @@ const {
   useRouter,
 } = createNavigation({ locales, pathnames, localePrefix, defaultLocale })
 
-const linkVariants = cva('transition-colors transition-opacity', {
+const linkVariants = cva('transition-colors', {
   variants: {
     variant: {
       inherit: '',
       default:
-        'text-neutral-700 hover:text-neutral-950 dark:text-neutral-200 dark:hover:text-foreground',
+        `
+          text-neutral-700
+          hover:text-neutral-950
+          dark:text-neutral-200
+          dark:hover:text-foreground
+        `,
       primary:
-        'text-pink-500 hover:text-pink-600 dark:text-pink-300 dark:hover:text-pink-200',
-      secondary: 'text-muted-foreground hover:text-foreground',
-      image: 'hover:opacity-90 dark:hover:opacity-85',
+        `
+          text-pink-500
+          hover:text-pink-600
+          dark:text-pink-300
+          dark:hover:text-pink-200
+        `,
+      secondary: `
+        text-muted-foreground
+        hover:text-foreground
+      `,
+      image: `
+        hover:opacity-90
+        dark:hover:opacity-85
+      `,
     },
     strong: {
       true: 'font-medium',

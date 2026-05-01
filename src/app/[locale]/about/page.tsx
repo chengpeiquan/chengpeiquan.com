@@ -1,6 +1,5 @@
-import { LayoutMain } from 'blackwork'
 import { notFound } from 'next/navigation'
-import { MarkupRenderer } from '@/components/markup/renderer'
+import { DetailsMain } from '@/components/layouts/details-main'
 import { ContentFolder } from '@/config/content-config'
 import { type SinglePageProps } from '@/config/route-config'
 import { getDetails, getDetailsMetadata } from '@/core/dispatcher'
@@ -26,12 +25,11 @@ export default async function AboutPage({
   }
 
   return (
-    <LayoutMain>
-      <MarkupRenderer
-        locale={params.locale}
-        metadata={res.metadata}
-        jsxElement={res.jsxElement}
-      />
-    </LayoutMain>
+    <DetailsMain
+      locale={params.locale}
+      metadata={res.metadata}
+      headings={res.headings}
+      jsxElement={res.jsxElement}
+    />
   )
 }

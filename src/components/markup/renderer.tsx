@@ -49,6 +49,7 @@ const StarOnGitHub = async ({ locale, repo }: StarOnGitHubProps) => {
 
 interface AuthorDataProps extends StarOnGitHubProps, PropsWithDevice {
   author: string
+  className?: string
   date: ContentMetadata['date']
 }
 
@@ -56,13 +57,19 @@ const AuthorData = async ({
   locale,
   isMobile,
   author,
+  className = 'my-6',
   date,
   repo,
 }: AuthorDataProps) => {
   const starVisible = !isMobile && repo?.startsWith('http')
 
   return (
-    <div className="not-prose my-6 flex w-full items-center justify-between">
+    <div
+      className={[
+        'not-prose flex w-full items-center justify-between',
+        className,
+      ].join(' ')}
+    >
       <div className="flex items-center gap-2">
         <Avatar className="size-10">
           <AvatarImage src={siteConfig.avatar.small} alt={author} />
@@ -92,31 +99,26 @@ interface MarkupRendererProps
   toc?: React.ReactNode
 }
 
-export const MarkupRenderer = async ({
-  metadata,
-  toc,
-  jsxElement,
-  locale,
-}: MarkupRendererProps) => {
-  const isMobile = await isMobileDevice()
+interface DetailsHeaderMetaProps
+  extends PropsWithLocale, Pick<ContentItem, 'metadata'> {}
 
+export const DetailsHeaderMeta = async ({
+  metadata,
+  locale,
+}: DetailsHeaderMetaProps) => {
+  const isMobile = await isMobileDevice()
   const t = await getTranslations({
     locale,
     namespace: 'siteConfig',
   })
-
   const categories = toArray(
     metadata.categories?.map((slug) => categoryMapping[slug]),
   ).filter(Boolean)
 
   return (
-    <article className="prose prose-neutral flex flex-1 flex-col overflow-hidden dark:prose-invert">
-      <Heading level={1} className="mb-0 break-all text-2xl sm:text-3xl">
-        {metadata.title}
-      </Heading>
-
+    <div className="not-prose flex flex-col gap-5">
       {categories.length > 0 && (
-        <div className="my-4 flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2">
           {categories.map((i) => (
             <Badge variant="outline" key={i.slug}>
               <Link
@@ -135,6 +137,7 @@ export const MarkupRenderer = async ({
         locale={locale}
         isMobile={isMobile}
         author={t('name')}
+        className="mt-1"
         date={metadata.date}
         repo={metadata.repo}
       />
@@ -142,8 +145,68 @@ export const MarkupRenderer = async ({
       {metadata.maybeLegacy && (
         <LegacyTips locale={locale} timestamp={metadata.timestamp} />
       )}
+    </div>
+  )
+}
 
-      {toc}
+export const MarkupRenderer = async ({
+  metadata,
+  toc,
+  jsxElement,
+  locale,
+}: MarkupRendererProps) => {
+  const isMobile = await isMobileDevice()
+  const t = await getTranslations({
+    locale,
+    namespace: 'siteConfig',
+  })
+  const categories = toArray(
+    metadata.categories?.map((slug) => categoryMapping[slug]),
+  ).filter(Boolean)
+
+  return (
+    <article className="
+      prose flex flex-1 flex-col overflow-hidden prose-neutral
+      dark:prose-invert
+    ">
+      <header>
+        <Heading level={1} className="
+          mb-0 text-2xl break-all
+          sm:text-3xl
+        ">
+          {metadata.title}
+        </Heading>
+
+        {categories.length > 0 && (
+          <div className="my-4 flex flex-wrap gap-2">
+            {categories.map((i) => (
+              <Badge variant="outline" key={i.slug}>
+                <Link
+                  className="no-underline"
+                  href={`/${i.group}/${i.slug}/1`}
+                  variant="secondary"
+                >
+                  {i.label[locale]}
+                </Link>
+              </Badge>
+            ))}
+          </div>
+        )}
+
+        <AuthorData
+          locale={locale}
+          isMobile={isMobile}
+          author={t('name')}
+          date={metadata.date}
+          repo={metadata.repo}
+        />
+
+        {metadata.maybeLegacy && (
+          <LegacyTips locale={locale} timestamp={metadata.timestamp} />
+        )}
+
+        {toc}
+      </header>
 
       {jsxElement}
 

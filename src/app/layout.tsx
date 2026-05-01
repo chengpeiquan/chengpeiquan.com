@@ -4,7 +4,6 @@ import { getLocale, getMessages } from 'next-intl/server'
 import React from 'react'
 import { WebAnalytics } from '@/components/layouts/web-analytics'
 import { type Locale } from '@/config/locale-config'
-import 'blackwork/ui-globals.css'
 import '@/styles/globals.css'
 
 export default async function RootLayout({
