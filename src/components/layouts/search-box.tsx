@@ -61,10 +61,14 @@ const SearchResultCard: React.FC<SearchResultCardProps> = ({
       <div className="flex w-full gap-2">
         <Link href={link} className="flex w-full gap-3" onClick={onAdd}>
           {!isMobile && cover && (
-            <div className="
-              relative flex aspect-500/400 w-[88px] shrink-0 overflow-hidden
-              rounded-lg
-            ">
+            <div
+              className={cn(
+                `
+                  relative flex aspect-500/400 w-[88px] shrink-0 overflow-hidden
+                  rounded-lg
+                `,
+              )}
+            >
               <Image
                 src={cover}
                 alt={title}
@@ -75,14 +79,16 @@ const SearchResultCard: React.FC<SearchResultCardProps> = ({
             </div>
           )}
 
-          <div className="
-            flex flex-1 flex-col justify-center gap-2 overflow-hidden
-          ">
+          <div
+            className={cn(
+              'flex flex-1 flex-col justify-center gap-2 overflow-hidden',
+            )}
+          >
             <Heading level={4} className="line-clamp-1 text-base break-all">
               {title}
             </Heading>
 
-            <p className="line-clamp-2 text-xs text-gray-400">
+            <p className="line-clamp-2 text-xs text-muted-foreground">
               <SearchHighlight keyword={keyword} value={excerpt || desc} />
             </p>
           </div>
@@ -141,10 +147,10 @@ const SearchResult: React.FC<
         <div className="flex items-center justify-between">
           <span>{t('recent')}</span>
           <span
-            className="
+            className={cn(`
               cursor-pointer
               hover:text-foreground
-            "
+            `)}
             onClick={clearRecent}
           >
             {t('cleanup')}

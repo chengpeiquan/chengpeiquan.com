@@ -31,7 +31,10 @@ export const TimeDisplay: React.FC<TimeDisplayProps> = ({
 }) => {
   const time = dateOnly ? value.split(' ')[0] : value
 
-  const cls = cn('flex w-fit justify-between text-xs text-gray-400', className)
+  const cls = cn(
+    'flex w-fit justify-between text-xs text-muted-foreground',
+    className,
+  )
 
   return (
     <p className={cls} title={time}>

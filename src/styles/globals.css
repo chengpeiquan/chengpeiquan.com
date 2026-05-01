@@ -4,9 +4,21 @@
 @import 'blackwork/tailwind.css';
 @import '@blackwork/docs/tailwind.css';
 @import '@blackwork/machine/tailwind.css';
+@custom-variant dark (&:where(.dark, .dark *));
 @source '../app';
 @source '../components';
+@source '../contents';
+@source '../core';
 @source '../navigation.tsx';
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+
+  @media (width >= 96rem) {
+    max-width: 1400px;
+  }
+}
 
 html {
   font-family:
