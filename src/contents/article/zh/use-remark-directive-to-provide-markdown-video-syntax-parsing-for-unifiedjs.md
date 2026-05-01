@@ -217,7 +217,7 @@ Remark 提供了这方面的插件支持，仅需安装 [remark-directive](https
 
 简单说一下实现方案，最终是通过编写一个 Remark 插件实现自定义指令，以 `:::video` 的语法，在 Markdown 内容里配置视频的 `src` 、 `poster` 、 `title` 属性。
 
-> 源码在 [plugins/remark-video](https://github.com/chengpeiquan/chengpeiquan.com/blob/main/src/core/parser/plugins/remark-video.ts) ，这里贴的代码在未来可能会有变化。
+> 源码现在维护在 [@blackwork/machine/remark-video](https://github.com/chengpeiquan/blackwork/blob/main/packages/machine/src/plugins/remark-video.ts) ，这里贴的代码在未来可能会有变化。
 
 ### 所需的依赖
 

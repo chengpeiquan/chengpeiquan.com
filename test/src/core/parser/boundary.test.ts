@@ -28,3 +28,9 @@ test('core parser does not depend on app component modules', async () => {
     expect(source, file).not.toContain("from '@/components/")
   }
 })
+
+test('core parser does not keep local plugin implementations', async () => {
+  const files = await collectParserFiles(join(process.cwd(), 'src/core/parser'))
+
+  expect(files.filter((file) => file.includes('/plugins/'))).toEqual([])
+})
