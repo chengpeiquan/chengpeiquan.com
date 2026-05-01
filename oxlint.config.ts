@@ -34,5 +34,6 @@ export default defineOxlintConfig(oxlintPresets.react(), {
     'typescript/prefer-readonly-parameter-types': 'off',
     'typescript/no-misused-promises': 'off',
     'typescript/strict-void-return': 'off',
+    'typescript/prefer-nullish-coalescing': 'off',
   },
 })

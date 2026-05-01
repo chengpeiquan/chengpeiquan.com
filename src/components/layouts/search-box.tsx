@@ -28,10 +28,12 @@ import {
 } from '@/hooks'
 import { Link } from '@/navigation'
 import { cn } from '@/utils'
+import { SearchHighlight } from './search-highlight'
 
 interface SearchResultCardProps extends PropsWithDevice {
   isRecent: boolean
   item: SearchCacheItem
+  keyword: string
   onAdd: () => void
   onRemove: () => void
 }
@@ -40,10 +42,11 @@ const SearchResultCard: React.FC<SearchResultCardProps> = ({
   isMobile,
   isRecent,
   item,
+  keyword,
   onAdd,
   onRemove,
 }) => {
-  const { slug, cover, title, desc } = item
+  const { slug, cover, title, desc, excerpt } = item
 
   const t = useTranslations('searchConfig')
   const { isCookbook } = useClientLocation()
@@ -58,7 +61,10 @@ const SearchResultCard: React.FC<SearchResultCardProps> = ({
       <div className="flex w-full gap-2">
         <Link href={link} className="flex w-full gap-3" onClick={onAdd}>
           {!isMobile && cover && (
-            <div className="relative flex aspect-[500/400] w-[88px] shrink-0 overflow-hidden rounded-lg">
+            <div className="
+              relative flex aspect-500/400 w-[88px] shrink-0 overflow-hidden
+              rounded-lg
+            ">
               <Image
                 src={cover}
                 alt={title}
@@ -69,12 +75,16 @@ const SearchResultCard: React.FC<SearchResultCardProps> = ({
             </div>
           )}
 
-          <div className="flex flex-1 flex-col justify-center gap-2 overflow-hidden">
-            <Heading level={4} className="line-clamp-1 break-all text-base">
+          <div className="
+            flex flex-1 flex-col justify-center gap-2 overflow-hidden
+          ">
+            <Heading level={4} className="line-clamp-1 text-base break-all">
               {title}
             </Heading>
 
-            <p className="line-clamp-2 text-xs text-gray-400">{desc}</p>
+            <p className="line-clamp-2 text-xs text-gray-400">
+              <SearchHighlight keyword={keyword} value={excerpt || desc} />
+            </p>
           </div>
         </Link>
 
@@ -131,7 +141,10 @@ const SearchResult: React.FC<
         <div className="flex items-center justify-between">
           <span>{t('recent')}</span>
           <span
-            className="cursor-pointer hover:text-foreground"
+            className="
+              cursor-pointer
+              hover:text-foreground
+            "
             onClick={clearRecent}
           >
             {t('cleanup')}
@@ -156,7 +169,7 @@ const SearchResult: React.FC<
 
   return (
     <>
-      <Paragraph className="my-3 break-all px-3 text-sm text-muted-foreground">
+      <Paragraph className="my-3 px-3 text-sm break-all text-muted-foreground">
         {title}
       </Paragraph>
 
@@ -166,6 +179,7 @@ const SearchResult: React.FC<
           isMobile={isMobile}
           isRecent={isRecent}
           item={i}
+          keyword={isRecent ? '' : keyword}
           onAdd={() => {
             addRecent(i)
             onClose()

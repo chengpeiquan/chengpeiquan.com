@@ -32,7 +32,14 @@ export type MetaCacheItem = Pick<ContentItem, 'slug' | 'metadata'>
 
 // The data sources for local searches all come from meta cache
 export type SearchCacheItem = Pick<MetaCacheItem, 'slug'> &
-  Pick<ContentMetadata, 'title' | 'cover' | 'desc'>
+  Pick<ContentMetadata, 'title' | 'cover' | 'desc'> & {
+    /**
+     * The matched snippet returned by Pagefind, usually containing `<mark>`
+     * tags. It is only used for the current search display and should not be
+     * stored in recent search data.
+     */
+    excerpt?: string
+  }
 
 export const isSearchCacheItem = (v: unknown): v is SearchCacheItem => {
   return isObject(v) && !!v.slug

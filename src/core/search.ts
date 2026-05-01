@@ -38,6 +38,14 @@ const getSearchMetaValue = (
   return item.meta[key] ?? ''
 }
 
+const getPagefindExcerpt = (item: SearchClientResultItem) => {
+  return (
+    item.excerpt ??
+    item.subResults.find(({ excerpt }) => !!excerpt)?.excerpt ??
+    ''
+  )
+}
+
 const includesKeyword = (value: string | undefined, keyword: string) => {
   return value?.toLowerCase().includes(keyword) ?? false
 }
@@ -75,11 +83,13 @@ const searchMetaCache = async (
 const toSearchCacheItem = (
   item: SearchClientResultItem,
 ): SearchCacheItem | null => {
+  const excerpt = getPagefindExcerpt(item)
   const result = {
     slug: getSearchMetaValue(item, 'slug'),
     title: getSearchMetaValue(item, 'title'),
     cover: getSearchMetaValue(item, 'cover'),
     desc: getSearchMetaValue(item, 'desc'),
+    ...(excerpt ? { excerpt } : {}),
   }
 
   return isSearchCacheItem(result) ? result : null

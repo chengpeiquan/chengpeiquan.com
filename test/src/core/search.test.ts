@@ -143,4 +143,46 @@ describe('searchContents', () => {
       },
     ])
   })
+
+  test('preserves Pagefind excerpt for full-text matches', async () => {
+    mockedGetMetaCache.mockResolvedValueOnce([])
+
+    const client = {
+      async search() {
+        return {
+          total: 1,
+          items: [
+            {
+              id: 'article-zh-demo',
+              excerpt: '正文里有 <mark>配置</mark> 关键词',
+              meta: {
+                slug: 'demo',
+                title: 'Demo title',
+                desc: 'Demo description',
+                cover: 'https://example.com/cover.jpg',
+              },
+              subResults: [],
+              url: '/zh/article/demo',
+            },
+          ],
+        }
+      },
+    }
+
+    const result = await searchContents('配置', {
+      client,
+      folder: ContentFolder.Article,
+      locale: 'zh',
+    })
+
+    expect(result).toEqual([
+      {
+        slug: 'demo',
+        title: 'Demo title',
+        desc: 'Demo description',
+        cover: 'https://example.com/cover.jpg',
+        excerpt: '正文里有 <mark>配置</mark> 关键词',
+      },
+    ])
+  })
 })
