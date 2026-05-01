@@ -1,60 +1,165 @@
-import FlexSearch, { type DocumentValue, type Id } from 'flexsearch'
+import {
+  createSearchClient,
+  type SearchClient,
+  type SearchClientResultItem,
+} from '@blackwork/search/browser'
 import { getMetaCache } from '@/cache/meta-cache'
 import {
   type MetaCacheItem,
-  type MetaCacheMapKey,
   type SearchCacheItem,
-  getMetaCacheMapKey,
+  isSearchCacheItem,
 } from '@/config/cache-config'
 import { type ListFolder } from '@/config/content-config'
 import { type Locale } from '@/config/locale-config'
 
-interface SearchDocumentItem extends Omit<SearchCacheItem, 'slug'> {
-  [key: string]: DocumentValue | DocumentValue[]
-  id: Id
+export interface SearchContentsOptions {
+  client?: Pick<SearchClient, 'search'>
+  folder: ListFolder
+  locale: Locale
+  limit?: number
 }
 
-const initializeEngine = async (data: MetaCacheItem[]) => {
-  const engine = new FlexSearch.Document<SearchDocumentItem>({
-    cache: 100,
-    tokenize: 'full',
-    document: {
-      id: 'id',
-      index: 'title',
-      store: ['title', 'cover', 'desc'],
-    },
-    context: {
-      resolution: 9,
-      depth: 2,
-      bidirectional: true,
-    },
+const client = createSearchClient()
+
+const getSearchCacheItem = ({ slug, metadata }: MetaCacheItem) => {
+  const { title, cover, desc } = metadata
+  return {
+    slug,
+    title,
+    cover,
+    desc,
+  } satisfies SearchCacheItem
+}
+
+const getSearchMetaValue = (
+  item: SearchClientResultItem,
+  key: keyof SearchCacheItem,
+) => {
+  return item.meta[key] ?? ''
+}
+
+const includesKeyword = (value: string | undefined, keyword: string) => {
+  return value?.toLowerCase().includes(keyword) ?? false
+}
+
+const getMetaScore = ({ metadata }: MetaCacheItem, keyword: string) => {
+  const title = metadata.title.toLowerCase()
+  const keywords = metadata.keywords.toLowerCase()
+  const desc = metadata.desc.toLowerCase()
+
+  if (title === keyword) return 100
+  if (includesKeyword(title, keyword)) return 80
+  if (includesKeyword(keywords, keyword)) return 60
+  if (includesKeyword(desc, keyword)) return 40
+
+  return 0
+}
+
+const searchMetaCache = async (
+  keyword: string,
+  folder: ListFolder,
+  locale: Locale,
+) => {
+  const data = await getMetaCache(folder, locale)
+
+  return data
+    .map((item) => ({
+      item: getSearchCacheItem(item),
+      score: getMetaScore(item, keyword),
+    }))
+    .filter(({ score }) => score > 0)
+    .sort((a, b) => b.score - a.score)
+    .map(({ item }) => item)
+}
+
+const toSearchCacheItem = (
+  item: SearchClientResultItem,
+): SearchCacheItem | null => {
+  const result = {
+    slug: getSearchMetaValue(item, 'slug'),
+    title: getSearchMetaValue(item, 'title'),
+    cover: getSearchMetaValue(item, 'cover'),
+    desc: getSearchMetaValue(item, 'desc'),
+  }
+
+  return isSearchCacheItem(result) ? result : null
+}
+
+const hasCjkText = (value: string) => /[\u3400-\u9FFF]/u.test(value)
+
+const normalizeSearchText = (value: string | undefined) => {
+  return value?.toLowerCase().replace(/\s+/gu, '') ?? ''
+}
+
+const getPagefindSearchText = (item: SearchClientResultItem) => {
+  const subResultText = item.subResults
+    .flatMap(({ title, excerpt }) => [title, excerpt])
+    .filter(Boolean)
+    .join('')
+
+  return normalizeSearchText(
+    [item.title, item.excerpt, item.meta.title, item.meta.desc, subResultText]
+      .filter(Boolean)
+      .join(''),
+  )
+}
+
+const isPhraseMatchRequired = (keyword: string) => {
+  return hasCjkText(keyword) && keyword.length > 1
+}
+
+const isExplainablePagefindMatch = (
+  item: SearchClientResultItem,
+  keyword: string,
+) => {
+  if (!isPhraseMatchRequired(keyword)) return true
+  return getPagefindSearchText(item).includes(normalizeSearchText(keyword))
+}
+
+const uniqueSearchResults = (items: SearchCacheItem[]) => {
+  const map = new Map<string, SearchCacheItem>()
+
+  items.forEach((item) => {
+    if (!map.has(item.slug)) {
+      map.set(item.slug, item)
+    }
   })
 
-  await Promise.all(
-    data.map(({ slug, metadata }) => {
-      const { title, desc, cover } = metadata
-      return engine.addAsync(slug, { id: slug, title, desc, cover })
+  return [...map.values()]
+}
+
+export const searchContents = async (
+  keyword: string,
+  {
+    client: searchClient = client,
+    folder,
+    locale,
+    limit = 10,
+  }: SearchContentsOptions,
+) => {
+  const normalizedKeyword = keyword.trim()
+  if (!normalizedKeyword) return []
+
+  const normalizedKeywordLowerCase = normalizedKeyword.toLowerCase()
+  const [metaResults, { items }] = await Promise.all([
+    searchMetaCache(normalizedKeywordLowerCase, folder, locale),
+    searchClient.search(normalizedKeyword, {
+      filters: {
+        folder,
+        locale,
+      },
     }),
+  ])
+
+  const pagefindResults = items
+    .filter((item) => isExplainablePagefindMatch(item, normalizedKeyword))
+    .map(toSearchCacheItem)
+    .filter((item): item is SearchCacheItem => !!item)
+
+  return uniqueSearchResults([...metaResults, ...pagefindResults]).slice(
+    0,
+    limit,
   )
-
-  return engine
 }
 
-export type SearchEngine = Awaited<ReturnType<typeof initializeEngine>>
-
-const searchEngineMap = new Map<MetaCacheMapKey, SearchEngine>()
-
-export const getSearchEngine = async (folder: ListFolder, locale: Locale) => {
-  const args: [ListFolder, Locale] = [folder, locale]
-  const key = getMetaCacheMapKey(...args)
-
-  // Create engines on demand and only need to be initialized once
-  const engine = searchEngineMap.get(key)
-  if (engine) return engine
-
-  const data = await getMetaCache(...args)
-  const instance = await initializeEngine(data)
-  searchEngineMap.set(key, instance)
-
-  return instance
-}
+export const destroySearchClient = () => client.destroy()

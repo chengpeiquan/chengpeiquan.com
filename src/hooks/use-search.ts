@@ -1,14 +1,13 @@
-import { isArray, isObject } from '@bassist/utils'
 import { useKeyword } from 'blackwork'
 import { useEffect, useMemo, useState } from 'react'
-import { type SearchCacheItem, isSearchCacheItem } from '@/config/cache-config'
-import { type SearchEngine, getSearchEngine } from '@/core/search'
+import { type SearchCacheItem } from '@/config/cache-config'
+import { searchContents } from '@/core/search'
 import { useClientLocale } from './use-client-locale'
 import { useClientLocation } from './use-client-location'
 import { useRecentSearchData } from './use-recent-search-data'
 
 export interface UseSearchOptions {
-  // The search engine is initialized only when the search box is opened,
+  // The Pagefind bundle is loaded only when the search box is opened,
   // saving the overhead of the first rendering.
   enabled: boolean
 }
@@ -19,44 +18,44 @@ export const useSearch = ({ enabled }: UseSearchOptions) => {
   const { searchFolder } = useClientLocation()
   const { recent, ...restRecent } = useRecentSearchData()
 
-  const [engine, setEngine] = useState<SearchEngine>()
   const [result, setResult] = useState<SearchCacheItem[]>([])
 
   useEffect(() => {
-    if (enabled) {
-      getSearchEngine(searchFolder, locale).then(setEngine).catch(console.error)
-    }
-
     return () => {
-      setEngine(undefined)
       setKeyword('')
     }
-  }, [enabled, locale, searchFolder, setKeyword])
+  }, [enabled, setKeyword])
 
   useEffect(() => {
-    if (!keyword || !engine) {
+    let ignore = false
+
+    if (!keyword || !enabled) {
       setResult(() => [])
-      return
+      return () => {
+        ignore = true
+      }
     }
 
-    const res = engine.search(keyword, {
-      enrich: true,
-      limit: 10,
-      suggest: true,
+    searchContents(keyword, {
+      folder: searchFolder,
+      locale,
     })
+      .then((searched) => {
+        if (!ignore) {
+          setResult(() => searched)
+        }
+      })
+      .catch((error: unknown) => {
+        console.error(error)
+        if (!ignore) {
+          setResult(() => [])
+        }
+      })
 
-    const value = res?.[0]?.result
-    const searched = isArray(value)
-      ? value
-          .map(({ id, doc }) => ({
-            slug: id as unknown as string,
-            ...(isObject(doc) ? doc : {}),
-          }))
-          .filter(isSearchCacheItem)
-      : []
-
-    setResult(() => searched)
-  }, [engine, keyword])
+    return () => {
+      ignore = true
+    }
+  }, [enabled, keyword, locale, searchFolder])
 
   const noResult = useMemo(
     () => !!keyword && !result.length,

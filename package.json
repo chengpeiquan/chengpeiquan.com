@@ -1,17 +1,18 @@
 {
   "name": "chengpeiquan.com",
   "version": "2.0.0",
-  "type": "module",
-  "packageManager": "pnpm@10.33.2",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "run-s dev:*",
     "dev:cache": "pnpm run build:cache",
     "dev:thumb-hash": "pnpm run build:thumb-hash",
+    "dev:search": "pnpm run build:search",
     "dev:app": "next dev --webpack -p 4832",
     "build": "run-s build:*",
     "build:cache": "tsx ./scripts/generate-cache.ts",
     "build:thumb-hash": "tsx ./scripts/generate-thumb-hash.ts",
+    "build:search": "tsx ./scripts/generate-search-index.ts",
     "build:app": "next build --webpack",
     "build:copy-assets": "tsx ./scripts/copy-assets.ts",
     "preview": "docker-compose build && docker-compose up -d",
@@ -33,10 +34,10 @@
     "@bassist/utils": "^0.17.0",
     "@blackwork/docs": "^0.4.0",
     "@blackwork/machine": "^0.2.0",
+    "@blackwork/search": "^0.1.0",
     "@re-dev/react-truncate": "^0.6.0",
     "@web-analytics/core": "^0.1.5",
     "blackwork": "^0.11.0",
-    "flexsearch": "^0.8.212",
     "framer-motion": "^12.38.0",
     "next": "^16.2.4",
     "next-intl": "^4.11.0",
@@ -108,5 +109,6 @@
     "*.md": [
       "prettier --write"
     ]
-  }
+  },
+  "packageManager": "pnpm@10.33.2"
 }
