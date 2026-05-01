@@ -7,6 +7,7 @@ import { ContentProcessorMode } from '@/core/types'
 
 vi.mock('@/navigation', () => ({
   Link: () => null,
+  ExternalLink: () => null,
 }))
 
 const tempDirs: string[] = []
@@ -72,4 +73,34 @@ console.log(foo)
 
   expect(result?.html).toContain('class="language-ts"')
   expect(result?.html).toContain('data-title="docs/.vitepress/config.ts"')
+})
+
+test('parse supports mdx files with jsx attribute expressions', async () => {
+  const dir = await mkdtemp(join(tmpdir(), 'parser-mdx-'))
+  tempDirs.push(dir)
+
+  const filePath = join(dir, 'fixture.mdx')
+  await writeFile(
+    filePath,
+    `---
+title: Test title
+desc: Test description
+keywords: test
+date: 2026-04-07 00:00:00
+cover: https://example.com/cover.jpg
+---
+
+## Hello
+
+<span data-kind={'demo'}>World</span>
+`,
+  )
+
+  const result = await parse(filePath, {
+    mode: ContentProcessorMode.HtmlOnly,
+  })
+
+  expect(result?.headings[0]?.id).toBe('hello')
+  expect(result?.html).toContain('data-kind="demo"')
+  expect(result?.html).toContain('World')
 })

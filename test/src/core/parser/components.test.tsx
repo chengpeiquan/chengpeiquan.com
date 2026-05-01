@@ -1,19 +1,25 @@
-import { type Element, type RootContent } from 'hast'
+import { type Element, type ElementContent, type Properties } from 'hast'
 import React from 'react'
 import { expect, test, vi } from 'vitest'
 import { pre } from '@/core/parser/components'
 
 vi.mock('@/navigation', () => ({
   Link: () => null,
+  ExternalLink: () => null,
 }))
 
-const createText = (value: string): RootContent =>
-  ({ type: 'text', value }) as RootContent
+type PreComponent = (props: {
+  children: React.ReactNode
+  className?: string
+  node?: Element
+}) => React.ReactNode | Promise<React.ReactNode>
+
+const createText = (value: string): ElementContent => ({ type: 'text', value })
 
 const createElement = (
   tagName: string,
-  children: RootContent[] = [],
-  properties: Record<string, unknown> = {},
+  children: ElementContent[] = [],
+  properties: Properties = {},
 ): Element => ({
   type: 'element',
   tagName,
@@ -41,14 +47,20 @@ test('pre extracts title, language, and raw code for the code block component', 
     { 'data-title': 'docs/.vitepress/config.ts' },
   )
 
-  const element = await pre({
+  const renderPre = pre as PreComponent
+  const element = await renderPre({
     children: null,
     className: 'shiki',
     node,
   })
 
   expect(React.isValidElement(element)).toBe(true)
-  expect(element.props.fileName).toBe('docs/.vitepress/config.ts')
-  expect(element.props.language).toBe('ts')
-  expect(element.props.rawCode).toBe('const foo = 1\nconsole.log(foo)')
+  const codeBlockElement = element as React.ReactElement<{
+    fileName: string
+    language: string
+    rawCode: string
+  }>
+  expect(codeBlockElement.props.fileName).toBe('docs/.vitepress/config.ts')
+  expect(codeBlockElement.props.language).toBe('ts')
+  expect(codeBlockElement.props.rawCode).toBe('const foo = 1\nconsole.log(foo)')
 })
