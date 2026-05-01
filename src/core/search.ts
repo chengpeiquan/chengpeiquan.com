@@ -1,4 +1,4 @@
-import FlexSearch from 'flexsearch'
+import FlexSearch, { type DocumentValue, type Id } from 'flexsearch'
 import { getMetaCache } from '@/cache/meta-cache'
 import {
   type MetaCacheItem,
@@ -10,11 +10,12 @@ import { type ListFolder } from '@/config/content-config'
 import { type Locale } from '@/config/locale-config'
 
 interface SearchDocumentItem extends Omit<SearchCacheItem, 'slug'> {
-  id: FlexSearch.Id
+  [key: string]: DocumentValue | DocumentValue[]
+  id: Id
 }
 
 const initializeEngine = async (data: MetaCacheItem[]) => {
-  const engine = new FlexSearch.Document<SearchDocumentItem, string[]>({
+  const engine = new FlexSearch.Document<SearchDocumentItem>({
     cache: 100,
     tokenize: 'full',
     document: {

@@ -39,8 +39,9 @@ export const useSearch = ({ enabled }: UseSearchOptions) => {
       return
     }
 
-    const res = engine.search(keyword, 10, {
+    const res = engine.search(keyword, {
       enrich: true,
+      limit: 10,
       suggest: true,
     })
 
