@@ -1,5 +1,8 @@
 import { isArray, shuffle } from '@bassist/utils'
-import { type ProjectConfigItem } from '@/config/project-config'
+import {
+  type ProjectConfigItem,
+  sortProjectsByImpact,
+} from '@/config/project-config'
 import {
   type GitHubRepoDataItem,
   type NpmDownloadDataItem,
@@ -25,7 +28,7 @@ export type ProjectAnalysisData = Pick<GitHubRepoDataItem, 'stars' | 'forks'> &
 export const enrichProjectsWithStats = (
   projects: ProjectConfigItem[],
   data: ProjectDatabase,
-  sortBy: 'stars' | 'random' = 'stars',
+  sortBy: 'impact' | 'stars' | 'random' = 'impact',
 ): ProjectCardItem[] => {
   const items = projects.map<ProjectCardItem>((i) => {
     const gh = isArray(data.gh)
@@ -51,6 +54,10 @@ export const enrichProjectsWithStats = (
 
   if (sortBy === 'random') {
     return shuffle(items)
+  }
+
+  if (sortBy === 'impact') {
+    return sortProjectsByImpact(items)
   }
 
   return items.sort((a, b) => (b.data?.stars ?? 0) - (a.data?.stars ?? 0))
