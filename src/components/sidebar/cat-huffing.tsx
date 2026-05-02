@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import React from 'react'
 import {
   type PropsWithControllable,
@@ -6,9 +7,10 @@ import {
 } from '@/components/shared/sidebar-block'
 import { ExternalLink } from '@/navigation'
 
-const title = '我和猫的日常'
-
 export const CatHuffing: React.FC<PropsWithControllable> = (props) => {
+  const t = useTranslations('sidebarConfig.catHuffing')
+  const title = t('title')
+
   return (
     <SidebarBlock title={title} {...props}>
       <ExternalLink

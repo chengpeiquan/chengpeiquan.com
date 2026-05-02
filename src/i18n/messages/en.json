@@ -1,7 +1,15 @@
 {
   "action": {
+    "locale": {
+      "en": "English",
+      "zh": "Chinese"
+    },
     "newTab": "Visit {label} in a new tab",
     "sameTab": "Visit {label} in the same tab",
+    "theme": {
+      "dark": "Dark Mode",
+      "light": "Light Mode"
+    },
     "toggle": "Click to switch to "
   },
   "basicConfig": {
@@ -28,6 +36,12 @@
     "starOnGitHub": {
       "label": "Star on GitHub",
       "title": "Star this repository"
+    }
+  },
+  "common": {
+    "collapse": {
+      "close": "Close",
+      "open": "Open"
     }
   },
   "errorConfig": {
@@ -104,7 +118,28 @@
     "recent": "Recent",
     "removeButtonLabel": "Remove this record",
     "resultCount": "<count></count> results for <keyword></keyword>",
-    "shortLabel": "Search..."
+    "shortLabel": "Search...",
+    "target": {
+      "article": "article",
+      "cookbook": "cookbook"
+    }
+  },
+  "sidebarConfig": {
+    "catHuffing": {
+      "title": "My daily life with cats"
+    },
+    "cookbookOnline": {
+      "title": "Online interaction"
+    },
+    "cookbookQrCode": {
+      "title": "Cookbook column · Mini program version"
+    },
+    "friendlyLinks": {
+      "title": "Friendly Links"
+    },
+    "publishedBooks": {
+      "title": "My published books"
+    }
   },
   "siteConfig": {
     "description": "A man with full tattoo on arm, raised three cats.",
@@ -128,6 +163,9 @@
     "title": "Paul Ching - Raised three cats"
   },
   "tattooConfig": {
+    "artist": {
+      "xiaohongshuLink": "Xiaohongshu homepage"
+    },
     "description": "My tattoos and the stories behind them",
     "imageAlt": "Tattoo stories",
     "title": "Blackwork Tattoos"

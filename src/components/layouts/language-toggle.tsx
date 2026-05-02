@@ -7,7 +7,7 @@ import {
 import { useParams } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 import React, { useCallback, useMemo } from 'react'
-import { type Locale, localeLabelMapping } from '@/config/locale-config'
+import { type Locale } from '@/config/locale-config'
 import { useClientLocale } from '@/hooks'
 import { usePathname, useRouter } from '@/navigation'
 
@@ -41,10 +41,7 @@ export const LanguageToggle: React.FC = () => {
 
   const title = useMemo(() => {
     const action = t('toggle')
-
-    const nextLocaleLabel = isEnglish
-      ? localeLabelMapping.en.zh
-      : localeLabelMapping.zh.en
+    const nextLocaleLabel = t(`locale.${isEnglish ? 'zh' : 'en'}`)
 
     return action + nextLocaleLabel
   }, [isEnglish, t])

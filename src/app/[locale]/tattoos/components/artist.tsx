@@ -1,11 +1,13 @@
 import { Button, Card, Heading } from 'blackwork'
 import Image from 'next/image'
-import React from 'react'
+import { getTranslations } from 'next-intl/server'
 import { decodeThumbHash } from '@/config/cache-config'
 import { tattooArtist } from '@/config/tattoo-config'
 import { ExternalLink } from '@/navigation'
 
-export const Artist: React.FC = () => {
+export const Artist = async () => {
+  const t = await getTranslations('tattooConfig.artist')
+
   return (
     <div className="mx-auto w-full max-w-md">
       <p className="mb-8 text-center text-base/relaxed text-muted-foreground">
@@ -55,7 +57,7 @@ export const Artist: React.FC = () => {
               href={tattooArtist.xiaohongshuLink}
               className="text-inherit!"
             >
-              小红书主页
+              {t('xiaohongshuLink')}
             </ExternalLink>
           </Button>
         </div>

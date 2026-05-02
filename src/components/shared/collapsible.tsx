@@ -9,8 +9,8 @@ import {
   CollapsibleTrigger,
   Heading,
 } from 'blackwork'
+import { useTranslations } from 'next-intl'
 import React, { useMemo, useState } from 'react'
-import { useClientLocale } from '@/hooks'
 import { cn } from '@/utils'
 
 interface CollapsibleProps extends React.PropsWithChildren {
@@ -23,14 +23,13 @@ export const Collapsible: React.FC<CollapsibleProps> = ({
   className,
   children,
 }) => {
-  const { isChinese } = useClientLocale()
+  const t = useTranslations('common.collapse')
 
   const [isOpen, setIsOpen] = useState(false)
 
   const tips = useMemo(() => {
-    if (isChinese) return isOpen ? '收起' : '展开'
-    return isOpen ? 'Close' : 'Open'
-  }, [isChinese, isOpen])
+    return isOpen ? t('close') : t('open')
+  }, [isOpen, t])
 
   const CollapsibleIcon = useMemo(() => {
     return isOpen ? CollapsibleOpened : CollapsibleClosed

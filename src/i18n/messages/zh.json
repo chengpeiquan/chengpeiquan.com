@@ -1,7 +1,15 @@
 {
   "action": {
+    "locale": {
+      "en": "英文",
+      "zh": "中文"
+    },
     "newTab": "新标签访问{label}",
     "sameTab": "在当前标签访问{label}",
+    "theme": {
+      "dark": "暗黑模式",
+      "light": "明亮模式"
+    },
     "toggle": "点击切换到"
   },
   "basicConfig": {
@@ -28,6 +36,12 @@
     "starOnGitHub": {
       "label": "Star on GitHub",
       "title": "给仓库一个 Star"
+    }
+  },
+  "common": {
+    "collapse": {
+      "close": "收起",
+      "open": "展开"
     }
   },
   "errorConfig": {
@@ -104,7 +118,28 @@
     "recent": "最近搜索",
     "removeButtonLabel": "移除该记录",
     "resultCount": "找到 <count></count> 个 <keyword></keyword> 的相关结果",
-    "shortLabel": "搜索..."
+    "shortLabel": "搜索...",
+    "target": {
+      "article": "文章",
+      "cookbook": "菜谱"
+    }
+  },
+  "sidebarConfig": {
+    "catHuffing": {
+      "title": "我和猫的日常"
+    },
+    "cookbookOnline": {
+      "title": "在线互动"
+    },
+    "cookbookQrCode": {
+      "title": "菜谱专栏 · 小程序版本"
+    },
+    "friendlyLinks": {
+      "title": "友情链接"
+    },
+    "publishedBooks": {
+      "title": "我出版的书"
+    }
   },
   "siteConfig": {
     "description": "一个养了三只猫的花臂男。",
@@ -128,6 +163,9 @@
     "title": "程沛权 - 养了三只猫"
   },
   "tattooConfig": {
+    "artist": {
+      "xiaohongshuLink": "小红书主页"
+    },
     "description": "我的文身和它们背后的故事",
     "imageAlt": "文身故事",
     "title": "Blackwork Tattoos"
