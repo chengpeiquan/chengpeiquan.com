@@ -10,6 +10,10 @@ const collectParserFiles = async (dir: string): Promise<string[]> => {
       const fullPath = join(dir, entry.name)
 
       if (entry.isDirectory()) {
+        if (entry.name === 'test') {
+          return []
+        }
+
         return collectParserFiles(fullPath)
       }
 
