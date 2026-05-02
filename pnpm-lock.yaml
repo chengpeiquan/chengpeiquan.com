@@ -12,8 +12,8 @@ importers:
         specifier: ^0.17.0
         version: 0.17.0
       '@blackwork/docs':
-        specifier: ^0.4.0
-        version: 0.4.0(blackwork@0.11.0(@bassist/utils@0.17.0)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(clsx@2.1.1)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(tailwind-merge@3.5.0)(tailwindcss-animate@1.0.7(tailwindcss@4.2.4))(tailwindcss@4.2.4))(next@16.2.4(@babel/core@7.29.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5))(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
+        specifier: ^0.4.1
+        version: 0.4.1(blackwork@0.11.0(@bassist/utils@0.17.0)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(clsx@2.1.1)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(tailwind-merge@3.5.0)(tailwindcss-animate@1.0.7(tailwindcss@4.2.4))(tailwindcss@4.2.4))(next@16.2.4(@babel/core@7.29.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5))(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
       '@blackwork/machine':
         specifier: ^0.2.0
         version: 0.2.0(blackwork@0.11.0(@bassist/utils@0.17.0)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(clsx@2.1.1)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(tailwind-merge@3.5.0)(tailwindcss-animate@1.0.7(tailwindcss@4.2.4))(tailwindcss@4.2.4))(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
@@ -333,8 +333,8 @@ packages:
   '@bassist/utils@0.17.0':
     resolution: {integrity: sha512-96rpHXgZ2BswyuO27IWrsmrZekef+f1Ag6384bZ6oOAy4squ/1x57yPXMIjumzRX8U+e6g6i8ujvFfhrdjf3Jg==}
 
-  '@blackwork/docs@0.4.0':
-    resolution: {integrity: sha512-i6uHZBZpVyaf7TaA3aYoiiYBENiELF3h7RpHel5dq69TBmKuamzSXJaTAnW2eJNBv/ChwempWIMaq2aM+YHkTA==}
+  '@blackwork/docs@0.4.1':
+    resolution: {integrity: sha512-OJvsNgTZF6EKvGtQDN8Tbu9Ja5Jk3K0WCCTMHuZPhw3QzxmYdpQRjdgGB8rT1jHWmqGc4STAIg7RELu0LFtsqg==}
     peerDependencies:
       blackwork: '>=0.11.0'
       next: '>=16.0.0'
@@ -5708,7 +5708,7 @@ snapshots:
 
   '@bassist/utils@0.17.0': {}
 
-  '@blackwork/docs@0.4.0(blackwork@0.11.0(@bassist/utils@0.17.0)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(clsx@2.1.1)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(tailwind-merge@3.5.0)(tailwindcss-animate@1.0.7(tailwindcss@4.2.4))(tailwindcss@4.2.4))(next@16.2.4(@babel/core@7.29.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5))(react-dom@19.2.5(react@19.2.5))(react@19.2.5)':
+  '@blackwork/docs@0.4.1(blackwork@0.11.0(@bassist/utils@0.17.0)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(clsx@2.1.1)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(tailwind-merge@3.5.0)(tailwindcss-animate@1.0.7(tailwindcss@4.2.4))(tailwindcss@4.2.4))(next@16.2.4(@babel/core@7.29.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5))(react-dom@19.2.5(react@19.2.5))(react@19.2.5)':
     dependencies:
       '@blackwork/machine': 0.2.0(blackwork@0.11.0(@bassist/utils@0.17.0)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(clsx@2.1.1)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(tailwind-merge@3.5.0)(tailwindcss-animate@1.0.7(tailwindcss@4.2.4))(tailwindcss@4.2.4))(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
       blackwork: 0.11.0(@bassist/utils@0.17.0)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(clsx@2.1.1)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(tailwind-merge@3.5.0)(tailwindcss-animate@1.0.7(tailwindcss@4.2.4))(tailwindcss@4.2.4)
