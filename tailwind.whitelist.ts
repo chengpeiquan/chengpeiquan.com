@@ -1,4 +1,4 @@
-export default [
+const tailwindWhitelist = [
   'dark',
   'not-prose',
   'text-primary',
@@ -32,4 +32,6 @@ export default [
   'to-accent/50',
   'to-border',
   'ring-background',
-]
+] as const
+
+export default tailwindWhitelist
