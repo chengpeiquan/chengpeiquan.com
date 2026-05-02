@@ -246,17 +246,70 @@ const baseProjects: ProjectConfigItem[] = [
     },
   },
   {
+    name: 'blackwork',
     repo: 'blackwork',
+    directory: 'blackwork',
     tags: [ProjectTag.UI],
     npm: true,
     metadata: {
       en: {
         description:
-          'Blackwork Tattoo style React UI layout (provides a unified interface for websites like my blog).',
+          'Blackwork Tattoo style React UI layout for blogs, documentation sites, and other content-driven websites.',
       },
       zh: {
         description:
-          'Blackwork 文身风格的 React UI 布局（为像我的博客这样的网站提供统一的界面）。',
+          'Blackwork 文身风格的 React UI 布局，适用于博客、文档站和其他内容驱动的网站。',
+      },
+    },
+  },
+  {
+    name: '@blackwork/docs',
+    repo: 'blackwork',
+    directory: 'docs',
+    tags: [ProjectTag.UI],
+    npm: true,
+    metadata: {
+      en: {
+        description:
+          'Next.js-first documentation framework for Blackwork projects, with content discovery, locale-aware routing, metadata, navigation, and theme shells.',
+      },
+      zh: {
+        description:
+          '面向 Next.js 的 Blackwork 文档框架，提供内容发现、多语言路由、元数据、导航和主题外壳。',
+      },
+    },
+  },
+  {
+    name: '@blackwork/machine',
+    repo: 'blackwork',
+    directory: 'machine',
+    tags: [ProjectTag.Toolkit],
+    npm: true,
+    metadata: {
+      en: {
+        description:
+          'Markdown and MDX engine for the Blackwork React UI ecosystem, powering Blackwork-based blogs and documentation sites.',
+      },
+      zh: {
+        description:
+          '用于 Blackwork React UI 生态的 Markdown 和 MDX 引擎，为基于 Blackwork 的博客和文档站提供内容渲染能力。',
+      },
+    },
+  },
+  {
+    name: '@blackwork/search',
+    repo: 'blackwork',
+    directory: 'search',
+    tags: [ProjectTag.Toolkit],
+    npm: true,
+    metadata: {
+      en: {
+        description:
+          'Pagefind integration for Blackwork projects, with server-side indexing utilities and browser-side search clients.',
+      },
+      zh: {
+        description:
+          '用于 Blackwork 项目的 Pagefind 集成，提供服务端索引工具和浏览器端搜索客户端。',
       },
     },
   },
@@ -618,6 +671,39 @@ const baseProjects: ProjectConfigItem[] = [
       zh: {
         description:
           '一个只有 3 kB 大小的插件，可以帮你轻松解决 SPA 单页面项目浏览数据不准确的问题，基于 Vue 路由访问轨迹自动向友盟统计平台上报 PV / 事件数据。',
+      },
+    },
+  },
+  {
+    name: '@bassist/oxc-integration',
+    repo: 'bassist',
+    directory: 'oxc-integration',
+    npm: true,
+    tags: [ProjectTag.Configuration],
+    metadata: {
+      en: {
+        description:
+          'An Oxc-first workflow package for projects, while still keeping an ESLint fallback available where framework coverage is not yet enough.',
+      },
+      zh: {
+        description:
+          '一个基于 Oxc 的工作流包，同时在 Oxc 能力尚未完全覆盖时保留 ESLint 兜底能力。',
+      },
+    },
+  },
+  {
+    name: '@bassist/build-config',
+    repo: 'bassist',
+    directory: 'build-config',
+    npm: true,
+    tags: [ProjectTag.Configuration],
+    metadata: {
+      en: {
+        description:
+          'Opinionated collection of common build tool configurations.',
+      },
+      zh: {
+        description: '一些常用的构建工具配置。',
       },
     },
   },
