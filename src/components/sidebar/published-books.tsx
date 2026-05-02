@@ -1,5 +1,6 @@
 import { Button } from 'blackwork'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import React from 'react'
 import {
   type PropsWithControllable,
@@ -10,9 +11,10 @@ import { ExternalLink, Link } from '@/navigation'
 
 const links = learningVue3.zh.purchaseLinks
 
-const title = '我出版的书'
-
 export const PublishedBooks: React.FC<PropsWithControllable> = (props) => {
+  const t = useTranslations('sidebarConfig.publishedBooks')
+  const title = t('title')
+
   return (
     <SidebarBlock title={title} {...props}>
       <div className="flex w-full flex-col">

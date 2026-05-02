@@ -22,7 +22,6 @@ import { type PropsWithDevice } from '@/config/route-config'
 import {
   RecentSearchDataProvider,
   type UseSearchResponse,
-  useClientLocale,
   useClientLocation,
   useSearch,
 } from '@/hooks'
@@ -201,14 +200,12 @@ const SearchResult: React.FC<
 
 export const SearchBoxRoot: React.FC<PropsWithDevice> = ({ isMobile }) => {
   const t = useTranslations('searchConfig')
-  const { isChinese } = useClientLocale()
   const { isCookbook } = useClientLocation()
 
-  const target = useMemo(() => {
-    const articleLabel = isChinese ? '文章' : 'article'
-    const cookbookLabel = isChinese ? '菜谱' : 'cookbook'
-    return isCookbook ? cookbookLabel : articleLabel
-  }, [isChinese, isCookbook])
+  const target = useMemo(
+    () => t(`target.${isCookbook ? 'cookbook' : 'article'}`),
+    [isCookbook, t],
+  )
 
   const label = useMemo(() => t('label', { target }), [t, target])
 

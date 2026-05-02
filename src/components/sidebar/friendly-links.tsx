@@ -1,4 +1,5 @@
 import { Separator } from 'blackwork'
+import { useTranslations } from 'next-intl'
 import React from 'react'
 import { friendlyLinks } from '@/config/external-config'
 import { ExternalLink } from '@/navigation'
@@ -8,8 +9,10 @@ import {
 } from '../shared/sidebar-block'
 
 export const FriendlyLinks: React.FC<PropsWithControllable> = (props) => {
+  const t = useTranslations('sidebarConfig.friendlyLinks')
+
   return (
-    <SidebarBlock title="友情链接" {...props}>
+    <SidebarBlock title={t('title')} {...props}>
       <div className="w-full space-y-2 space-x-3">
         {friendlyLinks.map((i, idx) => {
           return (
