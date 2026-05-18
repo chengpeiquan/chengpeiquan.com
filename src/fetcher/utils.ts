@@ -18,18 +18,18 @@ const cleanupMarkdown = (markdown: string) => {
       // Remove the first level title
       // Because metadata has already configured the first-level title,
       // the original first-level title is not needed
-      .replace(/^# .*\n/, '')
+      .replace(/^# .*\n/u, '')
 
       // Remove characters like `[English](...) | 简体中文` or `English | [简体中文](...)`
       .replace(
-        /^(?:\[[^\]]+\]\([^)]+\)|[A-Za-z]+)\s*\|\s*(?:\[[^\]]+\]\([^)]+\)|[^\n]+)\n+/m,
+        /^(?:\[[^\]]+\]\([^)]+\)|[A-Za-z]+)\s*\|\s*(?:\[[^\]]+\]\([^)]+\)|[^\n]+)\n+/mu,
         '',
       )
 
       // Remove the License section
       // Simply delete everything starting from "## 📜 License" and so on
       // Because it is at the end of the document
-      .replace(/^\s*##\s*.*License\b[\s\S]*/im, '')
+      .replace(/^\s*##\s*.*License\b[\s\S]*/imu, '')
   )
 }
 

@@ -11,7 +11,7 @@ import { type ProjectAnalysisData } from './shared'
 
 // e.g. `1000` -> `1,000`
 const withCommasNumber = (val: string | number) => {
-  return String(val).replace(/\B(?=(\d{3})+(?!\d))/g, ',') || '0'
+  return String(val).replace(/\B(?=(\d{3})+(?!\d))/gu, ',') || '0'
 }
 
 // e.g. `1000` -> `1k`

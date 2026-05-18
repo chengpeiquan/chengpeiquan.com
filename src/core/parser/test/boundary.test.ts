@@ -17,7 +17,7 @@ const collectParserFiles = async (dir: string): Promise<string[]> => {
         return collectParserFiles(fullPath)
       }
 
-      return /\.(ts|tsx)$/.test(entry.name) ? [fullPath] : []
+      return /\.(ts|tsx)$/u.test(entry.name) ? [fullPath] : []
     }),
   )
 

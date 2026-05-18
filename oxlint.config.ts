@@ -2,7 +2,7 @@ import { defineOxlintConfig, oxlintPresets } from '@bassist/oxc-integration'
 import tailwindWhitelist from './tailwind.whitelist.ts'
 
 const escapeRegExp = (value: string) =>
-  value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+  value.replace(/[.*+?^${}()|[\]\\]/gu, '\\$&')
 
 export default defineOxlintConfig(
   oxlintPresets.react(),

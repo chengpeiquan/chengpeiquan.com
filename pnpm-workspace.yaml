@@ -1,0 +1,19 @@
+allowBuilds:
+  '@parcel/watcher': true
+  '@swc/core': true
+  esbuild: true
+  sharp: true
+  unrs-resolver: true
+minimumReleaseAgeExclude:
+  - '@oxlint-tsgolint/darwin-arm64@0.23.0'
+  - '@oxlint-tsgolint/darwin-x64@0.23.0'
+  - '@oxlint-tsgolint/linux-arm64@0.23.0'
+  - '@oxlint-tsgolint/linux-x64@0.23.0'
+  - '@oxlint-tsgolint/win32-arm64@0.23.0'
+  - '@oxlint-tsgolint/win32-x64@0.23.0'
+  - '@types/node@25.9.0'
+  - framer-motion@12.39.0
+  - motion-dom@12.39.0
+  - motion-utils@12.39.0
+  - oxlint-tsgolint@0.23.0
+  - tsx@4.22.2

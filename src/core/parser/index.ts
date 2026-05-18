@@ -29,7 +29,7 @@ const processRemoteMarkdown = (
     const { content } = matter(markdown)
     let text = content
       .trimStart()
-      .replace(/^#\s+[^\n]+\n?/, '')
+      .replace(/^#\s+[^\n]+\n?/u, '')
       .trimStart()
       .replaceAll(OBJECT_REPLACEMENT_CHAR, '')
 

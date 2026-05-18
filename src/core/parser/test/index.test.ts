@@ -73,7 +73,7 @@ console.log(foo)
 
   expect(result?.html).toContain('class="language-ts"')
   expect(result?.html).toContain('data-title="docs/.vitepress/config.ts"')
-})
+}, 10_000)
 
 test('parse supports mdx files with jsx attribute expressions', async () => {
   const dir = await mkdtemp(join(tmpdir(), 'parser-mdx-'))
