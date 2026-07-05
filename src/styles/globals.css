@@ -83,6 +83,7 @@ html body[data-scroll-locked] {
   padding-right: 2.5em;
   overflow-wrap: break-word;
   border: 0;
+  margin-left: 2em;
   margin-top: 2em;
   margin-bottom: 2em;
 }
