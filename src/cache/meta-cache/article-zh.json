@@ -1,5 +1,19 @@
 [
   {
+    "slug": "paul-wong-sound-and-image-coexistence",
+    "metadata": {
+      "title": "声画共生：黄贯中的摇滚美学宇宙",
+      "desc": "今年第一次在周末踏出家门，来看阿 Paul 的画展。很多画都能在以前的歌曲里找到影子：《岁月无声》、《狂人山庄》，《黑夜迷墙》（黑色迷墙）。有一张很特殊的《谁命我名字》，也是同名歌曲，一首为流浪动物发声的歌。",
+      "keywords": "beyond,黄贯中,Paul Wong,黄贯中画展",
+      "cover": "https://cdn.chengpeiquan.com/img/2026/07/20260706010011075.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "prose"
+      ],
+      "date": "2026/7/5 23:45:00",
+      "timestamp": 1783266300000
+    }
+  },
+  {
     "slug": "an-oxc-first-workflow-package-for-oxlint-and-oxfmt",
     "metadata": {
       "title": "适用于 Oxlint 与 Oxfmt 的 Oxc 优先工作流",
