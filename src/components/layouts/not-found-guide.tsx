@@ -51,7 +51,9 @@ export const NotFoundGuide = async () => {
         </div>
 
         <div
-          className="flex flex-1 flex-col justify-center gap-6 overflow-hidden"
+          className={cn(`
+            flex flex-1 flex-col justify-center gap-6 overflow-hidden
+          `)}
         >
           <Heading level={1}>{t('title')}</Heading>
 
@@ -60,6 +62,7 @@ export const NotFoundGuide = async () => {
 
             <Paragraph>
               {t.rich('feedback', {
+                // oxlint-disable-next-line react/no-unstable-nested-components
                 issue: () => (
                   <ExternalLink href={siteConfig.feedbackLink} underline>
                     issue

@@ -159,7 +159,9 @@ const SearchResult: React.FC<
     }
 
     return t.rich('resultCount', {
+      // oxlint-disable-next-line react/no-unstable-nested-components
       count: () => <Highlight>{data.length}</Highlight>,
+      // oxlint-disable-next-line react/no-unstable-nested-components
       keyword: () => <Highlight>{keyword}</Highlight>,
     })
   }, [clearRecent, data.length, isRecent, keyword, t])

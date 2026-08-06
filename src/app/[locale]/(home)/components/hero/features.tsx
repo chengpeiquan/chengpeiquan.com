@@ -1,7 +1,7 @@
 'use client'
 
 import { ChevronRight } from 'blackwork/icons'
-import { type Variants, motion } from 'framer-motion'
+import { type Variants, motion, stagger } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import React from 'react'
 import { Link } from '@/navigation'
@@ -53,8 +53,7 @@ const container: Variants = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.3,
-      delayChildren: 0.2,
+      delayChildren: stagger(0.3, { startDelay: 0.2 }),
       duration: 0.5,
       ease: 'easeOut',
     },

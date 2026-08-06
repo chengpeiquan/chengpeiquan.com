@@ -90,6 +90,7 @@ export const ProjectCard = async ({ locale, item }: ProjectCardProps) => {
 
     if (alternativeProject) {
       return t.rich('alternative', {
+        // oxlint-disable-next-line react/no-unstable-nested-components
         name: () => (
           <ExternalLink href={getRepoUrl(alternativeProject)}>
             {alternativeProject.name}

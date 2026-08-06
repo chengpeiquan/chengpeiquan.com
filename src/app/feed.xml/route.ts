@@ -46,7 +46,9 @@ export async function GET() {
     }
   })
 
-  posts.forEach((i) => feed.addItem(i))
+  posts.forEach((i) => {
+    feed.addItem(i)
+  })
 
   return new Response(feed.rss2(), {
     headers: {

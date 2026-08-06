@@ -54,6 +54,7 @@ export const DataDescription = async ({ locale }: PropsWithLocale) => {
                   const content = (() => {
                     if (idx === 1) {
                       return t.rich('list.1', {
+                        // oxlint-disable-next-line react/no-unstable-nested-components
                         more: (chunks) => (
                           <ExternalLink
                             variant="secondary"

@@ -16,4 +16,5 @@ minimumReleaseAgeExclude:
   - motion-dom@12.39.0
   - motion-utils@12.39.0
   - oxlint-tsgolint@0.23.0
-  - tsx@4.22.2
+  - tsx@4.22.2 || 4.23.9
+  - taze@20.0.0
