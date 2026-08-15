@@ -16,6 +16,7 @@ export default defineConfig({
   packageMode: {
     '/^@bassist/': 'latest',
     '/^@re-dev/': 'latest',
+    '/^@blackwork/': 'latest',
     blackwork: 'latest',
     typescript: 'latest',
   },

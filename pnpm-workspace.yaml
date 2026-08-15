@@ -18,3 +18,5 @@ minimumReleaseAgeExclude:
   - oxlint-tsgolint@0.23.0
   - tsx@4.22.2 || 4.23.9
   - taze@20.0.0
+  - '@blackwork/docs@0.4.2'
+  - '@blackwork/machine@0.2.1'
