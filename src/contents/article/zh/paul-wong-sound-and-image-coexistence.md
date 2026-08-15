@@ -28,9 +28,9 @@ categories:
 
 昨天其实也是大暴雨，但今天很好，只是阴天，看展的人不多，刚好可以安安静静待很久。
 
-:::video
+:::video{aspect="4/3"}
 http://cdn.chengpeiquan.com/video/live/beyond/paul-wong-sound-and-image-coexistence.mp4
-https://cdn.chengpeiquan.com/img/2026/07/20260706010018894.jpg?x-oss-process=image/interlace,1
+https://cdn.chengpeiquan.com/img/2026/08/20260815185441978.jpg?x-oss-process=image/interlace,1
 《声画共生：黄贯中的摇滚美学宇宙》
 :::
 
