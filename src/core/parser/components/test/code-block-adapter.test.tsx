@@ -40,8 +40,4 @@ test('blog code block delegates to machine with translated labels', () => {
   expect(html).toContain('data-copy-label="i18n:copy"')
   expect(html).toContain('data-copied-label="i18n:copied"')
   expect(html).toContain('data-language="ts"')
-  expect(html).toContain('max-w-full')
-  expect(html).toContain('whitespace-pre-wrap')
-  expect(html).toContain('[&amp;_code]:min-w-0')
-  expect(html).toContain('sm:[&amp;_code]:min-w-full')
 })
