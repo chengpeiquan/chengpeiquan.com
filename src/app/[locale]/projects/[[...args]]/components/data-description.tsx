@@ -10,7 +10,7 @@ import {
   Button,
   Separator,
 } from 'blackwork'
-import { Help } from 'blackwork/icons'
+import { CircleHelp } from 'lucide-react'
 import { getTranslations } from 'next-intl/server'
 import { isMobileDevice } from '@/config/middleware-config'
 import { type PropsWithLocale } from '@/config/route-config'
@@ -28,8 +28,8 @@ export const DataDescription = async ({ locale }: PropsWithLocale) => {
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
-        <Button variant="ghost" size="icon">
-          <Help className="size-5 cursor-pointer text-muted-foreground" />
+        <Button variant="ghost" size="icon" aria-label={t('title')}>
+          <CircleHelp className="size-5 cursor-pointer text-muted-foreground" />
         </Button>
       </AlertDialogTrigger>
 

@@ -1,7 +1,7 @@
 'use client'
 
-import { ChevronsDown } from 'blackwork/icons'
 import { motion } from 'framer-motion'
+import { ChevronsDown } from 'lucide-react'
 import React from 'react'
 
 export const ScrollIndicator: React.FC = () => {

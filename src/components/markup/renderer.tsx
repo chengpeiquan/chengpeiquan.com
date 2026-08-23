@@ -1,9 +1,9 @@
 import { isObject, isString, toArray } from '@bassist/utils'
 import { Avatar, AvatarFallback, AvatarImage, Badge, Heading } from 'blackwork'
-import { MiniGitHub } from 'blackwork/icons'
 import { getTranslations } from 'next-intl/server'
 import React from 'react'
 import { MusicPlayer } from '@/components/music-player'
+import { MiniGitHubIcon } from '@/components/shared/icons'
 import {
   type ContentItem,
   type ContentMetadata,
@@ -42,7 +42,7 @@ const StarOnGitHub = async ({ locale, repo }: StarOnGitHubProps) => {
       variant="secondary"
       underline={false}
     >
-      <MiniGitHub />
+      <MiniGitHubIcon />
       <span className="ml-1">{label}</span>
     </ExternalLink>
   )

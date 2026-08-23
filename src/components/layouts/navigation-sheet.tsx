@@ -13,7 +13,7 @@ import {
   SheetTrigger,
   SocialLinks,
 } from 'blackwork'
-import { Menu as MenuIcon } from 'blackwork/icons'
+import { Menu as MenuIcon } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import React, { useEffect, useMemo, useState } from 'react'
 import { NavigationLinks } from '@/components/layouts/navigation-links'
@@ -82,7 +82,12 @@ export const NavigationSheet: React.FC<PropsWithDevice> = ({ isMobile }) => {
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
-        <Button variant="outline" size="icon" className={btnCls}>
+        <Button
+          variant="outline"
+          size="icon"
+          className={btnCls}
+          aria-label={t('title')}
+        >
           <MenuIcon className="size-5" />
         </Button>
       </SheetTrigger>

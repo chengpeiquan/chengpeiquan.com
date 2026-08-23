@@ -12,7 +12,7 @@ import {
   QuickSearchTrigger,
   useQuickSearchState,
 } from 'blackwork'
-import { Close } from 'blackwork/icons'
+import { X } from 'lucide-react'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import React, { memo, useMemo } from 'react'
@@ -101,7 +101,7 @@ const SearchResultCard: React.FC<SearchResultCardProps> = ({
               onClick={onRemove}
               aria-label={t('removeButtonLabel')}
             >
-              <Close className="size-4" />
+              <X className="size-4" />
             </Button>
           </div>
         )}

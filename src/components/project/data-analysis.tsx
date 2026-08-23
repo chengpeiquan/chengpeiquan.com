@@ -1,10 +1,12 @@
+'use client'
+
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from 'blackwork'
-import { Download, Fork, type IconProps, Star } from 'blackwork/icons'
+import { Download, GitFork, type LucideProps, Star } from 'lucide-react'
 import React from 'react'
 import { cn } from '@/utils'
 import { type ProjectAnalysisData } from './shared'
@@ -28,7 +30,7 @@ const withUnitNumber = (value: number) => {
 }
 
 interface DataRenderProps {
-  icon: React.FC<IconProps>
+  icon: React.FC<LucideProps>
   value: number | undefined
   className?: string
   iconClassName?: string
@@ -66,7 +68,7 @@ const DataRender: React.FC<DataRenderProps> = ({
 // Record<keyof ProjectAnalysisData, Icon>
 export const dataRenderConfig = {
   stars: Star,
-  forks: Fork,
+  forks: GitFork,
   downloads: Download,
 } as const
 

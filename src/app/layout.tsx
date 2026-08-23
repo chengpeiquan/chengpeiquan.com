@@ -1,4 +1,5 @@
-import { RootLayout as BaseRootLayout } from 'blackwork'
+import { ThemeProvider } from 'blackwork'
+import { ThemeScript } from 'blackwork/rsc'
 import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getMessages } from 'next-intl/server'
 import React from 'react'
@@ -30,12 +31,21 @@ export default async function RootLayout({
    *    https://github.com/vercel/next.js/issues/58055
    */
   return (
-    <BaseRootLayout lang={locale}>
-      <NextIntlClientProvider locale={locale} messages={messages}>
-        {children}
+    <html lang={locale} suppressHydrationWarning data-scroll-behavior="smooth">
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+        <ThemeScript />
+      </head>
 
-        <WebAnalytics />
-      </NextIntlClientProvider>
-    </BaseRootLayout>
+      <body className="flex min-h-screen w-screen flex-col">
+        <ThemeProvider>
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            {children}
+
+            <WebAnalytics />
+          </NextIntlClientProvider>
+        </ThemeProvider>
+      </body>
+    </html>
   )
 }
