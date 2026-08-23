@@ -7,7 +7,6 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-  Button,
   Separator,
 } from 'blackwork'
 import { CircleHelp } from 'lucide-react'
@@ -27,10 +26,24 @@ export const DataDescription = async ({ locale }: PropsWithLocale) => {
 
   return (
     <AlertDialog>
-      <AlertDialogTrigger asChild>
-        <Button variant="ghost" size="icon" aria-label={t('title')}>
-          <CircleHelp className="size-5 cursor-pointer text-muted-foreground" />
-        </Button>
+      <AlertDialogTrigger
+        render={
+          <button
+            type="button"
+            className="
+              inline-flex size-8 items-center justify-center rounded-md text-sm
+              font-medium whitespace-nowrap ring-offset-background
+              transition-colors
+              hover:bg-accent hover:text-accent-foreground
+              focus-visible:ring-2 focus-visible:ring-ring
+              focus-visible:ring-offset-2 focus-visible:outline-none
+              disabled:pointer-events-none disabled:opacity-50
+            "
+            aria-label={t('title')}
+          />
+        }
+      >
+        <CircleHelp className="size-5 cursor-pointer text-muted-foreground" />
       </AlertDialogTrigger>
 
       <AlertDialogContent
