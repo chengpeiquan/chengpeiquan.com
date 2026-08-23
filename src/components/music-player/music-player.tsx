@@ -5,7 +5,7 @@ import {
   Button,
   Progress,
 } from 'blackwork'
-import { CD, Paused, Play } from 'blackwork/icons'
+import { Disc3, Pause, Play } from 'lucide-react'
 import React, { memo, useMemo, useState } from 'react'
 import { type BgmConfig } from '@/config/content-config'
 import { getBrbStyle, getBrbVariant } from '@/config/style-config'
@@ -38,7 +38,7 @@ const MusicDisc: React.FC<MusicDiscProps> = ({
   playing,
   togglePlay,
 }) => {
-  const ButtonIcon = playing ? Paused : Play
+  const ButtonIcon = playing ? Pause : Play
   const fullName = `${title}-${musician}`
 
   return (
@@ -290,7 +290,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({
           setVisible((v) => !v)
         }}
       >
-        <CD
+        <Disc3
           className={cn('size-5', { 'animate-spin': playing })}
           style={animationStyle}
         />

@@ -1,7 +1,7 @@
 'use client'
 
-import { ChevronRight } from 'blackwork/icons'
 import { type Variants, motion, stagger } from 'framer-motion'
+import { ChevronRight } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import React from 'react'
 import { Link } from '@/navigation'

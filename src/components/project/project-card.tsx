@@ -6,9 +6,11 @@ import {
   CardHeader,
   CardTitle,
 } from 'blackwork'
-import { Github, Home, Npm } from 'blackwork/icons'
+import { Home } from 'lucide-react'
+
 import { getTranslations } from 'next-intl/server'
 import React from 'react'
+import { GithubIcon, NpmIcon } from '@/components/shared/icons'
 import { LinkIconButton } from '@/components/shared/link-icon-button'
 import { LocaleIs } from '@/config/locale-config'
 import {
@@ -136,7 +138,7 @@ export const ProjectCard = async ({ locale, item }: ProjectCardProps) => {
               })}
               href={npmUrl}
               title={t('button.repo')}
-              icon={Npm}
+              icon={NpmIcon}
             />
           )}
 
@@ -146,7 +148,7 @@ export const ProjectCard = async ({ locale, item }: ProjectCardProps) => {
             })}
             href={repoUrl}
             title={t('button.repo')}
-            icon={Github}
+            icon={GithubIcon}
           />
 
           {homepage && (

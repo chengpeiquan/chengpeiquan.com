@@ -1,13 +1,13 @@
 import { isUndefined } from '@bassist/utils'
 import { type SocialLinkProps } from 'blackwork'
 import {
-  About as AboutIcon,
-  Article as ArticleIcon,
-  Food as FoodIcon,
-  Home as HomeIcon,
-  type IconProps,
-  Toolbox as ToolboxIcon,
-} from 'blackwork/icons'
+  CircleUser,
+  Home,
+  Newspaper,
+  type LucideProps,
+  Utensils,
+  Wrench,
+} from 'lucide-react'
 import { type Metadata } from 'next'
 import { TattooIcon } from '@/components/shared/icons'
 import { ContentFolder } from './content-config'
@@ -52,13 +52,13 @@ const navSlugs = [
 
 export type NavSlug = (typeof siteConfig.navSlugs)[number]
 
-export const navIconMap: Record<NavSlug, React.FC<IconProps>> = {
-  home: HomeIcon,
-  projects: ToolboxIcon,
-  article: ArticleIcon,
-  cookbook: FoodIcon,
+export const navIconMap: Record<NavSlug, React.FC<LucideProps>> = {
+  home: Home,
+  projects: Wrench,
+  article: Newspaper,
+  cookbook: Utensils,
   tattoos: TattooIcon,
-  about: AboutIcon,
+  about: CircleUser,
 }
 
 interface ExtraSocialLinkProps extends SocialLinkProps {

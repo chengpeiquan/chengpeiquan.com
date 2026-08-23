@@ -1,5 +1,5 @@
 import { Button, ExternalLink, type ExternalLinkProps } from 'blackwork'
-import { type IconProps } from 'blackwork/icons'
+import { type LucideProps } from 'lucide-react'
 import React from 'react'
 
 export interface LinkIconButtonProps extends Pick<
@@ -7,7 +7,7 @@ export interface LinkIconButtonProps extends Pick<
   'href' | 'title'
 > {
   ariaLabel: string
-  icon: React.FC<IconProps>
+  icon: React.FC<LucideProps>
 }
 
 export const LinkIconButton: React.FC<LinkIconButtonProps> = ({

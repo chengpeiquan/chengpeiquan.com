@@ -10,7 +10,7 @@ import {
   DialogTrigger,
   ScrollArea,
 } from 'blackwork'
-import { ChevronsDown } from 'blackwork/icons'
+import { ChevronsDown } from 'lucide-react'
 import { getTranslations } from 'next-intl/server'
 import React from 'react'
 import { type BookPurchaseInfo } from '@/config/book-config'
@@ -25,18 +25,22 @@ import { PurchaseLinks } from './purchase-links'
 
 const ExpandButton: React.FC<{ label: string }> = ({ label }) => {
   return (
-    <DialogTrigger asChild>
-      <span className="inline-flex items-center gap-6 text-base">
-        <span>…</span>
-        <span
-          className="
-            inline-flex cursor-pointer items-center
-            hover:text-foreground
-          "
-        >
-          <span>{label}</span>
-          <ChevronsDown className="size-4" />
-        </span>
+    <DialogTrigger
+      className="
+        inline-flex h-auto items-center gap-6 bg-transparent p-0 text-base
+        font-normal text-inherit
+        hover:bg-transparent
+      "
+    >
+      <span>…</span>
+      <span
+        className="
+          inline-flex cursor-pointer items-center
+          hover:text-foreground
+        "
+      >
+        <span>{label}</span>
+        <ChevronsDown className="size-4" />
       </span>
     </DialogTrigger>
   )
