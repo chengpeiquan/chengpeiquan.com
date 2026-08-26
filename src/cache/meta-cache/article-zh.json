@@ -1,5 +1,19 @@
 [
   {
+    "slug": "netease-cloud-music-fnnas-music-organizer",
+    "metadata": {
+      "title": "解锁网易云音乐歌曲 轻松搭建飞牛音乐私人音乐库",
+      "desc": "飞牛音乐终于来啦！仅需三步，轻轻松松地把网易云音乐客户端下载的歌曲同步到飞牛 NAS ，填充自己的本地音乐库。",
+      "keywords": "网易云音乐,云音乐下载,NCM,飞牛NAS,fnOS,FygoOS,音乐整理,KNAS 音乐整理,音乐库",
+      "cover": "https://cdn.chengpeiquan.com/img/2026/08/20260827001001206.jpg?x-oss-process=image/interlace,1",
+      "categories": [
+        "tech"
+      ],
+      "date": "2026/8/27 00:00:00",
+      "timestamp": 1787760000000
+    }
+  },
+  {
     "slug": "paul-wong-sound-and-image-coexistence",
     "metadata": {
       "title": "声画共生：黄贯中的摇滚美学宇宙",
