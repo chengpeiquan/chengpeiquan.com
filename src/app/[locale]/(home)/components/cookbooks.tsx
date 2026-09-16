@@ -43,7 +43,11 @@ const ButtonGroup: React.FC<ButtonGroupProps> = ({ locale, items }) => {
         })()
 
         return (
-          <Button key={i.slug} variant="outline" className="size-full p-0">
+          <Button
+            key={i.slug}
+            variant="glass"
+            className="bw-glass-category size-full p-0"
+          >
             <Link
               href={`/cookbooks/${i.slug}/1`}
               className="
