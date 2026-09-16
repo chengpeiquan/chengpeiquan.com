@@ -2,6 +2,7 @@ const tailwindWhitelist = [
   'dark',
   'not-prose',
   'bw-glass-category',
+  'bw-glass-player',
   'text-primary',
   'text-foreground',
   '!text-foreground',
