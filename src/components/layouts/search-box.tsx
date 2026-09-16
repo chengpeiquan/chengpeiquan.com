@@ -211,12 +211,14 @@ export const SearchBoxRoot: React.FC<PropsWithDevice> = ({ isMobile }) => {
 
   const label = useMemo(() => t('label', { target }), [t, target])
 
+  const tn = useTranslations('basicConfig.navigation')
   const { open, setOpen } = useQuickSearchState()
   const { onSearch, ...rest } = useSearch({ enabled: open })
 
   return (
     <>
       <QuickSearchTrigger
+        appearance="glass"
         label={label}
         shortLabel={t('shortLabel')}
         onClick={() => {
@@ -225,23 +227,27 @@ export const SearchBoxRoot: React.FC<PropsWithDevice> = ({ isMobile }) => {
       />
 
       <QuickSearchDialog
+        appearance="glass"
+        closeLabel={tn('close')}
         open={open}
         onOpenChange={setOpen}
         ariaLabel={label}
         contentProps={{
           className: cn({
-            'w-[750px] max-w-full': !isMobile,
-            'w-[90vw] rounded-lg': isMobile,
+            'w-[680px] max-w-[calc(100vw-32px)]': !isMobile,
+            'w-[calc(100vw-24px)]': isMobile,
           }),
         }}
       >
         <QuickSearchInput
+          appearance="glass"
+          aria-label={label}
           maxLength={100}
           placeholder={t('placeholder', { target })}
           onChange={onSearch}
         />
 
-        <QuickSearchList className="h-[600px]">
+        <QuickSearchList className="h-[min(440px,calc(100dvh-180px))]">
           <SearchResult
             isMobile={isMobile}
             onClose={() => {

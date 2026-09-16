@@ -47,6 +47,11 @@ export const LanguageToggle: React.FC = () => {
   }, [isEnglish, t])
 
   return (
-    <LanguageToggler defaultValue={locale} title={title} options={options} />
+    <LanguageToggler
+      variant="glass"
+      defaultValue={locale}
+      title={title}
+      options={options}
+    />
   )
 }

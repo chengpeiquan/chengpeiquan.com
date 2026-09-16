@@ -26,5 +26,12 @@ export const ThemeToggle: React.FC = () => {
     return action + nextThemeLabel
   }, [isDark, t])
 
-  return <ThemeToggler mode="button" title={title} options={options} />
+  return (
+    <ThemeToggler
+      variant="glass"
+      mode="button"
+      title={title}
+      options={options}
+    />
+  )
 }

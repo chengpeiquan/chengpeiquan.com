@@ -83,9 +83,10 @@ export const NavigationSheet: React.FC<PropsWithDevice> = ({ isMobile }) => {
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
         <Button
-          variant="outline"
+          variant="glass"
           size="icon"
           className={btnCls}
+          title={t('title')}
           aria-label={t('title')}
         >
           <MenuIcon className="size-5" />
@@ -95,6 +96,7 @@ export const NavigationSheet: React.FC<PropsWithDevice> = ({ isMobile }) => {
       {!isLg && (
         <SheetContent
           side="left"
+          appearance="glass"
           className={contentCls}
           closeButtonVisible={false}
         >
@@ -118,7 +120,7 @@ export const NavigationSheet: React.FC<PropsWithDevice> = ({ isMobile }) => {
                 <NavigationLinks
                   visible
                   asButton
-                  className="grid w-full grid-cols-2"
+                  className="grid w-full grid-cols-2 gap-1"
                 />
 
                 <Recommend />
@@ -126,13 +128,17 @@ export const NavigationSheet: React.FC<PropsWithDevice> = ({ isMobile }) => {
 
               <Separator className="my-4" />
 
-              <SocialLinks items={socialLinks} className="justify-center" />
+              <SocialLinks
+                variant="glass"
+                items={socialLinks}
+                className="justify-center"
+              />
             </div>
           </div>
 
           <SheetFooter className="mx-4 mb-4">
             <SheetClose asChild>
-              <Button variant="outline">{t('close')}</Button>
+              <Button variant="glass">{t('close')}</Button>
             </SheetClose>
           </SheetFooter>
         </SheetContent>

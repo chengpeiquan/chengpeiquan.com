@@ -1,13 +1,11 @@
 'use client'
 
-import { isUndefined } from '@bassist/utils'
-import { Button, cn } from 'blackwork'
+import { Button, FluidGlass, cn } from 'blackwork'
 import { useTranslations } from 'next-intl'
 import React, { useMemo } from 'react'
 import { listFolderMapping, pageFolderMapping } from '@/config/content-config'
 import { CheckRoute } from '@/config/route-config'
 import { type NavSlug, navIconMap, siteConfig } from '@/config/site-config'
-import { useBreakpoint } from '@/hooks'
 import { Link, usePathname } from '@/navigation'
 
 interface NavigationLinkProps {
@@ -68,6 +66,8 @@ const NavigationLink: React.FC<NavigationLinkProps> = ({
     return (
       <Link
         href={href}
+        data-fluid-glass-item=""
+        aria-current={active ? 'page' : undefined}
         className="text-base"
         title={label}
         aria-label={ariaLabel}
@@ -83,7 +83,8 @@ const NavigationLink: React.FC<NavigationLinkProps> = ({
   if (asButton) {
     return (
       <Button
-        variant={active ? 'default' : 'outline'}
+        variant="ghost"
+        className="hover:bg-transparent"
         size="sm"
         asChild
         onClick={onClick}
@@ -117,31 +118,33 @@ export const NavigationLinks: React.FC<NavigationLinksProps> = ({
   className,
   ...rest
 }) => {
-  const { isLg } = useBreakpoint()
+  const t = useTranslations('basicConfig.navigation')
 
-  const visible = useMemo(() => {
-    if (!isUndefined(forceVisible)) return forceVisible
-    return isLg
-  }, [forceVisible, isLg])
-
+  // CSS owns responsive visibility so server and client render the same tree.
   const cls = cn(
     `
-      flex-row gap-4 text-lg
-      md:items-center md:gap-5 md:text-sm
-      lg:gap-6
+      flex flex-row text-lg
+      md:items-center md:text-sm
     `,
-    {
-      'hidden lg:flex': !visible,
-      flex: visible,
-    },
     className,
   )
 
   return (
-    <nav className={cls} suppressHydrationWarning>
-      {siteConfig.navSlugs.map((i) => (
-        <NavigationLink key={i} slug={i} {...rest} />
-      ))}
+    <nav
+      aria-label={t('title')}
+      className={cn(
+        !forceVisible &&
+          `
+            hidden
+            lg:block
+          `,
+      )}
+    >
+      <FluidGlass className={cls} surface={false} variant="subtle">
+        {siteConfig.navSlugs.map((i) => (
+          <NavigationLink key={i} slug={i} {...rest} />
+        ))}
+      </FluidGlass>
     </nav>
   )
 }
