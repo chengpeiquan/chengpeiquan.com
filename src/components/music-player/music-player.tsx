@@ -4,9 +4,10 @@ import {
   AvatarImage,
   Button,
   Progress,
+  GlassMaterial,
 } from 'blackwork'
 import { Disc3, Pause, Play } from 'lucide-react'
-import React, { memo, useMemo, useState } from 'react'
+import React, { memo, useEffect, useMemo, useState } from 'react'
 import { type BgmConfig } from '@/config/content-config'
 import { getBrbStyle, getBrbVariant } from '@/config/style-config'
 import { cn } from '@/utils'
@@ -114,24 +115,6 @@ const Musician: React.FC<
   )
 }
 
-const GuideArrow: React.FC = () => {
-  return (
-    <div
-      className="
-        absolute top-[12px] right-[-8px] size-0 border-y-8 border-l-8
-        border-y-transparent border-l-input
-      "
-    >
-      <div
-        className="
-          absolute top-[-6px] left-[-8px] size-0 border-y-[6px] border-l-[6px]
-          border-y-transparent border-l-background
-        "
-      ></div>
-    </div>
-  )
-}
-
 interface PlayerLayoutProps {
   discRender: React.ReactNode
   musicianRender: React.ReactNode
@@ -222,6 +205,15 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({
 
   const brbStyle = getBrbStyle(isMobile ? 2 : 1, isMobile)
 
+  useEffect(() => {
+    const audio = audioRef.current
+    if (!audio || audio.readyState < HTMLMediaElement.HAVE_METADATA) return
+    if (Number.isFinite(audio.duration) && audio.duration > 0) {
+      setDuration(audio.duration)
+      setLoading(false)
+    }
+  }, [audioRef, setDuration, setLoading, src])
+
   const discRender = useMemo(
     () => (
       <MusicDisc
@@ -284,7 +276,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({
     <>
       <Button
         size="icon"
-        variant={!isMobile && visible ? 'outline' : getBrbVariant(isMobile)}
+        variant={!isMobile && visible ? 'glass' : getBrbVariant(isMobile)}
         style={brbStyle}
         onClick={() => {
           setVisible((v) => !v)
@@ -301,11 +293,13 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({
           'fixed right-[72px]',
           'not-prose bg-background',
           'box-border flex items-center justify-between gap-6 p-3',
-          'rounded-md border border-solid border-input',
+          'rounded-full border border-solid border-input',
           visible ? 'flex' : 'hidden',
+          'bw-glass-player',
           {
-            'right-[72px] bottom-[20px] left-[20px] h-[144px]': isMobile,
-            'right-[64px] bottom-[12px] h-[92px] w-[300px]': !isMobile,
+            'right-[72px] bottom-[20px] left-[20px] h-[144px] rounded-[28px]':
+              isMobile,
+            'right-[64px] bottom-[12px] h-[92px] w-[360px]': !isMobile,
           },
         )}
         style={{ zIndex: brbStyle.zIndex }}
@@ -322,13 +316,19 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({
             setDuration(e.currentTarget.duration)
             setLoading(false)
           }}
+          onDurationChange={(e) => {
+            if (Number.isFinite(e.currentTarget.duration)) {
+              setDuration(e.currentTarget.duration)
+              setLoading(false)
+            }
+          }}
           onTimeUpdate={() => {
             const ctime = audioRef.current?.currentTime ?? 0
             setCurrentTime(ctime)
           }}
         />
 
-        <GuideArrow />
+        <GlassMaterial material="panel" refraction={28} blur={5} />
 
         <PlayerLayout
           discRender={discRender}
