@@ -16,7 +16,7 @@ import { ThemeToggle } from '@/components/layouts/theme-toggle'
 import { isMobileDevice } from '@/config/middleware-config'
 import { type PropsWithLocale } from '@/config/route-config'
 import { getLocaleSocialLinks, siteConfig } from '@/config/site-config'
-import { getBrbStyle, getBrbVariant } from '@/config/style-config'
+import { getBrbStyle } from '@/config/style-config'
 import { ExternalLink, Link } from '@/navigation'
 
 type LayoutContainerProps = React.PropsWithChildren & PropsWithLocale
@@ -46,9 +46,9 @@ export const LayoutContainer = async ({
   return (
     <>
       <LayoutHeader
-        className="dark:shadow-[inset_0_-1px_0_0_#222]"
-        wrapperClassName="gap-12 md:gap-8"
-        contentClassName="gap-6"
+        appearance="glass"
+        wrapperClassName="gap-6 md:gap-4"
+        contentClassName="gap-4"
         socialLinksVisible={!isMobile}
         socialLinks={socialLinks}
         languageToggle={<LanguageToggle />}
@@ -92,10 +92,7 @@ export const LayoutContainer = async ({
 
       {children}
 
-      <ScrollToTop
-        variant={getBrbVariant(isMobile)}
-        style={getBrbStyle(0, isMobile)}
-      />
+      <ScrollToTop variant="glass" style={getBrbStyle(0, isMobile)} />
 
       <LayoutFooter
         className="
