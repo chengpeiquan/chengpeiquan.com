@@ -12,11 +12,11 @@ importers:
         specifier: ^0.17.0
         version: 0.17.0
       '@blackwork/docs':
-        specifier: ^0.5.0
-        version: 0.5.0(blackwork@0.12.2(@bassist/utils@0.17.0)(@types/react@19.2.18)(clsx@2.1.1)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tailwind-merge@3.6.0)(tailwindcss@4.3.3))(next@16.3.1(@babel/core@7.29.7(supports-color@7.2.0))(@types/node@26.2.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(supports-color@7.2.0)
+        specifier: ^0.6.0
+        version: 0.6.0(blackwork@0.13.0(@bassist/utils@0.17.0)(@types/react@19.2.18)(clsx@2.1.1)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tailwind-merge@3.6.0)(tailwindcss@4.3.3))(next@16.3.1(@babel/core@7.29.7(supports-color@7.2.0))(@types/node@26.2.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(supports-color@7.2.0)
       '@blackwork/machine':
         specifier: ^0.2.2
-        version: 0.2.2(blackwork@0.12.2(@bassist/utils@0.17.0)(@types/react@19.2.18)(clsx@2.1.1)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tailwind-merge@3.6.0)(tailwindcss@4.3.3))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(supports-color@7.2.0)
+        version: 0.2.2(blackwork@0.13.0(@bassist/utils@0.17.0)(@types/react@19.2.18)(clsx@2.1.1)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tailwind-merge@3.6.0)(tailwindcss@4.3.3))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(supports-color@7.2.0)
       '@blackwork/search':
         specifier: ^0.1.1
         version: 0.1.1
@@ -27,8 +27,8 @@ importers:
         specifier: ^0.1.5
         version: 0.1.5
       blackwork:
-        specifier: ^0.12.2
-        version: 0.12.2(@bassist/utils@0.17.0)(@types/react@19.2.18)(clsx@2.1.1)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tailwind-merge@3.6.0)(tailwindcss@4.3.3)
+        specifier: ^0.13.0
+        version: 0.13.0(@bassist/utils@0.17.0)(@types/react@19.2.18)(clsx@2.1.1)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tailwind-merge@3.6.0)(tailwindcss@4.3.3)
       framer-motion:
         specifier: ^13.1.0
         version: 13.1.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
@@ -293,8 +293,8 @@ packages:
     resolution: {integrity: sha512-Vj1jF3cPfxg7OAfoI7QnVKLoILlm2JF9pnVHrX8qx7AHMiYWT+NDAA7jChlNgRS4WTLc/fD1lXLmPixluj+3Gg==}
     engines: {node: '>=6.9.0'}
 
-  '@base-ui/react@1.7.0':
-    resolution: {integrity: sha512-j+8QjX44C32jrXD/qyEAGpFr70FRpGL2CY61mQd9nBPWN737CK0xxD1ceJ055rW4RtdvFDT1e7otzdlfxvsYug==}
+  '@base-ui/react@1.8.0':
+    resolution: {integrity: sha512-P0/1sxo6SBVZOklKMIedvTWqw2s2IQzi9x5bIVsXu980cuSOD4NeuRSs+/L7LZQfDkZP/uRZyGPyfFl/B1oH+Q==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       '@date-fns/tz': ^1.2.0
@@ -310,8 +310,8 @@ packages:
       date-fns:
         optional: true
 
-  '@base-ui/utils@0.3.2':
-    resolution: {integrity: sha512-oWy1aq/I2GmYjpl4PhEAhzflF8VPGKgZeq0xAWTbfD5KBWyxcN0ZP2+WHSUm/5Z6lVMBDLReLcoXwSYoRc/zNQ==}
+  '@base-ui/utils@0.4.0':
+    resolution: {integrity: sha512-bO9fz25kKtPf+aZVyfQrC0PDmJdmVni31W2hCS5/Owb+inwdIL3XU26pCPRPlt4LSxZrBgLwubXQXQlKaFEZzw==}
     peerDependencies:
       '@types/react': ^17 || ^18 || ^19
       react: ^17 || ^18 || ^19
@@ -367,10 +367,10 @@ packages:
   '@bassist/utils@0.17.0':
     resolution: {integrity: sha512-96rpHXgZ2BswyuO27IWrsmrZekef+f1Ag6384bZ6oOAy4squ/1x57yPXMIjumzRX8U+e6g6i8ujvFfhrdjf3Jg==}
 
-  '@blackwork/docs@0.5.0':
-    resolution: {integrity: sha512-rTC2SnbLZYHVfg6oVCsfxvmE5QkEcp0hto0APlK8hQGhIrXiGrIIrcRtC9+uIO9bVtLjNkhKvHSJuiys4DJ+ww==}
+  '@blackwork/docs@0.6.0':
+    resolution: {integrity: sha512-mSsGNPpT5sUTuKkmPR1ccU0BGcued2mOPhSwffBN8wBhVpaxg7OIuHtQutLGtPVq31Jy1PPR93sTA5O2ABvlfQ==}
     peerDependencies:
-      blackwork: '>=0.12.0'
+      blackwork: '>=0.13.0'
       next: '>=16.0.0'
       react: '>=19.0.0'
       react-dom: '>=19.0.0'
@@ -2166,8 +2166,8 @@ packages:
   binary-searching@2.0.5:
     resolution: {integrity: sha512-v4N2l3RxL+m4zDxyxz3Ne2aTmiPn8ZUpKFpdPtO+ItW1NcTCXA7JeHG5GMBSvoKSkQZ9ycS+EouDVxYB9ufKWA==}
 
-  blackwork@0.12.2:
-    resolution: {integrity: sha512-tDWcygg9FQ/4p2g2Mo+XD2z4/ujHhVtplZ5kYCkhmUBH5zyiEkmHPWO8Qxj+oKtgUZUS9q04IxkHiL6hiGWzcw==}
+  blackwork@0.13.0:
+    resolution: {integrity: sha512-YVapbp7pR46XOaRA2ofROFRqnScpn0mFNDjhcQ0r010F0v9cpx9EJHtBmg4Ttgk0v7GLm6EXN1LU+KbAg0TtyQ==}
     peerDependencies:
       '@bassist/utils': '>=0.17.0'
       '@tanstack/react-form': '>=1.0.0'
@@ -4409,8 +4409,8 @@ packages:
     peerDependencies:
       react: ^17.0.0 || ^18.0.0 || >=19.0.0-rc <19.0.0 || ^19.0.0
 
-  use-sync-external-store@1.6.0:
-    resolution: {integrity: sha512-Pp6GSwGP/NrPIrxVFAIkOQeyw8lFenOHijQWkUTrDvrF4ALqylP2C/KCkeS9dpUM3KvYRQhna5vt7IL95+ZQ9w==}
+  use-sync-external-store@1.7.0:
+    resolution: {integrity: sha512-6L+EeigHMQhdaIPNIFUKwfWJSwWFQ8gJbJ2DLOs5sDIegTwR9fRxvnM3uciHKjIZhFz+KAv2emhWMRvDmMcY8A==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
@@ -4721,26 +4721,26 @@ snapshots:
       '@babel/helper-string-parser': 7.29.7
       '@babel/helper-validator-identifier': 7.29.7
 
-  '@base-ui/react@1.7.0(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
+  '@base-ui/react@1.8.0(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
     dependencies:
       '@babel/runtime': 7.29.7
-      '@base-ui/utils': 0.3.2(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+      '@base-ui/utils': 0.4.0(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       '@floating-ui/react-dom': 2.1.9(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       '@floating-ui/utils': 0.2.12
       react: 19.2.8
       react-dom: 19.2.8(react@19.2.8)
-      use-sync-external-store: 1.6.0(react@19.2.8)
+      use-sync-external-store: 1.7.0(react@19.2.8)
     optionalDependencies:
       '@types/react': 19.2.18
 
-  '@base-ui/utils@0.3.2(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
+  '@base-ui/utils@0.4.0(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
     dependencies:
       '@babel/runtime': 7.29.7
       '@floating-ui/utils': 0.2.12
       react: 19.2.8
       react-dom: 19.2.8(react@19.2.8)
       reselect: 5.3.0
-      use-sync-external-store: 1.6.0(react@19.2.8)
+      use-sync-external-store: 1.7.0(react@19.2.8)
     optionalDependencies:
       '@types/react': 19.2.18
 
@@ -4824,10 +4824,10 @@ snapshots:
 
   '@bassist/utils@0.17.0': {}
 
-  '@blackwork/docs@0.5.0(blackwork@0.12.2(@bassist/utils@0.17.0)(@types/react@19.2.18)(clsx@2.1.1)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tailwind-merge@3.6.0)(tailwindcss@4.3.3))(next@16.3.1(@babel/core@7.29.7(supports-color@7.2.0))(@types/node@26.2.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(supports-color@7.2.0)':
+  '@blackwork/docs@0.6.0(blackwork@0.13.0(@bassist/utils@0.17.0)(@types/react@19.2.18)(clsx@2.1.1)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tailwind-merge@3.6.0)(tailwindcss@4.3.3))(next@16.3.1(@babel/core@7.29.7(supports-color@7.2.0))(@types/node@26.2.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(supports-color@7.2.0)':
     dependencies:
-      '@blackwork/machine': 0.2.2(blackwork@0.12.2(@bassist/utils@0.17.0)(@types/react@19.2.18)(clsx@2.1.1)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tailwind-merge@3.6.0)(tailwindcss@4.3.3))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(supports-color@7.2.0)
-      blackwork: 0.12.2(@bassist/utils@0.17.0)(@types/react@19.2.18)(clsx@2.1.1)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tailwind-merge@3.6.0)(tailwindcss@4.3.3)
+      '@blackwork/machine': 0.2.2(blackwork@0.13.0(@bassist/utils@0.17.0)(@types/react@19.2.18)(clsx@2.1.1)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tailwind-merge@3.6.0)(tailwindcss@4.3.3))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(supports-color@7.2.0)
+      blackwork: 0.13.0(@bassist/utils@0.17.0)(@types/react@19.2.18)(clsx@2.1.1)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tailwind-merge@3.6.0)(tailwindcss@4.3.3)
       chokidar: 4.0.3
       jiti: 1.21.7
       lucide-react: 1.31.0(react@19.2.8)
@@ -4837,7 +4837,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@blackwork/machine@0.2.2(blackwork@0.12.2(@bassist/utils@0.17.0)(@types/react@19.2.18)(clsx@2.1.1)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tailwind-merge@3.6.0)(tailwindcss@4.3.3))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(supports-color@7.2.0)':
+  '@blackwork/machine@0.2.2(blackwork@0.13.0(@bassist/utils@0.17.0)(@types/react@19.2.18)(clsx@2.1.1)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tailwind-merge@3.6.0)(tailwindcss@4.3.3))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(supports-color@7.2.0)':
     dependencies:
       '@bassist/utils': 0.17.0
       '@mdx-js/mdx': 3.1.1(supports-color@7.2.0)
@@ -4845,7 +4845,7 @@ snapshots:
       '@stefanprobst/rehype-extract-toc': 3.0.0
       '@types/hast': 3.0.5
       '@types/mdast': 4.0.4
-      blackwork: 0.12.2(@bassist/utils@0.17.0)(@types/react@19.2.18)(clsx@2.1.1)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tailwind-merge@3.6.0)(tailwindcss@4.3.3)
+      blackwork: 0.13.0(@bassist/utils@0.17.0)(@types/react@19.2.18)(clsx@2.1.1)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tailwind-merge@3.6.0)(tailwindcss@4.3.3)
       gray-matter: 4.0.3
       hast: 1.0.0
       lucide-react: 1.31.0(react@19.2.8)
@@ -6311,9 +6311,9 @@ snapshots:
 
   binary-searching@2.0.5: {}
 
-  blackwork@0.12.2(@bassist/utils@0.17.0)(@types/react@19.2.18)(clsx@2.1.1)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tailwind-merge@3.6.0)(tailwindcss@4.3.3):
+  blackwork@0.13.0(@bassist/utils@0.17.0)(@types/react@19.2.18)(clsx@2.1.1)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tailwind-merge@3.6.0)(tailwindcss@4.3.3):
     dependencies:
-      '@base-ui/react': 1.7.0(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+      '@base-ui/react': 1.8.0(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       '@bassist/utils': 0.17.0
       class-variance-authority: 0.7.1
       clsx: 2.1.1
@@ -9294,7 +9294,7 @@ snapshots:
       intl-messageformat: 11.2.13
       react: 19.2.8
 
-  use-sync-external-store@1.6.0(react@19.2.8):
+  use-sync-external-store@1.7.0(react@19.2.8):
     dependencies:
       react: 19.2.8
 
