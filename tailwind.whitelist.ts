@@ -1,6 +1,7 @@
 const tailwindWhitelist = [
   'dark',
   'not-prose',
+  'bw-glass-category',
   'text-primary',
   'text-foreground',
   '!text-foreground',

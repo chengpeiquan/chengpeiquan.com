@@ -89,6 +89,7 @@ export const Books = async ({ locale, isMobile }: BooksProps) => {
             purchaseLinks={book.purchaseLinks}
             locale={locale}
             buttonSize={isMobile ? 'sm' : 'default'}
+            buttonVariant="glass"
           />
         </div>
       </Card>
