@@ -2,6 +2,7 @@
 @plugin '@tailwindcss/typography';
 @plugin 'tailwindcss-animate';
 @import 'blackwork/tailwind.css';
+@import 'blackwork/ui-globals.css';
 @import '@blackwork/docs/tailwind.css';
 @import '@blackwork/machine/tailwind.css';
 @custom-variant dark (&:where(.dark, .dark *));

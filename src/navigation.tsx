@@ -5,6 +5,7 @@ import {
 import { type VariantProps, cva } from 'class-variance-authority'
 import { createNavigation } from 'next-intl/navigation'
 import React from 'react'
+import { NavigationProgressReporter } from '@/components/layouts/navigation-progress'
 import {
   defaultLocale,
   localePrefix,
@@ -66,7 +67,7 @@ const linkVariants = cva('transition-colors', {
 
 const Link: React.FC<
   React.ComponentProps<typeof BaseLink> & VariantProps<typeof linkVariants>
-> = ({ variant, className, strong, underline, ...props }) => (
+> = ({ variant, className, strong, underline, children, ...props }) => (
   <BaseLink
     className={cn(
       linkVariants({
@@ -77,7 +78,10 @@ const Link: React.FC<
       }),
     )}
     {...props}
-  />
+  >
+    {children}
+    <NavigationProgressReporter />
+  </BaseLink>
 )
 
 const ExternalLink: React.FC<

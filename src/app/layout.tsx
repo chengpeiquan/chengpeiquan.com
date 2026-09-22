@@ -3,6 +3,7 @@ import { ThemeScript } from 'blackwork/rsc'
 import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getMessages } from 'next-intl/server'
 import React from 'react'
+import { NavigationProgressProvider } from '@/components/layouts/navigation-progress'
 import { WebAnalytics } from '@/components/layouts/web-analytics'
 import { type Locale } from '@/config/locale-config'
 import '@/styles/globals.css'
@@ -40,7 +41,7 @@ export default async function RootLayout({
       <body className="flex min-h-screen w-screen flex-col">
         <ThemeProvider>
           <NextIntlClientProvider locale={locale} messages={messages}>
-            {children}
+            <NavigationProgressProvider>{children}</NavigationProgressProvider>
 
             <WebAnalytics />
           </NextIntlClientProvider>
