@@ -29,6 +29,11 @@ export default defineOxlintConfig(
       'docs/plans/**',
     ],
     rules: {
+      // Keep newly enabled React checks advisory during the toolchain upgrade.
+      // Address the existing effects and render-time clock separately.
+      'react/exhaustive-effect-dependencies': 'warn',
+      'react/purity': 'warn',
+      'react/set-state-in-effect': 'warn',
       'better-tailwindcss/no-unknown-classes': [
         'error',
         {

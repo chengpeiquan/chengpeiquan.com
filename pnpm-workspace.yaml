@@ -1,3 +1,8 @@
+engineStrict: true
+# Keep transitive tooling dependencies on versions with published security fixes.
+overrides:
+  'katex@<0.18.2': ^0.18.2
+  'postcss-selector-parser@<7.1.6': ^7.1.6
 allowBuilds:
   '@parcel/watcher': true
   '@swc/core': true
