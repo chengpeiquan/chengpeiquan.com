@@ -2,12 +2,18 @@ import { LayoutMain } from 'blackwork'
 import { LocaleIs } from '@/config/locale-config'
 import { isMobileDevice } from '@/config/middleware-config'
 import { type ListPageProps } from '@/config/route-config'
+import { getPageMetadata } from '@/config/site-config'
 import { AboutMe } from './components/about-me'
 import { Articles } from './components/articles'
 import { Books } from './components/books'
 import { Cookbooks } from './components/cookbooks'
 import { Hero } from './components/hero'
 import { Projects } from './components/projects'
+
+export const generateMetadata = async ({ params }: ListPageProps) => {
+  const { locale } = await params
+  return getPageMetadata('/', locale)
+}
 
 export default async function LocalePage({
   params: promiseParams,

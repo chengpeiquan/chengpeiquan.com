@@ -11,7 +11,7 @@ import {
 import { type Metadata } from 'next'
 import { TattooIcon } from '@/components/shared/icons'
 import { ContentFolder } from './content-config'
-import { type Locale } from './locale-config'
+import { type Locale, defaultLocale } from './locale-config'
 
 const domain = 'chengpeiquan.com'
 
@@ -99,4 +99,23 @@ export const getLocaleSocialLinks = (locale: Locale) => {
 export const sharedMetadata: Metadata = {
   creator: siteConfig.author.name,
   authors: siteConfig.author,
+}
+
+// Use the same locale prefix convention as next-intl's public URLs.
+export const getPageMetadata = (pathname: string, locale: Locale): Metadata => {
+  const prefix = locale === defaultLocale ? '' : `/${locale}`
+  const path = pathname === '/' ? '' : pathname
+  const url = `https://${domain}${prefix}${path}`
+
+  return {
+    alternates: {
+      canonical: url,
+      types: {
+        'application/rss+xml': [
+          { url: `https://${domain}/feed.xml`, title: 'RSS' },
+        ],
+      },
+    },
+    openGraph: { url },
+  }
 }

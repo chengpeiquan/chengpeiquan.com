@@ -1,16 +1,18 @@
 'use server'
 
 import { type Metadata } from 'next'
+import { notFound } from 'next/navigation'
 import { getTranslations } from 'next-intl/server'
 import { cache } from 'react'
 import { getMetaCache } from '@/cache/meta-cache'
 import { type MetaCacheItem } from '@/config/cache-config'
 import {
-  type ContentFolder,
+  ContentFolder,
   type GetListResponse,
   type ListFolder,
   categoryMapping,
   getPagination,
+  listFolderMapping,
   pageSizeConfig,
 } from '@/config/content-config'
 import { defaultLocale } from '@/config/locale-config'
@@ -18,13 +20,18 @@ import {
   type DetailsPageParams,
   type ListPageParams,
 } from '@/config/route-config'
-import { sharedMetadata } from '@/config/site-config'
+import { getPageMetadata, sharedMetadata } from '@/config/site-config'
 import { getContent } from './io'
 
 const analyzeListParams = cache((params: ListPageParams) => {
+  if (params.args.length < 1 || params.args.length > 2) notFound()
+
   const isCategory = params.args.length === 2
   const category = isCategory ? params.args[0] : undefined
-  const page = +(isCategory ? params.args[1] : params.args[0])
+  const rawPage = isCategory ? params.args[1] : params.args[0]
+  const page = Number(rawPage)
+
+  if (!/^[1-9]\d*$/u.test(rawPage) || !Number.isSafeInteger(page)) notFound()
 
   return {
     category,
@@ -36,6 +43,14 @@ export const getList = cache(
   async (folder: ListFolder, params: ListPageParams) => {
     const { category, page } = analyzeListParams(params)
 
+    if (
+      category !== undefined &&
+      (!Object.hasOwn(categoryMapping, category) ||
+        categoryMapping[category].group !== listFolderMapping[folder])
+    ) {
+      notFound()
+    }
+
     const allCache = await getMetaCache(folder, params.locale)
     const pageSize = pageSizeConfig[folder]
 
@@ -44,6 +59,9 @@ export const getList = cache(
     )
 
     const pagination = getPagination(cache, page, pageSize)
+
+    // Empty collections may render page one, but must not create endless URLs.
+    if (page > Math.max(1, pagination.lastPage)) notFound()
 
     return {
       ...pagination,
@@ -61,7 +79,7 @@ export const getListMetadata = cache(
       namespace: 'basicConfig.pagination',
     })
 
-    const { category, page } = analyzeListParams(params)
+    const { category, page } = await getList(folder, params)
     const cateItem = category ? categoryMapping[category] : undefined
 
     const prefix = t(`prefix.${folder}`)
@@ -71,6 +89,10 @@ export const getListMetadata = cache(
 
     return {
       ...sharedMetadata,
+      ...getPageMetadata(
+        `/${listFolderMapping[folder]}/${category ? `${category}/` : ''}${page}`,
+        params.locale,
+      ),
       title,
     }
   },
@@ -115,12 +137,19 @@ export const getDetailsMetadata = cache(
     // This ensures that the language tag of the page is correct
     const locale = params.locale
 
+    const pageMetadata = getPageMetadata(
+      folder === ContentFolder.About ? '/about' : `/${folder}/${params.slug}`,
+      locale,
+    )
+
     return {
       ...sharedMetadata,
+      ...pageMetadata,
       title,
       keywords,
       description,
       openGraph: {
+        ...pageMetadata.openGraph,
         title,
         description,
         images: [

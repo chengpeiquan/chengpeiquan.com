@@ -4,6 +4,7 @@ import { getThumbHashMapping } from '@/cache/thumb-hash'
 import { LocaleIs } from '@/config/locale-config'
 import { isMobileDevice } from '@/config/middleware-config'
 import { type ListPageProps } from '@/config/route-config'
+import { getPageMetadata } from '@/config/site-config'
 import { Artist } from './components/artist'
 import { Hero } from './components/hero'
 import { Timeline } from './components/timeline'
@@ -19,6 +20,7 @@ export const generateMetadata = async ({
   })
 
   return {
+    ...getPageMetadata('/tattoos', params.locale),
     title: t('title'),
     description: t('description'),
   }

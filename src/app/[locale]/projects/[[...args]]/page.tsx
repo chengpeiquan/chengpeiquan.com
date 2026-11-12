@@ -6,6 +6,7 @@ import { fetchProjectDatabase } from '@/components/project/shared'
 import { isMobileDevice } from '@/config/middleware-config'
 import { ExtraTag, type ProjectTag } from '@/config/project-config'
 import { type ListPageProps } from '@/config/route-config'
+import { getPageMetadata } from '@/config/site-config'
 import { type GitHubRepoDataItem, type NpmDownloadDataItem } from '@/fetcher'
 import { cn } from '@/utils'
 import { DataDescription } from './components/data-description'
@@ -22,6 +23,7 @@ export const generateMetadata = async ({
   })
 
   return {
+    ...getPageMetadata('/projects', params.locale),
     title: t('title'),
     description: t('description'),
   }

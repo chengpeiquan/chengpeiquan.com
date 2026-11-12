@@ -49,12 +49,20 @@ const PaginationButton: React.FC<PaginationButtonProps> = ({
 
       case GeneratedPageType.Previous: {
         const disabled = currentPage <= 1
-        return <PaginationPrevious as={Link} disabled={disabled} href={href} />
+        return disabled ? (
+          <PaginationPrevious as="span" aria-disabled="true" disabled />
+        ) : (
+          <PaginationPrevious as={Link} href={href} />
+        )
       }
 
       case GeneratedPageType.Next: {
         const disabled = currentPage >= totalPages
-        return <PaginationNext as={Link} disabled={disabled} href={href} />
+        return disabled ? (
+          <PaginationNext as="span" aria-disabled="true" disabled />
+        ) : (
+          <PaginationNext as={Link} href={href} />
+        )
       }
 
       case GeneratedPageType.Page:

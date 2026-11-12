@@ -72,7 +72,7 @@ const LinksContent = async ({
   const isMobile = await isMobileDevice()
 
   const links = [allCategory, ...categories].map<CategoryItem>((i) => {
-    const href = isUndefined(i.slug)
+    const href = !i.slug
       ? `/${group}/1` // All
       : `/${group}/${i.slug}/1` // Specified category
 

@@ -5,7 +5,7 @@ import React from 'react'
 import { LayoutContainer } from '@/components/layouts/layout-container'
 import { RouteScrollReset } from '@/components/layouts/route-scroll-reset'
 import { type Locale } from '@/config/locale-config'
-import { sharedMetadata, siteConfig } from '@/config/site-config'
+import { sharedMetadata } from '@/config/site-config'
 
 interface LocaleLayoutProps extends React.PropsWithChildren {
   params: Promise<{
@@ -32,7 +32,6 @@ export const generateMetadata = async ({
     },
     description: t('description'),
     alternates: {
-      canonical: siteConfig.author.url,
       types: {
         'application/rss+xml': [
           {
