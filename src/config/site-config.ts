@@ -102,10 +102,14 @@ export const sharedMetadata: Metadata = {
 }
 
 // Use the same locale prefix convention as next-intl's public URLs.
-export const getPageMetadata = (pathname: string, locale: Locale): Metadata => {
+export const getPageUrl = (pathname: string, locale: Locale): string => {
   const prefix = locale === defaultLocale ? '' : `/${locale}`
   const path = pathname === '/' ? '' : pathname
-  const url = `https://${domain}${prefix}${path}`
+  return `https://${domain}${prefix}${path}`
+}
+
+export const getPageMetadata = (pathname: string, locale: Locale): Metadata => {
+  const url = getPageUrl(pathname, locale)
 
   return {
     alternates: {

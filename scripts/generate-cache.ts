@@ -54,7 +54,7 @@ const generateCache = async (opts: GenerateOptions) => {
     opts.locale,
     ContentProcessorMode.TextOnly,
   )
-  if (!items.length) return
+  // Persist empty collections too, so removed content cannot leave a stale index.
 
   const options: TaskOptions = { ...opts, items }
   const task = new CacheTask(options)
