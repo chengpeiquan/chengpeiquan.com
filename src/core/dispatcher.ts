@@ -102,7 +102,7 @@ export const getDetails = cache(
   async (folder: ContentFolder, params: DetailsPageParams) => {
     // Try to get the requested language content first
     const content = await getContent({ folder, ...params })
-    if (content) return content
+    if (content) return { ...content, contentLocale: params.locale }
 
     // If not found and the current language is not the default,
     // try to get the default language content
@@ -113,6 +113,8 @@ export const getDetails = cache(
         locale: defaultLocale,
       })
       return fallbackContent
+        ? { ...fallbackContent, contentLocale: defaultLocale }
+        : null
     }
 
     // If there is no default language, return null,
@@ -132,10 +134,9 @@ export const getDetailsMetadata = cache(
 
     const { title, keywords, desc: description, cover } = res.metadata
 
-    // If the content is falling back to the default language,
-    // we should keep the language setting requested by the user
-    // This ensures that the language tag of the page is correct
-    const locale = params.locale
+    // Canonical identity follows the actual content, even when the UI uses
+    // the requested language around an untranslated article.
+    const locale = res.contentLocale
 
     const pageMetadata = getPageMetadata(
       folder === ContentFolder.About ? '/about' : `/${folder}/${params.slug}`,

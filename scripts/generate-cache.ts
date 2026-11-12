@@ -12,8 +12,8 @@ import {
   listFolders,
 } from '@/config/content-config'
 import { type Locale, locales } from '@/config/locale-config'
-import { ContentProcessorMode } from '@/core/types'
-import { fse, getPosts } from './shared'
+import { getContents } from '@/core/io'
+import { fse } from './shared'
 import { runTasks } from './task-runner'
 
 const cacheRootPath = join(process.cwd(), 'src', cacheRootFolder)
@@ -48,27 +48,30 @@ class CacheTask {
   }
 }
 
-const generateCache = async (opts: GenerateOptions) => {
-  const { items } = await getPosts(
-    opts.folder,
-    opts.locale,
-    ContentProcessorMode.TextOnly,
-  )
-  // Persist empty collections too, so removed content cannot leave a stale index.
-
-  const options: TaskOptions = { ...opts, items }
-  const task = new CacheTask(options)
-  await task.run()
+const prepareCache = async (opts: GenerateOptions) => {
+  const { items } = await getContents(opts.folder, {
+    locale: opts.locale,
+    page: 1,
+    pageSize: Number.MAX_SAFE_INTEGER,
+    ignoreDetails: true,
+    strict: true,
+  })
+  // Validate every collection before overwriting any existing index.
+  return new CacheTask({ ...opts, items })
 }
 
 export const run = async () => {
-  const tasks = listFolders.flatMap((folder) =>
-    locales.map((locale) => () => generateCache({ folder, locale })),
+  const tasks = await Promise.all(
+    listFolders.flatMap((folder) =>
+      locales.map((locale) => prepareCache({ folder, locale })),
+    ),
   )
-
-  await runTasks(tasks)
+  await runTasks(tasks.map((task) => () => task.run()))
 }
 
 if (import.meta.main) {
-  run().catch(console.error)
+  run().catch((error) => {
+    console.error(error)
+    process.exitCode = 1
+  })
 }

@@ -1,6 +1,6 @@
 'use server'
 
-import { readdirSync } from 'node:fs'
+import { readdirSync, statSync } from 'node:fs'
 import { extname, join } from 'node:path'
 import process from 'node:process'
 import { z } from 'zod'
@@ -15,36 +15,37 @@ import {
   getPagination,
   isValidContentItem,
 } from '@/config/content-config'
-import { type Locale, locales } from '@/config/locale-config'
+import { type Locale, defaultLocale, locales } from '@/config/locale-config'
 import { type ParseOptions, parse } from './parser'
 
 const contentRootPath = join(process.cwd(), 'src', contentRootFolder)
 
-const getMarkdownFiles = (dir: string) => {
+const getFilePaths = (
+  folder: ContentFolder,
+  locale: Locale,
+  strict = false,
+) => {
+  if (!contentFolders.includes(folder)) return []
+  if (!locales.includes(locale)) return []
+  const folderPath = join(contentRootPath, folder)
+  const dir = join(folderPath, locale)
+
   try {
     return readdirSync(dir)
       .filter((file) => fileExtensions.includes(extname(file)))
-      .map((i) => join(dir, i))
-  } catch {
-    return []
+      .map((file) => join(dir, file))
+  } catch (error) {
+    if (!strict) return []
+    // An untranslated locale may be absent, but a missing content root or
+    // unreadable directory must never be published as an empty index.
+    if (
+      locale !== defaultLocale &&
+      (error as NodeJS.ErrnoException).code === 'ENOENT' &&
+      statSync(folderPath).isDirectory()
+    )
+      return []
+    throw error
   }
-}
-
-const getFileMap = (folder: ContentFolder) => {
-  const fileMap = new Map<Locale, string[]>()
-
-  locales.forEach((i) => {
-    const fileDir = join(contentRootPath, folder, i)
-    fileMap.set(i, getMarkdownFiles(fileDir))
-  })
-
-  return fileMap
-}
-
-const getFilePaths = (folder: ContentFolder, locale: Locale) => {
-  if (!contentFolders.includes(folder)) return []
-  if (!locales.includes(locale)) return []
-  return getFileMap(folder).get(locale) ?? []
 }
 
 interface GetContentOptions {
@@ -76,6 +77,7 @@ export const getContent = async ({
 }
 
 interface GetContentsOptions extends ParseOptions {
+  strict?: boolean
   locale: Locale
   category?: string
   page: number
@@ -84,7 +86,14 @@ interface GetContentsOptions extends ParseOptions {
 
 export const getContents = async (
   folder: ContentFolder,
-  { locale, category, page, pageSize, ...parseOptions }: GetContentsOptions,
+  {
+    locale,
+    category,
+    page,
+    pageSize,
+    strict = false,
+    ...parseOptions
+  }: GetContentsOptions,
 ) => {
   const contentsResponseSchema = z.object({
     items: z.array(contentItemSchema).default([]),
@@ -99,10 +108,16 @@ export const getContents = async (
   const defaultRes = contentsResponseSchema.parse({})
 
   try {
-    const filePaths = getFilePaths(folder, locale)
+    const filePaths = getFilePaths(folder, locale, strict)
     if (!filePaths.length) return defaultRes
 
-    const getIntro = (i: string) => parse(i, parseOptions)
+    const getIntro = async (filePath: string) => {
+      const content = await parse(filePath, parseOptions)
+      if (strict && !content) {
+        throw new Error(`Failed to read content metadata: ${filePath}`)
+      }
+      return content
+    }
     const allContents = await Promise.all(filePaths.map(getIntro))
     const contents = allContents
       .filter(isValidContentItem)
@@ -120,7 +135,8 @@ export const getContents = async (
       category,
       ...pagination,
     } satisfies GetListResponse<ContentItem>
-  } catch {
+  } catch (error) {
+    if (strict) throw error
     return defaultRes
   }
 }
