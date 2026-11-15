@@ -174,11 +174,11 @@ importers:
         specifier: ^0.17.0
         version: 0.17.0
       '@blackwork/docs':
-        specifier: ^0.6.1
-        version: 0.6.1(@types/react@19.3.0)(blackwork@0.14.0(@bassist/utils@0.17.0)(@types/react@19.3.0)(clsx@2.1.1)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(tailwind-merge@3.7.0)(tailwindcss@4.3.3))(next@16.4.2(@babel/core@7.29.7(supports-color@7.2.0))(@types/node@24.19.2)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(supports-color@7.2.0)
+        specifier: ^0.7.0
+        version: 0.7.0(@types/react@19.3.0)(blackwork@0.15.0(@bassist/utils@0.17.0)(@types/react@19.3.0)(clsx@2.1.1)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(tailwind-merge@3.7.0)(tailwindcss@4.3.3))(next@16.4.2(@babel/core@7.29.7(supports-color@7.2.0))(@types/node@24.19.2)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(supports-color@7.2.0)
       '@blackwork/machine':
         specifier: ^0.2.2
-        version: 0.2.2(@types/react@19.3.0)(blackwork@0.14.0(@bassist/utils@0.17.0)(@types/react@19.3.0)(clsx@2.1.1)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(tailwind-merge@3.7.0)(tailwindcss@4.3.3))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(supports-color@7.2.0)
+        version: 0.2.2(@types/react@19.3.0)(blackwork@0.15.0(@bassist/utils@0.17.0)(@types/react@19.3.0)(clsx@2.1.1)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(tailwind-merge@3.7.0)(tailwindcss@4.3.3))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(supports-color@7.2.0)
       '@blackwork/search':
         specifier: ^0.1.1
         version: 0.1.1
@@ -189,8 +189,8 @@ importers:
         specifier: ^0.1.5
         version: 0.1.5
       blackwork:
-        specifier: ^0.14.0
-        version: 0.14.0(@bassist/utils@0.17.0)(@types/react@19.3.0)(clsx@2.1.1)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(tailwind-merge@3.7.0)(tailwindcss@4.3.3)
+        specifier: ^0.15.0
+        version: 0.15.0(@bassist/utils@0.17.0)(@types/react@19.3.0)(clsx@2.1.1)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(tailwind-merge@3.7.0)(tailwindcss@4.3.3)
       framer-motion:
         specifier: ^14.4.0
         version: 14.4.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
@@ -525,10 +525,10 @@ packages:
   '@bassist/utils@0.17.0':
     resolution: {integrity: sha512-96rpHXgZ2BswyuO27IWrsmrZekef+f1Ag6384bZ6oOAy4squ/1x57yPXMIjumzRX8U+e6g6i8ujvFfhrdjf3Jg==}
 
-  '@blackwork/docs@0.6.1':
-    resolution: {integrity: sha512-dBP6s1I2mqtJmZwMMJwA9TdnY00cpcuApYxnaNv5s+26MqKdcwZbkp8kUy1/mNPgoO84oXUWC/EL1lsS2ekapQ==}
+  '@blackwork/docs@0.7.0':
+    resolution: {integrity: sha512-4T8jHe3aO8A5+ngAwNkZ5ftoRtWuP8cW4VOzH1paEdC9AT+rAl6+V4RgqE5Xpmt8mOcuj6w/FstntdIvp2W/cA==}
     peerDependencies:
-      blackwork: '>=0.13.0'
+      blackwork: '>=0.15.0'
       next: '>=16.0.0'
       react: '>=19.0.0'
       react-dom: '>=19.0.0'
@@ -2334,8 +2334,8 @@ packages:
   binary-searching@2.0.5:
     resolution: {integrity: sha512-v4N2l3RxL+m4zDxyxz3Ne2aTmiPn8ZUpKFpdPtO+ItW1NcTCXA7JeHG5GMBSvoKSkQZ9ycS+EouDVxYB9ufKWA==}
 
-  blackwork@0.14.0:
-    resolution: {integrity: sha512-yZZZXIoQ9FR0WcoT8Yp04AYteaUYupDkgND9SnKVYcDFPhy6qOAWmDWto9Nx2RMqH0H9GTctsyI8sC9QchYx/Q==}
+  blackwork@0.15.0:
+    resolution: {integrity: sha512-bEq7jU2ALcy9KxekYNIO3rV5paqK/D2TFk8T8rwHuSFDkxTfHZeCk0FancdzNjxAhm9l6Spbp6YJUQqEm5FWNw==}
     peerDependencies:
       '@bassist/utils': '>=0.17.0'
       '@tanstack/react-form': '>=1.0.0'
@@ -5082,10 +5082,10 @@ snapshots:
 
   '@bassist/utils@0.17.0': {}
 
-  '@blackwork/docs@0.6.1(@types/react@19.3.0)(blackwork@0.14.0(@bassist/utils@0.17.0)(@types/react@19.3.0)(clsx@2.1.1)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(tailwind-merge@3.7.0)(tailwindcss@4.3.3))(next@16.4.2(@babel/core@7.29.7(supports-color@7.2.0))(@types/node@24.19.2)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(supports-color@7.2.0)':
+  '@blackwork/docs@0.7.0(@types/react@19.3.0)(blackwork@0.15.0(@bassist/utils@0.17.0)(@types/react@19.3.0)(clsx@2.1.1)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(tailwind-merge@3.7.0)(tailwindcss@4.3.3))(next@16.4.2(@babel/core@7.29.7(supports-color@7.2.0))(@types/node@24.19.2)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(supports-color@7.2.0)':
     dependencies:
-      '@blackwork/machine': 0.2.2(@types/react@19.3.0)(blackwork@0.14.0(@bassist/utils@0.17.0)(@types/react@19.3.0)(clsx@2.1.1)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(tailwind-merge@3.7.0)(tailwindcss@4.3.3))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(supports-color@7.2.0)
-      blackwork: 0.14.0(@bassist/utils@0.17.0)(@types/react@19.3.0)(clsx@2.1.1)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(tailwind-merge@3.7.0)(tailwindcss@4.3.3)
+      '@blackwork/machine': 0.2.2(@types/react@19.3.0)(blackwork@0.15.0(@bassist/utils@0.17.0)(@types/react@19.3.0)(clsx@2.1.1)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(tailwind-merge@3.7.0)(tailwindcss@4.3.3))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(supports-color@7.2.0)
+      blackwork: 0.15.0(@bassist/utils@0.17.0)(@types/react@19.3.0)(clsx@2.1.1)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(tailwind-merge@3.7.0)(tailwindcss@4.3.3)
       chokidar: 4.0.3
       jiti: 1.21.7
       lucide-react: 1.60.0(@types/react@19.3.0)(react@19.3.1)
@@ -5096,7 +5096,7 @@ snapshots:
       - '@types/react'
       - supports-color
 
-  '@blackwork/machine@0.2.2(@types/react@19.3.0)(blackwork@0.14.0(@bassist/utils@0.17.0)(@types/react@19.3.0)(clsx@2.1.1)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(tailwind-merge@3.7.0)(tailwindcss@4.3.3))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(supports-color@7.2.0)':
+  '@blackwork/machine@0.2.2(@types/react@19.3.0)(blackwork@0.15.0(@bassist/utils@0.17.0)(@types/react@19.3.0)(clsx@2.1.1)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(tailwind-merge@3.7.0)(tailwindcss@4.3.3))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(supports-color@7.2.0)':
     dependencies:
       '@bassist/utils': 0.17.0
       '@mdx-js/mdx': 3.1.1(supports-color@7.2.0)
@@ -5104,7 +5104,7 @@ snapshots:
       '@stefanprobst/rehype-extract-toc': 3.0.0
       '@types/hast': 3.0.5
       '@types/mdast': 4.0.4
-      blackwork: 0.14.0(@bassist/utils@0.17.0)(@types/react@19.3.0)(clsx@2.1.1)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(tailwind-merge@3.7.0)(tailwindcss@4.3.3)
+      blackwork: 0.15.0(@bassist/utils@0.17.0)(@types/react@19.3.0)(clsx@2.1.1)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(tailwind-merge@3.7.0)(tailwindcss@4.3.3)
       gray-matter: 4.0.3
       hast: 1.0.0
       lucide-react: 1.60.0(@types/react@19.3.0)(react@19.3.1)
@@ -6554,7 +6554,7 @@ snapshots:
 
   binary-searching@2.0.5: {}
 
-  blackwork@0.14.0(@bassist/utils@0.17.0)(@types/react@19.3.0)(clsx@2.1.1)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(tailwind-merge@3.7.0)(tailwindcss@4.3.3):
+  blackwork@0.15.0(@bassist/utils@0.17.0)(@types/react@19.3.0)(clsx@2.1.1)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(tailwind-merge@3.7.0)(tailwindcss@4.3.3):
     dependencies:
       '@base-ui/react': 1.9.0(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       '@bassist/utils': 0.17.0

@@ -1,3 +1,4 @@
+import { mergeDocsComponents } from '@blackwork/docs/runtime'
 import {
   createNextComponentOverrides,
   createNextComponents,
@@ -21,11 +22,13 @@ export const nextComponentOverrides = createNextComponentOverrides({
   Link,
 })
 
-export const components = createNextComponents({
-  CodeBlock,
-  ExternalLink: AdapterExternalLink,
-  Image: AdapterImage,
-  Link,
-})
+export const components = mergeDocsComponents(
+  createNextComponents({
+    CodeBlock,
+    ExternalLink: AdapterExternalLink,
+    Image: AdapterImage,
+    Link,
+  }),
+)
 
 export const { a, img, pre, video } = nextComponentOverrides

@@ -1,3 +1,4 @@
+import { defaultDocsComponents } from '@blackwork/docs/runtime'
 import { defaultComponents, mergeComponents } from '@blackwork/machine'
 import { expect, test, vi } from 'vitest'
 
@@ -14,5 +15,6 @@ test('blog parser components are layered on machine defaults', () => {
   expect(merged.pre).toBe(components.pre)
   expect(merged.img).toBe(components.img)
   expect(merged.video).toBe(components.video)
+  expect(merged.table).toBe(defaultDocsComponents.table)
   expect(typeof merged.a).toBe('function')
 })

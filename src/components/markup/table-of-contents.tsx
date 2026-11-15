@@ -35,6 +35,7 @@ export const MobileToc: React.FC<TableOfContentsProps> = ({
 }) => {
   return (
     <MobileDocsToc
+      triggerVariant="glass"
       headings={toDocsTocHeadings(headings)}
       minHeadings={2}
       openLabel={openLabel}

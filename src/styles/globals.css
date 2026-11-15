@@ -124,12 +124,6 @@ html body[data-scroll-locked] {
   overflow-x: auto;
 }
 
-.prose :where(table):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
-  display: block;
-  max-width: 100%;
-  overflow-x: auto;
-}
-
 .prose
   :where(pre code):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
   white-space: pre;
