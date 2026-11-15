@@ -49,3 +49,19 @@ https://cdn.chengpeiquan.com/img/2026/08/20260815185441978.jpg?x-oss-process=ima
 ![就是这幅，我最喜欢的颜色搭配](https://cdn.chengpeiquan.com/img/2026/07/20260706011854058.jpg?x-oss-process=image/interlace,1)
 
 我买的那副，等到货了再晒出来～
+
+## 收到版画啦
+
+2026.08.21 更新：上个月去啊 Paul 的画展，买了一副没有在现场展出的版画，终于寄过来了，超喜欢这小眼睛，像弟弟在看我一样。
+
+![好大一张](https://cdn.chengpeiquan.com/img/2026/11/20261115184545994.jpg?x-oss-process=image/interlace,1)
+
+![此刻我的心情十分激动](https://cdn.chengpeiquan.com/img/2026/11/20261115184642305.jpg?x-oss-process=image/interlace,1)
+
+![放大](https://cdn.chengpeiquan.com/img/2026/11/20261115184659770.jpg?x-oss-process=image/interlace,1)
+
+![再放大](https://cdn.chengpeiquan.com/img/2026/11/20261115184711590.jpg?x-oss-process=image/interlace,1)
+
+![Paul 的签名](https://cdn.chengpeiquan.com/img/2026/11/20261115184722244.jpg?x-oss-process=image/interlace,1)
+
+![弟弟在看着我](https://cdn.chengpeiquan.com/img/2026/11/20261115184731104.jpg?x-oss-process=image/interlace,1)
