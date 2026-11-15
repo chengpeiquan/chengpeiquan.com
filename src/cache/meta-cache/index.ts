@@ -8,7 +8,10 @@ export const getMetaCache = async (
 ): Promise<MetaCacheItem[]> => {
   try {
     const key = getMetaCacheMapKey(folder, locale)
-    return (await import(`./${key}.json`)).default ?? []
+    const items: MetaCacheItem[] = (await import(`./${key}.json`)).default ?? []
+    // JSON modules are shared across requests. Give callers their own array
+    // so in-place operations such as homepage shuffling cannot reorder lists.
+    return [...items]
   } catch (e) {
     console.error('[getMetaCache]', e)
     return []
